@@ -1,0 +1,10 @@
+llama-index
+qdrant-client
+sentence-transformers
+openai
+pypdf
+beautifulsoup4
+tiktoken
+python-dotenv
+jupyter
+tqdm
