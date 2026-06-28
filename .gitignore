@@ -15,7 +15,6 @@ dist/
 rag_env/
 venv/
 .venv/
-.env/
 
 # ==========================================
 # Environment Variables
@@ -43,12 +42,7 @@ venv/
 *.log
 
 # ==========================================
-# Downloaded Articles
-# ==========================================
-data/raw/webpages/komeil_roudi/
-
-# ==========================================
-# Generated Data
+# Generated Data (Do NOT commit)
 # ==========================================
 data/processed/
 data/chunks/
