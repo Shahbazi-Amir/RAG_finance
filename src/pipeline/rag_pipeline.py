@@ -97,13 +97,20 @@ class RAGPipeline:
             context=context
         )
 
-        sources = self.format_sources(retrieved_chunks)
+        insufficient_message = "در منابع موجود پاسخ کافی پیدا نشد."
+
+        if answer.strip() == insufficient_message:
+            sources = []
+            retrieved_chunks_for_output = []
+        else:
+            sources = self.format_sources(retrieved_chunks)
+            retrieved_chunks_for_output = retrieved_chunks
 
         result = {
             "question": question,
             "answer": answer,
             "sources": sources,
-            "retrieved_chunks": retrieved_chunks,
+            "retrieved_chunks": retrieved_chunks_for_output,
             "top_k": top_k,
             "embedding_model": self.embedding_model,
             "generation_model": self.generation_model,
