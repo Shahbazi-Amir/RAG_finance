@@ -1,10 +1,8 @@
-llama-index
-qdrant-client
-sentence-transformers
-openai
-pypdf
-beautifulsoup4
-tiktoken
+streamlit
 python-dotenv
-jupyter
+openai
+qdrant-client
+requests
+beautifulsoup4
+lxml
 tqdm
