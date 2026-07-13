@@ -31,7 +31,7 @@ from src.pipeline.rag_pipeline import RAGPipeline
 # Page Config
 # ==========================
 
-APP_VERSION = "v04_context_aware_followups"
+APP_VERSION = "v05_error_handling"
 
 st.set_page_config(
     page_title="Financial RAG Assistant",
@@ -155,6 +155,49 @@ def rewrite_question_with_context(question: str, messages: list[dict]) -> str:
 
 
 # ==========================
+# Error Message Helper
+# ==========================
+
+def make_user_friendly_error(error: Exception) -> str:
+    error_text = str(error)
+
+    if "blocked from your IP" in error_text or "location" in error_text:
+        return (
+            "اتصال به سرویس مدل در این لحظه توسط ارائه‌دهنده محدود شده است. "
+            "لطفاً چند لحظه بعد دوباره تلاش کنید."
+        )
+
+    if "Connection error" in error_text or "APIConnectionError" in error_text:
+        return (
+            "اتصال به سرویس مدل برقرار نشد. "
+            "لطفاً چند لحظه بعد دوباره تلاش کنید."
+        )
+
+    if "timeout" in error_text.lower():
+        return (
+            "زمان پاسخ‌گویی سرویس مدل طولانی شد. "
+            "لطفاً چند لحظه بعد دوباره تلاش کنید."
+        )
+
+    if "401" in error_text or "Unauthorized" in error_text:
+        return (
+            "مشکل در اعتبارسنجی سرویس مدل وجود دارد. "
+            "لطفاً تنظیمات API را بررسی کنید."
+        )
+
+    if "429" in error_text:
+        return (
+            "تعداد درخواست‌ها زیاد شده یا محدودیت سرویس مدل فعال شده است. "
+            "لطفاً چند دقیقه بعد دوباره تلاش کنید."
+        )
+
+    return (
+        "در حال حاضر امکان تولید پاسخ وجود ندارد. "
+        "لطفاً چند لحظه بعد دوباره تلاش کنید."
+    )
+
+
+# ==========================
 # Load Pipeline
 # ==========================
 
@@ -259,6 +302,10 @@ for message in st.session_state.messages:
             from_cache = message.get("from_cache", False)
             sources = message.get("sources", [])
             rewritten_question = message.get("rewritten_question")
+            error = message.get("error", False)
+
+            if error:
+                st.warning("این پاسخ به دلیل خطای موقت سرویس مدل تولید شده است.")
 
             st.caption(f"From cache: {from_cache}")
 
@@ -310,17 +357,32 @@ if question:
         st.write(question)
 
     with st.chat_message("assistant"):
-        with st.spinner("در حال تولید پاسخ..."):
-            result = rag.ask(
-                question=rewritten_question,
-                top_k=top_k
-            )
+        try:
+            with st.spinner("در حال تولید پاسخ..."):
+                result = rag.ask(
+                    question=rewritten_question,
+                    top_k=top_k
+                )
 
-        answer = result["answer"]
-        sources = result.get("sources", [])
-        from_cache = result.get("from_cache", False)
+            answer = result["answer"]
+            sources = result.get("sources", [])
+            from_cache = result.get("from_cache", False)
+            error = False
 
-        st.write(answer)
+        except Exception as e:
+            answer = make_user_friendly_error(e)
+            sources = []
+            from_cache = False
+            error = True
+
+            st.warning(answer)
+
+            with st.expander("جزئیات فنی خطا"):
+                st.code(str(e)[:3000])
+
+        if not error:
+            st.write(answer)
+
         st.caption(f"From cache: {from_cache}")
 
         if rewritten_question != question:
@@ -349,6 +411,7 @@ if question:
             "content": answer,
             "sources": sources,
             "from_cache": from_cache,
+            "error": error,
             "rewritten_question": rewritten_question if rewritten_question != question else None,
             "created_at": datetime.now().isoformat()
         }
