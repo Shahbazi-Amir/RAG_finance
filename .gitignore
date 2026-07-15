@@ -49,6 +49,8 @@ data/chunks/
 data/embeddings/
 data/vectorstore/
 data/index/
+data/database/*.db
+
 
 # ==========================================
 # Models
