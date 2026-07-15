@@ -1,5 +1,7 @@
 import sys
 import json
+import time
+import uuid
 from pathlib import Path
 from datetime import datetime
 
@@ -25,13 +27,14 @@ load_dotenv(project_root / ".env")
 
 import config.settings as settings
 from src.pipeline.rag_pipeline import RAGPipeline
+from src.database.database import initialize_database, save_conversation
 
 
 # ==========================
 # Page Config
 # ==========================
 
-APP_VERSION = "v05_error_handling"
+APP_VERSION = "v06_sqlite_storage"
 
 st.set_page_config(
     page_title="Financial RAG Assistant",
@@ -51,6 +54,13 @@ CHAT_HISTORY_FILE = APP_DATA_DIR / "chat_history.json"
 
 
 # ==========================
+# Database Setup
+# ==========================
+
+initialize_database()
+
+
+# ==========================
 # Chat History Helpers
 # ==========================
 
@@ -59,15 +69,20 @@ def load_chat_history():
         return []
 
     try:
-        with open(CHAT_HISTORY_FILE, "r", encoding="utf-8") as f:
-            return json.load(f)
+        with open(CHAT_HISTORY_FILE, "r", encoding="utf-8") as file:
+            return json.load(file)
     except Exception:
         return []
 
 
 def save_chat_history(messages):
-    with open(CHAT_HISTORY_FILE, "w", encoding="utf-8") as f:
-        json.dump(messages, f, ensure_ascii=False, indent=2)
+    with open(CHAT_HISTORY_FILE, "w", encoding="utf-8") as file:
+        json.dump(
+            messages,
+            file,
+            ensure_ascii=False,
+            indent=2
+        )
 
 
 def clear_chat_history():
@@ -83,6 +98,7 @@ def get_last_user_question(messages):
     for message in reversed(messages):
         if message.get("role") == "user":
             return message.get("content", "")
+
     return ""
 
 
@@ -129,12 +145,18 @@ def is_follow_up_question(question: str) -> bool:
             "کدام",
         ]
 
-        return any(keyword in normalized for keyword in followup_keywords)
+        return any(
+            keyword in normalized
+            for keyword in followup_keywords
+        )
 
     return False
 
 
-def rewrite_question_with_context(question: str, messages: list[dict]) -> str:
+def rewrite_question_with_context(
+    question: str,
+    messages: list[dict]
+) -> str:
     if not is_follow_up_question(question):
         return question
 
@@ -161,13 +183,19 @@ def rewrite_question_with_context(question: str, messages: list[dict]) -> str:
 def make_user_friendly_error(error: Exception) -> str:
     error_text = str(error)
 
-    if "blocked from your IP" in error_text or "location" in error_text:
+    if (
+        "blocked from your IP" in error_text
+        or "location" in error_text
+    ):
         return (
             "اتصال به سرویس مدل در این لحظه توسط ارائه‌دهنده محدود شده است. "
             "لطفاً چند لحظه بعد دوباره تلاش کنید."
         )
 
-    if "Connection error" in error_text or "APIConnectionError" in error_text:
+    if (
+        "Connection error" in error_text
+        or "APIConnectionError" in error_text
+    ):
         return (
             "اتصال به سرویس مدل برقرار نشد. "
             "لطفاً چند لحظه بعد دوباره تلاش کنید."
@@ -203,17 +231,26 @@ def make_user_friendly_error(error: Exception) -> str:
 
 @st.cache_resource
 def load_rag_pipeline():
-    qdrant_local_path = Path(settings.DATA_VECTORSTORE_PATH) / "qdrant_local"
-    cache_file = project_root / "data" / "cache" / "rag_cache.json"
+    qdrant_local_path = (
+        Path(settings.DATA_VECTORSTORE_PATH)
+        / "qdrant_local"
+    )
 
-    rag = RAGPipeline(
+    cache_file = (
+        project_root
+        / "data"
+        / "cache"
+        / "rag_cache.json"
+    )
+
+    rag_pipeline = RAGPipeline(
         vectorstore_path=qdrant_local_path,
         collection_name=settings.COLLECTION_NAME,
         cache_file=cache_file,
         use_cache=True
     )
 
-    return rag
+    return rag_pipeline
 
 
 rag = load_rag_pipeline()
@@ -225,6 +262,9 @@ rag = load_rag_pipeline()
 
 if "messages" not in st.session_state:
     st.session_state.messages = load_chat_history()
+
+if "session_id" not in st.session_state:
+    st.session_state.session_id = str(uuid.uuid4())
 
 
 # ==========================
@@ -250,15 +290,27 @@ with st.sidebar:
         if message["role"] == "user"
     ]
 
-    st.write("تعداد کل پیام‌ها:", len(st.session_state.messages))
-    st.write("تعداد سؤال‌ها:", len(user_questions))
+    st.write(
+        "تعداد کل پیام‌ها:",
+        len(st.session_state.messages)
+    )
+
+    st.write(
+        "تعداد سؤال‌ها:",
+        len(user_questions)
+    )
 
     if user_questions:
         st.divider()
         st.write("سؤال‌های اخیر:")
 
-        for i, question in enumerate(user_questions[-10:], start=1):
-            st.caption(f"{i}. {question}")
+        for index, recent_question in enumerate(
+            user_questions[-10:],
+            start=1
+        ):
+            st.caption(
+                f"{index}. {recent_question}"
+            )
 
     st.divider()
 
@@ -287,7 +339,10 @@ with st.sidebar:
 # ==========================
 
 st.title("💰 Financial RAG Assistant")
-st.caption("پرسش‌وپاسخ فارسی بر اساس مقالات مالی دکتر کمیل رودی")
+
+st.caption(
+    "پرسش‌وپاسخ فارسی بر اساس مقالات مالی دکتر کمیل رودی"
+)
 
 
 # ==========================
@@ -299,43 +354,81 @@ for message in st.session_state.messages:
         st.write(message["content"])
 
         if message["role"] == "assistant":
-            from_cache = message.get("from_cache", False)
-            sources = message.get("sources", [])
-            rewritten_question = message.get("rewritten_question")
-            error = message.get("error", False)
+            from_cache = message.get(
+                "from_cache",
+                False
+            )
+
+            sources = message.get(
+                "sources",
+                []
+            )
+
+            rewritten_question = message.get(
+                "rewritten_question"
+            )
+
+            error = message.get(
+                "error",
+                False
+            )
 
             if error:
-                st.warning("این پاسخ به دلیل خطای موقت سرویس مدل تولید شده است.")
+                st.warning(
+                    "این پاسخ به دلیل خطای موقت سرویس مدل تولید شده است."
+                )
 
-            st.caption(f"From cache: {from_cache}")
+            st.caption(
+                f"From cache: {from_cache}"
+            )
 
             if rewritten_question:
-                with st.expander("سؤال بازنویسی‌شده"):
+                with st.expander(
+                    "سؤال بازنویسی‌شده"
+                ):
                     st.write(rewritten_question)
 
             if sources:
                 with st.expander("منابع"):
-                    for i, source in enumerate(sources, start=1):
+                    for index, source in enumerate(
+                        sources,
+                        start=1
+                    ):
                         title = source.get("title")
                         url = source.get("url")
                         score = source.get("score")
                         chunk_id = source.get("chunk_id")
 
-                        st.write(f"{i}. {title}")
-                        st.caption(f"Chunk ID: {chunk_id}")
-                        st.caption(f"Score: {score}")
+                        st.write(
+                            f"{index}. {title}"
+                        )
+
+                        st.caption(
+                            f"Chunk ID: {chunk_id}"
+                        )
+
+                        st.caption(
+                            f"Score: {score}"
+                        )
 
                         if url:
-                            st.link_button(f"باز کردن منبع {i}", url)
+                            st.link_button(
+                                f"باز کردن منبع {index}",
+                                url
+                            )
             else:
-                st.info("منبعی برای نمایش وجود ندارد.")
+                st.info(
+                    "منبعی برای نمایش وجود ندارد."
+                )
 
 
 # ==========================
 # Chat Input
 # ==========================
 
-question = st.chat_input("سؤال خود را بنویسید...")
+question = st.chat_input(
+    "سؤال خود را بنویسید..."
+)
 
 if question:
     rewritten_question = rewrite_question_with_context(
@@ -350,61 +443,123 @@ if question:
         "created_at": datetime.now().isoformat()
     }
 
-    st.session_state.messages.append(user_message)
-    save_chat_history(st.session_state.messages)
+    st.session_state.messages.append(
+        user_message
+    )
+
+    save_chat_history(
+        st.session_state.messages
+    )
 
     with st.chat_message("user"):
         st.write(question)
 
     with st.chat_message("assistant"):
+        request_started_at = time.perf_counter()
+
         try:
-            with st.spinner("در حال تولید پاسخ..."):
+            with st.spinner(
+                "در حال تولید پاسخ..."
+            ):
                 result = rag.ask(
                     question=rewritten_question,
                     top_k=top_k
                 )
 
+            response_time_ms = int(
+                (
+                    time.perf_counter()
+                    - request_started_at
+                )
+                * 1000
+            )
+
             answer = result["answer"]
             sources = result.get("sources", [])
-            from_cache = result.get("from_cache", False)
+            from_cache = result.get(
+                "from_cache",
+                False
+            )
+
+            model_name = result.get(
+                "generation_model",
+                rag.generation_model
+            )
+
             error = False
 
-        except Exception as e:
-            answer = make_user_friendly_error(e)
+        except Exception as exception:
+            response_time_ms = int(
+                (
+                    time.perf_counter()
+                    - request_started_at
+                )
+                * 1000
+            )
+
+            answer = make_user_friendly_error(
+                exception
+            )
+
             sources = []
             from_cache = False
+            model_name = rag.generation_model
             error = True
 
             st.warning(answer)
 
-            with st.expander("جزئیات فنی خطا"):
-                st.code(str(e)[:3000])
+            with st.expander(
+                "جزئیات فنی خطا"
+            ):
+                st.code(
+                    str(exception)[:3000]
+                )
 
         if not error:
             st.write(answer)
 
-        st.caption(f"From cache: {from_cache}")
+        st.caption(
+            f"From cache: {from_cache}"
+        )
 
         if rewritten_question != question:
-            with st.expander("سؤال بازنویسی‌شده"):
+            with st.expander(
+                "سؤال بازنویسی‌شده"
+            ):
                 st.write(rewritten_question)
 
         if sources:
             with st.expander("منابع"):
-                for i, source in enumerate(sources, start=1):
+                for index, source in enumerate(
+                    sources,
+                    start=1
+                ):
                     title = source.get("title")
                     url = source.get("url")
                     score = source.get("score")
                     chunk_id = source.get("chunk_id")
 
-                    st.write(f"{i}. {title}")
-                    st.caption(f"Chunk ID: {chunk_id}")
-                    st.caption(f"Score: {score}")
+                    st.write(
+                        f"{index}. {title}"
+                    )
+
+                    st.caption(
+                        f"Chunk ID: {chunk_id}"
+                    )
+
+                    st.caption(
+                        f"Score: {score}"
+                    )
 
                     if url:
-                        st.link_button(f"باز کردن منبع {i}", url)
+                        st.link_button(
+                            f"باز کردن منبع {index}",
+                            url
+                        )
         else:
-            st.info("منبعی برای نمایش وجود ندارد.")
+            st.info(
+                "منبعی برای نمایش وجود ندارد."
+            )
 
         assistant_message = {
             "role": "assistant",
@@ -412,9 +567,46 @@ if question:
             "sources": sources,
             "from_cache": from_cache,
             "error": error,
-            "rewritten_question": rewritten_question if rewritten_question != question else None,
+            "rewritten_question": (
+                rewritten_question
+                if rewritten_question != question
+                else None
+            ),
             "created_at": datetime.now().isoformat()
         }
 
-        st.session_state.messages.append(assistant_message)
-        save_chat_history(st.session_state.messages)
+        st.session_state.messages.append(
+            assistant_message
+        )
+
+        save_chat_history(
+            st.session_state.messages
+        )
+
+        if not error:
+            try:
+                save_conversation(
+                    session_id=st.session_state.session_id,
+                    question=question,
+                    rewritten_question=(
+                        rewritten_question
+                        if rewritten_question != question
+                        else None
+                    ),
+                    answer=answer,
+                    sources=sources,
+                    from_cache=from_cache,
+                    model_name=model_name,
+                    response_time_ms=response_time_ms
+                )
+            except Exception as database_error:
+                st.warning(
+                    "پاسخ نمایش داده شد، اما ذخیره آن در دیتابیس انجام نشد."
+                )
+
+                with st.expander(
+                    "جزئیات خطای دیتابیس"
+                ):
+                    st.code(
+                        str(database_error)[:3000]
+                    )
