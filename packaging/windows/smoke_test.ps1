@@ -98,7 +98,12 @@ finally {
         Stop-Process -Id $process.Id -Force
     }
     Start-Sleep -Milliseconds 500
-    if (Test-Path $TempRoot) {
-        Remove-Item -Path $TempRoot -Recurse -Force -ErrorAction SilentlyContinue
+    try {
+        if (Test-Path $TempRoot) {
+            Remove-Item -Path $TempRoot -Recurse -Force -ErrorAction SilentlyContinue
+        }
+    }
+    catch {
+        Write-Host "Smoke-test temp cleanup skipped: $($_.Exception.Message)"
     }
 }
