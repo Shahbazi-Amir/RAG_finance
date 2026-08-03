@@ -15,6 +15,7 @@ from dotenv import load_dotenv
 
 APP_NAME = "RAGFinance"
 DEFAULT_PORT = 8501
+COLLECTION_NAME = "financial_knowledge_base"
 
 
 def resource_root() -> Path:
@@ -105,8 +106,8 @@ def prepare_runtime_files(bundle: Path, data_root: Path) -> Path:
 def validate_vectorstore_seed(seed: Path) -> None:
     required = [
         seed / "meta.json",
-        seed / "collection" / "financial_knowledge_base",
-        seed / "collection" / "financial_knowledge_base" / "storage.sqlite",
+        seed / "collection" / COLLECTION_NAME,
+        seed / "collection" / COLLECTION_NAME / "storage.sqlite",
     ]
     missing = [path for path in required if not path.exists()]
     if missing:
@@ -135,6 +136,23 @@ def prepare_vectorstore(bundle: Path, data_root: Path) -> Path:
         shutil.copytree(seed, target)
 
     return target_root
+
+
+def preflight_vectorstore(vectorstore_root: Path) -> None:
+    """Open the writable local Qdrant copy once, verify the collection, then release it."""
+    from qdrant_client import QdrantClient
+
+    qdrant_path = vectorstore_root / "qdrant_local"
+    client = QdrantClient(path=str(qdrant_path))
+    try:
+        collections = client.get_collections().collections
+        names = {item.name for item in collections}
+        if COLLECTION_NAME not in names:
+            raise RuntimeError(
+                f"Qdrant collection not found in bundled seed: {COLLECTION_NAME}"
+            )
+    finally:
+        client.close()
 
 
 def find_port(preferred: int) -> int:
@@ -183,6 +201,7 @@ def main() -> int:
         validate_api_config()
 
         vectorstore_root = prepare_vectorstore(bundle, data_root)
+        preflight_vectorstore(vectorstore_root)
         runtime_app = prepare_runtime_files(bundle, data_root)
 
         os.environ["RAG_FINANCE_RESOURCE_ROOT"] = str(bundle)
