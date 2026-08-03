@@ -98,6 +98,19 @@ def prepare_runtime_files(bundle: Path, data_root: Path) -> Path:
     return runtime_app
 
 
+def validate_vectorstore_seed(seed: Path) -> None:
+    required = [
+        seed / "meta.json",
+        seed / "collection" / "financial_knowledge_base",
+        seed / "collection" / "financial_knowledge_base" / "storage.sqlite",
+    ]
+    missing = [path for path in required if not path.exists()]
+    if missing:
+        raise FileNotFoundError(
+            "Vector Store seed ناقص است: " + ", ".join(str(path) for path in missing)
+        )
+
+
 def prepare_vectorstore(bundle: Path, data_root: Path) -> Path:
     override = os.getenv("RAG_FINANCE_VECTORSTORE_PATH")
     if override:
@@ -107,16 +120,13 @@ def prepare_vectorstore(bundle: Path, data_root: Path) -> Path:
             raise FileNotFoundError(f"Vector store not found: {qdrant_path}")
         return vectorstore_root
 
-    seed = bundle / "data" / "vectorstore" / "qdrant_local"
+    seed = bundle / "resources" / "qdrant_local"
+    validate_vectorstore_seed(seed)
+
     target_root = data_root / "vectorstore"
     target = target_root / "qdrant_local"
 
     if not target.exists():
-        if not seed.exists():
-            raise FileNotFoundError(
-                "Vector Store داخل بسته برنامه پیدا نشد. "
-                "بسته Windows باید data/vectorstore/qdrant_local را داشته باشد."
-            )
         target_root.mkdir(parents=True, exist_ok=True)
         shutil.copytree(seed, target)
 
