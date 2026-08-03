@@ -6,7 +6,10 @@ $ErrorActionPreference = "Stop"
 $RepoRoot = Resolve-Path (Join-Path $PSScriptRoot "..\..")
 Set-Location $RepoRoot
 
-$branch = (git branch --show-current).Trim()
+$branch = $env:GITHUB_HEAD_REF
+if ([string]::IsNullOrWhiteSpace($branch)) {
+    $branch = (git branch --show-current).Trim()
+}
 if ($branch -ne "phase1-windows") {
     throw "Refusing Windows packaging from branch '$branch'. Expected phase1-windows."
 }
