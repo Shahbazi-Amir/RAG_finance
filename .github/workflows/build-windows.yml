@@ -80,6 +80,10 @@ jobs:
           path: RAG-Finance-Windows.zip
           if-no-files-found: error
 
+      - name: Install Inno Setup
+        shell: pwsh
+        run: choco install innosetup --no-progress -y
+
       - name: Build installer
         shell: pwsh
         run: |
