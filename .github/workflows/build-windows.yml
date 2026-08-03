@@ -149,13 +149,19 @@ jobs:
           Write-Host "Installer bytes: $((Get-Item $setup).Length)"
 
           $installDir = Join-Path $env:RUNNER_TEMP "RAGFinanceInstalled"
+          $installLog = Join-Path $env:RUNNER_TEMP "RAGFinance-Install.log"
           $proc = Start-Process `
             -FilePath $setup `
-            -ArgumentList "/VERYSILENT", "/SUPPRESSMSGBOXES", "/NORESTART", "/DIR=$installDir" `
+            -ArgumentList "/VERYSILENT", "/SUPPRESSMSGBOXES", "/NORESTART", "/DIR=$installDir", "/LOG=$installLog" `
             -Wait `
             -PassThru
 
           if ($proc.ExitCode -ne 0) {
+            if (Test-Path $installLog) {
+              Write-Host "----- Inno Setup install log -----"
+              Get-Content $installLog
+              Write-Host "----- End install log -----"
+            }
             throw "Silent installer failed with exit code $($proc.ExitCode)."
           }
 
@@ -168,12 +174,16 @@ jobs:
 
           $uninstaller = Join-Path $installDir "unins000.exe"
           if (Test-Path $uninstaller) {
+            $uninstallLog = Join-Path $env:RUNNER_TEMP "RAGFinance-Uninstall.log"
             $uninstallProc = Start-Process `
               -FilePath $uninstaller `
-              -ArgumentList "/VERYSILENT", "/SUPPRESSMSGBOXES", "/NORESTART" `
+              -ArgumentList "/VERYSILENT", "/SUPPRESSMSGBOXES", "/NORESTART", "/LOG=$uninstallLog" `
               -Wait `
               -PassThru
             if ($uninstallProc.ExitCode -ne 0) {
+              if (Test-Path $uninstallLog) {
+                Get-Content $uninstallLog
+              }
               throw "Silent uninstall failed with exit code $($uninstallProc.ExitCode)."
             }
           }
