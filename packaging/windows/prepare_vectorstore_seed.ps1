@@ -63,14 +63,23 @@ if (Test-Path $ZipPath -PathType Leaf) {
         }
 
         if (-not $candidate) {
+            Write-Host "Extracted ZIP tree:"
+            Get-ChildItem -Path $ExtractRoot -Recurse -Force | ForEach-Object { Write-Host $_.FullName }
             throw "qdrant_local.zip does not contain a valid financial_knowledge_base seed."
         }
+
+        Write-Host "Validated extracted seed root: $candidate"
+        Write-Host "Seed top-level entries:"
+        Get-ChildItem -LiteralPath $candidate -Force | ForEach-Object { Write-Host $_.FullName }
 
         if (Test-Path $SeedRoot) {
             Remove-Item -Path $SeedRoot -Recurse -Force
         }
-        New-Item -ItemType Directory -Force -Path (Split-Path $SeedRoot -Parent) | Out-Null
-        Copy-Item -Path (Join-Path $candidate "*") -Destination $SeedRoot -Recurse -Force
+        New-Item -ItemType Directory -Force -Path $SeedRoot | Out-Null
+
+        Get-ChildItem -LiteralPath $candidate -Force | ForEach-Object {
+            Copy-Item -LiteralPath $_.FullName -Destination $SeedRoot -Recurse -Force
+        }
 
         Get-ChildItem -Path $SeedRoot -Recurse -Force -File -Filter ".lock" -ErrorAction SilentlyContinue |
             Remove-Item -Force
