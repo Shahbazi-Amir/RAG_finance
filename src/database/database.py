@@ -1,11 +1,22 @@
 import json
+import os
 import sqlite3
 from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any
 
 
-DATABASE_PATH = Path("data/database/rag_demo.db")
+def _database_path() -> Path:
+    writable_root = Path(
+        os.getenv(
+            "RAG_FINANCE_WRITABLE_ROOT",
+            str(Path.cwd()),
+        )
+    )
+    return writable_root / "database" / "rag_demo.db"
+
+
+DATABASE_PATH = _database_path()
 
 
 def get_connection() -> sqlite3.Connection:
