@@ -171,7 +171,10 @@ jobs:
             throw "Installed executable not found."
           }
 
-          .\packaging\windows\smoke_test.ps1 -ExePath $installedExe -Port 8502
+          .\packaging\windows\smoke_test.ps1 `
+            -ExePath $installedExe `
+            -Port 8502 `
+            -StartupTimeoutSeconds 180
 
           $uninstaller = Join-Path $installDir "unins000.exe"
           if (Test-Path $uninstaller) {

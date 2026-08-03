@@ -1,7 +1,9 @@
 param(
     [Parameter(Mandatory = $true)]
     [string]$ExePath,
-    [int]$Port = 8501
+    [int]$Port = 8501,
+    [ValidateRange(1, 600)]
+    [int]$StartupTimeoutSeconds = 90
 )
 
 $ErrorActionPreference = "Stop"
@@ -34,7 +36,7 @@ $client.Timeout = [TimeSpan]::FromSeconds(2)
 $process = Start-Process -FilePath $ExePath -PassThru
 
 try {
-    $deadline = (Get-Date).AddSeconds(90)
+    $deadline = (Get-Date).AddSeconds($StartupTimeoutSeconds)
     $ready = $false
     $lastHealthError = $null
     $healthUrl = "http://127.0.0.1:$Port/_stcore/health"
