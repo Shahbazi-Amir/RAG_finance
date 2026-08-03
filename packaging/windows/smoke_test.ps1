@@ -27,6 +27,8 @@ $env:ARVAN_CHAT_URL = "http://127.0.0.1:9/v1"
 $env:ARVAN_CHAT_API_KEY = "smoke-test"
 Remove-Item Env:RAG_FINANCE_VECTORSTORE_PATH -ErrorAction SilentlyContinue
 
+Write-Host "Smoke-test LOCALAPPDATA: $LocalAppData"
+
 $client = [System.Net.Http.HttpClient]::new()
 $client.Timeout = [TimeSpan]::FromSeconds(2)
 $process = Start-Process -FilePath $ExePath -PassThru
@@ -35,6 +37,7 @@ try {
     $deadline = (Get-Date).AddSeconds(90)
     $ready = $false
     $lastHealthError = $null
+    $healthUrl = "http://127.0.0.1:$Port/_stcore/health"
 
     while ((Get-Date) -lt $deadline) {
         if ($process.HasExited) {
@@ -49,7 +52,7 @@ try {
         }
 
         try {
-            $response = $client.GetAsync("http://127.0.0.1:$Port").GetAwaiter().GetResult()
+            $response = $client.GetAsync($healthUrl).GetAwaiter().GetResult()
             $status = [int]$response.StatusCode
             if ($status -ge 200 -and $status -lt 500) {
                 $ready = $true
@@ -70,9 +73,9 @@ try {
             $detail = (Get-Content $StartupError -Raw).Trim()
         }
         if ($detail) {
-            throw "Streamlit did not become ready on localhost:$Port. Startup error: $detail"
+            throw "Streamlit did not become ready on $healthUrl. Startup error: $detail"
         }
-        throw "Streamlit did not become ready on localhost:$Port. Last health error: $lastHealthError"
+        throw "Streamlit did not become ready on $healthUrl. Last health error: $lastHealthError"
     }
 
     $RuntimeSeed = Join-Path $LocalAppData "RAGFinance\vectorstore\qdrant_local"
@@ -94,9 +97,22 @@ try {
 }
 finally {
     $client.Dispose()
+
     if (-not $process.HasExited) {
-        Stop-Process -Id $process.Id -Force
+        try {
+            & taskkill.exe /PID $process.Id /T /F | Out-Null
+        }
+        catch {
+            Stop-Process -Id $process.Id -Force -ErrorAction SilentlyContinue
+        }
     }
+
+    $deadline = (Get-Date).AddSeconds(10)
+    while (-not $process.HasExited -and (Get-Date) -lt $deadline) {
+        Start-Sleep -Milliseconds 200
+        $process.Refresh()
+    }
+
     Start-Sleep -Milliseconds 500
     try {
         if (Test-Path $TempRoot) {
