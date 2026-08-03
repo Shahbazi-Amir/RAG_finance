@@ -5,12 +5,16 @@ on:
   push:
     branches:
       - phase1-windows
+  pull_request:
+    branches:
+      - main
 
 permissions:
   contents: read
 
 jobs:
   build-windows:
+    if: github.event_name != 'pull_request' || github.head_ref == 'phase1-windows'
     runs-on: windows-latest
 
     steps:
@@ -20,7 +24,12 @@ jobs:
       - name: Verify protected branch scope
         shell: pwsh
         run: |
-          $branch = (git branch --show-current).Trim()
+          if ("${{ github.event_name }}" -eq "pull_request") {
+            $branch = "${{ github.head_ref }}"
+          }
+          else {
+            $branch = (git branch --show-current).Trim()
+          }
           if ($branch -ne "phase1-windows") {
             throw "Expected phase1-windows, got '$branch'."
           }
