@@ -6,7 +6,7 @@
 AppId={{A83E621E-4B76-47A1-BA9A-D074C4F78D7B}
 AppName={#MyAppName}
 AppVersion={#MyAppVersion}
-DefaultDirName={autopf}\RAG Finance
+DefaultDirName={localappdata}\Programs\RAG Finance
 DefaultGroupName=RAG Finance
 UninstallDisplayIcon={app}\{#MyAppExeName}
 OutputDir=..\..\dist\installer
@@ -14,7 +14,7 @@ OutputBaseFilename=RAG-Finance-Setup
 Compression=lzma2
 SolidCompression=yes
 WizardStyle=modern
-PrivilegesRequired=admin
+PrivilegesRequired=lowest
 ArchitecturesAllowed=x64compatible
 ArchitecturesInstallIn64BitMode=x64compatible
 
