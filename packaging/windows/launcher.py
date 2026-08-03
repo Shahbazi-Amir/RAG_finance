@@ -40,6 +40,10 @@ def writable_root() -> Path:
 
 
 def show_error(title: str, message: str) -> None:
+    if os.getenv("RAG_FINANCE_HEADLESS_ERRORS") == "1":
+        print(f"{title}: {message}", file=sys.stderr)
+        return
+
     if os.name == "nt":
         try:
             import ctypes
@@ -157,6 +161,18 @@ def open_browser_when_ready(port: int) -> None:
             time.sleep(0.4)
 
 
+def write_startup_error(error: Exception) -> None:
+    path_value = os.getenv("RAG_FINANCE_STARTUP_ERROR_FILE")
+    if not path_value:
+        return
+    try:
+        path = Path(path_value)
+        path.parent.mkdir(parents=True, exist_ok=True)
+        path.write_text(str(error), encoding="utf-8")
+    except Exception:
+        pass
+
+
 def main() -> int:
     try:
         bundle = resource_root()
@@ -176,11 +192,12 @@ def main() -> int:
         preferred = int(os.getenv("RAG_FINANCE_PORT", str(DEFAULT_PORT)))
         port = find_port(preferred)
 
-        threading.Thread(
-            target=open_browser_when_ready,
-            args=(port,),
-            daemon=True,
-        ).start()
+        if os.getenv("RAG_FINANCE_DISABLE_BROWSER") != "1":
+            threading.Thread(
+                target=open_browser_when_ready,
+                args=(port,),
+                daemon=True,
+            ).start()
 
         from streamlit.web import bootstrap
 
@@ -198,6 +215,7 @@ def main() -> int:
         return 0
 
     except Exception as exc:
+        write_startup_error(exc)
         show_error("RAG Finance", str(exc))
         return 1
 
