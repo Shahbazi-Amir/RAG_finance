@@ -10,20 +10,20 @@ The PyInstaller build is `onedir`:
 
 - application executable: `RAG-Finance.exe`
 - bundled Python/runtime: `_internal/`
-- bundled read-only seed vector store: `_internal/data/vectorstore/qdrant_local`
+- committed seed source: `packaging/windows/resources/qdrant_local`
+- bundled read-only seed vector store: `_internal/resources/qdrant_local`
 - mutable runtime data: `%LOCALAPPDATA%\RAGFinance\`
 
 Qdrant remains **local mode**. No Qdrant server and no Docker are required.
 
 ## Runtime paths
 
-The launcher copies the bundled Qdrant seed to:
+The launcher validates the bundled seed and copies it on first run to:
 
 `%LOCALAPPDATA%\RAGFinance\vectorstore\qdrant_local`
 
-on first run. This is intentional because Qdrant local mode can create locks
-and other writable state and an Installer may place application resources under
-`Program Files`.
+Qdrant opens that writable copy rather than the files installed with the
+application. This avoids lock/WAL writes under the installation directory.
 
 Other writable data is also under `%LOCALAPPDATA%\RAGFinance`, including the
 SQLite conversation database and Streamlit chat/cache runtime files.
@@ -45,19 +45,21 @@ ARVAN_CHAT_MODEL=Qwen3-30B-A3B
 
 The launcher loads that file at runtime. Do not commit it.
 
-## Required runtime seed
+## Vector store seed
 
-A production build requires:
+The validated Phase 1 seed is committed under:
 
-`data/vectorstore/qdrant_local`
+`packaging/windows/resources/qdrant_local`
 
-to be present in the checkout before PyInstaller runs. The current repository
-ignores `data/vectorstore/`; therefore CI must not publish a "successful"
-portable package when that seed is absent.
+Required content includes:
 
-The workflow intentionally fails early if this directory is missing. Supply the
-validated Phase 1 vector store to the branch or restore it securely in CI before
-removing that guard.
+- `meta.json`
+- `collection/financial_knowledge_base/`
+- `collection/financial_knowledge_base/storage.sqlite`
+
+The temporary root archive `qdrant_local.zip` is not part of the final tree or
+artifacts. A source `.lock` is removed before the seed is committed and the
+workflow fails if any `.lock` remains.
 
 ## Local Windows build
 
@@ -72,21 +74,22 @@ pip install -r requirements-build.txt
 .\packaging\windows\build.ps1
 ```
 
-The build script refuses to run from another branch and refuses a production
-build without the runtime vector store.
+The build script refuses to run from another branch and validates the committed
+runtime seed before invoking PyInstaller.
 
 ## GitHub Actions
 
 Workflow: `.github/workflows/build-windows.yml`
 
-Triggers:
+Supported triggers include:
 
 - manual `workflow_dispatch`
 - pushes to `phase1-windows`
+- the isolated validation PR from `phase1-windows` to `main`
 
-It validates the branch and runtime seed, builds the portable directory, runs
-an API-independent localhost smoke test, validates bundle structure, creates
-`RAG-Finance-Windows.zip`, then builds and smoke-tests the Inno Setup installer.
+It validates branch scope and the seed, builds the portable directory, runs an
+API-independent Windows smoke test, validates bundle structure, creates
+`RAG-Finance-Windows.zip`, then builds and validates the Inno Setup installer.
 
 Artifacts:
 
@@ -95,15 +98,17 @@ Artifacts:
 
 ## Smoke test
 
-The smoke test uses dummy API values and a temporary empty Qdrant local path.
-It verifies only boot behavior:
+The smoke test uses dummy API values and does not issue a model query. It:
 
-- executable starts
-- Streamlit starts
-- localhost responds
-- process does not immediately exit
+- starts the built executable
+- waits for Streamlit on localhost
+- confirms HTTP response
+- confirms the bundled seed was copied to the temporary `LOCALAPPDATA`
+- confirms runtime `meta.json` and `storage.sqlite` exist and are non-empty
+- confirms the process did not immediately exit
 
-It deliberately does not issue a RAG query and does not require a real API key.
+A real API key is therefore not required for packaging validation. A complete
+RAG query still requires Internet access and valid API credentials.
 
 ## Installer
 
@@ -115,16 +120,22 @@ Output:
 
 `RAG-Finance-Setup.exe`
 
-The installer creates a Start Menu shortcut and offers an optional Desktop
-shortcut. Standard uninstall support is provided by Inno Setup.
+The installer is a per-user installation under:
+
+`%LOCALAPPDATA%\Programs\RAG Finance`
+
+It does not require elevation, creates a Start Menu shortcut, offers an optional
+Desktop shortcut, and includes standard uninstall support. CI performs silent
+install, installed-EXE smoke testing, and silent uninstall where supported by
+the hosted Windows runner.
 
 ## Troubleshooting
 
 If the launcher reports missing API configuration, create the real `.env`
 beside the executable.
 
-If it reports a missing vector store, the package was built without the Phase 1
-Qdrant seed and must be rebuilt.
+If it reports a missing vector store, confirm the package contains
+`_internal/resources/qdrant_local` and rebuild from the validated seed.
 
 If Windows SmartScreen or antivirus warns about the executable, note that
 unsigned PyInstaller applications can trigger reputation-based warnings.
