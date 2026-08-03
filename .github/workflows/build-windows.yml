@@ -1,0 +1,131 @@
+name: Build Windows Distribution
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - phase1-windows
+
+permissions:
+  contents: read
+
+jobs:
+  build-windows:
+    runs-on: windows-latest
+
+    steps:
+      - name: Checkout phase1-windows
+        uses: actions/checkout@v4
+
+      - name: Verify protected branch scope
+        shell: pwsh
+        run: |
+          $branch = (git branch --show-current).Trim()
+          if ($branch -ne "phase1-windows") {
+            throw "Expected phase1-windows, got '$branch'."
+          }
+
+      - name: Set up Python 3.11
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+
+      - name: Install dependencies
+        shell: pwsh
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+          pip install -r requirements-build.txt
+
+      - name: Validate Python sources
+        shell: pwsh
+        run: |
+          python -m compileall -q app.py config src packaging/windows
+
+      - name: Verify runtime vector store
+        shell: pwsh
+        run: |
+          if (-not (Test-Path "data\vectorstore\qdrant_local")) {
+            throw "Production build blocked: data/vectorstore/qdrant_local is not present in the checkout."
+          }
+
+      - name: Build portable application
+        shell: pwsh
+        run: .\packaging\windows\build.ps1
+
+      - name: Smoke test portable EXE
+        shell: pwsh
+        run: |
+          .\packaging\windows\smoke_test.ps1 `
+            -ExePath ".\dist\RAG-Finance\RAG-Finance.exe" `
+            -Port 8501
+
+      - name: Validate portable structure
+        shell: pwsh
+        run: python .\packaging\windows\verify_bundle.py .\dist\RAG-Finance
+
+      - name: Create portable ZIP
+        shell: pwsh
+        run: |
+          Compress-Archive `
+            -Path ".\dist\RAG-Finance" `
+            -DestinationPath ".\RAG-Finance-Windows.zip" `
+            -Force
+
+      - name: Upload portable artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: RAG-Finance-Windows-Portable
+          path: RAG-Finance-Windows.zip
+          if-no-files-found: error
+
+      - name: Build installer
+        shell: pwsh
+        run: |
+          $iscc = "${env:ProgramFiles(x86)}\Inno Setup 6\ISCC.exe"
+          if (-not (Test-Path $iscc)) {
+            throw "Inno Setup compiler not found: $iscc"
+          }
+          & $iscc ".\packaging\windows\installer.iss"
+
+      - name: Validate installer
+        shell: pwsh
+        run: |
+          $setup = ".\dist\installer\RAG-Finance-Setup.exe"
+          if (-not (Test-Path $setup)) {
+            throw "Installer was not created."
+          }
+
+          $installDir = Join-Path $env:RUNNER_TEMP "RAGFinanceInstalled"
+          $proc = Start-Process `
+            -FilePath $setup `
+            -ArgumentList "/VERYSILENT", "/SUPPRESSMSGBOXES", "/NORESTART", "/DIR=$installDir" `
+            -Wait `
+            -PassThru
+
+          if ($proc.ExitCode -ne 0) {
+            throw "Silent installer failed with exit code $($proc.ExitCode)."
+          }
+
+          $installedExe = Join-Path $installDir "RAG-Finance.exe"
+          if (-not (Test-Path $installedExe)) {
+            throw "Installed executable not found."
+          }
+
+          .\packaging\windows\smoke_test.ps1 -ExePath $installedExe -Port 8502
+
+          $uninstaller = Join-Path $installDir "unins000.exe"
+          if (Test-Path $uninstaller) {
+            Start-Process `
+              -FilePath $uninstaller `
+              -ArgumentList "/VERYSILENT", "/SUPPRESSMSGBOXES", "/NORESTART" `
+              -Wait
+          }
+
+      - name: Upload installer artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: RAG-Finance-Windows-Installer
+          path: dist/installer/RAG-Finance-Setup.exe
+          if-no-files-found: error
