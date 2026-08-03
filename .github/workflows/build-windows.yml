@@ -148,8 +148,9 @@ jobs:
 
           Write-Host "Installer bytes: $((Get-Item $setup).Length)"
 
-          $installDir = Join-Path $env:RUNNER_TEMP "RAGFinanceInstalled"
-          $installLog = Join-Path $env:RUNNER_TEMP "RAGFinance-Install.log"
+          $validationId = [guid]::NewGuid().ToString("N")
+          $installDir = Join-Path $env:RUNNER_TEMP ("RAGFinanceInstalled-" + $validationId)
+          $installLog = Join-Path $env:RUNNER_TEMP ("RAGFinance-Install-" + $validationId + ".log")
           $proc = Start-Process `
             -FilePath $setup `
             -ArgumentList "/VERYSILENT", "/SUPPRESSMSGBOXES", "/NORESTART", "/DIR=$installDir", "/LOG=$installLog" `
@@ -174,7 +175,7 @@ jobs:
 
           $uninstaller = Join-Path $installDir "unins000.exe"
           if (Test-Path $uninstaller) {
-            $uninstallLog = Join-Path $env:RUNNER_TEMP "RAGFinance-Uninstall.log"
+            $uninstallLog = Join-Path $env:RUNNER_TEMP ("RAGFinance-Uninstall-" + $validationId + ".log")
             $uninstallProc = Start-Process `
               -FilePath $uninstaller `
               -ArgumentList "/VERYSILENT", "/SUPPRESSMSGBOXES", "/NORESTART", "/LOG=$uninstallLog" `
@@ -186,6 +187,15 @@ jobs:
               }
               throw "Silent uninstall failed with exit code $($uninstallProc.ExitCode)."
             }
+          }
+
+          try {
+            if (Test-Path $installDir) {
+              Remove-Item -Path $installDir -Recurse -Force -ErrorAction SilentlyContinue
+            }
+          }
+          catch {
+            Write-Host "Installer validation cleanup skipped: $($_.Exception.Message)"
           }
 
       - name: Upload installer artifact
