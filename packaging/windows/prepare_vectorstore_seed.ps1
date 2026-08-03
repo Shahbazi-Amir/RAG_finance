@@ -19,6 +19,7 @@ $SeedRoot = Join-Path $RepoRoot "packaging\windows\resources\qdrant_local"
 $MetaPath = Join-Path $SeedRoot "meta.json"
 $CollectionPath = Join-Path $SeedRoot "collection\financial_knowledge_base"
 $StoragePath = Join-Path $CollectionPath "storage.sqlite"
+$ConsumedZip = $false
 
 function Assert-Seed {
     if (-not (Test-Path $SeedRoot -PathType Container)) {
@@ -45,6 +46,7 @@ function Assert-Seed {
 }
 
 if (Test-Path $ZipPath -PathType Leaf) {
+    $ConsumedZip = $true
     $ExtractRoot = Join-Path $env:RUNNER_TEMP ("rag-finance-vector-seed-" + [guid]::NewGuid().ToString("N"))
     New-Item -ItemType Directory -Force -Path $ExtractRoot | Out-Null
 
@@ -108,6 +110,11 @@ Write-Host "Temporary ZIP present after preparation: $(Test-Path $ZipPath)"
 if ($CommitSeed) {
     if ("${env:GITHUB_EVENT_NAME}" -ne "push") {
         throw "CommitSeed is allowed only for a push workflow on phase1-windows."
+    }
+
+    if (-not $ConsumedZip) {
+        Write-Host "Seed is already committed and temporary ZIP is absent; no seed commit is required."
+        exit 0
     }
 
     git config user.name "github-actions[bot]"
