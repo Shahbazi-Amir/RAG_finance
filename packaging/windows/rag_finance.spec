@@ -10,11 +10,12 @@ from PyInstaller.utils.hooks import (
 
 
 ROOT = Path(SPECPATH).resolve().parents[1]
+SEED = ROOT / "packaging" / "windows" / "resources" / "qdrant_local"
 
 datas = [
     (str(ROOT / "app.py"), "."),
     (str(ROOT / "data" / "cache" / "rag_cache.json"), "data/cache"),
-    (str(ROOT / "data" / "vectorstore"), "data/vectorstore"),
+    (str(SEED), "resources/qdrant_local"),
 ]
 
 datas += collect_data_files("streamlit")
