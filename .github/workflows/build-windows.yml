@@ -149,11 +149,11 @@ jobs:
           Write-Host "Installer bytes: $((Get-Item $setup).Length)"
 
           $validationId = [guid]::NewGuid().ToString("N")
-          $installDir = Join-Path $env:RUNNER_TEMP ("RAGFinanceInstalled-" + $validationId)
+          $installDir = Join-Path $env:LOCALAPPDATA "Programs\RAG Finance"
           $installLog = Join-Path $env:RUNNER_TEMP ("RAGFinance-Install-" + $validationId + ".log")
           $proc = Start-Process `
             -FilePath $setup `
-            -ArgumentList "/VERYSILENT", "/SUPPRESSMSGBOXES", "/NORESTART", "/DIR=$installDir", "/LOG=$installLog" `
+            -ArgumentList "/VERYSILENT", "/SUPPRESSMSGBOXES", "/NORESTART", "/LOG=$installLog" `
             -Wait `
             -PassThru
 
