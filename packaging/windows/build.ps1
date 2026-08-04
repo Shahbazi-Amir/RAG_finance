@@ -35,6 +35,10 @@ if (-not $SkipVectorStoreCheck) {
 python -m PyInstaller --noconfirm --clean "packaging\windows\rag_finance.spec"
 
 $Portable = Join-Path $RepoRoot "dist\RAG-Finance"
+if (-not (Test-Path ".env" -PathType Leaf)) {
+    throw "Runtime .env was not materialized before packaging."
+}
+Copy-Item ".env" (Join-Path $Portable ".env") -Force
 Copy-Item ".env.example" (Join-Path $Portable ".env.example") -Force
 Copy-Item "README-WINDOWS.txt" (Join-Path $Portable "README-WINDOWS.txt") -Force
 
