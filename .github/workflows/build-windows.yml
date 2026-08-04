@@ -173,8 +173,7 @@ jobs:
 
           .\packaging\windows\smoke_test.ps1 `
             -ExePath $installedExe `
-            -Port 8502 `
-            -StartupTimeoutSeconds 180
+            -Port 8501
 
           $uninstaller = Join-Path $installDir "unins000.exe"
           if (Test-Path $uninstaller) {
