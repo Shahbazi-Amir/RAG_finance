@@ -16,7 +16,6 @@ $TempRoot = Join-Path $env:RUNNER_TEMP ("rag-finance-smoke-" + [guid]::NewGuid()
 $LocalAppData = Join-Path $TempRoot "LocalAppData"
 $StartupError = Join-Path $TempRoot "startup-error.txt"
 $StartupTrace = Join-Path $TempRoot "startup-trace.txt"
-$StartupStack = Join-Path $TempRoot "startup-stack.txt"
 New-Item -ItemType Directory -Force -Path $LocalAppData | Out-Null
 
 $env:LOCALAPPDATA = $LocalAppData
@@ -26,7 +25,6 @@ $env:RAG_FINANCE_DISABLE_BROWSER = "1"
 $env:RAG_FINANCE_HEADLESS_ERRORS = "1"
 $env:RAG_FINANCE_STARTUP_ERROR_FILE = $StartupError
 $env:RAG_FINANCE_STARTUP_TRACE_FILE = $StartupTrace
-$env:RAG_FINANCE_STARTUP_STACK_FILE = $StartupStack
 $env:ARVAN_AI_API_KEY = "smoke-test"
 $env:ARVAN_EMBEDDING_URL = "http://127.0.0.1:9/v1"
 $env:ARVAN_CHAT_URL = "http://127.0.0.1:9/v1"
@@ -78,11 +76,6 @@ try {
             Write-Host "----- Launcher startup trace -----"
             Get-Content $StartupTrace
             Write-Host "----- End launcher startup trace -----"
-        }
-        if (Test-Path $StartupStack) {
-            Write-Host "----- Python startup stack -----"
-            Get-Content $StartupStack
-            Write-Host "----- End Python startup stack -----"
         }
         Write-Host "----- Port owner diagnostics -----"
         Get-NetTCPConnection -LocalPort $Port -ErrorAction SilentlyContinue |

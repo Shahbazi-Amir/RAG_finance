@@ -8,7 +8,6 @@ import threading
 import time
 import urllib.request
 import webbrowser
-import faulthandler
 from pathlib import Path
 
 from dotenv import load_dotenv
@@ -207,12 +206,6 @@ def write_startup_trace(message: str) -> None:
 
 def main() -> int:
     try:
-        stack_file = None
-        stack_path = os.getenv("RAG_FINANCE_STARTUP_STACK_FILE")
-        if stack_path:
-            stack_file = Path(stack_path).open("w", encoding="utf-8")
-            faulthandler.dump_traceback_later(30, repeat=True, file=stack_file)
-
         bundle = resource_root()
         exe_root = executable_root()
         data_root = writable_root()
@@ -236,6 +229,10 @@ def main() -> int:
         preferred = int(os.getenv("RAG_FINANCE_PORT", str(DEFAULT_PORT)))
         port = find_port(preferred)
         write_startup_trace(f"selected port: {port}")
+        os.environ["STREAMLIT_SERVER_ADDRESS"] = "127.0.0.1"
+        os.environ["STREAMLIT_SERVER_PORT"] = str(port)
+        os.environ["STREAMLIT_SERVER_HEADLESS"] = "true"
+        os.environ["STREAMLIT_BROWSER_GATHER_USAGE_STATS"] = "false"
 
         if os.getenv("RAG_FINANCE_DISABLE_BROWSER") != "1":
             threading.Thread(
