@@ -191,18 +191,36 @@ def write_startup_error(error: Exception) -> None:
         pass
 
 
+def write_startup_trace(message: str) -> None:
+    path_value = os.getenv("RAG_FINANCE_STARTUP_TRACE_FILE")
+    if not path_value:
+        return
+    try:
+        path = Path(path_value)
+        path.parent.mkdir(parents=True, exist_ok=True)
+        with path.open("a", encoding="utf-8") as trace:
+            trace.write(message + "\n")
+    except Exception:
+        pass
+
+
 def main() -> int:
     try:
         bundle = resource_root()
         exe_root = executable_root()
         data_root = writable_root()
+        write_startup_trace("runtime roots ready")
 
         load_runtime_config(exe_root, data_root)
         validate_api_config()
+        write_startup_trace("configuration ready")
 
         vectorstore_root = prepare_vectorstore(bundle, data_root)
+        write_startup_trace("vector store copied")
         preflight_vectorstore(vectorstore_root)
+        write_startup_trace("vector store preflight passed")
         runtime_app = prepare_runtime_files(bundle, data_root)
+        write_startup_trace("runtime files ready")
 
         os.environ["RAG_FINANCE_RESOURCE_ROOT"] = str(bundle)
         os.environ["RAG_FINANCE_WRITABLE_ROOT"] = str(data_root)
@@ -210,6 +228,7 @@ def main() -> int:
 
         preferred = int(os.getenv("RAG_FINANCE_PORT", str(DEFAULT_PORT)))
         port = find_port(preferred)
+        write_startup_trace(f"selected port: {port}")
 
         if os.getenv("RAG_FINANCE_DISABLE_BROWSER") != "1":
             threading.Thread(
@@ -220,6 +239,7 @@ def main() -> int:
 
         from streamlit.web import bootstrap
 
+        write_startup_trace("starting Streamlit")
         bootstrap.run(
             str(runtime_app),
             False,

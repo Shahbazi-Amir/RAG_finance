@@ -15,6 +15,7 @@ if (-not (Test-Path $ExePath)) {
 $TempRoot = Join-Path $env:RUNNER_TEMP ("rag-finance-smoke-" + [guid]::NewGuid().ToString("N"))
 $LocalAppData = Join-Path $TempRoot "LocalAppData"
 $StartupError = Join-Path $TempRoot "startup-error.txt"
+$StartupTrace = Join-Path $TempRoot "startup-trace.txt"
 New-Item -ItemType Directory -Force -Path $LocalAppData | Out-Null
 
 $env:LOCALAPPDATA = $LocalAppData
@@ -23,6 +24,7 @@ $env:RAG_FINANCE_PORT = "$Port"
 $env:RAG_FINANCE_DISABLE_BROWSER = "1"
 $env:RAG_FINANCE_HEADLESS_ERRORS = "1"
 $env:RAG_FINANCE_STARTUP_ERROR_FILE = $StartupError
+$env:RAG_FINANCE_STARTUP_TRACE_FILE = $StartupTrace
 $env:ARVAN_AI_API_KEY = "smoke-test"
 $env:ARVAN_EMBEDDING_URL = "http://127.0.0.1:9/v1"
 $env:ARVAN_CHAT_URL = "http://127.0.0.1:9/v1"
@@ -70,6 +72,15 @@ try {
     }
 
     if (-not $ready) {
+        if (Test-Path $StartupTrace) {
+            Write-Host "----- Launcher startup trace -----"
+            Get-Content $StartupTrace
+            Write-Host "----- End launcher startup trace -----"
+        }
+        Write-Host "----- Port owner diagnostics -----"
+        Get-NetTCPConnection -LocalPort $Port -ErrorAction SilentlyContinue |
+            Format-Table -AutoSize LocalAddress, LocalPort, State, OwningProcess
+        Write-Host "----- End port owner diagnostics -----"
         $detail = ""
         if (Test-Path $StartupError) {
             $detail = (Get-Content $StartupError -Raw).Trim()
