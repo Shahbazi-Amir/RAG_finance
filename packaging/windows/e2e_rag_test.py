@@ -50,6 +50,14 @@ def main() -> int:
     if leaked:
         raise SystemExit("Forbidden CI credential key found in runtime config: " + ", ".join(leaked))
 
+    for name in (
+        "ARVAN_AI_API_KEY",
+        "ARVAN_EMBEDDING_URL",
+        "ARVAN_CHAT_URL",
+        "ARVAN_CHAT_API_KEY",
+        "ARVAN_CHAT_MODEL",
+    ):
+        os.environ.pop(name, None)
     load_dotenv(env_file, override=True)
     print("Runtime config: PASS")
 
