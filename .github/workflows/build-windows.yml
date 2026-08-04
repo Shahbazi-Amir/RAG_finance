@@ -56,7 +56,7 @@ jobs:
             "ARVAN_CHAT_URL"
           )
           foreach ($name in $required) {
-            $pattern = "(?m)^\\s*" + [regex]::Escape($name) + "\\s*=\\s*(?!\\s*$).+"
+            $pattern = "(?m)^\s*" + [regex]::Escape($name) + "\s*=\s*(?!\s*$).+"
             if (-not [regex]::IsMatch($content, $pattern)) {
               throw "Runtime config is missing or empty for required key: $name"
             }
