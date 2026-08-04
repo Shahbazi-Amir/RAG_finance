@@ -8,6 +8,7 @@ import threading
 import time
 import urllib.request
 import webbrowser
+import faulthandler
 from pathlib import Path
 
 from dotenv import load_dotenv
@@ -206,6 +207,12 @@ def write_startup_trace(message: str) -> None:
 
 def main() -> int:
     try:
+        stack_file = None
+        stack_path = os.getenv("RAG_FINANCE_STARTUP_STACK_FILE")
+        if stack_path:
+            stack_file = Path(stack_path).open("w", encoding="utf-8")
+            faulthandler.dump_traceback_later(30, repeat=True, file=stack_file)
+
         bundle = resource_root()
         exe_root = executable_root()
         data_root = writable_root()
