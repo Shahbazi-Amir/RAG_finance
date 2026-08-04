@@ -34,6 +34,36 @@ jobs:
             throw "Expected phase1-windows, got '$branch'."
           }
 
+      - name: Materialize and validate runtime API config
+        shell: pwsh
+        env:
+          RAG_FINANCE_ENV_CONTENT: ${{ secrets.RAG_FINANCE_ENV }}
+        run: |
+          if ([string]::IsNullOrWhiteSpace($env:RAG_FINANCE_ENV_CONTENT)) {
+            throw "RAG_FINANCE_ENV secret is missing or empty."
+          }
+
+          [System.IO.File]::WriteAllText(
+            (Join-Path $PWD ".env"),
+            $env:RAG_FINANCE_ENV_CONTENT,
+            [System.Text.UTF8Encoding]::new($false)
+          )
+
+          $content = [System.IO.File]::ReadAllText((Join-Path $PWD ".env"))
+          $required = @(
+            "ARVAN_AI_API_KEY",
+            "ARVAN_EMBEDDING_URL",
+            "ARVAN_CHAT_URL"
+          )
+          foreach ($name in $required) {
+            $pattern = "(?m)^\\s*" + [regex]::Escape($name) + "\\s*=\\s*(?!\\s*$).+"
+            if (-not [regex]::IsMatch($content, $pattern)) {
+              throw "Runtime config is missing or empty for required key: $name"
+            }
+          }
+
+          Write-Host "Runtime API config key-name validation passed."
+
       - name: Prepare and validate Phase 1 vector store seed
         shell: pwsh
         run: |
@@ -109,6 +139,12 @@ jobs:
         shell: pwsh
         run: python .\packaging\windows\verify_bundle.py .\dist\RAG-Finance
 
+      - name: Real end-to-end RAG test for portable build
+        shell: pwsh
+        run: |
+          python .\packaging\windows\e2e_rag_test.py `
+            --distribution-root ".\dist\RAG-Finance"
+
       - name: Create portable ZIP
         shell: pwsh
         run: |
@@ -175,6 +211,9 @@ jobs:
             -ExePath $installedExe `
             -Port 8501
 
+          python .\packaging\windows\e2e_rag_test.py `
+            --distribution-root $installDir
+
           $uninstaller = Join-Path $installDir "unins000.exe"
           if (Test-Path $uninstaller) {
             $uninstallLog = Join-Path $env:RUNNER_TEMP ("RAGFinance-Uninstall-" + $validationId + ".log")
@@ -206,3 +245,8 @@ jobs:
           name: RAG-Finance-Windows-Installer
           path: dist/installer/RAG-Finance-Setup.exe
           if-no-files-found: error
+
+      - name: Remove checkout runtime config
+        if: always()
+        shell: pwsh
+        run: Remove-Item ".env" -Force -ErrorAction SilentlyContinue
