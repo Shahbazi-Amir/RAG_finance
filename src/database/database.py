@@ -1,6 +1,7 @@
 import json
 import os
 import sqlite3
+from contextlib import contextmanager
 from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any
@@ -34,8 +35,18 @@ def get_connection() -> sqlite3.Connection:
     return connection
 
 
+@contextmanager
+def connection_scope():
+    connection = get_connection()
+    try:
+        with connection:
+            yield connection
+    finally:
+        connection.close()
+
+
 def initialize_database() -> None:
-    with get_connection() as connection:
+    with connection_scope() as connection:
         connection.execute(
             """
             CREATE TABLE IF NOT EXISTS conversations (
@@ -72,7 +83,7 @@ def save_conversation(
         default=str,
     )
 
-    with get_connection() as connection:
+    with connection_scope() as connection:
         cursor = connection.execute(
             """
             INSERT INTO conversations (
@@ -105,7 +116,7 @@ def save_conversation(
 
 
 def get_conversations(limit: int = 50) -> list[dict[str, Any]]:
-    with get_connection() as connection:
+    with connection_scope() as connection:
         rows = connection.execute(
             """
             SELECT
