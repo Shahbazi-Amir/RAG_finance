@@ -2,7 +2,7 @@ param(
     [Parameter(Mandatory = $true)]
     [string]$ExePath,
     [ValidateRange(1, 600)]
-    [int]$StartupTimeoutSeconds = 120,
+    [int]$StartupTimeoutSeconds = 300,
     [switch]$OccupyPreferredPort,
     [switch]$RunRealRag
 )
@@ -87,6 +87,23 @@ function Wait-ForReady([System.Diagnostics.Process]$Process) {
             catch { $lastError = $_.Exception.Message }
         }
         Start-Sleep -Milliseconds 400
+    }
+
+    if (Test-Path $StartupTrace) {
+        Write-Host "----- Launcher startup trace -----"
+        Get-Content $StartupTrace
+        Write-Host "----- End launcher startup trace -----"
+    }
+    if (Test-Path $StartupError) {
+        Write-Host "----- Launcher startup error -----"
+        Get-Content $StartupError
+        Write-Host "----- End launcher startup error -----"
+    }
+    $launcherLog = Join-Path $DataRoot "logs\launcher.log"
+    if (Test-Path $launcherLog) {
+        Write-Host "----- Launcher log -----"
+        Get-Content $launcherLog
+        Write-Host "----- End launcher log -----"
     }
     throw "Application did not become ready: $lastError"
 }
