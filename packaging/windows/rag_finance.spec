@@ -28,6 +28,7 @@ hiddenimports += collect_submodules("streamlit")
 hiddenimports += collect_submodules("openai")
 hiddenimports += collect_submodules("qdrant_client")
 hiddenimports += [
+    "src.runtime_e2e",
     "config.settings",
     "src.cache.rag_cache",
     "src.database.database",
@@ -63,6 +64,7 @@ exe = EXE(
     strip=False,
     upx=True,
     console=False,
+    icon=str(ROOT / "packaging" / "windows" / "assets" / "rag-finance.ico"),
     disable_windowed_traceback=False,
 )
 

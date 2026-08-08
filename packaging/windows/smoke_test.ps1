@@ -1,9 +1,10 @@
 param(
     [Parameter(Mandatory = $true)]
     [string]$ExePath,
-    [int]$Port = 8501,
     [ValidateRange(1, 600)]
-    [int]$StartupTimeoutSeconds = 90
+    [int]$StartupTimeoutSeconds = 120,
+    [switch]$OccupyPreferredPort,
+    [switch]$RunRealRag
 )
 
 $ErrorActionPreference = "Stop"
@@ -14,125 +15,154 @@ if (-not (Test-Path $ExePath)) {
 
 $TempRoot = Join-Path $env:RUNNER_TEMP ("rag-finance-smoke-" + [guid]::NewGuid().ToString("N"))
 $LocalAppData = Join-Path $TempRoot "LocalAppData"
+$DataRoot = Join-Path $LocalAppData "RAGFinance"
+$StateFile = Join-Path $DataRoot "runtime\launch-state.json"
+$BrowserUrlFile = Join-Path $DataRoot "runtime\browser-url.txt"
 $StartupError = Join-Path $TempRoot "startup-error.txt"
 $StartupTrace = Join-Path $TempRoot "startup-trace.txt"
+$E2eResult = Join-Path $TempRoot "e2e-result.json"
+$HistoryDatabase = Join-Path $DataRoot "data\history.sqlite3"
 New-Item -ItemType Directory -Force -Path $LocalAppData | Out-Null
 
+$OriginalEnvironment = @{}
+foreach ($name in @(
+    "LOCALAPPDATA",
+    "RAG_FINANCE_DISABLE_BROWSER",
+    "RAG_FINANCE_HEADLESS_ERRORS",
+    "RAG_FINANCE_STARTUP_ERROR_FILE",
+    "RAG_FINANCE_STARTUP_TRACE_FILE",
+    "RAG_FINANCE_PORT",
+    "RAG_FINANCE_VECTORSTORE_PATH",
+    "RAG_FINANCE_E2E_RESULT_FILE"
+)) {
+    $OriginalEnvironment[$name] = [Environment]::GetEnvironmentVariable($name, "Process")
+}
+
 $env:LOCALAPPDATA = $LocalAppData
-$env:RAG_FINANCE_SKIP_CONFIG_CHECK = "1"
-$env:RAG_FINANCE_PORT = "$Port"
 $env:RAG_FINANCE_DISABLE_BROWSER = "1"
 $env:RAG_FINANCE_HEADLESS_ERRORS = "1"
 $env:RAG_FINANCE_STARTUP_ERROR_FILE = $StartupError
 $env:RAG_FINANCE_STARTUP_TRACE_FILE = $StartupTrace
-$env:ARVAN_AI_API_KEY = "smoke-test"
-$env:ARVAN_EMBEDDING_URL = "http://127.0.0.1:9/v1"
-$env:ARVAN_CHAT_URL = "http://127.0.0.1:9/v1"
-$env:ARVAN_CHAT_API_KEY = "smoke-test"
+# Regression guard: production must ignore an unrelated inherited override.
+$env:RAG_FINANCE_PORT = "3000"
 Remove-Item Env:RAG_FINANCE_VECTORSTORE_PATH -ErrorAction SilentlyContinue
 
-Write-Host "Smoke-test LOCALAPPDATA: $LocalAppData"
+function Stop-Application([System.Diagnostics.Process]$Process) {
+    if ($null -ne $Process -and -not $Process.HasExited) {
+        try { & taskkill.exe /PID $Process.Id /T /F | Out-Null }
+        catch { Stop-Process -Id $Process.Id -Force -ErrorAction SilentlyContinue }
+    }
+}
 
-$client = [System.Net.Http.HttpClient]::new()
-$client.Timeout = [TimeSpan]::FromSeconds(2)
-$process = Start-Process -FilePath $ExePath -PassThru
-
-try {
+function Wait-ForReady([System.Diagnostics.Process]$Process) {
     $deadline = (Get-Date).AddSeconds($StartupTimeoutSeconds)
-    $ready = $false
-    $lastHealthError = $null
-    $healthUrl = "http://127.0.0.1:$Port/_stcore/health"
-
+    $lastError = "state file not available"
     while ((Get-Date) -lt $deadline) {
-        if ($process.HasExited) {
-            $detail = ""
-            if (Test-Path $StartupError) {
-                $detail = (Get-Content $StartupError -Raw).Trim()
+        if ($Process.HasExited) {
+            $detail = if (Test-Path $StartupError) { (Get-Content $StartupError -Raw).Trim() } else { "" }
+            throw "Executable exited early with code $($Process.ExitCode): $detail"
+        }
+        if (Test-Path $StateFile) {
+            try {
+                $state = Get-Content $StateFile -Raw | ConvertFrom-Json
+                if ($state.status -eq "ready") {
+                    $client = [System.Net.Http.HttpClient]::new()
+                    try {
+                        $health = $client.GetStringAsync($state.health_url).GetAwaiter().GetResult().Trim()
+                        $rootResponse = $client.GetAsync($state.root_url).GetAwaiter().GetResult()
+                        $rootBody = $rootResponse.Content.ReadAsStringAsync().GetAwaiter().GetResult()
+                        if ([int]$rootResponse.StatusCode -ne 200) { throw "Root returned $([int]$rootResponse.StatusCode)." }
+                        if ($health -ne "ok") { throw "Unexpected Streamlit health body." }
+                        if ($rootBody -match "(?i)not found" -or $rootBody -notmatch "(?i)streamlit") {
+                            throw "Root is not the Streamlit application page."
+                        }
+                        if ((Get-Content $BrowserUrlFile -Raw).Trim() -ne $state.root_url) {
+                            throw "Browser target does not match the healthy root URL."
+                        }
+                        return $state
+                    }
+                    finally { $client.Dispose() }
+                }
             }
-            if ($detail) {
-                throw "Executable exited early with code $($process.ExitCode): $detail"
-            }
-            throw "Executable exited early with code $($process.ExitCode)."
+            catch { $lastError = $_.Exception.Message }
         }
+        Start-Sleep -Milliseconds 400
+    }
+    throw "Application did not become ready: $lastError"
+}
 
-        try {
-            $response = $client.GetAsync($healthUrl).GetAwaiter().GetResult()
-            $status = [int]$response.StatusCode
-            if ($status -ge 200 -and $status -lt 500) {
-                $ready = $true
-                break
-            }
-            $lastHealthError = "HTTP status $status"
-        }
-        catch {
-            $lastHealthError = $_.Exception.Message
-        }
+function Get-HistoryCount {
+    if (-not (Test-Path $HistoryDatabase)) { return 0 }
+    $value = & python -c "import sqlite3,sys; c=sqlite3.connect(sys.argv[1]); print(c.execute('select count(*) from conversations').fetchone()[0]); c.close()" $HistoryDatabase
+    return [int]$value
+}
 
-        Start-Sleep -Milliseconds 500
+$listener = $null
+$process = $null
+$restart = $null
+try {
+    if ($OccupyPreferredPort) {
+        $listener = [System.Net.Sockets.TcpListener]::new([System.Net.IPAddress]::Loopback, 8501)
+        $listener.Start()
+    }
+    if ($RunRealRag) { $env:RAG_FINANCE_E2E_RESULT_FILE = $E2eResult }
+
+    $process = Start-Process -FilePath $ExePath -PassThru
+    $state = Wait-ForReady $process
+    if ($OccupyPreferredPort -and [int]$state.selected_port -eq 8501) {
+        throw "Launcher selected the occupied preferred port."
+    }
+    if ([int]$state.selected_port -eq 3000) {
+        throw "Launcher honored the forbidden inherited RAG_FINANCE_PORT override."
+    }
+    if ($listener) { $listener.Stop(); $listener = $null }
+
+    $RuntimeSeed = Join-Path $DataRoot "vectorstore\qdrant_local"
+    foreach ($required in @(
+        (Join-Path $RuntimeSeed "meta.json"),
+        (Join-Path $RuntimeSeed "collection\financial_knowledge_base\storage.sqlite")
+    )) {
+        if (-not (Test-Path $required -PathType Leaf) -or (Get-Item $required).Length -le 0) {
+            throw "Runtime vector store file is missing or empty: $required"
+        }
     }
 
-    if (-not $ready) {
-        if (Test-Path $StartupTrace) {
-            Write-Host "----- Launcher startup trace -----"
-            Get-Content $StartupTrace
-            Write-Host "----- End launcher startup trace -----"
+    if ($RunRealRag) {
+        $deadline = (Get-Date).AddSeconds(240)
+        while (-not (Test-Path $E2eResult) -and (Get-Date) -lt $deadline) { Start-Sleep -Seconds 1 }
+        if (-not (Test-Path $E2eResult)) { throw "Packaged real RAG test did not finish." }
+        $result = Get-Content $E2eResult -Raw | ConvertFrom-Json
+        if ($result.status -eq "FAIL" -or -not $result.answer_non_empty -or [int]$result.retrieved_chunks -le 0) {
+            throw "Packaged real RAG test failed: $($result.error_type)"
         }
-        Write-Host "----- Port owner diagnostics -----"
-        Get-NetTCPConnection -LocalPort $Port -ErrorAction SilentlyContinue |
-            Format-Table -AutoSize LocalAddress, LocalPort, State, OwningProcess
-        Write-Host "----- End port owner diagnostics -----"
-        $detail = ""
-        if (Test-Path $StartupError) {
-            $detail = (Get-Content $StartupError -Raw).Trim()
-        }
-        if ($detail) {
-            throw "Streamlit did not become ready on $healthUrl. Startup error: $detail"
-        }
-        throw "Streamlit did not become ready on $healthUrl. Last health error: $lastHealthError"
+        $beforeRestart = Get-HistoryCount
+        if ($beforeRestart -lt 1) { throw "Successful Q&A was not persisted to SQLite history." }
+
+        Stop-Application $process
+        $process = $null
+        Remove-Item Env:RAG_FINANCE_E2E_RESULT_FILE -ErrorAction SilentlyContinue
+        Remove-Item $StateFile, $BrowserUrlFile -Force -ErrorAction SilentlyContinue
+
+        $restart = Start-Process -FilePath $ExePath -PassThru
+        $restartState = Wait-ForReady $restart
+        $afterRestart = Get-HistoryCount
+        if ($afterRestart -ne $beforeRestart) { throw "History did not survive application restart." }
+        Write-Host "History restart persistence: PASS ($afterRestart row(s))"
     }
 
-    $RuntimeSeed = Join-Path $LocalAppData "RAGFinance\vectorstore\qdrant_local"
-    $RuntimeMeta = Join-Path $RuntimeSeed "meta.json"
-    $RuntimeStorage = Join-Path $RuntimeSeed "collection\financial_knowledge_base\storage.sqlite"
-
-    if (-not (Test-Path $RuntimeMeta -PathType Leaf)) {
-        throw "Runtime vector store meta.json was not copied to LOCALAPPDATA."
-    }
-    if (-not (Test-Path $RuntimeStorage -PathType Leaf)) {
-        throw "Runtime vector store storage.sqlite was not copied to LOCALAPPDATA."
-    }
-    if ((Get-Item $RuntimeStorage).Length -le 0) {
-        throw "Runtime vector store storage.sqlite is empty."
-    }
-
-    Write-Host "Windows executable smoke test passed."
-    Write-Host "Runtime vector store: $RuntimeSeed"
+    Write-Host "Selected port: $($state.selected_port)"
+    Write-Host "Root URL: $($state.root_url)"
+    Write-Host "Root 200 and Streamlit page: PASS"
+    Write-Host "Browser target matches root: PASS"
+    Write-Host "Windows executable client test: PASS"
 }
 finally {
-    $client.Dispose()
-
-    if (-not $process.HasExited) {
-        try {
-            & taskkill.exe /PID $process.Id /T /F | Out-Null
-        }
-        catch {
-            Stop-Process -Id $process.Id -Force -ErrorAction SilentlyContinue
-        }
+    if ($listener) { $listener.Stop() }
+    Stop-Application $process
+    Stop-Application $restart
+    foreach ($name in $OriginalEnvironment.Keys) {
+        [Environment]::SetEnvironmentVariable($name, $OriginalEnvironment[$name], "Process")
     }
-
-    $deadline = (Get-Date).AddSeconds(10)
-    while (-not $process.HasExited -and (Get-Date) -lt $deadline) {
-        Start-Sleep -Milliseconds 200
-        $process.Refresh()
-    }
-
     Start-Sleep -Milliseconds 500
-    try {
-        if (Test-Path $TempRoot) {
-            Remove-Item -Path $TempRoot -Recurse -Force -ErrorAction SilentlyContinue
-        }
-    }
-    catch {
-        Write-Host "Smoke-test temp cleanup skipped: $($_.Exception.Message)"
-    }
+    Remove-Item -Path $TempRoot -Recurse -Force -ErrorAction SilentlyContinue
 }

@@ -32,6 +32,7 @@ if (-not $SkipVectorStoreCheck) {
     }
 }
 
+python "packaging\windows\generate_icon.py"
 python -m PyInstaller --noconfirm --clean "packaging\windows\rag_finance.spec"
 
 $Portable = Join-Path $RepoRoot "dist\RAG-Finance"

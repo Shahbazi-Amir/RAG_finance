@@ -1,6 +1,8 @@
 from __future__ import annotations
 
 import os
+import json
+import logging
 import shutil
 import socket
 import sys
@@ -16,6 +18,8 @@ from dotenv import load_dotenv
 APP_NAME = "RAGFinance"
 DEFAULT_PORT = 8501
 COLLECTION_NAME = "financial_knowledge_base"
+HEALTH_PATH = "/_stcore/health"
+STARTUP_TIMEOUT_SECONDS = 90
 
 
 def resource_root() -> Path:
@@ -155,7 +159,7 @@ def preflight_vectorstore(vectorstore_root: Path) -> None:
         client.close()
 
 
-def find_port(preferred: int) -> int:
+def find_port(preferred: int = DEFAULT_PORT) -> int:
     for port in range(preferred, preferred + 50):
         with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as sock:
             try:
@@ -166,17 +170,85 @@ def find_port(preferred: int) -> int:
     raise RuntimeError("No free localhost port found.")
 
 
-def open_browser_when_ready(port: int) -> None:
-    url = f"http://127.0.0.1:{port}"
-    deadline = time.time() + 60
+def _read_url(url: str) -> tuple[int, str]:
+    with urllib.request.urlopen(url, timeout=2) as response:
+        return response.status, response.read(8192).decode("utf-8", errors="replace")
+
+
+def wait_for_application(port: int, timeout: int = STARTUP_TIMEOUT_SECONDS) -> str:
+    url = f"http://127.0.0.1:{port}/"
+    health_url = f"http://127.0.0.1:{port}{HEALTH_PATH}"
+    deadline = time.time() + timeout
+    last_error = "server did not answer"
     while time.time() < deadline:
         try:
-            with urllib.request.urlopen(url, timeout=1) as response:
-                if 200 <= response.status < 500:
-                    webbrowser.open(url)
-                    return
-        except Exception:
-            time.sleep(0.4)
+            health_status, health_body = _read_url(health_url)
+            root_status, root_body = _read_url(url)
+            if (
+                health_status == 200
+                and health_body.strip().lower() == "ok"
+                and root_status == 200
+                and "streamlit" in root_body.lower()
+                and "not found" not in root_body.lower()
+            ):
+                return url
+            last_error = (
+                f"health={health_status}, root={root_status}, "
+                f"health_body={health_body[:40]!r}"
+            )
+        except Exception as exc:
+            last_error = f"{type(exc).__name__}: {exc}"
+        time.sleep(0.4)
+    raise TimeoutError(f"Application was not ready on {url}: {last_error}")
+
+
+def write_launch_state(data_root: Path, port: int, status: str) -> None:
+    state = {
+        "pid": os.getpid(),
+        "selected_port": port,
+        "root_url": f"http://127.0.0.1:{port}/",
+        "health_url": f"http://127.0.0.1:{port}{HEALTH_PATH}",
+        "status": status,
+    }
+    path = data_root / "runtime" / "launch-state.json"
+    path.parent.mkdir(parents=True, exist_ok=True)
+    path.write_text(json.dumps(state, indent=2), encoding="utf-8")
+
+
+def ready_actions(port: int, data_root: Path) -> None:
+    try:
+        url = wait_for_application(port)
+        write_launch_state(data_root, port, "ready")
+        (data_root / "runtime" / "browser-url.txt").write_text(url, encoding="utf-8")
+        logging.info("Application ready: %s", url)
+
+        e2e_result = os.getenv("RAG_FINANCE_E2E_RESULT_FILE")
+        if e2e_result:
+            from src.runtime_e2e import run_runtime_e2e
+
+            run_runtime_e2e(Path(e2e_result), data_root)
+
+        if os.getenv("RAG_FINANCE_DISABLE_BROWSER") != "1":
+            webbrowser.open(url)
+            logging.info("Default browser requested for %s", url)
+    except Exception as exc:
+        logging.exception("Application readiness failed")
+        write_startup_error(exc)
+        show_error(
+            "RAG Finance",
+            "RAG Finance could not start. Please restart the application.",
+        )
+
+
+def configure_logging(data_root: Path) -> None:
+    log_dir = data_root / "logs"
+    log_dir.mkdir(parents=True, exist_ok=True)
+    logging.basicConfig(
+        filename=log_dir / "launcher.log",
+        level=logging.INFO,
+        format="%(asctime)s %(levelname)s %(message)s",
+        encoding="utf-8",
+    )
 
 
 def write_startup_error(error: Exception) -> None:
@@ -209,6 +281,8 @@ def main() -> int:
         bundle = resource_root()
         exe_root = executable_root()
         data_root = writable_root()
+        configure_logging(data_root)
+        logging.info("Launcher started; resource=%s writable=%s", bundle, data_root)
         write_startup_trace("runtime roots ready")
 
         load_runtime_config(exe_root, data_root)
@@ -226,20 +300,22 @@ def main() -> int:
         os.environ["RAG_FINANCE_WRITABLE_ROOT"] = str(data_root)
         os.environ["RAG_FINANCE_VECTORSTORE_PATH"] = str(vectorstore_root)
 
-        preferred = int(os.getenv("RAG_FINANCE_PORT", str(DEFAULT_PORT)))
-        port = find_port(preferred)
+        # Production always starts from the application-owned preference. An
+        # unrelated user/machine environment variable must not redirect the UI.
+        port = find_port(DEFAULT_PORT)
         write_startup_trace(f"selected port: {port}")
+        write_launch_state(data_root, port, "starting")
+        logging.info("Selected loopback port %s", port)
         os.environ["STREAMLIT_SERVER_ADDRESS"] = "127.0.0.1"
         os.environ["STREAMLIT_SERVER_PORT"] = str(port)
         os.environ["STREAMLIT_SERVER_HEADLESS"] = "true"
         os.environ["STREAMLIT_BROWSER_GATHER_USAGE_STATS"] = "false"
 
-        if os.getenv("RAG_FINANCE_DISABLE_BROWSER") != "1":
-            threading.Thread(
-                target=open_browser_when_ready,
-                args=(port,),
-                daemon=True,
-            ).start()
+        threading.Thread(
+            target=ready_actions,
+            args=(port, data_root),
+            daemon=True,
+        ).start()
 
         from streamlit.web import bootstrap
 
@@ -258,8 +334,12 @@ def main() -> int:
         return 0
 
     except Exception as exc:
+        logging.exception("Launcher failed")
         write_startup_error(exc)
-        show_error("RAG Finance", str(exc))
+        show_error(
+            "RAG Finance",
+            "RAG Finance could not start. Please restart the application.",
+        )
         return 1
 
 

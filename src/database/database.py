@@ -13,7 +13,13 @@ def _database_path() -> Path:
             str(Path.cwd()),
         )
     )
-    return writable_root / "database" / "rag_demo.db"
+    database_dir = writable_root / "data"
+    database_dir.mkdir(parents=True, exist_ok=True)
+    target = database_dir / "history.sqlite3"
+    legacy = writable_root / "database" / "rag_demo.db"
+    if not target.exists() and legacy.exists():
+        target.write_bytes(legacy.read_bytes())
+    return target
 
 
 DATABASE_PATH = _database_path()

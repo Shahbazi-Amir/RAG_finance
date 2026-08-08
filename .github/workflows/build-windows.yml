@@ -98,6 +98,7 @@ jobs:
         shell: pwsh
         run: |
           python -m compileall -q app.py config src packaging/windows
+          python -m unittest discover -s tests -v
 
       - name: Verify runtime vector store seed
         shell: pwsh
@@ -133,17 +134,12 @@ jobs:
         run: |
           .\packaging\windows\smoke_test.ps1 `
             -ExePath ".\dist\RAG-Finance\RAG-Finance.exe" `
-            -Port 8501
+            -OccupyPreferredPort `
+            -RunRealRag
 
       - name: Validate portable structure
         shell: pwsh
         run: python .\packaging\windows\verify_bundle.py .\dist\RAG-Finance
-
-      - name: Real end-to-end RAG test for portable build
-        shell: pwsh
-        run: |
-          python .\packaging\windows\e2e_rag_test.py `
-            --distribution-root ".\dist\RAG-Finance"
 
       - name: Create portable ZIP
         shell: pwsh
@@ -173,6 +169,22 @@ jobs:
             throw "Inno Setup compiler not found: $iscc"
           }
           & $iscc ".\packaging\windows\installer.iss"
+
+      - name: Validate executable and installer icons
+        shell: pwsh
+        run: |
+          Add-Type -AssemblyName System.Drawing
+          foreach ($path in @(
+            ".\dist\RAG-Finance\RAG-Finance.exe",
+            ".\dist\installer\RAG-Finance-Setup.exe"
+          )) {
+            $icon = [System.Drawing.Icon]::ExtractAssociatedIcon((Resolve-Path $path))
+            if ($null -eq $icon -or $icon.Width -lt 16 -or $icon.Height -lt 16) {
+              throw "Packaged icon could not be extracted from $path"
+            }
+            $icon.Dispose()
+            Write-Host "Packaged icon: PASS ($path)"
+          }
 
       - name: Validate installer
         shell: pwsh
@@ -207,12 +219,26 @@ jobs:
             throw "Installed executable not found."
           }
 
+          $shortcut = Join-Path $env:APPDATA "Microsoft\Windows\Start Menu\Programs\RAG Finance\RAG Finance.lnk"
+          if (-not (Test-Path $shortcut -PathType Leaf)) {
+            throw "Installed Start Menu shortcut was not created."
+          }
+          $shell = New-Object -ComObject WScript.Shell
+          $shortcutInfo = $shell.CreateShortcut($shortcut)
+          if ((Resolve-Path $shortcutInfo.TargetPath).Path -ne (Resolve-Path $installedExe).Path) {
+            throw "Start Menu shortcut does not target the installed executable."
+          }
+          Write-Host "Installed shortcut and icon target: PASS"
+
           .\packaging\windows\smoke_test.ps1 `
             -ExePath $installedExe `
-            -Port 8501
+            -OccupyPreferredPort `
+            -RunRealRag
 
-          python .\packaging\windows\e2e_rag_test.py `
-            --distribution-root $installDir
+          $userDataRoot = Join-Path $env:LOCALAPPDATA "RAGFinance"
+          $preserveMarker = Join-Path $userDataRoot "uninstall-preserve-test.txt"
+          New-Item -ItemType Directory -Force -Path $userDataRoot | Out-Null
+          Set-Content -Path $preserveMarker -Value "preserve" -NoNewline
 
           $uninstaller = Join-Path $installDir "unins000.exe"
           if (Test-Path $uninstaller) {
@@ -229,6 +255,11 @@ jobs:
               throw "Silent uninstall failed with exit code $($uninstallProc.ExitCode)."
             }
           }
+          if (-not (Test-Path $preserveMarker -PathType Leaf)) {
+            throw "Uninstall removed persistent user data."
+          }
+          Write-Host "Uninstall preserved user data: PASS"
+          Remove-Item $preserveMarker -Force -ErrorAction SilentlyContinue
 
           try {
             if (Test-Path $installDir) {

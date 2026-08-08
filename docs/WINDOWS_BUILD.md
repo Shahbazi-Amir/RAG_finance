@@ -26,14 +26,16 @@ Qdrant opens that writable copy rather than the files installed with the
 application. This avoids lock/WAL writes under the installation directory.
 
 Other writable data is also under `%LOCALAPPDATA%\RAGFinance`, including the
-SQLite conversation database and Streamlit chat/cache runtime files.
+SQLite conversation database at `data\history.sqlite3`, diagnostic logs under
+`logs\`, and Streamlit chat/cache runtime files. Upgrades and uninstall do not
+remove this user data.
 
 ## API configuration
 
 Embedding and generation still use the existing OpenAI-compatible Arvan API.
-A real API secret is not committed or embedded in the public CI artifact.
-
-For final delivery, create a private `.env` next to `RAG-Finance.exe`:
+A real API secret is never committed. The private delivery workflow materializes
+the repository secret as `.env` and bundles it beside `RAG-Finance.exe`, so the
+trusted/internal recipient does not configure anything manually:
 
 ```env
 ARVAN_AI_API_KEY=...
@@ -43,7 +45,9 @@ ARVAN_CHAT_API_KEY=...
 ARVAN_CHAT_MODEL=Qwen3-30B-A3B
 ```
 
-The launcher loads that file at runtime. Do not commit it.
+The launcher loads that file at runtime. Do not commit it. Because a technical
+recipient can extract client-side configuration, this build is for trusted,
+internal distribution rather than public release.
 
 ## Vector store seed
 
@@ -98,17 +102,18 @@ Artifacts:
 
 ## Smoke test
 
-The smoke test uses dummy API values and does not issue a model query. It:
+The client test launches the production executable and:
 
-- starts the built executable
-- waits for Streamlit on localhost
-- confirms HTTP response
+- occupies port 8501 and verifies automatic fallback to another loopback port
+- verifies the official Streamlit health endpoint and the real root page
+- confirms the browser target is exactly the healthy root URL
 - confirms the bundled seed was copied to the temporary `LOCALAPPDATA`
 - confirms runtime `meta.json` and `storage.sqlite` exist and are non-empty
-- confirms the process did not immediately exit
+- runs a real embedding, retrieval, and generation request inside the packaged EXE
+- persists the successful Q&A in SQLite and verifies it after an app restart
 
-A real API key is therefore not required for packaging validation. A complete
-RAG query still requires Internet access and valid API credentials.
+The final client validation requires Internet access and the valid API
+configuration materialized from `RAG_FINANCE_ENV`.
 
 ## Installer
 
