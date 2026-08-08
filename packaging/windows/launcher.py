@@ -332,8 +332,19 @@ def main() -> int:
         os.environ["STREAMLIT_BROWSER_GATHER_USAGE_STATS"] = "false"
 
         write_launch_state(data_root, port, "loading-streamlit")
+        from streamlit import config as streamlit_config
         from streamlit.web import bootstrap
 
+        flag_options = {
+            "server.address": "127.0.0.1",
+            "server.port": port,
+            "server.headless": True,
+            "server.fileWatcherType": "none",
+            "server.runOnSave": False,
+            "browser.gatherUsageStats": False,
+        }
+        streamlit_config._main_script_path = str(runtime_app)
+        bootstrap.load_config_options(flag_options=flag_options)
         # A frozen desktop client never hot-reloads config or source files.
         # Avoid starting Streamlit's polling watchers before the server binds.
         bootstrap._install_config_watchers = lambda _flag_options: None
@@ -344,14 +355,7 @@ def main() -> int:
             str(runtime_app),
             False,
             [],
-            {
-                "server.address": "127.0.0.1",
-                "server.port": port,
-                "server.headless": True,
-                "server.fileWatcherType": "none",
-                "server.runOnSave": False,
-                "browser.gatherUsageStats": False,
-            },
+            flag_options,
         )
         return 0
 
