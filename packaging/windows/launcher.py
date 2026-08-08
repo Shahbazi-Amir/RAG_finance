@@ -11,6 +11,7 @@ import time
 import urllib.request
 import webbrowser
 from pathlib import Path
+from datetime import datetime, timezone
 
 from dotenv import load_dotenv
 
@@ -209,6 +210,7 @@ def write_launch_state(data_root: Path, port: int, status: str) -> None:
         "root_url": f"http://127.0.0.1:{port}/",
         "health_url": f"http://127.0.0.1:{port}{HEALTH_PATH}",
         "status": status,
+        "updated_at": datetime.now(timezone.utc).isoformat(),
     }
     path = data_root / "runtime" / "launch-state.json"
     path.parent.mkdir(parents=True, exist_ok=True)
@@ -320,9 +322,11 @@ def main() -> int:
             daemon=True,
         ).start()
 
+        write_launch_state(data_root, port, "loading-streamlit")
         from streamlit.web import bootstrap
 
         write_startup_trace("starting Streamlit")
+        write_launch_state(data_root, port, "starting-streamlit")
         bootstrap.run(
             str(runtime_app),
             False,

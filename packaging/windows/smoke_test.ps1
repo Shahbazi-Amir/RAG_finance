@@ -2,7 +2,7 @@ param(
     [Parameter(Mandatory = $true)]
     [string]$ExePath,
     [ValidateRange(1, 600)]
-    [int]$StartupTimeoutSeconds = 300,
+    [int]$StartupTimeoutSeconds = 120,
     [switch]$OccupyPreferredPort,
     [switch]$RunRealRag
 )
@@ -94,6 +94,16 @@ function Wait-ForReady([System.Diagnostics.Process]$Process) {
         Write-Host "----- Launcher startup trace -----"
         Get-Content $StartupTrace
         Write-Host "----- End launcher startup trace -----"
+    }
+    if (Test-Path $StateFile) {
+        Write-Host "----- Launcher state -----"
+        Get-Content $StateFile
+        $diagnosticState = Get-Content $StateFile -Raw | ConvertFrom-Json
+        if ([int]$diagnosticState.selected_port -gt 0) {
+            Get-NetTCPConnection -LocalPort ([int]$diagnosticState.selected_port) -ErrorAction SilentlyContinue |
+                Format-Table -AutoSize LocalAddress, LocalPort, State, OwningProcess
+        }
+        Write-Host "----- End launcher state -----"
     }
     if (Test-Path $StartupError) {
         Write-Host "----- Launcher startup error -----"
