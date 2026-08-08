@@ -219,6 +219,7 @@ def write_launch_state(data_root: Path, port: int, status: str) -> None:
 
 def ready_actions(port: int, data_root: Path) -> None:
     try:
+        configure_logging(data_root)
         url = wait_for_application(port)
         write_launch_state(data_root, port, "ready")
         (data_root / "runtime" / "browser-url.txt").write_text(url, encoding="utf-8")
@@ -299,8 +300,6 @@ def main() -> int:
         data_root = writable_root()
         write_launch_state(data_root, 0, "initializing")
         write_startup_trace("runtime roots ready")
-        configure_logging(data_root)
-        logging.info("Launcher started; resource=%s writable=%s", bundle, data_root)
 
         load_runtime_config(exe_root, data_root)
         validate_api_config()
