@@ -242,6 +242,20 @@ def ready_actions(port: int, data_root: Path) -> None:
         )
 
 
+def install_server_ready_hook(bootstrap, port: int, data_root: Path) -> None:
+    original_on_server_start = bootstrap._on_server_start
+
+    def on_server_start(server) -> None:
+        original_on_server_start(server)
+        threading.Thread(
+            target=ready_actions,
+            args=(port, data_root),
+            daemon=True,
+        ).start()
+
+    bootstrap._on_server_start = on_server_start
+
+
 def configure_logging(data_root: Path) -> None:
     log_dir = data_root / "logs"
     log_dir.mkdir(parents=True, exist_ok=True)
@@ -316,15 +330,10 @@ def main() -> int:
         os.environ["STREAMLIT_SERVER_HEADLESS"] = "true"
         os.environ["STREAMLIT_BROWSER_GATHER_USAGE_STATS"] = "false"
 
-        threading.Thread(
-            target=ready_actions,
-            args=(port, data_root),
-            daemon=True,
-        ).start()
-
         write_launch_state(data_root, port, "loading-streamlit")
         from streamlit.web import bootstrap
 
+        install_server_ready_hook(bootstrap, port, data_root)
         write_startup_trace("starting Streamlit")
         write_launch_state(data_root, port, "starting-streamlit")
         bootstrap.run(
