@@ -329,6 +329,7 @@ def main() -> int:
         os.environ["STREAMLIT_SERVER_HEADLESS"] = "true"
         os.environ["STREAMLIT_SERVER_FILE_WATCHER_TYPE"] = "none"
         os.environ["STREAMLIT_SERVER_RUN_ON_SAVE"] = "false"
+        os.environ["STREAMLIT_GLOBAL_DEVELOPMENT_MODE"] = "false"
         os.environ["STREAMLIT_BROWSER_GATHER_USAGE_STATS"] = "false"
 
         write_launch_state(data_root, port, "loading-streamlit")
@@ -336,6 +337,7 @@ def main() -> int:
         from streamlit.web import bootstrap
 
         flag_options = {
+            "global.developmentMode": False,
             "server.address": "127.0.0.1",
             "server.port": port,
             "server.headless": True,
