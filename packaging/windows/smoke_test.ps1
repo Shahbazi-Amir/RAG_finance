@@ -83,6 +83,7 @@ function Wait-ForReady([System.Diagnostics.Process]$Process) {
                     }
                     finally { $client.Dispose() }
                 }
+                $lastError = "launcher status: $($state.status)"
             }
             catch { $lastError = $_.Exception.Message }
         }

@@ -281,18 +281,21 @@ def main() -> int:
         bundle = resource_root()
         exe_root = executable_root()
         data_root = writable_root()
+        write_launch_state(data_root, 0, "initializing")
+        write_startup_trace("runtime roots ready")
         configure_logging(data_root)
         logging.info("Launcher started; resource=%s writable=%s", bundle, data_root)
-        write_startup_trace("runtime roots ready")
 
         load_runtime_config(exe_root, data_root)
         validate_api_config()
         write_startup_trace("configuration ready")
 
+        write_launch_state(data_root, 0, "preparing-vectorstore")
         vectorstore_root = prepare_vectorstore(bundle, data_root)
         write_startup_trace("vector store copied")
         preflight_vectorstore(vectorstore_root)
         write_startup_trace("vector store preflight passed")
+        write_launch_state(data_root, 0, "preparing-runtime")
         runtime_app = prepare_runtime_files(bundle, data_root)
         write_startup_trace("runtime files ready")
 
