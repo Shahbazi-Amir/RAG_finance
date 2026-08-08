@@ -125,13 +125,29 @@ function Get-HistoryCount {
     return [int]$value
 }
 
-$listener = $null
+$portOwner = $null
 $process = $null
 $restart = $null
 try {
     if ($OccupyPreferredPort) {
-        $listener = [System.Net.Sockets.TcpListener]::new([System.Net.IPAddress]::Loopback, 8501)
-        $listener.Start()
+        $portOwner = Start-Process `
+            -FilePath "python" `
+            -ArgumentList "-m", "http.server", "8501", "--bind", "127.0.0.1" `
+            -WindowStyle Hidden `
+            -PassThru
+        $portDeadline = (Get-Date).AddSeconds(15)
+        while ((Get-Date) -lt $portDeadline) {
+            if ($portOwner.HasExited) {
+                throw "Preferred-port owner exited before binding port 8501."
+            }
+            if (Get-NetTCPConnection -LocalPort 8501 -State Listen -ErrorAction SilentlyContinue) {
+                break
+            }
+            Start-Sleep -Milliseconds 200
+        }
+        if (-not (Get-NetTCPConnection -LocalPort 8501 -State Listen -ErrorAction SilentlyContinue)) {
+            throw "Preferred-port owner did not bind port 8501."
+        }
     }
     if ($RunRealRag) { $env:RAG_FINANCE_E2E_RESULT_FILE = $E2eResult }
 
@@ -143,7 +159,8 @@ try {
     if ([int]$state.selected_port -eq 3000) {
         throw "Launcher honored the forbidden inherited RAG_FINANCE_PORT override."
     }
-    if ($listener) { $listener.Stop(); $listener = $null }
+    Stop-Application $portOwner
+    $portOwner = $null
 
     $RuntimeSeed = Join-Path $DataRoot "vectorstore\qdrant_local"
     foreach ($required in @(
@@ -185,7 +202,7 @@ try {
     Write-Host "Windows executable client test: PASS"
 }
 finally {
-    if ($listener) { $listener.Stop() }
+    Stop-Application $portOwner
     Stop-Application $process
     Stop-Application $restart
     foreach ($name in $OriginalEnvironment.Keys) {
