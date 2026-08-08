@@ -922,7 +922,7 @@ tqdm
 
 ```mermaid
 flowchart TB
-    A[fintelligence.ir] --> B[76 article URLs]
+    A[سایت اصلی] --> B[76 article URLs]
     B --> C[HTML + JSON + Markdown]
     C --> D[Preprocessing]
     D --> E[76 processed records]
@@ -942,7 +942,7 @@ flowchart TB
 **نسخه متنی معماری فعلی:**
 
 ```text
-fintelligence.ir
+سایت اصلی
         │
         │ Author ID = 4
         ▼
