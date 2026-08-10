@@ -1,0 +1,132 @@
+name: Actions storage audit
+run-name: Actions storage audit
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - agent/actions-storage-cleanup
+    paths:
+      - ".github/bootstrap/actions-storage-audit.trigger"
+
+permissions:
+  actions: read
+  contents: write
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Audit repository Actions artifacts
+        env:
+          GH_TOKEN: ${{ github.token }}
+          REPOSITORY: ${{ github.repository }}
+          REF_NAME: ${{ github.ref_name }}
+          OLD_CUTOFF_UTC: "2026-08-10T00:00:00Z"
+        shell: bash
+        run: |
+          set -euo pipefail
+          python - <<'PY'
+          import base64, json, os, urllib.error, urllib.parse, urllib.request
+          from datetime import datetime
+
+          repo = os.environ['REPOSITORY']
+          ref_name = os.environ['REF_NAME']
+          token = os.environ['GH_TOKEN']
+          cutoff = datetime.fromisoformat(os.environ['OLD_CUTOFF_UTC'].replace('Z', '+00:00'))
+          headers = {
+              'Authorization': f'Bearer {token}',
+              'Accept': 'application/vnd.github+json',
+              'X-GitHub-Api-Version': '2022-11-28',
+              'User-Agent': 'rag-finance-actions-storage-audit',
+          }
+
+          artifacts = []
+          page = 1
+          while True:
+              req = urllib.request.Request(
+                  f'https://api.github.com/repos/{repo}/actions/artifacts?per_page=100&page={page}',
+                  headers=headers,
+              )
+              with urllib.request.urlopen(req, timeout=30) as response:
+                  payload = json.load(response)
+              batch = payload.get('artifacts') or []
+              if not batch:
+                  break
+              artifacts.extend(batch)
+              if len(batch) < 100:
+                  break
+              page += 1
+
+          def dt(row):
+              return datetime.fromisoformat(str(row.get('created_at') or '1970-01-01T00:00:00Z').replace('Z', '+00:00'))
+
+          def compact(row):
+              return {
+                  'id': int(row.get('id') or 0),
+                  'name': str(row.get('name') or ''),
+                  'size_in_bytes': int(row.get('size_in_bytes') or 0),
+                  'created_at': row.get('created_at'),
+                  'expires_at': row.get('expires_at'),
+                  'expired': bool(row.get('expired')),
+                  'workflow_run_id': int((row.get('workflow_run') or {}).get('id') or 0),
+              }
+
+          old = [row for row in artifacts if dt(row) < cutoff]
+          total_bytes = sum(int(row.get('size_in_bytes') or 0) for row in artifacts)
+          old_bytes = sum(int(row.get('size_in_bytes') or 0) for row in old)
+          report = {
+              'schema_version': 1,
+              'repository': repo,
+              'cutoff_utc': cutoff.isoformat(),
+              'artifact_count': len(artifacts),
+              'total_bytes': total_bytes,
+              'old_candidate_count': len(old),
+              'old_candidate_bytes': old_bytes,
+              'recent_count': len(artifacts) - len(old),
+              'recent_bytes': total_bytes - old_bytes,
+              'old_candidates': [compact(row) for row in sorted(old, key=dt)],
+              'largest_old_candidates': [compact(row) for row in sorted(old, key=lambda r: int(r.get('size_in_bytes') or 0), reverse=True)[:50]],
+          }
+
+          mib = lambda n: n / 1024 / 1024
+          summary = (
+              '# GitHub Actions artifact storage audit\n\n'
+              f'Repository: `{repo}`\n\n'
+              f'Artifacts found: **{len(artifacts)}**\n\n'
+              f'Visible artifact bytes: **{mib(total_bytes):.2f} MiB**\n\n'
+              f'Old candidates before `{cutoff.isoformat()}`: **{len(old)}** / **{mib(old_bytes):.2f} MiB**\n'
+          )
+          print(summary)
+          with open(os.environ['GITHUB_STEP_SUMMARY'], 'a', encoding='utf-8') as handle:
+              handle.write(summary)
+
+          path = 'benchmarks/actions-storage-audit.json'
+          url = f'https://api.github.com/repos/{repo}/contents/{path}'
+          existing_sha = None
+          try:
+              req = urllib.request.Request(url + '?ref=' + urllib.parse.quote(ref_name, safe=''), headers=headers)
+              with urllib.request.urlopen(req, timeout=30) as response:
+                  existing_sha = json.load(response).get('sha')
+          except urllib.error.HTTPError as exc:
+              if exc.code != 404:
+                  raise
+
+          body = {
+              'message': 'chore: record Actions storage audit',
+              'content': base64.b64encode((json.dumps(report, ensure_ascii=False, indent=2) + '\n').encode()).decode(),
+              'branch': ref_name,
+          }
+          if existing_sha:
+              body['sha'] = existing_sha
+          req = urllib.request.Request(
+              url,
+              data=json.dumps(body).encode(),
+              headers={**headers, 'Content-Type': 'application/json'},
+              method='PUT',
+          )
+          with urllib.request.urlopen(req, timeout=30) as response:
+              saved = json.load(response)
+          print('AUDIT_REPORT_COMMIT=' + str((saved.get('commit') or {}).get('sha') or ''))
+          PY
