@@ -90,27 +90,35 @@ def message_identity(message: bale.Message) -> tuple[str, str | None, str | None
     return chat_id, user_id, username
 
 
-def is_audio_feedback(message: bale.Message) -> bool:
-    attachment = message.attachment
-    if not attachment:
-        return False
-
+def audio_feedback_file(message: bale.Message):
+    """Return a downloadable audio-like Bale BaseFile without using Message.attachment."""
     if message.audio is not None:
-        return True
+        return message.audio
 
-    mime_type = getattr(attachment, "mime_type", None)
-    return bool(mime_type and mime_type.lower().startswith("audio/"))
+    document = message.document
+    mime_type = getattr(document, "mime_type", None) if document is not None else None
+    if mime_type and mime_type.lower().startswith("audio/"):
+        return document
+
+    return None
+
+
+def is_audio_feedback(message: bale.Message) -> bool:
+    return audio_feedback_file(message) is not None
 
 
 def audio_extension(message: bale.Message) -> str:
-    attachment = message.attachment
-    file_name = getattr(attachment, "file_name", None)
+    audio_file = audio_feedback_file(message)
+    if audio_file is None:
+        return ".ogg"
+
+    file_name = getattr(audio_file, "file_name", None)
     if file_name:
         suffix = Path(file_name).suffix
         if suffix and len(suffix) <= 10:
             return suffix.lower()
 
-    mime_type = getattr(attachment, "mime_type", None)
+    mime_type = getattr(audio_file, "mime_type", None)
     guessed = mimetypes.guess_extension(mime_type or "")
     return guessed or ".ogg"
 
@@ -166,8 +174,8 @@ async def reply_chunks(
 
 
 async def save_feedback_audio(message: bale.Message) -> None:
-    attachment = message.attachment
-    if attachment is None:
+    audio_file = audio_feedback_file(message)
+    if audio_file is None:
         raise ValueError("Audio attachment is missing")
 
     chat_id, user_id, username = message_identity(message)
@@ -176,7 +184,7 @@ async def save_feedback_audio(message: bale.Message) -> None:
     file_name = f"{chat_id}_{safe_message_id}{extension}"
     destination = AUDIO_DIR / file_name
 
-    audio_bytes = await attachment.get()
+    audio_bytes = await audio_file.get()
     destination.write_bytes(audio_bytes)
 
     save_audio_feedback(
@@ -185,7 +193,7 @@ async def save_feedback_audio(message: bale.Message) -> None:
         username=username,
         message_id=str(message.message_id),
         audio_path=str(destination.relative_to(PROJECT_ROOT)),
-        mime_type=getattr(attachment, "mime_type", None),
+        mime_type=getattr(audio_file, "mime_type", None),
     )
 
 
