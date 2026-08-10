@@ -1,0 +1,16 @@
+[Unit]
+Description=RAG Finance Bale Bot
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=ubuntu
+WorkingDirectory=/home/ubuntu/RAG_finance-bale
+EnvironmentFile=/home/ubuntu/RAG_finance-bale/.env
+ExecStart=/home/ubuntu/RAG_finance-bale/venv/bin/python /home/ubuntu/RAG_finance-bale/bale_bot.py
+Restart=on-failure
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target
