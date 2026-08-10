@@ -1,5 +1,5 @@
-name: Actions storage audit
-run-name: Actions storage audit
+name: Actions storage cleanup
+run-name: Actions storage cleanup
 
 on:
   workflow_dispatch:
@@ -10,15 +10,15 @@ on:
       - ".github/bootstrap/actions-storage-audit.trigger"
 
 permissions:
-  actions: read
+  actions: write
   contents: write
 
 jobs:
-  audit:
+  cleanup:
     runs-on: ubuntu-latest
-    timeout-minutes: 10
+    timeout-minutes: 15
     steps:
-      - name: Audit repository Actions artifacts
+      - name: Delete old repository Actions artifacts
         env:
           GH_TOKEN: ${{ github.token }}
           REPOSITORY: ${{ github.repository }}
@@ -28,105 +28,160 @@ jobs:
         run: |
           set -euo pipefail
           python - <<'PY'
-          import base64, json, os, urllib.error, urllib.parse, urllib.request
+          import base64
+          import json
+          import os
+          import time
+          import urllib.error
+          import urllib.parse
+          import urllib.request
           from datetime import datetime
 
-          repo = os.environ['REPOSITORY']
-          ref_name = os.environ['REF_NAME']
-          token = os.environ['GH_TOKEN']
-          cutoff = datetime.fromisoformat(os.environ['OLD_CUTOFF_UTC'].replace('Z', '+00:00'))
+          repo = os.environ["REPOSITORY"]
+          ref_name = os.environ["REF_NAME"]
+          token = os.environ["GH_TOKEN"]
+          cutoff = datetime.fromisoformat(os.environ["OLD_CUTOFF_UTC"].replace("Z", "+00:00"))
           headers = {
-              'Authorization': f'Bearer {token}',
-              'Accept': 'application/vnd.github+json',
-              'X-GitHub-Api-Version': '2022-11-28',
-              'User-Agent': 'rag-finance-actions-storage-audit',
+              "Authorization": f"Bearer {token}",
+              "Accept": "application/vnd.github+json",
+              "X-GitHub-Api-Version": "2022-11-28",
+              "User-Agent": "rag-finance-actions-storage-cleanup",
           }
 
-          artifacts = []
-          page = 1
-          while True:
-              req = urllib.request.Request(
-                  f'https://api.github.com/repos/{repo}/actions/artifacts?per_page=100&page={page}',
-                  headers=headers,
-              )
+          def api_json(url: str):
+              req = urllib.request.Request(url, headers=headers)
               with urllib.request.urlopen(req, timeout=30) as response:
-                  payload = json.load(response)
-              batch = payload.get('artifacts') or []
-              if not batch:
-                  break
-              artifacts.extend(batch)
-              if len(batch) < 100:
-                  break
-              page += 1
+                  return json.load(response)
+
+          def list_artifacts():
+              rows = []
+              page = 1
+              while True:
+                  payload = api_json(
+                      f"https://api.github.com/repos/{repo}/actions/artifacts?per_page=100&page={page}"
+                  )
+                  batch = payload.get("artifacts") or []
+                  if not batch:
+                      break
+                  rows.extend(batch)
+                  if len(batch) < 100:
+                      break
+                  page += 1
+              return rows
 
           def dt(row):
-              return datetime.fromisoformat(str(row.get('created_at') or '1970-01-01T00:00:00Z').replace('Z', '+00:00'))
+              raw = str(row.get("created_at") or "1970-01-01T00:00:00Z")
+              return datetime.fromisoformat(raw.replace("Z", "+00:00"))
 
-          def compact(row):
-              return {
-                  'id': int(row.get('id') or 0),
-                  'name': str(row.get('name') or ''),
-                  'size_in_bytes': int(row.get('size_in_bytes') or 0),
-                  'created_at': row.get('created_at'),
-                  'expires_at': row.get('expires_at'),
-                  'expired': bool(row.get('expired')),
-                  'workflow_run_id': int((row.get('workflow_run') or {}).get('id') or 0),
-              }
+          before = list_artifacts()
+          candidates = [row for row in before if dt(row) < cutoff]
+          candidate_bytes = sum(int(row.get("size_in_bytes") or 0) for row in candidates)
+          deleted = []
+          failures = []
 
-          old = [row for row in artifacts if dt(row) < cutoff]
-          total_bytes = sum(int(row.get('size_in_bytes') or 0) for row in artifacts)
-          old_bytes = sum(int(row.get('size_in_bytes') or 0) for row in old)
+          for row in candidates:
+              artifact_id = int(row.get("id") or 0)
+              if artifact_id <= 0:
+                  failures.append({"id": artifact_id, "name": row.get("name"), "error": "invalid_id"})
+                  continue
+              url = f"https://api.github.com/repos/{repo}/actions/artifacts/{artifact_id}"
+              req = urllib.request.Request(url, headers=headers, method="DELETE")
+              try:
+                  with urllib.request.urlopen(req, timeout=30) as response:
+                      status = int(getattr(response, "status", 204) or 204)
+                  if status != 204:
+                      failures.append({"id": artifact_id, "name": row.get("name"), "error": f"http_{status}"})
+                  else:
+                      deleted.append({
+                          "id": artifact_id,
+                          "name": str(row.get("name") or ""),
+                          "size_in_bytes": int(row.get("size_in_bytes") or 0),
+                          "workflow_run_id": int((row.get("workflow_run") or {}).get("id") or 0),
+                      })
+              except urllib.error.HTTPError as exc:
+                  # 404 means the artifact disappeared between list and delete; count it as gone.
+                  if exc.code == 404:
+                      deleted.append({
+                          "id": artifact_id,
+                          "name": str(row.get("name") or ""),
+                          "size_in_bytes": int(row.get("size_in_bytes") or 0),
+                          "workflow_run_id": int((row.get("workflow_run") or {}).get("id") or 0),
+                          "already_gone": True,
+                      })
+                  else:
+                      failures.append({"id": artifact_id, "name": row.get("name"), "error": f"http_{exc.code}"})
+              time.sleep(0.05)
+
+          after = list_artifacts()
+          after_bytes = sum(int(row.get("size_in_bytes") or 0) for row in after)
+          remaining_old = [row for row in after if dt(row) < cutoff]
+
           report = {
-              'schema_version': 1,
-              'repository': repo,
-              'cutoff_utc': cutoff.isoformat(),
-              'artifact_count': len(artifacts),
-              'total_bytes': total_bytes,
-              'old_candidate_count': len(old),
-              'old_candidate_bytes': old_bytes,
-              'recent_count': len(artifacts) - len(old),
-              'recent_bytes': total_bytes - old_bytes,
-              'old_candidates': [compact(row) for row in sorted(old, key=dt)],
-              'largest_old_candidates': [compact(row) for row in sorted(old, key=lambda r: int(r.get('size_in_bytes') or 0), reverse=True)[:50]],
+              "schema_version": 1,
+              "repository": repo,
+              "cutoff_utc": cutoff.isoformat(),
+              "before_artifact_count": len(before),
+              "before_bytes": sum(int(row.get("size_in_bytes") or 0) for row in before),
+              "candidate_count": len(candidates),
+              "candidate_bytes": candidate_bytes,
+              "deleted_count": len(deleted),
+              "deleted_bytes": sum(int(row.get("size_in_bytes") or 0) for row in deleted),
+              "failure_count": len(failures),
+              "failures": failures,
+              "after_artifact_count": len(after),
+              "after_bytes": after_bytes,
+              "remaining_old_count": len(remaining_old),
+              "deleted": deleted,
           }
 
           mib = lambda n: n / 1024 / 1024
           summary = (
-              '# GitHub Actions artifact storage audit\n\n'
-              f'Repository: `{repo}`\n\n'
-              f'Artifacts found: **{len(artifacts)}**\n\n'
-              f'Visible artifact bytes: **{mib(total_bytes):.2f} MiB**\n\n'
-              f'Old candidates before `{cutoff.isoformat()}`: **{len(old)}** / **{mib(old_bytes):.2f} MiB**\n'
+              "# GitHub Actions artifact cleanup\n\n"
+              f"Repository: `{repo}`\n\n"
+              f"Before: **{len(before)} artifacts / {mib(report['before_bytes']):.2f} MiB**\n\n"
+              f"Deleted: **{len(deleted)} artifacts / {mib(report['deleted_bytes']):.2f} MiB**\n\n"
+              f"After: **{len(after)} artifacts / {mib(after_bytes):.2f} MiB**\n\n"
+              f"Failures: **{len(failures)}**\n"
           )
           print(summary)
-          with open(os.environ['GITHUB_STEP_SUMMARY'], 'a', encoding='utf-8') as handle:
+          with open(os.environ["GITHUB_STEP_SUMMARY"], "a", encoding="utf-8") as handle:
               handle.write(summary)
 
-          path = 'benchmarks/actions-storage-audit.json'
-          url = f'https://api.github.com/repos/{repo}/contents/{path}'
+          path = "benchmarks/actions-storage-cleanup.json"
+          url = f"https://api.github.com/repos/{repo}/contents/{path}"
           existing_sha = None
           try:
-              req = urllib.request.Request(url + '?ref=' + urllib.parse.quote(ref_name, safe=''), headers=headers)
+              req = urllib.request.Request(
+                  url + "?ref=" + urllib.parse.quote(ref_name, safe=""),
+                  headers=headers,
+              )
               with urllib.request.urlopen(req, timeout=30) as response:
-                  existing_sha = json.load(response).get('sha')
+                  existing_sha = json.load(response).get("sha")
           except urllib.error.HTTPError as exc:
               if exc.code != 404:
                   raise
 
           body = {
-              'message': 'chore: record Actions storage audit',
-              'content': base64.b64encode((json.dumps(report, ensure_ascii=False, indent=2) + '\n').encode()).decode(),
-              'branch': ref_name,
+              "message": "chore: record Actions storage cleanup",
+              "content": base64.b64encode(
+                  (json.dumps(report, ensure_ascii=False, indent=2) + "\n").encode()
+              ).decode(),
+              "branch": ref_name,
           }
           if existing_sha:
-              body['sha'] = existing_sha
+              body["sha"] = existing_sha
           req = urllib.request.Request(
               url,
               data=json.dumps(body).encode(),
-              headers={**headers, 'Content-Type': 'application/json'},
-              method='PUT',
+              headers={**headers, "Content-Type": "application/json"},
+              method="PUT",
           )
           with urllib.request.urlopen(req, timeout=30) as response:
               saved = json.load(response)
-          print('AUDIT_REPORT_COMMIT=' + str((saved.get('commit') or {}).get('sha') or ''))
+          print("CLEANUP_REPORT_COMMIT=" + str((saved.get("commit") or {}).get("sha") or ""))
+
+          if failures or remaining_old:
+              raise SystemExit(
+                  f"cleanup incomplete: failures={len(failures)} remaining_old={len(remaining_old)}"
+              )
           PY
