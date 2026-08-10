@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "repository": "Shahbazi-Amir/RAG_finance",
+  "current_cleanup_run": 31352735141,
+  "keep_successful_target": 24,
+  "before_run_count": 106,
+  "successful_kept_ids": [
+    30866088766,
+    30866091109,
+    30930350785,
+    30931192316,
+    30931194607,
+    31275720278,
+    31279080012,
+    31279082538,
+    31351025207,
+    31351298569
+  ],
+  "candidate_count": 95,
+  "deleted_count": 95,
+  "failure_count": 0,
+  "failures": [],
+  "after_run_count": 12,
+  "successful_runs_after_excluding_cleanup": 10,
+  "unwanted_completed_after": 0
+}
