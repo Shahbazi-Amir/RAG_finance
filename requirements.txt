@@ -6,3 +6,4 @@ requests
 beautifulsoup4
 lxml
 tqdm
+python-bale-bot==2.5.0
