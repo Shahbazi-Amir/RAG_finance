@@ -1,0 +1,789 @@
+{
+  "schema_version": 1,
+  "repository": "Shahbazi-Amir/RAG_finance",
+  "cutoff_utc": "2026-08-10T00:00:00+00:00",
+  "artifact_count": 43,
+  "total_bytes": 4097140354,
+  "old_candidate_count": 43,
+  "old_candidate_bytes": 4097140354,
+  "recent_count": 0,
+  "recent_bytes": 0,
+  "old_candidates": [
+    {
+      "id": 8873564953,
+      "name": "RAG-Finance-Windows-Portable",
+      "size_in_bytes": 99921378,
+      "created_at": "2026-08-03T22:31:37Z",
+      "expires_at": "2026-11-01T22:28:56Z",
+      "expired": false,
+      "workflow_run_id": 30858804301
+    },
+    {
+      "id": 8873590407,
+      "name": "RAG-Finance-Windows-Portable",
+      "size_in_bytes": 99920910,
+      "created_at": "2026-08-03T22:32:38Z",
+      "expires_at": "2026-11-01T22:29:21Z",
+      "expired": false,
+      "workflow_run_id": 30858831673
+    },
+    {
+      "id": 8873594944,
+      "name": "RAG-Finance-Windows-Portable",
+      "size_in_bytes": 99921810,
+      "created_at": "2026-08-03T22:32:49Z",
+      "expires_at": "2026-11-01T22:29:24Z",
+      "expired": false,
+      "workflow_run_id": 30858833985
+    },
+    {
+      "id": 8873807586,
+      "name": "RAG-Finance-Windows-Portable",
+      "size_in_bytes": 99921586,
+      "created_at": "2026-08-03T22:41:38Z",
+      "expires_at": "2026-11-01T22:38:14Z",
+      "expired": false,
+      "workflow_run_id": 30859400027
+    },
+    {
+      "id": 8873860380,
+      "name": "RAG-Finance-Windows-Portable",
+      "size_in_bytes": 99921529,
+      "created_at": "2026-08-03T22:43:55Z",
+      "expires_at": "2026-11-01T22:41:44Z",
+      "expired": false,
+      "workflow_run_id": 30859610869
+    },
+    {
+      "id": 8873880210,
+      "name": "RAG-Finance-Windows-Portable",
+      "size_in_bytes": 99921376,
+      "created_at": "2026-08-03T22:44:49Z",
+      "expires_at": "2026-11-01T22:41:47Z",
+      "expired": false,
+      "workflow_run_id": 30859613990
+    },
+    {
+      "id": 8874013118,
+      "name": "RAG-Finance-Windows-Portable",
+      "size_in_bytes": 99920492,
+      "created_at": "2026-08-03T22:50:46Z",
+      "expires_at": "2026-11-01T22:47:55Z",
+      "expired": false,
+      "workflow_run_id": 30859990005
+    },
+    {
+      "id": 8874016319,
+      "name": "RAG-Finance-Windows-Portable",
+      "size_in_bytes": 99919921,
+      "created_at": "2026-08-03T22:50:54Z",
+      "expires_at": "2026-11-01T22:47:58Z",
+      "expired": false,
+      "workflow_run_id": 30859993317
+    },
+    {
+      "id": 8874082922,
+      "name": "RAG-Finance-Windows-Portable",
+      "size_in_bytes": 99920040,
+      "created_at": "2026-08-03T22:53:52Z",
+      "expires_at": "2026-11-01T22:50:46Z",
+      "expired": false,
+      "workflow_run_id": 30860161902
+    },
+    {
+      "id": 8874082855,
+      "name": "RAG-Finance-Windows-Portable",
+      "size_in_bytes": 99922712,
+      "created_at": "2026-08-03T22:53:52Z",
+      "expires_at": "2026-11-01T22:50:49Z",
+      "expired": false,
+      "workflow_run_id": 30860165369
+    },
+    {
+      "id": 8874261857,
+      "name": "RAG-Finance-Windows-Portable",
+      "size_in_bytes": 99921271,
+      "created_at": "2026-08-03T23:02:08Z",
+      "expires_at": "2026-11-01T22:59:40Z",
+      "expired": false,
+      "workflow_run_id": 30860690564
+    },
+    {
+      "id": 8874293215,
+      "name": "RAG-Finance-Windows-Portable",
+      "size_in_bytes": 99921540,
+      "created_at": "2026-08-03T23:03:38Z",
+      "expires_at": "2026-11-01T22:59:37Z",
+      "expired": false,
+      "workflow_run_id": 30860687406
+    },
+    {
+      "id": 8874513942,
+      "name": "RAG-Finance-Windows-Portable",
+      "size_in_bytes": 99921753,
+      "created_at": "2026-08-03T23:14:26Z",
+      "expires_at": "2026-11-01T23:11:57Z",
+      "expired": false,
+      "workflow_run_id": 30861426300
+    },
+    {
+      "id": 8874524833,
+      "name": "RAG-Finance-Windows-Portable",
+      "size_in_bytes": 99921565,
+      "created_at": "2026-08-03T23:14:59Z",
+      "expires_at": "2026-11-01T23:11:54Z",
+      "expired": false,
+      "workflow_run_id": 30861424118
+    },
+    {
+      "id": 8874530046,
+      "name": "RAG-Finance-Windows-Portable",
+      "size_in_bytes": 99921129,
+      "created_at": "2026-08-03T23:15:15Z",
+      "expires_at": "2026-11-01T23:12:31Z",
+      "expired": false,
+      "workflow_run_id": 30861458712
+    },
+    {
+      "id": 8874533628,
+      "name": "RAG-Finance-Windows-Portable",
+      "size_in_bytes": 99921318,
+      "created_at": "2026-08-03T23:15:26Z",
+      "expires_at": "2026-11-01T23:12:34Z",
+      "expired": false,
+      "workflow_run_id": 30861462164
+    },
+    {
+      "id": 8875389109,
+      "name": "RAG-Finance-Windows-Portable",
+      "size_in_bytes": 99922503,
+      "created_at": "2026-08-03T23:57:01Z",
+      "expires_at": "2026-11-01T23:54:39Z",
+      "expired": false,
+      "workflow_run_id": 30863849643
+    },
+    {
+      "id": 8875398629,
+      "name": "RAG-Finance-Windows-Portable",
+      "size_in_bytes": 99921786,
+      "created_at": "2026-08-03T23:57:32Z",
+      "expires_at": "2026-11-01T23:54:42Z",
+      "expired": false,
+      "workflow_run_id": 30863852367
+    },
+    {
+      "id": 8875571849,
+      "name": "RAG-Finance-Windows-Portable",
+      "size_in_bytes": 99917797,
+      "created_at": "2026-08-04T00:06:17Z",
+      "expires_at": "2026-11-02T00:03:32Z",
+      "expired": false,
+      "workflow_run_id": 30864339680
+    },
+    {
+      "id": 8875576709,
+      "name": "RAG-Finance-Windows-Portable",
+      "size_in_bytes": 99920938,
+      "created_at": "2026-08-04T00:06:32Z",
+      "expires_at": "2026-11-02T00:03:38Z",
+      "expired": false,
+      "workflow_run_id": 30864345055
+    },
+    {
+      "id": 8875730864,
+      "name": "RAG-Finance-Windows-Portable",
+      "size_in_bytes": 99922914,
+      "created_at": "2026-08-04T00:14:41Z",
+      "expires_at": "2026-11-02T00:11:48Z",
+      "expired": false,
+      "workflow_run_id": 30864795542
+    },
+    {
+      "id": 8875732496,
+      "name": "RAG-Finance-Windows-Portable",
+      "size_in_bytes": 99919514,
+      "created_at": "2026-08-04T00:14:47Z",
+      "expires_at": "2026-11-02T00:11:51Z",
+      "expired": false,
+      "workflow_run_id": 30864798353
+    },
+    {
+      "id": 8875877470,
+      "name": "RAG-Finance-Windows-Portable",
+      "size_in_bytes": 99920992,
+      "created_at": "2026-08-04T00:22:38Z",
+      "expires_at": "2026-11-02T00:19:59Z",
+      "expired": false,
+      "workflow_run_id": 30865233841
+    },
+    {
+      "id": 8875880639,
+      "name": "RAG-Finance-Windows-Portable",
+      "size_in_bytes": 99923420,
+      "created_at": "2026-08-04T00:22:48Z",
+      "expires_at": "2026-11-02T00:20:02Z",
+      "expired": false,
+      "workflow_run_id": 30865236566
+    },
+    {
+      "id": 8876034543,
+      "name": "RAG-Finance-Windows-Portable",
+      "size_in_bytes": 99922698,
+      "created_at": "2026-08-04T00:30:46Z",
+      "expires_at": "2026-11-02T00:28:06Z",
+      "expired": false,
+      "workflow_run_id": 30865662516
+    },
+    {
+      "id": 8876036170,
+      "name": "RAG-Finance-Windows-Portable",
+      "size_in_bytes": 99923192,
+      "created_at": "2026-08-04T00:30:51Z",
+      "expires_at": "2026-11-02T00:28:08Z",
+      "expired": false,
+      "workflow_run_id": 30865664472
+    },
+    {
+      "id": 8876185172,
+      "name": "RAG-Finance-Windows-Portable",
+      "size_in_bytes": 99922651,
+      "created_at": "2026-08-04T00:38:41Z",
+      "expires_at": "2026-11-02T00:36:07Z",
+      "expired": false,
+      "workflow_run_id": 30866088766
+    },
+    {
+      "id": 8876199804,
+      "name": "RAG-Finance-Windows-Portable",
+      "size_in_bytes": 99922467,
+      "created_at": "2026-08-04T00:39:30Z",
+      "expires_at": "2026-11-02T00:36:10Z",
+      "expired": false,
+      "workflow_run_id": 30866091109
+    },
+    {
+      "id": 8876209116,
+      "name": "RAG-Finance-Windows-Installer",
+      "size_in_bytes": 71437927,
+      "created_at": "2026-08-04T00:40:01Z",
+      "expires_at": "2026-11-02T00:36:07Z",
+      "expired": false,
+      "workflow_run_id": 30866088766
+    },
+    {
+      "id": 8876223116,
+      "name": "RAG-Finance-Windows-Installer",
+      "size_in_bytes": 71442181,
+      "created_at": "2026-08-04T00:40:45Z",
+      "expires_at": "2026-11-02T00:36:10Z",
+      "expired": false,
+      "workflow_run_id": 30866091109
+    },
+    {
+      "id": 8900937543,
+      "name": "RAG-Finance-Windows-Portable",
+      "size_in_bytes": 99908249,
+      "created_at": "2026-08-04T16:44:09Z",
+      "expires_at": "2026-11-02T16:41:28Z",
+      "expired": false,
+      "workflow_run_id": 30930345144
+    },
+    {
+      "id": 8900941878,
+      "name": "RAG-Finance-Windows-Portable",
+      "size_in_bytes": 99907676,
+      "created_at": "2026-08-04T16:44:17Z",
+      "expires_at": "2026-11-02T16:41:33Z",
+      "expired": false,
+      "workflow_run_id": 30930350785
+    },
+    {
+      "id": 8900983101,
+      "name": "RAG-Finance-Windows-Installer",
+      "size_in_bytes": 71420710,
+      "created_at": "2026-08-04T16:45:36Z",
+      "expires_at": "2026-11-02T16:41:33Z",
+      "expired": false,
+      "workflow_run_id": 30930350785
+    },
+    {
+      "id": 8901121383,
+      "name": "RAG-Finance-Windows-Portable",
+      "size_in_bytes": 99909433,
+      "created_at": "2026-08-04T16:49:53Z",
+      "expires_at": "2026-11-02T16:46:57Z",
+      "expired": false,
+      "workflow_run_id": 30930787139
+    },
+    {
+      "id": 8901121344,
+      "name": "RAG-Finance-Windows-Portable",
+      "size_in_bytes": 99909297,
+      "created_at": "2026-08-04T16:49:53Z",
+      "expires_at": "2026-11-02T16:46:54Z",
+      "expired": false,
+      "workflow_run_id": 30930783578
+    },
+    {
+      "id": 8901298025,
+      "name": "RAG-Finance-Windows-Portable",
+      "size_in_bytes": 99908842,
+      "created_at": "2026-08-04T16:55:23Z",
+      "expires_at": "2026-11-02T16:52:09Z",
+      "expired": false,
+      "workflow_run_id": 30931192316
+    },
+    {
+      "id": 8901301417,
+      "name": "RAG-Finance-Windows-Portable",
+      "size_in_bytes": 99909031,
+      "created_at": "2026-08-04T16:55:29Z",
+      "expires_at": "2026-11-02T16:52:11Z",
+      "expired": false,
+      "workflow_run_id": 30931194607
+    },
+    {
+      "id": 8901355558,
+      "name": "RAG-Finance-Windows-Installer",
+      "size_in_bytes": 71421239,
+      "created_at": "2026-08-04T16:57:12Z",
+      "expires_at": "2026-11-02T16:52:09Z",
+      "expired": false,
+      "workflow_run_id": 30931192316
+    },
+    {
+      "id": 8901358018,
+      "name": "RAG-Finance-Windows-Installer",
+      "size_in_bytes": 71422922,
+      "created_at": "2026-08-04T16:57:16Z",
+      "expires_at": "2026-11-02T16:52:11Z",
+      "expired": false,
+      "workflow_run_id": 30931194607
+    },
+    {
+      "id": 9027906959,
+      "name": "RAG-Finance-Windows-Portable",
+      "size_in_bytes": 99922850,
+      "created_at": "2026-08-08T21:23:40Z",
+      "expires_at": "2026-11-06T21:20:34Z",
+      "expired": false,
+      "workflow_run_id": 31279080012
+    },
+    {
+      "id": 9027907762,
+      "name": "RAG-Finance-Windows-Portable",
+      "size_in_bytes": 99923613,
+      "created_at": "2026-08-08T21:23:44Z",
+      "expires_at": "2026-11-06T21:20:38Z",
+      "expired": false,
+      "workflow_run_id": 31279082538
+    },
+    {
+      "id": 9027925082,
+      "name": "RAG-Finance-Windows-Installer",
+      "size_in_bytes": 71445645,
+      "created_at": "2026-08-08T21:25:17Z",
+      "expires_at": "2026-11-06T21:20:34Z",
+      "expired": false,
+      "workflow_run_id": 31279080012
+    },
+    {
+      "id": 9027926399,
+      "name": "RAG-Finance-Windows-Installer",
+      "size_in_bytes": 71449537,
+      "created_at": "2026-08-08T21:25:25Z",
+      "expires_at": "2026-11-06T21:20:38Z",
+      "expired": false,
+      "workflow_run_id": 31279082538
+    }
+  ],
+  "largest_old_candidates": [
+    {
+      "id": 9027907762,
+      "name": "RAG-Finance-Windows-Portable",
+      "size_in_bytes": 99923613,
+      "created_at": "2026-08-08T21:23:44Z",
+      "expires_at": "2026-11-06T21:20:38Z",
+      "expired": false,
+      "workflow_run_id": 31279082538
+    },
+    {
+      "id": 8875880639,
+      "name": "RAG-Finance-Windows-Portable",
+      "size_in_bytes": 99923420,
+      "created_at": "2026-08-04T00:22:48Z",
+      "expires_at": "2026-11-02T00:20:02Z",
+      "expired": false,
+      "workflow_run_id": 30865236566
+    },
+    {
+      "id": 8876036170,
+      "name": "RAG-Finance-Windows-Portable",
+      "size_in_bytes": 99923192,
+      "created_at": "2026-08-04T00:30:51Z",
+      "expires_at": "2026-11-02T00:28:08Z",
+      "expired": false,
+      "workflow_run_id": 30865664472
+    },
+    {
+      "id": 8875730864,
+      "name": "RAG-Finance-Windows-Portable",
+      "size_in_bytes": 99922914,
+      "created_at": "2026-08-04T00:14:41Z",
+      "expires_at": "2026-11-02T00:11:48Z",
+      "expired": false,
+      "workflow_run_id": 30864795542
+    },
+    {
+      "id": 9027906959,
+      "name": "RAG-Finance-Windows-Portable",
+      "size_in_bytes": 99922850,
+      "created_at": "2026-08-08T21:23:40Z",
+      "expires_at": "2026-11-06T21:20:34Z",
+      "expired": false,
+      "workflow_run_id": 31279080012
+    },
+    {
+      "id": 8874082855,
+      "name": "RAG-Finance-Windows-Portable",
+      "size_in_bytes": 99922712,
+      "created_at": "2026-08-03T22:53:52Z",
+      "expires_at": "2026-11-01T22:50:49Z",
+      "expired": false,
+      "workflow_run_id": 30860165369
+    },
+    {
+      "id": 8876034543,
+      "name": "RAG-Finance-Windows-Portable",
+      "size_in_bytes": 99922698,
+      "created_at": "2026-08-04T00:30:46Z",
+      "expires_at": "2026-11-02T00:28:06Z",
+      "expired": false,
+      "workflow_run_id": 30865662516
+    },
+    {
+      "id": 8876185172,
+      "name": "RAG-Finance-Windows-Portable",
+      "size_in_bytes": 99922651,
+      "created_at": "2026-08-04T00:38:41Z",
+      "expires_at": "2026-11-02T00:36:07Z",
+      "expired": false,
+      "workflow_run_id": 30866088766
+    },
+    {
+      "id": 8875389109,
+      "name": "RAG-Finance-Windows-Portable",
+      "size_in_bytes": 99922503,
+      "created_at": "2026-08-03T23:57:01Z",
+      "expires_at": "2026-11-01T23:54:39Z",
+      "expired": false,
+      "workflow_run_id": 30863849643
+    },
+    {
+      "id": 8876199804,
+      "name": "RAG-Finance-Windows-Portable",
+      "size_in_bytes": 99922467,
+      "created_at": "2026-08-04T00:39:30Z",
+      "expires_at": "2026-11-02T00:36:10Z",
+      "expired": false,
+      "workflow_run_id": 30866091109
+    },
+    {
+      "id": 8873594944,
+      "name": "RAG-Finance-Windows-Portable",
+      "size_in_bytes": 99921810,
+      "created_at": "2026-08-03T22:32:49Z",
+      "expires_at": "2026-11-01T22:29:24Z",
+      "expired": false,
+      "workflow_run_id": 30858833985
+    },
+    {
+      "id": 8875398629,
+      "name": "RAG-Finance-Windows-Portable",
+      "size_in_bytes": 99921786,
+      "created_at": "2026-08-03T23:57:32Z",
+      "expires_at": "2026-11-01T23:54:42Z",
+      "expired": false,
+      "workflow_run_id": 30863852367
+    },
+    {
+      "id": 8874513942,
+      "name": "RAG-Finance-Windows-Portable",
+      "size_in_bytes": 99921753,
+      "created_at": "2026-08-03T23:14:26Z",
+      "expires_at": "2026-11-01T23:11:57Z",
+      "expired": false,
+      "workflow_run_id": 30861426300
+    },
+    {
+      "id": 8873807586,
+      "name": "RAG-Finance-Windows-Portable",
+      "size_in_bytes": 99921586,
+      "created_at": "2026-08-03T22:41:38Z",
+      "expires_at": "2026-11-01T22:38:14Z",
+      "expired": false,
+      "workflow_run_id": 30859400027
+    },
+    {
+      "id": 8874524833,
+      "name": "RAG-Finance-Windows-Portable",
+      "size_in_bytes": 99921565,
+      "created_at": "2026-08-03T23:14:59Z",
+      "expires_at": "2026-11-01T23:11:54Z",
+      "expired": false,
+      "workflow_run_id": 30861424118
+    },
+    {
+      "id": 8874293215,
+      "name": "RAG-Finance-Windows-Portable",
+      "size_in_bytes": 99921540,
+      "created_at": "2026-08-03T23:03:38Z",
+      "expires_at": "2026-11-01T22:59:37Z",
+      "expired": false,
+      "workflow_run_id": 30860687406
+    },
+    {
+      "id": 8873860380,
+      "name": "RAG-Finance-Windows-Portable",
+      "size_in_bytes": 99921529,
+      "created_at": "2026-08-03T22:43:55Z",
+      "expires_at": "2026-11-01T22:41:44Z",
+      "expired": false,
+      "workflow_run_id": 30859610869
+    },
+    {
+      "id": 8873564953,
+      "name": "RAG-Finance-Windows-Portable",
+      "size_in_bytes": 99921378,
+      "created_at": "2026-08-03T22:31:37Z",
+      "expires_at": "2026-11-01T22:28:56Z",
+      "expired": false,
+      "workflow_run_id": 30858804301
+    },
+    {
+      "id": 8873880210,
+      "name": "RAG-Finance-Windows-Portable",
+      "size_in_bytes": 99921376,
+      "created_at": "2026-08-03T22:44:49Z",
+      "expires_at": "2026-11-01T22:41:47Z",
+      "expired": false,
+      "workflow_run_id": 30859613990
+    },
+    {
+      "id": 8874533628,
+      "name": "RAG-Finance-Windows-Portable",
+      "size_in_bytes": 99921318,
+      "created_at": "2026-08-03T23:15:26Z",
+      "expires_at": "2026-11-01T23:12:34Z",
+      "expired": false,
+      "workflow_run_id": 30861462164
+    },
+    {
+      "id": 8874261857,
+      "name": "RAG-Finance-Windows-Portable",
+      "size_in_bytes": 99921271,
+      "created_at": "2026-08-03T23:02:08Z",
+      "expires_at": "2026-11-01T22:59:40Z",
+      "expired": false,
+      "workflow_run_id": 30860690564
+    },
+    {
+      "id": 8874530046,
+      "name": "RAG-Finance-Windows-Portable",
+      "size_in_bytes": 99921129,
+      "created_at": "2026-08-03T23:15:15Z",
+      "expires_at": "2026-11-01T23:12:31Z",
+      "expired": false,
+      "workflow_run_id": 30861458712
+    },
+    {
+      "id": 8875877470,
+      "name": "RAG-Finance-Windows-Portable",
+      "size_in_bytes": 99920992,
+      "created_at": "2026-08-04T00:22:38Z",
+      "expires_at": "2026-11-02T00:19:59Z",
+      "expired": false,
+      "workflow_run_id": 30865233841
+    },
+    {
+      "id": 8875576709,
+      "name": "RAG-Finance-Windows-Portable",
+      "size_in_bytes": 99920938,
+      "created_at": "2026-08-04T00:06:32Z",
+      "expires_at": "2026-11-02T00:03:38Z",
+      "expired": false,
+      "workflow_run_id": 30864345055
+    },
+    {
+      "id": 8873590407,
+      "name": "RAG-Finance-Windows-Portable",
+      "size_in_bytes": 99920910,
+      "created_at": "2026-08-03T22:32:38Z",
+      "expires_at": "2026-11-01T22:29:21Z",
+      "expired": false,
+      "workflow_run_id": 30858831673
+    },
+    {
+      "id": 8874013118,
+      "name": "RAG-Finance-Windows-Portable",
+      "size_in_bytes": 99920492,
+      "created_at": "2026-08-03T22:50:46Z",
+      "expires_at": "2026-11-01T22:47:55Z",
+      "expired": false,
+      "workflow_run_id": 30859990005
+    },
+    {
+      "id": 8874082922,
+      "name": "RAG-Finance-Windows-Portable",
+      "size_in_bytes": 99920040,
+      "created_at": "2026-08-03T22:53:52Z",
+      "expires_at": "2026-11-01T22:50:46Z",
+      "expired": false,
+      "workflow_run_id": 30860161902
+    },
+    {
+      "id": 8874016319,
+      "name": "RAG-Finance-Windows-Portable",
+      "size_in_bytes": 99919921,
+      "created_at": "2026-08-03T22:50:54Z",
+      "expires_at": "2026-11-01T22:47:58Z",
+      "expired": false,
+      "workflow_run_id": 30859993317
+    },
+    {
+      "id": 8875732496,
+      "name": "RAG-Finance-Windows-Portable",
+      "size_in_bytes": 99919514,
+      "created_at": "2026-08-04T00:14:47Z",
+      "expires_at": "2026-11-02T00:11:51Z",
+      "expired": false,
+      "workflow_run_id": 30864798353
+    },
+    {
+      "id": 8875571849,
+      "name": "RAG-Finance-Windows-Portable",
+      "size_in_bytes": 99917797,
+      "created_at": "2026-08-04T00:06:17Z",
+      "expires_at": "2026-11-02T00:03:32Z",
+      "expired": false,
+      "workflow_run_id": 30864339680
+    },
+    {
+      "id": 8901121383,
+      "name": "RAG-Finance-Windows-Portable",
+      "size_in_bytes": 99909433,
+      "created_at": "2026-08-04T16:49:53Z",
+      "expires_at": "2026-11-02T16:46:57Z",
+      "expired": false,
+      "workflow_run_id": 30930787139
+    },
+    {
+      "id": 8901121344,
+      "name": "RAG-Finance-Windows-Portable",
+      "size_in_bytes": 99909297,
+      "created_at": "2026-08-04T16:49:53Z",
+      "expires_at": "2026-11-02T16:46:54Z",
+      "expired": false,
+      "workflow_run_id": 30930783578
+    },
+    {
+      "id": 8901301417,
+      "name": "RAG-Finance-Windows-Portable",
+      "size_in_bytes": 99909031,
+      "created_at": "2026-08-04T16:55:29Z",
+      "expires_at": "2026-11-02T16:52:11Z",
+      "expired": false,
+      "workflow_run_id": 30931194607
+    },
+    {
+      "id": 8901298025,
+      "name": "RAG-Finance-Windows-Portable",
+      "size_in_bytes": 99908842,
+      "created_at": "2026-08-04T16:55:23Z",
+      "expires_at": "2026-11-02T16:52:09Z",
+      "expired": false,
+      "workflow_run_id": 30931192316
+    },
+    {
+      "id": 8900937543,
+      "name": "RAG-Finance-Windows-Portable",
+      "size_in_bytes": 99908249,
+      "created_at": "2026-08-04T16:44:09Z",
+      "expires_at": "2026-11-02T16:41:28Z",
+      "expired": false,
+      "workflow_run_id": 30930345144
+    },
+    {
+      "id": 8900941878,
+      "name": "RAG-Finance-Windows-Portable",
+      "size_in_bytes": 99907676,
+      "created_at": "2026-08-04T16:44:17Z",
+      "expires_at": "2026-11-02T16:41:33Z",
+      "expired": false,
+      "workflow_run_id": 30930350785
+    },
+    {
+      "id": 9027926399,
+      "name": "RAG-Finance-Windows-Installer",
+      "size_in_bytes": 71449537,
+      "created_at": "2026-08-08T21:25:25Z",
+      "expires_at": "2026-11-06T21:20:38Z",
+      "expired": false,
+      "workflow_run_id": 31279082538
+    },
+    {
+      "id": 9027925082,
+      "name": "RAG-Finance-Windows-Installer",
+      "size_in_bytes": 71445645,
+      "created_at": "2026-08-08T21:25:17Z",
+      "expires_at": "2026-11-06T21:20:34Z",
+      "expired": false,
+      "workflow_run_id": 31279080012
+    },
+    {
+      "id": 8876223116,
+      "name": "RAG-Finance-Windows-Installer",
+      "size_in_bytes": 71442181,
+      "created_at": "2026-08-04T00:40:45Z",
+      "expires_at": "2026-11-02T00:36:10Z",
+      "expired": false,
+      "workflow_run_id": 30866091109
+    },
+    {
+      "id": 8876209116,
+      "name": "RAG-Finance-Windows-Installer",
+      "size_in_bytes": 71437927,
+      "created_at": "2026-08-04T00:40:01Z",
+      "expires_at": "2026-11-02T00:36:07Z",
+      "expired": false,
+      "workflow_run_id": 30866088766
+    },
+    {
+      "id": 8901358018,
+      "name": "RAG-Finance-Windows-Installer",
+      "size_in_bytes": 71422922,
+      "created_at": "2026-08-04T16:57:16Z",
+      "expires_at": "2026-11-02T16:52:11Z",
+      "expired": false,
+      "workflow_run_id": 30931194607
+    },
+    {
+      "id": 8901355558,
+      "name": "RAG-Finance-Windows-Installer",
+      "size_in_bytes": 71421239,
+      "created_at": "2026-08-04T16:57:12Z",
+      "expires_at": "2026-11-02T16:52:09Z",
+      "expired": false,
+      "workflow_run_id": 30931192316
+    },
+    {
+      "id": 8900983101,
+      "name": "RAG-Finance-Windows-Installer",
+      "size_in_bytes": 71420710,
+      "created_at": "2026-08-04T16:45:36Z",
+      "expires_at": "2026-11-02T16:41:33Z",
+      "expired": false,
+      "workflow_run_id": 30930350785
+    }
+  ]
+}
