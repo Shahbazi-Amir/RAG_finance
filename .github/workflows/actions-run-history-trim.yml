@@ -1,0 +1,176 @@
+name: RAG Actions history trim
+run-name: RAG Actions history trim
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - agent/actions-storage-cleanup
+    paths:
+      - ".github/bootstrap/actions-run-history-trim.trigger"
+
+permissions:
+  actions: write
+  contents: write
+
+jobs:
+  trim:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Keep only the newest successful history page
+        env:
+          GH_TOKEN: ${{ github.token }}
+          REPOSITORY: ${{ github.repository }}
+          REF_NAME: ${{ github.ref_name }}
+          CURRENT_RUN: ${{ github.run_id }}
+          KEEP_SUCCESSFUL: "24"
+        shell: bash
+        run: |
+          set -euo pipefail
+          python - <<'PY'
+          import base64, json, os, time, urllib.error, urllib.parse, urllib.request
+
+          repo = os.environ['REPOSITORY']
+          ref_name = os.environ['REF_NAME']
+          token = os.environ['GH_TOKEN']
+          current_run = int(os.environ['CURRENT_RUN'])
+          keep_n = int(os.environ['KEEP_SUCCESSFUL'])
+          headers = {
+              'Authorization': f'Bearer {token}',
+              'Accept': 'application/vnd.github+json',
+              'X-GitHub-Api-Version': '2022-11-28',
+              'User-Agent': 'rag-finance-actions-history-trim',
+          }
+
+          def get_json(url):
+              req = urllib.request.Request(url, headers=headers)
+              with urllib.request.urlopen(req, timeout=30) as response:
+                  return json.load(response)
+
+          def list_runs():
+              rows = []
+              page = 1
+              while True:
+                  payload = get_json(f'https://api.github.com/repos/{repo}/actions/runs?per_page=100&page={page}')
+                  batch = payload.get('workflow_runs') or []
+                  if not batch:
+                      break
+                  rows.extend(batch)
+                  if len(batch) < 100:
+                      break
+                  page += 1
+              return rows
+
+          before = list_runs()
+          successful = [
+              r for r in before
+              if int(r.get('id') or 0) != current_run
+              and r.get('status') == 'completed'
+              and r.get('conclusion') == 'success'
+          ]
+          successful.sort(key=lambda r: str(r.get('created_at') or ''), reverse=True)
+          keep_ids = {int(r.get('id') or 0) for r in successful[:keep_n]}
+          keep_ids.add(current_run)
+
+          # Never delete active/queued runs. Delete every other completed run,
+          # including old failures/cancellations and successes older than the kept set.
+          candidates = [
+              r for r in before
+              if r.get('status') == 'completed'
+              and int(r.get('id') or 0) not in keep_ids
+          ]
+          candidates.sort(key=lambda r: str(r.get('created_at') or ''))
+
+          deleted = []
+          failures = []
+          for row in candidates:
+              run_id = int(row.get('id') or 0)
+              req = urllib.request.Request(
+                  f'https://api.github.com/repos/{repo}/actions/runs/{run_id}',
+                  headers=headers,
+                  method='DELETE',
+              )
+              try:
+                  with urllib.request.urlopen(req, timeout=30) as response:
+                      status = int(getattr(response, 'status', 204) or 204)
+                  if status == 204:
+                      deleted.append(run_id)
+                  else:
+                      failures.append({'id': run_id, 'error': f'http_{status}'})
+              except urllib.error.HTTPError as exc:
+                  if exc.code == 404:
+                      deleted.append(run_id)
+                  else:
+                      failures.append({'id': run_id, 'error': f'http_{exc.code}'})
+              time.sleep(0.15)
+
+          after = list_runs()
+          kept_successes_after = [
+              r for r in after
+              if int(r.get('id') or 0) != current_run
+              and r.get('status') == 'completed'
+              and r.get('conclusion') == 'success'
+          ]
+          unwanted_completed_after = [
+              r for r in after
+              if r.get('status') == 'completed'
+              and int(r.get('id') or 0) not in keep_ids
+          ]
+
+          report = {
+              'schema_version': 1,
+              'repository': repo,
+              'current_cleanup_run': current_run,
+              'keep_successful_target': keep_n,
+              'before_run_count': len(before),
+              'successful_kept_ids': sorted(keep_ids - {current_run}),
+              'candidate_count': len(candidates),
+              'deleted_count': len(deleted),
+              'failure_count': len(failures),
+              'failures': failures,
+              'after_run_count': len(after),
+              'successful_runs_after_excluding_cleanup': len(kept_successes_after),
+              'unwanted_completed_after': len(unwanted_completed_after),
+          }
+          print('RAG_HISTORY_TRIM=' + json.dumps(report, separators=(',', ':'), ensure_ascii=False))
+          with open(os.environ['GITHUB_STEP_SUMMARY'], 'a', encoding='utf-8') as handle:
+              handle.write(
+                  '# RAG Actions history trim\n\n'
+                  f"Before: **{len(before)} runs**\n\n"
+                  f"Deleted: **{len(deleted)} runs**\n\n"
+                  f"After: **{len(after)} runs**\n\n"
+                  f"Kept successful history runs: **{len(kept_successes_after)}**\n\n"
+                  f"Failures: **{len(failures)}**\n"
+              )
+
+          path = 'benchmarks/actions-run-history-trim.json'
+          url = f'https://api.github.com/repos/{repo}/contents/{path}'
+          existing_sha = None
+          try:
+              req = urllib.request.Request(url + '?ref=' + urllib.parse.quote(ref_name, safe=''), headers=headers)
+              with urllib.request.urlopen(req, timeout=30) as response:
+                  existing_sha = json.load(response).get('sha')
+          except urllib.error.HTTPError as exc:
+              if exc.code != 404:
+                  raise
+          body = {
+              'message': 'chore: record Actions run history trim',
+              'content': base64.b64encode((json.dumps(report, ensure_ascii=False, indent=2) + '\n').encode()).decode(),
+              'branch': ref_name,
+          }
+          if existing_sha:
+              body['sha'] = existing_sha
+          req = urllib.request.Request(
+              url,
+              data=json.dumps(body).encode(),
+              headers={**headers, 'Content-Type': 'application/json'},
+              method='PUT',
+          )
+          with urllib.request.urlopen(req, timeout=30) as response:
+              saved = json.load(response)
+          print('REPORT_COMMIT=' + str((saved.get('commit') or {}).get('sha') or ''))
+
+          if failures or unwanted_completed_after:
+              raise SystemExit(f"trim incomplete: failures={len(failures)} unwanted={len(unwanted_completed_after)}")
+          PY
