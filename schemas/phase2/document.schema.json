@@ -1,0 +1,643 @@
+{
+  "$id": "https://rag-finance.local/schemas/phase2/document.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "source_type": {
+            "const": "website"
+          }
+        },
+        "required": [
+          "source_type"
+        ]
+      },
+      "then": {
+        "allOf": [
+          {
+            "if": {
+              "properties": {
+                "content_origin": {
+                  "const": "primary_author"
+                }
+              },
+              "required": [
+                "content_origin"
+              ]
+            },
+            "then": {
+              "properties": {
+                "attribution": {
+                  "properties": {
+                    "attribution_status": {
+                      "const": "policy_validated"
+                    },
+                    "authorship_assertion_source": {
+                      "const": "accepted_pipeline_content_origin"
+                    },
+                    "byline_raw": {
+                      "type": "null"
+                    },
+                    "content_authority_type": {
+                      "const": "direct_author"
+                    },
+                    "credited_author_name": {
+                      "minLength": 1,
+                      "type": "string"
+                    },
+                    "editorial_credit_raw": {
+                      "type": "null"
+                    },
+                    "editorial_supervisor_name": {
+                      "type": "null"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          {
+            "if": {
+              "properties": {
+                "content_origin": {
+                  "const": "supervised"
+                }
+              },
+              "required": [
+                "content_origin"
+              ]
+            },
+            "then": {
+              "properties": {
+                "attribution": {
+                  "properties": {
+                    "attribution_status": {
+                      "const": "policy_validated"
+                    },
+                    "authorship_assertion_source": {
+                      "const": "accepted_pipeline_content_origin"
+                    },
+                    "byline_raw": {
+                      "type": "null"
+                    },
+                    "content_authority_type": {
+                      "const": "editorial_supervision"
+                    },
+                    "credited_author_name": {
+                      "minLength": 1,
+                      "type": "string"
+                    },
+                    "editorial_credit_raw": {
+                      "type": "null"
+                    },
+                    "editorial_supervisor_name": {
+                      "minLength": 1,
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        ],
+        "properties": {
+          "locator": {
+            "additionalProperties": false,
+            "properties": {
+              "canonical_url": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "url": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              }
+            },
+            "required": [
+              "canonical_url",
+              "url"
+            ],
+            "type": "object"
+          },
+          "source_metadata": {
+            "required": [
+              "article_id",
+              "view_count",
+              "study_time_minutes",
+              "tags"
+            ],
+            "type": "object"
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "source_type": {
+            "const": "book"
+          }
+        },
+        "required": [
+          "source_type"
+        ]
+      },
+      "then": {
+        "allOf": [
+          {
+            "if": {
+              "properties": {
+                "source_metadata": {
+                  "properties": {
+                    "book_unit_type": {
+                      "const": "paragraph"
+                    }
+                  },
+                  "required": [
+                    "book_unit_type"
+                  ]
+                }
+              },
+              "required": [
+                "source_metadata"
+              ]
+            },
+            "then": {
+              "properties": {
+                "locator": {
+                  "additionalProperties": false,
+                  "properties": {
+                    "edition_id": {
+                      "minLength": 1,
+                      "type": "string"
+                    },
+                    "heading_path": {
+                      "type": "array"
+                    },
+                    "paragraph_id": {
+                      "minLength": 1,
+                      "type": "string"
+                    },
+                    "paragraph_number": {
+                      "type": "integer"
+                    },
+                    "work_id": {
+                      "minLength": 1,
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "work_id",
+                    "edition_id",
+                    "paragraph_id",
+                    "paragraph_number",
+                    "heading_path"
+                  ],
+                  "type": "object"
+                },
+                "source_metadata": {
+                  "required": [
+                    "book_unit_type",
+                    "work_id",
+                    "edition_id",
+                    "heading_level",
+                    "heading_path",
+                    "is_heading",
+                    "style",
+                    "in_table",
+                    "paragraph_number"
+                  ],
+                  "type": "object"
+                }
+              }
+            }
+          },
+          {
+            "if": {
+              "properties": {
+                "source_metadata": {
+                  "properties": {
+                    "book_unit_type": {
+                      "const": "supplemental_text"
+                    }
+                  },
+                  "required": [
+                    "book_unit_type"
+                  ]
+                }
+              },
+              "required": [
+                "source_metadata"
+              ]
+            },
+            "then": {
+              "properties": {
+                "locator": {
+                  "additionalProperties": false,
+                  "properties": {
+                    "content_id": {
+                      "minLength": 1,
+                      "type": "string"
+                    },
+                    "edition_id": {
+                      "minLength": 1,
+                      "type": "string"
+                    },
+                    "parent_paragraph_id": {
+                      "minLength": 1,
+                      "type": "string"
+                    },
+                    "source_locator": {
+                      "required": [
+                        "note_number"
+                      ],
+                      "type": "object"
+                    },
+                    "work_id": {
+                      "minLength": 1,
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "work_id",
+                    "edition_id",
+                    "content_id",
+                    "parent_paragraph_id",
+                    "source_locator"
+                  ],
+                  "type": "object"
+                },
+                "source_metadata": {
+                  "properties": {
+                    "book_unit_type": {
+                      "const": "supplemental_text"
+                    },
+                    "content_type": {
+                      "const": "FOOTNOTE"
+                    }
+                  },
+                  "required": [
+                    "book_unit_type",
+                    "content_type",
+                    "content_id",
+                    "work_id",
+                    "edition_id",
+                    "parent_paragraph_id",
+                    "source_locator"
+                  ],
+                  "type": "object"
+                }
+              }
+            }
+          }
+        ],
+        "properties": {
+          "locator": {
+            "type": "object"
+          },
+          "source_metadata": {
+            "properties": {
+              "book_unit_type": {
+                "enum": [
+                  "paragraph",
+                  "supplemental_text"
+                ]
+              }
+            },
+            "required": [
+              "book_unit_type"
+            ],
+            "type": "object"
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "source_type": {
+            "const": "transcript"
+          }
+        },
+        "required": [
+          "source_type"
+        ]
+      },
+      "then": {
+        "properties": {
+          "locator": {
+            "additionalProperties": false,
+            "properties": {
+              "episode_number": {
+                "type": [
+                  "integer",
+                  "null"
+                ]
+              },
+              "locator_id": {
+                "minLength": 1,
+                "type": "string"
+              },
+              "physical_file_id": {
+                "minLength": 1,
+                "type": "string"
+              },
+              "program_id": {
+                "minLength": 1,
+                "type": "string"
+              },
+              "season_number": {
+                "type": [
+                  "integer",
+                  "null"
+                ]
+              },
+              "source_line_end": {
+                "type": "integer"
+              },
+              "source_line_start": {
+                "type": "integer"
+              }
+            },
+            "required": [
+              "locator_id",
+              "source_line_start",
+              "source_line_end",
+              "program_id",
+              "episode_number",
+              "season_number",
+              "physical_file_id"
+            ],
+            "type": "object"
+          },
+          "source_metadata": {
+            "required": [
+              "program",
+              "program_id",
+              "record_type",
+              "record_version",
+              "transcript_unit_id",
+              "utterance_index",
+              "source_identity",
+              "speaker",
+              "timestamps",
+              "merge",
+              "processing_state",
+              "source_text",
+              "source_text_sha256",
+              "text_state"
+            ],
+            "type": "object"
+          }
+        }
+      }
+    }
+  ],
+  "properties": {
+    "attribution": {
+      "additionalProperties": false,
+      "properties": {
+        "attribution_status": {
+          "enum": [
+            "policy_validated",
+            null
+          ]
+        },
+        "author": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "author_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "authorship_assertion_source": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "byline_raw": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "content_authority_type": {
+          "enum": [
+            "direct_author",
+            "editorial_supervision",
+            null
+          ]
+        },
+        "credited_author_name": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "editorial_credit_raw": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "editorial_supervisor_name": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "knowledge_owner": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "reference_expert_name": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "speaker": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      },
+      "required": [
+        "author",
+        "author_id",
+        "knowledge_owner",
+        "speaker",
+        "credited_author_name",
+        "reference_expert_name",
+        "editorial_supervisor_name",
+        "content_authority_type",
+        "byline_raw",
+        "editorial_credit_raw",
+        "authorship_assertion_source",
+        "attribution_status"
+      ],
+      "type": "object"
+    },
+    "content_origin": {
+      "enum": [
+        "primary_author",
+        "supervised",
+        null
+      ]
+    },
+    "document_id": {
+      "minLength": 1,
+      "type": "string"
+    },
+    "language": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "lineage": {
+      "additionalProperties": false,
+      "properties": {
+        "parent_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "raw_source_hash": {
+          "pattern": "^[0-9a-f]{64}$",
+          "type": "string"
+        },
+        "raw_source_path": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      },
+      "required": [
+        "parent_id",
+        "raw_source_path",
+        "raw_source_hash"
+      ],
+      "type": "object"
+    },
+    "locator": {
+      "type": "object"
+    },
+    "raw_content_hash": {
+      "pattern": "^[0-9a-f]{64}$",
+      "type": "string"
+    },
+    "rights": {
+      "additionalProperties": false,
+      "properties": {
+        "allowed_uses": {
+          "type": [
+            "string",
+            "array",
+            "object",
+            "null"
+          ]
+        },
+        "basis": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "rights_evidence_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "rights_holder": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "status": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      },
+      "required": [
+        "status",
+        "basis",
+        "rights_holder",
+        "rights_evidence_id",
+        "allowed_uses"
+      ],
+      "type": "object"
+    },
+    "schema_version": {
+      "const": "common_document_v1"
+    },
+    "source_id": {
+      "minLength": 1,
+      "type": "string"
+    },
+    "source_metadata": {
+      "type": "object"
+    },
+    "source_type": {
+      "enum": [
+        "website",
+        "book",
+        "transcript"
+      ]
+    },
+    "text": {
+      "minLength": 1,
+      "type": "string"
+    },
+    "text_sha256": {
+      "pattern": "^[0-9a-f]{64}$",
+      "type": "string"
+    },
+    "title": {
+      "type": [
+        "string",
+        "null"
+      ]
+    }
+  },
+  "required": [
+    "schema_version",
+    "document_id",
+    "source_type",
+    "source_id",
+    "text",
+    "text_sha256",
+    "raw_content_hash",
+    "title",
+    "language",
+    "content_origin",
+    "attribution",
+    "rights",
+    "locator",
+    "lineage",
+    "source_metadata"
+  ],
+  "title": "RAG Finance Phase 2 Common Document",
+  "type": "object"
+}
