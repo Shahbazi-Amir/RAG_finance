@@ -1,0 +1,56 @@
+{
+  "accepted_corpus": {
+    "path": "data/phase2/processed/documents_dedup_quality_accepted_v1.jsonl",
+    "records": 19456,
+    "sha256": "9d72c709f81b1218c5aac064052c7ed1da34869f671e6e32762864e0ad70ea40"
+  },
+  "candidates": {
+    "baseline_phase1_char_safe": {
+      "production_default_status": "REJECTED_BY_STRUCTURAL_EVIDENCE",
+      "retrieval_chunks": 3488,
+      "role": "HISTORICAL_COMPARISON_BASELINE"
+    },
+    "parent_child": {
+      "context_parent_chunks": 1447,
+      "production_default_status": "NOT_SELECTED",
+      "retrieval_child_chunks": 2721,
+      "role": "CONDITIONAL_CONTEXT_ARCHITECTURE"
+    },
+    "structure_aware_medium": {
+      "production_default_status": "NOT_SELECTED",
+      "retrieval_chunks": 1799,
+      "role": "LARGER_CONTEXT_RETRIEVAL_ABLATION"
+    },
+    "structure_aware_small": {
+      "production_default_status": "NOT_SELECTED",
+      "retrieval_chunks": 2526,
+      "role": "LEADING_SIMPLE_RETRIEVAL_CANDIDATE"
+    }
+  },
+  "final_production_strategy": null,
+  "final_selection_status": "BLOCKED_PENDING_RETRIEVAL_AND_EVIDENCE_EVALUATION",
+  "next_required_stage": "NB12_GOLDEN_DATASET_AND_LATER_RETRIEVAL_EVALUATION",
+  "status": "FROZEN_FOR_EVALUATION",
+  "structural_shortlist": {
+    "baseline_phase1_char_safe": {
+      "final_selection": false,
+      "role": "HISTORICAL_COMPARISON_BASELINE",
+      "status": "REJECTED_AS_PRODUCTION_DEFAULT"
+    },
+    "parent_child": {
+      "final_selection": false,
+      "role": "RETRIEVAL_CHILD_PLUS_CONTEXT_EXPANSION_CANDIDATE",
+      "status": "CONDITIONAL_CONTEXT_ARCHITECTURE_SHORTLIST"
+    },
+    "structure_aware_medium": {
+      "final_selection": false,
+      "role": "LARGER_CONTEXT_RETRIEVAL_ABLATION",
+      "status": "DEPRIORITIZED_PENDING_RETRIEVAL_GAIN"
+    },
+    "structure_aware_small": {
+      "final_selection": false,
+      "role": "LEADING_SIMPLE_RETRIEVAL_CANDIDATE",
+      "status": "PRIMARY_RETRIEVAL_SHORTLIST"
+    }
+  }
+}

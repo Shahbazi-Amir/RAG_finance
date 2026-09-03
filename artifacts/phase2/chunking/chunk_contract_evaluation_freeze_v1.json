@@ -1,0 +1,112 @@
+{
+  "builder_specification": {
+    "baseline_phase1_char_safe": {
+      "contract": "PHASE1_STYLE_SIZE_WITH_PHASE2_SAFE_BOUNDARIES",
+      "overlap": 200,
+      "size_unit": "characters",
+      "target": 1200
+    },
+    "book": {
+      "assembly_boundary": "WORK_EDITION_HEADING_PATH_SECTION",
+      "atomic_record_token_split": "FORBIDDEN",
+      "atomic_unit": "PARAGRAPH_RECORD",
+      "cross_section": "FORBIDDEN_BY_DEFAULT",
+      "supplemental": "ATTACH_TO_PARENT_LINKED_ATOMIC_GROUP",
+      "table_run": "PROTECTED_REGION_SPLIT_ONLY_AT_TABLE_RECORD_BOUNDARIES"
+    },
+    "parent_child": {
+      "child": {
+        "hard_maximum": 500,
+        "preferred_minimum": 300
+      },
+      "parent": {
+        "hard_maximum": 1200,
+        "preferred_minimum": 800
+      }
+    },
+    "range_semantics": {
+      "exceed_hard_maximum": "FORBIDDEN_EXCEPT_UNSPLITTABLE_ATOMIC_EXCEPTION",
+      "hard_maximum": "UPPER_BOUND_OF_CANDIDATE_RANGE",
+      "preferred_minimum": "LOWER_BOUND_OF_CANDIDATE_RANGE",
+      "shorter_than_minimum": "ALLOWED_WHEN_STRUCTURE_OR_SOURCE_END_REQUIRES"
+    },
+    "status": "DRAFT_VALIDATION",
+    "structure_aware_medium": {
+      "hard_maximum": 800,
+      "preferred_minimum": 500,
+      "size_unit": "tokens"
+    },
+    "structure_aware_small": {
+      "hard_maximum": 500,
+      "preferred_minimum": 300,
+      "size_unit": "tokens"
+    },
+    "transcript": {
+      "assembly_boundary": "PHYSICAL_FILE",
+      "atomic_unit": "UTTERANCE",
+      "cross_physical_file": "FORBIDDEN",
+      "multi_speaker_collapse": "FORBIDDEN",
+      "oversize_utterance_split_order": [
+        "SENTENCE_BOUNDARY",
+        "TOKEN_OFFSET_WINDOW_FOR_OVERSIZE_SENTENCE_ONLY"
+      ],
+      "speaker_composition": "REQUIRED",
+      "speaker_run": "PRESERVE_AND_RECORD_NOT_HARD_CHUNK_BOUNDARY",
+      "unknown_speaker_inference": "FORBIDDEN"
+    },
+    "website": {
+      "atomic_source_unit": "DOCUMENT",
+      "chunk_content": "SOURCE_TEXT_SLICE",
+      "cross_document": "FORBIDDEN",
+      "internal_unit": "SENTENCE_SPAN_WITH_CHAR_OFFSETS",
+      "oversize_sentence_fallback": "TOKEN_OFFSET_WINDOW"
+    }
+  },
+  "chunk_contract_version": "chunk_contract_v1_draft",
+  "final_production_strategy": null,
+  "freeze_scope": "EVALUATION_CANDIDATES_ONLY",
+  "generation_policy": {
+    "baseline_phase1_char_safe": {
+      "atomic_structural_cut": "ALLOWED_AND_MEASURED_AS_BASELINE_WEAKNESS",
+      "cross_hard_region": "FORBIDDEN",
+      "overlap_chars": 200,
+      "synthetic_separator": "EXPLICITLY_LOCATED_NOT_MAPPED_TO_FAKE_SOURCE_OFFSET",
+      "target_chars": 1200
+    },
+    "parent_child": {
+      "child_hard_maximum": 500,
+      "child_preferred_minimum": 300,
+      "parent_hard_maximum": 1200,
+      "parent_preferred_minimum": 800
+    },
+    "status": "IN_MEMORY_BENCHMARK_GENERATION",
+    "structure_aware_medium": {
+      "hard_maximum": 800,
+      "preferred_minimum": 500
+    },
+    "structure_aware_small": {
+      "hard_maximum": 500,
+      "preferred_minimum": 300
+    },
+    "write_policy": "MEMORY_ONLY"
+  },
+  "integrity_requirements": {
+    "content_preservation": "REQUIRED",
+    "cross_source_boundary": "FORBIDDEN",
+    "deterministic_chunk_id": "REQUIRED",
+    "lineage": "REQUIRED",
+    "locator": "REQUIRED",
+    "multi_speaker_collapse": "FORBIDDEN",
+    "rights": "PROPAGATE_ONLY_NO_PERMISSION_INFERENCE",
+    "unknown_speaker_inference": "FORBIDDEN"
+  },
+  "measurement_tokenizer": {
+    "add_special_tokens": false,
+    "model_max_length": 512,
+    "model_name": "intfloat/multilingual-e5-small",
+    "role": "CHUNKING_BENCHMARK_TOKEN_MEASUREMENT_ONLY",
+    "tokenizer_class": "XLMRobertaTokenizerFast"
+  },
+  "production_status": "NOT_FINAL_PRODUCTION_CONTRACT",
+  "status": "FROZEN_FOR_EVALUATION"
+}
