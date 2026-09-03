@@ -1,0 +1,710 @@
+{
+  "competencies": [
+    {
+      "competency_id": "CDB-C01",
+      "evidence": [
+        "قواعد قرض",
+        "کارت اعتباری",
+        "اعتبارسنجی",
+        "بانک و اعتبار"
+      ],
+      "lookup_consistent": true,
+      "stage": "understand",
+      "statement_fa": "مفاهیم قرض، بدهی، اعتبار و خدمات بانکی را از یکدیگر تشخیص دهد.",
+      "topic_id": "credit_debt_banking",
+      "topic_label_fa": "اعتبار، قرض، بدهی و بانک"
+    },
+    {
+      "competency_id": "CDB-C02",
+      "evidence": [
+        "نقشه بدهکاری من",
+        "قرض در نگاه من"
+      ],
+      "lookup_consistent": true,
+      "stage": "self_assess",
+      "statement_fa": "وضعیت بدهی‌های خود را ثبت، طبقه‌بندی و ارزیابی کند.",
+      "topic_id": "credit_debt_banking",
+      "topic_label_fa": "اعتبار، قرض، بدهی و بانک"
+    },
+    {
+      "competency_id": "CDB-C03",
+      "evidence": [
+        "نوع بدهی",
+        "دلیل بدهی",
+        "راه‌حل بهتر"
+      ],
+      "lookup_consistent": true,
+      "stage": "plan",
+      "statement_fa": "برای اصلاح یا مدیریت وضعیت بدهی راهکارهای مناسب تدوین کند.",
+      "topic_id": "credit_debt_banking",
+      "topic_label_fa": "اعتبار، قرض، بدهی و بانک"
+    },
+    {
+      "competency_id": "FDM-C01",
+      "evidence": [
+        "مؤلفه‌های مالی در تصمیم‌گیری",
+        "مؤلفه‌های غیرمالی در تصمیم‌گیری"
+      ],
+      "lookup_consistent": true,
+      "stage": "understand",
+      "statement_fa": "عوامل مالی و غیرمالی اثرگذار بر تصمیم‌های مالی را تشخیص دهد.",
+      "topic_id": "financial_decision_making",
+      "topic_label_fa": "تصمیم‌گیری مالی"
+    },
+    {
+      "competency_id": "FDM-C02",
+      "evidence": [
+        "فهرست دارایی‌ها",
+        "ذهن ثروتمند یا فقیر",
+        "سبک پاسخگویی به تمایلات"
+      ],
+      "lookup_consistent": true,
+      "stage": "self_assess",
+      "statement_fa": "دارایی‌ها، تمایلات، نیازها، خواسته‌ها و الگوهای تصمیم‌گیری خود را ارزیابی کند.",
+      "topic_id": "financial_decision_making",
+      "topic_label_fa": "تصمیم‌گیری مالی"
+    },
+    {
+      "competency_id": "FDM-C03",
+      "evidence": [
+        "هزینه فرصت",
+        "انتخاب و هزینه‌فرصت"
+      ],
+      "lookup_consistent": true,
+      "stage": "analyze",
+      "statement_fa": "پیامدهای انتخاب مالی و هزینه فرصت گزینه‌ها را تحلیل کند.",
+      "topic_id": "financial_decision_making",
+      "topic_label_fa": "تصمیم‌گیری مالی"
+    },
+    {
+      "competency_id": "FDM-C04",
+      "evidence": [
+        "هدف‌گذاری هوشمندانه",
+        "تصویرسازی خواسته‌ها"
+      ],
+      "lookup_consistent": true,
+      "stage": "plan",
+      "statement_fa": "اهداف مالی و تصویر آینده مطلوب خود را به تصمیم‌ها و برنامه‌های عملی متصل کند.",
+      "topic_id": "financial_decision_making",
+      "topic_label_fa": "تصمیم‌گیری مالی"
+    },
+    {
+      "competency_id": "FLF-C01",
+      "evidence": [
+        "پلکان توانمندی مالی",
+        "بخش عددی و بخش واقعی",
+        "تورم",
+        "قیمت و عرضه و تقاضا"
+      ],
+      "lookup_consistent": true,
+      "stage": "understand",
+      "statement_fa": "مفاهیم پایه سواد مالی و تفاوت میان ارزش عددی و ارزش واقعی پول را درک کند.",
+      "topic_id": "financial_literacy_foundations",
+      "topic_label_fa": "مبانی و توانمندی سواد مالی"
+    },
+    {
+      "competency_id": "FLF-C02",
+      "evidence": [
+        "خودارزیابی موقعیت در پلکان توانمندی مالی",
+        "خودآزمایی مالی"
+      ],
+      "lookup_consistent": true,
+      "stage": "self_assess",
+      "statement_fa": "وضعیت فعلی توانمندی مالی خود را ارزیابی و توصیف کند.",
+      "topic_id": "financial_literacy_foundations",
+      "topic_label_fa": "مبانی و توانمندی سواد مالی"
+    },
+    {
+      "competency_id": "FLF-C03",
+      "evidence": [
+        "نامه‌ای به خودتان",
+        "نمای کلی وضعیت مالی مطلوب آینده"
+      ],
+      "lookup_consistent": true,
+      "stage": "plan",
+      "statement_fa": "تصویری از وضعیت مالی مطلوب آینده و مسیر حرکت به سمت آن تعریف کند.",
+      "topic_id": "financial_literacy_foundations",
+      "topic_label_fa": "مبانی و توانمندی سواد مالی"
+    },
+    {
+      "competency_id": "INV-C01",
+      "evidence": [
+        "چرا سرمایه‌گذاری",
+        "گزینه‌های سرمایه‌گذاری",
+        "صندوق‌های سرمایه‌گذاری"
+      ],
+      "lookup_consistent": true,
+      "stage": "understand",
+      "statement_fa": "مفهوم سرمایه‌گذاری و ویژگی‌های اصلی گزینه‌های سرمایه‌گذاری را درک کند.",
+      "topic_id": "investment",
+      "topic_label_fa": "سرمایه‌گذاری"
+    },
+    {
+      "competency_id": "INV-C02",
+      "evidence": [
+        "اولین سرمایه‌گذاری من",
+        "گزینه‌های سرمایه‌گذاری من"
+      ],
+      "lookup_consistent": true,
+      "stage": "self_assess",
+      "statement_fa": "هدف‌ها و تجربه‌های سرمایه‌گذاری خود را ارزیابی کند.",
+      "topic_id": "investment",
+      "topic_label_fa": "سرمایه‌گذاری"
+    },
+    {
+      "competency_id": "INV-C03",
+      "evidence": [
+        "چهارگام سرمایه‌گذاری"
+      ],
+      "lookup_consistent": true,
+      "stage": "analyze",
+      "statement_fa": "گزینه‌های سرمایه‌گذاری را از نظر ریسک، بازده، نقدشوندگی و سرمایه موردنیاز به‌صورت آموزشی مقایسه کند.",
+      "topic_id": "investment",
+      "topic_label_fa": "سرمایه‌گذاری"
+    },
+    {
+      "competency_id": "INV-C04",
+      "evidence": [
+        "هدف سرمایه‌گذاری",
+        "گزینه‌های پیش‌رو",
+        "اقدام آینده"
+      ],
+      "lookup_consistent": true,
+      "stage": "plan",
+      "statement_fa": "بر اساس اهداف مالی خود یک برنامه یادگیری و بررسی سرمایه‌گذاری تدوین کند، بدون تبدیل سیستم به موتور توصیه خرید یا فروش.",
+      "topic_id": "investment",
+      "topic_label_fa": "سرمایه‌گذاری"
+    },
+    {
+      "competency_id": "RIN-C01",
+      "evidence": [
+        "مدیریت ریسک",
+        "انواع بیمه"
+      ],
+      "lookup_consistent": true,
+      "stage": "understand",
+      "statement_fa": "انواع مواجهه با ریسک و نقش بیمه در مدیریت ریسک را درک کند.",
+      "topic_id": "risk_insurance",
+      "topic_label_fa": "ریسک و بیمه"
+    },
+    {
+      "competency_id": "RIN-C02",
+      "evidence": [
+        "مواجهه من با ریسک",
+        "حد ضرر من"
+      ],
+      "lookup_consistent": true,
+      "stage": "self_assess",
+      "statement_fa": "نگرش و تحمل خود در برابر ریسک و زیان مالی را ارزیابی کند.",
+      "topic_id": "risk_insurance",
+      "topic_label_fa": "ریسک و بیمه"
+    },
+    {
+      "competency_id": "RIN-C03",
+      "evidence": [
+        "روش‌های چهارگانه مواجهه با ریسک",
+        "بیمه من"
+      ],
+      "lookup_consistent": true,
+      "stage": "plan",
+      "statement_fa": "برای ریسک‌های مالی مهم زندگی روش‌های مدیریت و پوشش مناسب را بررسی کند.",
+      "topic_id": "risk_insurance",
+      "topic_label_fa": "ریسک و بیمه"
+    },
+    {
+      "competency_id": "SSM-C01",
+      "evidence": [
+        "آگاهی از هزینه‌ها",
+        "الگوهای خرید",
+        "ثبت هزینه‌ها"
+      ],
+      "lookup_consistent": true,
+      "stage": "self_assess",
+      "statement_fa": "الگوی هزینه و مصرف خود را شناسایی و نقاط قابل اصلاح را پیدا کند.",
+      "topic_id": "spending_saving_money_management",
+      "topic_label_fa": "خرج، پس‌انداز و مدیریت پول"
+    },
+    {
+      "competency_id": "SSM-C02",
+      "evidence": [
+        "کاربرگ ایده‌آل‌های مالی",
+        "بودجه‌بندی"
+      ],
+      "lookup_consistent": true,
+      "stage": "plan",
+      "statement_fa": "بودجه‌ای متناسب با درآمد، هزینه‌ها و اهداف مالی تنظیم کند.",
+      "topic_id": "spending_saving_money_management",
+      "topic_label_fa": "خرج، پس‌انداز و مدیریت پول"
+    },
+    {
+      "competency_id": "SSM-C03",
+      "evidence": [
+        "صندوق‌های سه‌گانه",
+        "هدف پس‌اندازی",
+        "صندوق اضطراری"
+      ],
+      "lookup_consistent": true,
+      "stage": "plan",
+      "statement_fa": "برای پس‌انداز، صندوق اضطراری و سایر کارکردهای پول تخصیص مناسب طراحی کند.",
+      "topic_id": "spending_saving_money_management",
+      "topic_label_fa": "خرج، پس‌انداز و مدیریت پول"
+    },
+    {
+      "competency_id": "SSM-C04",
+      "evidence": [
+        "تمرین خرید هوشمندانه",
+        "تمرین بودجه‌بندی",
+        "تمرین پس‌انداز"
+      ],
+      "lookup_consistent": true,
+      "stage": "act",
+      "statement_fa": "رفتارهای عملی مدیریت هزینه، خرید و پس‌انداز را اجرا و بازبینی کند.",
+      "topic_id": "spending_saving_money_management",
+      "topic_label_fa": "خرج، پس‌انداز و مدیریت پول"
+    },
+    {
+      "competency_id": "WIN-C01",
+      "evidence": [
+        "فهرست مشاغل مناسب من",
+        "سبک و رویکرد کاری من"
+      ],
+      "lookup_consistent": true,
+      "stage": "self_assess",
+      "statement_fa": "دانش، مهارت، علاقه و وضعیت شغلی خود را ارزیابی کند.",
+      "topic_id": "work_income",
+      "topic_label_fa": "کار، شغل و درآمد"
+    },
+    {
+      "competency_id": "WIN-C02",
+      "evidence": [
+        "توسعه شغلی من",
+        "می‌خواهم درآمدم زیاد شود"
+      ],
+      "lookup_consistent": true,
+      "stage": "plan",
+      "statement_fa": "مسیر توسعه شغلی و افزایش درآمد پایدار خود را طراحی کند.",
+      "topic_id": "work_income",
+      "topic_label_fa": "کار، شغل و درآمد"
+    },
+    {
+      "competency_id": "WIN-C03",
+      "evidence": [
+        "فعالیت درآمدزا برای کودکان",
+        "طراحی کسب‌وکار",
+        "منابع تولید",
+        "هزینه",
+        "قیمت",
+        "سود"
+      ],
+      "lookup_consistent": true,
+      "stage": "act",
+      "statement_fa": "فرصت‌های مناسب کار، فعالیت درآمدزا یا کسب‌وکار را طراحی و ارزیابی کند.",
+      "topic_id": "work_income",
+      "topic_label_fa": "کار، شغل و درآمد"
+    }
+  ],
+  "competency_model_version": "competency_prerequisite_v1",
+  "competency_summary": {
+    "competencies_by_stage": {
+      "act": 2,
+      "analyze": 2,
+      "plan": 8,
+      "review_and_improve": 0,
+      "self_assess": 7,
+      "understand": 5
+    },
+    "competencies_by_topic": {
+      "credit_debt_banking": 3,
+      "financial_decision_making": 4,
+      "financial_literacy_foundations": 3,
+      "investment": 4,
+      "risk_insurance": 3,
+      "spending_saving_money_management": 4,
+      "work_income": 3
+    },
+    "distinct_competency_ids": 24,
+    "topic_count": 7,
+    "total_competencies": 24
+  },
+  "hard_prerequisites": {
+    "relation_count": 0,
+    "relations": []
+  },
+  "knowledge_gap_policy": {
+    "absence_of_dedicated_node_competency_is_gap": false,
+    "absence_of_stage_population_is_gap": false,
+    "knowledge_gap_declared_in_nb10": false,
+    "requires_separate_evaluation": true
+  },
+  "learning_progression": {
+    "cross_topic_relation_count": 0,
+    "cycle_count": 0,
+    "relation_count": 17,
+    "relations": [
+      {
+        "evidence_basis": "book_activity_progression",
+        "from": "CDB-C01",
+        "reason": "Understanding debt and credit concepts supports classification of personal debt.",
+        "to": "CDB-C02",
+        "type": "RECOMMENDED_LEARNING_PROGRESSION"
+      },
+      {
+        "evidence_basis": "debt_map_activity",
+        "from": "CDB-C02",
+        "reason": "A debt inventory and classification supports planning corrective actions.",
+        "to": "CDB-C03",
+        "type": "RECOMMENDED_LEARNING_PROGRESSION"
+      },
+      {
+        "evidence_basis": "decision_making_activity_progression",
+        "from": "FDM-C01",
+        "reason": "Understanding financial and nonfinancial decision factors supports self-assessment.",
+        "to": "FDM-C02",
+        "type": "RECOMMENDED_LEARNING_PROGRESSION"
+      },
+      {
+        "evidence_basis": "decision_making_activity_progression",
+        "from": "FDM-C02",
+        "reason": "Awareness of personal assets, needs, wants, and decision patterns supports consequence analysis.",
+        "to": "FDM-C03",
+        "type": "RECOMMENDED_LEARNING_PROGRESSION"
+      },
+      {
+        "evidence_basis": "competency_stage_progression",
+        "from": "FDM-C03",
+        "reason": "Analysis of alternatives and opportunity cost supports goal-linked financial planning.",
+        "to": "FDM-C04",
+        "type": "RECOMMENDED_LEARNING_PROGRESSION"
+      },
+      {
+        "evidence_basis": "competency_stage_progression",
+        "from": "FLF-C01",
+        "reason": "Understanding basic financial-literacy concepts supports meaningful self-assessment.",
+        "to": "FLF-C02",
+        "type": "RECOMMENDED_LEARNING_PROGRESSION"
+      },
+      {
+        "evidence_basis": "activity_and_competency_progression",
+        "from": "FLF-C02",
+        "reason": "Assessment of current capability supports defining a desired future financial state.",
+        "to": "FLF-C03",
+        "type": "RECOMMENDED_LEARNING_PROGRESSION"
+      },
+      {
+        "evidence_basis": "investment_activity_progression",
+        "from": "INV-C01",
+        "reason": "Conceptual investment literacy supports more meaningful assessment of investment goals and prior experience.",
+        "to": "INV-C02",
+        "type": "RECOMMENDED_LEARNING_PROGRESSION"
+      },
+      {
+        "evidence_basis": "four_step_investment_activity",
+        "from": "INV-C02",
+        "reason": "Clarified goals support educational comparison of investment-option characteristics.",
+        "to": "INV-C03",
+        "type": "RECOMMENDED_LEARNING_PROGRESSION"
+      },
+      {
+        "evidence_basis": "four_step_investment_activity",
+        "from": "INV-C03",
+        "reason": "Educational comparison of risk, return, liquidity, and capital requirements supports planning.",
+        "to": "INV-C04",
+        "type": "RECOMMENDED_LEARNING_PROGRESSION"
+      },
+      {
+        "evidence_basis": "risk_self_assessment_activity",
+        "from": "RIN-C01",
+        "reason": "Understanding risk-management approaches supports self-assessment of personal risk response.",
+        "to": "RIN-C02",
+        "type": "RECOMMENDED_LEARNING_PROGRESSION"
+      },
+      {
+        "evidence_basis": "competency_progression",
+        "from": "RIN-C02",
+        "reason": "Risk self-assessment supports evaluation of appropriate risk-management approaches.",
+        "to": "RIN-C03",
+        "type": "RECOMMENDED_LEARNING_PROGRESSION"
+      },
+      {
+        "evidence_basis": "book_activity_progression",
+        "from": "SSM-C01",
+        "reason": "Awareness of current spending patterns supports realistic budgeting.",
+        "to": "SSM-C02",
+        "type": "RECOMMENDED_LEARNING_PROGRESSION"
+      },
+      {
+        "evidence_basis": "competency_progression",
+        "from": "SSM-C02",
+        "reason": "Budget planning supports intentional allocation to savings and emergency purposes.",
+        "to": "SSM-C03",
+        "type": "RECOMMENDED_LEARNING_PROGRESSION"
+      },
+      {
+        "evidence_basis": "competency_stage_progression",
+        "from": "SSM-C03",
+        "reason": "A defined allocation plan supports implementation and review of money-management behavior.",
+        "to": "SSM-C04",
+        "type": "RECOMMENDED_LEARNING_PROGRESSION"
+      },
+      {
+        "evidence_basis": "career_worksheet_progression",
+        "from": "WIN-C01",
+        "reason": "Assessment of skills, interests, and work status supports career-development planning.",
+        "to": "WIN-C02",
+        "type": "RECOMMENDED_LEARNING_PROGRESSION"
+      },
+      {
+        "evidence_basis": "competency_stage_progression",
+        "from": "WIN-C02",
+        "reason": "Career and income planning can support practical design of income-generating opportunities.",
+        "to": "WIN-C03",
+        "type": "RECOMMENDED_LEARNING_PROGRESSION"
+      }
+    ],
+    "relationship_type": "RECOMMENDED_LEARNING_PROGRESSION"
+  },
+  "learning_stages": {
+    "competency_population": {
+      "act": 2,
+      "analyze": 2,
+      "plan": 8,
+      "review_and_improve": 0,
+      "self_assess": 7,
+      "understand": 5
+    },
+    "declared_stage_count": 6,
+    "rank": {
+      "act": 50,
+      "analyze": 30,
+      "plan": 40,
+      "review_and_improve": 60,
+      "self_assess": 20,
+      "understand": 10
+    },
+    "review_and_improve_reconciliation": {
+      "activity_signal_count": 0,
+      "competency_text_signal_count": 3,
+      "create_competency_automatically": false,
+      "current_competencies": [],
+      "current_competency_count": 0,
+      "declared_stage": "review_and_improve",
+      "knowledge_gap_declared": false,
+      "status": "UNPOPULATED_WITH_REVIEW_SIGNALS_REQUIRES_FUTURE_EVIDENCE_REVIEW"
+    }
+  },
+  "model_scope": {
+    "absence_of_dedicated_node_competency_is_gap": false,
+    "absence_of_stage_population_is_gap": false,
+    "competency_creation_requires": [
+      "PRIMARY_CURRICULUM_EVIDENCE",
+      "DISTINCT_LEARNING_OUTCOME",
+      "NON_DUPLICATIVE_WITH_EXISTING_COMPETENCY"
+    ],
+    "curriculum_node_requires_dedicated_competency": false,
+    "educational_module_requires_dedicated_competency": false,
+    "knowledge_gap_requires_separate_evaluation": true,
+    "model_scope": "TOP_LEVEL_COMPETENCY_FRAMEWORK",
+    "taxonomy_version": "taxonomy_v1",
+    "top_level_topic_requires_competency": true
+  },
+  "prerequisite_policy": {
+    "frozen_v1": {
+      "cross_topic_hard_prerequisites_allowed": false,
+      "cross_topic_relation_count": 0,
+      "curriculum_node_implies_prerequisite": false,
+      "curriculum_order_is_prerequisite": false,
+      "expert_review_required_before_freeze": false,
+      "expert_review_resolution": "SUPERSEDED_BY_CORPUS_FIRST_RESOLUTION",
+      "expert_review_resolution_basis": [
+        "ALL_11_PREVIOUS_REVIEW_ITEMS_CORPUS_RESOLVED",
+        "INDEPENDENT_TAXONOMY_AUDIT_PASS",
+        "TAXONOMY_V1_FROZEN"
+      ],
+      "hard_prerequisite_count": 0,
+      "recommended_learning_progression_count": 17,
+      "relationship_types": [
+        "HARD_PREREQUISITE",
+        "RECOMMENDED_LEARNING_PROGRESSION",
+        "CURRICULAR_ORDER_EVIDENCE"
+      ],
+      "taxonomy_parent_child_implies_prerequisite": false
+    },
+    "historical_v0": {
+      "cross_topic_hard_prerequisites_allowed": false,
+      "curriculum_order_is_prerequisite": false,
+      "expert_review_required_before_freeze": true,
+      "relationship_types": [
+        "HARD_PREREQUISITE",
+        "RECOMMENDED_LEARNING_PROGRESSION",
+        "CURRICULAR_ORDER_EVIDENCE"
+      ]
+    },
+    "historical_v0_preserved": true
+  },
+  "schema_version": "competency-prerequisite-schema-v1",
+  "status": "FROZEN",
+  "taxonomy_reconciliation": {
+    "competencies_added_for_new_taxonomy_nodes": 0,
+    "competencies_reassigned": 0,
+    "competencies_removed": 0,
+    "curriculum_nodes": {
+      "children_business": {
+        "dedicated_competency_required": false,
+        "direct_competency_matches": [],
+        "direct_match_count": 0,
+        "label_fa": "کسب‌وکار کودکان",
+        "parent_topic_competencies": [
+          "WIN-C01",
+          "WIN-C02",
+          "WIN-C03"
+        ],
+        "top_level_topic_id": "work_income"
+      },
+      "children_business_pricing": {
+        "dedicated_competency_required": false,
+        "direct_competency_matches": [
+          {
+            "competency_id": "FLF-C01",
+            "matched_terms": [
+              "قیمت"
+            ],
+            "stage": "understand",
+            "statement_fa": "مفاهیم پایه سواد مالی و تفاوت میان ارزش عددی و ارزش واقعی پول را درک کند.",
+            "topic_id": "financial_literacy_foundations"
+          },
+          {
+            "competency_id": "WIN-C03",
+            "matched_terms": [
+              "قیمت"
+            ],
+            "stage": "act",
+            "statement_fa": "فرصت‌های مناسب کار، فعالیت درآمدزا یا کسب‌وکار را طراحی و ارزیابی کند.",
+            "topic_id": "work_income"
+          }
+        ],
+        "direct_match_count": 2,
+        "label_fa": "قیمت و قیمت‌گذاری در کسب‌وکار",
+        "parent_topic_competencies": [
+          "WIN-C01",
+          "WIN-C02",
+          "WIN-C03"
+        ],
+        "top_level_topic_id": "work_income"
+      },
+      "children_business_profit": {
+        "dedicated_competency_required": false,
+        "direct_competency_matches": [
+          {
+            "competency_id": "WIN-C03",
+            "matched_terms": [
+              "سود"
+            ],
+            "stage": "act",
+            "statement_fa": "فرصت‌های مناسب کار، فعالیت درآمدزا یا کسب‌وکار را طراحی و ارزیابی کند.",
+            "topic_id": "work_income"
+          }
+        ],
+        "direct_match_count": 1,
+        "label_fa": "سود در کسب‌وکار",
+        "parent_topic_competencies": [
+          "WIN-C01",
+          "WIN-C02",
+          "WIN-C03"
+        ],
+        "top_level_topic_id": "work_income"
+      },
+      "entrepreneurship_production_resources": {
+        "dedicated_competency_required": false,
+        "direct_competency_matches": [
+          {
+            "competency_id": "WIN-C03",
+            "matched_terms": [
+              "منابع تولید"
+            ],
+            "stage": "act",
+            "statement_fa": "فرصت‌های مناسب کار، فعالیت درآمدزا یا کسب‌وکار را طراحی و ارزیابی کند.",
+            "topic_id": "work_income"
+          }
+        ],
+        "direct_match_count": 1,
+        "label_fa": "منابع تولید",
+        "parent_topic_competencies": [
+          "WIN-C01",
+          "WIN-C02",
+          "WIN-C03"
+        ],
+        "top_level_topic_id": "work_income"
+      },
+      "giving_and_gifting": {
+        "dedicated_competency_required": false,
+        "direct_competency_matches": [],
+        "direct_match_count": 0,
+        "label_fa": "بخشش و هدیه",
+        "parent_topic_competencies": [
+          "SSM-C01",
+          "SSM-C02",
+          "SSM-C03",
+          "SSM-C04"
+        ],
+        "top_level_topic_id": "spending_saving_money_management"
+      },
+      "goods_and_services_basics": {
+        "dedicated_competency_required": false,
+        "direct_competency_matches": [],
+        "direct_match_count": 0,
+        "label_fa": "تفاوت کالا و خدمت",
+        "parent_topic_competencies": [
+          "WIN-C01",
+          "WIN-C02",
+          "WIN-C03"
+        ],
+        "top_level_topic_id": "work_income"
+      },
+      "product_presentation_and_promotion": {
+        "dedicated_competency_required": false,
+        "direct_competency_matches": [],
+        "direct_match_count": 0,
+        "label_fa": "معرفی محصول و تبلیغ",
+        "parent_topic_competencies": [
+          "WIN-C01",
+          "WIN-C02",
+          "WIN-C03"
+        ],
+        "top_level_topic_id": "work_income"
+      }
+    },
+    "educational_modules": {
+      "taxation_and_financial_obligations": {
+        "absence_is_knowledge_gap": false,
+        "dedicated_competency_required_for_v1": false,
+        "existing_competency_match_count": 0,
+        "existing_competency_matches": [],
+        "future_level_2_competency_expansion": "EVIDENCE_DRIVEN_IF_PRODUCT_SCOPE_REQUIRES",
+        "module_id": "taxation_and_financial_obligations",
+        "module_level": 2
+      }
+    }
+  },
+  "taxonomy_reference": {
+    "taxonomy_path": "artifacts/phase2/taxonomy/taxonomy_v1.json",
+    "taxonomy_sha256": "335690044b2e4eff684f7f347809f2c5cb8c39624a939dc01408d9ca898fe977",
+    "taxonomy_version": "taxonomy_v1"
+  },
+  "validation_snapshot": {
+    "backward_progression_count": 0,
+    "competencies_without_model_evidence": 0,
+    "competency_count": 24,
+    "cross_topic_relation_count": 0,
+    "duplicate_competency_ids": 0,
+    "freeze_blockers": [],
+    "hard_prerequisite_count": 0,
+    "invalid_relation_endpoint_count": 0,
+    "invalid_relation_type_count": 0,
+    "learning_stage_count": 6,
+    "progression_cycle_count": 0,
+    "recommended_progression_count": 17,
+    "topic_count": 7,
+    "topic_label_mismatch_count": 0,
+    "topics_without_competency": 0
+  }
+}

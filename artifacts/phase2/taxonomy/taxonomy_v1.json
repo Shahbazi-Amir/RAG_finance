@@ -1,0 +1,434 @@
+{
+  "concept_variants": {
+    "بخشش": {
+      "canonical_label_fa": "بخشش و هدیه",
+      "canonical_local_concept_id": "giving_and_gifting",
+      "global_topic_alias": false,
+      "variant_type": "LEXICAL_CONCEPT_VARIANT"
+    }
+  },
+  "context_dependent_terms": {
+    "انتخاب": {
+      "global_alias_allowed": false,
+      "local_nodes": [],
+      "reason": "BROAD_MULTI_TOPIC_PRIMARY_USAGE"
+    },
+    "سود": {
+      "global_alias_allowed": false,
+      "local_nodes": [
+        "children_business_profit"
+      ],
+      "reason": "BROAD_MULTI_TOPIC_PRIMARY_USAGE"
+    },
+    "قیمت": {
+      "global_alias_allowed": false,
+      "local_nodes": [
+        "children_business_pricing"
+      ],
+      "reason": "BROAD_MULTI_TOPIC_PRIMARY_USAGE"
+    }
+  },
+  "curriculum_nodes": {
+    "children_business": {
+      "authority_basis": "PRIMARY_BOOK_ROOT_NODE",
+      "global_alias_allowed": false,
+      "label_fa": "کسب‌وکار کودکان",
+      "node_type": "CURRICULUM_NODE",
+      "parent_id": "work_income",
+      "top_level_topic_id": "work_income"
+    },
+    "children_business_pricing": {
+      "authority_basis": "PRIMARY_BOOK_EXPLICIT_PARENT",
+      "global_alias_allowed": false,
+      "global_term": "قیمت",
+      "label_fa": "قیمت و قیمت‌گذاری در کسب‌وکار",
+      "node_type": "LOCAL_SUBTOPIC",
+      "parent_id": "children_business",
+      "top_level_topic_id": "work_income"
+    },
+    "children_business_profit": {
+      "authority_basis": "PRIMARY_BOOK_EXPLICIT_PARENT",
+      "global_alias_allowed": false,
+      "global_term": "سود",
+      "label_fa": "سود در کسب‌وکار",
+      "node_type": "LOCAL_SUBTOPIC",
+      "parent_id": "children_business",
+      "top_level_topic_id": "work_income"
+    },
+    "entrepreneurship_production_resources": {
+      "authority_basis": "PRIMARY_BOOK_EXPLICIT_PARENT",
+      "global_alias_allowed": false,
+      "label_fa": "منابع تولید",
+      "node_type": "SUBTOPIC",
+      "parent_id": "children_business",
+      "top_level_topic_id": "work_income"
+    },
+    "giving_and_gifting": {
+      "authority_basis": "PRIMARY_BOOK_ROOT_NODE",
+      "global_alias_allowed": false,
+      "label_fa": "بخشش و هدیه",
+      "node_type": "CURRICULUM_NODE",
+      "parent_id": "spending_saving_money_management",
+      "top_level_topic_id": "spending_saving_money_management"
+    },
+    "goods_and_services_basics": {
+      "authority_basis": "PRIMARY_BOOK_EXPLICIT_PARENT",
+      "global_alias_allowed": false,
+      "label_fa": "تفاوت کالا و خدمت",
+      "node_type": "SUBTOPIC",
+      "parent_id": "children_business",
+      "top_level_topic_id": "work_income"
+    },
+    "product_presentation_and_promotion": {
+      "authority_basis": "PRIMARY_BOOK_EXPLICIT_PARENT",
+      "global_alias_allowed": false,
+      "label_fa": "معرفی محصول و تبلیغ",
+      "node_type": "SUBTOPIC",
+      "parent_id": "children_business",
+      "top_level_topic_id": "work_income"
+    }
+  },
+  "educational_modules": {
+    "taxation_and_financial_obligations": {
+      "authority_basis": "PRIMARY_EXPLICIT_LEVEL_2_CURRICULUM_ANCHOR",
+      "force_into_existing_top_level": false,
+      "label_fa": "مالیات و تعهدات مالی",
+      "module_level": 2,
+      "node_type": "CROSS_TOPIC_EDUCATIONAL_MODULE",
+      "parent_id": null,
+      "promote_to_top_level_v1": false,
+      "top_level_topic_id": null
+    }
+  },
+  "freeze_policy": {
+    "attribution_mutated": false,
+    "chunking_performed": false,
+    "document_topic_mapping_mutated": false,
+    "rights_release_gate_note": "Rights EVIDENCE_REQUIRED remains an external release gate and does not block internal Phase-2 Taxonomy freeze.",
+    "rights_release_gate_resolved": false,
+    "source_documents_mutated": false,
+    "speaker_resolution_mutated": false
+  },
+  "frozen_from": {
+    "candidate_name": "taxonomy_revision_candidate_v2",
+    "candidate_status": "CORPUS_RESOLVED_CANDIDATE",
+    "freeze_blockers_at_validation": [],
+    "freeze_readiness": "READY_FOR_TAXONOMY_FREEZE"
+  },
+  "knowledge_authority": {
+    "policy": {
+      "context_can_define_core_taxonomy": false,
+      "context_can_define_primary_claim": false,
+      "contextual_source": "CONTEXTUAL_NONPRIMARY",
+      "core_taxonomy_source": "CORE_PRIMARY_KNOWLEDGE",
+      "primary_conflict_requires_review": true,
+      "retain_all_source_records": true,
+      "secondary_can_override_primary": false,
+      "speaker_inference_allowed": false,
+      "supporting_source": "SUPERVISED_SECONDARY_KNOWLEDGE",
+      "unresolved_can_define_core_taxonomy": false,
+      "unresolved_can_define_primary_claim": false,
+      "unresolved_source": "UNRESOLVED_CONTEXT"
+    },
+    "summary": {
+      "contextual_nonprimary": 1944,
+      "core_primary_by_source": {
+        "book": 2701,
+        "transcript": 11928,
+        "website": 76
+      },
+      "core_primary_knowledge": 14705,
+      "documents_total": 19456,
+      "supervised_secondary_knowledge": 453,
+      "transcript_authority_classes": {
+        "NONPRIMARY_EXPLICIT_CONTEXT": 1943,
+        "PRIMARY_CANONICAL_ATTRIBUTION": 11209,
+        "PRIMARY_EXPLICIT_SOURCE_MARKER": 718,
+        "PRIMARY_HUMAN_CONFIRMED_OVERLAY": 1,
+        "SECONDARY_HUMAN_CONFIRMED_OVERLAY": 1,
+        "UNRESOLVED_SPEAKER_CONTEXT": 2354
+      },
+      "unresolved_context": 2354
+    }
+  },
+  "non_core_candidates": {
+    "behavioral_economics_lens": {
+      "label_fa": "اقتصاد رفتاری",
+      "reason": "PRIMARY_EVIDENCE_TOO_THIN_AND_LOWER_AUTHORITY_DOMINANT",
+      "retain_as_contextual_concept": true,
+      "status": "NOT_PROMOTED_TO_CORE_TAXONOMY_V1"
+    }
+  },
+  "review_resolution": {
+    "corpus_resolution_register": {
+      "behavioral_economics_lens": {
+        "action": "DO_NOT_PROMOTE_TO_CORE_TAXONOMY_V1",
+        "core_taxonomy_member": false,
+        "reason": "PRIMARY_EVIDENCE_TOO_THIN_LOWER_AUTHORITY_DOMINANT",
+        "resolution": "CORPUS_RESOLVED",
+        "review_type": "CROSS_CUTTING_DIMENSION"
+      },
+      "book:trainer-training-financial-literacy:fa-source:p000138": {
+        "action": "KEEP_VALID_MULTI_TOPIC",
+        "evidence_basis": [
+          "BODY_LEXICAL",
+          "PRIMARY_BOOK_CONTEXT"
+        ],
+        "resolution": "CORPUS_RESOLVED",
+        "review_type": "BOOK_MULTI_TOPIC_DOCUMENT",
+        "topics": [
+          "financial_decision_making",
+          "spending_saving_money_management"
+        ]
+      },
+      "book:trainer-training-financial-literacy:fa-source:p000370": {
+        "action": "KEEP_VALID_MULTI_TOPIC",
+        "evidence_basis": [
+          "BODY_LEXICAL",
+          "PRIMARY_BOOK_CONTEXT"
+        ],
+        "resolution": "CORPUS_RESOLVED",
+        "review_type": "BOOK_MULTI_TOPIC_DOCUMENT",
+        "topics": [
+          "spending_saving_money_management",
+          "credit_debt_banking"
+        ]
+      },
+      "entrepreneurship_production_resources": {
+        "action": "PLACE_UNDER_CHILDREN_BUSINESS",
+        "evidence_basis": [
+          "PRIMARY_BOOK_EXPLICIT_PARENT",
+          "PRIMARY_TRANSCRIPT_CONFIRMATION"
+        ],
+        "global_alias_allowed": false,
+        "parent": "children_business",
+        "resolution": "CORPUS_RESOLVED",
+        "review_type": "SUBTOPIC",
+        "top_level_bridge": "work_income"
+      },
+      "giving_and_gifting": {
+        "action": "KEEP_AS_CURRICULUM_NODE",
+        "evidence_basis": [
+          "PRIMARY_BOOK_ROOT_SEQUENCE",
+          "PRIMARY_BOOK_CONTEXT",
+          "PRIMARY_TRANSCRIPT_CONTEXT",
+          "DIRECT_AUTHOR_WEBSITE"
+        ],
+        "global_alias_allowed": false,
+        "local_role": "ROOT_CURRICULUM_NODE",
+        "parent": "spending_saving_money_management",
+        "resolution": "CORPUS_RESOLVED",
+        "review_type": "SUBTOPIC"
+      },
+      "goods_and_services_basics": {
+        "action": "PLACE_UNDER_CHILDREN_BUSINESS",
+        "evidence_basis": [
+          "PRIMARY_BOOK_EXPLICIT_PARENT"
+        ],
+        "global_alias_allowed": false,
+        "parent": "children_business",
+        "resolution": "CORPUS_RESOLVED",
+        "review_type": "SUBTOPIC",
+        "top_level_bridge": "work_income"
+      },
+      "product_presentation_and_promotion": {
+        "action": "PLACE_UNDER_CHILDREN_BUSINESS",
+        "evidence_basis": [
+          "PRIMARY_BOOK_EXPLICIT_PARENT"
+        ],
+        "global_alias_allowed": false,
+        "parent": "children_business",
+        "resolution": "CORPUS_RESOLVED",
+        "review_type": "SUBTOPIC",
+        "top_level_bridge": "work_income"
+      },
+      "taxation_and_financial_obligations": {
+        "action": "KEEP_AS_LEVEL_2_STANDALONE_MODULE",
+        "evidence_basis": [
+          "PRIMARY_LEVEL_2_CURRICULUM_ANCHOR",
+          "PRIMARY_MULTI_CONTEXT_EVIDENCE"
+        ],
+        "force_into_existing_top_level": false,
+        "global_alias_allowed": false,
+        "parent": null,
+        "resolution": "CORPUS_RESOLVED",
+        "review_type": "TAXONOMY_EXTENSION",
+        "top_level_topic": false
+      },
+      "انتخاب": {
+        "action": "KEEP_CONTEXT_DEPENDENT",
+        "global_alias_allowed": false,
+        "local_structural_role": null,
+        "resolution": "CORPUS_RESOLVED",
+        "review_type": "CONTEXT_DEPENDENT_POLICY"
+      },
+      "سود": {
+        "action": "GLOBAL_CONTEXT_DEPENDENT_PLUS_LOCAL_BUSINESS_NODE",
+        "global_alias_allowed": false,
+        "local_parent": "children_business",
+        "local_structural_role": "children_business_profit",
+        "resolution": "CORPUS_RESOLVED",
+        "review_type": "CONTEXT_DEPENDENT_POLICY"
+      },
+      "قیمت": {
+        "action": "GLOBAL_CONTEXT_DEPENDENT_PLUS_LOCAL_BUSINESS_NODE",
+        "global_alias_allowed": false,
+        "local_parent": "children_business",
+        "local_structural_role": "children_business_pricing",
+        "resolution": "CORPUS_RESOLVED",
+        "review_type": "CONTEXT_DEPENDENT_POLICY"
+      }
+    },
+    "specialist_review_supersession": {
+      "new_status": "SUPERSEDED_BY_CORPUS_FIRST_RESOLUTION",
+      "previous_review_preserved": true,
+      "previous_review_sheet": "specialist_review_sheet_v1",
+      "previous_status": "BLOCKED_PENDING_SPECIALIST_DECISIONS",
+      "reason": "DEEP_PRIMARY_CORPUS_REVIEW_RESOLVED_ALL_TAXONOMY_DECISION_ITEMS",
+      "specialist_intervention_required_now": false
+    }
+  },
+  "schema_version": "taxonomy-schema-v1",
+  "source_handoff": {
+    "acceptance_report_path": "reports/phase2/deduplication_quality_acceptance_v1.json",
+    "acceptance_report_sha256": "14dfa748988db17a19c6d9d5e1eac2eb7d23c0a1699dcc7add18a2bf461fe4f3",
+    "accepted_corpus_path": "data/phase2/processed/documents_dedup_quality_accepted_v1.jsonl",
+    "accepted_corpus_records": 19456,
+    "accepted_corpus_sha256": "9d72c709f81b1218c5aac064052c7ed1da34869f671e6e32762864e0ad70ea40"
+  },
+  "status": "FROZEN",
+  "taxonomy_version": "taxonomy_v1",
+  "top_level_topics": {
+    "credit_debt_banking": {
+      "evidence_terms": [
+        "اعتبار و بدهی",
+        "قرض",
+        "بدهی",
+        "قواعد قرض",
+        "قرض گرفتن",
+        "کارت اعتباری",
+        "اعتبارسنجی",
+        "بانک و اعتبار",
+        "بانک و سپرده‌گذاری",
+        "مدیریت بحران بدهی",
+        "مزایا و معایب بدهی"
+      ],
+      "label_fa": "اعتبار، قرض، بدهی و بانک"
+    },
+    "financial_decision_making": {
+      "evidence_terms": [
+        "تصمیم‌گیری مالی",
+        "هزینه فرصت",
+        "انتخاب و هزینه‌فرصت",
+        "هدف‌گذاری هوشمندانه",
+        "تعادل میان حال و آینده",
+        "مراقبت مالی",
+        "همکاری مالی"
+      ],
+      "label_fa": "تصمیم‌گیری مالی"
+    },
+    "financial_literacy_foundations": {
+      "evidence_terms": [
+        "مفهوم سواد مالی",
+        "اهمیت سواد مالی",
+        "استانداردهای سواد مالی",
+        "پلکان توانمندی مالی",
+        "سواد مالی در جهان",
+        "آموزش سواد مالی"
+      ],
+      "label_fa": "مبانی و توانمندی سواد مالی"
+    },
+    "investment": {
+      "evidence_terms": [
+        "سرمایه‌گذاری",
+        "چرا سرمایه‌گذاری",
+        "چگونگی سرمایه‌گذاری",
+        "انواع سرمایه‌گذاری",
+        "روش‌های سرمایه‌گذاری",
+        "گزینه‌های سرمایه‌گذاری",
+        "سرمایه‌گذاری مستقیم",
+        "بازار سرمایه و بورس",
+        "صندوق‌های سرمایه‌گذاری",
+        "انواع صندوق‌های سرمایه‌گذاری",
+        "ریسک و بازده سرمایه‌گذاری"
+      ],
+      "label_fa": "سرمایه‌گذاری"
+    },
+    "risk_insurance": {
+      "evidence_terms": [
+        "ریسک و بیمه",
+        "مدیریت ریسک",
+        "بیمه",
+        "انواع بیمه"
+      ],
+      "label_fa": "ریسک و بیمه"
+    },
+    "spending_saving_money_management": {
+      "evidence_terms": [
+        "خرج و پس‌انداز",
+        "پس‌انداز",
+        "بودجه‌بندی",
+        "مدیریت هزینه",
+        "ثبت هزینه‌ها",
+        "کاهش هزینه‌ها",
+        "نیاز و خواسته",
+        "خرید",
+        "الگوهای خرید",
+        "خرید هوشمندانه",
+        "صندوق اضطراری",
+        "پول توجیبی",
+        "هدف پس‌اندازی"
+      ],
+      "label_fa": "خرج، پس‌انداز و مدیریت پول"
+    },
+    "work_income": {
+      "evidence_terms": [
+        "کاریابی و درآمد",
+        "یافتن شغل",
+        "انتخاب شغل",
+        "شغل خوب",
+        "رضایت شغلی",
+        "توسعه شغلی",
+        "سبک‌های شغلی",
+        "رویکردهای شغلی",
+        "کسب درآمد",
+        "کارآفرینی",
+        "درآمد غیرفعال",
+        "کار داوطلبانه"
+      ],
+      "label_fa": "کار، شغل و درآمد"
+    }
+  },
+  "valid_multi_topic_documents": {
+    "book:trainer-training-financial-literacy:fa-source:p000138": {
+      "status": "VALID_MULTI_TOPIC",
+      "topics": [
+        "financial_decision_making",
+        "spending_saving_money_management"
+      ]
+    },
+    "book:trainer-training-financial-literacy:fa-source:p000370": {
+      "status": "VALID_MULTI_TOPIC",
+      "topics": [
+        "spending_saving_money_management",
+        "credit_debt_banking"
+      ]
+    }
+  },
+  "validation_snapshot": {
+    "concept_variant_count": 1,
+    "context_dependent_term_count": 3,
+    "curriculum_node_count": 7,
+    "educational_module_count": 1,
+    "empty_taxonomy_labels": 0,
+    "hierarchy_cycles": 0,
+    "invalid_hierarchy_bridges": 0,
+    "invalid_taxonomy_ids": 0,
+    "non_core_candidate_count": 1,
+    "nonprimary_core_evidence_contamination": 0,
+    "resolved_review_item_count": 11,
+    "top_level_topic_count": 7,
+    "unsupported_curriculum_nodes": 0,
+    "valid_multi_topic_document_count": 2
+  }
+}
