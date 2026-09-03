@@ -1,0 +1,139 @@
+{
+  "schema_version": "1.0",
+  "notebook": "00_environment_and_baseline.ipynb",
+  "environment": {
+    "python_version": "3.11.3",
+    "python_executable": "/usr/local/bin/python3",
+    "operating_system": "Darwin",
+    "os_release": "21.6.0",
+    "machine": "x86_64",
+    "platform": "macOS-12.7.6-x86_64-i386-64bit",
+    "execution_time_utc": "2026-08-25T10:29:34.829745+00:00"
+  },
+  "git": {
+    "branch": "rag-phase2",
+    "commit_sha": "32ec6b085c2ccd8268813d2cd479991132bf3fab",
+    "commit_short": "32ec6b0",
+    "last_commit": "32ec6b0 | 2026-08-22T06:24:09+03:30 | just",
+    "working_tree": "dirty",
+    "uncommitted_changes": [
+      "?? notebooks/phase2/00_environment_and_baseline.ipynb"
+    ]
+  },
+  "repository_structure": {
+    "notebooks": {
+      "path": "notebooks",
+      "exists": true
+    },
+    "phase2_notebooks": {
+      "path": "notebooks/phase2",
+      "exists": true
+    },
+    "data": {
+      "path": "data",
+      "exists": true
+    },
+    "phase2_data": {
+      "path": "data/phase2",
+      "exists": true
+    },
+    "phase2_manifests": {
+      "path": "data/phase2/manifests",
+      "exists": true
+    },
+    "books": {
+      "path": "data/books",
+      "exists": true
+    },
+    "transcripts": {
+      "path": "data/transcripts",
+      "exists": true
+    },
+    "transcripts_final": {
+      "path": "data/transcripts/final",
+      "exists": true
+    },
+    "src": {
+      "path": "src",
+      "exists": true
+    },
+    "phase2_src": {
+      "path": "src/phase2",
+      "exists": false
+    },
+    "reports_phase2": {
+      "path": "reports/phase2",
+      "exists": true
+    },
+    "artifacts_phase2": {
+      "path": "artifacts/phase2",
+      "exists": false
+    },
+    "config_phase2": {
+      "path": "config/phase2",
+      "exists": false
+    },
+    "schemas_phase2": {
+      "path": "schemas/phase2",
+      "exists": false
+    }
+  },
+  "source_baseline": {
+    "website": {
+      "manifest_file": "website_manifest_v1.json",
+      "manifest_sha256": "35b41bfd6d2bbdc6e5799f55a864ce1f64cb798208bf0b55244c72a6cbda5be0",
+      "manifest_size_bytes": 288721,
+      "record_count": 529
+    },
+    "books": {
+      "file_count": 7,
+      "files": [
+        "Money and ME By Komeil Roudi 040214.docx",
+        "Money_and_Me_FA_Published_Final_RTL_FIXED.docx",
+        "درسنامه آموزش سواد مالی ویژه بزرگسالان-نهایی.docx",
+        "سواد مالی برای همه.docx",
+        "سواد_مالی_برای_همه_نسخه_نهایی_بازسازی_کامل.docx",
+        "نوشتار آموزشی تربیت مربی سواد مالی.docx",
+        "نوشتار_آموزشی_تربیت_مربی_سواد_مالی_نسخه_ورد_بازطراحی_RTL.docx"
+      ]
+    },
+    "transcripts": {
+      "collection_count": 7,
+      "collections": {
+        "asre_shirin": 26,
+        "chehelstion_finup_ketabbaz_bankmellat": 55,
+        "dar-jostojo-final-C": 59,
+        "khane-to": 13,
+        "mq": 8,
+        "tarbiat-morabi": 14,
+        "uni-tehran": 38
+      },
+      "markdown_file_count": 213
+    }
+  },
+  "dependencies": {
+    "requirements_file": "requirements.txt",
+    "declared_count": 8,
+    "declared": [
+      "streamlit",
+      "python-dotenv",
+      "openai",
+      "qdrant-client",
+      "requests",
+      "beautifulsoup4",
+      "lxml",
+      "tqdm"
+    ],
+    "installed_versions": {
+      "streamlit": "1.59.2",
+      "python-dotenv": "1.1.0",
+      "openai": "1.75.0",
+      "qdrant-client": "1.18.0",
+      "requests": "2.31.0",
+      "beautifulsoup4": "4.13.4",
+      "lxml": "5.2.2",
+      "tqdm": "4.67.1"
+    },
+    "missing": []
+  }
+}

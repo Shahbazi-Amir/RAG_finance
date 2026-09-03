@@ -1,0 +1,73 @@
+{
+  "authority_layers": {
+    "contextual_nonprimary": 1944,
+    "core_primary_by_source": {
+      "book": 2701,
+      "transcript": 11928,
+      "website": 76
+    },
+    "core_primary_knowledge": 14705,
+    "documents_total": 19456,
+    "supervised_secondary_knowledge": 453,
+    "transcript_authority_classes": {
+      "NONPRIMARY_EXPLICIT_CONTEXT": 1943,
+      "PRIMARY_CANONICAL_ATTRIBUTION": 11209,
+      "PRIMARY_EXPLICIT_SOURCE_MARKER": 718,
+      "PRIMARY_HUMAN_CONFIRMED_OVERLAY": 1,
+      "SECONDARY_HUMAN_CONFIRMED_OVERLAY": 1,
+      "UNRESOLVED_SPEAKER_CONTEXT": 2354
+    },
+    "unresolved_context": 2354
+  },
+  "freeze_status": "PASS",
+  "frozen_structure": {
+    "concept_variants": 1,
+    "context_dependent_terms": 3,
+    "curriculum_nodes": 7,
+    "educational_modules": 1,
+    "non_core_candidates": 1,
+    "top_level_topics": 7,
+    "valid_multi_topic_documents": 2
+  },
+  "independent_audit": {
+    "behavioral_exclusion_valid": true,
+    "children_business_bridge_valid": true,
+    "empty_taxonomy_labels": 0,
+    "freeze_blockers": [],
+    "giving_bridge_valid": true,
+    "hierarchy_cycles": 0,
+    "invalid_context_term_policies": 0,
+    "invalid_hierarchy_bridges": 0,
+    "invalid_multi_topic_documents": 0,
+    "invalid_taxonomy_ids": 0,
+    "nonprimary_core_evidence_contamination": 0,
+    "taxation_module_valid": true,
+    "unsupported_curriculum_nodes": 0
+  },
+  "known_nonblocking_conditions": {
+    "contextual_nonprimary_transcript_records": 1944,
+    "rights_release_gate_open": true,
+    "supervised_secondary_website_records": 453,
+    "unresolved_transcript_records": 2354
+  },
+  "next_required_nb10_stage": "POST_FREEZE_COVERAGE_CONFLICT_AND_INVALID_LABEL_AUDIT",
+  "review_resolution": {
+    "corpus_resolved_items": 11,
+    "previous_review_items": 11,
+    "previous_review_preserved": true,
+    "specialist_intervention_required": false
+  },
+  "schema_version": "taxonomy-freeze-report-v1",
+  "source_handoff": {
+    "acceptance_report_path": "reports/phase2/deduplication_quality_acceptance_v1.json",
+    "acceptance_report_sha256": "14dfa748988db17a19c6d9d5e1eac2eb7d23c0a1699dcc7add18a2bf461fe4f3",
+    "accepted_corpus_path": "data/phase2/processed/documents_dedup_quality_accepted_v1.jsonl",
+    "accepted_corpus_sha256": "9d72c709f81b1218c5aac064052c7ed1da34869f671e6e32762864e0ad70ea40"
+  },
+  "taxonomy_artifact": {
+    "path": "artifacts/phase2/taxonomy/taxonomy_v1.json",
+    "records_in_source_corpus": 19456,
+    "sha256": "335690044b2e4eff684f7f347809f2c5cb8c39624a939dc01408d9ca898fe977"
+  },
+  "taxonomy_version": "taxonomy_v1"
+}

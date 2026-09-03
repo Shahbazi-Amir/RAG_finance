@@ -1,0 +1,77 @@
+{
+  "acceptance_status": "PASS",
+  "acceptance_type": "phase2_notebook_07_unified_schema_and_lineage",
+  "acceptance_version": "v1",
+  "artifacts": {
+    "document_schema": {
+      "exists": true,
+      "path": "schemas/phase2/document.schema.json",
+      "sha256": "3f577c71e8faa3b50c231bd4163cb5425158d0390e5fe5fcf39e00f530baa755",
+      "size_bytes": 15673
+    },
+    "lineage_report": {
+      "exists": true,
+      "path": "reports/phase2/unified_schema_lineage_report_v1.json",
+      "sha256": "8e29e4817a1b0be22e3d877f37e0fa7b7b5af5dfe8cb1db4581a9c9be2487cad",
+      "size_bytes": 12998
+    },
+    "unified_documents": {
+      "exists": true,
+      "path": "data/phase2/processed/documents_unified_v1.jsonl",
+      "sha256": "4ad6c3bcb1580d49f692e1d8a0406ee4c08bbf580cbb473e37baa107e89f5f04",
+      "size_bytes": 63804489
+    }
+  },
+  "notebook": "notebooks/phase2/07_unified_schema_and_lineage.ipynb",
+  "population": {
+    "book_unit_distribution": {
+      "paragraph": 2689,
+      "supplemental_text": 12
+    },
+    "record_count": 19456,
+    "source_distribution": {
+      "book": 2701,
+      "transcript": 16226,
+      "website": 529
+    },
+    "structured_book_assets_outside_text_corpus": {
+      "distribution": {
+        "CHART": 15,
+        "DIAGRAM": 1
+      },
+      "record_count": 16
+    }
+  },
+  "processing_boundaries": {
+    "chunking": "NOT_PERFORMED_IN_NB07",
+    "deduplication": "NOT_PERFORMED_IN_NB07",
+    "embedding": "NOT_PERFORMED_IN_NB07",
+    "indexing": "NOT_PERFORMED_IN_NB07",
+    "persian_normalization": "NOT_PERFORMED_IN_NB07"
+  },
+  "quality_gates": {
+    "broken_lineage": 0,
+    "duplicate_document_id": 0,
+    "invalid_website_attribution": 0,
+    "schema_failures": 0,
+    "structured_asset_text_collisions": 0,
+    "text_hash_failures": 0
+  },
+  "transcript_attribution": {
+    "canonical_speaker_missing": 5016,
+    "human_attribution_overlay_records": 2,
+    "record_count": 16226,
+    "source_timestamp_annotation_records": 16,
+    "unknown_speaker_inference": "FORBIDDEN_AND_NOT_PERFORMED"
+  },
+  "website_attribution": {
+    "authority_distribution": {
+      "direct_author": 76,
+      "editorial_supervision": 453
+    },
+    "invalid_attribution_count": 0,
+    "policy_source": "accepted_pipeline_content_origin",
+    "raw_byline_invented": false,
+    "raw_editorial_credit_invented": false
+  }
+}

@@ -1,0 +1,57 @@
+{
+  "report_type": "phase2_book_inventory_acceptance",
+  "report_version": "v1",
+  "notebook": "03_book_inventory.ipynb",
+  "inventory_status": "PASS",
+  "physical_file_count": 7,
+  "work_count": 4,
+  "edition_count": 7,
+  "author": "Dr. Komeil Roudi",
+  "knowledge_owner": "Dr. Komeil Roudi",
+  "accepted_for_ingestion_file_indices": [
+    3,
+    4,
+    6
+  ],
+  "authoritative_reference_file_indices": [
+    1
+  ],
+  "quarantined_file_indices": [
+    2
+  ],
+  "non_canonical_file_indices": [
+    5,
+    7
+  ],
+  "open_gates": {
+    "translation_qa": {
+      "status": "REQUIRED",
+      "file_index": 2,
+      "edition_id": "book:money-and-me:fa-user-translation"
+    },
+    "rights_evidence": {
+      "status": "EVIDENCE_REQUIRED",
+      "repository_candidate_files_found": 0
+    }
+  },
+  "citation_contract": {
+    "identity": "work_id -> edition_id -> paragraph_id",
+    "paragraph_id_policy": "<edition_id>:p<meaningful-paragraph-sequence>",
+    "prototype_locator_count": 3563,
+    "unique_paragraph_id_count": 3563,
+    "duplicate_text_hash_groups": 123,
+    "duplicate_text_hash_member_paragraphs": 615,
+    "text_sha256_role": "content_validation_only",
+    "heading_path_role": "structural_context",
+    "docx_page_number_role": "not_used_as_stable_locator"
+  },
+  "next_notebook": "04_book_ingestion.ipynb",
+  "constraints_for_next_notebook": [
+    "Do not ingest file 2 until translation QA is accepted.",
+    "Do not ingest files 5 or 7 as canonical sources.",
+    "Preserve Work ID, Edition ID, file hashes, and source lineage.",
+    "Preserve rights_status as EVIDENCE_REQUIRED until evidence exists.",
+    "Do not use DOCX page numbers as stable citation locators.",
+    "Do not perform new chunking in Notebook 04."
+  ]
+}

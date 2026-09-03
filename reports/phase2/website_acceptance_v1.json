@@ -1,0 +1,84 @@
+{
+  "schema_version": "1.0",
+  "notebook": "02_website_acceptance.ipynb",
+  "source": {
+    "source_type": "website",
+    "knowledge_owner": "Dr. Komeil Roudi",
+    "manifest": {
+      "path": "data/phase2/manifests/website_manifest_v1.json",
+      "sha256": "35b41bfd6d2bbdc6e5799f55a864ce1f64cb798208bf0b55244c72a6cbda5be0",
+      "record_count": 529,
+      "status": "accepted"
+    }
+  },
+  "attribution": {
+    "primary_author": 76,
+    "supervised": 453,
+    "anomalies": 0
+  },
+  "raw": {
+    "accepted_article_count": 529,
+    "missing_raw": 0,
+    "missing_html": 0,
+    "missing_source_json": 0,
+    "hash_mismatches": 0,
+    "extra_non_manifest_artifacts": [
+      "TEST_INVALID"
+    ]
+  },
+  "interim": {
+    "path": "data/phase2/interim/website_extracted_v2.json",
+    "record_count": 529,
+    "status": "accepted"
+  },
+  "processed": {
+    "superseded": {
+      "path": "data/phase2/processed/website_documents_v1.json",
+      "reason": "3 stale raw_content_hash values"
+    },
+    "accepted": {
+      "path": "data/phase2/processed/website_documents_v2.json",
+      "document_count": 529,
+      "remaining_lineage_mismatches": 0,
+      "status": "accepted"
+    }
+  },
+  "chunks": {
+    "superseded": {
+      "path": "data/phase2/chunks/website_chunks_v2.json",
+      "reason": "5 stale raw_content_hash values across 3 documents"
+    },
+    "accepted_for_lineage": {
+      "path": "data/phase2/chunks/website_chunks_v3.json",
+      "chunk_count": 1116,
+      "document_count": 529,
+      "chunk_id_duplicates": 0,
+      "missing_documents": 0,
+      "extra_documents": 0,
+      "lineage_mismatches": 0,
+      "status": "accepted_for_lineage_not_chunking_benchmark"
+    }
+  },
+  "citation": {
+    "path": "data/phase2/processed/website_citation_locators_v1.json",
+    "locator_count": 1116,
+    "unique_chunk_ids": 1116,
+    "validation_errors": 0,
+    "status": "accepted"
+  },
+  "quality_flags": {
+    "records_retained": 529,
+    "short_under_300": 3,
+    "short_under_500": 13,
+    "duplicate_title_members": 29,
+    "exact_body_duplicate_members": 2,
+    "media_title_indicator": 24
+  },
+  "acceptance_status": "PASS",
+  "limitations": [
+    "Chunking strategy has not been benchmarked yet.",
+    "Short multimedia-related website text is retained as valid source content.",
+    "Exact duplicate body text is flagged but source records are retained.",
+    "Rights evidence is not established by this notebook."
+  ]
+}

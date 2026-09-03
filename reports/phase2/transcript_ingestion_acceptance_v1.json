@@ -1,0 +1,175 @@
+{
+  "acceptance_decision": "PASS",
+  "accepted_artifacts": {
+    "quality_report": {
+      "quality_candidate_count": 133,
+      "relative_path": "reports/phase2/transcript_quality_report.json",
+      "sha256": "f3d365e0ed4cd7c6f0446de4642cc70403cfd1d95742fa98689841477d4d7b81",
+      "status": "ACCEPTED_AFTER_INDEPENDENT_VALIDATION",
+      "timestamp_annotation_count": 16
+    },
+    "speaker_registry": {
+      "program_count": 13,
+      "relative_path": "data/phase2/interim/speaker_aliases_v1.json",
+      "schema_version": "speaker_alias_registry_v1",
+      "sha256": "9c0e6878a3265e1880d9e88aa73508e193333bed54b51aafbea44e82b67d4a39",
+      "status": "ACCEPTED_AFTER_INDEPENDENT_VALIDATION"
+    },
+    "transcript_segments": {
+      "record_count": 16226,
+      "relative_path": "data/phase2/interim/transcripts_extracted_v1.jsonl",
+      "schema_version": "transcript_segment_v1",
+      "sha256": "1e1d2ec379e9e8b5108efd1a5417e2a7d7394f78395fbf7164eae93ae0887848",
+      "status": "ACCEPTED_AFTER_INDEPENDENT_VALIDATION"
+    }
+  },
+  "accepted_scope": {
+    "physical_file_count": 183,
+    "program_count": 13,
+    "segment_count": 16226,
+    "segments_by_program": {
+      "program:asre-shirin": 902,
+      "program:bank-mellat": 453,
+      "program:chehelston": 2455,
+      "program:dar-jostojo-ye-khoshbakhti": 7236,
+      "program:fanap": 82,
+      "program:ketab-baz": 149,
+      "program:khane-to": 560,
+      "program:mizan": 217,
+      "program:mq": 136,
+      "program:oghyanous-aram": 31,
+      "program:sherakat": 25,
+      "program:tarbiat-morabi": 2597,
+      "program:uni-tehran": 1383
+    },
+    "unique_locator_id_count": 16226,
+    "unique_utterance_id_count": 16226
+  },
+  "checkpoint_role": "FINAL_NOTEBOOK_CHECKPOINT",
+  "deferred_processing": [
+    "PERSIAN_NORMALIZATION",
+    "CORPUS_WIDE_TEXT_CLEANUP_AND_ASR_CORRECTION",
+    "DEDUPLICATION",
+    "UNIFIED_SCHEMA",
+    "CHUNKING",
+    "RIGHTS_RESOLUTION"
+  ],
+  "deferred_text_cleanup": [
+    {
+      "apply_in_nb06": false,
+      "candidate_type": "HUMAN_CONFIRMED_TEXT_ERROR",
+      "cleanup_candidate_id": "deferred-text-cleanup:0001",
+      "cleanup_status": "DEFERRED_TO_CORPUS_TEXT_CLEANUP",
+      "human_expected_text": "صبورم",
+      "observed_text": "صبور هم",
+      "source_line_end": 817,
+      "source_line_start": 813,
+      "transcript_unit_id": "program:dar-jostojo-ye-khoshbakhti:episode-028",
+      "utterance_id": "program:dar-jostojo-ye-khoshbakhti:episode-028:merged:00203-00204"
+    },
+    {
+      "apply_in_nb06": false,
+      "candidate_type": "HUMAN_CONFIRMED_TEXT_ERROR",
+      "cleanup_candidate_id": "deferred-text-cleanup:0002",
+      "cleanup_status": "DEFERRED_TO_CORPUS_TEXT_CLEANUP",
+      "human_expected_text": "شهید مطهری توی کتابش می‌گه که",
+      "observed_text": "شاید متحرید تو کتابش می‌گه که",
+      "source_line_end": 869,
+      "source_line_start": 865,
+      "transcript_unit_id": "program:dar-jostojo-ye-khoshbakhti:episode-028",
+      "utterance_id": "program:dar-jostojo-ye-khoshbakhti:episode-028:merged:00216-00217"
+    }
+  ],
+  "human_review": {
+    "blocking_issue_count": 0,
+    "deferred_text_cleanup_count": 2,
+    "human_attribution_count": 2,
+    "human_confirmed_merge_count": 3,
+    "status": "PASS"
+  },
+  "independent_artifact_validation": {
+    "manifest_lineage_mismatch_count": 0,
+    "rights_mismatch_count": 0,
+    "segment_count_validated": 16226,
+    "source_file_count_validated": 183,
+    "source_hash_mismatch_count": 0,
+    "source_text_mismatch_count": 0,
+    "status": "PASS",
+    "timestamp_semantic_failure_count": 0,
+    "unknown_quality_utterance_reference_count": 0
+  },
+  "known_limitations": [
+    "Rights status for all accepted Transcript files remains EVIDENCE_REQUIRED.",
+    "Speaker identity remains UNRESOLVED where Source evidence and Human Review do not establish an identity.",
+    "Two Human-confirmed text errors are preserved as deferred cleanup candidates and are not corrected in Notebook 06.",
+    "Quality candidates are retained without automatic correction or deletion.",
+    "Sixteen real Source timestamp annotations are preserved, but no whole-segment timestamp is inferred from them."
+  ],
+  "notebook": "notebooks/phase2/06_transcript_ingestion.ipynb",
+  "processing_state": {
+    "chunking": "NOT_PERFORMED",
+    "deduplication": "NOT_PERFORMED",
+    "human_review": "PASS",
+    "lineage_validation": "COMPLETED",
+    "persian_normalization": "NOT_PERFORMED",
+    "source_conservation": "COMPLETED",
+    "speaker_parsing": "COMPLETED",
+    "text_cleanup": "DEFERRED",
+    "timestamp_preservation": "COMPLETED",
+    "transcript_ingestion": "COMPLETED",
+    "unified_schema": "NOT_PERFORMED"
+  },
+  "quality_state": {
+    "automatic_correction_applied": false,
+    "automatic_duplicate_removal_applied": false,
+    "candidate_count": 133
+  },
+  "report_type": "phase2_transcript_ingestion_acceptance",
+  "report_version": "v1",
+  "schema_version": "transcript_ingestion_acceptance_v1",
+  "source_manifest": {
+    "accepted_physical_file_count": 183,
+    "program_count": 13,
+    "relative_path": "data/phase2/manifests/transcript_manifest_v1.json",
+    "sha256": "b328f512c67971b5e0e1f82cd5e9fe2ea148a89db3fbde31aebb474e78c6a9eb",
+    "status": "ACCEPTED_INPUT"
+  },
+  "speaker_state": {
+    "base_parser_attribution_preserved": true,
+    "canonical_primary_speaker": "Dr. Komeil Roudi",
+    "human_attribution_overlay_count": 2,
+    "human_overlay_does_not_rewrite_base": true,
+    "unknown_speaker_inference_allowed": false
+  },
+  "timestamp_state": {
+    "policy": "NONE_UNLESS_SOURCE_PROVIDES_SEGMENT_LEVEL_EVIDENCE",
+    "source_timestamp_annotation_count": 16,
+    "whole_segment_timestamp_assignment_count": 0
+  },
+  "validation_checks": {
+    "all_13_programs_covered": true,
+    "chunking_not_performed": true,
+    "deduplication_not_performed": true,
+    "deferred_text_cleanup_2": true,
+    "human_attribution_overlay_count_2": true,
+    "human_confirmed_merges_3": true,
+    "human_review_blockers_zero": true,
+    "human_review_pass": true,
+    "locator_ids_unique": true,
+    "manifest_accepted_files_183": true,
+    "manifest_program_count_13": true,
+    "persian_normalization_not_performed": true,
+    "quality_candidates_133": true,
+    "quality_report_exists": true,
+    "segment_count_16226": true,
+    "segment_processing_scope_preserved": true,
+    "source_manifest_exists": true,
+    "speaker_registry_exists": true,
+    "speaker_registry_program_count_13": true,
+    "timestamp_annotations_16": true,
+    "transcript_artifact_exists": true,
+    "unknown_speaker_inference_forbidden": true,
+    "utterance_ids_unique": true,
+    "whole_segment_timestamps_absent": true
+  }
+}

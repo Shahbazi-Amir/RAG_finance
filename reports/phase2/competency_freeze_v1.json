@@ -1,0 +1,47 @@
+{
+  "artifact": {
+    "path": "artifacts/phase2/competency/competency_prerequisite_v1.json",
+    "sha256": "f12f6c1631d77f29042b2009ca9dc8dee406d23ccdccdbb103c0e8cade781e87"
+  },
+  "competency_model_version": "competency_prerequisite_v1",
+  "freeze_blockers": [],
+  "freeze_status": "PASS",
+  "knowledge_gap_declared": false,
+  "model_summary": {
+    "competencies": 24,
+    "cross_topic_relations": 0,
+    "hard_prerequisites": 0,
+    "learning_stages": 6,
+    "progression_cycles": 0,
+    "recommended_progressions": 17,
+    "top_level_topics": 7
+  },
+  "next_required_nb10_stage": "FINAL_NB10_CHECKPOINT_AND_NOTEBOOK_HEALTH",
+  "prerequisite_policy": {
+    "frozen_expert_review_flag": false,
+    "historical_expert_review_flag": true,
+    "resolution": "SUPERSEDED_BY_CORPUS_FIRST_RESOLUTION"
+  },
+  "review_and_improve": {
+    "activity_signal_count": 0,
+    "competency_text_signal_count": 3,
+    "create_competency_automatically": false,
+    "current_competencies": [],
+    "current_competency_count": 0,
+    "declared_stage": "review_and_improve",
+    "knowledge_gap_declared": false,
+    "status": "UNPOPULATED_WITH_REVIEW_SIGNALS_REQUIRES_FUTURE_EVIDENCE_REVIEW"
+  },
+  "schema_version": "competency-freeze-report-v1",
+  "taxonomy_reconciliation": {
+    "competencies_added": 0,
+    "competencies_reassigned": 0,
+    "competencies_removed": 0,
+    "curriculum_node_requires_dedicated_competency": false,
+    "educational_module_requires_dedicated_competency": false
+  },
+  "taxonomy_reference": {
+    "path": "artifacts/phase2/taxonomy/taxonomy_v1.json",
+    "sha256": "335690044b2e4eff684f7f347809f2c5cb8c39624a939dc01408d9ca898fe977"
+  }
+}

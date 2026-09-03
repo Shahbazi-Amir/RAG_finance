@@ -72,14 +72,51 @@ data/phase2/vectorstore/
 data/phase2/index/
 data/phase2/database/
 
-# Keep manifests version-controlled
+# ==========================================
+# Phase 2 Manifests
+# ==========================================
+#
+# Manifests are intentionally version-controlled.
+# Do NOT ignore:
+#
 # data/phase2/manifests/
+#
 
 # ==========================================
 # Generated Reports - Phase 2
 # ==========================================
+#
+# Default policy:
+# Ignore generated / diagnostic Phase 2 reports.
+#
+# Stable acceptance, freeze, and environment
+# baseline reports are version-controlled because
+# they are part of the reproducible Phase 2
+# execution contract.
+# ==========================================
 
-reports/phase2/
+reports/phase2/*
+
+# Keep the directory reachable for negation rules
+!reports/phase2/
+
+# ------------------------------------------
+# Formal Acceptance Reports
+# ------------------------------------------
+
+!reports/phase2/*_acceptance_v1.json
+
+# ------------------------------------------
+# Formal Freeze Reports
+# ------------------------------------------
+
+!reports/phase2/*_freeze_v1.json
+
+# ------------------------------------------
+# Reproducible Environment Baseline
+# ------------------------------------------
+
+!reports/phase2/environment_baseline_v1.json
 
 # ==========================================
 # Models

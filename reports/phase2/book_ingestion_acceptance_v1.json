@@ -1,0 +1,80 @@
+{
+  "report_type": "phase2_book_ingestion_acceptance",
+  "report_version": "v1",
+  "notebook": "notebooks/phase2/04_book_ingestion.ipynb",
+  "source_manifest": {
+    "relative_path": "data/phase2/manifests/book_manifest_v1.json",
+    "sha256": "6e5be92bff65d55a7255be3884cc65ac8978b940b8039aaed129c23006a63276"
+  },
+  "accepted_ingestion_artifact": {
+    "relative_path": "data/phase2/interim/book_ingested_v2.json",
+    "artifact_version": "v2",
+    "schema_version": "book_ingestion_v2"
+  },
+  "accepted_scope": {
+    "edition_count": 3,
+    "paragraph_count": 2689,
+    "supplemental_content_count": 28,
+    "supplemental_content_by_type": {
+      "FOOTNOTE": 12,
+      "CHART": 15,
+      "DIAGRAM": 1
+    },
+    "package_asset_count": 14
+  },
+  "coverage": {
+    "body_paragraphs": "INGESTED",
+    "footnotes": "INGESTED",
+    "charts_machine_readable_content": "INGESTED",
+    "diagram_machine_readable_content": "INGESTED",
+    "media_files": "PRESERVED_NOT_TEXT_INGESTED",
+    "embedded_objects": "PRESERVED_AS_LINEAGE_ASSET",
+    "headers": "NO_MEANINGFUL_TEXT_FOUND",
+    "footers": "PAGE_NUMBER_ONLY_NOT_INGESTED",
+    "endnotes": "NO_REAL_ENDNOTES_FOUND"
+  },
+  "processing_state": {
+    "source_extraction": "COMPLETED",
+    "supplemental_content_extraction": "COMPLETED",
+    "ocr": "NOT_PERFORMED",
+    "persian_normalization": "NOT_PERFORMED",
+    "deduplication": "NOT_PERFORMED",
+    "chunking": "NOT_PERFORMED"
+  },
+  "deferred_processing": [
+    "OCR",
+    "PERSIAN_NORMALIZATION",
+    "DEDUPLICATION",
+    "CHUNKING"
+  ],
+  "explicitly_out_of_scope": [
+    "TRANSCRIPT_PROCESSING",
+    "UNIFIED_SCHEMA",
+    "RETRIEVAL",
+    "GENERATION"
+  ],
+  "validation_checks": {
+    "start_gate": true,
+    "source_reextraction_gate": true,
+    "ingestion_structure_gate": true,
+    "paragraph_quality_gate": true,
+    "v1_artifact_creation_gate": true,
+    "v1_independent_validation_gate": true,
+    "docx_package_audit_gate": true,
+    "non_body_content_inspection_gate": true,
+    "non_body_lineage_gate": true,
+    "footnote_mapping_gate": true,
+    "structured_object_inspection_gate": true,
+    "structured_object_lineage_gate": true,
+    "package_relationship_graph_gate": true,
+    "supplemental_content_gate": true,
+    "v2_artifact_creation_gate": true,
+    "v2_independent_validation_gate": true
+  },
+  "known_limitations": [
+    "Image media is preserved with lineage and hash, but image OCR is not performed in Notebook 04.",
+    "Embedded objects are preserved as lineage assets; machine-readable chart content is extracted from validated DOCX chart structures.",
+    "Persian normalization, deduplication, and chunking are intentionally deferred to later dedicated stages."
+  ],
+  "acceptance_decision": "PASS"
+}

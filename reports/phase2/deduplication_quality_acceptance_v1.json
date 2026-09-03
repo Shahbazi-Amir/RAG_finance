@@ -1,0 +1,108 @@
+{
+  "artifacts": {
+    "accepted_processing_dataset": {
+      "bytes": 63804043,
+      "path": "data/phase2/processed/documents_dedup_quality_accepted_v1.jsonl",
+      "record_count": 19456,
+      "sha256": "9d72c709f81b1218c5aac064052c7ed1da34869f671e6e32762864e0ad70ea40"
+    },
+    "cross_source_similarity_candidates": {
+      "bytes": 21224055,
+      "path": "data/phase2/processed/dedup_cross_source_candidates_v1.jsonl",
+      "record_count": 37796,
+      "sha256": "37f6c60093c8d64a45a5f3d148caea701dd7db4bbe126e5c044319f12c505880"
+    },
+    "dedup_quality_report": {
+      "bytes": 10463,
+      "path": "reports/phase2/deduplication_quality_report_v1.json",
+      "sha256": "aa2677f8be16555a8ffe3b89d0a3e9415c2d6e33d0c9b74664992c427133de8b"
+    },
+    "exact_duplicate_relations": {
+      "bytes": 156057,
+      "path": "data/phase2/processed/dedup_exact_relations_v1.jsonl",
+      "record_count": 192,
+      "sha256": "6dc003fd5eaca8661b36b87094e50a1fa03a048f7d3043e87605c456e00a041c"
+    },
+    "hard_quarantine_dataset": {
+      "bytes": 0,
+      "path": "data/phase2/processed/documents_dedup_quality_quarantine_v1.jsonl",
+      "record_count": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "near_duplicate_candidates": {
+      "bytes": 9409976,
+      "path": "data/phase2/processed/dedup_near_candidates_v1.jsonl",
+      "record_count": 15929,
+      "sha256": "4b83fcebd59b34d8b8d792ba83fb5a284b40c897ad7edd7c01685f099a9f90ad"
+    },
+    "quality_evidence_records": {
+      "bytes": 17613645,
+      "path": "data/phase2/processed/dedup_quality_evidence_records_v1.jsonl",
+      "record_count": 19456,
+      "sha256": "50617f1915d600a67f738178e10655f3afcb251a1742f5bf7bf80c428436aa5a"
+    },
+    "review_queue": {
+      "bytes": 6591,
+      "path": "data/phase2/processed/dedup_quality_review_queue_v1.jsonl",
+      "record_count": 7,
+      "sha256": "525bb513e332bb2b9ff94f65b13de5920788afb3c6800cf4251cbc6500c34f1a"
+    }
+  },
+  "checks": {
+    "accepted_and_quarantine_disjoint": true,
+    "all_staged_data_artifacts_valid": true,
+    "automatic_canonicalization_zero": true,
+    "automatic_delete_disabled": true,
+    "automatic_merge_disabled": true,
+    "cross_source_candidate_count_is_37796": true,
+    "dedup_quality_report_valid": true,
+    "exact_groups_are_192": true,
+    "exact_members_are_931": true,
+    "formal_release_eligible_count_is_zero": true,
+    "hard_structural_failures_zero": true,
+    "near_candidate_count_is_15929": true,
+    "normalized_input_revalidated": true,
+    "processing_population_complete": true,
+    "release_blocked_pending_rights_is_19456": true,
+    "rerun_policy_is_idempotent": true,
+    "review_queue_count_is_7": true,
+    "schema_invalid_zero": true
+  },
+  "constraints_for_next_notebook": [
+    "Use only the accepted processing dataset produced by Notebook 09.",
+    "Preserve source identity, attribution, rights, locator, lineage, and dedup relations.",
+    "Do not interpret duplicate relations as automatic source deletion or independent evidence.",
+    "Do not treat formal Release as rights-cleared until rights evidence is supplied."
+  ],
+  "next_notebook": "10_taxonomy_and_knowledge_engineering.ipynb",
+  "next_notebook_allowed_for_internal_processing": true,
+  "notebook": "09_deduplication_and_quality.ipynb",
+  "open_gates": {
+    "checkpoint": {
+      "status": "DEFERRED_NO_REPOSITORY_LOCAL_CONVENTION"
+    },
+    "rights_evidence": {
+      "affected_document_count": 19456,
+      "status": "REQUIRED_FOR_FORMAL_RELEASE"
+    }
+  },
+  "processing_decision": {
+    "hard_quarantine_count": 0,
+    "record_count": 19456,
+    "status": "ACCEPTED"
+  },
+  "release_decision": {
+    "blocked_count": 19456,
+    "eligible_count": 0,
+    "release_dataset_created": false,
+    "status": "BLOCKED_PENDING_RIGHTS"
+  },
+  "report_type": "phase2_deduplication_quality_acceptance",
+  "report_version": "v1",
+  "review": {
+    "automatic_quarantine": false,
+    "required_count": 7
+  },
+  "scope": "NB09_PROCESSING_ACCEPTANCE_AND_DEDUP_QUALITY_COMPLETE",
+  "status": "PASS"
+}

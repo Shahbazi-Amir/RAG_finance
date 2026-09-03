@@ -1,0 +1,40 @@
+{
+  "artifact_type": "phase2_transcript_inventory_acceptance",
+  "artifact_version": "v1",
+  "checks": {
+    "accepted_file_count_valid": true,
+    "accepted_review_overlap_absent": true,
+    "all_accepted_files_exist": true,
+    "all_accepted_files_nonempty": true,
+    "all_accepted_hashes_match": true,
+    "all_review_files_exist": true,
+    "artifact_type_valid": true,
+    "artifact_version_valid": true,
+    "asre_shirin_structure_valid": true,
+    "episode_21_missing_source_valid": true,
+    "inventory_scope_preserved": true,
+    "manifest_exists": true,
+    "program_count_valid": true,
+    "program_file_counts_total_valid": true,
+    "review_material_count_valid": true,
+    "rights_status_policy_valid": true,
+    "schema_version_valid": true,
+    "single_recovery_candidate_valid": true,
+    "unknown_speaker_inference_forbidden": true
+  },
+  "counts": {
+    "accepted_files": 183,
+    "missing_sources": 1,
+    "programs": 13,
+    "review_materials": 30
+  },
+  "exceptions": {
+    "accepted_empty_files": [],
+    "accepted_hash_mismatches": [],
+    "accepted_missing_files": [],
+    "review_missing_files": [],
+    "unknown_speaker_violations": []
+  },
+  "manifest": "data/phase2/manifests/transcript_manifest_v1.json",
+  "result": "PASS"
+}
