@@ -1,0 +1,1756 @@
+{
+  "active_workspace": {
+    "author_final_review": {
+      "decision": null,
+      "notes": null,
+      "status": "NOT_STARTED"
+    },
+    "citation_review": null,
+    "combined_target_text": "تمرین 8\n\nهر مقطع سنی دو نفر را انتخاب کنید و درباره میزان هزینه ماهانه آنها مصاحبه کنید. به آن‌ها اطمینان دهید که این اطلاعات محرمانه خواهد بود. نتیجه را تحلیل کنید.",
+    "expected_answer_review": null,
+    "full_572_generation": "BLOCKED_PENDING_FULL_PILOT_WORKFLOW_VALIDATION",
+    "golden_case": {
+      "candidate_identity": {
+        "edition_id": "book:trainer-training-financial-literacy:fa-source",
+        "end_paragraph": 330,
+        "heading_path": [
+          "بودجه‌بندی",
+          "تمرین 8"
+        ],
+        "region_type": "narrative",
+        "segment_index": 1,
+        "source_id": "book:trainer-training-financial-literacy:fa-source",
+        "start_paragraph": 329,
+        "work_id": "book:trainer-training-financial-literacy"
+      },
+      "candidate_identity_sha256": "52a89b4229ca912a9c50ba3201416fb4d188e6b8d1ed12db3b7789784940ebe2",
+      "candidate_snapshot": {
+        "atomic_unit_count": 2,
+        "edition_id": "book:trainer-training-financial-literacy:fa-source",
+        "end_paragraph": 330,
+        "heading_path": [
+          "بودجه‌بندی",
+          "تمرین 8"
+        ],
+        "member_document_ids": [
+          "book:trainer-training-financial-literacy:fa-source:p000329",
+          "book:trainer-training-financial-literacy:fa-source:p000330"
+        ],
+        "region_type": "narrative",
+        "segment_index": 1,
+        "source_id": "book:trainer-training-financial-literacy:fa-source",
+        "start_paragraph": 329,
+        "token_count": 38,
+        "work_id": "book:trainer-training-financial-literacy"
+      },
+      "case_schema_version": "golden_case_record_v1_draft",
+      "evidence_document_count": 2,
+      "evidence_document_ids": [
+        "book:trainer-training-financial-literacy:fa-source:p000329",
+        "book:trainer-training-financial-literacy:fa-source:p000330"
+      ],
+      "evidence_references": [
+        {
+          "attribution": {
+            "attribution_status": null,
+            "author": "Dr. Komeil Roudi",
+            "author_id": null,
+            "authorship_assertion_source": null,
+            "byline_raw": null,
+            "content_authority_type": null,
+            "credited_author_name": null,
+            "editorial_credit_raw": null,
+            "editorial_supervisor_name": null,
+            "knowledge_owner": "Dr. Komeil Roudi",
+            "reference_expert_name": null,
+            "speaker": null
+          },
+          "content_origin": null,
+          "document_id": "book:trainer-training-financial-literacy:fa-source:p000329",
+          "lineage": {
+            "parent_id": "book:trainer-training-financial-literacy:fa-source",
+            "raw_source_hash": "cc59e7e0586fab9e431c0bf96f837e6aeebb3563391cbe4bef823f6508afb19f",
+            "raw_source_path": "data/books/نوشتار آموزشی تربیت مربی سواد مالی.docx"
+          },
+          "locator": {
+            "edition_id": "book:trainer-training-financial-literacy:fa-source",
+            "heading_path": [
+              "بودجه‌بندی",
+              "تمرین 8"
+            ],
+            "paragraph_id": "book:trainer-training-financial-literacy:fa-source:p000329",
+            "paragraph_number": 329,
+            "work_id": "book:trainer-training-financial-literacy"
+          },
+          "raw_content_hash": "cc59e7e0586fab9e431c0bf96f837e6aeebb3563391cbe4bef823f6508afb19f",
+          "rights": {
+            "allowed_uses": null,
+            "basis": null,
+            "rights_evidence_id": null,
+            "rights_holder": null,
+            "status": "EVIDENCE_REQUIRED"
+          },
+          "source_id": "book:trainer-training-financial-literacy:fa-source",
+          "source_type": "book",
+          "text_sha256": "050059aaa3fc7a10d572ac3faa087faf54992599e540d12602f212018094f353",
+          "title": "نوشتار آموزشی تربیت مربی سواد مالی"
+        },
+        {
+          "attribution": {
+            "attribution_status": null,
+            "author": "Dr. Komeil Roudi",
+            "author_id": null,
+            "authorship_assertion_source": null,
+            "byline_raw": null,
+            "content_authority_type": null,
+            "credited_author_name": null,
+            "editorial_credit_raw": null,
+            "editorial_supervisor_name": null,
+            "knowledge_owner": "Dr. Komeil Roudi",
+            "reference_expert_name": null,
+            "speaker": null
+          },
+          "content_origin": null,
+          "document_id": "book:trainer-training-financial-literacy:fa-source:p000330",
+          "lineage": {
+            "parent_id": "book:trainer-training-financial-literacy:fa-source",
+            "raw_source_hash": "cc59e7e0586fab9e431c0bf96f837e6aeebb3563391cbe4bef823f6508afb19f",
+            "raw_source_path": "data/books/نوشتار آموزشی تربیت مربی سواد مالی.docx"
+          },
+          "locator": {
+            "edition_id": "book:trainer-training-financial-literacy:fa-source",
+            "heading_path": [
+              "بودجه‌بندی",
+              "تمرین 8"
+            ],
+            "paragraph_id": "book:trainer-training-financial-literacy:fa-source:p000330",
+            "paragraph_number": 330,
+            "work_id": "book:trainer-training-financial-literacy"
+          },
+          "raw_content_hash": "cc59e7e0586fab9e431c0bf96f837e6aeebb3563391cbe4bef823f6508afb19f",
+          "rights": {
+            "allowed_uses": null,
+            "basis": null,
+            "rights_evidence_id": null,
+            "rights_holder": null,
+            "status": "EVIDENCE_REQUIRED"
+          },
+          "source_id": "book:trainer-training-financial-literacy:fa-source",
+          "source_type": "book",
+          "text_sha256": "1e36cf04bfdb4b3fc5c8726fe58a206d5158ebcb86c9a9751c98d5203f3c4a96",
+          "title": "نوشتار آموزشی تربیت مربی سواد مالی"
+        }
+      ],
+      "evidence_unit": "PROTECTED_STRUCTURAL_REGION",
+      "expected_answer_generation_status": "NOT_STARTED",
+      "final_golden_membership": true,
+      "golden_case_id": "golden-case:a4ba6ce7e0602134515cdae757a16b98",
+      "membership_status": "AUTO_GOLDEN_SELECTED",
+      "question_generation_status": "NOT_STARTED",
+      "review_status": "NOT_REQUIRED",
+      "selection_provenance": {
+        "random_sampling": false,
+        "random_seed": null,
+        "sampling_policy_version": "golden_sampling_policy_v1_draft",
+        "sampling_target": 38,
+        "selection_method": "DETERMINISTIC_COVERAGE_FIRST"
+      },
+      "selection_rank": 20,
+      "source_type": "book",
+      "stratum": "intrinsically_tiny_narrative_region"
+    },
+    "golden_case_id": "golden-case:a4ba6ce7e0602134515cdae757a16b98",
+    "human_reviews": [],
+    "model_drafts": [],
+    "pilot_case_id": "question-pilot:909b695797935246c92c7a66ebe0f773",
+    "question_archetype": "STRUCTURE_AWARE_RETRIEVAL",
+    "source_evidence": [
+      {
+        "char_end": 7,
+        "char_start": 0,
+        "document_id": "book:trainer-training-financial-literacy:fa-source:p000329",
+        "part_index": 0,
+        "role": "PROTECTED_REGION_MEMBER",
+        "text": "تمرین 8",
+        "text_sha256": "050059aaa3fc7a10d572ac3faa087faf54992599e540d12602f212018094f353"
+      },
+      {
+        "char_end": 156,
+        "char_start": 0,
+        "document_id": "book:trainer-training-financial-literacy:fa-source:p000330",
+        "part_index": 1,
+        "role": "PROTECTED_REGION_MEMBER",
+        "text": "هر مقطع سنی دو نفر را انتخاب کنید و درباره میزان هزینه ماهانه آنها مصاحبه کنید. به آن‌ها اطمینان دهید که این اطلاعات محرمانه خواهد بود. نتیجه را تحلیل کنید.",
+        "text_sha256": "1e36cf04bfdb4b3fc5c8726fe58a206d5158ebcb86c9a9751c98d5203f3c4a96"
+      }
+    ],
+    "source_type": "book",
+    "status": "READY_FOR_QUESTION_DRAFT",
+    "stratum": "intrinsically_tiny_narrative_region",
+    "target_evidence": {
+      "citation_target_status": "TARGET_LOCATORS_CAPTURED_NOT_YET_JUDGED",
+      "evidence_target_method": "USE_EXACT_PROTECTED_REGION",
+      "expected_answer_generation_status": "NOT_STARTED",
+      "golden_case_id": "golden-case:a4ba6ce7e0602134515cdae757a16b98",
+      "question_generation_status": "NOT_STARTED",
+      "source_type": "book",
+      "stratum": "intrinsically_tiny_narrative_region",
+      "target_attribution_state": [
+        {
+          "attribution": {
+            "attribution_status": null,
+            "author": "Dr. Komeil Roudi",
+            "author_id": null,
+            "authorship_assertion_source": null,
+            "byline_raw": null,
+            "content_authority_type": null,
+            "credited_author_name": null,
+            "editorial_credit_raw": null,
+            "editorial_supervisor_name": null,
+            "knowledge_owner": "Dr. Komeil Roudi",
+            "reference_expert_name": null,
+            "speaker": null
+          },
+          "document_id": "book:trainer-training-financial-literacy:fa-source:p000329",
+          "speaker_state": {
+            "base_raw": null,
+            "base_status": null,
+            "effective_canonical": null,
+            "effective_label": null,
+            "effective_primary": null
+          }
+        },
+        {
+          "attribution": {
+            "attribution_status": null,
+            "author": "Dr. Komeil Roudi",
+            "author_id": null,
+            "authorship_assertion_source": null,
+            "byline_raw": null,
+            "content_authority_type": null,
+            "credited_author_name": null,
+            "editorial_credit_raw": null,
+            "editorial_supervisor_name": null,
+            "knowledge_owner": "Dr. Komeil Roudi",
+            "reference_expert_name": null,
+            "speaker": null
+          },
+          "document_id": "book:trainer-training-financial-literacy:fa-source:p000330",
+          "speaker_state": {
+            "base_raw": null,
+            "base_status": null,
+            "effective_canonical": null,
+            "effective_label": null,
+            "effective_primary": null
+          }
+        }
+      ],
+      "target_authority_state": {
+        "authority_inference_performed": false,
+        "task_authority_expectation": "BOOK_PRIMARY_EVIDENCE"
+      },
+      "target_document_ids": [
+        "book:trainer-training-financial-literacy:fa-source:p000329",
+        "book:trainer-training-financial-literacy:fa-source:p000330"
+      ],
+      "target_evidence_id": "target-evidence:8d87341f7847558d90ee76e350c64fa3",
+      "target_locator_refs": [
+        {
+          "document_id": "book:trainer-training-financial-literacy:fa-source:p000329",
+          "locator": {
+            "edition_id": "book:trainer-training-financial-literacy:fa-source",
+            "heading_path": [
+              "بودجه‌بندی",
+              "تمرین 8"
+            ],
+            "paragraph_id": "book:trainer-training-financial-literacy:fa-source:p000329",
+            "paragraph_number": 329,
+            "work_id": "book:trainer-training-financial-literacy"
+          }
+        },
+        {
+          "document_id": "book:trainer-training-financial-literacy:fa-source:p000330",
+          "locator": {
+            "edition_id": "book:trainer-training-financial-literacy:fa-source",
+            "heading_path": [
+              "بودجه‌بندی",
+              "تمرین 8"
+            ],
+            "paragraph_id": "book:trainer-training-financial-literacy:fa-source:p000330",
+            "paragraph_number": 330,
+            "work_id": "book:trainer-training-financial-literacy"
+          }
+        }
+      ],
+      "target_parts": [
+        {
+          "attribution": {
+            "attribution_status": null,
+            "author": "Dr. Komeil Roudi",
+            "author_id": null,
+            "authorship_assertion_source": null,
+            "byline_raw": null,
+            "content_authority_type": null,
+            "credited_author_name": null,
+            "editorial_credit_raw": null,
+            "editorial_supervisor_name": null,
+            "knowledge_owner": "Dr. Komeil Roudi",
+            "reference_expert_name": null,
+            "speaker": null
+          },
+          "char_count": 7,
+          "char_end": 7,
+          "char_start": 0,
+          "document_id": "book:trainer-training-financial-literacy:fa-source:p000329",
+          "locator": {
+            "edition_id": "book:trainer-training-financial-literacy:fa-source",
+            "heading_path": [
+              "بودجه‌بندی",
+              "تمرین 8"
+            ],
+            "paragraph_id": "book:trainer-training-financial-literacy:fa-source:p000329",
+            "paragraph_number": 329,
+            "work_id": "book:trainer-training-financial-literacy"
+          },
+          "role": "PROTECTED_REGION_MEMBER",
+          "source_id": "book:trainer-training-financial-literacy:fa-source",
+          "speaker_state": {
+            "base_raw": null,
+            "base_status": null,
+            "effective_canonical": null,
+            "effective_label": null,
+            "effective_primary": null
+          },
+          "target_text_sha256": "050059aaa3fc7a10d572ac3faa087faf54992599e540d12602f212018094f353",
+          "token_count": 2
+        },
+        {
+          "attribution": {
+            "attribution_status": null,
+            "author": "Dr. Komeil Roudi",
+            "author_id": null,
+            "authorship_assertion_source": null,
+            "byline_raw": null,
+            "content_authority_type": null,
+            "credited_author_name": null,
+            "editorial_credit_raw": null,
+            "editorial_supervisor_name": null,
+            "knowledge_owner": "Dr. Komeil Roudi",
+            "reference_expert_name": null,
+            "speaker": null
+          },
+          "char_count": 156,
+          "char_end": 156,
+          "char_start": 0,
+          "document_id": "book:trainer-training-financial-literacy:fa-source:p000330",
+          "locator": {
+            "edition_id": "book:trainer-training-financial-literacy:fa-source",
+            "heading_path": [
+              "بودجه‌بندی",
+              "تمرین 8"
+            ],
+            "paragraph_id": "book:trainer-training-financial-literacy:fa-source:p000330",
+            "paragraph_number": 330,
+            "work_id": "book:trainer-training-financial-literacy"
+          },
+          "role": "PROTECTED_REGION_MEMBER",
+          "source_id": "book:trainer-training-financial-literacy:fa-source",
+          "speaker_state": {
+            "base_raw": null,
+            "base_status": null,
+            "effective_canonical": null,
+            "effective_label": null,
+            "effective_primary": null
+          },
+          "target_text_sha256": "1e36cf04bfdb4b3fc5c8726fe58a206d5158ebcb86c9a9751c98d5203f3c4a96",
+          "token_count": 36
+        }
+      ],
+      "target_schema_version": "target_evidence_v1_draft",
+      "target_selection_basis": "EXACT_FROZEN_PROTECTED_REGION",
+      "target_text_spans": [
+        {
+          "char_end": 7,
+          "char_start": 0,
+          "document_id": "book:trainer-training-financial-literacy:fa-source:p000329",
+          "role": "PROTECTED_REGION_MEMBER",
+          "target_text_sha256": "050059aaa3fc7a10d572ac3faa087faf54992599e540d12602f212018094f353"
+        },
+        {
+          "char_end": 156,
+          "char_start": 0,
+          "document_id": "book:trainer-training-financial-literacy:fa-source:p000330",
+          "role": "PROTECTED_REGION_MEMBER",
+          "target_text_sha256": "1e36cf04bfdb4b3fc5c8726fe58a206d5158ebcb86c9a9751c98d5203f3c4a96"
+        }
+      ],
+      "target_total_tokens": 38,
+      "task_draft_id": "task-draft:9caeff8892fcea99f90a32df8bb5f422"
+    },
+    "target_evidence_id": "target-evidence:8d87341f7847558d90ee76e350c64fa3",
+    "task_draft_id": "task-draft:9caeff8892fcea99f90a32df8bb5f422",
+    "task_family": "TINY_NARRATIVE_EVIDENCE_RETRIEVAL",
+    "task_plan": {
+      "authority_expectation": "BOOK_PRIMARY_EVIDENCE",
+      "citation_target_status": "NOT_STARTED",
+      "construction_eligibility": "READY_FOR_QUESTION_DRAFT",
+      "context_expectation": "PRESERVE_SMALL_REGION",
+      "evidence_scope": "PROTECTED_STRUCTURAL_REGION",
+      "evidence_target_method": "USE_EXACT_PROTECTED_REGION",
+      "expected_answer_status": "NOT_STARTED",
+      "golden_case_id": "golden-case:a4ba6ce7e0602134515cdae757a16b98",
+      "question_archetype": "STRUCTURE_AWARE_RETRIEVAL",
+      "question_text_status": "NOT_STARTED",
+      "required_dimensions": [
+        "retrieval_hit",
+        "rank",
+        "evidence_completeness",
+        "citation_locator_correctness",
+        "unnecessary_context"
+      ],
+      "source_type": "book",
+      "stratum": "intrinsically_tiny_narrative_region",
+      "target_evidence_status": "SELECTED_AND_VALIDATED",
+      "task_draft_id": "task-draft:9caeff8892fcea99f90a32df8bb5f422",
+      "task_family": "TINY_NARRATIVE_EVIDENCE_RETRIEVAL"
+    },
+    "workflow_state": "QUESTION_DRAFT_PENDING",
+    "workspace_version": "compact_human_review_workspace_v1"
+  },
+  "author_review": {
+    "cases_ready_for_review": 3,
+    "notes": null,
+    "reviewer": "AUTHOR",
+    "status": "NOT_STARTED"
+  },
+  "completed_human_review_cases": [
+    {
+      "author_final_review": {
+        "decision": null,
+        "notes": null,
+        "reviewer": "AUTHOR",
+        "status": "NOT_STARTED"
+      },
+      "citation_review": {
+        "citation_entries": [
+          {
+            "attribution": {
+              "attribution_status": "policy_validated",
+              "author": "دکتر کمیل رودی",
+              "author_id": "4",
+              "authorship_assertion_source": "accepted_pipeline_content_origin",
+              "byline_raw": null,
+              "content_authority_type": "direct_author",
+              "credited_author_name": "دکتر کمیل رودی",
+              "editorial_credit_raw": null,
+              "editorial_supervisor_name": null,
+              "knowledge_owner": "Dr. Komeil Roudi",
+              "reference_expert_name": null,
+              "speaker": null
+            },
+            "char_count": 278,
+            "char_end": 1401,
+            "char_start": 1123,
+            "citation_index": 0,
+            "document_id": "website:5C92BB0D",
+            "locator": {
+              "canonical_url": "https://www.fintelligence.ir/Blog/Detail/5C92BB0D",
+              "url": "https://www.fintelligence.ir/Blog/Detail/5C92BB0D/%D9%81%DB%8C%D9%84-%D8%B3%D9%88%D8%A7%D8%AF-%D9%85%D8%A7%D9%84%DB%8C"
+            },
+            "locator_origin": "COPIED_FROM_VALIDATED_TARGET_EVIDENCE",
+            "role": "LOCAL_SENTENCE_WINDOW",
+            "source_id": "website:5C92BB0D",
+            "target_evidence_id": "target-evidence:81011a6ef78817e01e3ed484b1b4c368",
+            "token_count": 85
+          }
+        ],
+        "citation_mapping_id": "citation-mapping:ef5f045a886b6160eaa44636329de992",
+        "human_decision": "ACCEPT",
+        "human_review": {
+          "citation_mapping_id": "citation-mapping:ef5f045a886b6160eaa44636329de992",
+          "expected_answer_draft_id": "expected-answer-draft:b81cdf7a3a1935da65fb1fed8830e212",
+          "external_locator_lookup_used": false,
+          "golden_case_id": "golden-case:3b93ce20ef4b617b9f922baddfbd1e0f",
+          "human_decision": "ACCEPT",
+          "human_note": "Human Reviewer accepted the Citation Mapping because it points to the already validated Target Evidence locator without fabricated source or range.",
+          "locator_policy": "EXISTING_VALIDATED_TARGET_LOCATORS_ONLY",
+          "pilot_case_id": "question-pilot:3005b48518a7aeb532234332df23c952",
+          "question_draft_id": "question-draft:e6ab324c3d0f766c7f858230eded54b1",
+          "review_record_version": "human_citation_review_record_v1",
+          "review_stage": "CITATION",
+          "target_evidence_id": "target-evidence:81011a6ef78817e01e3ed484b1b4c368",
+          "task_draft_id": "task-draft:f48d78f0a6a588de906ca8534219a604"
+        },
+        "machine_validation_status": "PASS_PENDING_HUMAN_ADJUDICATION"
+      },
+      "expected_answer_review": {
+        "expected_answer_draft_id": "expected-answer-draft:b81cdf7a3a1935da65fb1fed8830e212",
+        "expected_answer_text": "مشکل این است که ممکن است همان شناخت ناقص را به کل موضوع تعمیم بدهیم و بخواهیم بر اساس آن تصمیم بگیریم یا از کل موضوع استفاده کنیم. چنین کاری شاید در ظاهر مناسب به نظر برسد، اما بخش‌های یک موضوع می‌توانند به هم وابسته باشند و نمی‌شود یک بخش را کاملاً جدا از بقیه در نظر گرفت. در مثال متن نیز فیل یک کل به‌هم‌پیوسته است و شناخت یک قسمت از آن، به‌تنهایی تصویر کاملی از فیل نمی‌دهد.",
+        "human_decision": "ACCEPT",
+        "human_review": {
+          "expected_answer_draft_id": "expected-answer-draft:b81cdf7a3a1935da65fb1fed8830e212",
+          "expected_answer_text": "مشکل این است که ممکن است همان شناخت ناقص را به کل موضوع تعمیم بدهیم و بخواهیم بر اساس آن تصمیم بگیریم یا از کل موضوع استفاده کنیم. چنین کاری شاید در ظاهر مناسب به نظر برسد، اما بخش‌های یک موضوع می‌توانند به هم وابسته باشند و نمی‌شود یک بخش را کاملاً جدا از بقیه در نظر گرفت. در مثال متن نیز فیل یک کل به‌هم‌پیوسته است و شناخت یک قسمت از آن، به‌تنهایی تصویر کاملی از فیل نمی‌دهد.",
+          "external_knowledge_used": false,
+          "golden_case_id": "golden-case:3b93ce20ef4b617b9f922baddfbd1e0f",
+          "human_context_used_as_evidence": false,
+          "human_decision": "ACCEPT",
+          "human_note": "Human Reviewer accepted the Expected Answer as grounded in the validated Target Evidence.",
+          "pilot_case_id": "question-pilot:3005b48518a7aeb532234332df23c952",
+          "question_draft_id": "question-draft:e6ab324c3d0f766c7f858230eded54b1",
+          "review_record_version": "human_expected_answer_review_record_v1",
+          "review_stage": "EXPECTED_ANSWER",
+          "source_policy": "VALIDATED_TARGET_EVIDENCE_ONLY",
+          "target_evidence_id": "target-evidence:81011a6ef78817e01e3ed484b1b4c368",
+          "task_draft_id": "task-draft:f48d78f0a6a588de906ca8534219a604"
+        },
+        "machine_validation_status": "PASS_PENDING_HUMAN_ADJUDICATION",
+        "source_evidence": [
+          {
+            "char_end": 1401,
+            "char_start": 1123,
+            "document_id": "website:5C92BB0D",
+            "part_index": 0,
+            "role": "LOCAL_SENTENCE_WINDOW",
+            "text": "تلقی مردم از فیل، به عنوان ناودان و ستون و تخت و بادبزن، آنجا تبدیل به مشکل می شود که بخواهند فیل را بر اساس همان تصویر خود، به کار بگیرند. استفاده از فیل به عنوان ستون ممکن است مناسب به نظر برسد اما فیل یک کل به‌هم‌ پیوسته است و در واقعیت، پای فیل جدای گوش و خرطوم و عاجش نیست.",
+            "text_sha256": "c75bb83b57206bd361e4aaedfe675484cbd2bbbc669bc248a3d5c97165d4be24"
+          }
+        ]
+      },
+      "final_question_draft_id": "question-draft:e6ab324c3d0f766c7f858230eded54b1",
+      "final_status": "HUMAN_REVIEW_COMPLETE_AUTHOR_FINAL_REVIEW_PENDING",
+      "golden_case_id": "golden-case:3b93ce20ef4b617b9f922baddfbd1e0f",
+      "human_review_case_version": "human_review_case_v1",
+      "human_reviews": [
+        {
+          "golden_case_id": "golden-case:3b93ce20ef4b617b9f922baddfbd1e0f",
+          "human_context_note": "Reviewer discussed possible interpretive context around the elephant story, light, awareness, and financial literacy. These comments are explicitly NON_EVIDENCE and MUST NOT be inserted into the Golden Answer unless supported by validated source evidence.",
+          "human_context_note_evidence_status": "NON_EVIDENCE",
+          "human_decision": "REVISE",
+          "human_review_reason": "سؤال قبلی بیش از حد خودِ مثال فیل را موضوع سؤال قرار می‌داد. سؤال باید برای مخاطب عمومی ساده‌تر باشد و روی مفهوم اصلی متن یعنی خطر قضاوت یا تصمیم‌گیری درباره کل موضوع بر اساس شناخت ناقص از یک بخش تمرکز کند.",
+          "machine_validation_status": "PASS_PENDING_HUMAN_ADJUDICATION",
+          "pilot_case_id": "question-pilot:3005b48518a7aeb532234332df23c952",
+          "previous_draft_preserved": true,
+          "review_record_version": "human_question_review_record_v1",
+          "review_stage": "QUESTION_DRAFT",
+          "reviewed_question_draft_id": "question-draft:2e1c5547776e71cb5b216fe155dd5a54",
+          "reviewed_question_text": "چرا به کار گرفتن فیل بر اساس تصویری که فقط از یکی از بخش‌های آن داریم، می‌تواند مشکل‌ساز باشد؟",
+          "source_evidence_rule": "ONLY_VALIDATED_TARGET_EVIDENCE_MAY_SUPPORT_QUESTION_OR_EXPECTED_ANSWER",
+          "source_evidence_sha256": "c75bb83b57206bd361e4aaedfe675484cbd2bbbc669bc248a3d5c97165d4be24",
+          "source_evidence_snapshot": [
+            {
+              "char_end": 1401,
+              "char_start": 1123,
+              "document_id": "website:5C92BB0D",
+              "part_index": 0,
+              "role": "LOCAL_SENTENCE_WINDOW",
+              "text": "تلقی مردم از فیل، به عنوان ناودان و ستون و تخت و بادبزن، آنجا تبدیل به مشکل می شود که بخواهند فیل را بر اساس همان تصویر خود، به کار بگیرند. استفاده از فیل به عنوان ستون ممکن است مناسب به نظر برسد اما فیل یک کل به‌هم‌ پیوسته است و در واقعیت، پای فیل جدای گوش و خرطوم و عاجش نیست.",
+              "text_sha256": "c75bb83b57206bd361e4aaedfe675484cbd2bbbc669bc248a3d5c97165d4be24"
+            }
+          ],
+          "target_evidence_id": "target-evidence:81011a6ef78817e01e3ed484b1b4c368",
+          "task_draft_id": "task-draft:f48d78f0a6a588de906ca8534219a604"
+        },
+        {
+          "evidence_policy": "HUMAN_OR_MODEL_INTERPRETATION_IS_NOT_SOURCE_EVIDENCE_UNLESS_PRESENT_IN_VALIDATED_TARGET",
+          "golden_case_id": "golden-case:3b93ce20ef4b617b9f922baddfbd1e0f",
+          "human_decision": "ACCEPT",
+          "human_note": "Human Reviewer accepted revision 2 as the current question wording for this Pilot.",
+          "pilot_case_id": "question-pilot:3005b48518a7aeb532234332df23c952",
+          "review_record_version": "human_question_review_record_v1",
+          "review_stage": "QUESTION_DRAFT",
+          "reviewed_question_draft_id": "question-draft:e6ab324c3d0f766c7f858230eded54b1",
+          "reviewed_question_text": "چه مشکلی پیش می‌آید اگر بر اساس شناختی که فقط از یک بخش داریم، درباره کل موضوع تصمیم بگیریم؟",
+          "target_evidence_id": "target-evidence:81011a6ef78817e01e3ed484b1b4c368",
+          "task_draft_id": "task-draft:f48d78f0a6a588de906ca8534219a604"
+        }
+      ],
+      "model_drafts": [
+        {
+          "human_decision": "REVISE",
+          "machine_validation": "PASS_PENDING_HUMAN_ADJUDICATION",
+          "question_draft_id": "question-draft:2e1c5547776e71cb5b216fe155dd5a54",
+          "question_text": "چرا به کار گرفتن فیل بر اساس تصویری که فقط از یکی از بخش‌های آن داریم، می‌تواند مشکل‌ساز باشد؟",
+          "revision": 1
+        },
+        {
+          "human_decision": "ACCEPT",
+          "machine_validation": "PASS_PENDING_HUMAN_ADJUDICATION",
+          "question_draft_id": "question-draft:e6ab324c3d0f766c7f858230eded54b1",
+          "question_text": "چه مشکلی پیش می‌آید اگر بر اساس شناختی که فقط از یک بخش داریم، درباره کل موضوع تصمیم بگیریم؟",
+          "revision": 2
+        }
+      ],
+      "pilot_case_id": "question-pilot:3005b48518a7aeb532234332df23c952",
+      "source_evidence": [
+        {
+          "char_end": 1401,
+          "char_start": 1123,
+          "document_id": "website:5C92BB0D",
+          "part_index": 0,
+          "role": "LOCAL_SENTENCE_WINDOW",
+          "text": "تلقی مردم از فیل، به عنوان ناودان و ستون و تخت و بادبزن، آنجا تبدیل به مشکل می شود که بخواهند فیل را بر اساس همان تصویر خود، به کار بگیرند. استفاده از فیل به عنوان ستون ممکن است مناسب به نظر برسد اما فیل یک کل به‌هم‌ پیوسته است و در واقعیت، پای فیل جدای گوش و خرطوم و عاجش نیست.",
+          "text_sha256": "c75bb83b57206bd361e4aaedfe675484cbd2bbbc669bc248a3d5c97165d4be24"
+        }
+      ],
+      "source_type": "website",
+      "stratum": "direct_author_long",
+      "target_evidence_id": "target-evidence:81011a6ef78817e01e3ed484b1b4c368",
+      "task_draft_id": "task-draft:f48d78f0a6a588de906ca8534219a604"
+    },
+    {
+      "author_final_review": {
+        "decision": null,
+        "notes": null,
+        "status": "NOT_STARTED"
+      },
+      "citation_review": {
+        "citation_entries": [
+          {
+            "attribution": {
+              "attribution_status": "policy_validated",
+              "author": "سجاد یزدانی",
+              "author_id": "2018",
+              "authorship_assertion_source": "accepted_pipeline_content_origin",
+              "byline_raw": null,
+              "content_authority_type": "editorial_supervision",
+              "credited_author_name": "سجاد یزدانی",
+              "editorial_credit_raw": null,
+              "editorial_supervisor_name": "Dr. Komeil Roudi",
+              "knowledge_owner": "Dr. Komeil Roudi",
+              "reference_expert_name": null,
+              "speaker": null
+            },
+            "char_count": 671,
+            "char_end": 671,
+            "char_start": 0,
+            "citation_index": 0,
+            "document_id": "website:596080EF",
+            "locator": {
+              "canonical_url": "https://www.fintelligence.ir/Blog/Detail/596080EF",
+              "url": "https://www.fintelligence.ir/Blog/Detail/596080EF/%D8%B3%D9%86%D8%AC%D8%B4-%D8%AA%D8%A7%D8%B2%D9%87-%D9%88%D8%B6%D8%B9%DB%8C%D8%AA-%D8%AF%D8%A7%D9%86%D8%B4-%D9%85%D8%A7%D9%84%DB%8C-%D8%AF%D8%B1-%D8%A7%D8%AA%D8%AD%D8%A7%D8%AF%DB%8C%D9%87-%D8%A7%D8%B1%D9%88%D9%BE%D8%A7"
+            },
+            "locator_origin": "COPIED_FROM_VALIDATED_TARGET_EVIDENCE",
+            "role": "SOURCE_DOCUMENT",
+            "source_id": "website:596080EF",
+            "target_evidence_id": "target-evidence:9e76e757e2dba58f6d617ef2cd9bdb7e",
+            "token_count": 164
+          }
+        ],
+        "citation_mapping_id": "citation-mapping:c0e5afc01b8d73443666ddbbcdd5ad6e",
+        "human_decision": "ACCEPT",
+        "human_review": {
+          "citation_mapping_id": "citation-mapping:c0e5afc01b8d73443666ddbbcdd5ad6e",
+          "external_locator_lookup_used": false,
+          "human_decision": "ACCEPT",
+          "human_note": "Human Reviewer accepted the Citation Mapping after reviewing the validated source locator.",
+          "pilot_case_id": "question-pilot:083ad832854722e126c05d0b89d00cb1",
+          "review_record_version": "human_citation_review_record_v1",
+          "target_evidence_id": "target-evidence:9e76e757e2dba58f6d617ef2cd9bdb7e"
+        },
+        "machine_validation_status": "PASS_PENDING_HUMAN_ADJUDICATION"
+      },
+      "expected_answer_review": {
+        "derived_claims": [
+          {
+            "answer_claim": "حدود 50 درصد",
+            "derivation": "1/2 = 50%",
+            "derivation_type": "DIRECT_ARITHMETIC_NORMALIZATION",
+            "external_knowledge": false,
+            "source_phrase": "تنها نیمی از اروپایی‌ها سواد مالی مناسبی دارند"
+          }
+        ],
+        "expected_answer_draft_id": "expected-answer-draft:032dafb386d873e067d9dda280fdfd7e",
+        "expected_answer_text": "بر اساس متن، تنها نیمی از اروپایی‌ها، یعنی حدود 50 درصد، سواد مالی مناسبی دارند. سواد مالی در اروپا مورد بررسی گسترده قرار گرفته است؛ در سال 2014 نظرسنجی جهانی سواد مالی یکی از ابزارهای مقایسه سطح سواد مالی کشورهای اروپایی بود و در بهار 2023 نیز کمیسیون اروپا نظرسنجی جامعی در هر 27 کشور عضو اتحادیه اروپا انجام داد. این سنجش جدید به دلیل پوشش کامل کشورهای عضو، اطلاعات قابل‌اتکاتری برای پژوهشگران و سیاست‌گذاران فراهم کرد.",
+        "human_decision": "ACCEPT",
+        "human_review": {
+          "expected_answer_draft_id": "expected-answer-draft:032dafb386d873e067d9dda280fdfd7e",
+          "expected_answer_text": "بر اساس متن، تنها نیمی از اروپایی‌ها، یعنی حدود 50 درصد، سواد مالی مناسبی دارند. سواد مالی در اروپا مورد بررسی گسترده قرار گرفته است؛ در سال 2014 نظرسنجی جهانی سواد مالی یکی از ابزارهای مقایسه سطح سواد مالی کشورهای اروپایی بود و در بهار 2023 نیز کمیسیون اروپا نظرسنجی جامعی در هر 27 کشور عضو اتحادیه اروپا انجام داد. این سنجش جدید به دلیل پوشش کامل کشورهای عضو، اطلاعات قابل‌اتکاتری برای پژوهشگران و سیاست‌گذاران فراهم کرد.",
+          "external_knowledge_used": false,
+          "golden_case_id": "golden-case:6f922f7042f0987f5af1f1dc13d56ad8",
+          "human_context_used_as_evidence": false,
+          "human_decision": "ACCEPT",
+          "human_note": "Human Reviewer accepted the Expected Answer after reviewing it against the validated source evidence.",
+          "pilot_case_id": "question-pilot:083ad832854722e126c05d0b89d00cb1",
+          "question_draft_id": "question-draft:992525a168edf83380610af7920e6a3e",
+          "review_record_version": "human_expected_answer_review_record_v1",
+          "review_stage": "EXPECTED_ANSWER",
+          "target_evidence_id": "target-evidence:9e76e757e2dba58f6d617ef2cd9bdb7e",
+          "task_draft_id": "task-draft:8d724219149a925b008117f4fae5ff29"
+        },
+        "machine_validation_status": "PASS_PENDING_HUMAN_ADJUDICATION"
+      },
+      "final_question_draft_id": "question-draft:992525a168edf83380610af7920e6a3e",
+      "final_status": "HUMAN_REVIEW_COMPLETE_AUTHOR_FINAL_REVIEW_PENDING",
+      "golden_case_id": "golden-case:6f922f7042f0987f5af1f1dc13d56ad8",
+      "human_review_case_version": "human_review_case_v1",
+      "human_reviews": [
+        {
+          "human_context_evidence_status": "NON_EVIDENCE",
+          "human_decision": "ACCEPT",
+          "human_note": "Human Reviewer accepted this Question after reviewing multiple alternative phrasings. Human interpretive discussion is review metadata only and is not evidence.",
+          "pilot_case_id": "question-pilot:083ad832854722e126c05d0b89d00cb1",
+          "question_draft_id": "question-draft:992525a168edf83380610af7920e6a3e",
+          "question_text": "سواد مالی در اروپا چقدر مورد توجه قرار گرفته و چند درصد از اروپایی‌ها سواد مالی مناسبی دارند؟",
+          "review_record_version": "human_question_review_record_v1",
+          "source_evidence": [
+            {
+              "char_end": 671,
+              "char_start": 0,
+              "document_id": "website:596080EF",
+              "part_index": 0,
+              "role": "SOURCE_DOCUMENT",
+              "text": "تنها نیمی از اروپایی‌ها سواد مالی مناسبی دارند؛ در پژوهشی تازه در بهار 2023، کمیسیون اروپا نظرسنجی جامعی دربارۀ سواد مالی در تمام کشورهای عضو اتحادیۀ اروپا انجام داده که علاوه بر مقایسۀ وضعیت دانش مالی کشورهای مختلف، حاوی اطلاعات ارزشمندی برای پژوهشگران و سیاست‌گذاران است.\nپیش از انتشار این مجموعه داده، ابزار اصلی برای مقایسۀ سطح سواد مالی کشورهای اروپایی، نظرسنجی جهانی سواد مالی در سال 2014 بود که برخی اعضای اُای‌سی‌دی و کشورهای عضو اتحادیۀ اروپا در آن شرکت نکرده بودند و این مسأله مانعی برای ارزیابی دقیق پژوهشگران از وضع موجود و مسیر مطلوب به حساب می‌آمد. اما سنجش جدید و جامع 2023، شامل 27 کشور عضو اتحادیۀ اروپا است و یافته‌های قابل اتکایی در اختیار ما می‌گذارد.",
+              "text_sha256": "97aa7b499406c1534fa10c61d02961652029a74ee621fe963306dc97329b36a8"
+            }
+          ]
+        }
+      ],
+      "model_drafts": [
+        {
+          "human_decision": "ACCEPT",
+          "machine_validation": "PASS",
+          "question_draft_id": "question-draft:992525a168edf83380610af7920e6a3e",
+          "question_text": "سواد مالی در اروپا چقدر مورد توجه قرار گرفته و چند درصد از اروپایی‌ها سواد مالی مناسبی دارند؟",
+          "revision": 1
+        }
+      ],
+      "pilot_case_id": "question-pilot:083ad832854722e126c05d0b89d00cb1",
+      "source_evidence": [
+        {
+          "char_end": 671,
+          "char_start": 0,
+          "document_id": "website:596080EF",
+          "part_index": 0,
+          "role": "SOURCE_DOCUMENT",
+          "text": "تنها نیمی از اروپایی‌ها سواد مالی مناسبی دارند؛ در پژوهشی تازه در بهار 2023، کمیسیون اروپا نظرسنجی جامعی دربارۀ سواد مالی در تمام کشورهای عضو اتحادیۀ اروپا انجام داده که علاوه بر مقایسۀ وضعیت دانش مالی کشورهای مختلف، حاوی اطلاعات ارزشمندی برای پژوهشگران و سیاست‌گذاران است.\nپیش از انتشار این مجموعه داده، ابزار اصلی برای مقایسۀ سطح سواد مالی کشورهای اروپایی، نظرسنجی جهانی سواد مالی در سال 2014 بود که برخی اعضای اُای‌سی‌دی و کشورهای عضو اتحادیۀ اروپا در آن شرکت نکرده بودند و این مسأله مانعی برای ارزیابی دقیق پژوهشگران از وضع موجود و مسیر مطلوب به حساب می‌آمد. اما سنجش جدید و جامع 2023، شامل 27 کشور عضو اتحادیۀ اروپا است و یافته‌های قابل اتکایی در اختیار ما می‌گذارد.",
+          "text_sha256": "97aa7b499406c1534fa10c61d02961652029a74ee621fe963306dc97329b36a8"
+        }
+      ],
+      "target_evidence_id": "target-evidence:9e76e757e2dba58f6d617ef2cd9bdb7e",
+      "task_draft_id": "task-draft:8d724219149a925b008117f4fae5ff29"
+    },
+    {
+      "author_final_review": {
+        "decision": null,
+        "notes": null,
+        "status": "NOT_STARTED"
+      },
+      "citation_review": {
+        "citation_entries": [
+          {
+            "attribution": {
+              "attribution_status": "policy_validated",
+              "author": "مهسا صادقی",
+              "author_id": "2019",
+              "authorship_assertion_source": "accepted_pipeline_content_origin",
+              "byline_raw": null,
+              "content_authority_type": "editorial_supervision",
+              "credited_author_name": "مهسا صادقی",
+              "editorial_credit_raw": null,
+              "editorial_supervisor_name": "Dr. Komeil Roudi",
+              "knowledge_owner": "Dr. Komeil Roudi",
+              "reference_expert_name": null,
+              "speaker": null
+            },
+            "char_count": 335,
+            "char_end": 1942,
+            "char_start": 1607,
+            "citation_index": 0,
+            "document_id": "website:C185157D",
+            "locator": {
+              "canonical_url": "https://www.fintelligence.ir/Blog/Detail/C185157D",
+              "url": "https://www.fintelligence.ir/Blog/Detail/C185157D/%D9%BE%D8%B3-%D8%A7%D9%86%D8%AF%D8%A7%D8%B2-%D8%AF%D8%B1%D8%B3%DB%8C-%D8%A8%D8%B1%D8%A7%DB%8C-%D8%A2%DB%8C%D9%86%D8%AF%D9%87"
+            },
+            "locator_origin": "COPIED_FROM_VALIDATED_TARGET_EVIDENCE",
+            "role": "LOCAL_SENTENCE_WINDOW",
+            "source_id": "website:C185157D",
+            "target_evidence_id": "target-evidence:7111dd9a6426a87976f8aa15bda4db16",
+            "token_count": 88
+          }
+        ],
+        "citation_mapping_id": "citation-mapping:6cc191d209ce82b4cf39f79f2336cb6a",
+        "human_decision": "ACCEPT",
+        "human_review": {
+          "citation_mapping_id": "citation-mapping:6cc191d209ce82b4cf39f79f2336cb6a",
+          "external_locator_lookup_used": false,
+          "human_decision": "ACCEPT",
+          "human_note": "Human Reviewer accepted the Citation Mapping after reviewing the validated source locator.",
+          "pilot_case_id": "question-pilot:b801c37bf6fc78b00fcc0c79b368ef7d",
+          "review_record_version": "human_citation_review_record_v1",
+          "target_evidence_id": "target-evidence:7111dd9a6426a87976f8aa15bda4db16"
+        },
+        "machine_validation_status": "PASS_PENDING_HUMAN_ADJUDICATION"
+      },
+      "expected_answer_review": {
+        "expected_answer_draft_id": "expected-answer-draft:78eee141f7d3c9ab57fd0d94b4326bfb",
+        "expected_answer_text": "داشتن یک هدف برای پس‌انداز می‌تواند به بچه‌ها انگیزه بدهد تا برای رسیدن زودتر به خواسته‌شان پول بیشتری به دست بیاورند و آن را پس‌انداز کنند. در مثال متن نیز کسی که پولش را پس‌انداز کرده بود، توانست با پس‌اندازش چیزهایی را که دوست داشت بخرد، در حالی که دیگری همه پولش را خرج کرده بود.",
+        "human_decision": "ACCEPT",
+        "human_review": {
+          "expected_answer_draft_id": "expected-answer-draft:78eee141f7d3c9ab57fd0d94b4326bfb",
+          "external_knowledge_used": false,
+          "human_context_used_as_evidence": false,
+          "human_decision": "ACCEPT",
+          "human_note": "Human Reviewer accepted the Expected Answer after reviewing it against the validated source evidence.",
+          "pilot_case_id": "question-pilot:b801c37bf6fc78b00fcc0c79b368ef7d",
+          "question_draft_id": "question-draft:d14395bbe4c2f16bfba208eadab41590",
+          "review_record_version": "human_expected_answer_review_record_v1",
+          "target_evidence_id": "target-evidence:7111dd9a6426a87976f8aa15bda4db16"
+        },
+        "machine_validation_status": "PASS_PENDING_HUMAN_ADJUDICATION"
+      },
+      "final_question_draft_id": "question-draft:d14395bbe4c2f16bfba208eadab41590",
+      "final_status": "HUMAN_REVIEW_COMPLETE_AUTHOR_FINAL_REVIEW_PENDING",
+      "golden_case_id": "golden-case:52622f48eac3fcf41191061a0211f3b4",
+      "human_review_case_version": "human_review_case_v1",
+      "human_reviews": [
+        {
+          "human_context_evidence_status": "NON_EVIDENCE",
+          "human_decision": "ACCEPT",
+          "human_note": "Human Reviewer accepted the revised Question wording as a source-grounded and audience-appropriate formulation.",
+          "review_stage": "QUESTION"
+        }
+      ],
+      "model_drafts": [
+        {
+          "human_decision": "ACCEPT",
+          "machine_validation": "PASS",
+          "question_draft_id": "question-draft:d14395bbe4c2f16bfba208eadab41590",
+          "question_text": "داشتن هدف برای پس‌انداز چه تأثیری بر انگیزه بچه‌ها برای به دست آوردن پول و رسیدن به خواسته‌هایشان دارد؟",
+          "revision": 1
+        }
+      ],
+      "pilot_case_id": "question-pilot:b801c37bf6fc78b00fcc0c79b368ef7d",
+      "source_evidence": [
+        {
+          "char_end": 1942,
+          "char_start": 1607,
+          "document_id": "website:C185157D",
+          "part_index": 0,
+          "role": "LOCAL_SENTENCE_WINDOW",
+          "text": "یکی از آن‌ها پس‌انداز می‌کند و دیگری همۀ پول‌هایش را خرج می‌کند تا روزی که به فروشگاهی بزرگ می‌روند و خواهر موجود کوچولو با پس‌اندازش چیزهایی می‌خرد که دوست دارد.\n5.در راه رسیدن به هدف پس‌اندازی، بچه‌ها انگیزۀ به دست آوردن پول بیشتر برای رسیدن زودتر به خواسته‌شان را دارند و ممکن است خودشان بخواهند دست به کار شوند و پول پس‌انداز کنند.",
+          "text_sha256": "f3f774e116d85c9a975ad91cb9c162852e05bf5ddf10da55bf07cde8ce317e1b"
+        }
+      ],
+      "target_evidence_id": "target-evidence:7111dd9a6426a87976f8aa15bda4db16",
+      "task_draft_id": "task-draft:4da95fdb9036a934ea28581a9d7a5c35"
+    }
+  ],
+  "continuation_state": {
+    "continuation_state_sha256": "3b1060dcb86391471a731d2f3fa751fa751f7ef66ed3af4c74702be4102cc48f",
+    "next_pilot_id": "question-pilot:909b695797935246c92c7a66ebe0f773",
+    "remaining_count": 19,
+    "remaining_pilot_ids": [
+      "question-pilot:909b695797935246c92c7a66ebe0f773",
+      "question-pilot:3023c1c546df2fe2211f79702b6e3dbb",
+      "question-pilot:672f5241db66879fb47096c5bb0f5568",
+      "question-pilot:7334395fa6456f24ed250e2b354cc184",
+      "question-pilot:d7378ba1655fe80c37029153e753f80b",
+      "question-pilot:c9b2a6ecc853bf563a45af119621c405",
+      "question-pilot:be503b9f0364162c19faa8401f9d7b0f",
+      "question-pilot:9d1a1208092facc8407fed78c07f5a90",
+      "question-pilot:950359cf41d2817c535d486f8cd49aab",
+      "question-pilot:bae57351b7aa1fa7545adb709d1c61fc",
+      "question-pilot:ad83a223fe893fb19b5a612dca2de6dc",
+      "question-pilot:d9882d0f4166b051bca7f45505cfc753",
+      "question-pilot:dc845f69631a7000938b161802bc3030",
+      "question-pilot:980720fef1985610dd288cab04b7041c",
+      "question-pilot:6ba9960127f4b21ec2dc1ab2547ae3b5",
+      "question-pilot:fe7229122fe65089a77386df155a61d4",
+      "question-pilot:dd01033c15c375ae7124e8c7f86467a3",
+      "question-pilot:733355977d8932b0778e0d85715c446d",
+      "question-pilot:2beb40d7d1262dbf386db581f54d50d2"
+    ]
+  },
+  "historical_completed_pilot": {
+    "history": {
+      "cell82_first_question_draft_record": {
+        "authoring_mode": "MODEL_DRAFT_WITH_HUMAN_ADJUDICATION",
+        "authority_expectation": "PRIMARY_DIRECT_AUTHOR",
+        "citation_target_validation_status": "BLOCKED_PENDING_QUESTION_ACCEPTANCE",
+        "context_expectation": "MINIMAL_DIRECT_EVIDENCE",
+        "draft_status": "DRAFT_CREATED_PENDING_VALIDATION",
+        "evidence_scope": "SINGLE_SOURCE_DOCUMENT",
+        "expected_answer_status": "BLOCKED_PENDING_QUESTION_ACCEPTANCE",
+        "golden_case_id": "golden-case:bf7bbf425e10f6c4efe029f9bd851be6",
+        "human_adjudication_status": "NOT_STARTED",
+        "machine_validation_status": "NOT_STARTED",
+        "pilot_case_id": "question-pilot:02ba2886f1b68521b93789becf741361",
+        "question_archetype": "AUTHORITY_CONSTRAINED_RETRIEVAL",
+        "question_draft_id": "question-draft:a522b605b11eb4148a58f1a68554f65a",
+        "question_draft_schema_version": "question_draft_record_v1",
+        "question_text": "بر اساس توضیح دکتر کمیل رودی، برای شروع معاملات در بورس چه مراحلی باید طی شود و پس از آن چه روش‌هایی برای خرید و فروش سهام ذکر شده است؟",
+        "question_text_sha256": "cd5a5a283b3c901d69dbccc7bf685dd306ea03fc5efe4062531b0925c418be25",
+        "required_dimensions": [
+          "retrieval_hit",
+          "rank",
+          "attribution_correctness",
+          "citation_locator_correctness",
+          "source_authority_correctness"
+        ],
+        "source_type": "website",
+        "stratum": "direct_author_short",
+        "target_evidence_id": "target-evidence:f23ec10ad249d20b0a6f60513342db4f",
+        "task_draft_id": "task-draft:6cfe341b07575b14efcc5e73dd16ad67",
+        "task_family": "DIRECT_PRIMARY_SOURCE_RETRIEVAL"
+      },
+      "cell82_question_field_values": {
+        "authoring_mode": "MODEL_DRAFT_WITH_HUMAN_ADJUDICATION",
+        "authoring_packet_sha256": "e0552ba709aaa0ea6053a38f026f4269a098eeb30e3bc2ca1ff9a8d31fcc3bb3",
+        "authority_expectation": "PRIMARY_DIRECT_AUTHOR",
+        "citation_target_status": "BLOCKED_PENDING_QUESTION_ACCEPTANCE",
+        "citation_target_validation_status": "BLOCKED_PENDING_QUESTION_ACCEPTANCE",
+        "context_expectation": "MINIMAL_DIRECT_EVIDENCE",
+        "draft_revision": 1,
+        "draft_status": "DRAFT_CREATED_PENDING_VALIDATION",
+        "evidence_scope": "SINGLE_SOURCE_DOCUMENT",
+        "expected_answer_generation_status": "BLOCKED_PENDING_QUESTION_ACCEPTANCE",
+        "expected_answer_status": "BLOCKED_PENDING_QUESTION_ACCEPTANCE",
+        "golden_case_id": "golden-case:bf7bbf425e10f6c4efe029f9bd851be6",
+        "guardrails": {
+          "answer_leakage_in_question": "FORBIDDEN",
+          "external_knowledge": "FORBIDDEN",
+          "internal_ids_in_question": "FORBIDDEN",
+          "locator_fabrication": "FORBIDDEN",
+          "secondary_to_primary_promotion": "FORBIDDEN",
+          "unknown_speaker_inference": "FORBIDDEN",
+          "unsupported_attribution": "FORBIDDEN"
+        },
+        "human_adjudication_status": "NOT_STARTED",
+        "machine_validation_status": "NOT_STARTED",
+        "pilot_case_id": "question-pilot:02ba2886f1b68521b93789becf741361",
+        "question_archetype": "AUTHORITY_CONSTRAINED_RETRIEVAL",
+        "question_draft_id": "question-draft:a522b605b11eb4148a58f1a68554f65a",
+        "question_draft_schema_version": "question_draft_record_v1",
+        "question_draft_status": "DRAFT_CREATED_PENDING_VALIDATION",
+        "question_draft_version": "question_draft_record_v1",
+        "question_groundability_status": "NOT_STARTED",
+        "question_revision": 1,
+        "question_schema_version": "question_draft_record_v1",
+        "question_text": "بر اساس توضیح دکتر کمیل رودی، برای شروع معاملات در بورس چه مراحلی باید طی شود و پس از آن چه روش‌هایی برای خرید و فروش سهام ذکر شده است؟",
+        "question_text_sha256": "cd5a5a283b3c901d69dbccc7bf685dd306ea03fc5efe4062531b0925c418be25",
+        "required_dimensions": [
+          "retrieval_hit",
+          "rank",
+          "attribution_correctness",
+          "citation_locator_correctness",
+          "source_authority_correctness"
+        ],
+        "revision": 1,
+        "revision_number": 1,
+        "schema_version": "question_draft_record_v1",
+        "source_type": "website",
+        "stratum": "direct_author_short",
+        "target_evidence_id": "target-evidence:f23ec10ad249d20b0a6f60513342db4f",
+        "target_selection_basis": "EXACT_CASE_SOURCE_DOCUMENT",
+        "target_selection_method": "DOCUMENT_LEVEL_TARGET",
+        "target_text_parts": [
+          {
+            "attribution": {
+              "attribution_status": "policy_validated",
+              "author": "دکتر کمیل رودی",
+              "author_id": "4",
+              "authorship_assertion_source": "accepted_pipeline_content_origin",
+              "byline_raw": null,
+              "content_authority_type": "direct_author",
+              "credited_author_name": "دکتر کمیل رودی",
+              "editorial_credit_raw": null,
+              "editorial_supervisor_name": null,
+              "knowledge_owner": "Dr. Komeil Roudi",
+              "reference_expert_name": null,
+              "speaker": null
+            },
+            "locator": {
+              "canonical_url": "https://www.fintelligence.ir/Blog/Detail/2AA67199",
+              "url": "https://www.fintelligence.ir/Blog/Detail/2AA67199/%DA%AF%D8%A7%D9%85%D9%87%D8%A7%DB%8C-%D8%B9%D9%85%D9%84%DB%8C%D8%A7%D8%AA%DB%8C-%D8%A8%D8%B1%D8%A7%DB%8C-%D8%A7%D9%86%D8%AC%D8%A7%D9%85-%D9%85%D8%B9%D8%A7%D9%85%D9%84%D8%A7%D8%AA-%D8%AF%D8%B1-%D8%A8%D9%88%D8%B1%D8%B3"
+            },
+            "part_index": 0,
+            "role": "SOURCE_DOCUMENT",
+            "speaker_state": {
+              "base_raw": null,
+              "base_status": null,
+              "effective_canonical": null,
+              "effective_label": null,
+              "effective_primary": null
+            },
+            "text": "سه بازار مالی عبارتند از بازار پول، بازار سرمایه و بازار بیمه. در هر یک از این بازارها، نهاد سیاست‌گذاری، نهاد ناظر، مجموعه‌ای از فعالان و محصولاتی وجود دارد. همانطور که برای فعالیت‌های بانکی حساب بانکی افتتاح می‌کنیم. برای انجام معاملات در بورس باید در سامانه سجام ثبت‌نام کنیم و احراز هویت شویم تا کد معاملاتی بورسی دریافت کنیم.\nبا این کد معاملاتی، می‌توان به خرید و فروش سهام پرداخت. سه روش کاغذی، تلفنی و اینترنتی برای این کار وجود دارد. همانطور که برای استفاده از خدمات بانکی اینترنتی نام کاربری و رمز عبور دریافت می‌کنیم، برای معاملات برخط نیز، درگاهی وجود دارد و شرایطی. همچنین تحلیل فنی و تحلیل بنیادی دو ابزار مهم برای پیش‌بینی و تصمیم به خرید و فروش سهام هستند.",
+            "text_sha256": "1ee0311aafcbfd243c094fb26c11a193e1e8a9cc0ce52ce0c2fb84d3154acd95"
+          }
+        ],
+        "task_draft_id": "task-draft:6cfe341b07575b14efcc5e73dd16ad67",
+        "task_family": "DIRECT_PRIMARY_SOURCE_RETRIEVAL"
+      },
+      "cell83_question_record": {
+        "authoring_mode": "MODEL_DRAFT_WITH_HUMAN_ADJUDICATION",
+        "authority_expectation": "PRIMARY_DIRECT_AUTHOR",
+        "citation_target_validation_status": "BLOCKED_PENDING_QUESTION_ACCEPTANCE",
+        "context_expectation": "MINIMAL_DIRECT_EVIDENCE",
+        "draft_status": "DRAFT_CREATED_PENDING_VALIDATION",
+        "evidence_scope": "SINGLE_SOURCE_DOCUMENT",
+        "expected_answer_status": "BLOCKED_PENDING_QUESTION_ACCEPTANCE",
+        "golden_case_id": "golden-case:bf7bbf425e10f6c4efe029f9bd851be6",
+        "human_adjudication_status": "NOT_STARTED",
+        "machine_validation_status": "NOT_STARTED",
+        "pilot_case_id": "question-pilot:02ba2886f1b68521b93789becf741361",
+        "question_archetype": "AUTHORITY_CONSTRAINED_RETRIEVAL",
+        "question_draft_id": "question-draft:a522b605b11eb4148a58f1a68554f65a",
+        "question_draft_schema_version": "question_draft_record_v1",
+        "question_text": "بر اساس توضیح دکتر کمیل رودی، برای شروع معاملات در بورس چه مراحلی باید طی شود و پس از آن چه روش‌هایی برای خرید و فروش سهام ذکر شده است؟",
+        "question_text_sha256": "cd5a5a283b3c901d69dbccc7bf685dd306ea03fc5efe4062531b0925c418be25",
+        "required_dimensions": [
+          "retrieval_hit",
+          "rank",
+          "attribution_correctness",
+          "citation_locator_correctness",
+          "source_authority_correctness"
+        ],
+        "source_type": "website",
+        "stratum": "direct_author_short",
+        "target_evidence_id": "target-evidence:f23ec10ad249d20b0a6f60513342db4f",
+        "task_draft_id": "task-draft:6cfe341b07575b14efcc5e73dd16ad67",
+        "task_family": "DIRECT_PRIMARY_SOURCE_RETRIEVAL"
+      },
+      "cell84_human_review_packet": {
+        "allowed_human_decisions": [
+          "ACCEPT",
+          "REJECT",
+          "REVISION_REQUIRED"
+        ],
+        "authority_expectation": "PRIMARY_DIRECT_AUTHOR",
+        "automatic_acceptance": false,
+        "citation_target_validation_status": "BLOCKED_PENDING_QUESTION_ACCEPTANCE",
+        "context_expectation": "MINIMAL_DIRECT_EVIDENCE",
+        "evidence_scope": "SINGLE_SOURCE_DOCUMENT",
+        "expected_answer_status": "BLOCKED_PENDING_QUESTION_ACCEPTANCE",
+        "full_572_generation": "BLOCKED",
+        "golden_case_id": "golden-case:bf7bbf425e10f6c4efe029f9bd851be6",
+        "hard_gate_results": {
+          "answer_leakage_in_question": true,
+          "external_knowledge_dependency": true,
+          "internal_document_id_leakage": true,
+          "internal_pipeline_metadata_leakage": true,
+          "locator_fabrication": true,
+          "natural_user_question": true,
+          "nonempty_question_text": true,
+          "question_must_be_groundable_in_target_text_parts": true,
+          "target_evidence_must_already_be_validated": true,
+          "unknown_speaker_inference": true,
+          "unsupported_attribution": true,
+          "unsupported_authority_promotion": true
+        },
+        "human_adjudication_status": "PENDING_HUMAN_DECISION",
+        "human_decision": null,
+        "human_decision_reason": null,
+        "human_review_criteria": {
+          "attribution_is_correct": "Named attribution is supported by validated source metadata and does not promote unsupported authority.",
+          "question_does_not_leak_answer": "Question does not reveal the substantive answer components it is supposed to retrieve.",
+          "question_has_useful_evaluation_value": "Question is suitable for evaluating retrieval hit, rank, attribution, locator correctness and source authority correctness.",
+          "question_is_fully_grounded": "All answerable content requested by the question is present in the validated target evidence.",
+          "question_is_natural_and_clear": "Question reads naturally and is understandable without internal pipeline knowledge.",
+          "question_matches_intended_task": "Question tests the intended retrieval task rather than unrelated or trivial metadata."
+        },
+        "machine_validation_decision": "PASS",
+        "machine_validation_record_sha256": "566cec9c9301796045ecaabe6062cb1bf4a78c892f3854046e338bfd13ecca0f",
+        "pilot_case_id": "question-pilot:02ba2886f1b68521b93789becf741361",
+        "question_draft_id": "question-draft:a522b605b11eb4148a58f1a68554f65a",
+        "question_draft_record_sha256": "6cccdfe8a1396c91b435702cd4e3cf0b69124a503b7fa5d9bbcc005b903a2d14",
+        "question_text": "بر اساس توضیح دکتر کمیل رودی، برای شروع معاملات در بورس چه مراحلی باید طی شود و پس از آن چه روش‌هایی برای خرید و فروش سهام ذکر شده است؟",
+        "question_text_sha256": "cd5a5a283b3c901d69dbccc7bf685dd306ea03fc5efe4062531b0925c418be25",
+        "required_dimensions": [
+          "retrieval_hit",
+          "rank",
+          "attribution_correctness",
+          "citation_locator_correctness",
+          "source_authority_correctness"
+        ],
+        "review_packet_version": "question_draft_human_review_packet_v1",
+        "semantic_gate_results": {
+          "authority_expectation_alignment": true,
+          "context_expectation_alignment": true,
+          "evidence_scope_alignment": true,
+          "question_archetype_alignment": true,
+          "question_is_answerable_without_external_context": true,
+          "question_is_not_trivial_metadata_repetition": true,
+          "required_dimensions_are_testable_by_question": true,
+          "task_family_alignment": true
+        },
+        "target_evidence_id": "target-evidence:f23ec10ad249d20b0a6f60513342db4f",
+        "target_text_parts": [
+          {
+            "attribution": {
+              "attribution_status": "policy_validated",
+              "author": "دکتر کمیل رودی",
+              "author_id": "4",
+              "authorship_assertion_source": "accepted_pipeline_content_origin",
+              "byline_raw": null,
+              "content_authority_type": "direct_author",
+              "credited_author_name": "دکتر کمیل رودی",
+              "editorial_credit_raw": null,
+              "editorial_supervisor_name": null,
+              "knowledge_owner": "Dr. Komeil Roudi",
+              "reference_expert_name": null,
+              "speaker": null
+            },
+            "locator": {
+              "canonical_url": "https://www.fintelligence.ir/Blog/Detail/2AA67199",
+              "url": "https://www.fintelligence.ir/Blog/Detail/2AA67199/%DA%AF%D8%A7%D9%85%D9%87%D8%A7%DB%8C-%D8%B9%D9%85%D9%84%DB%8C%D8%A7%D8%AA%DB%8C-%D8%A8%D8%B1%D8%A7%DB%8C-%D8%A7%D9%86%D8%AC%D8%A7%D9%85-%D9%85%D8%B9%D8%A7%D9%85%D9%84%D8%A7%D8%AA-%D8%AF%D8%B1-%D8%A8%D9%88%D8%B1%D8%B3"
+            },
+            "part_index": 0,
+            "role": "SOURCE_DOCUMENT",
+            "speaker_state": {
+              "base_raw": null,
+              "base_status": null,
+              "effective_canonical": null,
+              "effective_label": null,
+              "effective_primary": null
+            },
+            "text": "سه بازار مالی عبارتند از بازار پول، بازار سرمایه و بازار بیمه. در هر یک از این بازارها، نهاد سیاست‌گذاری، نهاد ناظر، مجموعه‌ای از فعالان و محصولاتی وجود دارد. همانطور که برای فعالیت‌های بانکی حساب بانکی افتتاح می‌کنیم. برای انجام معاملات در بورس باید در سامانه سجام ثبت‌نام کنیم و احراز هویت شویم تا کد معاملاتی بورسی دریافت کنیم.\nبا این کد معاملاتی، می‌توان به خرید و فروش سهام پرداخت. سه روش کاغذی، تلفنی و اینترنتی برای این کار وجود دارد. همانطور که برای استفاده از خدمات بانکی اینترنتی نام کاربری و رمز عبور دریافت می‌کنیم، برای معاملات برخط نیز، درگاهی وجود دارد و شرایطی. همچنین تحلیل فنی و تحلیل بنیادی دو ابزار مهم برای پیش‌بینی و تصمیم به خرید و فروش سهام هستند."
+          }
+        ],
+        "task_draft_id": "task-draft:6cfe341b07575b14efcc5e73dd16ad67"
+      },
+      "cell84_question_record": {
+        "authoring_mode": "MODEL_DRAFT_WITH_HUMAN_ADJUDICATION",
+        "authority_expectation": "PRIMARY_DIRECT_AUTHOR",
+        "citation_target_validation_status": "BLOCKED_PENDING_QUESTION_ACCEPTANCE",
+        "context_expectation": "MINIMAL_DIRECT_EVIDENCE",
+        "draft_status": "DRAFT_CREATED_PENDING_VALIDATION",
+        "evidence_scope": "SINGLE_SOURCE_DOCUMENT",
+        "expected_answer_status": "BLOCKED_PENDING_QUESTION_ACCEPTANCE",
+        "golden_case_id": "golden-case:bf7bbf425e10f6c4efe029f9bd851be6",
+        "human_adjudication_status": "NOT_STARTED",
+        "machine_validation_status": "NOT_STARTED",
+        "pilot_case_id": "question-pilot:02ba2886f1b68521b93789becf741361",
+        "question_archetype": "AUTHORITY_CONSTRAINED_RETRIEVAL",
+        "question_draft_id": "question-draft:a522b605b11eb4148a58f1a68554f65a",
+        "question_draft_schema_version": "question_draft_record_v1",
+        "question_text": "بر اساس توضیح دکتر کمیل رودی، برای شروع معاملات در بورس چه مراحلی باید طی شود و پس از آن چه روش‌هایی برای خرید و فروش سهام ذکر شده است؟",
+        "question_text_sha256": "cd5a5a283b3c901d69dbccc7bf685dd306ea03fc5efe4062531b0925c418be25",
+        "required_dimensions": [
+          "retrieval_hit",
+          "rank",
+          "attribution_correctness",
+          "citation_locator_correctness",
+          "source_authority_correctness"
+        ],
+        "source_type": "website",
+        "stratum": "direct_author_short",
+        "target_evidence_id": "target-evidence:f23ec10ad249d20b0a6f60513342db4f",
+        "task_draft_id": "task-draft:6cfe341b07575b14efcc5e73dd16ad67",
+        "task_family": "DIRECT_PRIMARY_SOURCE_RETRIEVAL"
+      },
+      "cell85_human_adjudication_record": {
+        "adjudication_version": "question_draft_human_adjudication_v1",
+        "citation_target_validation_status": "BLOCKED_PENDING_REVISED_QUESTION_ACCEPTANCE",
+        "expected_answer_status": "BLOCKED_PENDING_REVISED_QUESTION_ACCEPTANCE",
+        "exposed_source_identity_names": [
+          "دکتر کمیل رودی"
+        ],
+        "factual_content_status": "VALIDATED_CORRECT",
+        "full_572_generation": "BLOCKED",
+        "human_decision": "REVISION_REQUIRED",
+        "human_decision_detail": "The factual content and validated evidence are correct, but the question wording directly exposes the source author. The product is a financial-literacy advisor; source provenance must remain internal while the user-facing question must be natural and source-agnostic.",
+        "human_decision_reason": "USER_FACING_FINANCIAL_LITERACY_QUESTION_MUST_NOT_EXPOSE_SOURCE_OR_AUTHOR_IDENTITY",
+        "human_review_packet_sha256": "88a9eeb24a62a17602c4430f007c546e63b682b0b96c2e496b0e011a14e08522",
+        "internal_provenance_status": "RETAIN_UNCHANGED",
+        "machine_validation_decision": "PASS",
+        "next_action": "CREATE_SOURCE_AGNOSTIC_REVISION",
+        "pilot_case_id": "question-pilot:02ba2886f1b68521b93789becf741361",
+        "question_draft_id": "question-draft:a522b605b11eb4148a58f1a68554f65a",
+        "question_text": "بر اساس توضیح دکتر کمیل رودی، برای شروع معاملات در بورس چه مراحلی باید طی شود و پس از آن چه روش‌هایی برای خرید و فروش سهام ذکر شده است؟",
+        "question_text_sha256": "cd5a5a283b3c901d69dbccc7bf685dd306ea03fc5efe4062531b0925c418be25",
+        "revision_type": "USER_FACING_WORDING_ONLY",
+        "source_opacity_rule_sha256": "2e14ed3f71f393026020e1ab8956e6979dd4ae13769a7848cc5379a459a8eddd",
+        "source_opacity_rule_version": "question_user_facing_source_opacity_rule_v1",
+        "target_evidence_status": "RETAIN_UNCHANGED"
+      },
+      "cell86_revised_question_draft_record": {
+        "authoring_mode": "MODEL_DRAFT_WITH_HUMAN_ADJUDICATION",
+        "authority_expectation": "PRIMARY_DIRECT_AUTHOR",
+        "citation_target_validation_status": "BLOCKED_PENDING_QUESTION_ACCEPTANCE",
+        "context_expectation": "MINIMAL_DIRECT_EVIDENCE",
+        "draft_status": "DRAFT_CREATED_PENDING_VALIDATION",
+        "evidence_scope": "SINGLE_SOURCE_DOCUMENT",
+        "expected_answer_status": "BLOCKED_PENDING_QUESTION_ACCEPTANCE",
+        "golden_case_id": "golden-case:bf7bbf425e10f6c4efe029f9bd851be6",
+        "human_adjudication_status": "NOT_STARTED",
+        "machine_validation_status": "NOT_STARTED",
+        "pilot_case_id": "question-pilot:02ba2886f1b68521b93789becf741361",
+        "question_archetype": "AUTHORITY_CONSTRAINED_RETRIEVAL",
+        "question_draft_id": "question-draft:e73d524bafad431cea6ad1bec2808671",
+        "question_draft_schema_version": "question_draft_record_v1",
+        "question_text": "برای شروع معاملات در بورس چه مراحلی باید طی شود و چه روش‌هایی برای خرید و فروش سهام وجود دارد؟",
+        "question_text_sha256": "0c3080062a3b60e095cb087205af348589ed01c0b7a93a63e18f2917aceb1796",
+        "required_dimensions": [
+          "retrieval_hit",
+          "rank",
+          "attribution_correctness",
+          "citation_locator_correctness",
+          "source_authority_correctness"
+        ],
+        "source_type": "website",
+        "stratum": "direct_author_short",
+        "target_evidence_id": "target-evidence:f23ec10ad249d20b0a6f60513342db4f",
+        "task_draft_id": "task-draft:6cfe341b07575b14efcc5e73dd16ad67",
+        "task_family": "DIRECT_PRIMARY_SOURCE_RETRIEVAL"
+      },
+      "cell87_question_record": {
+        "authoring_mode": "MODEL_DRAFT_WITH_HUMAN_ADJUDICATION",
+        "authority_expectation": "PRIMARY_DIRECT_AUTHOR",
+        "citation_target_validation_status": "BLOCKED_PENDING_QUESTION_ACCEPTANCE",
+        "context_expectation": "MINIMAL_DIRECT_EVIDENCE",
+        "draft_status": "DRAFT_CREATED_PENDING_VALIDATION",
+        "evidence_scope": "SINGLE_SOURCE_DOCUMENT",
+        "expected_answer_status": "BLOCKED_PENDING_QUESTION_ACCEPTANCE",
+        "golden_case_id": "golden-case:bf7bbf425e10f6c4efe029f9bd851be6",
+        "human_adjudication_status": "NOT_STARTED",
+        "machine_validation_status": "NOT_STARTED",
+        "pilot_case_id": "question-pilot:02ba2886f1b68521b93789becf741361",
+        "question_archetype": "AUTHORITY_CONSTRAINED_RETRIEVAL",
+        "question_draft_id": "question-draft:e73d524bafad431cea6ad1bec2808671",
+        "question_draft_schema_version": "question_draft_record_v1",
+        "question_text": "برای شروع معاملات در بورس چه مراحلی باید طی شود و چه روش‌هایی برای خرید و فروش سهام وجود دارد؟",
+        "question_text_sha256": "0c3080062a3b60e095cb087205af348589ed01c0b7a93a63e18f2917aceb1796",
+        "required_dimensions": [
+          "retrieval_hit",
+          "rank",
+          "attribution_correctness",
+          "citation_locator_correctness",
+          "source_authority_correctness"
+        ],
+        "source_type": "website",
+        "stratum": "direct_author_short",
+        "target_evidence_id": "target-evidence:f23ec10ad249d20b0a6f60513342db4f",
+        "task_draft_id": "task-draft:6cfe341b07575b14efcc5e73dd16ad67",
+        "task_family": "DIRECT_PRIMARY_SOURCE_RETRIEVAL"
+      },
+      "cell88_accepted_question_state": {
+        "citation_target_validation_status": "BLOCKED_PENDING_EXPECTED_ANSWER_GENERATION",
+        "expected_answer_status": "READY_FOR_EXPECTED_ANSWER_GENERATION",
+        "full_572_generation": "BLOCKED_PENDING_PILOT_WORKFLOW_VALIDATION",
+        "human_adjudication_status": "ACCEPTED",
+        "machine_validation_status": "PASS",
+        "pilot_case_id": "question-pilot:02ba2886f1b68521b93789becf741361",
+        "question_acceptance_status": "ACCEPTED",
+        "question_draft_id": "question-draft:e73d524bafad431cea6ad1bec2808671",
+        "question_text": "برای شروع معاملات در بورس چه مراحلی باید طی شود و چه روش‌هایی برای خرید و فروش سهام وجود دارد؟",
+        "question_text_sha256": "0c3080062a3b60e095cb087205af348589ed01c0b7a93a63e18f2917aceb1796",
+        "state_version": "accepted_question_state_v1"
+      },
+      "cell89_expected_answer_record": {
+        "citation_target_validation_status": "BLOCKED_PENDING_EXPECTED_ANSWER_REVIEW",
+        "claim_grounding_results": {
+          "claim_01": {
+            "claim": "ثبت‌نام در سامانه سجام",
+            "grounded": true,
+            "missing_evidence_anchors": []
+          },
+          "claim_02": {
+            "claim": "احراز هویت",
+            "grounded": true,
+            "missing_evidence_anchors": []
+          },
+          "claim_03": {
+            "claim": "دریافت کد معاملاتی بورسی",
+            "grounded": true,
+            "missing_evidence_anchors": []
+          },
+          "claim_04": {
+            "claim": "پس از دریافت کد معاملاتی امکان خرید و فروش سهام وجود دارد",
+            "grounded": true,
+            "missing_evidence_anchors": []
+          },
+          "claim_05": {
+            "claim": "روش‌های کاغذی، تلفنی و اینترنتی",
+            "grounded": true,
+            "missing_evidence_anchors": []
+          }
+        },
+        "completeness_status": "COMPLETE_FOR_ACCEPTED_QUESTION",
+        "expected_answer_status": "GENERATED_AND_GROUNDED",
+        "expected_answer_text": "برای شروع معاملات در بورس، ابتدا باید در سامانه سجام ثبت‌نام کنید و احراز هویت شوید تا کد معاملاتی بورسی دریافت کنید. پس از دریافت کد معاملاتی، امکان خرید و فروش سهام وجود دارد. سه روش ذکرشده برای خرید و فروش سهام عبارت‌اند از روش کاغذی، تلفنی و اینترنتی.",
+        "expected_answer_text_sha256": "f4a1b0f666cbb98db1934ccc4a1cab2370bc3de6d1fa0c17951c0acbdea4e0a3",
+        "expected_answer_version": "expected_answer_record_v1",
+        "external_knowledge_status": "NOT_USED",
+        "full_572_generation": "BLOCKED_PENDING_PILOT_WORKFLOW_VALIDATION",
+        "golden_case_id": "golden-case:bf7bbf425e10f6c4efe029f9bd851be6",
+        "grounding_status": "FULLY_GROUNDED",
+        "human_answer_review_status": "NOT_STARTED",
+        "internal_provenance_status": "RETAINED_AND_VALIDATED",
+        "pilot_case_id": "question-pilot:02ba2886f1b68521b93789becf741361",
+        "question_draft_id": "question-draft:e73d524bafad431cea6ad1bec2808671",
+        "question_text": "برای شروع معاملات در بورس چه مراحلی باید طی شود و چه روش‌هایی برای خرید و فروش سهام وجود دارد؟",
+        "question_text_sha256": "0c3080062a3b60e095cb087205af348589ed01c0b7a93a63e18f2917aceb1796",
+        "target_evidence_id": "target-evidence:f23ec10ad249d20b0a6f60513342db4f",
+        "task_draft_id": "task-draft:6cfe341b07575b14efcc5e73dd16ad67",
+        "user_facing_source_opacity_status": "PASS"
+      },
+      "cell90_expected_answer_review_packet": {
+        "allowed_human_decisions": [
+          "ACCEPT",
+          "REJECT",
+          "REVISION_REQUIRED"
+        ],
+        "citation_target_validation_status": "BLOCKED_PENDING_EXPECTED_ANSWER_ACCEPTANCE",
+        "claim_grounding_results": {
+          "claim_01": {
+            "claim": "ثبت‌نام در سامانه سجام",
+            "grounded": true,
+            "missing_evidence_anchors": []
+          },
+          "claim_02": {
+            "claim": "احراز هویت",
+            "grounded": true,
+            "missing_evidence_anchors": []
+          },
+          "claim_03": {
+            "claim": "دریافت کد معاملاتی بورسی",
+            "grounded": true,
+            "missing_evidence_anchors": []
+          },
+          "claim_04": {
+            "claim": "پس از دریافت کد معاملاتی امکان خرید و فروش سهام وجود دارد",
+            "grounded": true,
+            "missing_evidence_anchors": []
+          },
+          "claim_05": {
+            "claim": "روش‌های کاغذی، تلفنی و اینترنتی",
+            "grounded": true,
+            "missing_evidence_anchors": []
+          }
+        },
+        "completeness_status": "COMPLETE_FOR_ACCEPTED_QUESTION",
+        "expected_answer_record_sha256": "cdf4dc1435e6db68eee4481b7180bcafce5c425c025484dfe41baaa97b14fc79",
+        "expected_answer_text": "برای شروع معاملات در بورس، ابتدا باید در سامانه سجام ثبت‌نام کنید و احراز هویت شوید تا کد معاملاتی بورسی دریافت کنید. پس از دریافت کد معاملاتی، امکان خرید و فروش سهام وجود دارد. سه روش ذکرشده برای خرید و فروش سهام عبارت‌اند از روش کاغذی، تلفنی و اینترنتی.",
+        "expected_answer_text_sha256": "f4a1b0f666cbb98db1934ccc4a1cab2370bc3de6d1fa0c17951c0acbdea4e0a3",
+        "external_knowledge_status": "NOT_USED",
+        "full_572_generation": "BLOCKED_PENDING_PILOT_WORKFLOW_VALIDATION",
+        "grounding_status": "FULLY_GROUNDED",
+        "human_answer_review_status": "PENDING_HUMAN_DECISION",
+        "human_decision": null,
+        "human_decision_reason": null,
+        "human_review_criteria": {
+          "answer_completeness": "The Expected Answer must cover all parts explicitly requested by the accepted Question.",
+          "factual_correctness": "Every factual statement in the Expected Answer must be supported by the validated Target Evidence.",
+          "natural_financial_literacy_answer": "The answer should read naturally as a financial-literacy advisor response.",
+          "no_external_knowledge": "The Expected Answer must not introduce facts that are absent from the validated Target Evidence.",
+          "source_opacity": "The user-facing Expected Answer must not expose the source, author, internal provenance or pipeline metadata."
+        },
+        "pilot_case_id": "question-pilot:02ba2886f1b68521b93789becf741361",
+        "question_draft_id": "question-draft:e73d524bafad431cea6ad1bec2808671",
+        "question_text": "برای شروع معاملات در بورس چه مراحلی باید طی شود و چه روش‌هایی برای خرید و فروش سهام وجود دارد؟",
+        "review_packet_version": "expected_answer_human_review_packet_v1",
+        "source_opacity_status": "PASS",
+        "target_evidence_id": "target-evidence:f23ec10ad249d20b0a6f60513342db4f"
+      },
+      "cell91_accepted_qa_state": {
+        "citation_target_validation_status": "READY_FOR_CITATION_TARGET_VALIDATION",
+        "expected_answer_acceptance_status": "ACCEPTED",
+        "expected_answer_text": "برای شروع معاملات در بورس، ابتدا باید در سامانه سجام ثبت‌نام کنید و احراز هویت شوید تا کد معاملاتی بورسی دریافت کنید. پس از دریافت کد معاملاتی، امکان خرید و فروش سهام وجود دارد. سه روش ذکرشده برای خرید و فروش سهام عبارت‌اند از روش کاغذی، تلفنی و اینترنتی.",
+        "full_572_generation": "BLOCKED_PENDING_PILOT_WORKFLOW_VALIDATION",
+        "internal_provenance_status": "RETAINED_AND_VALIDATED",
+        "pilot_case_id": "question-pilot:02ba2886f1b68521b93789becf741361",
+        "question_acceptance_status": "ACCEPTED",
+        "question_draft_id": "question-draft:e73d524bafad431cea6ad1bec2808671",
+        "question_text": "برای شروع معاملات در بورس چه مراحلی باید طی شود و چه روش‌هایی برای خرید و فروش سهام وجود دارد؟",
+        "state_version": "accepted_qa_state_v1",
+        "target_evidence_id": "target-evidence:f23ec10ad249d20b0a6f60513342db4f"
+      },
+      "cell91_expected_answer_acceptance_record": {
+        "acceptance_version": "expected_answer_human_acceptance_v1",
+        "citation_target_validation_status": "READY_FOR_CITATION_TARGET_VALIDATION",
+        "completeness_status": "COMPLETE_FOR_ACCEPTED_QUESTION",
+        "expected_answer_acceptance_status": "ACCEPTED",
+        "expected_answer_record_sha256": "cdf4dc1435e6db68eee4481b7180bcafce5c425c025484dfe41baaa97b14fc79",
+        "expected_answer_review_packet_sha256": "ceec42f6929f4a4e4533e4f301b9772da5eb034281c771fadbc6f684ee0dd80e",
+        "expected_answer_text": "برای شروع معاملات در بورس، ابتدا باید در سامانه سجام ثبت‌نام کنید و احراز هویت شوید تا کد معاملاتی بورسی دریافت کنید. پس از دریافت کد معاملاتی، امکان خرید و فروش سهام وجود دارد. سه روش ذکرشده برای خرید و فروش سهام عبارت‌اند از روش کاغذی، تلفنی و اینترنتی.",
+        "expected_answer_text_sha256": "f4a1b0f666cbb98db1934ccc4a1cab2370bc3de6d1fa0c17951c0acbdea4e0a3",
+        "external_knowledge_status": "NOT_USED",
+        "full_572_generation": "BLOCKED_PENDING_PILOT_WORKFLOW_VALIDATION",
+        "golden_case_id": "golden-case:bf7bbf425e10f6c4efe029f9bd851be6",
+        "grounding_status": "FULLY_GROUNDED",
+        "human_answer_review_status": "ACCEPTED",
+        "human_decision": "ACCEPT",
+        "human_decision_reason": "EXPECTED_ANSWER_APPROVED_AS_CORRECT_COMPLETE_GROUNDED_AND_PRODUCT_APPROPRIATE",
+        "human_decision_source": "EXPLICIT_USER_DECISION_IN_CHAT",
+        "internal_provenance_status": "RETAINED_AND_VALIDATED",
+        "pilot_case_id": "question-pilot:02ba2886f1b68521b93789becf741361",
+        "question_draft_id": "question-draft:e73d524bafad431cea6ad1bec2808671",
+        "question_text": "برای شروع معاملات در بورس چه مراحلی باید طی شود و چه روش‌هایی برای خرید و فروش سهام وجود دارد؟",
+        "source_opacity_status": "PASS",
+        "target_evidence_id": "target-evidence:f23ec10ad249d20b0a6f60513342db4f",
+        "target_evidence_status": "RETAINED_AND_VALIDATED",
+        "task_draft_id": "task-draft:6cfe341b07575b14efcc5e73dd16ad67"
+      },
+      "cell92_citation_target_mapping_record": {
+        "all_claims_mapped": true,
+        "all_evidence_texts_preserved": true,
+        "all_internal_authority_checks_pass": true,
+        "all_mapped_locators_preserved": true,
+        "citation_human_review_status": "NOT_STARTED",
+        "citation_mapping_status": "MAPPED_AND_STRUCTURALLY_VALIDATED",
+        "claim_count": 5,
+        "claim_evidence_mappings": [
+          {
+            "claim": "ثبت‌نام در سامانه سجام",
+            "claim_id": "claim_01",
+            "mapping_status": "MAPPED",
+            "required_evidence_anchors": [
+              "سامانه سجام",
+              "ثبت‌نام"
+            ],
+            "supporting_part_count": 1,
+            "supporting_parts": [
+              {
+                "attribution_status": "policy_validated",
+                "content_authority_type": "direct_author",
+                "evidence_part_index": 0,
+                "evidence_text_sha256": "1ee0311aafcbfd243c094fb26c11a193e1e8a9cc0ce52ce0c2fb84d3154acd95",
+                "locator": {
+                  "canonical_url": "https://www.fintelligence.ir/Blog/Detail/2AA67199",
+                  "url": "https://www.fintelligence.ir/Blog/Detail/2AA67199/%DA%AF%D8%A7%D9%85%D9%87%D8%A7%DB%8C-%D8%B9%D9%85%D9%84%DB%8C%D8%A7%D8%AA%DB%8C-%D8%A8%D8%B1%D8%A7%DB%8C-%D8%A7%D9%86%D8%AC%D8%A7%D9%85-%D9%85%D8%B9%D8%A7%D9%85%D9%84%D8%A7%D8%AA-%D8%AF%D8%B1-%D8%A8%D9%88%D8%B1%D8%B3"
+                },
+                "locator_sha256": "4c13c07a2e21e049820c63c1c06f5ec6a60608c8756301e85882e5bd6af7c31a",
+                "matched_evidence_anchors": [
+                  "سامانه سجام",
+                  "ثبت‌نام"
+                ],
+                "role": "SOURCE_DOCUMENT"
+              }
+            ]
+          },
+          {
+            "claim": "احراز هویت",
+            "claim_id": "claim_02",
+            "mapping_status": "MAPPED",
+            "required_evidence_anchors": [
+              "احراز هویت"
+            ],
+            "supporting_part_count": 1,
+            "supporting_parts": [
+              {
+                "attribution_status": "policy_validated",
+                "content_authority_type": "direct_author",
+                "evidence_part_index": 0,
+                "evidence_text_sha256": "1ee0311aafcbfd243c094fb26c11a193e1e8a9cc0ce52ce0c2fb84d3154acd95",
+                "locator": {
+                  "canonical_url": "https://www.fintelligence.ir/Blog/Detail/2AA67199",
+                  "url": "https://www.fintelligence.ir/Blog/Detail/2AA67199/%DA%AF%D8%A7%D9%85%D9%87%D8%A7%DB%8C-%D8%B9%D9%85%D9%84%DB%8C%D8%A7%D8%AA%DB%8C-%D8%A8%D8%B1%D8%A7%DB%8C-%D8%A7%D9%86%D8%AC%D8%A7%D9%85-%D9%85%D8%B9%D8%A7%D9%85%D9%84%D8%A7%D8%AA-%D8%AF%D8%B1-%D8%A8%D9%88%D8%B1%D8%B3"
+                },
+                "locator_sha256": "4c13c07a2e21e049820c63c1c06f5ec6a60608c8756301e85882e5bd6af7c31a",
+                "matched_evidence_anchors": [
+                  "احراز هویت"
+                ],
+                "role": "SOURCE_DOCUMENT"
+              }
+            ]
+          },
+          {
+            "claim": "دریافت کد معاملاتی بورسی",
+            "claim_id": "claim_03",
+            "mapping_status": "MAPPED",
+            "required_evidence_anchors": [
+              "کد معاملاتی بورسی",
+              "دریافت"
+            ],
+            "supporting_part_count": 1,
+            "supporting_parts": [
+              {
+                "attribution_status": "policy_validated",
+                "content_authority_type": "direct_author",
+                "evidence_part_index": 0,
+                "evidence_text_sha256": "1ee0311aafcbfd243c094fb26c11a193e1e8a9cc0ce52ce0c2fb84d3154acd95",
+                "locator": {
+                  "canonical_url": "https://www.fintelligence.ir/Blog/Detail/2AA67199",
+                  "url": "https://www.fintelligence.ir/Blog/Detail/2AA67199/%DA%AF%D8%A7%D9%85%D9%87%D8%A7%DB%8C-%D8%B9%D9%85%D9%84%DB%8C%D8%A7%D8%AA%DB%8C-%D8%A8%D8%B1%D8%A7%DB%8C-%D8%A7%D9%86%D8%AC%D8%A7%D9%85-%D9%85%D8%B9%D8%A7%D9%85%D9%84%D8%A7%D8%AA-%D8%AF%D8%B1-%D8%A8%D9%88%D8%B1%D8%B3"
+                },
+                "locator_sha256": "4c13c07a2e21e049820c63c1c06f5ec6a60608c8756301e85882e5bd6af7c31a",
+                "matched_evidence_anchors": [
+                  "کد معاملاتی بورسی",
+                  "دریافت"
+                ],
+                "role": "SOURCE_DOCUMENT"
+              }
+            ]
+          },
+          {
+            "claim": "پس از دریافت کد معاملاتی امکان خرید و فروش سهام وجود دارد",
+            "claim_id": "claim_04",
+            "mapping_status": "MAPPED",
+            "required_evidence_anchors": [
+              "با این کد معاملاتی",
+              "خرید و فروش سهام"
+            ],
+            "supporting_part_count": 1,
+            "supporting_parts": [
+              {
+                "attribution_status": "policy_validated",
+                "content_authority_type": "direct_author",
+                "evidence_part_index": 0,
+                "evidence_text_sha256": "1ee0311aafcbfd243c094fb26c11a193e1e8a9cc0ce52ce0c2fb84d3154acd95",
+                "locator": {
+                  "canonical_url": "https://www.fintelligence.ir/Blog/Detail/2AA67199",
+                  "url": "https://www.fintelligence.ir/Blog/Detail/2AA67199/%DA%AF%D8%A7%D9%85%D9%87%D8%A7%DB%8C-%D8%B9%D9%85%D9%84%DB%8C%D8%A7%D8%AA%DB%8C-%D8%A8%D8%B1%D8%A7%DB%8C-%D8%A7%D9%86%D8%AC%D8%A7%D9%85-%D9%85%D8%B9%D8%A7%D9%85%D9%84%D8%A7%D8%AA-%D8%AF%D8%B1-%D8%A8%D9%88%D8%B1%D8%B3"
+                },
+                "locator_sha256": "4c13c07a2e21e049820c63c1c06f5ec6a60608c8756301e85882e5bd6af7c31a",
+                "matched_evidence_anchors": [
+                  "با این کد معاملاتی",
+                  "خرید و فروش سهام"
+                ],
+                "role": "SOURCE_DOCUMENT"
+              }
+            ]
+          },
+          {
+            "claim": "روش‌های کاغذی، تلفنی و اینترنتی",
+            "claim_id": "claim_05",
+            "mapping_status": "MAPPED",
+            "required_evidence_anchors": [
+              "کاغذی",
+              "تلفنی",
+              "اینترنتی"
+            ],
+            "supporting_part_count": 1,
+            "supporting_parts": [
+              {
+                "attribution_status": "policy_validated",
+                "content_authority_type": "direct_author",
+                "evidence_part_index": 0,
+                "evidence_text_sha256": "1ee0311aafcbfd243c094fb26c11a193e1e8a9cc0ce52ce0c2fb84d3154acd95",
+                "locator": {
+                  "canonical_url": "https://www.fintelligence.ir/Blog/Detail/2AA67199",
+                  "url": "https://www.fintelligence.ir/Blog/Detail/2AA67199/%DA%AF%D8%A7%D9%85%D9%87%D8%A7%DB%8C-%D8%B9%D9%85%D9%84%DB%8C%D8%A7%D8%AA%DB%8C-%D8%A8%D8%B1%D8%A7%DB%8C-%D8%A7%D9%86%D8%AC%D8%A7%D9%85-%D9%85%D8%B9%D8%A7%D9%85%D9%84%D8%A7%D8%AA-%D8%AF%D8%B1-%D8%A8%D9%88%D8%B1%D8%B3"
+                },
+                "locator_sha256": "4c13c07a2e21e049820c63c1c06f5ec6a60608c8756301e85882e5bd6af7c31a",
+                "matched_evidence_anchors": [
+                  "کاغذی",
+                  "تلفنی",
+                  "اینترنتی"
+                ],
+                "role": "SOURCE_DOCUMENT"
+              }
+            ]
+          }
+        ],
+        "expected_answer_acceptance_record_sha256": "7cb53b88fac237c54af23db65615cd43eeba77e330d9dc4233e8eb0c5f52de37",
+        "expected_answer_text": "برای شروع معاملات در بورس، ابتدا باید در سامانه سجام ثبت‌نام کنید و احراز هویت شوید تا کد معاملاتی بورسی دریافت کنید. پس از دریافت کد معاملاتی، امکان خرید و فروش سهام وجود دارد. سه روش ذکرشده برای خرید و فروش سهام عبارت‌اند از روش کاغذی، تلفنی و اینترنتی.",
+        "expected_answer_text_sha256": "f4a1b0f666cbb98db1934ccc4a1cab2370bc3de6d1fa0c17951c0acbdea4e0a3",
+        "full_572_generation": "BLOCKED_PENDING_PILOT_WORKFLOW_VALIDATION",
+        "mapping_version": "claim_evidence_locator_mapping_v1",
+        "pilot_case_id": "question-pilot:02ba2886f1b68521b93789becf741361",
+        "question_draft_id": "question-draft:e73d524bafad431cea6ad1bec2808671",
+        "question_text": "برای شروع معاملات در بورس چه مراحلی باید طی شود و چه روش‌هایی برای خرید و فروش سهام وجود دارد؟",
+        "target_evidence_id": "target-evidence:f23ec10ad249d20b0a6f60513342db4f",
+        "user_facing_source_opacity": "PRESERVED"
+      },
+      "cell93_citation_human_review_packet": {
+        "allowed_human_decisions": [
+          "ACCEPT",
+          "REJECT",
+          "REVISION_REQUIRED"
+        ],
+        "citation_acceptance_status": "NOT_DECIDED",
+        "citation_human_review_status": "PENDING_HUMAN_DECISION",
+        "citation_target_mapping_record_sha256": "22f30061d4564bd3219fa6ba6e9d9fbcbcc4dd2a825b433498b15d26f66110e6",
+        "claim_count": 5,
+        "expected_answer_acceptance_status": "ACCEPTED",
+        "expected_answer_text": "برای شروع معاملات در بورس، ابتدا باید در سامانه سجام ثبت‌نام کنید و احراز هویت شوید تا کد معاملاتی بورسی دریافت کنید. پس از دریافت کد معاملاتی، امکان خرید و فروش سهام وجود دارد. سه روش ذکرشده برای خرید و فروش سهام عبارت‌اند از روش کاغذی، تلفنی و اینترنتی.",
+        "expected_answer_text_sha256": "f4a1b0f666cbb98db1934ccc4a1cab2370bc3de6d1fa0c17951c0acbdea4e0a3",
+        "full_572_generation": "BLOCKED_PENDING_PILOT_WORKFLOW_VALIDATION",
+        "human_decision": null,
+        "human_decision_reason": null,
+        "human_review_criteria": {
+          "authority_correctness": "Mapped evidence must retain validated internal Attribution and Authority metadata.",
+          "claim_support_correctness": "Every Expected Answer claim must be supported by the mapped Evidence Part.",
+          "evidence_identity_correctness": "Mapped Evidence Text must be identical to the validated Target Evidence.",
+          "locator_correctness": "Every mapped Locator must be the original Locator carried by the supporting Evidence Part.",
+          "mapping_completeness": "Every claim in the accepted Expected Answer must have at least one valid supporting Evidence Part.",
+          "no_locator_fabrication": "No URL, page, line, timestamp, section or other Locator may be invented.",
+          "source_opacity_preserved": "Internal citation provenance must remain available for evaluation without exposing source identity in the user-facing Question or Expected Answer."
+        },
+        "internal_provenance_status": "RETAINED_AND_VALIDATED",
+        "pilot_case_id": "question-pilot:02ba2886f1b68521b93789becf741361",
+        "question_acceptance_status": "ACCEPTED",
+        "question_draft_id": "question-draft:e73d524bafad431cea6ad1bec2808671",
+        "question_text": "برای شروع معاملات در بورس چه مراحلی باید طی شود و چه روش‌هایی برای خرید و فروش سهام وجود دارد؟",
+        "review_packet_version": "citation_mapping_human_review_packet_v1",
+        "review_rows": [
+          {
+            "claim": "ثبت‌نام در سامانه سجام",
+            "claim_id": "claim_01",
+            "mapping_status": "MAPPED",
+            "supporting_part_count": 1,
+            "supporting_parts": [
+              {
+                "attribution_status": "policy_validated",
+                "content_authority_type": "direct_author",
+                "evidence_part_index": 0,
+                "locator": {
+                  "canonical_url": "https://www.fintelligence.ir/Blog/Detail/2AA67199",
+                  "url": "https://www.fintelligence.ir/Blog/Detail/2AA67199/%DA%AF%D8%A7%D9%85%D9%87%D8%A7%DB%8C-%D8%B9%D9%85%D9%84%DB%8C%D8%A7%D8%AA%DB%8C-%D8%A8%D8%B1%D8%A7%DB%8C-%D8%A7%D9%86%D8%AC%D8%A7%D9%85-%D9%85%D8%B9%D8%A7%D9%85%D9%84%D8%A7%D8%AA-%D8%AF%D8%B1-%D8%A8%D9%88%D8%B1%D8%B3"
+                },
+                "locator_sha256": "4c13c07a2e21e049820c63c1c06f5ec6a60608c8756301e85882e5bd6af7c31a",
+                "matched_evidence_anchors": [
+                  "سامانه سجام",
+                  "ثبت‌نام"
+                ],
+                "role": "SOURCE_DOCUMENT"
+              }
+            ]
+          },
+          {
+            "claim": "احراز هویت",
+            "claim_id": "claim_02",
+            "mapping_status": "MAPPED",
+            "supporting_part_count": 1,
+            "supporting_parts": [
+              {
+                "attribution_status": "policy_validated",
+                "content_authority_type": "direct_author",
+                "evidence_part_index": 0,
+                "locator": {
+                  "canonical_url": "https://www.fintelligence.ir/Blog/Detail/2AA67199",
+                  "url": "https://www.fintelligence.ir/Blog/Detail/2AA67199/%DA%AF%D8%A7%D9%85%D9%87%D8%A7%DB%8C-%D8%B9%D9%85%D9%84%DB%8C%D8%A7%D8%AA%DB%8C-%D8%A8%D8%B1%D8%A7%DB%8C-%D8%A7%D9%86%D8%AC%D8%A7%D9%85-%D9%85%D8%B9%D8%A7%D9%85%D9%84%D8%A7%D8%AA-%D8%AF%D8%B1-%D8%A8%D9%88%D8%B1%D8%B3"
+                },
+                "locator_sha256": "4c13c07a2e21e049820c63c1c06f5ec6a60608c8756301e85882e5bd6af7c31a",
+                "matched_evidence_anchors": [
+                  "احراز هویت"
+                ],
+                "role": "SOURCE_DOCUMENT"
+              }
+            ]
+          },
+          {
+            "claim": "دریافت کد معاملاتی بورسی",
+            "claim_id": "claim_03",
+            "mapping_status": "MAPPED",
+            "supporting_part_count": 1,
+            "supporting_parts": [
+              {
+                "attribution_status": "policy_validated",
+                "content_authority_type": "direct_author",
+                "evidence_part_index": 0,
+                "locator": {
+                  "canonical_url": "https://www.fintelligence.ir/Blog/Detail/2AA67199",
+                  "url": "https://www.fintelligence.ir/Blog/Detail/2AA67199/%DA%AF%D8%A7%D9%85%D9%87%D8%A7%DB%8C-%D8%B9%D9%85%D9%84%DB%8C%D8%A7%D8%AA%DB%8C-%D8%A8%D8%B1%D8%A7%DB%8C-%D8%A7%D9%86%D8%AC%D8%A7%D9%85-%D9%85%D8%B9%D8%A7%D9%85%D9%84%D8%A7%D8%AA-%D8%AF%D8%B1-%D8%A8%D9%88%D8%B1%D8%B3"
+                },
+                "locator_sha256": "4c13c07a2e21e049820c63c1c06f5ec6a60608c8756301e85882e5bd6af7c31a",
+                "matched_evidence_anchors": [
+                  "کد معاملاتی بورسی",
+                  "دریافت"
+                ],
+                "role": "SOURCE_DOCUMENT"
+              }
+            ]
+          },
+          {
+            "claim": "پس از دریافت کد معاملاتی امکان خرید و فروش سهام وجود دارد",
+            "claim_id": "claim_04",
+            "mapping_status": "MAPPED",
+            "supporting_part_count": 1,
+            "supporting_parts": [
+              {
+                "attribution_status": "policy_validated",
+                "content_authority_type": "direct_author",
+                "evidence_part_index": 0,
+                "locator": {
+                  "canonical_url": "https://www.fintelligence.ir/Blog/Detail/2AA67199",
+                  "url": "https://www.fintelligence.ir/Blog/Detail/2AA67199/%DA%AF%D8%A7%D9%85%D9%87%D8%A7%DB%8C-%D8%B9%D9%85%D9%84%DB%8C%D8%A7%D8%AA%DB%8C-%D8%A8%D8%B1%D8%A7%DB%8C-%D8%A7%D9%86%D8%AC%D8%A7%D9%85-%D9%85%D8%B9%D8%A7%D9%85%D9%84%D8%A7%D8%AA-%D8%AF%D8%B1-%D8%A8%D9%88%D8%B1%D8%B3"
+                },
+                "locator_sha256": "4c13c07a2e21e049820c63c1c06f5ec6a60608c8756301e85882e5bd6af7c31a",
+                "matched_evidence_anchors": [
+                  "با این کد معاملاتی",
+                  "خرید و فروش سهام"
+                ],
+                "role": "SOURCE_DOCUMENT"
+              }
+            ]
+          },
+          {
+            "claim": "روش‌های کاغذی، تلفنی و اینترنتی",
+            "claim_id": "claim_05",
+            "mapping_status": "MAPPED",
+            "supporting_part_count": 1,
+            "supporting_parts": [
+              {
+                "attribution_status": "policy_validated",
+                "content_authority_type": "direct_author",
+                "evidence_part_index": 0,
+                "locator": {
+                  "canonical_url": "https://www.fintelligence.ir/Blog/Detail/2AA67199",
+                  "url": "https://www.fintelligence.ir/Blog/Detail/2AA67199/%DA%AF%D8%A7%D9%85%D9%87%D8%A7%DB%8C-%D8%B9%D9%85%D9%84%DB%8C%D8%A7%D8%AA%DB%8C-%D8%A8%D8%B1%D8%A7%DB%8C-%D8%A7%D9%86%D8%AC%D8%A7%D9%85-%D9%85%D8%B9%D8%A7%D9%85%D9%84%D8%A7%D8%AA-%D8%AF%D8%B1-%D8%A8%D9%88%D8%B1%D8%B3"
+                },
+                "locator_sha256": "4c13c07a2e21e049820c63c1c06f5ec6a60608c8756301e85882e5bd6af7c31a",
+                "matched_evidence_anchors": [
+                  "کاغذی",
+                  "تلفنی",
+                  "اینترنتی"
+                ],
+                "role": "SOURCE_DOCUMENT"
+              }
+            ]
+          }
+        ],
+        "target_evidence_id": "target-evidence:f23ec10ad249d20b0a6f60513342db4f",
+        "user_facing_source_opacity": "PRESERVED"
+      },
+      "cell94_citation_acceptance_record": {
+        "acceptance_version": "citation_mapping_human_acceptance_v1",
+        "all_claims_mapped": true,
+        "all_evidence_texts_preserved": true,
+        "all_internal_authority_checks_pass": true,
+        "all_mapped_locators_preserved": true,
+        "citation_acceptance_status": "ACCEPTED",
+        "citation_human_review_packet_sha256": "ec25b7b9b94f64c7f57495f6cef1729aa36e4b2eb1c0849804341e80125c34b5",
+        "citation_human_review_status": "ACCEPTED",
+        "citation_target_mapping_record_sha256": "22f30061d4564bd3219fa6ba6e9d9fbcbcc4dd2a825b433498b15d26f66110e6",
+        "claim_count": 5,
+        "expected_answer_acceptance_status": "ACCEPTED",
+        "expected_answer_text": "برای شروع معاملات در بورس، ابتدا باید در سامانه سجام ثبت‌نام کنید و احراز هویت شوید تا کد معاملاتی بورسی دریافت کنید. پس از دریافت کد معاملاتی، امکان خرید و فروش سهام وجود دارد. سه روش ذکرشده برای خرید و فروش سهام عبارت‌اند از روش کاغذی، تلفنی و اینترنتی.",
+        "expected_answer_text_sha256": "f4a1b0f666cbb98db1934ccc4a1cab2370bc3de6d1fa0c17951c0acbdea4e0a3",
+        "full_572_generation": "BLOCKED_PENDING_FULL_PILOT_WORKFLOW_VALIDATION",
+        "human_decision": "ACCEPT",
+        "human_decision_reason": "CLAIM_EVIDENCE_LOCATOR_MAPPING_APPROVED_AS_COMPLETE_CORRECT_NONFABRICATED_AND_PROVENANCE_PRESERVING",
+        "human_decision_source": "EXPLICIT_USER_DECISION_IN_CHAT",
+        "internal_provenance_status": "RETAINED_AND_VALIDATED",
+        "pilot_case_id": "question-pilot:02ba2886f1b68521b93789becf741361",
+        "pilot_qa_completion_status": "COMPLETE",
+        "question_acceptance_status": "ACCEPTED",
+        "question_draft_id": "question-draft:e73d524bafad431cea6ad1bec2808671",
+        "question_text": "برای شروع معاملات در بورس چه مراحلی باید طی شود و چه روش‌هایی برای خرید و فروش سهام وجود دارد؟",
+        "target_evidence_id": "target-evidence:f23ec10ad249d20b0a6f60513342db4f",
+        "user_facing_source_opacity": "PRESERVED"
+      },
+      "cell94_completed_pilot_qa_record": {
+        "citation_acceptance_sha256": "f8fd68ec6c2fbfcde6906c81fc436eb0990f78ceba31ec6b6153584b1571c0f5",
+        "citation_acceptance_status": "ACCEPTED",
+        "citation_mapping_sha256": "22f30061d4564bd3219fa6ba6e9d9fbcbcc4dd2a825b433498b15d26f66110e6",
+        "claim_count": 5,
+        "expected_answer_acceptance_status": "ACCEPTED",
+        "expected_answer_text": "برای شروع معاملات در بورس، ابتدا باید در سامانه سجام ثبت‌نام کنید و احراز هویت شوید تا کد معاملاتی بورسی دریافت کنید. پس از دریافت کد معاملاتی، امکان خرید و فروش سهام وجود دارد. سه روش ذکرشده برای خرید و فروش سهام عبارت‌اند از روش کاغذی، تلفنی و اینترنتی.",
+        "internal_provenance_status": "RETAINED_AND_VALIDATED",
+        "next_scope": "VALIDATE_REMAINING_PILOT_CASES_BEFORE_FULL_572_GENERATION",
+        "pilot_case_id": "question-pilot:02ba2886f1b68521b93789becf741361",
+        "pilot_qa_completion_status": "COMPLETE",
+        "question_acceptance_status": "ACCEPTED",
+        "question_draft_id": "question-draft:e73d524bafad431cea6ad1bec2808671",
+        "question_text": "برای شروع معاملات در بورس چه مراحلی باید طی شود و چه روش‌هایی برای خرید و فروش سهام وجود دارد؟",
+        "record_version": "completed_pilot_qa_record_v1",
+        "target_evidence_id": "target-evidence:f23ec10ad249d20b0a6f60513342db4f",
+        "user_facing_source_opacity": "PRESERVED"
+      }
+    },
+    "pilot_id": "question-pilot:02ba2886f1b68521b93789becf741361"
+  },
+  "phase": "phase2_golden_dataset",
+  "project": "RAG_finance",
+  "purpose": "HUMAN_AND_AUTHOR_REVIEW",
+  "registry_version": "persistent_human_review_registry_v1",
+  "remaining_pilot_count": 19,
+  "workflow_policy": {
+    "author_final_review_required": true,
+    "full_572_generation": "BLOCKED_PENDING_FULL_PILOT_WORKFLOW_VALIDATION",
+    "human_comments_are_evidence": false,
+    "model_interpretation_is_evidence": false,
+    "source_evidence_is_authoritative": true
+  }
+}
