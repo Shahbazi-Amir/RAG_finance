@@ -417,11 +417,31 @@
         "author_final_review": {
           "decision": null,
           "notes": null,
-          "status": "NOT_STARTED"
+          "status": "NOT_STARTED",
+          "reviewer": "AUTHOR"
         },
         "citation_review": {
+          "citation_mapping_id": "citation-mapping:ff7901f2abfb97faf28c6d1b64c7bbe2",
           "citation_entries": [
             {
+              "citation_index": 0,
+              "document_id": "book:trainer-training-financial-literacy:fa-source:p000323",
+              "source_id": "book:trainer-training-financial-literacy:fa-source",
+              "target_evidence_id": "target-evidence:63c2f0f041fa8caa0f21a1aed165d7ec",
+              "role": "PROTECTED_REGION_MEMBER",
+              "char_start": 0,
+              "char_end": 212,
+              "char_count": 212,
+              "locator": {
+                "work_id": "book:trainer-training-financial-literacy",
+                "edition_id": "book:trainer-training-financial-literacy:fa-source",
+                "paragraph_id": "book:trainer-training-financial-literacy:fa-source:p000323",
+                "paragraph_number": 323,
+                "heading_path": [
+                  "بودجه‌بندی"
+                ]
+              },
+              "locator_origin": "COPIED_FROM_SECOND_HUMAN_REVIEW_REPLACEMENT_EVIDENCE",
               "attribution": {
                 "attribution_status": null,
                 "author": "Dr. Komeil Roudi",
@@ -435,29 +455,27 @@
                 "knowledge_owner": "Dr. Komeil Roudi",
                 "reference_expert_name": null,
                 "speaker": null
-              },
-              "char_count": 7,
-              "char_end": 7,
-              "char_start": 0,
-              "citation_index": 0,
-              "document_id": "book:trainer-training-financial-literacy:fa-source:p000329",
-              "locator": {
-                "edition_id": "book:trainer-training-financial-literacy:fa-source",
-                "heading_path": [
-                  "بودجه‌بندی",
-                  "تمرین 8"
-                ],
-                "paragraph_id": "book:trainer-training-financial-literacy:fa-source:p000329",
-                "paragraph_number": 329,
-                "work_id": "book:trainer-training-financial-literacy"
-              },
-              "locator_origin": "COPIED_FROM_VALIDATED_TARGET_EVIDENCE",
-              "role": "PROTECTED_REGION_MEMBER",
-              "source_id": "book:trainer-training-financial-literacy:fa-source",
-              "target_evidence_id": "target-evidence:8d87341f7847558d90ee76e350c64fa3",
-              "token_count": 2
+              }
             },
             {
+              "citation_index": 1,
+              "document_id": "book:trainer-training-financial-literacy:fa-source:p000324",
+              "source_id": "book:trainer-training-financial-literacy:fa-source",
+              "target_evidence_id": "target-evidence:63c2f0f041fa8caa0f21a1aed165d7ec",
+              "role": "PROTECTED_REGION_MEMBER",
+              "char_start": 0,
+              "char_end": 482,
+              "char_count": 482,
+              "locator": {
+                "work_id": "book:trainer-training-financial-literacy",
+                "edition_id": "book:trainer-training-financial-literacy:fa-source",
+                "paragraph_id": "book:trainer-training-financial-literacy:fa-source:p000324",
+                "paragraph_number": 324,
+                "heading_path": [
+                  "بودجه‌بندی"
+                ]
+              },
+              "locator_origin": "COPIED_FROM_SECOND_HUMAN_REVIEW_REPLACEMENT_EVIDENCE",
               "attribution": {
                 "attribution_status": null,
                 "author": "Dr. Komeil Roudi",
@@ -471,60 +489,238 @@
                 "knowledge_owner": "Dr. Komeil Roudi",
                 "reference_expert_name": null,
                 "speaker": null
-              },
-              "char_count": 156,
-              "char_end": 156,
-              "char_start": 0,
-              "citation_index": 1,
-              "document_id": "book:trainer-training-financial-literacy:fa-source:p000330",
-              "locator": {
-                "edition_id": "book:trainer-training-financial-literacy:fa-source",
-                "heading_path": [
-                  "بودجه‌بندی",
-                  "تمرین 8"
-                ],
-                "paragraph_id": "book:trainer-training-financial-literacy:fa-source:p000330",
-                "paragraph_number": 330,
-                "work_id": "book:trainer-training-financial-literacy"
-              },
-              "locator_origin": "COPIED_FROM_VALIDATED_TARGET_EVIDENCE",
-              "role": "PROTECTED_REGION_MEMBER",
+              }
+            },
+            {
+              "citation_index": 2,
+              "document_id": "book:trainer-training-financial-literacy:fa-source:p000325",
               "source_id": "book:trainer-training-financial-literacy:fa-source",
-              "target_evidence_id": "target-evidence:8d87341f7847558d90ee76e350c64fa3",
-              "token_count": 36
+              "target_evidence_id": "target-evidence:63c2f0f041fa8caa0f21a1aed165d7ec",
+              "role": "PROTECTED_REGION_MEMBER",
+              "char_start": 0,
+              "char_end": 418,
+              "char_count": 418,
+              "locator": {
+                "work_id": "book:trainer-training-financial-literacy",
+                "edition_id": "book:trainer-training-financial-literacy:fa-source",
+                "paragraph_id": "book:trainer-training-financial-literacy:fa-source:p000325",
+                "paragraph_number": 325,
+                "heading_path": [
+                  "بودجه‌بندی"
+                ]
+              },
+              "locator_origin": "COPIED_FROM_SECOND_HUMAN_REVIEW_REPLACEMENT_EVIDENCE",
+              "attribution": {
+                "attribution_status": null,
+                "author": "Dr. Komeil Roudi",
+                "author_id": null,
+                "authorship_assertion_source": null,
+                "byline_raw": null,
+                "content_authority_type": null,
+                "credited_author_name": null,
+                "editorial_credit_raw": null,
+                "editorial_supervisor_name": null,
+                "knowledge_owner": "Dr. Komeil Roudi",
+                "reference_expert_name": null,
+                "speaker": null
+              }
+            },
+            {
+              "citation_index": 3,
+              "document_id": "book:trainer-training-financial-literacy:fa-source:p000326",
+              "source_id": "book:trainer-training-financial-literacy:fa-source",
+              "target_evidence_id": "target-evidence:63c2f0f041fa8caa0f21a1aed165d7ec",
+              "role": "PROTECTED_REGION_MEMBER",
+              "char_start": 0,
+              "char_end": 492,
+              "char_count": 492,
+              "locator": {
+                "work_id": "book:trainer-training-financial-literacy",
+                "edition_id": "book:trainer-training-financial-literacy:fa-source",
+                "paragraph_id": "book:trainer-training-financial-literacy:fa-source:p000326",
+                "paragraph_number": 326,
+                "heading_path": [
+                  "بودجه‌بندی"
+                ]
+              },
+              "locator_origin": "COPIED_FROM_SECOND_HUMAN_REVIEW_REPLACEMENT_EVIDENCE",
+              "attribution": {
+                "attribution_status": null,
+                "author": "Dr. Komeil Roudi",
+                "author_id": null,
+                "authorship_assertion_source": null,
+                "byline_raw": null,
+                "content_authority_type": null,
+                "credited_author_name": null,
+                "editorial_credit_raw": null,
+                "editorial_supervisor_name": null,
+                "knowledge_owner": "Dr. Komeil Roudi",
+                "reference_expert_name": null,
+                "speaker": null
+              }
+            },
+            {
+              "citation_index": 4,
+              "document_id": "book:trainer-training-financial-literacy:fa-source:p000327",
+              "source_id": "book:trainer-training-financial-literacy:fa-source",
+              "target_evidence_id": "target-evidence:63c2f0f041fa8caa0f21a1aed165d7ec",
+              "role": "PROTECTED_REGION_MEMBER",
+              "char_start": 0,
+              "char_end": 570,
+              "char_count": 570,
+              "locator": {
+                "work_id": "book:trainer-training-financial-literacy",
+                "edition_id": "book:trainer-training-financial-literacy:fa-source",
+                "paragraph_id": "book:trainer-training-financial-literacy:fa-source:p000327",
+                "paragraph_number": 327,
+                "heading_path": [
+                  "بودجه‌بندی"
+                ]
+              },
+              "locator_origin": "COPIED_FROM_SECOND_HUMAN_REVIEW_REPLACEMENT_EVIDENCE",
+              "attribution": {
+                "attribution_status": null,
+                "author": "Dr. Komeil Roudi",
+                "author_id": null,
+                "authorship_assertion_source": null,
+                "byline_raw": null,
+                "content_authority_type": null,
+                "credited_author_name": null,
+                "editorial_credit_raw": null,
+                "editorial_supervisor_name": null,
+                "knowledge_owner": "Dr. Komeil Roudi",
+                "reference_expert_name": null,
+                "speaker": null
+              }
             }
           ],
-          "citation_mapping_id": "citation-mapping:0fe2439cd888def58854539b9653767c",
           "human_decision": "ACCEPT",
+          "machine_validation_status": "SECOND_HUMAN_REVIEW_LOCAL_GATES_PASS",
           "human_review": {
-            "citation_mapping_id": "citation-mapping:0fe2439cd888def58854539b9653767c",
-            "external_locator_lookup_used": false,
-            "human_decision": "ACCEPT",
-            "human_note": "Human Reviewer accepted the Citation Mapping after reviewing the validated book source locators.",
+            "review_record_version": "second_human_citation_review_record_v1",
+            "review_stage": "SECOND_HUMAN_REVIEW_CITATION",
             "pilot_case_id": "question-pilot:909b695797935246c92c7a66ebe0f773",
-            "review_record_version": "human_citation_review_record_v1",
-            "target_evidence_id": "target-evidence:8d87341f7847558d90ee76e350c64fa3"
-          },
-          "machine_validation_status": "PASS_PENDING_HUMAN_ADJUDICATION"
+            "question_draft_id": "question-draft:a053fb7be39c6adcfbc5ac6b697e2654",
+            "expected_answer_draft_id": "expected-answer-draft:91196c69ad81b99c1dc4f6be2d9af27b",
+            "target_evidence_id": "target-evidence:63c2f0f041fa8caa0f21a1aed165d7ec",
+            "citation_mapping_id": "citation-mapping:ff7901f2abfb97faf28c6d1b64c7bbe2",
+            "human_decision": "ACCEPT",
+            "external_locator_lookup_used": false,
+            "human_note": "Citation Mapping uses only the exact replacement book paragraphs 323-327 resolved in Cell 105."
+          }
         },
         "expected_answer_review": {
-          "expected_answer_draft_id": "expected-answer-draft:898d20ffa27dcb9feda6af40cf1aac2a",
-          "expected_answer_text": "باید از هر مقطع سنی دو نفر انتخاب شوند، درباره میزان هزینه ماهانه آن‌ها مصاحبه شود، به آن‌ها اطمینان داده شود که اطلاعاتشان محرمانه خواهد ماند و در پایان نتیجه مصاحبه‌ها تحلیل شود.",
+          "expected_answer_draft_id": "expected-answer-draft:91196c69ad81b99c1dc4f6be2d9af27b",
+          "expected_answer_text": "در ۵ تا ۷ سالگی کودک ابتدا بیشتر پول را نگه می‌دارد و پس‌انداز می‌کند و به‌تدریج خرج‌کردن را در موقعیت‌های واقعی یاد می‌گیرد. در ۸ تا ۱۲ سالگی پول‌توجیبی به خرج و پس‌انداز تقسیم می‌شود و الگوی پیشنهادی ۵۰ درصد برای هر کدام است. در ۱۲ تا ۱۵ سالگی سرمایه‌گذاری هم اضافه می‌شود و الگوی ۵۰ درصد خرج، ۳۰ درصد پس‌انداز و ۲۰ درصد سرمایه‌گذاری پیشنهاد می‌شود. در ۱۵ تا ۱۸ سالگی هدیه یا قرض به دیگران نیز به بودجه اضافه می‌شود و الگوی ۴۰ درصد خرج، ۳۰ درصد پس‌انداز، ۲۰ درصد سرمایه‌گذاری و ۱۰ درصد هدیه به دیگران مطرح شده است.",
           "human_decision": "ACCEPT",
+          "machine_validation_status": "SECOND_HUMAN_REVIEW_LOCAL_GATES_PASS",
+          "source_evidence": [
+            {
+              "part_index": 0,
+              "role": "PROTECTED_REGION_MEMBER",
+              "document_id": "book:trainer-training-financial-literacy:fa-source:p000323",
+              "text": "کودکان بین پنج تا هفت سال : اولین پولی که کودک دریافت می‌کند، تنها از آن نگهداری می‌کند و در واقع فقط پس‌انداز می‌کند و کم‌کم با موقعیت‌هایی که به او پول می‌دهیم (مانند فروشگاه یا مسافرت) خرج کردن را یاد می‌گیرد.",
+              "text_sha256": "677d558611edf84bf94d0b65a54f3c2ce28c02db001469d3b6473e7b1299c5ed",
+              "char_start": 0,
+              "char_end": 212,
+              "locator": {
+                "work_id": "book:trainer-training-financial-literacy",
+                "edition_id": "book:trainer-training-financial-literacy:fa-source",
+                "paragraph_id": "book:trainer-training-financial-literacy:fa-source:p000323",
+                "paragraph_number": 323,
+                "heading_path": [
+                  "بودجه‌بندی"
+                ]
+              }
+            },
+            {
+              "part_index": 1,
+              "role": "PROTECTED_REGION_MEMBER",
+              "document_id": "book:trainer-training-financial-literacy:fa-source:p000324",
+              "text": "کودکان بین هشت تا دوازده سال: دومین ردیف بودجه پول‌توجیبی هم یاد داده می‌شود. خرج پول با نظارت والدین است. هر چند به کودکان اجازهٔ اشتباه می‌دهند، اما همچنان کنارشان هستند و خرج پول با نظارت آن‌هاست. حتی اگر با خرید فرزند مخالف‌اند، اجازه می‌دهند بخرد. مهم این است که جلوی اشتباه گرفته نشود، بلکه بعد از اشتباه، خیلی واقعی درباره آن و چرایی اشتباه بودن آن گفتگو شود. در این سن، پول‌توجیبی فقط در دو ردیف خرج و پس‌انداز صرف می‌شود و می‌توان به هر کدام 50 درصد از دریافتی اختصاص یابد.",
+              "text_sha256": "d9fb383348eebcb4817733c5cfd169230353824fb3665f8a15e828ec60fe5b0c",
+              "char_start": 0,
+              "char_end": 482,
+              "locator": {
+                "work_id": "book:trainer-training-financial-literacy",
+                "edition_id": "book:trainer-training-financial-literacy:fa-source",
+                "paragraph_id": "book:trainer-training-financial-literacy:fa-source:p000324",
+                "paragraph_number": 324,
+                "heading_path": [
+                  "بودجه‌بندی"
+                ]
+              }
+            },
+            {
+              "part_index": 2,
+              "role": "PROTECTED_REGION_MEMBER",
+              "document_id": "book:trainer-training-financial-literacy:fa-source:p000325",
+              "text": "اگر با این روش پیش رفته باشیم، دیگر «پول خودم است» مطرح نیست؛ چون پدر و مادر همواره با او هستند. هیچ وقت احساس نمی‌کند پول خودش است. اگر کودکان بگویند پول خودشان است،‌ می‌گوییم باید پاسخگوی تصمیم‌شان باشند. ممکن است تصمیم‌شان پیامدهایی داشته یا نداشته باشد. اگر پیامدها، فرصت آموزش را فراهم می‌کرد، تصمیم اشتباه و پیامدش را یادآوری می‌کنیم. یادمان باشد هنگام یادگیری راه رفتن، فرزند را برای زمین خوردن مواخذه نمی‌کنیم.",
+              "text_sha256": "386f625c8655f0b966410e07990293b4b3ca973f03ab77d57e16b6e3ab127e62",
+              "char_start": 0,
+              "char_end": 418,
+              "locator": {
+                "work_id": "book:trainer-training-financial-literacy",
+                "edition_id": "book:trainer-training-financial-literacy:fa-source",
+                "paragraph_id": "book:trainer-training-financial-literacy:fa-source:p000325",
+                "paragraph_number": 325,
+                "heading_path": [
+                  "بودجه‌بندی"
+                ]
+              }
+            },
+            {
+              "part_index": 3,
+              "role": "PROTECTED_REGION_MEMBER",
+              "document_id": "book:trainer-training-financial-literacy:fa-source:p000326",
+              "text": "نوجوان دوازده تا پانزده سال:در این دوره ردیف سرمایه‌گذاری هم اضافه می‌شود و پول‌توجیبی به سه بخش تقسیم می‌شود: خرج، پس‌انداز و سرمایه‌گذاری. در این حالت به ترتیب الگوی 50 درصد، 30 درصد و 20 درصد می‌تواند به کارگرفته شود.(تفاوت پس‌انداز و سرمایه‌گذاری: مشخص و نامشخص بودن هدف، بازه زمانی کوتاه مدت و بلندمدت). می‌توان در نشست خانوادگی دربارهٔ سرفصل‌های بودجه‌بندی و خرج با آن‌ها به توافق رسید. در این دوره می‌توان به شکل موقعیتی به او، هدیه به دیگران، بخشش یا حتی قرض به دیگران را پیشنهاد کرد.",
+              "text_sha256": "f944fae3e3db1988ee15f21c005e431429f805a842b36d4d5b3a18f423dc02c4",
+              "char_start": 0,
+              "char_end": 492,
+              "locator": {
+                "work_id": "book:trainer-training-financial-literacy",
+                "edition_id": "book:trainer-training-financial-literacy:fa-source",
+                "paragraph_id": "book:trainer-training-financial-literacy:fa-source:p000326",
+                "paragraph_number": 326,
+                "heading_path": [
+                  "بودجه‌بندی"
+                ]
+              }
+            },
+            {
+              "part_index": 4,
+              "role": "PROTECTED_REGION_MEMBER",
+              "document_id": "book:trainer-training-financial-literacy:fa-source:p000327",
+              "text": "نوجوان پانزده تا هجده سال: در این دوره ردیف دیگری به پول‌توجیبی اضافه می‌شود: هدیه یا قرض به دیگران. تا پیش از این، به شکل موقعیتی با این ردیف آشنا بوده است. اما از اینجا به بعد با تعیین بخش و درصدی به این موضوع به آن ساختار می‌دهیم؛ الگوی 40 درصد خرج، 30 درصد پس‌انداز، 20 درصد سرمایه‌گذاری و 10 درصد هدیه به دیگران در سن مناسب است. نقش نظارتی والدین همچنان هست و آخر ماه از فرزندشان می‌خواهند توضیح دهد که این درصدها را چطور اعمال کرده است. این درصدها به نوعی خط‌کش است تا جلوی رفتارهای هیجانی نوجوان‌ها را بگیرد تا در هیچ کدام افراط و تفریط نداشته باشند؛ حتی در بخشش!",
+              "text_sha256": "258a482c4582d70a6681684b01643659a251b6b0a1143af8cfa565447de5f948",
+              "char_start": 0,
+              "char_end": 570,
+              "locator": {
+                "work_id": "book:trainer-training-financial-literacy",
+                "edition_id": "book:trainer-training-financial-literacy:fa-source",
+                "paragraph_id": "book:trainer-training-financial-literacy:fa-source:p000327",
+                "paragraph_number": 327,
+                "heading_path": [
+                  "بودجه‌بندی"
+                ]
+              }
+            }
+          ],
           "human_review": {
-            "expected_answer_draft_id": "expected-answer-draft:898d20ffa27dcb9feda6af40cf1aac2a",
+            "review_record_version": "second_human_expected_answer_review_record_v1",
+            "review_stage": "SECOND_HUMAN_REVIEW_EXPECTED_ANSWER",
+            "pilot_case_id": "question-pilot:909b695797935246c92c7a66ebe0f773",
+            "question_draft_id": "question-draft:a053fb7be39c6adcfbc5ac6b697e2654",
+            "expected_answer_draft_id": "expected-answer-draft:91196c69ad81b99c1dc4f6be2d9af27b",
+            "target_evidence_id": "target-evidence:63c2f0f041fa8caa0f21a1aed165d7ec",
+            "human_decision": "ACCEPT",
+            "expected_answer_text": "در ۵ تا ۷ سالگی کودک ابتدا بیشتر پول را نگه می‌دارد و پس‌انداز می‌کند و به‌تدریج خرج‌کردن را در موقعیت‌های واقعی یاد می‌گیرد. در ۸ تا ۱۲ سالگی پول‌توجیبی به خرج و پس‌انداز تقسیم می‌شود و الگوی پیشنهادی ۵۰ درصد برای هر کدام است. در ۱۲ تا ۱۵ سالگی سرمایه‌گذاری هم اضافه می‌شود و الگوی ۵۰ درصد خرج، ۳۰ درصد پس‌انداز و ۲۰ درصد سرمایه‌گذاری پیشنهاد می‌شود. در ۱۵ تا ۱۸ سالگی هدیه یا قرض به دیگران نیز به بودجه اضافه می‌شود و الگوی ۴۰ درصد خرج، ۳۰ درصد پس‌انداز، ۲۰ درصد سرمایه‌گذاری و ۱۰ درصد هدیه به دیگران مطرح شده است.",
             "external_knowledge_used": false,
             "human_context_used_as_evidence": false,
-            "human_decision": "ACCEPT",
-            "human_note": "Human Reviewer accepted the Expected Answer after reviewing it against the validated source evidence.",
-            "pilot_case_id": "question-pilot:909b695797935246c92c7a66ebe0f773",
-            "question_draft_id": "question-draft:147b34f2d29c31c873ad9591cb9ca3e4",
-            "review_record_version": "human_expected_answer_review_record_v1",
-            "target_evidence_id": "target-evidence:8d87341f7847558d90ee76e350c64fa3"
-          },
-          "machine_validation_status": "PASS_PENDING_HUMAN_ADJUDICATION"
+            "human_note": "Human Reviewer accepted the replacement Expected Answer after reviewing the exact book paragraphs 323-327."
+          }
         },
-        "final_question_draft_id": "question-draft:147b34f2d29c31c873ad9591cb9ca3e4",
+        "final_question_draft_id": "question-draft:a053fb7be39c6adcfbc5ac6b697e2654",
         "final_status": "HUMAN_REVIEW_COMPLETE_AUTHOR_FINAL_REVIEW_PENDING",
         "golden_case_id": "golden-case:a4ba6ce7e0602134515cdae757a16b98",
         "human_review_case_version": "human_review_case_v1",
@@ -534,6 +730,33 @@
             "human_decision": "ACCEPT",
             "human_note": "Human Reviewer accepted the Question as a direct structure-aware retrieval question grounded in Exercise 8.",
             "review_stage": "QUESTION"
+          },
+          {
+            "review_event_id": "human-review:8d679ba496e8d8e63e48e0896290a764",
+            "review_record_version": "second_human_review_record_v1",
+            "review_stage": "SECOND_HUMAN_REVIEW_RETARGET",
+            "pilot_case_id": "question-pilot:909b695797935246c92c7a66ebe0f773",
+            "human_decision": "RETARGET",
+            "previous_target_evidence_id": "target-evidence:8d87341f7847558d90ee76e350c64fa3",
+            "previous_question_draft_id": "question-draft:147b34f2d29c31c873ad9591cb9ca3e4",
+            "replacement_target_evidence_id": "target-evidence:63c2f0f041fa8caa0f21a1aed165d7ec",
+            "replacement_question_draft_id": "question-draft:a053fb7be39c6adcfbc5ac6b697e2654",
+            "previous_review_preserved": true,
+            "human_review_reason": "در بازبینی دوم مشخص شد Target قبلی فقط عنوان و دستور تمرین 8 را شامل می‌شد و سؤال پذیرفته‌شده قبلی بدون مشاهده کتاب، مستقل و طبیعی نبود. پس از بررسی متن کامل بخش بودجه‌بندی، پاراگراف‌های 323 تا 327 محتوای آموزشی کامل‌تر و مناسب‌تری برای همین Pilot فراهم کردند. Human Reviewer سؤال و پاسخ جایگزین را تأیید کرد.",
+            "raw_source_mutated": false,
+            "parser_output_mutated": false
+          },
+          {
+            "review_event_id": "human-review:de82b5f9b90dd1474b54c27b78c575a5",
+            "review_record_version": "second_human_question_review_record_v1",
+            "review_stage": "SECOND_HUMAN_REVIEW_QUESTION",
+            "pilot_case_id": "question-pilot:909b695797935246c92c7a66ebe0f773",
+            "target_evidence_id": "target-evidence:63c2f0f041fa8caa0f21a1aed165d7ec",
+            "question_draft_id": "question-draft:a053fb7be39c6adcfbc5ac6b697e2654",
+            "question_text": "مدیریت پول‌توجیبی از ۵ تا ۱۸ سالگی چگونه تغییر می‌کند و در هر بازه سنی چه تقسیم‌بندی‌ای پیشنهاد شده است؟",
+            "human_decision": "ACCEPT",
+            "human_note": "Human Reviewer explicitly approved the replacement Question after reviewing the full source context.",
+            "external_knowledge_used": false
           }
         ],
         "model_drafts": [
@@ -542,32 +765,290 @@
             "machine_validation": "PASS",
             "question_draft_id": "question-draft:147b34f2d29c31c873ad9591cb9ca3e4",
             "question_text": "در تمرین ۸، برای بررسی هزینه‌های ماهانه افراد چه مراحلی باید انجام شود؟",
-            "revision": 1
+            "revision": 1,
+            "second_review_status": "SUPERSEDED_BY_RETARGET",
+            "superseded_by_question_draft_id": "question-draft:a053fb7be39c6adcfbc5ac6b697e2654"
+          },
+          {
+            "question_draft_id": "question-draft:a053fb7be39c6adcfbc5ac6b697e2654",
+            "question_text": "مدیریت پول‌توجیبی از ۵ تا ۱۸ سالگی چگونه تغییر می‌کند و در هر بازه سنی چه تقسیم‌بندی‌ای پیشنهاد شده است؟",
+            "revision": 2,
+            "machine_validation": "SECOND_HUMAN_REVIEW_LOCAL_GATES_PASS",
+            "human_decision": "ACCEPT",
+            "review_origin": "SECOND_HUMAN_REVIEW_RETARGET",
+            "target_evidence_id": "target-evidence:63c2f0f041fa8caa0f21a1aed165d7ec"
           }
         ],
         "pilot_case_id": "question-pilot:909b695797935246c92c7a66ebe0f773",
         "source_evidence": [
           {
-            "char_end": 7,
-            "char_start": 0,
-            "document_id": "book:trainer-training-financial-literacy:fa-source:p000329",
             "part_index": 0,
             "role": "PROTECTED_REGION_MEMBER",
-            "text": "تمرین 8",
-            "text_sha256": "050059aaa3fc7a10d572ac3faa087faf54992599e540d12602f212018094f353"
+            "document_id": "book:trainer-training-financial-literacy:fa-source:p000323",
+            "text": "کودکان بین پنج تا هفت سال : اولین پولی که کودک دریافت می‌کند، تنها از آن نگهداری می‌کند و در واقع فقط پس‌انداز می‌کند و کم‌کم با موقعیت‌هایی که به او پول می‌دهیم (مانند فروشگاه یا مسافرت) خرج کردن را یاد می‌گیرد.",
+            "text_sha256": "677d558611edf84bf94d0b65a54f3c2ce28c02db001469d3b6473e7b1299c5ed",
+            "char_start": 0,
+            "char_end": 212,
+            "locator": {
+              "work_id": "book:trainer-training-financial-literacy",
+              "edition_id": "book:trainer-training-financial-literacy:fa-source",
+              "paragraph_id": "book:trainer-training-financial-literacy:fa-source:p000323",
+              "paragraph_number": 323,
+              "heading_path": [
+                "بودجه‌بندی"
+              ]
+            }
           },
           {
-            "char_end": 156,
-            "char_start": 0,
-            "document_id": "book:trainer-training-financial-literacy:fa-source:p000330",
             "part_index": 1,
             "role": "PROTECTED_REGION_MEMBER",
-            "text": "هر مقطع سنی دو نفر را انتخاب کنید و درباره میزان هزینه ماهانه آنها مصاحبه کنید. به آن‌ها اطمینان دهید که این اطلاعات محرمانه خواهد بود. نتیجه را تحلیل کنید.",
-            "text_sha256": "1e36cf04bfdb4b3fc5c8726fe58a206d5158ebcb86c9a9751c98d5203f3c4a96"
+            "document_id": "book:trainer-training-financial-literacy:fa-source:p000324",
+            "text": "کودکان بین هشت تا دوازده سال: دومین ردیف بودجه پول‌توجیبی هم یاد داده می‌شود. خرج پول با نظارت والدین است. هر چند به کودکان اجازهٔ اشتباه می‌دهند، اما همچنان کنارشان هستند و خرج پول با نظارت آن‌هاست. حتی اگر با خرید فرزند مخالف‌اند، اجازه می‌دهند بخرد. مهم این است که جلوی اشتباه گرفته نشود، بلکه بعد از اشتباه، خیلی واقعی درباره آن و چرایی اشتباه بودن آن گفتگو شود. در این سن، پول‌توجیبی فقط در دو ردیف خرج و پس‌انداز صرف می‌شود و می‌توان به هر کدام 50 درصد از دریافتی اختصاص یابد.",
+            "text_sha256": "d9fb383348eebcb4817733c5cfd169230353824fb3665f8a15e828ec60fe5b0c",
+            "char_start": 0,
+            "char_end": 482,
+            "locator": {
+              "work_id": "book:trainer-training-financial-literacy",
+              "edition_id": "book:trainer-training-financial-literacy:fa-source",
+              "paragraph_id": "book:trainer-training-financial-literacy:fa-source:p000324",
+              "paragraph_number": 324,
+              "heading_path": [
+                "بودجه‌بندی"
+              ]
+            }
+          },
+          {
+            "part_index": 2,
+            "role": "PROTECTED_REGION_MEMBER",
+            "document_id": "book:trainer-training-financial-literacy:fa-source:p000325",
+            "text": "اگر با این روش پیش رفته باشیم، دیگر «پول خودم است» مطرح نیست؛ چون پدر و مادر همواره با او هستند. هیچ وقت احساس نمی‌کند پول خودش است. اگر کودکان بگویند پول خودشان است،‌ می‌گوییم باید پاسخگوی تصمیم‌شان باشند. ممکن است تصمیم‌شان پیامدهایی داشته یا نداشته باشد. اگر پیامدها، فرصت آموزش را فراهم می‌کرد، تصمیم اشتباه و پیامدش را یادآوری می‌کنیم. یادمان باشد هنگام یادگیری راه رفتن، فرزند را برای زمین خوردن مواخذه نمی‌کنیم.",
+            "text_sha256": "386f625c8655f0b966410e07990293b4b3ca973f03ab77d57e16b6e3ab127e62",
+            "char_start": 0,
+            "char_end": 418,
+            "locator": {
+              "work_id": "book:trainer-training-financial-literacy",
+              "edition_id": "book:trainer-training-financial-literacy:fa-source",
+              "paragraph_id": "book:trainer-training-financial-literacy:fa-source:p000325",
+              "paragraph_number": 325,
+              "heading_path": [
+                "بودجه‌بندی"
+              ]
+            }
+          },
+          {
+            "part_index": 3,
+            "role": "PROTECTED_REGION_MEMBER",
+            "document_id": "book:trainer-training-financial-literacy:fa-source:p000326",
+            "text": "نوجوان دوازده تا پانزده سال:در این دوره ردیف سرمایه‌گذاری هم اضافه می‌شود و پول‌توجیبی به سه بخش تقسیم می‌شود: خرج، پس‌انداز و سرمایه‌گذاری. در این حالت به ترتیب الگوی 50 درصد، 30 درصد و 20 درصد می‌تواند به کارگرفته شود.(تفاوت پس‌انداز و سرمایه‌گذاری: مشخص و نامشخص بودن هدف، بازه زمانی کوتاه مدت و بلندمدت). می‌توان در نشست خانوادگی دربارهٔ سرفصل‌های بودجه‌بندی و خرج با آن‌ها به توافق رسید. در این دوره می‌توان به شکل موقعیتی به او، هدیه به دیگران، بخشش یا حتی قرض به دیگران را پیشنهاد کرد.",
+            "text_sha256": "f944fae3e3db1988ee15f21c005e431429f805a842b36d4d5b3a18f423dc02c4",
+            "char_start": 0,
+            "char_end": 492,
+            "locator": {
+              "work_id": "book:trainer-training-financial-literacy",
+              "edition_id": "book:trainer-training-financial-literacy:fa-source",
+              "paragraph_id": "book:trainer-training-financial-literacy:fa-source:p000326",
+              "paragraph_number": 326,
+              "heading_path": [
+                "بودجه‌بندی"
+              ]
+            }
+          },
+          {
+            "part_index": 4,
+            "role": "PROTECTED_REGION_MEMBER",
+            "document_id": "book:trainer-training-financial-literacy:fa-source:p000327",
+            "text": "نوجوان پانزده تا هجده سال: در این دوره ردیف دیگری به پول‌توجیبی اضافه می‌شود: هدیه یا قرض به دیگران. تا پیش از این، به شکل موقعیتی با این ردیف آشنا بوده است. اما از اینجا به بعد با تعیین بخش و درصدی به این موضوع به آن ساختار می‌دهیم؛ الگوی 40 درصد خرج، 30 درصد پس‌انداز، 20 درصد سرمایه‌گذاری و 10 درصد هدیه به دیگران در سن مناسب است. نقش نظارتی والدین همچنان هست و آخر ماه از فرزندشان می‌خواهند توضیح دهد که این درصدها را چطور اعمال کرده است. این درصدها به نوعی خط‌کش است تا جلوی رفتارهای هیجانی نوجوان‌ها را بگیرد تا در هیچ کدام افراط و تفریط نداشته باشند؛ حتی در بخشش!",
+            "text_sha256": "258a482c4582d70a6681684b01643659a251b6b0a1143af8cfa565447de5f948",
+            "char_start": 0,
+            "char_end": 570,
+            "locator": {
+              "work_id": "book:trainer-training-financial-literacy",
+              "edition_id": "book:trainer-training-financial-literacy:fa-source",
+              "paragraph_id": "book:trainer-training-financial-literacy:fa-source:p000327",
+              "paragraph_number": 327,
+              "heading_path": [
+                "بودجه‌بندی"
+              ]
+            }
           }
         ],
-        "target_evidence_id": "target-evidence:8d87341f7847558d90ee76e350c64fa3",
-        "task_draft_id": "task-draft:9caeff8892fcea99f90a32df8bb5f422"
+        "target_evidence_id": "target-evidence:63c2f0f041fa8caa0f21a1aed165d7ec",
+        "task_draft_id": "task-draft:9caeff8892fcea99f90a32df8bb5f422",
+        "post_final_human_review_history": [
+          {
+            "amendment_id": "second-human-review:fbe929adc9b90db334683c2b541ebd03",
+            "review_record_version": "second_human_review_amendment_v1",
+            "review_stage": "SECOND_HUMAN_REVIEW",
+            "review_timestamp_utc": "2026-09-08T15:42:28+00:00",
+            "registry_location": "author_review.cases_ready_for_review",
+            "human_decision": "RETARGET_AND_ACCEPT_REPLACEMENT",
+            "human_review_reason": "در بازبینی دوم مشخص شد Target قبلی فقط عنوان و دستور تمرین 8 را شامل می‌شد و سؤال پذیرفته‌شده قبلی بدون مشاهده کتاب، مستقل و طبیعی نبود. پس از بررسی متن کامل بخش بودجه‌بندی، پاراگراف‌های 323 تا 327 محتوای آموزشی کامل‌تر و مناسب‌تری برای همین Pilot فراهم کردند. Human Reviewer سؤال و پاسخ جایگزین را تأیید کرد.",
+            "previous_state_preserved": true,
+            "superseded_accepted_qa": {
+              "target_evidence_id": "target-evidence:8d87341f7847558d90ee76e350c64fa3",
+              "source_evidence": [
+                {
+                  "char_end": 7,
+                  "char_start": 0,
+                  "document_id": "book:trainer-training-financial-literacy:fa-source:p000329",
+                  "part_index": 0,
+                  "role": "PROTECTED_REGION_MEMBER",
+                  "text": "تمرین 8",
+                  "text_sha256": "050059aaa3fc7a10d572ac3faa087faf54992599e540d12602f212018094f353"
+                },
+                {
+                  "char_end": 156,
+                  "char_start": 0,
+                  "document_id": "book:trainer-training-financial-literacy:fa-source:p000330",
+                  "part_index": 1,
+                  "role": "PROTECTED_REGION_MEMBER",
+                  "text": "هر مقطع سنی دو نفر را انتخاب کنید و درباره میزان هزینه ماهانه آنها مصاحبه کنید. به آن‌ها اطمینان دهید که این اطلاعات محرمانه خواهد بود. نتیجه را تحلیل کنید.",
+                  "text_sha256": "1e36cf04bfdb4b3fc5c8726fe58a206d5158ebcb86c9a9751c98d5203f3c4a96"
+                }
+              ],
+              "question_draft_id": "question-draft:147b34f2d29c31c873ad9591cb9ca3e4",
+              "question_text": "در تمرین ۸، برای بررسی هزینه‌های ماهانه افراد چه مراحلی باید انجام شود؟",
+              "expected_answer_review": {
+                "expected_answer_draft_id": "expected-answer-draft:898d20ffa27dcb9feda6af40cf1aac2a",
+                "expected_answer_text": "باید از هر مقطع سنی دو نفر انتخاب شوند، درباره میزان هزینه ماهانه آن‌ها مصاحبه شود، به آن‌ها اطمینان داده شود که اطلاعاتشان محرمانه خواهد ماند و در پایان نتیجه مصاحبه‌ها تحلیل شود.",
+                "human_decision": "ACCEPT",
+                "human_review": {
+                  "expected_answer_draft_id": "expected-answer-draft:898d20ffa27dcb9feda6af40cf1aac2a",
+                  "external_knowledge_used": false,
+                  "human_context_used_as_evidence": false,
+                  "human_decision": "ACCEPT",
+                  "human_note": "Human Reviewer accepted the Expected Answer after reviewing it against the validated source evidence.",
+                  "pilot_case_id": "question-pilot:909b695797935246c92c7a66ebe0f773",
+                  "question_draft_id": "question-draft:147b34f2d29c31c873ad9591cb9ca3e4",
+                  "review_record_version": "human_expected_answer_review_record_v1",
+                  "target_evidence_id": "target-evidence:8d87341f7847558d90ee76e350c64fa3"
+                },
+                "machine_validation_status": "PASS_PENDING_HUMAN_ADJUDICATION"
+              },
+              "citation_review": {
+                "citation_entries": [
+                  {
+                    "attribution": {
+                      "attribution_status": null,
+                      "author": "Dr. Komeil Roudi",
+                      "author_id": null,
+                      "authorship_assertion_source": null,
+                      "byline_raw": null,
+                      "content_authority_type": null,
+                      "credited_author_name": null,
+                      "editorial_credit_raw": null,
+                      "editorial_supervisor_name": null,
+                      "knowledge_owner": "Dr. Komeil Roudi",
+                      "reference_expert_name": null,
+                      "speaker": null
+                    },
+                    "char_count": 7,
+                    "char_end": 7,
+                    "char_start": 0,
+                    "citation_index": 0,
+                    "document_id": "book:trainer-training-financial-literacy:fa-source:p000329",
+                    "locator": {
+                      "edition_id": "book:trainer-training-financial-literacy:fa-source",
+                      "heading_path": [
+                        "بودجه‌بندی",
+                        "تمرین 8"
+                      ],
+                      "paragraph_id": "book:trainer-training-financial-literacy:fa-source:p000329",
+                      "paragraph_number": 329,
+                      "work_id": "book:trainer-training-financial-literacy"
+                    },
+                    "locator_origin": "COPIED_FROM_VALIDATED_TARGET_EVIDENCE",
+                    "role": "PROTECTED_REGION_MEMBER",
+                    "source_id": "book:trainer-training-financial-literacy:fa-source",
+                    "target_evidence_id": "target-evidence:8d87341f7847558d90ee76e350c64fa3",
+                    "token_count": 2
+                  },
+                  {
+                    "attribution": {
+                      "attribution_status": null,
+                      "author": "Dr. Komeil Roudi",
+                      "author_id": null,
+                      "authorship_assertion_source": null,
+                      "byline_raw": null,
+                      "content_authority_type": null,
+                      "credited_author_name": null,
+                      "editorial_credit_raw": null,
+                      "editorial_supervisor_name": null,
+                      "knowledge_owner": "Dr. Komeil Roudi",
+                      "reference_expert_name": null,
+                      "speaker": null
+                    },
+                    "char_count": 156,
+                    "char_end": 156,
+                    "char_start": 0,
+                    "citation_index": 1,
+                    "document_id": "book:trainer-training-financial-literacy:fa-source:p000330",
+                    "locator": {
+                      "edition_id": "book:trainer-training-financial-literacy:fa-source",
+                      "heading_path": [
+                        "بودجه‌بندی",
+                        "تمرین 8"
+                      ],
+                      "paragraph_id": "book:trainer-training-financial-literacy:fa-source:p000330",
+                      "paragraph_number": 330,
+                      "work_id": "book:trainer-training-financial-literacy"
+                    },
+                    "locator_origin": "COPIED_FROM_VALIDATED_TARGET_EVIDENCE",
+                    "role": "PROTECTED_REGION_MEMBER",
+                    "source_id": "book:trainer-training-financial-literacy:fa-source",
+                    "target_evidence_id": "target-evidence:8d87341f7847558d90ee76e350c64fa3",
+                    "token_count": 36
+                  }
+                ],
+                "citation_mapping_id": "citation-mapping:0fe2439cd888def58854539b9653767c",
+                "human_decision": "ACCEPT",
+                "human_review": {
+                  "citation_mapping_id": "citation-mapping:0fe2439cd888def58854539b9653767c",
+                  "external_locator_lookup_used": false,
+                  "human_decision": "ACCEPT",
+                  "human_note": "Human Reviewer accepted the Citation Mapping after reviewing the validated book source locators.",
+                  "pilot_case_id": "question-pilot:909b695797935246c92c7a66ebe0f773",
+                  "review_record_version": "human_citation_review_record_v1",
+                  "target_evidence_id": "target-evidence:8d87341f7847558d90ee76e350c64fa3"
+                },
+                "machine_validation_status": "PASS_PENDING_HUMAN_ADJUDICATION"
+              }
+            },
+            "replacement_state": {
+              "target_evidence_id": "target-evidence:63c2f0f041fa8caa0f21a1aed165d7ec",
+              "replacement_paragraphs": [
+                323,
+                324,
+                325,
+                326,
+                327
+              ],
+              "question_draft_id": "question-draft:a053fb7be39c6adcfbc5ac6b697e2654",
+              "question_text": "مدیریت پول‌توجیبی از ۵ تا ۱۸ سالگی چگونه تغییر می‌کند و در هر بازه سنی چه تقسیم‌بندی‌ای پیشنهاد شده است؟",
+              "expected_answer_draft_id": "expected-answer-draft:91196c69ad81b99c1dc4f6be2d9af27b",
+              "expected_answer_text": "در ۵ تا ۷ سالگی کودک ابتدا بیشتر پول را نگه می‌دارد و پس‌انداز می‌کند و به‌تدریج خرج‌کردن را در موقعیت‌های واقعی یاد می‌گیرد. در ۸ تا ۱۲ سالگی پول‌توجیبی به خرج و پس‌انداز تقسیم می‌شود و الگوی پیشنهادی ۵۰ درصد برای هر کدام است. در ۱۲ تا ۱۵ سالگی سرمایه‌گذاری هم اضافه می‌شود و الگوی ۵۰ درصد خرج، ۳۰ درصد پس‌انداز و ۲۰ درصد سرمایه‌گذاری پیشنهاد می‌شود. در ۱۵ تا ۱۸ سالگی هدیه یا قرض به دیگران نیز به بودجه اضافه می‌شود و الگوی ۴۰ درصد خرج، ۳۰ درصد پس‌انداز، ۲۰ درصد سرمایه‌گذاری و ۱۰ درصد هدیه به دیگران مطرح شده است.",
+              "citation_mapping_id": "citation-mapping:ff7901f2abfb97faf28c6d1b64c7bbe2"
+            },
+            "raw_source_mutated": false,
+            "parser_output_mutated": false,
+            "author_review_recorded": false
+          }
+        ],
+        "second_human_review": {
+          "amendment_id": "second-human-review:fbe929adc9b90db334683c2b541ebd03",
+          "status": "COMPLETE",
+          "decision": "RETARGET_AND_ACCEPT_REPLACEMENT",
+          "review_timestamp_utc": "2026-09-08T15:42:28+00:00",
+          "previous_target_evidence_id": "target-evidence:8d87341f7847558d90ee76e350c64fa3",
+          "replacement_target_evidence_id": "target-evidence:63c2f0f041fa8caa0f21a1aed165d7ec",
+          "replacement_question_draft_id": "question-draft:a053fb7be39c6adcfbc5ac6b697e2654",
+          "replacement_expected_answer_draft_id": "expected-answer-draft:91196c69ad81b99c1dc4f6be2d9af27b",
+          "replacement_citation_mapping_id": "citation-mapping:ff7901f2abfb97faf28c6d1b64c7bbe2",
+          "previous_state_preserved": true,
+          "raw_source_mutated": false,
+          "parser_output_mutated": false,
+          "author_review_status": "NOT_STARTED"
+        }
       },
       {
         "author_final_review": {
@@ -28102,11 +28583,31 @@
       "author_final_review": {
         "decision": null,
         "notes": null,
-        "status": "NOT_STARTED"
+        "status": "NOT_STARTED",
+        "reviewer": "AUTHOR"
       },
       "citation_review": {
+        "citation_mapping_id": "citation-mapping:ff7901f2abfb97faf28c6d1b64c7bbe2",
         "citation_entries": [
           {
+            "citation_index": 0,
+            "document_id": "book:trainer-training-financial-literacy:fa-source:p000323",
+            "source_id": "book:trainer-training-financial-literacy:fa-source",
+            "target_evidence_id": "target-evidence:63c2f0f041fa8caa0f21a1aed165d7ec",
+            "role": "PROTECTED_REGION_MEMBER",
+            "char_start": 0,
+            "char_end": 212,
+            "char_count": 212,
+            "locator": {
+              "work_id": "book:trainer-training-financial-literacy",
+              "edition_id": "book:trainer-training-financial-literacy:fa-source",
+              "paragraph_id": "book:trainer-training-financial-literacy:fa-source:p000323",
+              "paragraph_number": 323,
+              "heading_path": [
+                "بودجه‌بندی"
+              ]
+            },
+            "locator_origin": "COPIED_FROM_SECOND_HUMAN_REVIEW_REPLACEMENT_EVIDENCE",
             "attribution": {
               "attribution_status": null,
               "author": "Dr. Komeil Roudi",
@@ -28120,29 +28621,27 @@
               "knowledge_owner": "Dr. Komeil Roudi",
               "reference_expert_name": null,
               "speaker": null
-            },
-            "char_count": 7,
-            "char_end": 7,
-            "char_start": 0,
-            "citation_index": 0,
-            "document_id": "book:trainer-training-financial-literacy:fa-source:p000329",
-            "locator": {
-              "edition_id": "book:trainer-training-financial-literacy:fa-source",
-              "heading_path": [
-                "بودجه‌بندی",
-                "تمرین 8"
-              ],
-              "paragraph_id": "book:trainer-training-financial-literacy:fa-source:p000329",
-              "paragraph_number": 329,
-              "work_id": "book:trainer-training-financial-literacy"
-            },
-            "locator_origin": "COPIED_FROM_VALIDATED_TARGET_EVIDENCE",
-            "role": "PROTECTED_REGION_MEMBER",
-            "source_id": "book:trainer-training-financial-literacy:fa-source",
-            "target_evidence_id": "target-evidence:8d87341f7847558d90ee76e350c64fa3",
-            "token_count": 2
+            }
           },
           {
+            "citation_index": 1,
+            "document_id": "book:trainer-training-financial-literacy:fa-source:p000324",
+            "source_id": "book:trainer-training-financial-literacy:fa-source",
+            "target_evidence_id": "target-evidence:63c2f0f041fa8caa0f21a1aed165d7ec",
+            "role": "PROTECTED_REGION_MEMBER",
+            "char_start": 0,
+            "char_end": 482,
+            "char_count": 482,
+            "locator": {
+              "work_id": "book:trainer-training-financial-literacy",
+              "edition_id": "book:trainer-training-financial-literacy:fa-source",
+              "paragraph_id": "book:trainer-training-financial-literacy:fa-source:p000324",
+              "paragraph_number": 324,
+              "heading_path": [
+                "بودجه‌بندی"
+              ]
+            },
+            "locator_origin": "COPIED_FROM_SECOND_HUMAN_REVIEW_REPLACEMENT_EVIDENCE",
             "attribution": {
               "attribution_status": null,
               "author": "Dr. Komeil Roudi",
@@ -28156,60 +28655,238 @@
               "knowledge_owner": "Dr. Komeil Roudi",
               "reference_expert_name": null,
               "speaker": null
-            },
-            "char_count": 156,
-            "char_end": 156,
-            "char_start": 0,
-            "citation_index": 1,
-            "document_id": "book:trainer-training-financial-literacy:fa-source:p000330",
-            "locator": {
-              "edition_id": "book:trainer-training-financial-literacy:fa-source",
-              "heading_path": [
-                "بودجه‌بندی",
-                "تمرین 8"
-              ],
-              "paragraph_id": "book:trainer-training-financial-literacy:fa-source:p000330",
-              "paragraph_number": 330,
-              "work_id": "book:trainer-training-financial-literacy"
-            },
-            "locator_origin": "COPIED_FROM_VALIDATED_TARGET_EVIDENCE",
-            "role": "PROTECTED_REGION_MEMBER",
+            }
+          },
+          {
+            "citation_index": 2,
+            "document_id": "book:trainer-training-financial-literacy:fa-source:p000325",
             "source_id": "book:trainer-training-financial-literacy:fa-source",
-            "target_evidence_id": "target-evidence:8d87341f7847558d90ee76e350c64fa3",
-            "token_count": 36
+            "target_evidence_id": "target-evidence:63c2f0f041fa8caa0f21a1aed165d7ec",
+            "role": "PROTECTED_REGION_MEMBER",
+            "char_start": 0,
+            "char_end": 418,
+            "char_count": 418,
+            "locator": {
+              "work_id": "book:trainer-training-financial-literacy",
+              "edition_id": "book:trainer-training-financial-literacy:fa-source",
+              "paragraph_id": "book:trainer-training-financial-literacy:fa-source:p000325",
+              "paragraph_number": 325,
+              "heading_path": [
+                "بودجه‌بندی"
+              ]
+            },
+            "locator_origin": "COPIED_FROM_SECOND_HUMAN_REVIEW_REPLACEMENT_EVIDENCE",
+            "attribution": {
+              "attribution_status": null,
+              "author": "Dr. Komeil Roudi",
+              "author_id": null,
+              "authorship_assertion_source": null,
+              "byline_raw": null,
+              "content_authority_type": null,
+              "credited_author_name": null,
+              "editorial_credit_raw": null,
+              "editorial_supervisor_name": null,
+              "knowledge_owner": "Dr. Komeil Roudi",
+              "reference_expert_name": null,
+              "speaker": null
+            }
+          },
+          {
+            "citation_index": 3,
+            "document_id": "book:trainer-training-financial-literacy:fa-source:p000326",
+            "source_id": "book:trainer-training-financial-literacy:fa-source",
+            "target_evidence_id": "target-evidence:63c2f0f041fa8caa0f21a1aed165d7ec",
+            "role": "PROTECTED_REGION_MEMBER",
+            "char_start": 0,
+            "char_end": 492,
+            "char_count": 492,
+            "locator": {
+              "work_id": "book:trainer-training-financial-literacy",
+              "edition_id": "book:trainer-training-financial-literacy:fa-source",
+              "paragraph_id": "book:trainer-training-financial-literacy:fa-source:p000326",
+              "paragraph_number": 326,
+              "heading_path": [
+                "بودجه‌بندی"
+              ]
+            },
+            "locator_origin": "COPIED_FROM_SECOND_HUMAN_REVIEW_REPLACEMENT_EVIDENCE",
+            "attribution": {
+              "attribution_status": null,
+              "author": "Dr. Komeil Roudi",
+              "author_id": null,
+              "authorship_assertion_source": null,
+              "byline_raw": null,
+              "content_authority_type": null,
+              "credited_author_name": null,
+              "editorial_credit_raw": null,
+              "editorial_supervisor_name": null,
+              "knowledge_owner": "Dr. Komeil Roudi",
+              "reference_expert_name": null,
+              "speaker": null
+            }
+          },
+          {
+            "citation_index": 4,
+            "document_id": "book:trainer-training-financial-literacy:fa-source:p000327",
+            "source_id": "book:trainer-training-financial-literacy:fa-source",
+            "target_evidence_id": "target-evidence:63c2f0f041fa8caa0f21a1aed165d7ec",
+            "role": "PROTECTED_REGION_MEMBER",
+            "char_start": 0,
+            "char_end": 570,
+            "char_count": 570,
+            "locator": {
+              "work_id": "book:trainer-training-financial-literacy",
+              "edition_id": "book:trainer-training-financial-literacy:fa-source",
+              "paragraph_id": "book:trainer-training-financial-literacy:fa-source:p000327",
+              "paragraph_number": 327,
+              "heading_path": [
+                "بودجه‌بندی"
+              ]
+            },
+            "locator_origin": "COPIED_FROM_SECOND_HUMAN_REVIEW_REPLACEMENT_EVIDENCE",
+            "attribution": {
+              "attribution_status": null,
+              "author": "Dr. Komeil Roudi",
+              "author_id": null,
+              "authorship_assertion_source": null,
+              "byline_raw": null,
+              "content_authority_type": null,
+              "credited_author_name": null,
+              "editorial_credit_raw": null,
+              "editorial_supervisor_name": null,
+              "knowledge_owner": "Dr. Komeil Roudi",
+              "reference_expert_name": null,
+              "speaker": null
+            }
           }
         ],
-        "citation_mapping_id": "citation-mapping:0fe2439cd888def58854539b9653767c",
         "human_decision": "ACCEPT",
+        "machine_validation_status": "SECOND_HUMAN_REVIEW_LOCAL_GATES_PASS",
         "human_review": {
-          "citation_mapping_id": "citation-mapping:0fe2439cd888def58854539b9653767c",
-          "external_locator_lookup_used": false,
-          "human_decision": "ACCEPT",
-          "human_note": "Human Reviewer accepted the Citation Mapping after reviewing the validated book source locators.",
+          "review_record_version": "second_human_citation_review_record_v1",
+          "review_stage": "SECOND_HUMAN_REVIEW_CITATION",
           "pilot_case_id": "question-pilot:909b695797935246c92c7a66ebe0f773",
-          "review_record_version": "human_citation_review_record_v1",
-          "target_evidence_id": "target-evidence:8d87341f7847558d90ee76e350c64fa3"
-        },
-        "machine_validation_status": "PASS_PENDING_HUMAN_ADJUDICATION"
+          "question_draft_id": "question-draft:a053fb7be39c6adcfbc5ac6b697e2654",
+          "expected_answer_draft_id": "expected-answer-draft:91196c69ad81b99c1dc4f6be2d9af27b",
+          "target_evidence_id": "target-evidence:63c2f0f041fa8caa0f21a1aed165d7ec",
+          "citation_mapping_id": "citation-mapping:ff7901f2abfb97faf28c6d1b64c7bbe2",
+          "human_decision": "ACCEPT",
+          "external_locator_lookup_used": false,
+          "human_note": "Citation Mapping uses only the exact replacement book paragraphs 323-327 resolved in Cell 105."
+        }
       },
       "expected_answer_review": {
-        "expected_answer_draft_id": "expected-answer-draft:898d20ffa27dcb9feda6af40cf1aac2a",
-        "expected_answer_text": "باید از هر مقطع سنی دو نفر انتخاب شوند، درباره میزان هزینه ماهانه آن‌ها مصاحبه شود، به آن‌ها اطمینان داده شود که اطلاعاتشان محرمانه خواهد ماند و در پایان نتیجه مصاحبه‌ها تحلیل شود.",
+        "expected_answer_draft_id": "expected-answer-draft:91196c69ad81b99c1dc4f6be2d9af27b",
+        "expected_answer_text": "در ۵ تا ۷ سالگی کودک ابتدا بیشتر پول را نگه می‌دارد و پس‌انداز می‌کند و به‌تدریج خرج‌کردن را در موقعیت‌های واقعی یاد می‌گیرد. در ۸ تا ۱۲ سالگی پول‌توجیبی به خرج و پس‌انداز تقسیم می‌شود و الگوی پیشنهادی ۵۰ درصد برای هر کدام است. در ۱۲ تا ۱۵ سالگی سرمایه‌گذاری هم اضافه می‌شود و الگوی ۵۰ درصد خرج، ۳۰ درصد پس‌انداز و ۲۰ درصد سرمایه‌گذاری پیشنهاد می‌شود. در ۱۵ تا ۱۸ سالگی هدیه یا قرض به دیگران نیز به بودجه اضافه می‌شود و الگوی ۴۰ درصد خرج، ۳۰ درصد پس‌انداز، ۲۰ درصد سرمایه‌گذاری و ۱۰ درصد هدیه به دیگران مطرح شده است.",
         "human_decision": "ACCEPT",
+        "machine_validation_status": "SECOND_HUMAN_REVIEW_LOCAL_GATES_PASS",
+        "source_evidence": [
+          {
+            "part_index": 0,
+            "role": "PROTECTED_REGION_MEMBER",
+            "document_id": "book:trainer-training-financial-literacy:fa-source:p000323",
+            "text": "کودکان بین پنج تا هفت سال : اولین پولی که کودک دریافت می‌کند، تنها از آن نگهداری می‌کند و در واقع فقط پس‌انداز می‌کند و کم‌کم با موقعیت‌هایی که به او پول می‌دهیم (مانند فروشگاه یا مسافرت) خرج کردن را یاد می‌گیرد.",
+            "text_sha256": "677d558611edf84bf94d0b65a54f3c2ce28c02db001469d3b6473e7b1299c5ed",
+            "char_start": 0,
+            "char_end": 212,
+            "locator": {
+              "work_id": "book:trainer-training-financial-literacy",
+              "edition_id": "book:trainer-training-financial-literacy:fa-source",
+              "paragraph_id": "book:trainer-training-financial-literacy:fa-source:p000323",
+              "paragraph_number": 323,
+              "heading_path": [
+                "بودجه‌بندی"
+              ]
+            }
+          },
+          {
+            "part_index": 1,
+            "role": "PROTECTED_REGION_MEMBER",
+            "document_id": "book:trainer-training-financial-literacy:fa-source:p000324",
+            "text": "کودکان بین هشت تا دوازده سال: دومین ردیف بودجه پول‌توجیبی هم یاد داده می‌شود. خرج پول با نظارت والدین است. هر چند به کودکان اجازهٔ اشتباه می‌دهند، اما همچنان کنارشان هستند و خرج پول با نظارت آن‌هاست. حتی اگر با خرید فرزند مخالف‌اند، اجازه می‌دهند بخرد. مهم این است که جلوی اشتباه گرفته نشود، بلکه بعد از اشتباه، خیلی واقعی درباره آن و چرایی اشتباه بودن آن گفتگو شود. در این سن، پول‌توجیبی فقط در دو ردیف خرج و پس‌انداز صرف می‌شود و می‌توان به هر کدام 50 درصد از دریافتی اختصاص یابد.",
+            "text_sha256": "d9fb383348eebcb4817733c5cfd169230353824fb3665f8a15e828ec60fe5b0c",
+            "char_start": 0,
+            "char_end": 482,
+            "locator": {
+              "work_id": "book:trainer-training-financial-literacy",
+              "edition_id": "book:trainer-training-financial-literacy:fa-source",
+              "paragraph_id": "book:trainer-training-financial-literacy:fa-source:p000324",
+              "paragraph_number": 324,
+              "heading_path": [
+                "بودجه‌بندی"
+              ]
+            }
+          },
+          {
+            "part_index": 2,
+            "role": "PROTECTED_REGION_MEMBER",
+            "document_id": "book:trainer-training-financial-literacy:fa-source:p000325",
+            "text": "اگر با این روش پیش رفته باشیم، دیگر «پول خودم است» مطرح نیست؛ چون پدر و مادر همواره با او هستند. هیچ وقت احساس نمی‌کند پول خودش است. اگر کودکان بگویند پول خودشان است،‌ می‌گوییم باید پاسخگوی تصمیم‌شان باشند. ممکن است تصمیم‌شان پیامدهایی داشته یا نداشته باشد. اگر پیامدها، فرصت آموزش را فراهم می‌کرد، تصمیم اشتباه و پیامدش را یادآوری می‌کنیم. یادمان باشد هنگام یادگیری راه رفتن، فرزند را برای زمین خوردن مواخذه نمی‌کنیم.",
+            "text_sha256": "386f625c8655f0b966410e07990293b4b3ca973f03ab77d57e16b6e3ab127e62",
+            "char_start": 0,
+            "char_end": 418,
+            "locator": {
+              "work_id": "book:trainer-training-financial-literacy",
+              "edition_id": "book:trainer-training-financial-literacy:fa-source",
+              "paragraph_id": "book:trainer-training-financial-literacy:fa-source:p000325",
+              "paragraph_number": 325,
+              "heading_path": [
+                "بودجه‌بندی"
+              ]
+            }
+          },
+          {
+            "part_index": 3,
+            "role": "PROTECTED_REGION_MEMBER",
+            "document_id": "book:trainer-training-financial-literacy:fa-source:p000326",
+            "text": "نوجوان دوازده تا پانزده سال:در این دوره ردیف سرمایه‌گذاری هم اضافه می‌شود و پول‌توجیبی به سه بخش تقسیم می‌شود: خرج، پس‌انداز و سرمایه‌گذاری. در این حالت به ترتیب الگوی 50 درصد، 30 درصد و 20 درصد می‌تواند به کارگرفته شود.(تفاوت پس‌انداز و سرمایه‌گذاری: مشخص و نامشخص بودن هدف، بازه زمانی کوتاه مدت و بلندمدت). می‌توان در نشست خانوادگی دربارهٔ سرفصل‌های بودجه‌بندی و خرج با آن‌ها به توافق رسید. در این دوره می‌توان به شکل موقعیتی به او، هدیه به دیگران، بخشش یا حتی قرض به دیگران را پیشنهاد کرد.",
+            "text_sha256": "f944fae3e3db1988ee15f21c005e431429f805a842b36d4d5b3a18f423dc02c4",
+            "char_start": 0,
+            "char_end": 492,
+            "locator": {
+              "work_id": "book:trainer-training-financial-literacy",
+              "edition_id": "book:trainer-training-financial-literacy:fa-source",
+              "paragraph_id": "book:trainer-training-financial-literacy:fa-source:p000326",
+              "paragraph_number": 326,
+              "heading_path": [
+                "بودجه‌بندی"
+              ]
+            }
+          },
+          {
+            "part_index": 4,
+            "role": "PROTECTED_REGION_MEMBER",
+            "document_id": "book:trainer-training-financial-literacy:fa-source:p000327",
+            "text": "نوجوان پانزده تا هجده سال: در این دوره ردیف دیگری به پول‌توجیبی اضافه می‌شود: هدیه یا قرض به دیگران. تا پیش از این، به شکل موقعیتی با این ردیف آشنا بوده است. اما از اینجا به بعد با تعیین بخش و درصدی به این موضوع به آن ساختار می‌دهیم؛ الگوی 40 درصد خرج، 30 درصد پس‌انداز، 20 درصد سرمایه‌گذاری و 10 درصد هدیه به دیگران در سن مناسب است. نقش نظارتی والدین همچنان هست و آخر ماه از فرزندشان می‌خواهند توضیح دهد که این درصدها را چطور اعمال کرده است. این درصدها به نوعی خط‌کش است تا جلوی رفتارهای هیجانی نوجوان‌ها را بگیرد تا در هیچ کدام افراط و تفریط نداشته باشند؛ حتی در بخشش!",
+            "text_sha256": "258a482c4582d70a6681684b01643659a251b6b0a1143af8cfa565447de5f948",
+            "char_start": 0,
+            "char_end": 570,
+            "locator": {
+              "work_id": "book:trainer-training-financial-literacy",
+              "edition_id": "book:trainer-training-financial-literacy:fa-source",
+              "paragraph_id": "book:trainer-training-financial-literacy:fa-source:p000327",
+              "paragraph_number": 327,
+              "heading_path": [
+                "بودجه‌بندی"
+              ]
+            }
+          }
+        ],
         "human_review": {
-          "expected_answer_draft_id": "expected-answer-draft:898d20ffa27dcb9feda6af40cf1aac2a",
+          "review_record_version": "second_human_expected_answer_review_record_v1",
+          "review_stage": "SECOND_HUMAN_REVIEW_EXPECTED_ANSWER",
+          "pilot_case_id": "question-pilot:909b695797935246c92c7a66ebe0f773",
+          "question_draft_id": "question-draft:a053fb7be39c6adcfbc5ac6b697e2654",
+          "expected_answer_draft_id": "expected-answer-draft:91196c69ad81b99c1dc4f6be2d9af27b",
+          "target_evidence_id": "target-evidence:63c2f0f041fa8caa0f21a1aed165d7ec",
+          "human_decision": "ACCEPT",
+          "expected_answer_text": "در ۵ تا ۷ سالگی کودک ابتدا بیشتر پول را نگه می‌دارد و پس‌انداز می‌کند و به‌تدریج خرج‌کردن را در موقعیت‌های واقعی یاد می‌گیرد. در ۸ تا ۱۲ سالگی پول‌توجیبی به خرج و پس‌انداز تقسیم می‌شود و الگوی پیشنهادی ۵۰ درصد برای هر کدام است. در ۱۲ تا ۱۵ سالگی سرمایه‌گذاری هم اضافه می‌شود و الگوی ۵۰ درصد خرج، ۳۰ درصد پس‌انداز و ۲۰ درصد سرمایه‌گذاری پیشنهاد می‌شود. در ۱۵ تا ۱۸ سالگی هدیه یا قرض به دیگران نیز به بودجه اضافه می‌شود و الگوی ۴۰ درصد خرج، ۳۰ درصد پس‌انداز، ۲۰ درصد سرمایه‌گذاری و ۱۰ درصد هدیه به دیگران مطرح شده است.",
           "external_knowledge_used": false,
           "human_context_used_as_evidence": false,
-          "human_decision": "ACCEPT",
-          "human_note": "Human Reviewer accepted the Expected Answer after reviewing it against the validated source evidence.",
-          "pilot_case_id": "question-pilot:909b695797935246c92c7a66ebe0f773",
-          "question_draft_id": "question-draft:147b34f2d29c31c873ad9591cb9ca3e4",
-          "review_record_version": "human_expected_answer_review_record_v1",
-          "target_evidence_id": "target-evidence:8d87341f7847558d90ee76e350c64fa3"
-        },
-        "machine_validation_status": "PASS_PENDING_HUMAN_ADJUDICATION"
+          "human_note": "Human Reviewer accepted the replacement Expected Answer after reviewing the exact book paragraphs 323-327."
+        }
       },
-      "final_question_draft_id": "question-draft:147b34f2d29c31c873ad9591cb9ca3e4",
+      "final_question_draft_id": "question-draft:a053fb7be39c6adcfbc5ac6b697e2654",
       "final_status": "HUMAN_REVIEW_COMPLETE_AUTHOR_FINAL_REVIEW_PENDING",
       "golden_case_id": "golden-case:a4ba6ce7e0602134515cdae757a16b98",
       "human_review_case_version": "human_review_case_v1",
@@ -28219,6 +28896,33 @@
           "human_decision": "ACCEPT",
           "human_note": "Human Reviewer accepted the Question as a direct structure-aware retrieval question grounded in Exercise 8.",
           "review_stage": "QUESTION"
+        },
+        {
+          "review_event_id": "human-review:8d679ba496e8d8e63e48e0896290a764",
+          "review_record_version": "second_human_review_record_v1",
+          "review_stage": "SECOND_HUMAN_REVIEW_RETARGET",
+          "pilot_case_id": "question-pilot:909b695797935246c92c7a66ebe0f773",
+          "human_decision": "RETARGET",
+          "previous_target_evidence_id": "target-evidence:8d87341f7847558d90ee76e350c64fa3",
+          "previous_question_draft_id": "question-draft:147b34f2d29c31c873ad9591cb9ca3e4",
+          "replacement_target_evidence_id": "target-evidence:63c2f0f041fa8caa0f21a1aed165d7ec",
+          "replacement_question_draft_id": "question-draft:a053fb7be39c6adcfbc5ac6b697e2654",
+          "previous_review_preserved": true,
+          "human_review_reason": "در بازبینی دوم مشخص شد Target قبلی فقط عنوان و دستور تمرین 8 را شامل می‌شد و سؤال پذیرفته‌شده قبلی بدون مشاهده کتاب، مستقل و طبیعی نبود. پس از بررسی متن کامل بخش بودجه‌بندی، پاراگراف‌های 323 تا 327 محتوای آموزشی کامل‌تر و مناسب‌تری برای همین Pilot فراهم کردند. Human Reviewer سؤال و پاسخ جایگزین را تأیید کرد.",
+          "raw_source_mutated": false,
+          "parser_output_mutated": false
+        },
+        {
+          "review_event_id": "human-review:de82b5f9b90dd1474b54c27b78c575a5",
+          "review_record_version": "second_human_question_review_record_v1",
+          "review_stage": "SECOND_HUMAN_REVIEW_QUESTION",
+          "pilot_case_id": "question-pilot:909b695797935246c92c7a66ebe0f773",
+          "target_evidence_id": "target-evidence:63c2f0f041fa8caa0f21a1aed165d7ec",
+          "question_draft_id": "question-draft:a053fb7be39c6adcfbc5ac6b697e2654",
+          "question_text": "مدیریت پول‌توجیبی از ۵ تا ۱۸ سالگی چگونه تغییر می‌کند و در هر بازه سنی چه تقسیم‌بندی‌ای پیشنهاد شده است؟",
+          "human_decision": "ACCEPT",
+          "human_note": "Human Reviewer explicitly approved the replacement Question after reviewing the full source context.",
+          "external_knowledge_used": false
         }
       ],
       "model_drafts": [
@@ -28227,32 +28931,290 @@
           "machine_validation": "PASS",
           "question_draft_id": "question-draft:147b34f2d29c31c873ad9591cb9ca3e4",
           "question_text": "در تمرین ۸، برای بررسی هزینه‌های ماهانه افراد چه مراحلی باید انجام شود؟",
-          "revision": 1
+          "revision": 1,
+          "second_review_status": "SUPERSEDED_BY_RETARGET",
+          "superseded_by_question_draft_id": "question-draft:a053fb7be39c6adcfbc5ac6b697e2654"
+        },
+        {
+          "question_draft_id": "question-draft:a053fb7be39c6adcfbc5ac6b697e2654",
+          "question_text": "مدیریت پول‌توجیبی از ۵ تا ۱۸ سالگی چگونه تغییر می‌کند و در هر بازه سنی چه تقسیم‌بندی‌ای پیشنهاد شده است؟",
+          "revision": 2,
+          "machine_validation": "SECOND_HUMAN_REVIEW_LOCAL_GATES_PASS",
+          "human_decision": "ACCEPT",
+          "review_origin": "SECOND_HUMAN_REVIEW_RETARGET",
+          "target_evidence_id": "target-evidence:63c2f0f041fa8caa0f21a1aed165d7ec"
         }
       ],
       "pilot_case_id": "question-pilot:909b695797935246c92c7a66ebe0f773",
       "source_evidence": [
         {
-          "char_end": 7,
-          "char_start": 0,
-          "document_id": "book:trainer-training-financial-literacy:fa-source:p000329",
           "part_index": 0,
           "role": "PROTECTED_REGION_MEMBER",
-          "text": "تمرین 8",
-          "text_sha256": "050059aaa3fc7a10d572ac3faa087faf54992599e540d12602f212018094f353"
+          "document_id": "book:trainer-training-financial-literacy:fa-source:p000323",
+          "text": "کودکان بین پنج تا هفت سال : اولین پولی که کودک دریافت می‌کند، تنها از آن نگهداری می‌کند و در واقع فقط پس‌انداز می‌کند و کم‌کم با موقعیت‌هایی که به او پول می‌دهیم (مانند فروشگاه یا مسافرت) خرج کردن را یاد می‌گیرد.",
+          "text_sha256": "677d558611edf84bf94d0b65a54f3c2ce28c02db001469d3b6473e7b1299c5ed",
+          "char_start": 0,
+          "char_end": 212,
+          "locator": {
+            "work_id": "book:trainer-training-financial-literacy",
+            "edition_id": "book:trainer-training-financial-literacy:fa-source",
+            "paragraph_id": "book:trainer-training-financial-literacy:fa-source:p000323",
+            "paragraph_number": 323,
+            "heading_path": [
+              "بودجه‌بندی"
+            ]
+          }
         },
         {
-          "char_end": 156,
-          "char_start": 0,
-          "document_id": "book:trainer-training-financial-literacy:fa-source:p000330",
           "part_index": 1,
           "role": "PROTECTED_REGION_MEMBER",
-          "text": "هر مقطع سنی دو نفر را انتخاب کنید و درباره میزان هزینه ماهانه آنها مصاحبه کنید. به آن‌ها اطمینان دهید که این اطلاعات محرمانه خواهد بود. نتیجه را تحلیل کنید.",
-          "text_sha256": "1e36cf04bfdb4b3fc5c8726fe58a206d5158ebcb86c9a9751c98d5203f3c4a96"
+          "document_id": "book:trainer-training-financial-literacy:fa-source:p000324",
+          "text": "کودکان بین هشت تا دوازده سال: دومین ردیف بودجه پول‌توجیبی هم یاد داده می‌شود. خرج پول با نظارت والدین است. هر چند به کودکان اجازهٔ اشتباه می‌دهند، اما همچنان کنارشان هستند و خرج پول با نظارت آن‌هاست. حتی اگر با خرید فرزند مخالف‌اند، اجازه می‌دهند بخرد. مهم این است که جلوی اشتباه گرفته نشود، بلکه بعد از اشتباه، خیلی واقعی درباره آن و چرایی اشتباه بودن آن گفتگو شود. در این سن، پول‌توجیبی فقط در دو ردیف خرج و پس‌انداز صرف می‌شود و می‌توان به هر کدام 50 درصد از دریافتی اختصاص یابد.",
+          "text_sha256": "d9fb383348eebcb4817733c5cfd169230353824fb3665f8a15e828ec60fe5b0c",
+          "char_start": 0,
+          "char_end": 482,
+          "locator": {
+            "work_id": "book:trainer-training-financial-literacy",
+            "edition_id": "book:trainer-training-financial-literacy:fa-source",
+            "paragraph_id": "book:trainer-training-financial-literacy:fa-source:p000324",
+            "paragraph_number": 324,
+            "heading_path": [
+              "بودجه‌بندی"
+            ]
+          }
+        },
+        {
+          "part_index": 2,
+          "role": "PROTECTED_REGION_MEMBER",
+          "document_id": "book:trainer-training-financial-literacy:fa-source:p000325",
+          "text": "اگر با این روش پیش رفته باشیم، دیگر «پول خودم است» مطرح نیست؛ چون پدر و مادر همواره با او هستند. هیچ وقت احساس نمی‌کند پول خودش است. اگر کودکان بگویند پول خودشان است،‌ می‌گوییم باید پاسخگوی تصمیم‌شان باشند. ممکن است تصمیم‌شان پیامدهایی داشته یا نداشته باشد. اگر پیامدها، فرصت آموزش را فراهم می‌کرد، تصمیم اشتباه و پیامدش را یادآوری می‌کنیم. یادمان باشد هنگام یادگیری راه رفتن، فرزند را برای زمین خوردن مواخذه نمی‌کنیم.",
+          "text_sha256": "386f625c8655f0b966410e07990293b4b3ca973f03ab77d57e16b6e3ab127e62",
+          "char_start": 0,
+          "char_end": 418,
+          "locator": {
+            "work_id": "book:trainer-training-financial-literacy",
+            "edition_id": "book:trainer-training-financial-literacy:fa-source",
+            "paragraph_id": "book:trainer-training-financial-literacy:fa-source:p000325",
+            "paragraph_number": 325,
+            "heading_path": [
+              "بودجه‌بندی"
+            ]
+          }
+        },
+        {
+          "part_index": 3,
+          "role": "PROTECTED_REGION_MEMBER",
+          "document_id": "book:trainer-training-financial-literacy:fa-source:p000326",
+          "text": "نوجوان دوازده تا پانزده سال:در این دوره ردیف سرمایه‌گذاری هم اضافه می‌شود و پول‌توجیبی به سه بخش تقسیم می‌شود: خرج، پس‌انداز و سرمایه‌گذاری. در این حالت به ترتیب الگوی 50 درصد، 30 درصد و 20 درصد می‌تواند به کارگرفته شود.(تفاوت پس‌انداز و سرمایه‌گذاری: مشخص و نامشخص بودن هدف، بازه زمانی کوتاه مدت و بلندمدت). می‌توان در نشست خانوادگی دربارهٔ سرفصل‌های بودجه‌بندی و خرج با آن‌ها به توافق رسید. در این دوره می‌توان به شکل موقعیتی به او، هدیه به دیگران، بخشش یا حتی قرض به دیگران را پیشنهاد کرد.",
+          "text_sha256": "f944fae3e3db1988ee15f21c005e431429f805a842b36d4d5b3a18f423dc02c4",
+          "char_start": 0,
+          "char_end": 492,
+          "locator": {
+            "work_id": "book:trainer-training-financial-literacy",
+            "edition_id": "book:trainer-training-financial-literacy:fa-source",
+            "paragraph_id": "book:trainer-training-financial-literacy:fa-source:p000326",
+            "paragraph_number": 326,
+            "heading_path": [
+              "بودجه‌بندی"
+            ]
+          }
+        },
+        {
+          "part_index": 4,
+          "role": "PROTECTED_REGION_MEMBER",
+          "document_id": "book:trainer-training-financial-literacy:fa-source:p000327",
+          "text": "نوجوان پانزده تا هجده سال: در این دوره ردیف دیگری به پول‌توجیبی اضافه می‌شود: هدیه یا قرض به دیگران. تا پیش از این، به شکل موقعیتی با این ردیف آشنا بوده است. اما از اینجا به بعد با تعیین بخش و درصدی به این موضوع به آن ساختار می‌دهیم؛ الگوی 40 درصد خرج، 30 درصد پس‌انداز، 20 درصد سرمایه‌گذاری و 10 درصد هدیه به دیگران در سن مناسب است. نقش نظارتی والدین همچنان هست و آخر ماه از فرزندشان می‌خواهند توضیح دهد که این درصدها را چطور اعمال کرده است. این درصدها به نوعی خط‌کش است تا جلوی رفتارهای هیجانی نوجوان‌ها را بگیرد تا در هیچ کدام افراط و تفریط نداشته باشند؛ حتی در بخشش!",
+          "text_sha256": "258a482c4582d70a6681684b01643659a251b6b0a1143af8cfa565447de5f948",
+          "char_start": 0,
+          "char_end": 570,
+          "locator": {
+            "work_id": "book:trainer-training-financial-literacy",
+            "edition_id": "book:trainer-training-financial-literacy:fa-source",
+            "paragraph_id": "book:trainer-training-financial-literacy:fa-source:p000327",
+            "paragraph_number": 327,
+            "heading_path": [
+              "بودجه‌بندی"
+            ]
+          }
         }
       ],
-      "target_evidence_id": "target-evidence:8d87341f7847558d90ee76e350c64fa3",
-      "task_draft_id": "task-draft:9caeff8892fcea99f90a32df8bb5f422"
+      "target_evidence_id": "target-evidence:63c2f0f041fa8caa0f21a1aed165d7ec",
+      "task_draft_id": "task-draft:9caeff8892fcea99f90a32df8bb5f422",
+      "post_final_human_review_history": [
+        {
+          "amendment_id": "second-human-review:fbe929adc9b90db334683c2b541ebd03",
+          "review_record_version": "second_human_review_amendment_v1",
+          "review_stage": "SECOND_HUMAN_REVIEW",
+          "review_timestamp_utc": "2026-09-08T15:42:28+00:00",
+          "registry_location": "completed_human_review_cases",
+          "human_decision": "RETARGET_AND_ACCEPT_REPLACEMENT",
+          "human_review_reason": "در بازبینی دوم مشخص شد Target قبلی فقط عنوان و دستور تمرین 8 را شامل می‌شد و سؤال پذیرفته‌شده قبلی بدون مشاهده کتاب، مستقل و طبیعی نبود. پس از بررسی متن کامل بخش بودجه‌بندی، پاراگراف‌های 323 تا 327 محتوای آموزشی کامل‌تر و مناسب‌تری برای همین Pilot فراهم کردند. Human Reviewer سؤال و پاسخ جایگزین را تأیید کرد.",
+          "previous_state_preserved": true,
+          "superseded_accepted_qa": {
+            "target_evidence_id": "target-evidence:8d87341f7847558d90ee76e350c64fa3",
+            "source_evidence": [
+              {
+                "char_end": 7,
+                "char_start": 0,
+                "document_id": "book:trainer-training-financial-literacy:fa-source:p000329",
+                "part_index": 0,
+                "role": "PROTECTED_REGION_MEMBER",
+                "text": "تمرین 8",
+                "text_sha256": "050059aaa3fc7a10d572ac3faa087faf54992599e540d12602f212018094f353"
+              },
+              {
+                "char_end": 156,
+                "char_start": 0,
+                "document_id": "book:trainer-training-financial-literacy:fa-source:p000330",
+                "part_index": 1,
+                "role": "PROTECTED_REGION_MEMBER",
+                "text": "هر مقطع سنی دو نفر را انتخاب کنید و درباره میزان هزینه ماهانه آنها مصاحبه کنید. به آن‌ها اطمینان دهید که این اطلاعات محرمانه خواهد بود. نتیجه را تحلیل کنید.",
+                "text_sha256": "1e36cf04bfdb4b3fc5c8726fe58a206d5158ebcb86c9a9751c98d5203f3c4a96"
+              }
+            ],
+            "question_draft_id": "question-draft:147b34f2d29c31c873ad9591cb9ca3e4",
+            "question_text": "در تمرین ۸، برای بررسی هزینه‌های ماهانه افراد چه مراحلی باید انجام شود؟",
+            "expected_answer_review": {
+              "expected_answer_draft_id": "expected-answer-draft:898d20ffa27dcb9feda6af40cf1aac2a",
+              "expected_answer_text": "باید از هر مقطع سنی دو نفر انتخاب شوند، درباره میزان هزینه ماهانه آن‌ها مصاحبه شود، به آن‌ها اطمینان داده شود که اطلاعاتشان محرمانه خواهد ماند و در پایان نتیجه مصاحبه‌ها تحلیل شود.",
+              "human_decision": "ACCEPT",
+              "human_review": {
+                "expected_answer_draft_id": "expected-answer-draft:898d20ffa27dcb9feda6af40cf1aac2a",
+                "external_knowledge_used": false,
+                "human_context_used_as_evidence": false,
+                "human_decision": "ACCEPT",
+                "human_note": "Human Reviewer accepted the Expected Answer after reviewing it against the validated source evidence.",
+                "pilot_case_id": "question-pilot:909b695797935246c92c7a66ebe0f773",
+                "question_draft_id": "question-draft:147b34f2d29c31c873ad9591cb9ca3e4",
+                "review_record_version": "human_expected_answer_review_record_v1",
+                "target_evidence_id": "target-evidence:8d87341f7847558d90ee76e350c64fa3"
+              },
+              "machine_validation_status": "PASS_PENDING_HUMAN_ADJUDICATION"
+            },
+            "citation_review": {
+              "citation_entries": [
+                {
+                  "attribution": {
+                    "attribution_status": null,
+                    "author": "Dr. Komeil Roudi",
+                    "author_id": null,
+                    "authorship_assertion_source": null,
+                    "byline_raw": null,
+                    "content_authority_type": null,
+                    "credited_author_name": null,
+                    "editorial_credit_raw": null,
+                    "editorial_supervisor_name": null,
+                    "knowledge_owner": "Dr. Komeil Roudi",
+                    "reference_expert_name": null,
+                    "speaker": null
+                  },
+                  "char_count": 7,
+                  "char_end": 7,
+                  "char_start": 0,
+                  "citation_index": 0,
+                  "document_id": "book:trainer-training-financial-literacy:fa-source:p000329",
+                  "locator": {
+                    "edition_id": "book:trainer-training-financial-literacy:fa-source",
+                    "heading_path": [
+                      "بودجه‌بندی",
+                      "تمرین 8"
+                    ],
+                    "paragraph_id": "book:trainer-training-financial-literacy:fa-source:p000329",
+                    "paragraph_number": 329,
+                    "work_id": "book:trainer-training-financial-literacy"
+                  },
+                  "locator_origin": "COPIED_FROM_VALIDATED_TARGET_EVIDENCE",
+                  "role": "PROTECTED_REGION_MEMBER",
+                  "source_id": "book:trainer-training-financial-literacy:fa-source",
+                  "target_evidence_id": "target-evidence:8d87341f7847558d90ee76e350c64fa3",
+                  "token_count": 2
+                },
+                {
+                  "attribution": {
+                    "attribution_status": null,
+                    "author": "Dr. Komeil Roudi",
+                    "author_id": null,
+                    "authorship_assertion_source": null,
+                    "byline_raw": null,
+                    "content_authority_type": null,
+                    "credited_author_name": null,
+                    "editorial_credit_raw": null,
+                    "editorial_supervisor_name": null,
+                    "knowledge_owner": "Dr. Komeil Roudi",
+                    "reference_expert_name": null,
+                    "speaker": null
+                  },
+                  "char_count": 156,
+                  "char_end": 156,
+                  "char_start": 0,
+                  "citation_index": 1,
+                  "document_id": "book:trainer-training-financial-literacy:fa-source:p000330",
+                  "locator": {
+                    "edition_id": "book:trainer-training-financial-literacy:fa-source",
+                    "heading_path": [
+                      "بودجه‌بندی",
+                      "تمرین 8"
+                    ],
+                    "paragraph_id": "book:trainer-training-financial-literacy:fa-source:p000330",
+                    "paragraph_number": 330,
+                    "work_id": "book:trainer-training-financial-literacy"
+                  },
+                  "locator_origin": "COPIED_FROM_VALIDATED_TARGET_EVIDENCE",
+                  "role": "PROTECTED_REGION_MEMBER",
+                  "source_id": "book:trainer-training-financial-literacy:fa-source",
+                  "target_evidence_id": "target-evidence:8d87341f7847558d90ee76e350c64fa3",
+                  "token_count": 36
+                }
+              ],
+              "citation_mapping_id": "citation-mapping:0fe2439cd888def58854539b9653767c",
+              "human_decision": "ACCEPT",
+              "human_review": {
+                "citation_mapping_id": "citation-mapping:0fe2439cd888def58854539b9653767c",
+                "external_locator_lookup_used": false,
+                "human_decision": "ACCEPT",
+                "human_note": "Human Reviewer accepted the Citation Mapping after reviewing the validated book source locators.",
+                "pilot_case_id": "question-pilot:909b695797935246c92c7a66ebe0f773",
+                "review_record_version": "human_citation_review_record_v1",
+                "target_evidence_id": "target-evidence:8d87341f7847558d90ee76e350c64fa3"
+              },
+              "machine_validation_status": "PASS_PENDING_HUMAN_ADJUDICATION"
+            }
+          },
+          "replacement_state": {
+            "target_evidence_id": "target-evidence:63c2f0f041fa8caa0f21a1aed165d7ec",
+            "replacement_paragraphs": [
+              323,
+              324,
+              325,
+              326,
+              327
+            ],
+            "question_draft_id": "question-draft:a053fb7be39c6adcfbc5ac6b697e2654",
+            "question_text": "مدیریت پول‌توجیبی از ۵ تا ۱۸ سالگی چگونه تغییر می‌کند و در هر بازه سنی چه تقسیم‌بندی‌ای پیشنهاد شده است؟",
+            "expected_answer_draft_id": "expected-answer-draft:91196c69ad81b99c1dc4f6be2d9af27b",
+            "expected_answer_text": "در ۵ تا ۷ سالگی کودک ابتدا بیشتر پول را نگه می‌دارد و پس‌انداز می‌کند و به‌تدریج خرج‌کردن را در موقعیت‌های واقعی یاد می‌گیرد. در ۸ تا ۱۲ سالگی پول‌توجیبی به خرج و پس‌انداز تقسیم می‌شود و الگوی پیشنهادی ۵۰ درصد برای هر کدام است. در ۱۲ تا ۱۵ سالگی سرمایه‌گذاری هم اضافه می‌شود و الگوی ۵۰ درصد خرج، ۳۰ درصد پس‌انداز و ۲۰ درصد سرمایه‌گذاری پیشنهاد می‌شود. در ۱۵ تا ۱۸ سالگی هدیه یا قرض به دیگران نیز به بودجه اضافه می‌شود و الگوی ۴۰ درصد خرج، ۳۰ درصد پس‌انداز، ۲۰ درصد سرمایه‌گذاری و ۱۰ درصد هدیه به دیگران مطرح شده است.",
+            "citation_mapping_id": "citation-mapping:ff7901f2abfb97faf28c6d1b64c7bbe2"
+          },
+          "raw_source_mutated": false,
+          "parser_output_mutated": false,
+          "author_review_recorded": false
+        }
+      ],
+      "second_human_review": {
+        "amendment_id": "second-human-review:fbe929adc9b90db334683c2b541ebd03",
+        "status": "COMPLETE",
+        "decision": "RETARGET_AND_ACCEPT_REPLACEMENT",
+        "review_timestamp_utc": "2026-09-08T15:42:28+00:00",
+        "previous_target_evidence_id": "target-evidence:8d87341f7847558d90ee76e350c64fa3",
+        "replacement_target_evidence_id": "target-evidence:63c2f0f041fa8caa0f21a1aed165d7ec",
+        "replacement_question_draft_id": "question-draft:a053fb7be39c6adcfbc5ac6b697e2654",
+        "replacement_expected_answer_draft_id": "expected-answer-draft:91196c69ad81b99c1dc4f6be2d9af27b",
+        "replacement_citation_mapping_id": "citation-mapping:ff7901f2abfb97faf28c6d1b64c7bbe2",
+        "previous_state_preserved": true,
+        "raw_source_mutated": false,
+        "parser_output_mutated": false,
+        "author_review_status": "NOT_STARTED"
+      }
     },
     {
       "author_final_review": {
