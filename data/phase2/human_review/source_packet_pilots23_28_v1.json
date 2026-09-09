@@ -1,0 +1,561 @@
+{
+  "accepted_corpus_sha256": "9d72c709f81b1218c5aac064052c7ed1da34869f671e6e32762864e0ad70ea40",
+  "author_facing_source_urls": false,
+  "author_filter_applied": false,
+  "authority_filter_applied": false,
+  "original_phase1_demo_provenance": "NOT_PROVEN_FROM_AVAILABLE_ARTIFACTS",
+  "pilots": [
+    {
+      "accepted_website_document_ids": [
+        "website:7C71884B"
+      ],
+      "claims": [
+        {
+          "claim_id": "23-A",
+          "content_source": {
+            "document_id": "website:7C71884B",
+            "evidence_source_cell": "CELL115",
+            "evidence_window": "فرهاد جم : وقتی درآمدمان کم است، سواد مالی چطور به ما کمک می‌کند؟ در پاسخ مطرح شد که «سواد مالی درباره میزان پول نیست، بلکه درباره درست مدیریت کردن پول است. چه کم، چه زیاد».",
+            "matched_patterns": [
+              [
+                "سواد مالی",
+                "میزان پول نیست",
+                "مدیریت کردن پول"
+              ]
+            ],
+            "title": "ابزارهای سواد مالی برای بهبود مدیریت هزینه",
+            "url": "https://www.fintelligence.ir/Blog/Detail/7C71884B"
+          },
+          "description": "سواد مالی درباره مدیریت پول است، نه میزان پول.",
+          "human_source_review_status": "WEBSITE_SOURCE_BACKED"
+        }
+      ],
+      "content_source_recovery": "HUMAN_REVIEWED",
+      "original_phase1_demo_provenance": "NOT_PROVEN_FROM_AVAILABLE_ARTIFACTS",
+      "pilot_case_id": "question-pilot:a0f61a7f0c946fe1d79095dbb96a9497",
+      "primary_direct_author_feedback_only_claim_ids": [],
+      "reference_pilot_number": 23,
+      "website_scope_reviewed": 529
+    },
+    {
+      "accepted_website_document_ids": [
+        "website:662BDA7F",
+        "website:D76E641C"
+      ],
+      "claims": [
+        {
+          "claim_id": "24-A",
+          "content_source": {
+            "document_id": "website:D76E641C",
+            "evidence_source_cell": "CELL115",
+            "evidence_window": "سه بعد کلیدی تعیین‌کننده قابلیت‌های مالی و مؤثر بر رفتارهای مالی افراد شناسایی می‌شود. این سه بعد عبارتند از دانش، مهارت و نگرش که خود تحت تأثیر تجربه، شرایط فرد و شخصیت آن‌ها قرار دارند. همچنین مشخص شد فرد دارای سواد مالی در چهار حوزه زیر مهارت‌های لازم را داراست: 1.",
+            "matched_patterns": [
+              [
+                "سواد مالی",
+                "دانش",
+                "مهارت",
+                "نگرش"
+              ],
+              [
+                "قابلیت های مالی",
+                "دانش",
+                "مهارت",
+                "نگرش"
+              ]
+            ],
+            "title": "وقایع‌نگاری‌های سنجش سواد مالی-6",
+            "url": "https://www.fintelligence.ir/Blog/Detail/D76E641C"
+          },
+          "description": "سواد مالی دارای ابعاد دانش، مهارت و نگرش است.",
+          "human_source_review_status": "WEBSITE_SOURCE_BACKED"
+        },
+        {
+          "claim_id": "24-B",
+          "content_source": {
+            "document_id": "website:662BDA7F",
+            "evidence_source_cell": "CELL115",
+            "evidence_window": "خودارزیابی‌ها در همۀ ابعاد زندگی نشان می‌دهند، کجا هستیم. برنامه‌های سنجش سواد مالی چه برای یک جامعه یا گروه یا برای یک فرد، ضرورت آغازین یادگیری سواد مالی است. برای ارزیابی وضعیت مالی‌مان یا همان نقطۀ شروع، خوب است با چند سؤال شروع کنیم و خود را محکی بزنیم ببینیم چقدر در مسیر حرکت می‌کنیم و چقدر از آن فاصله گرفته‌ایم. پرسشنامۀ جامع خطاهای رایج مالی زنان، یکی از برنامه‌های سنجش در سواد مالی است که با بیش از صد سؤال و به تفکیک خانم‌های شاغل یا غیرشاغل به ارزیابی میزان مهارت خانم‌ها در سواد مالی می‌پردازد.",
+            "matched_patterns": [
+              [
+                "سواد مالی",
+                "پرسشنامه",
+                "ارزیابی"
+              ],
+              [
+                "سواد مالی",
+                "خودارزیابی"
+              ],
+              [
+                "وضعیت مالی",
+                "پرسشنامه"
+              ]
+            ],
+            "title": "سواد مالی خانم‌ها؛ وضعیت چقدر بحرانی است؟",
+            "url": "https://www.fintelligence.ir/Blog/Detail/662BDA7F"
+          },
+          "description": "برای ارزیابی وضعیت سواد مالی از پرسشنامه یا خودارزیابی استفاده می‌شود.",
+          "human_source_review_status": "WEBSITE_SOURCE_BACKED"
+        }
+      ],
+      "content_source_recovery": "HUMAN_REVIEWED",
+      "original_phase1_demo_provenance": "NOT_PROVEN_FROM_AVAILABLE_ARTIFACTS",
+      "pilot_case_id": "question-pilot:70628caeefebbfba48300176fafddc96",
+      "primary_direct_author_feedback_only_claim_ids": [],
+      "reference_pilot_number": 24,
+      "website_scope_reviewed": 529
+    },
+    {
+      "accepted_website_document_ids": [
+        "website:3E26E509"
+      ],
+      "claims": [
+        {
+          "claim_id": "25-A",
+          "content_source": {
+            "document_id": "website:3E26E509",
+            "evidence_source_cell": "CELL115",
+            "evidence_window": "نتیجۀ هر دو حالت یکسان است؛ هدررفت آب از لیوان! زندگی مالی ما هم مانند همین است. ما نیز گاهی مانند کودکان، برآورد درستی از میزان انرژی لازم برای کارها نداریم، نمی‌دانیم چقدر و چطور باید خرج کنیم تا زندگی با کیفیتی داشته باشیم و نتیجه چیزی نیست جز هدررفت پول، بدون افزایش کیفیت زندگی! ممکن است بسیار برای‌مان اتفاق افتاده باشد که در پایان هفته یا ماه موجودی حساب بانکی‌مان خالی شده و هرچه فکر می‌کنیم دقیق یادمان نمی‌آید که چگونه و برای چه چیزی خرج کرده‌ایم؟",
+            "matched_patterns": [
+              [
+                "موجودی حساب",
+                "یادمان نمی آید",
+                "خرج کرده ایم"
+              ],
+              [
+                "چگونه و برای چه چیزی خرج کرده ایم"
+              ]
+            ],
+            "title": "سواد مالی خانم‌ها؛ پول‌ها کجا می‌روند؟",
+            "url": "https://www.fintelligence.ir/Blog/Detail/3E26E509"
+          },
+          "description": "فرد در پایان دوره نمی‌داند پول را چگونه و برای چه چیزی خرج کرده است.",
+          "human_source_review_status": "WEBSITE_SOURCE_BACKED"
+        },
+        {
+          "claim_id": "25-B",
+          "content_source": {
+            "document_id": "website:3E26E509",
+            "evidence_source_cell": "CELL115",
+            "evidence_window": "در این قسمت برنامۀ عصر شیرین، دربارۀ گام نخست در مدیریت مالی شخصی، یعنی نوشتن هزینه‌ها صحبت کردیم و گفتیم نوشتن هزینه‌ها چطور کمک می‌کند ریزه‌کاری‌ها خودشان را نشان دهند و بهتر بتوانیم دربارۀ آن‌ها تصمیم بگیریم. تجربه‌های شرکت‌کنندگان از اثرگذاری نوشتن هزینه‌ها بر پیشگیری از ولخرجی و مدیریت بهتر هزینه‌ها، بدون کاهش کیفیت زندگی را نیز جذاب و شنیدنی بود. آیا شما هم هزینه‌های‌تان را ثبت می‌کنید؟ اگر بله، فواید آن چیست و اگر خیر، چه عاملی مانع این کار شده است؟",
+            "matched_patterns": [
+              [
+                "گام نخست",
+                "مدیریت مالی شخصی",
+                "نوشتن هزینه"
+              ]
+            ],
+            "title": "سواد مالی خانم‌ها؛ پول‌ها کجا می‌روند؟",
+            "url": "https://www.fintelligence.ir/Blog/Detail/3E26E509"
+          },
+          "description": "گام نخست مدیریت مالی، نوشتن یا ثبت هزینه‌هاست.",
+          "human_source_review_status": "WEBSITE_SOURCE_BACKED"
+        },
+        {
+          "claim_id": "25-C",
+          "content_source": {
+            "document_id": "website:3E26E509",
+            "evidence_source_cell": "CELL115",
+            "evidence_window": "تجربه‌های شرکت‌کنندگان از اثرگذاری نوشتن هزینه‌ها بر پیشگیری از ولخرجی و مدیریت بهتر هزینه‌ها، بدون کاهش کیفیت زندگی را نیز جذاب و شنیدنی بود. آیا شما هم هزینه‌های‌تان را ثبت می‌کنید؟ اگر بله، فواید آن چیست و اگر خیر، چه عاملی مانع این کار شده است؟",
+            "matched_patterns": [
+              [
+                "نوشتن هزینه",
+                "پیشگیری از ولخرجی"
+              ],
+              [
+                "نوشتن هزینه",
+                "مدیریت بهتر هزینه"
+              ]
+            ],
+            "title": "سواد مالی خانم‌ها؛ پول‌ها کجا می‌روند؟",
+            "url": "https://www.fintelligence.ir/Blog/Detail/3E26E509"
+          },
+          "description": "ثبت هزینه‌ها به پیشگیری از ولخرجی، کاهش هدررفت یا مدیریت بهتر هزینه‌ها کمک می‌کند.",
+          "human_source_review_status": "WEBSITE_SOURCE_BACKED"
+        }
+      ],
+      "content_source_recovery": "HUMAN_REVIEWED",
+      "original_phase1_demo_provenance": "NOT_PROVEN_FROM_AVAILABLE_ARTIFACTS",
+      "pilot_case_id": "question-pilot:77d8b06bc6bccdbbfca4faab99051fe0",
+      "primary_direct_author_feedback_only_claim_ids": [],
+      "reference_pilot_number": 25,
+      "website_scope_reviewed": 529
+    },
+    {
+      "accepted_website_document_ids": [
+        "website:AE081F78",
+        "website:BC0342B6",
+        "website:D4DBC461"
+      ],
+      "claims": [
+        {
+          "authority": {
+            "primary_author": "Dr. Komeil Roudi",
+            "reason": "No semantically sufficient Website source was recovered after full 529-record review.",
+            "secondary_to_primary_promotion": "FORBIDDEN",
+            "type": "PRIMARY_DIRECT_AUTHOR_FEEDBACK",
+            "website_source_status": "NOT_ACCEPTED_AFTER_FULL_529_WEBSITE_HUMAN_REVIEW"
+          },
+          "claim_id": "26-A",
+          "description": "خرید با تنوع یا حجم زیاد می‌تواند از الگوهای نامناسب خرید باشد.",
+          "human_source_review_status": "PRIMARY_DIRECT_AUTHOR_FEEDBACK_ONLY"
+        },
+        {
+          "claim_id": "26-B",
+          "content_source": {
+            "document_id": "website:BC0342B6",
+            "evidence_source_cell": "CELL115",
+            "evidence_window": "حالا نوبت ترس و تردید دربارۀ انتخاب گزینۀ مناسب برای سرمایه‌گذاری می‌رسد. نکند پولی که با این همه سختی به دست آمده و الان آن را خرج خرید ده چیز واجب نکردیم تا عصای دست دوران پیری و مریضی خودمان و آیندۀ بچه‌ها باشد، از کف‌مان برود. نکتۀ مهم اینجاست که با وجود این همه سختی در تصمیم‌گیری خرید، بخش قابل توجهی از خریدهای ما، نه از سر دقت و تمرکز در بررسی ابعاد مختلف گزینۀ مناسب، بلکه به خاطر عادت‌ها یا مقابله با ناراحتی‌ها و استرس‌ها اتفاق می‌افتد. یک لحظه به خودمان می‌آییم و می‌بینیم پول زبان‌بسته‌ را تمام‌ و کمال خرج کرده‌ایم.",
+            "matched_patterns": [
+              [
+                "خرید",
+                "ناراحتی"
+              ],
+              [
+                "خرید",
+                "استرس"
+              ],
+              [
+                "مقابله با ناراحتی",
+                "خرید"
+              ]
+            ],
+            "title": "سواد مالی خانم‌ها؛ تصمیم‌های خرید را خودمان می‌گیریم یا عادت‌های‌مان؟",
+            "url": "https://www.fintelligence.ir/Blog/Detail/BC0342B6"
+          },
+          "description": "ناراحتی، استرس یا تنش عاطفی می‌تواند محرک خرید باشد.",
+          "human_source_review_status": "WEBSITE_SOURCE_BACKED"
+        },
+        {
+          "claim_id": "26-C",
+          "content_source": {
+            "document_id": "website:AE081F78",
+            "evidence_source_cell": "CELL115",
+            "evidence_window": "بلکه بودجه‌شان را بررسی می‌کنند که بر اساس نیازها و خواسته‌هایشان آیا این هزینه قابل پرداخت هست یا نه. تمرین: قبل از خرید هیجانی و شتاب‌زده، بودجه خود را بررسی کنید.",
+            "matched_patterns": [
+              [
+                "خرید هیجانی"
+              ],
+              [
+                "خرید",
+                "هیجانی"
+              ],
+              [
+                "خرید",
+                "شتاب زده"
+              ]
+            ],
+            "title": "شش عادت خوب در بودجه‌بندی",
+            "url": "https://www.fintelligence.ir/Blog/Detail/AE081F78"
+          },
+          "description": "هیجان یا شتاب‌زدگی می‌تواند محرک خرید باشد.",
+          "human_source_review_status": "WEBSITE_SOURCE_BACKED"
+        },
+        {
+          "claim_id": "26-D",
+          "content_source": {
+            "document_id": "website:D4DBC461",
+            "evidence_source_cell": "CELL116",
+            "evidence_window": "الگوهای نامناسب خرید که بین دانشجویان و جوانان رایج است، می‌پردازیم: 1. خرید با هدف مورد پذیرش واقع شدن در جمع دوستان یا گروه اجتماعی خاص: خریدن کتاب در حالی که کتابخانه پر از کتاب‌های نخوانده است، پوشیدن سبک خاصی از لباس در برخی دانشکده‌ها و داشتن تغذیه‌ای سالم اما گران، از جمله مثال‌های این نوع الگوی خرید است. در واقع دانشجویان با این رفتارها سعی می‌کنند به گروه یا قشر خاصی احساس نزدیکی کنند. در صورتی که این رفتارها، سبک زندگی فرد باشد و از عهدۀ تأمین هزینه‌های آن برآید مشکلی نیست. اما اگر هدف از این هزینه‌کردها، مورد قبول واقع شدن در گروه خاصی است، باید بیشتر دربارۀ آن تأمل کرد.",
+            "matched_patterns": [
+              [
+                "خرید",
+                "گروه خاص"
+              ],
+              [
+                "هزینه",
+                "گروه خاص"
+              ],
+              [
+                "هزینه کرد",
+                "مورد قبول",
+                "گروه"
+              ],
+              [
+                "خرید",
+                "دوستان",
+                "قبول"
+              ]
+            ],
+            "title": "ضرورت یادگیری مهارت‌های مالی در دوران دانشجویی",
+            "url": "https://www.fintelligence.ir/Blog/Detail/D4DBC461"
+          },
+          "description": "خرید برای پذیرفته‌شدن یا تأیید شدن در گروه مرجع.",
+          "human_source_review_status": "WEBSITE_SOURCE_BACKED"
+        },
+        {
+          "claim_id": "26-E",
+          "content_source": {
+            "document_id": "website:D4DBC461",
+            "evidence_source_cell": "CELL115",
+            "evidence_window": "در صورتی که این رفتارها، سبک زندگی فرد باشد و از عهدۀ تأمین هزینه‌های آن برآید مشکلی نیست. اما اگر هدف از این هزینه‌کردها، مورد قبول واقع شدن در گروه خاصی است، باید بیشتر دربارۀ آن تأمل کرد. 2. خرید در اثر تبلیغات و فعالیت‌های بازاریابی:",
+            "matched_patterns": [
+              [
+                "خرید",
+                "تبلیغات"
+              ],
+              [
+                "خرید",
+                "بازاریابی"
+              ]
+            ],
+            "title": "ضرورت یادگیری مهارت‌های مالی در دوران دانشجویی",
+            "url": "https://www.fintelligence.ir/Blog/Detail/D4DBC461"
+          },
+          "description": "تبلیغات یا بازاریابی می‌تواند محرک خرید نامناسب باشد.",
+          "human_source_review_status": "WEBSITE_SOURCE_BACKED"
+        },
+        {
+          "authority": {
+            "primary_author": "Dr. Komeil Roudi",
+            "reason": "Candidate windows existed, but Human Source Review rejected them as semantically insufficient.",
+            "secondary_to_primary_promotion": "FORBIDDEN",
+            "type": "PRIMARY_DIRECT_AUTHOR_FEEDBACK",
+            "website_source_status": "NOT_ACCEPTED_AFTER_FULL_529_WEBSITE_HUMAN_REVIEW"
+          },
+          "claim_id": "26-F",
+          "description": "خرید پس از یک دوره سخت برای پرداختن یا پاداش دادن به خود.",
+          "human_source_review_status": "PRIMARY_DIRECT_AUTHOR_FEEDBACK_ONLY"
+        },
+        {
+          "authority": {
+            "primary_author": "Dr. Komeil Roudi",
+            "reason": "Candidate windows discussed sacrifice, but did not establish buying/spending because of sacrifice.",
+            "secondary_to_primary_promotion": "FORBIDDEN",
+            "type": "PRIMARY_DIRECT_AUTHOR_FEEDBACK",
+            "website_source_status": "NOT_ACCEPTED_AFTER_FULL_529_WEBSITE_HUMAN_REVIEW"
+          },
+          "claim_id": "26-G",
+          "description": "خرید یا خرج‌کردن ناشی از فداکاری برای دیگران.",
+          "human_source_review_status": "PRIMARY_DIRECT_AUTHOR_FEEDBACK_ONLY"
+        }
+      ],
+      "content_source_recovery": "HUMAN_REVIEWED",
+      "original_phase1_demo_provenance": "NOT_PROVEN_FROM_AVAILABLE_ARTIFACTS",
+      "pilot_case_id": "question-pilot:712a49491835fe706df3353b781f8044",
+      "primary_direct_author_feedback_only_claim_ids": [
+        "26-A",
+        "26-F",
+        "26-G"
+      ],
+      "reference_pilot_number": 26,
+      "website_scope_reviewed": 529
+    },
+    {
+      "accepted_website_document_ids": [
+        "website:0B74EC18",
+        "website:7AB68D23",
+        "website:A8746170"
+      ],
+      "claims": [
+        {
+          "claim_id": "27-A",
+          "content_source": {
+            "document_id": "website:0B74EC18",
+            "evidence_source_cell": "CELL115",
+            "evidence_window": "او در بازار دست‌فروش‌ها پدرش را زیر نظر می‌گیرد و درس‌های زیادی دربارۀ چانه‌زنی و انجام معامله می‌آموزد. علاوه بر دریافت پول‌توجیبی که فرایند بودجه‌بندی را در ذهن کودکان ساده‌تر می‌کند، مهم است که آن‌ها برای دستیابی به اهداف‌شان از روش‌های دیگر کسب درآمد نیز آگاه باشند. مراقبت از خردسالان، کمک در کارهای خانه یا فروش وسایلی که دیگر به آن‌ها نیاز ندارند، از جمله روش‌هایی است که کودکان را با ارزش کار و پول و همچنین مسئولیت‌پذیری آشنا می‌کند. درک امور مالی و یادگیری مدیریت پول، استقلال بیشتر کودکان را به دنبال دارد.",
+            "matched_patterns": [
+              [
+                "فروش وسایلی",
+                "نیاز ندارند"
+              ]
+            ],
+            "title": "فروش و هنر مذاکره؛ تجربه‌ای ارزشمند که به کودکان دید اقتصادی می‌دهد",
+            "url": "https://www.fintelligence.ir/Blog/Detail/0B74EC18"
+          },
+          "description": "فروش وسایلی که دیگر به آن‌ها نیاز نداریم می‌تواند راه افزایش درآمد باشد.",
+          "human_source_review_status": "WEBSITE_SOURCE_BACKED"
+        },
+        {
+          "authority": {
+            "primary_author": "Dr. Komeil Roudi",
+            "reason": "Cell 115 produced a semantic false positive and Cell 116 found no valid candidate window.",
+            "secondary_to_primary_promotion": "FORBIDDEN",
+            "type": "PRIMARY_DIRECT_AUTHOR_FEEDBACK",
+            "website_source_status": "NOT_ACCEPTED_AFTER_FULL_529_WEBSITE_HUMAN_REVIEW"
+          },
+          "claim_id": "27-B",
+          "description": "پیشنهاد پروژه یا کار بیشتر به کارفرمای فعلی.",
+          "human_source_review_status": "PRIMARY_DIRECT_AUTHOR_FEEDBACK_ONLY"
+        },
+        {
+          "claim_id": "27-C",
+          "content_source": {
+            "document_id": "website:7AB68D23",
+            "evidence_source_cell": "CELL115",
+            "evidence_window": "اما فردی با ذهن ثروتمند درآمدش را صرف خرید دارایی‌های درآمدزا می‌کند. در این قسمت برنامۀ عصر شیرین از شرکت‌کنندگان خواستیم دارایی‌های‌شان را بنویسند و بررسی کنند هر کدام در چه دسته‌ای قرار دارد. سپس دربارۀ حلقۀ درآمدی و تأثیر آن در زندگی صحبت کردیم.",
+            "matched_patterns": [
+              [
+                "خرید دارایی های درآمدزا"
+              ],
+              [
+                "درآمد",
+                "دارایی های درآمدزا"
+              ]
+            ],
+            "title": "سواد مالی خانم‌ها؛ هر دارایی ثروتمندترمان می‌کند؟",
+            "url": "https://www.fintelligence.ir/Blog/Detail/7AB68D23"
+          },
+          "description": "خرید دارایی درآمدزا.",
+          "human_source_review_status": "WEBSITE_SOURCE_BACKED"
+        },
+        {
+          "authority": {
+            "primary_author": "Dr. Komeil Roudi",
+            "reason": "No Website candidate for reinvesting the resulting profit was recovered from the full 529-record scope.",
+            "secondary_to_primary_promotion": "FORBIDDEN",
+            "type": "PRIMARY_DIRECT_AUTHOR_FEEDBACK",
+            "website_source_status": "NOT_ACCEPTED_AFTER_FULL_529_WEBSITE_HUMAN_REVIEW"
+          },
+          "claim_id": "27-D",
+          "description": "سرمایه‌گذاری دوباره یا مجدد سود حاصل.",
+          "human_source_review_status": "PRIMARY_DIRECT_AUTHOR_FEEDBACK_ONLY"
+        },
+        {
+          "claim_id": "27-E",
+          "content_source": {
+            "document_id": "website:A8746170",
+            "evidence_source_cell": "CELL115",
+            "evidence_window": "آشنایی با مفهوم «درآمد غیرفعال» «درآمد غیرفعال» از فعالیتی اقتصادی به دست می‌آید ولی نیازی به فعالیت و حضور شما ندارد بلکه پول شما این جریان درآمدی را ایجاد می‌کند. برای مثال، در گذشته پول‌تان را به دوست‌تان سپرده‌اید تا کسب‌وکارش توسعه بیشتری پیدا کند و امروز او از محل کسب‌وکارش به شما سود پرداخت می‌کند. یکی از ابزارهای مهم برای خروج از چرخه کار برای پول، ایجاد درآمد غیرفعال است؛ وقتی درآمد غیرفعال فردی از جمع هزینه‌هایش بیشتر باشد، رها از دغدغه گذران زندگی شده و وارد «مسیر ثروت‌آفرینی» ‌می‌شود و پول برایش کار می‌کند.",
+            "matched_patterns": [
+              [
+                "درآمد غیرفعال",
+                "نیازی به فعالیت"
+              ],
+              [
+                "درآمد غیرفعال",
+                "پول",
+                "کار می کند"
+              ]
+            ],
+            "title": "بررسی بازی گردش مالی از دیدگاه سواد مالی",
+            "url": "https://www.fintelligence.ir/Blog/Detail/A8746170"
+          },
+          "description": "ایجاد درآمد منفعل یا غیرفعال که به فعالیت مستمر شغلی وابسته نیست.",
+          "human_source_review_status": "WEBSITE_SOURCE_BACKED"
+        }
+      ],
+      "content_source_recovery": "HUMAN_REVIEWED",
+      "original_phase1_demo_provenance": "NOT_PROVEN_FROM_AVAILABLE_ARTIFACTS",
+      "pilot_case_id": "question-pilot:2cabad10670e83af66847a341690d42e",
+      "primary_direct_author_feedback_only_claim_ids": [
+        "27-B",
+        "27-D"
+      ],
+      "reference_pilot_number": 27,
+      "website_scope_reviewed": 529
+    },
+    {
+      "accepted_website_document_ids": [
+        "website:2F8F15FB",
+        "website:E3C871BC"
+      ],
+      "claims": [
+        {
+          "claim_id": "28-A",
+          "content_source": {
+            "document_id": "website:2F8F15FB",
+            "evidence_source_cell": "CELL115",
+            "evidence_window": "نگرانی مالی دربارۀ «رابطۀ» ما با پول است. پول، دیگر شیء نیست؛ بلکه چیزهایی‌ست که نداریم: مقام، امنیت، آزادی، خوشبختی، سعادت. از دیدگاه اقتصادی",
+            "matched_patterns": [
+              [
+                "رابطه ما با پول"
+              ]
+            ],
+            "title": "چگونه کمتر نگران پول باشیم؟",
+            "url": "https://www.fintelligence.ir/Blog/Detail/2F8F15FB"
+          },
+          "description": "مسئله می‌تواند به رابطه فرد با پول مربوط باشد.",
+          "human_source_review_status": "WEBSITE_SOURCE_BACKED"
+        },
+        {
+          "claim_id": "28-B",
+          "content_source": {
+            "document_id": "website:2F8F15FB",
+            "evidence_source_cell": "CELL115",
+            "evidence_window": "نگرانی مالی دربارۀ «رابطۀ» ما با پول است. پول، دیگر شیء نیست؛ بلکه چیزهایی‌ست که نداریم: مقام، امنیت، آزادی، خوشبختی، سعادت. از دیدگاه اقتصادی",
+            "matched_patterns": [
+              [
+                "پول",
+                "چیزهایی ست که نداریم"
+              ],
+              [
+                "پول",
+                "مقام",
+                "امنیت",
+                "آزادی",
+                "خوشبختی"
+              ]
+            ],
+            "title": "چگونه کمتر نگران پول باشیم؟",
+            "url": "https://www.fintelligence.ir/Blog/Detail/2F8F15FB"
+          },
+          "description": "پول می‌تواند نماینده چیزهایی باشد که فرد احساس می‌کند ندارد.",
+          "human_source_review_status": "WEBSITE_SOURCE_BACKED"
+        },
+        {
+          "claim_id": "28-C",
+          "content_source": {
+            "document_id": "website:2F8F15FB",
+            "evidence_source_cell": "CELL115",
+            "evidence_window": "تصمیم‌های نادرست گذشته کی دست از سرم برمی‌دارند؟ بدون پول، زندگی‌ام چیزی کم دارد. پول ابزاری است که خودم و عشقم را ثابت کنم. پول رابطۀ من را با همسرم درست می‌کند.",
+            "matched_patterns": [
+              [
+                "پول ابزاری است",
+                "ثابت کنم"
+              ]
+            ],
+            "title": "چگونه کمتر نگران پول باشیم؟",
+            "url": "https://www.fintelligence.ir/Blog/Detail/2F8F15FB"
+          },
+          "description": "پول می‌تواند برای اثبات خود یا جبران کمبودهای روانی استفاده شود.",
+          "human_source_review_status": "WEBSITE_SOURCE_BACKED"
+        },
+        {
+          "claim_id": "28-D",
+          "content_source": {
+            "document_id": "website:E3C871BC",
+            "evidence_source_cell": "CELL115",
+            "evidence_window": "گاهی رسیدن به خواسته‌ها و فکر کردن به نداشته‌ها آنقدر به تار و پود زندگی‌مان گره می‌خورد که وجود چیزهای ارزشمند اطراف‌مان را یادمان می‌رود و جز با پول نمی‌توانیم خودمان را ثروتمند بدانیم. روزهایی در زندگی هست که پول کافی نداریم، همۀ چیزهایی که می‌خواهیم به رؤیایی در دوردست تبدیل شده و حتی ممکن است چیزهایی را هم که داشتیم، از دست بدهیم؛ دقیقاً در همین نقطه است که خودمان را می‌بازیم، احساس فقر می‌کنیم و دیگر حتی دارایی‌های ارزشمندمان را هم فراموش می‌کنیم.",
+            "matched_patterns": [
+              [
+                "احساس فقر",
+                "خواسته",
+                "نداشته"
+              ],
+              [
+                "احساس فقر",
+                "چیزهایی",
+                "ندار"
+              ]
+            ],
+            "title": "ثروتمند یعنی این",
+            "url": "https://www.fintelligence.ir/Blog/Detail/E3C871BC"
+          },
+          "description": "احساس فقر با نرسیدن به خواسته‌ها یا تمرکز بر نداشته‌ها ارتباط دارد.",
+          "human_source_review_status": "WEBSITE_SOURCE_BACKED"
+        }
+      ],
+      "content_source_recovery": "HUMAN_REVIEWED",
+      "original_phase1_demo_provenance": "NOT_PROVEN_FROM_AVAILABLE_ARTIFACTS",
+      "pilot_case_id": "question-pilot:41c1af00f30c2653f0ea814c4c7c6349",
+      "primary_direct_author_feedback_only_claim_ids": [],
+      "reference_pilot_number": 28,
+      "website_scope_reviewed": 529
+    }
+  ],
+  "primary_direct_author_feedback_only_claims": 5,
+  "purpose": "HUMAN_REVIEWED_CONTENT_SOURCE_RECOVERY_FOR_AUTHOR_REVIEW",
+  "reference_pilot_numbers": [
+    23,
+    24,
+    25,
+    26,
+    27,
+    28
+  ],
+  "schema_version": "source_packet_pilots23_28_v1",
+  "source_of_truth": "data/phase2/processed/documents_dedup_quality_accepted_v1.jsonl",
+  "total_atomic_claims": 22,
+  "website_scope_reviewed": 529,
+  "website_source_backed_claims": 17
+}
