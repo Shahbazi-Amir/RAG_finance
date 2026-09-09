@@ -1,7 +1,7 @@
 {
   "active_workspace": null,
   "author_review": {
-    "case_count": 22,
+    "case_count": 28,
     "cases_ready_for_review": [
       {
         "author_final_review": {
@@ -28161,12 +28161,1201 @@
         "task_draft_id": "task-draft:29b7eccee41f1464eb53697d8dafcc11",
         "task_family": "EXERCISE_SELF_ASSESSMENT_RETRIEVAL",
         "workflow_state": "PILOT_COMPLETE"
+      },
+      {
+        "record_schema": "AUTHOR_FEEDBACK_DERIVED_PILOT_V1",
+        "batch_version": "phase1_author_feedback_derived_pilots_v1",
+        "reference_pilot_number": 23,
+        "pilot_case_id": "question-pilot:a0f61a7f0c946fe1d79095dbb96a9497",
+        "feedback_case_number": 1,
+        "origin": "PHASE1_DEMO_AUTHOR_FEEDBACK",
+        "pilot_type": "AUTHOR_FEEDBACK_CONTENT",
+        "authority": {
+          "authority_class": "PRIMARY_DIRECT_AUTHOR_FEEDBACK",
+          "primary_author": "Dr. Komeil Roudi",
+          "phase1_model_answer_authoritative": false,
+          "raw_author_feedback_authoritative": true
+        },
+        "historical_phase1_demo": {
+          "raw_conversation": [
+            {
+              "speaker": "HUMAN",
+              "text": "سواد مالی درباره پول دار شدن دیگه؟"
+            },
+            {
+              "speaker": "PHASE1_MODEL",
+              "text": "سواد مالی به رابطۀ انسان با پول می‌پردازد، نه فقط به خود پول. پول در سواد مالی، یک پدیده‌ای بیرونی نیست، بلکه احساسات و رفتارهای انسان نسبت به پول است. سواد مالی به دانش و مهارت‌های لازم برای مدیریت بهتر پول و تصمیم‌گیری‌های مالی اشاره دارد."
+            }
+          ],
+          "raw_author_feedback": "نه ، ببین سواد مالی درباره مدیریت پول است. نه درباره میزان پول",
+          "raw_author_feedback_sha256": "5f2b8bce7733b37c1f03d4510836652b6b4fc605b93119096c0a9104ee407035",
+          "raw_feedback_preserved_verbatim": true
+        },
+        "feedback_source": {
+          "feedback_source_id": "author-feedback-source:92d99b268809fa1347d0a5d8f8972d6b",
+          "source_type": "DIRECT_AUTHOR_FEEDBACK",
+          "source_scope": "PHASE1_DEMO",
+          "source_mapping_to_phase2_corpus": "NOT_REQUIRED_FOR_AUTHOR_FEEDBACK_AUTHORITY",
+          "optional_corpus_cross_mapping_status": "NOT_STARTED"
+        },
+        "derived_question": {
+          "question_draft_id": "question-draft:388f7ba8a8a0a0ca8b3151c7ebbd612a",
+          "question_text": "سواد مالی درباره میزان پولی است که داریم یا درباره مدیریت پول؟",
+          "review_origin": "SECOND_HUMAN_REVIEW_PHASE1_AUTHOR_FEEDBACK",
+          "human_decision": "ACCEPT",
+          "external_knowledge_used": false
+        },
+        "second_human_review": {
+          "status": "COMPLETE",
+          "decision": "ACCEPT_DERIVED_PILOT",
+          "review_origin": "PHASE1_AUTHOR_FEEDBACK",
+          "review_timestamp_utc": "2026-09-09T13:02:12+00:00",
+          "raw_feedback_preserved": true,
+          "phase1_model_answer_used_as_ground_truth": false,
+          "author_review_status": "NOT_STARTED"
+        },
+        "author_final_review": {
+          "status": "NOT_STARTED",
+          "reviewer": "AUTHOR",
+          "decision": null,
+          "notes": null
+        },
+        "promotion": {
+          "status": "PROMOTED_TO_AUTHOR_REVIEW",
+          "currently_in_22_case_author_queue": false,
+          "future_reference_pilot_number": 23,
+          "future_target_total": 28,
+          "promoted_to_author_review": true,
+          "author_review_queue_position": 23,
+          "promotion_timestamp_utc": "2026-09-09T13:08:00+00:00",
+          "source_review_status": "COMPLETE"
+        },
+        "expected_answer_review": {
+          "expected_answer_draft_id": "expected-answer-draft:7a2577defed57b90b63681a906b3d5aa",
+          "expected_answer_text": "سواد مالی درباره مدیریت پول است، نه درباره میزان پول.",
+          "human_decision": "ACCEPT",
+          "grounding_source": "DIRECT_AUTHOR_FEEDBACK",
+          "external_knowledge_used": false
+        },
+        "citation_review": {
+          "citation_mapping_id": "citation-mapping:8585d33312a44fe62b8a3fc66f970d2a",
+          "human_decision": "ACCEPT",
+          "citation_entries": [
+            {
+              "citation_index": 0,
+              "source_type": "DIRECT_AUTHOR_FEEDBACK",
+              "feedback_source_id": "author-feedback-source:92d99b268809fa1347d0a5d8f8972d6b",
+              "raw_author_feedback_sha256": "5f2b8bce7733b37c1f03d4510836652b6b4fc605b93119096c0a9104ee407035",
+              "authority_class": "PRIMARY_DIRECT_AUTHOR_FEEDBACK"
+            },
+            {
+              "source_type": "WEBSITE_DIRECT_AUTHOR",
+              "document_id": "website:7C71884B",
+              "source_id": "website:7C71884B",
+              "title": "ابزارهای سواد مالی برای بهبود مدیریت هزینه",
+              "url": "https://www.fintelligence.ir/Blog/Detail/7C71884B",
+              "authority_class": "PRIMARY_DIRECT_AUTHOR",
+              "role": "PRIMARY_CORPUS_GROUNDING",
+              "coverage": "DIRECT_EXPLICIT",
+              "document_text_sha256": "f04c55c4a2f37dd65874a1fec1e38ee375f46e1614e3ec42eb250c17da25698c",
+              "citation_index": 1
+            }
+          ],
+          "grounding_mode": "DIRECT_AUTHOR_FEEDBACK_PLUS_CORPUS_DIRECT_SUPPORT",
+          "source_review_event_id": "second-source-review:13e5a0e7a6e46d1d517a6a5700d27357"
+        },
+        "golden_content_case": true,
+        "author_review_queue_position": 23,
+        "source_review_history": [
+          {
+            "review_event_id": "second-source-review:13e5a0e7a6e46d1d517a6a5700d27357",
+            "review_version": "phase1_author_feedback_source_review_v1",
+            "review_timestamp_utc": "2026-09-09T13:41:40+00:00",
+            "decision": "ACCEPT",
+            "revision_scope": "NONE",
+            "grounding_mode": "DIRECT_AUTHOR_FEEDBACK_PLUS_CORPUS_DIRECT_SUPPORT",
+            "source_mapping_id": "source-mapping:fdcd985387a4e4d8548e00b1d43269d9",
+            "verified_corpus_sources": [
+              {
+                "document_id": "website:7C71884B",
+                "source_id": "website:7C71884B",
+                "source_type": "website",
+                "authority_class": "PRIMARY_DIRECT_AUTHOR",
+                "title": "ابزارهای سواد مالی برای بهبود مدیریت هزینه",
+                "url": "https://www.fintelligence.ir/Blog/Detail/7C71884B",
+                "role": "PRIMARY_CORPUS_GROUNDING",
+                "coverage": "DIRECT_EXPLICIT",
+                "review_note": "The article explicitly states that financial literacy is not about the amount of money, but about managing money correctly.",
+                "document_text_sha256": "f04c55c4a2f37dd65874a1fec1e38ee375f46e1614e3ec42eb250c17da25698c"
+              }
+            ],
+            "direct_author_feedback_preserved": true,
+            "external_knowledge_used": false,
+            "author_final_review_recorded": false
+          }
+        ],
+        "second_source_review": {
+          "status": "COMPLETE",
+          "review_event_id": "second-source-review:13e5a0e7a6e46d1d517a6a5700d27357",
+          "review_version": "phase1_author_feedback_source_review_v1",
+          "decision": "ACCEPT",
+          "revision_scope": "NONE",
+          "grounding_mode": "DIRECT_AUTHOR_FEEDBACK_PLUS_CORPUS_DIRECT_SUPPORT",
+          "source_mapping_id": "source-mapping:fdcd985387a4e4d8548e00b1d43269d9",
+          "verified_corpus_sources": [
+            {
+              "document_id": "website:7C71884B",
+              "source_id": "website:7C71884B",
+              "source_type": "website",
+              "authority_class": "PRIMARY_DIRECT_AUTHOR",
+              "title": "ابزارهای سواد مالی برای بهبود مدیریت هزینه",
+              "url": "https://www.fintelligence.ir/Blog/Detail/7C71884B",
+              "role": "PRIMARY_CORPUS_GROUNDING",
+              "coverage": "DIRECT_EXPLICIT",
+              "review_note": "The article explicitly states that financial literacy is not about the amount of money, but about managing money correctly.",
+              "document_text_sha256": "f04c55c4a2f37dd65874a1fec1e38ee375f46e1614e3ec42eb250c17da25698c"
+            }
+          ],
+          "human_source_decision": "ACCEPT",
+          "review_timestamp_utc": "2026-09-09T13:41:40+00:00",
+          "direct_author_feedback_preserved": true,
+          "author_final_review_status": "NOT_STARTED"
+        }
+      },
+      {
+        "record_schema": "AUTHOR_FEEDBACK_DERIVED_PILOT_V1",
+        "batch_version": "phase1_author_feedback_derived_pilots_v1",
+        "reference_pilot_number": 24,
+        "pilot_case_id": "question-pilot:70628caeefebbfba48300176fafddc96",
+        "feedback_case_number": 2,
+        "origin": "PHASE1_DEMO_AUTHOR_FEEDBACK",
+        "pilot_type": "AUTHOR_FEEDBACK_CONTENT",
+        "authority": {
+          "authority_class": "PRIMARY_DIRECT_AUTHOR_FEEDBACK",
+          "primary_author": "Dr. Komeil Roudi",
+          "phase1_model_answer_authoritative": false,
+          "raw_author_feedback_authoritative": true
+        },
+        "historical_phase1_demo": {
+          "raw_conversation": [
+            {
+              "speaker": "HUMAN",
+              "text": "ایا من از نظر مالی وضعیت قابل قبولی دارم؟ از نظر دانشی و مهارتی یا حتی نگرشی؟"
+            },
+            {
+              "speaker": "PHASE1_MODEL",
+              "text": "پاسخ شما در منابع موجود پاسخ کافی پیدا نشد."
+            }
+          ],
+          "raw_author_feedback": "مدیریت مالی شخصی نیازمند دانش و نگرش و مهارت های خاصی است، برا یاینکه بدانید شما به اندازه کافی وضعیت مالی خوبی دارید ، لازم است این پرسشنامه را تکمیل کنید.",
+          "raw_author_feedback_sha256": "c863a5b310fadb15f267132e2604543f923b29223cebe11a300bc9d97643b4a9",
+          "raw_feedback_preserved_verbatim": true
+        },
+        "feedback_source": {
+          "feedback_source_id": "author-feedback-source:af0384eb436d2cad6e9327101e9514db",
+          "source_type": "DIRECT_AUTHOR_FEEDBACK",
+          "source_scope": "PHASE1_DEMO",
+          "source_mapping_to_phase2_corpus": "NOT_REQUIRED_FOR_AUTHOR_FEEDBACK_AUTHORITY",
+          "optional_corpus_cross_mapping_status": "NOT_STARTED"
+        },
+        "derived_question": {
+          "question_draft_id": "question-draft:55df1eef6849caee8b95a5816fc097a5",
+          "question_text": "برای اینکه بفهمیم از نظر دانش، نگرش و مهارت‌های مالی وضعیت قابل قبولی داریم، چه باید کرد؟",
+          "review_origin": "SECOND_HUMAN_REVIEW_PHASE1_AUTHOR_FEEDBACK",
+          "human_decision": "ACCEPT",
+          "external_knowledge_used": false
+        },
+        "second_human_review": {
+          "status": "COMPLETE",
+          "decision": "ACCEPT_DERIVED_PILOT",
+          "review_origin": "PHASE1_AUTHOR_FEEDBACK",
+          "review_timestamp_utc": "2026-09-09T13:02:12+00:00",
+          "raw_feedback_preserved": true,
+          "phase1_model_answer_used_as_ground_truth": false,
+          "author_review_status": "NOT_STARTED"
+        },
+        "author_final_review": {
+          "status": "NOT_STARTED",
+          "reviewer": "AUTHOR",
+          "decision": null,
+          "notes": null
+        },
+        "promotion": {
+          "status": "PROMOTED_TO_AUTHOR_REVIEW",
+          "currently_in_22_case_author_queue": false,
+          "future_reference_pilot_number": 24,
+          "future_target_total": 28,
+          "promoted_to_author_review": true,
+          "author_review_queue_position": 24,
+          "promotion_timestamp_utc": "2026-09-09T13:08:00+00:00",
+          "source_review_status": "COMPLETE"
+        },
+        "expected_answer_review": {
+          "expected_answer_draft_id": "expected-answer-draft:7cbe1039f15ef7052f34125ccbaf2f33",
+          "expected_answer_text": "مدیریت مالی شخصی به دانش، نگرش و مهارت‌های خاص نیاز دارد. برای اینکه بدانیم وضعیت مالی ما از این جنبه‌ها به اندازه کافی مناسب است، باید پرسشنامه مربوط را تکمیل کنیم.",
+          "human_decision": "ACCEPT",
+          "grounding_source": "DIRECT_AUTHOR_FEEDBACK",
+          "external_knowledge_used": false
+        },
+        "citation_review": {
+          "citation_mapping_id": "citation-mapping:f44a4a1a54957a27e1f38527aa40f4ab",
+          "human_decision": "ACCEPT",
+          "citation_entries": [
+            {
+              "citation_index": 0,
+              "source_type": "DIRECT_AUTHOR_FEEDBACK",
+              "feedback_source_id": "author-feedback-source:af0384eb436d2cad6e9327101e9514db",
+              "raw_author_feedback_sha256": "c863a5b310fadb15f267132e2604543f923b29223cebe11a300bc9d97643b4a9",
+              "authority_class": "PRIMARY_DIRECT_AUTHOR_FEEDBACK"
+            },
+            {
+              "source_type": "WEBSITE_DIRECT_AUTHOR",
+              "document_id": "website:662BDA7F",
+              "source_id": "website:662BDA7F",
+              "title": "سواد مالی خانم‌ها؛ وضعیت چقدر بحرانی است؟",
+              "url": "https://www.fintelligence.ir/Blog/Detail/662BDA7F",
+              "authority_class": "PRIMARY_DIRECT_AUTHOR",
+              "role": "ASSESSMENT_AND_QUESTIONNAIRE_GROUNDING",
+              "coverage": "DIRECT_SUPPORT",
+              "document_text_sha256": "88a43419583cde80474d6f6fb924200694a7647f45498337f4139a8300f68195",
+              "citation_index": 1
+            },
+            {
+              "source_type": "WEBSITE_DIRECT_AUTHOR",
+              "document_id": "website:E2311705",
+              "source_id": "website:E2311705",
+              "title": "آموزش سواد مالی در اروپا",
+              "url": "https://www.fintelligence.ir/Blog/Detail/E2311705",
+              "authority_class": "PRIMARY_DIRECT_AUTHOR",
+              "role": "KNOWLEDGE_ATTITUDE_SKILL_GROUNDING",
+              "coverage": "DIRECT_SUPPORT",
+              "document_text_sha256": "bb651382f9ef1561b4f0fd72bbda42d172a0e5fe324a5ab61a6f88d3e3771b27",
+              "citation_index": 2
+            }
+          ],
+          "grounding_mode": "DIRECT_AUTHOR_FEEDBACK_PLUS_COMBINED_CORPUS_SUPPORT",
+          "source_review_event_id": "second-source-review:a42946446ed94f3ea0d5e7c5ebfe7813"
+        },
+        "golden_content_case": true,
+        "author_review_queue_position": 24,
+        "source_review_history": [
+          {
+            "review_event_id": "second-source-review:a42946446ed94f3ea0d5e7c5ebfe7813",
+            "review_version": "phase1_author_feedback_source_review_v1",
+            "review_timestamp_utc": "2026-09-09T13:41:40+00:00",
+            "decision": "ACCEPT",
+            "revision_scope": "NONE",
+            "grounding_mode": "DIRECT_AUTHOR_FEEDBACK_PLUS_COMBINED_CORPUS_SUPPORT",
+            "source_mapping_id": "source-mapping:fbc0c91b3995c180f47115f7760d5f81",
+            "verified_corpus_sources": [
+              {
+                "document_id": "website:662BDA7F",
+                "source_id": "website:662BDA7F",
+                "source_type": "website",
+                "authority_class": "PRIMARY_DIRECT_AUTHOR",
+                "title": "سواد مالی خانم‌ها؛ وضعیت چقدر بحرانی است؟",
+                "url": "https://www.fintelligence.ir/Blog/Detail/662BDA7F",
+                "role": "ASSESSMENT_AND_QUESTIONNAIRE_GROUNDING",
+                "coverage": "DIRECT_SUPPORT",
+                "review_note": "Supports questionnaire-based assessment and interpretation of financial condition.",
+                "document_text_sha256": "88a43419583cde80474d6f6fb924200694a7647f45498337f4139a8300f68195"
+              },
+              {
+                "document_id": "website:E2311705",
+                "source_id": "website:E2311705",
+                "source_type": "website",
+                "authority_class": "PRIMARY_DIRECT_AUTHOR",
+                "title": "آموزش سواد مالی در اروپا",
+                "url": "https://www.fintelligence.ir/Blog/Detail/E2311705",
+                "role": "KNOWLEDGE_ATTITUDE_SKILL_GROUNDING",
+                "coverage": "DIRECT_SUPPORT",
+                "review_note": "Supports financial literacy as a combination of knowledge, attitudes and abilities/skills.",
+                "document_text_sha256": "bb651382f9ef1561b4f0fd72bbda42d172a0e5fe324a5ab61a6f88d3e3771b27"
+              }
+            ],
+            "direct_author_feedback_preserved": true,
+            "external_knowledge_used": false,
+            "author_final_review_recorded": false
+          }
+        ],
+        "second_source_review": {
+          "status": "COMPLETE",
+          "review_event_id": "second-source-review:a42946446ed94f3ea0d5e7c5ebfe7813",
+          "review_version": "phase1_author_feedback_source_review_v1",
+          "decision": "ACCEPT",
+          "revision_scope": "NONE",
+          "grounding_mode": "DIRECT_AUTHOR_FEEDBACK_PLUS_COMBINED_CORPUS_SUPPORT",
+          "source_mapping_id": "source-mapping:fbc0c91b3995c180f47115f7760d5f81",
+          "verified_corpus_sources": [
+            {
+              "document_id": "website:662BDA7F",
+              "source_id": "website:662BDA7F",
+              "source_type": "website",
+              "authority_class": "PRIMARY_DIRECT_AUTHOR",
+              "title": "سواد مالی خانم‌ها؛ وضعیت چقدر بحرانی است؟",
+              "url": "https://www.fintelligence.ir/Blog/Detail/662BDA7F",
+              "role": "ASSESSMENT_AND_QUESTIONNAIRE_GROUNDING",
+              "coverage": "DIRECT_SUPPORT",
+              "review_note": "Supports questionnaire-based assessment and interpretation of financial condition.",
+              "document_text_sha256": "88a43419583cde80474d6f6fb924200694a7647f45498337f4139a8300f68195"
+            },
+            {
+              "document_id": "website:E2311705",
+              "source_id": "website:E2311705",
+              "source_type": "website",
+              "authority_class": "PRIMARY_DIRECT_AUTHOR",
+              "title": "آموزش سواد مالی در اروپا",
+              "url": "https://www.fintelligence.ir/Blog/Detail/E2311705",
+              "role": "KNOWLEDGE_ATTITUDE_SKILL_GROUNDING",
+              "coverage": "DIRECT_SUPPORT",
+              "review_note": "Supports financial literacy as a combination of knowledge, attitudes and abilities/skills.",
+              "document_text_sha256": "bb651382f9ef1561b4f0fd72bbda42d172a0e5fe324a5ab61a6f88d3e3771b27"
+            }
+          ],
+          "human_source_decision": "ACCEPT",
+          "review_timestamp_utc": "2026-09-09T13:41:40+00:00",
+          "direct_author_feedback_preserved": true,
+          "author_final_review_status": "NOT_STARTED"
+        }
+      },
+      {
+        "record_schema": "AUTHOR_FEEDBACK_DERIVED_PILOT_V1",
+        "batch_version": "phase1_author_feedback_derived_pilots_v1",
+        "reference_pilot_number": 25,
+        "pilot_case_id": "question-pilot:77d8b06bc6bccdbbfca4faab99051fe0",
+        "feedback_case_number": 3,
+        "origin": "PHASE1_DEMO_AUTHOR_FEEDBACK",
+        "pilot_type": "AUTHOR_FEEDBACK_CONTENT",
+        "authority": {
+          "authority_class": "PRIMARY_DIRECT_AUTHOR_FEEDBACK",
+          "primary_author": "Dr. Komeil Roudi",
+          "phase1_model_answer_authoritative": false,
+          "raw_author_feedback_authoritative": true
+        },
+        "historical_phase1_demo": {
+          "raw_conversation": [
+            {
+              "speaker": "HUMAN",
+              "turn": 1,
+              "text": "نمی دانم پولم کجا می رود ؟ انگار پولم را گم می کنم."
+            },
+            {
+              "speaker": "PHASE1_MODEL",
+              "turn": 1,
+              "text": "پول شما ممکن است به دلیل عدم توجه به جزئیات هزینه‌ها و انجام خریدهایی بدون نظارت، به طور غیر منظمی خرج شود. بهترین راه برای کشف این موضوع، ثبت دقیق هزینه‌هاست تا بدانیم چه چیزی را کجاها خرج کرده‌اید. این کار به شما کمک می‌کند تا بهترین تصمیم‌ها را بگیرید و از هدررفت پول جلوگیری کنید."
+            },
+            {
+              "speaker": "HUMAN",
+              "turn": 2,
+              "text": "این جواب خوبی بود. ولی کوتاه است بیشتر توضیح می دهی."
+            },
+            {
+              "speaker": "PHASE1_MODEL",
+              "turn": 2,
+              "text": "قرض گرفتن یک راه حلی است که ممکن است در موقعیت‌هایی مانند نیاز به پول سریع یا سرمایه گذاری، مفید باشد. اما اگر به طور مداوم و بدون نیت مشخص انجام شود، می‌تواند به یک معضل تبدیل شود. قرض گرفتن بهتر است زمانی باشد که بتوانیم آن را به خوبی بازپرداخت کنیم و از آن برای هزینه‌های ضروری یا سرمایه‌گذاری استفاده کنیم. اما اگر به صورت مداوم و بدون برنامه‌ریزی، انجام شود، می‌تواند به دلیل افزایش بدهی‌ها و مشکلات مالی، به یک معضل تبدیل شود. بهتر است از قرض به‌عنوان یک ابزار کمکی استفاده کنیم، نه یک راه حل دائمی."
+            }
+          ],
+          "raw_author_feedback": "این خیلی حواب بی ربطی بود.",
+          "raw_author_feedback_sha256": "e32a4b04fa11b9f203450b05e464ba82bd44d5beaf311ae15ddfe308d720dfdf",
+          "raw_feedback_preserved_verbatim": true
+        },
+        "feedback_source": {
+          "feedback_source_id": "author-feedback-source:51aea596838149cac0d106db94a1d64f",
+          "source_type": "DIRECT_AUTHOR_FEEDBACK",
+          "source_scope": "PHASE1_DEMO",
+          "source_mapping_to_phase2_corpus": "NOT_REQUIRED_FOR_AUTHOR_FEEDBACK_AUTHORITY",
+          "optional_corpus_cross_mapping_status": "NOT_STARTED"
+        },
+        "derived_question": {
+          "question_draft_id": "question-draft:6195c1e35693eb0fdf6f9c734d5d2c37",
+          "question_text": "وقتی نمی‌دانیم پولمان کجا می‌رود و در پایان ماه نمی‌دانیم آن را صرف چه چیزهایی کرده‌ایم، چه کاری باید انجام دهیم؟",
+          "review_origin": "SECOND_HUMAN_SOURCE_REVIEW",
+          "human_decision": "REVISE",
+          "external_knowledge_used": false
+        },
+        "second_human_review": {
+          "status": "COMPLETE",
+          "decision": "ACCEPT_DERIVED_PILOT",
+          "review_origin": "PHASE1_AUTHOR_FEEDBACK",
+          "review_timestamp_utc": "2026-09-09T13:02:12+00:00",
+          "raw_feedback_preserved": true,
+          "phase1_model_answer_used_as_ground_truth": false,
+          "author_review_status": "NOT_STARTED"
+        },
+        "author_final_review": {
+          "status": "NOT_STARTED",
+          "reviewer": "AUTHOR",
+          "decision": null,
+          "notes": null
+        },
+        "promotion": {
+          "status": "PROMOTED_TO_AUTHOR_REVIEW",
+          "currently_in_22_case_author_queue": false,
+          "future_reference_pilot_number": 25,
+          "future_target_total": 28,
+          "promoted_to_author_review": true,
+          "author_review_queue_position": 25,
+          "promotion_timestamp_utc": "2026-09-09T13:08:00+00:00",
+          "source_review_status": "COMPLETE"
+        },
+        "expected_behavior_review": {
+          "behavior_mapping_id": "behavior-mapping:d25422e17d24e1a1a4a4be410ac14f92",
+          "expected_behavior": "پاسخ باید همان موضوع Turn قبلی، یعنی ثبت و بررسی هزینه‌ها برای فهمیدن اینکه پول کجا می‌رود، را ادامه و بسط دهد. پاسخ نباید بدون ارتباط با Context به موضوع دیگری مانند قرض گرفتن تغییر مسیر دهد.",
+          "human_decision": "ACCEPT",
+          "grounding_source": "DIRECT_AUTHOR_FEEDBACK_PLUS_CONVERSATION_CONTEXT",
+          "external_knowledge_used": false,
+          "status": "SUPERSEDED_BY_SOURCE_GROUNDED_CONTENT_REVISION"
+        },
+        "golden_content_case": true,
+        "regression_role": "MULTI_TURN_CONTEXT_CONTINUITY",
+        "author_review_queue_position": 25,
+        "source_review_history": [
+          {
+            "review_event_id": "second-source-review:35626d328b21c1ccc5c12d27969bc364",
+            "review_version": "phase1_author_feedback_source_review_v1",
+            "review_timestamp_utc": "2026-09-09T13:41:40+00:00",
+            "decision": "REVISE",
+            "revision_scope": "QUESTION_ANSWER_AND_PILOT_TYPE",
+            "grounding_mode": "CORPUS_DIRECT_SUPPORT",
+            "source_mapping_id": "source-mapping:dbdb0cdfa1857d86ac7fd0c9a49b6c45",
+            "verified_corpus_sources": [
+              {
+                "document_id": "website:3E26E509",
+                "source_id": "website:3E26E509",
+                "source_type": "website",
+                "authority_class": "PRIMARY_DIRECT_AUTHOR",
+                "title": "سواد مالی خانم‌ها؛ پول‌ها کجا می‌روند؟",
+                "url": "https://www.fintelligence.ir/Blog/Detail/3E26E509",
+                "role": "PRIMARY_CORPUS_GROUNDING",
+                "coverage": "DIRECT_EXPLICIT",
+                "review_note": "Directly supports the problem of not knowing where money went and the value of recording expenses for awareness and better management.",
+                "document_text_sha256": "93962c20fd7afdb2d7a004646bfc4a4749a373ed58e5cbe187282dfe5d10d060"
+              },
+              {
+                "document_id": "website:7C71884B",
+                "source_id": "website:7C71884B",
+                "source_type": "website",
+                "authority_class": "PRIMARY_DIRECT_AUTHOR",
+                "title": "ابزارهای سواد مالی برای بهبود مدیریت هزینه",
+                "url": "https://www.fintelligence.ir/Blog/Detail/7C71884B",
+                "role": "CORROBORATING_CORPUS_SOURCE",
+                "coverage": "SUPPORTING",
+                "review_note": "Supports expense recording and using that experience for better expense management and budgeting.",
+                "document_text_sha256": "f04c55c4a2f37dd65874a1fec1e38ee375f46e1614e3ec42eb250c17da25698c"
+              }
+            ],
+            "direct_author_feedback_preserved": true,
+            "external_knowledge_used": false,
+            "author_final_review_recorded": false,
+            "superseded_state": {
+              "previous_pilot_type": "MULTI_TURN_CONTEXT_CONTINUITY",
+              "previous_golden_content_case": false,
+              "previous_question": "این جواب خوبی بود. ولی کوتاه است بیشتر توضیح می‌دهی؟",
+              "previous_expected_behavior": "پاسخ باید همان موضوع Turn قبلی، یعنی ثبت و بررسی هزینه‌ها برای فهمیدن اینکه پول کجا می‌رود، را ادامه و بسط دهد. پاسخ نباید بدون ارتباط با Context به موضوع دیگری مانند قرض گرفتن تغییر مسیر دهد.",
+              "previous_regression_role": "MULTI_TURN_CONTEXT_CONTINUITY",
+              "superseded_reason": "The historical demo turns did not provide reliable connected-chat context. The old continuity interpretation is preserved only as history, while the active Pilot is revised to a source-grounded content case."
+            }
+          }
+        ],
+        "expected_answer_review": {
+          "expected_answer_draft_id": "expected-answer-draft:fb641fbe5fee02093e5001db6f98ec8b",
+          "expected_answer_text": "باید هزینه‌ها را ثبت کنیم تا بدانیم پول را کجا و برای چه چیزهایی خرج کرده‌ایم. آگاهی از هزینه‌ها امکان مدیریت آن‌ها را فراهم می‌کند و ثبت هزینه‌ها می‌تواند به پیشگیری از ولخرجی و مدیریت بهتر مخارج کمک کند.",
+          "human_decision": "REVISE",
+          "grounding_source": "PHASE2_ACCEPTED_DIRECT_AUTHOR_CORPUS",
+          "external_knowledge_used": false
+        },
+        "regression_role_status": "SUPERSEDED",
+        "second_source_review": {
+          "status": "COMPLETE",
+          "review_event_id": "second-source-review:35626d328b21c1ccc5c12d27969bc364",
+          "review_version": "phase1_author_feedback_source_review_v1",
+          "decision": "REVISE",
+          "revision_scope": "QUESTION_ANSWER_AND_PILOT_TYPE",
+          "grounding_mode": "CORPUS_DIRECT_SUPPORT",
+          "source_mapping_id": "source-mapping:dbdb0cdfa1857d86ac7fd0c9a49b6c45",
+          "verified_corpus_sources": [
+            {
+              "document_id": "website:3E26E509",
+              "source_id": "website:3E26E509",
+              "source_type": "website",
+              "authority_class": "PRIMARY_DIRECT_AUTHOR",
+              "title": "سواد مالی خانم‌ها؛ پول‌ها کجا می‌روند؟",
+              "url": "https://www.fintelligence.ir/Blog/Detail/3E26E509",
+              "role": "PRIMARY_CORPUS_GROUNDING",
+              "coverage": "DIRECT_EXPLICIT",
+              "review_note": "Directly supports the problem of not knowing where money went and the value of recording expenses for awareness and better management.",
+              "document_text_sha256": "93962c20fd7afdb2d7a004646bfc4a4749a373ed58e5cbe187282dfe5d10d060"
+            },
+            {
+              "document_id": "website:7C71884B",
+              "source_id": "website:7C71884B",
+              "source_type": "website",
+              "authority_class": "PRIMARY_DIRECT_AUTHOR",
+              "title": "ابزارهای سواد مالی برای بهبود مدیریت هزینه",
+              "url": "https://www.fintelligence.ir/Blog/Detail/7C71884B",
+              "role": "CORROBORATING_CORPUS_SOURCE",
+              "coverage": "SUPPORTING",
+              "review_note": "Supports expense recording and using that experience for better expense management and budgeting.",
+              "document_text_sha256": "f04c55c4a2f37dd65874a1fec1e38ee375f46e1614e3ec42eb250c17da25698c"
+            }
+          ],
+          "human_source_decision": "REVISE",
+          "review_timestamp_utc": "2026-09-09T13:41:40+00:00",
+          "direct_author_feedback_preserved": true,
+          "author_final_review_status": "NOT_STARTED"
+        },
+        "citation_review": {
+          "citation_mapping_id": "citation-mapping:cf38dc73357aaa4d6690378f60565ecc",
+          "human_decision": "ACCEPT",
+          "citation_entries": [
+            {
+              "source_type": "DIRECT_AUTHOR_FEEDBACK",
+              "feedback_source_id": "author-feedback-source:51aea596838149cac0d106db94a1d64f",
+              "raw_author_feedback_sha256": "e32a4b04fa11b9f203450b05e464ba82bd44d5beaf311ae15ddfe308d720dfdf",
+              "authority_class": "PRIMARY_DIRECT_AUTHOR_FEEDBACK",
+              "role": "PRIMARY_AUTHOR_EVIDENCE",
+              "citation_index": 0
+            },
+            {
+              "source_type": "WEBSITE_DIRECT_AUTHOR",
+              "document_id": "website:3E26E509",
+              "source_id": "website:3E26E509",
+              "title": "سواد مالی خانم‌ها؛ پول‌ها کجا می‌روند؟",
+              "url": "https://www.fintelligence.ir/Blog/Detail/3E26E509",
+              "authority_class": "PRIMARY_DIRECT_AUTHOR",
+              "role": "PRIMARY_CORPUS_GROUNDING",
+              "coverage": "DIRECT_EXPLICIT",
+              "document_text_sha256": "93962c20fd7afdb2d7a004646bfc4a4749a373ed58e5cbe187282dfe5d10d060",
+              "citation_index": 1
+            },
+            {
+              "source_type": "WEBSITE_DIRECT_AUTHOR",
+              "document_id": "website:7C71884B",
+              "source_id": "website:7C71884B",
+              "title": "ابزارهای سواد مالی برای بهبود مدیریت هزینه",
+              "url": "https://www.fintelligence.ir/Blog/Detail/7C71884B",
+              "authority_class": "PRIMARY_DIRECT_AUTHOR",
+              "role": "CORROBORATING_CORPUS_SOURCE",
+              "coverage": "SUPPORTING",
+              "document_text_sha256": "f04c55c4a2f37dd65874a1fec1e38ee375f46e1614e3ec42eb250c17da25698c",
+              "citation_index": 2
+            }
+          ],
+          "grounding_mode": "CORPUS_DIRECT_SUPPORT",
+          "source_review_event_id": "second-source-review:35626d328b21c1ccc5c12d27969bc364"
+        }
+      },
+      {
+        "record_schema": "AUTHOR_FEEDBACK_DERIVED_PILOT_V1",
+        "batch_version": "phase1_author_feedback_derived_pilots_v1",
+        "reference_pilot_number": 26,
+        "pilot_case_id": "question-pilot:712a49491835fe706df3353b781f8044",
+        "feedback_case_number": 4,
+        "origin": "PHASE1_DEMO_AUTHOR_FEEDBACK",
+        "pilot_type": "AUTHOR_FEEDBACK_CONTENT",
+        "authority": {
+          "authority_class": "PRIMARY_DIRECT_AUTHOR_FEEDBACK",
+          "primary_author": "Dr. Komeil Roudi",
+          "phase1_model_answer_authoritative": false,
+          "raw_author_feedback_authoritative": true
+        },
+        "historical_phase1_demo": {
+          "raw_conversation": [
+            {
+              "speaker": "HUMAN",
+              "turn": 1,
+              "text": "چند تا راهکار بده که بتونم پس انداز کنم"
+            },
+            {
+              "speaker": "PHASE1_MODEL",
+              "turn": 1,
+              "text": "سه راهکار برای پس‌انداز عبارتند از:\n1. تعیین اهداف مالی مشخص و پس‌اندازی برای رسیدن به آن‌ها.\n2. کاهش هزینه‌های غیر ضروری و جایگزینی آن‌ها با اموری که باعث افزایش ثروت می‌شوند.\n3. سرمایه‌گذاری پس‌اندازها در گزینه‌هایی که حداقل به اندازۀ تورم بازدهی داشته باشند."
+            },
+            {
+              "speaker": "HUMAN",
+              "turn": 2,
+              "text": "هزینه غیرضروری ندارم. همه اش ضروریه . یعنی چی هزینه غیرضروری؟"
+            },
+            {
+              "speaker": "PHASE1_MODEL",
+              "turn": 2,
+              "text": "هزینه غیرضروری به معنای خرج کردن پول برای چیزهایی است که لازم نیستند یا بهبود کیفیت زندگی ما را فراهم نمی‌کنند. به عبارت دیگر، چیزهایی که به طور مداوم یا بدون نیاز به خریداری می‌شوند و ممکن است باعث هدررفت پول شوند. به طور کلی، هزینه‌های غیرضروری، هزینه‌هایی هستند که به طور غیرمتعارف یا بدون نیتی در حساب کشیده می‌شوند."
+            },
+            {
+              "speaker": "HUMAN",
+              "turn": 3,
+              "text": "چند نمونه برام بگو"
+            },
+            {
+              "speaker": "PHASE1_MODEL",
+              "turn": 3,
+              "text": "چند نمونه از گزینه‌های سرمایه‌گذاری عبارتند از:\n- سرمایه‌گذاری در اوراق بهادار\n- سرمایه‌گذاری در املاک و مستغلات\n- سرمایه‌گذاری در صندوق‌های سرمایه\n- سرمایه‌گذاری در بانک‌ها با سود بالا\n- سرمایه‌گذاری در طلا یا سایر فلزات گرانبها."
+            }
+          ],
+          "raw_author_feedback": "آنچه باعث می شود پول هایم هدر روند ، الگوی خرید نامناسب است مانند \n1. خرید با تنوع و حجم زیاد\n2. خرید به خاطر تنش عاطفی \n3. خرید به خاطر هیجان زود گذر \n4. خرید به خاطر پذیرفته شدن در گروه های مرجع \n5. خرید به خاطر پذیرش تبلیغات و بازاریابی \n6. خرید به خاطر یک دوره سختی و احتیاج به پرداختن به خود \n7. خرید به خاطر فداکاری",
+          "raw_author_feedback_sha256": "25802bea8c94318361d26fc0924fd18e93cb69f8f07dfe2ad076c36c77585a80",
+          "raw_feedback_preserved_verbatim": true
+        },
+        "feedback_source": {
+          "feedback_source_id": "author-feedback-source:715b88fd3b05edc3db1127c75a962534",
+          "source_type": "DIRECT_AUTHOR_FEEDBACK",
+          "source_scope": "PHASE1_DEMO",
+          "source_mapping_to_phase2_corpus": "NOT_REQUIRED_FOR_AUTHOR_FEEDBACK_AUTHORITY",
+          "optional_corpus_cross_mapping_status": "NOT_STARTED"
+        },
+        "derived_question": {
+          "question_draft_id": "question-draft:b25bbaa56c0d557917f630b4529e8799",
+          "question_text": "چه الگوهای خریدی می‌توانند باعث هدررفت پول شوند؟",
+          "review_origin": "SECOND_HUMAN_REVIEW_PHASE1_AUTHOR_FEEDBACK",
+          "human_decision": "ACCEPT",
+          "external_knowledge_used": false
+        },
+        "second_human_review": {
+          "status": "COMPLETE",
+          "decision": "ACCEPT_DERIVED_PILOT",
+          "review_origin": "PHASE1_AUTHOR_FEEDBACK",
+          "review_timestamp_utc": "2026-09-09T13:02:12+00:00",
+          "raw_feedback_preserved": true,
+          "phase1_model_answer_used_as_ground_truth": false,
+          "author_review_status": "NOT_STARTED"
+        },
+        "author_final_review": {
+          "status": "NOT_STARTED",
+          "reviewer": "AUTHOR",
+          "decision": null,
+          "notes": null
+        },
+        "promotion": {
+          "status": "PROMOTED_TO_AUTHOR_REVIEW",
+          "currently_in_22_case_author_queue": false,
+          "future_reference_pilot_number": 26,
+          "future_target_total": 28,
+          "promoted_to_author_review": true,
+          "author_review_queue_position": 26,
+          "promotion_timestamp_utc": "2026-09-09T13:08:00+00:00",
+          "source_review_status": "COMPLETE"
+        },
+        "expected_answer_review": {
+          "expected_answer_draft_id": "expected-answer-draft:8422ab8fc539a92620b886f9b76d2a8d",
+          "expected_answer_text": "الگوهای خریدی که می‌توانند باعث هدررفت پول شوند شامل این موارد هستند:\n1. خرید با تنوع و حجم زیاد\n2. خرید به خاطر تنش عاطفی\n3. خرید به خاطر هیجان زودگذر\n4. خرید به خاطر پذیرفته شدن در گروه‌های مرجع\n5. خرید به خاطر پذیرش تبلیغات و بازاریابی\n6. خرید به خاطر یک دوره سختی و نیاز به پرداختن به خود\n7. خرید به خاطر فداکاری",
+          "human_decision": "ACCEPT",
+          "grounding_source": "DIRECT_AUTHOR_FEEDBACK",
+          "external_knowledge_used": false
+        },
+        "citation_review": {
+          "citation_mapping_id": "citation-mapping:4726e60117f586025a7152a8d5ddc356",
+          "human_decision": "ACCEPT",
+          "citation_entries": [
+            {
+              "citation_index": 0,
+              "source_type": "DIRECT_AUTHOR_FEEDBACK",
+              "feedback_source_id": "author-feedback-source:715b88fd3b05edc3db1127c75a962534",
+              "raw_author_feedback_sha256": "25802bea8c94318361d26fc0924fd18e93cb69f8f07dfe2ad076c36c77585a80",
+              "authority_class": "PRIMARY_DIRECT_AUTHOR_FEEDBACK"
+            },
+            {
+              "source_type": "WEBSITE_DIRECT_AUTHOR",
+              "document_id": "website:9673DF51",
+              "source_id": "website:9673DF51",
+              "title": "الگوهای نادرست خرید و راهکارهای پرهیز از آن",
+              "url": "https://www.fintelligence.ir/Blog/Detail/9673DF51",
+              "authority_class": "PRIMARY_DIRECT_AUTHOR",
+              "role": "CORROBORATING_CORPUS_SOURCE",
+              "coverage": "PARTIAL",
+              "document_text_sha256": "34773eab0c594ec5c38eda81ff8cb2122c120461afc95501c531e8b4519d0c8b",
+              "citation_index": 1
+            },
+            {
+              "source_type": "WEBSITE_DIRECT_AUTHOR",
+              "document_id": "website:BC0342B6",
+              "source_id": "website:BC0342B6",
+              "title": "سواد مالی خانم‌ها؛ تصمیم‌های خرید را خودمان می‌گیریم یا عادت‌های‌مان؟",
+              "url": "https://www.fintelligence.ir/Blog/Detail/BC0342B6",
+              "authority_class": "PRIMARY_DIRECT_AUTHOR",
+              "role": "CORROBORATING_CORPUS_SOURCE",
+              "coverage": "PARTIAL",
+              "document_text_sha256": "895b6a6c11137c190d432a766062896be61f95a39e73d37142a3d7c5a1b42b47",
+              "citation_index": 2
+            }
+          ],
+          "grounding_mode": "DIRECT_AUTHOR_FEEDBACK_PRIMARY_WITH_PARTIAL_CORPUS_CORROBORATION",
+          "source_review_event_id": "second-source-review:8fd3a4c97358f5810d3052841339f400"
+        },
+        "golden_content_case": true,
+        "author_review_queue_position": 26,
+        "source_review_history": [
+          {
+            "review_event_id": "second-source-review:8fd3a4c97358f5810d3052841339f400",
+            "review_version": "phase1_author_feedback_source_review_v1",
+            "review_timestamp_utc": "2026-09-09T13:41:40+00:00",
+            "decision": "REVISE",
+            "revision_scope": "GROUNDING_ONLY",
+            "grounding_mode": "DIRECT_AUTHOR_FEEDBACK_PRIMARY_WITH_PARTIAL_CORPUS_CORROBORATION",
+            "source_mapping_id": "source-mapping:45280f9b664c5bfbe48d36745a6078ca",
+            "verified_corpus_sources": [
+              {
+                "document_id": "website:9673DF51",
+                "source_id": "website:9673DF51",
+                "source_type": "website",
+                "authority_class": "PRIMARY_DIRECT_AUTHOR",
+                "title": "الگوهای نادرست خرید و راهکارهای پرهیز از آن",
+                "url": "https://www.fintelligence.ir/Blog/Detail/9673DF51",
+                "role": "CORROBORATING_CORPUS_SOURCE",
+                "coverage": "PARTIAL",
+                "review_note": "Supports incorrect purchasing patterns, emotional drivers, and advertising/marketing influence, but does not independently enumerate all seven Author-feedback items.",
+                "document_text_sha256": "34773eab0c594ec5c38eda81ff8cb2122c120461afc95501c531e8b4519d0c8b"
+              },
+              {
+                "document_id": "website:BC0342B6",
+                "source_id": "website:BC0342B6",
+                "source_type": "website",
+                "authority_class": "PRIMARY_DIRECT_AUTHOR",
+                "title": "سواد مالی خانم‌ها؛ تصمیم‌های خرید را خودمان می‌گیریم یا عادت‌های‌مان؟",
+                "url": "https://www.fintelligence.ir/Blog/Detail/BC0342B6",
+                "role": "CORROBORATING_CORPUS_SOURCE",
+                "coverage": "PARTIAL",
+                "review_note": "Supports emotional/psychological purchasing patterns and broader incorrect buying behavior.",
+                "document_text_sha256": "895b6a6c11137c190d432a766062896be61f95a39e73d37142a3d7c5a1b42b47"
+              }
+            ],
+            "direct_author_feedback_preserved": true,
+            "external_knowledge_used": false,
+            "author_final_review_recorded": false,
+            "grounding_constraint": "The seven-item expected answer remains primarily grounded in Dr. Roudi's direct historical feedback. Website evidence is corroborating, not an independent full source for all seven items."
+          }
+        ],
+        "second_source_review": {
+          "status": "COMPLETE",
+          "review_event_id": "second-source-review:8fd3a4c97358f5810d3052841339f400",
+          "review_version": "phase1_author_feedback_source_review_v1",
+          "decision": "REVISE",
+          "revision_scope": "GROUNDING_ONLY",
+          "grounding_mode": "DIRECT_AUTHOR_FEEDBACK_PRIMARY_WITH_PARTIAL_CORPUS_CORROBORATION",
+          "source_mapping_id": "source-mapping:45280f9b664c5bfbe48d36745a6078ca",
+          "verified_corpus_sources": [
+            {
+              "document_id": "website:9673DF51",
+              "source_id": "website:9673DF51",
+              "source_type": "website",
+              "authority_class": "PRIMARY_DIRECT_AUTHOR",
+              "title": "الگوهای نادرست خرید و راهکارهای پرهیز از آن",
+              "url": "https://www.fintelligence.ir/Blog/Detail/9673DF51",
+              "role": "CORROBORATING_CORPUS_SOURCE",
+              "coverage": "PARTIAL",
+              "review_note": "Supports incorrect purchasing patterns, emotional drivers, and advertising/marketing influence, but does not independently enumerate all seven Author-feedback items.",
+              "document_text_sha256": "34773eab0c594ec5c38eda81ff8cb2122c120461afc95501c531e8b4519d0c8b"
+            },
+            {
+              "document_id": "website:BC0342B6",
+              "source_id": "website:BC0342B6",
+              "source_type": "website",
+              "authority_class": "PRIMARY_DIRECT_AUTHOR",
+              "title": "سواد مالی خانم‌ها؛ تصمیم‌های خرید را خودمان می‌گیریم یا عادت‌های‌مان؟",
+              "url": "https://www.fintelligence.ir/Blog/Detail/BC0342B6",
+              "role": "CORROBORATING_CORPUS_SOURCE",
+              "coverage": "PARTIAL",
+              "review_note": "Supports emotional/psychological purchasing patterns and broader incorrect buying behavior.",
+              "document_text_sha256": "895b6a6c11137c190d432a766062896be61f95a39e73d37142a3d7c5a1b42b47"
+            }
+          ],
+          "human_source_decision": "REVISE",
+          "review_timestamp_utc": "2026-09-09T13:41:40+00:00",
+          "direct_author_feedback_preserved": true,
+          "author_final_review_status": "NOT_STARTED",
+          "grounding_constraint": "The seven-item expected answer remains primarily grounded in Dr. Roudi's direct historical feedback. Website evidence is corroborating, not an independent full source for all seven items."
+        }
+      },
+      {
+        "record_schema": "AUTHOR_FEEDBACK_DERIVED_PILOT_V1",
+        "batch_version": "phase1_author_feedback_derived_pilots_v1",
+        "reference_pilot_number": 27,
+        "pilot_case_id": "question-pilot:2cabad10670e83af66847a341690d42e",
+        "feedback_case_number": 5,
+        "origin": "PHASE1_DEMO_AUTHOR_FEEDBACK",
+        "pilot_type": "AUTHOR_FEEDBACK_CONTENT",
+        "authority": {
+          "authority_class": "PRIMARY_DIRECT_AUTHOR_FEEDBACK",
+          "primary_author": "Dr. Komeil Roudi",
+          "phase1_model_answer_authoritative": false,
+          "raw_author_feedback_authoritative": true
+        },
+        "historical_phase1_demo": {
+          "raw_conversation": [
+            {
+              "speaker": "HUMAN",
+              "text": "روش های افزایش درآمد را توضیح بده"
+            },
+            {
+              "speaker": "PHASE1_MODEL",
+              "text": "روش‌های افزایش درآمد عبارتند از:\n\n1. **قیمت‌گذاری مناسب محصولات**: افزایش سود با توجه به هزینه‌های تولید و ارزش ارائه شده به مشتری.\n2. **سرمایه‌گذاری درست**: انجام سرمایه‌گذاری‌هایی که حداقل به اندازۀ تورم سودآوری داشته باشند.\n3. **خرید دارایی‌های درآمدزا**: افزایش درآمد از طریق سرمایه‌گذاری در دارایی‌هایی که درآمد داشته باشند، نه فقط برای خرج کردن درآمد.\n4. **تغییر نقشه کسب‌وکار**: اگر درآمد مطلوبی حاصل نشود، باید روش‌های کسب‌وکار را بهبود بخشید."
+            }
+          ],
+          "raw_author_feedback": "ترتیب آن مناسب نیست. \n\n1. فروش وسایلی که واقعا نیازی نداریم.\n2. پیشنهاد پروژه و کار بیشتر به کارفرمایی که الان برایش کار می کنیم. \n3. خرید دارایی درآمد زا و سرمایه گذاری دوباره سود آن \n4. ایجاد درآمد منفعل یعنی درآمدی که وابسته به فعالیت شغلی من نباشد",
+          "raw_author_feedback_sha256": "d381877299a8271d8da35f04462432a5fa323180b165620c1ff83623c883af38",
+          "raw_feedback_preserved_verbatim": true
+        },
+        "feedback_source": {
+          "feedback_source_id": "author-feedback-source:6179a5259090d569e84a8020954d07c8",
+          "source_type": "DIRECT_AUTHOR_FEEDBACK",
+          "source_scope": "PHASE1_DEMO",
+          "source_mapping_to_phase2_corpus": "NOT_REQUIRED_FOR_AUTHOR_FEEDBACK_AUTHORITY",
+          "optional_corpus_cross_mapping_status": "NOT_STARTED"
+        },
+        "derived_question": {
+          "question_draft_id": "question-draft:94da5aa229ae751e3e44dfb3d9834b8b",
+          "question_text": "چه روش‌هایی برای افزایش درآمد پیشنهاد می‌شود؟",
+          "review_origin": "SECOND_HUMAN_REVIEW_PHASE1_AUTHOR_FEEDBACK",
+          "human_decision": "ACCEPT",
+          "external_knowledge_used": false
+        },
+        "second_human_review": {
+          "status": "COMPLETE",
+          "decision": "ACCEPT_DERIVED_PILOT",
+          "review_origin": "PHASE1_AUTHOR_FEEDBACK",
+          "review_timestamp_utc": "2026-09-09T13:02:12+00:00",
+          "raw_feedback_preserved": true,
+          "phase1_model_answer_used_as_ground_truth": false,
+          "author_review_status": "NOT_STARTED"
+        },
+        "author_final_review": {
+          "status": "NOT_STARTED",
+          "reviewer": "AUTHOR",
+          "decision": null,
+          "notes": null
+        },
+        "promotion": {
+          "status": "PROMOTED_TO_AUTHOR_REVIEW",
+          "currently_in_22_case_author_queue": false,
+          "future_reference_pilot_number": 27,
+          "future_target_total": 28,
+          "promoted_to_author_review": true,
+          "author_review_queue_position": 27,
+          "promotion_timestamp_utc": "2026-09-09T13:08:00+00:00",
+          "source_review_status": "COMPLETE"
+        },
+        "expected_answer_review": {
+          "expected_answer_draft_id": "expected-answer-draft:944a3cd4da469843a145fb64c43da54c",
+          "expected_answer_text": "روش‌های پیشنهادی برای افزایش درآمد به این ترتیب‌اند:\n1. فروش وسایلی که واقعاً به آن‌ها نیاز نداریم.\n2. پیشنهاد پروژه یا کار بیشتر به کارفرمای فعلی.\n3. خرید دارایی درآمدزا و سرمایه‌گذاری دوباره سود آن.\n4. ایجاد درآمد منفعل؛ یعنی درآمدی که وابسته به فعالیت شغلی فرد نباشد.",
+          "human_decision": "ACCEPT",
+          "grounding_source": "DIRECT_AUTHOR_FEEDBACK",
+          "external_knowledge_used": false
+        },
+        "citation_review": {
+          "citation_mapping_id": "citation-mapping:7c51e4906ca1b75572b990dc2cc172f6",
+          "human_decision": "ACCEPT",
+          "citation_entries": [
+            {
+              "citation_index": 0,
+              "source_type": "DIRECT_AUTHOR_FEEDBACK",
+              "feedback_source_id": "author-feedback-source:6179a5259090d569e84a8020954d07c8",
+              "raw_author_feedback_sha256": "d381877299a8271d8da35f04462432a5fa323180b165620c1ff83623c883af38",
+              "authority_class": "PRIMARY_DIRECT_AUTHOR_FEEDBACK"
+            },
+            {
+              "source_type": "WEBSITE_DIRECT_AUTHOR",
+              "document_id": "website:3A675BF6",
+              "source_id": "website:3A675BF6",
+              "title": "دختران خوب ثروتمند می‌شوند اگر ...",
+              "url": "https://www.fintelligence.ir/Blog/Detail/3A675BF6",
+              "authority_class": "PRIMARY_DIRECT_AUTHOR",
+              "role": "CORROBORATING_CORPUS_SOURCE",
+              "coverage": "PARTIAL",
+              "document_text_sha256": "245e5e51dbdc08d2ea95435f9c617c3c73153f986f9ffc3859f32941151fc77f",
+              "citation_index": 1
+            },
+            {
+              "source_type": "WEBSITE_DIRECT_AUTHOR",
+              "document_id": "website:C042183F",
+              "source_id": "website:C042183F",
+              "title": "«پول، پول می‌آورد» اما چگونه؟",
+              "url": "https://www.fintelligence.ir/Blog/Detail/C042183F",
+              "authority_class": "PRIMARY_DIRECT_AUTHOR",
+              "role": "CORROBORATING_CORPUS_SOURCE",
+              "coverage": "PARTIAL",
+              "document_text_sha256": "9f6b024989626472f648fab84eebe6935bd3792932cd92a582f0bb0276f533d3",
+              "citation_index": 2
+            }
+          ],
+          "grounding_mode": "DIRECT_AUTHOR_FEEDBACK_PRIMARY_WITH_PARTIAL_CORPUS_CORROBORATION",
+          "source_review_event_id": "second-source-review:5aa2c11f9d066307d08aa5d0cb2b3486"
+        },
+        "golden_content_case": true,
+        "author_review_queue_position": 27,
+        "source_review_history": [
+          {
+            "review_event_id": "second-source-review:5aa2c11f9d066307d08aa5d0cb2b3486",
+            "review_version": "phase1_author_feedback_source_review_v1",
+            "review_timestamp_utc": "2026-09-09T13:41:40+00:00",
+            "decision": "REVISE",
+            "revision_scope": "GROUNDING_ONLY",
+            "grounding_mode": "DIRECT_AUTHOR_FEEDBACK_PRIMARY_WITH_PARTIAL_CORPUS_CORROBORATION",
+            "source_mapping_id": "source-mapping:db206894dc1a8d58bcb5e2cd7629ad85",
+            "verified_corpus_sources": [
+              {
+                "document_id": "website:3A675BF6",
+                "source_id": "website:3A675BF6",
+                "source_type": "website",
+                "authority_class": "PRIMARY_DIRECT_AUTHOR",
+                "title": "دختران خوب ثروتمند می‌شوند اگر ...",
+                "url": "https://www.fintelligence.ir/Blog/Detail/3A675BF6",
+                "role": "CORROBORATING_CORPUS_SOURCE",
+                "coverage": "PARTIAL",
+                "review_note": "Supports increasing income, work/income capacity and income-producing assets, but does not independently reproduce the complete four-step Author sequence.",
+                "document_text_sha256": "245e5e51dbdc08d2ea95435f9c617c3c73153f986f9ffc3859f32941151fc77f"
+              },
+              {
+                "document_id": "website:C042183F",
+                "source_id": "website:C042183F",
+                "source_type": "website",
+                "authority_class": "PRIMARY_DIRECT_AUTHOR",
+                "title": "«پول، پول می‌آورد» اما چگونه؟",
+                "url": "https://www.fintelligence.ir/Blog/Detail/C042183F",
+                "role": "CORROBORATING_CORPUS_SOURCE",
+                "coverage": "PARTIAL",
+                "review_note": "Supports the concept of investing money in productive assets and generating profit.",
+                "document_text_sha256": "9f6b024989626472f648fab84eebe6935bd3792932cd92a582f0bb0276f533d3"
+              }
+            ],
+            "direct_author_feedback_preserved": true,
+            "external_knowledge_used": false,
+            "author_final_review_recorded": false,
+            "grounding_constraint": "The four methods and their ordering remain primarily grounded in Dr. Roudi's direct historical feedback. Website sources provide only partial corroboration."
+          }
+        ],
+        "second_source_review": {
+          "status": "COMPLETE",
+          "review_event_id": "second-source-review:5aa2c11f9d066307d08aa5d0cb2b3486",
+          "review_version": "phase1_author_feedback_source_review_v1",
+          "decision": "REVISE",
+          "revision_scope": "GROUNDING_ONLY",
+          "grounding_mode": "DIRECT_AUTHOR_FEEDBACK_PRIMARY_WITH_PARTIAL_CORPUS_CORROBORATION",
+          "source_mapping_id": "source-mapping:db206894dc1a8d58bcb5e2cd7629ad85",
+          "verified_corpus_sources": [
+            {
+              "document_id": "website:3A675BF6",
+              "source_id": "website:3A675BF6",
+              "source_type": "website",
+              "authority_class": "PRIMARY_DIRECT_AUTHOR",
+              "title": "دختران خوب ثروتمند می‌شوند اگر ...",
+              "url": "https://www.fintelligence.ir/Blog/Detail/3A675BF6",
+              "role": "CORROBORATING_CORPUS_SOURCE",
+              "coverage": "PARTIAL",
+              "review_note": "Supports increasing income, work/income capacity and income-producing assets, but does not independently reproduce the complete four-step Author sequence.",
+              "document_text_sha256": "245e5e51dbdc08d2ea95435f9c617c3c73153f986f9ffc3859f32941151fc77f"
+            },
+            {
+              "document_id": "website:C042183F",
+              "source_id": "website:C042183F",
+              "source_type": "website",
+              "authority_class": "PRIMARY_DIRECT_AUTHOR",
+              "title": "«پول، پول می‌آورد» اما چگونه؟",
+              "url": "https://www.fintelligence.ir/Blog/Detail/C042183F",
+              "role": "CORROBORATING_CORPUS_SOURCE",
+              "coverage": "PARTIAL",
+              "review_note": "Supports the concept of investing money in productive assets and generating profit.",
+              "document_text_sha256": "9f6b024989626472f648fab84eebe6935bd3792932cd92a582f0bb0276f533d3"
+            }
+          ],
+          "human_source_decision": "REVISE",
+          "review_timestamp_utc": "2026-09-09T13:41:40+00:00",
+          "direct_author_feedback_preserved": true,
+          "author_final_review_status": "NOT_STARTED",
+          "grounding_constraint": "The four methods and their ordering remain primarily grounded in Dr. Roudi's direct historical feedback. Website sources provide only partial corroboration."
+        }
+      },
+      {
+        "record_schema": "AUTHOR_FEEDBACK_DERIVED_PILOT_V1",
+        "batch_version": "phase1_author_feedback_derived_pilots_v1",
+        "reference_pilot_number": 28,
+        "pilot_case_id": "question-pilot:41c1af00f30c2653f0ea814c4c7c6349",
+        "feedback_case_number": 6,
+        "origin": "PHASE1_DEMO_AUTHOR_FEEDBACK",
+        "pilot_type": "AUTHOR_FEEDBACK_CONTENT",
+        "authority": {
+          "authority_class": "PRIMARY_DIRECT_AUTHOR_FEEDBACK",
+          "primary_author": "Dr. Komeil Roudi",
+          "phase1_model_answer_authoritative": false,
+          "raw_author_feedback_authoritative": true
+        },
+        "historical_phase1_demo": {
+          "raw_conversation": [
+            {
+              "speaker": "HUMAN",
+              "text": "من پول در می آورم اما هنوز احساس می کنم فقیر هستم!"
+            },
+            {
+              "speaker": "PHASE1_MODEL",
+              "text": "شما ممکن است به دلیل ارتباط نادرست با پول و ترس از نداشتن پول، احساس فقر کنید. پول تنها ابزاری برای ثابت کردن خود و امنیت نیست، بلکه رابطه‌ای است که با آن سروکار داریم. اگر تصمیم‌های نادرستی را در گذشته گرفته باشید، ممکن است این احساس فقر را ایجاد کرده باشد. بهتر است به جای توجه به مقدار پول، به رابطه‌ای که با پول دارید نیز توجه کنید. همچنین، پول را باید به کار برد تا ارزشش حفظ شود. بهترین راه برای جلوگیری از احساس فقر، توجه به سواد مالی و تصمیم‌گیری‌های صحیح است."
+            }
+          ],
+          "raw_author_feedback": "جواب خوبی است که مساله فقر مساله پول درآوردن و خرج کردن نیست. مساله رابطه با پول است . پول به معنای چیزی است که نداریم و تلاش می کنیم آن چیز را با پول جبران کنیم. در نتیجه مثلا اعتماد به نفس را به پول به دست بیارویم.\nضمن اینکه همه احساس فقر می کنند چون فقر به معنی نرسیدن به چیزی است که می خواهیم و همه چیزهایی می خواهند که ندارند و در نتیجه فقیر هستند.",
+          "raw_author_feedback_sha256": "461f827ee36b106e50f0a383658a2a23c7240e9dc2982367f13032e677c592a1",
+          "raw_feedback_preserved_verbatim": true
+        },
+        "feedback_source": {
+          "feedback_source_id": "author-feedback-source:89c81d7ebdd7967a2d09a43ade9d4971",
+          "source_type": "DIRECT_AUTHOR_FEEDBACK",
+          "source_scope": "PHASE1_DEMO",
+          "source_mapping_to_phase2_corpus": "NOT_REQUIRED_FOR_AUTHOR_FEEDBACK_AUTHORITY",
+          "optional_corpus_cross_mapping_status": "NOT_STARTED"
+        },
+        "derived_question": {
+          "question_draft_id": "question-draft:07fc3ff954eb23eabce2ae6ea174e3e6",
+          "question_text": "چرا ممکن است فردی با وجود درآمد داشتن همچنان احساس فقر کند؟",
+          "review_origin": "SECOND_HUMAN_REVIEW_PHASE1_AUTHOR_FEEDBACK",
+          "human_decision": "ACCEPT",
+          "external_knowledge_used": false
+        },
+        "second_human_review": {
+          "status": "COMPLETE",
+          "decision": "ACCEPT_DERIVED_PILOT",
+          "review_origin": "PHASE1_AUTHOR_FEEDBACK",
+          "review_timestamp_utc": "2026-09-09T13:02:12+00:00",
+          "raw_feedback_preserved": true,
+          "phase1_model_answer_used_as_ground_truth": false,
+          "author_review_status": "NOT_STARTED"
+        },
+        "author_final_review": {
+          "status": "NOT_STARTED",
+          "reviewer": "AUTHOR",
+          "decision": null,
+          "notes": null
+        },
+        "promotion": {
+          "status": "PROMOTED_TO_AUTHOR_REVIEW",
+          "currently_in_22_case_author_queue": false,
+          "future_reference_pilot_number": 28,
+          "future_target_total": 28,
+          "promoted_to_author_review": true,
+          "author_review_queue_position": 28,
+          "promotion_timestamp_utc": "2026-09-09T13:08:00+00:00",
+          "source_review_status": "COMPLETE"
+        },
+        "expected_answer_review": {
+          "expected_answer_draft_id": "expected-answer-draft:82ba1fd196c920ec5ae2afca9f16a596",
+          "expected_answer_text": "احساس فقر فقط به میزان پول درآوردن یا خرج کردن مربوط نیست و می‌تواند به رابطه فرد با پول مربوط باشد. ممکن است فرد تلاش کند با پول چیزی را که احساس می‌کند ندارد جبران کند؛ برای مثال، اعتمادبه‌نفس را از طریق پول به دست آورد. همچنین در این دیدگاه، فقر به معنای نرسیدن به چیزی است که فرد می‌خواهد و چون انسان‌ها همواره چیزهایی می‌خواهند که ندارند، احساس فقر می‌تواند حتی با وجود داشتن درآمد باقی بماند.",
+          "human_decision": "ACCEPT",
+          "grounding_source": "DIRECT_AUTHOR_FEEDBACK",
+          "external_knowledge_used": false
+        },
+        "citation_review": {
+          "citation_mapping_id": "citation-mapping:c024cf98da30ac57737a71b978467de3",
+          "human_decision": "ACCEPT",
+          "citation_entries": [
+            {
+              "citation_index": 0,
+              "source_type": "DIRECT_AUTHOR_FEEDBACK",
+              "feedback_source_id": "author-feedback-source:89c81d7ebdd7967a2d09a43ade9d4971",
+              "raw_author_feedback_sha256": "461f827ee36b106e50f0a383658a2a23c7240e9dc2982367f13032e677c592a1",
+              "authority_class": "PRIMARY_DIRECT_AUTHOR_FEEDBACK"
+            },
+            {
+              "source_type": "WEBSITE_DIRECT_AUTHOR",
+              "document_id": "website:2F8F15FB",
+              "source_id": "website:2F8F15FB",
+              "title": "چگونه کمتر نگران پول باشیم؟",
+              "url": "https://www.fintelligence.ir/Blog/Detail/2F8F15FB",
+              "authority_class": "PRIMARY_DIRECT_AUTHOR",
+              "role": "PRIMARY_CORPUS_CORROBORATION",
+              "coverage": "STRONG_PARTIAL",
+              "document_text_sha256": "bde0fec90ea9a93a05699ef3df06af12d6f93c16449b66f187e347e07bf92a9e",
+              "citation_index": 1
+            }
+          ],
+          "grounding_mode": "DIRECT_AUTHOR_FEEDBACK_PLUS_CORPUS_DIRECT_SUPPORT",
+          "source_review_event_id": "second-source-review:600e5438bdb5e8332ddb49b35bb7b917"
+        },
+        "golden_content_case": true,
+        "author_review_queue_position": 28,
+        "source_review_history": [
+          {
+            "review_event_id": "second-source-review:600e5438bdb5e8332ddb49b35bb7b917",
+            "review_version": "phase1_author_feedback_source_review_v1",
+            "review_timestamp_utc": "2026-09-09T13:41:40+00:00",
+            "decision": "ACCEPT",
+            "revision_scope": "NONE",
+            "grounding_mode": "DIRECT_AUTHOR_FEEDBACK_PLUS_CORPUS_DIRECT_SUPPORT",
+            "source_mapping_id": "source-mapping:e6ee476727827646d9ef8f61a4f47b56",
+            "verified_corpus_sources": [
+              {
+                "document_id": "website:2F8F15FB",
+                "source_id": "website:2F8F15FB",
+                "source_type": "website",
+                "authority_class": "PRIMARY_DIRECT_AUTHOR",
+                "title": "چگونه کمتر نگران پول باشیم؟",
+                "url": "https://www.fintelligence.ir/Blog/Detail/2F8F15FB",
+                "role": "PRIMARY_CORPUS_CORROBORATION",
+                "coverage": "STRONG_PARTIAL",
+                "review_note": "Strongly supports the relationship-with-money concept and the idea that money can represent things a person feels are missing, while the broader poverty interpretation remains grounded in direct Author feedback.",
+                "document_text_sha256": "bde0fec90ea9a93a05699ef3df06af12d6f93c16449b66f187e347e07bf92a9e"
+              }
+            ],
+            "direct_author_feedback_preserved": true,
+            "external_knowledge_used": false,
+            "author_final_review_recorded": false
+          }
+        ],
+        "second_source_review": {
+          "status": "COMPLETE",
+          "review_event_id": "second-source-review:600e5438bdb5e8332ddb49b35bb7b917",
+          "review_version": "phase1_author_feedback_source_review_v1",
+          "decision": "ACCEPT",
+          "revision_scope": "NONE",
+          "grounding_mode": "DIRECT_AUTHOR_FEEDBACK_PLUS_CORPUS_DIRECT_SUPPORT",
+          "source_mapping_id": "source-mapping:e6ee476727827646d9ef8f61a4f47b56",
+          "verified_corpus_sources": [
+            {
+              "document_id": "website:2F8F15FB",
+              "source_id": "website:2F8F15FB",
+              "source_type": "website",
+              "authority_class": "PRIMARY_DIRECT_AUTHOR",
+              "title": "چگونه کمتر نگران پول باشیم؟",
+              "url": "https://www.fintelligence.ir/Blog/Detail/2F8F15FB",
+              "role": "PRIMARY_CORPUS_CORROBORATION",
+              "coverage": "STRONG_PARTIAL",
+              "review_note": "Strongly supports the relationship-with-money concept and the idea that money can represent things a person feels are missing, while the broader poverty interpretation remains grounded in direct Author feedback.",
+              "document_text_sha256": "bde0fec90ea9a93a05699ef3df06af12d6f93c16449b66f187e347e07bf92a9e"
+            }
+          ],
+          "human_source_decision": "ACCEPT",
+          "review_timestamp_utc": "2026-09-09T13:41:40+00:00",
+          "direct_author_feedback_preserved": true,
+          "author_final_review_status": "NOT_STARTED"
+        }
       }
     ],
     "final_review_status": "NOT_STARTED",
     "notes": null,
     "reviewer": "AUTHOR",
-    "status": "NOT_STARTED"
+    "status": "NOT_STARTED",
+    "promotion_history": [
+      {
+        "promotion_event_id": "author-review-promotion:eb1d3d5c346b8e794bdab88bc377a655",
+        "promotion_timestamp_utc": "2026-09-09T13:08:00+00:00",
+        "source": "PHASE1_DEMO_AUTHOR_FEEDBACK",
+        "source_batch": "phase1_author_feedback_derived_pilots",
+        "previous_author_review_case_count": 22,
+        "added_case_count": 6,
+        "new_author_review_case_count": 28,
+        "added_reference_pilot_numbers": [
+          23,
+          24,
+          25,
+          26,
+          27,
+          28
+        ],
+        "added_pilot_case_ids": [
+          "question-pilot:a0f61a7f0c946fe1d79095dbb96a9497",
+          "question-pilot:70628caeefebbfba48300176fafddc96",
+          "question-pilot:77d8b06bc6bccdbbfca4faab99051fe0",
+          "question-pilot:712a49491835fe706df3353b781f8044",
+          "question-pilot:2cabad10670e83af66847a341690d42e",
+          "question-pilot:41c1af00f30c2653f0ea814c4c7c6349"
+        ],
+        "author_decisions_recorded": false
+      }
+    ]
   },
   "completed_human_review_cases": [
     {
@@ -57290,5 +58479,1193 @@
     "human_comments_are_evidence": false,
     "model_interpretation_is_evidence": false,
     "source_evidence_is_authoritative": true
+  },
+  "second_human_review": {
+    "phase1_author_feedback_derived_pilots": {
+      "batch_version": "phase1_author_feedback_derived_pilots_v1",
+      "origin": "PHASE1_DEMO_AUTHOR_FEEDBACK",
+      "status": "COMPLETE_PROMOTED_TO_AUTHOR_REVIEW",
+      "case_count": 6,
+      "reference_pilot_range": [
+        23,
+        28
+      ],
+      "content_pilot_count": 5,
+      "continuity_regression_pilot_count": 1,
+      "future_total_reference_pilots": 28,
+      "currently_promoted_to_author_review": true,
+      "author_review_queue_count_before_promotion": 22,
+      "cases": [
+        {
+          "record_schema": "AUTHOR_FEEDBACK_DERIVED_PILOT_V1",
+          "batch_version": "phase1_author_feedback_derived_pilots_v1",
+          "reference_pilot_number": 23,
+          "pilot_case_id": "question-pilot:a0f61a7f0c946fe1d79095dbb96a9497",
+          "feedback_case_number": 1,
+          "origin": "PHASE1_DEMO_AUTHOR_FEEDBACK",
+          "pilot_type": "AUTHOR_FEEDBACK_CONTENT",
+          "authority": {
+            "authority_class": "PRIMARY_DIRECT_AUTHOR_FEEDBACK",
+            "primary_author": "Dr. Komeil Roudi",
+            "phase1_model_answer_authoritative": false,
+            "raw_author_feedback_authoritative": true
+          },
+          "historical_phase1_demo": {
+            "raw_conversation": [
+              {
+                "speaker": "HUMAN",
+                "text": "سواد مالی درباره پول دار شدن دیگه؟"
+              },
+              {
+                "speaker": "PHASE1_MODEL",
+                "text": "سواد مالی به رابطۀ انسان با پول می‌پردازد، نه فقط به خود پول. پول در سواد مالی، یک پدیده‌ای بیرونی نیست، بلکه احساسات و رفتارهای انسان نسبت به پول است. سواد مالی به دانش و مهارت‌های لازم برای مدیریت بهتر پول و تصمیم‌گیری‌های مالی اشاره دارد."
+              }
+            ],
+            "raw_author_feedback": "نه ، ببین سواد مالی درباره مدیریت پول است. نه درباره میزان پول",
+            "raw_author_feedback_sha256": "5f2b8bce7733b37c1f03d4510836652b6b4fc605b93119096c0a9104ee407035",
+            "raw_feedback_preserved_verbatim": true
+          },
+          "feedback_source": {
+            "feedback_source_id": "author-feedback-source:92d99b268809fa1347d0a5d8f8972d6b",
+            "source_type": "DIRECT_AUTHOR_FEEDBACK",
+            "source_scope": "PHASE1_DEMO",
+            "source_mapping_to_phase2_corpus": "NOT_REQUIRED_FOR_AUTHOR_FEEDBACK_AUTHORITY",
+            "optional_corpus_cross_mapping_status": "NOT_STARTED"
+          },
+          "derived_question": {
+            "question_draft_id": "question-draft:388f7ba8a8a0a0ca8b3151c7ebbd612a",
+            "question_text": "سواد مالی درباره میزان پولی است که داریم یا درباره مدیریت پول؟",
+            "review_origin": "SECOND_HUMAN_REVIEW_PHASE1_AUTHOR_FEEDBACK",
+            "human_decision": "ACCEPT",
+            "external_knowledge_used": false
+          },
+          "second_human_review": {
+            "status": "COMPLETE",
+            "decision": "ACCEPT_DERIVED_PILOT",
+            "review_origin": "PHASE1_AUTHOR_FEEDBACK",
+            "review_timestamp_utc": "2026-09-09T13:02:12+00:00",
+            "raw_feedback_preserved": true,
+            "phase1_model_answer_used_as_ground_truth": false,
+            "author_review_status": "NOT_STARTED"
+          },
+          "author_final_review": {
+            "status": "NOT_STARTED",
+            "reviewer": "AUTHOR",
+            "decision": null,
+            "notes": null
+          },
+          "promotion": {
+            "status": "PROMOTED_TO_AUTHOR_REVIEW",
+            "currently_in_22_case_author_queue": false,
+            "future_reference_pilot_number": 23,
+            "future_target_total": 28,
+            "promoted_to_author_review": true,
+            "author_review_queue_position": 23,
+            "promotion_timestamp_utc": "2026-09-09T13:08:00+00:00",
+            "source_review_status": "COMPLETE"
+          },
+          "expected_answer_review": {
+            "expected_answer_draft_id": "expected-answer-draft:7a2577defed57b90b63681a906b3d5aa",
+            "expected_answer_text": "سواد مالی درباره مدیریت پول است، نه درباره میزان پول.",
+            "human_decision": "ACCEPT",
+            "grounding_source": "DIRECT_AUTHOR_FEEDBACK",
+            "external_knowledge_used": false
+          },
+          "citation_review": {
+            "citation_mapping_id": "citation-mapping:8585d33312a44fe62b8a3fc66f970d2a",
+            "human_decision": "ACCEPT",
+            "citation_entries": [
+              {
+                "citation_index": 0,
+                "source_type": "DIRECT_AUTHOR_FEEDBACK",
+                "feedback_source_id": "author-feedback-source:92d99b268809fa1347d0a5d8f8972d6b",
+                "raw_author_feedback_sha256": "5f2b8bce7733b37c1f03d4510836652b6b4fc605b93119096c0a9104ee407035",
+                "authority_class": "PRIMARY_DIRECT_AUTHOR_FEEDBACK"
+              },
+              {
+                "source_type": "WEBSITE_DIRECT_AUTHOR",
+                "document_id": "website:7C71884B",
+                "source_id": "website:7C71884B",
+                "title": "ابزارهای سواد مالی برای بهبود مدیریت هزینه",
+                "url": "https://www.fintelligence.ir/Blog/Detail/7C71884B",
+                "authority_class": "PRIMARY_DIRECT_AUTHOR",
+                "role": "PRIMARY_CORPUS_GROUNDING",
+                "coverage": "DIRECT_EXPLICIT",
+                "document_text_sha256": "f04c55c4a2f37dd65874a1fec1e38ee375f46e1614e3ec42eb250c17da25698c",
+                "citation_index": 1
+              }
+            ],
+            "grounding_mode": "DIRECT_AUTHOR_FEEDBACK_PLUS_CORPUS_DIRECT_SUPPORT",
+            "source_review_event_id": "second-source-review:13e5a0e7a6e46d1d517a6a5700d27357"
+          },
+          "golden_content_case": true,
+          "source_review_history": [
+            {
+              "review_event_id": "second-source-review:13e5a0e7a6e46d1d517a6a5700d27357",
+              "review_version": "phase1_author_feedback_source_review_v1",
+              "review_timestamp_utc": "2026-09-09T13:41:40+00:00",
+              "decision": "ACCEPT",
+              "revision_scope": "NONE",
+              "grounding_mode": "DIRECT_AUTHOR_FEEDBACK_PLUS_CORPUS_DIRECT_SUPPORT",
+              "source_mapping_id": "source-mapping:fdcd985387a4e4d8548e00b1d43269d9",
+              "verified_corpus_sources": [
+                {
+                  "document_id": "website:7C71884B",
+                  "source_id": "website:7C71884B",
+                  "source_type": "website",
+                  "authority_class": "PRIMARY_DIRECT_AUTHOR",
+                  "title": "ابزارهای سواد مالی برای بهبود مدیریت هزینه",
+                  "url": "https://www.fintelligence.ir/Blog/Detail/7C71884B",
+                  "role": "PRIMARY_CORPUS_GROUNDING",
+                  "coverage": "DIRECT_EXPLICIT",
+                  "review_note": "The article explicitly states that financial literacy is not about the amount of money, but about managing money correctly.",
+                  "document_text_sha256": "f04c55c4a2f37dd65874a1fec1e38ee375f46e1614e3ec42eb250c17da25698c"
+                }
+              ],
+              "direct_author_feedback_preserved": true,
+              "external_knowledge_used": false,
+              "author_final_review_recorded": false
+            }
+          ],
+          "second_source_review": {
+            "status": "COMPLETE",
+            "review_event_id": "second-source-review:13e5a0e7a6e46d1d517a6a5700d27357",
+            "review_version": "phase1_author_feedback_source_review_v1",
+            "decision": "ACCEPT",
+            "revision_scope": "NONE",
+            "grounding_mode": "DIRECT_AUTHOR_FEEDBACK_PLUS_CORPUS_DIRECT_SUPPORT",
+            "source_mapping_id": "source-mapping:fdcd985387a4e4d8548e00b1d43269d9",
+            "verified_corpus_sources": [
+              {
+                "document_id": "website:7C71884B",
+                "source_id": "website:7C71884B",
+                "source_type": "website",
+                "authority_class": "PRIMARY_DIRECT_AUTHOR",
+                "title": "ابزارهای سواد مالی برای بهبود مدیریت هزینه",
+                "url": "https://www.fintelligence.ir/Blog/Detail/7C71884B",
+                "role": "PRIMARY_CORPUS_GROUNDING",
+                "coverage": "DIRECT_EXPLICIT",
+                "review_note": "The article explicitly states that financial literacy is not about the amount of money, but about managing money correctly.",
+                "document_text_sha256": "f04c55c4a2f37dd65874a1fec1e38ee375f46e1614e3ec42eb250c17da25698c"
+              }
+            ],
+            "human_source_decision": "ACCEPT",
+            "review_timestamp_utc": "2026-09-09T13:41:40+00:00",
+            "direct_author_feedback_preserved": true,
+            "author_final_review_status": "NOT_STARTED"
+          }
+        },
+        {
+          "record_schema": "AUTHOR_FEEDBACK_DERIVED_PILOT_V1",
+          "batch_version": "phase1_author_feedback_derived_pilots_v1",
+          "reference_pilot_number": 24,
+          "pilot_case_id": "question-pilot:70628caeefebbfba48300176fafddc96",
+          "feedback_case_number": 2,
+          "origin": "PHASE1_DEMO_AUTHOR_FEEDBACK",
+          "pilot_type": "AUTHOR_FEEDBACK_CONTENT",
+          "authority": {
+            "authority_class": "PRIMARY_DIRECT_AUTHOR_FEEDBACK",
+            "primary_author": "Dr. Komeil Roudi",
+            "phase1_model_answer_authoritative": false,
+            "raw_author_feedback_authoritative": true
+          },
+          "historical_phase1_demo": {
+            "raw_conversation": [
+              {
+                "speaker": "HUMAN",
+                "text": "ایا من از نظر مالی وضعیت قابل قبولی دارم؟ از نظر دانشی و مهارتی یا حتی نگرشی؟"
+              },
+              {
+                "speaker": "PHASE1_MODEL",
+                "text": "پاسخ شما در منابع موجود پاسخ کافی پیدا نشد."
+              }
+            ],
+            "raw_author_feedback": "مدیریت مالی شخصی نیازمند دانش و نگرش و مهارت های خاصی است، برا یاینکه بدانید شما به اندازه کافی وضعیت مالی خوبی دارید ، لازم است این پرسشنامه را تکمیل کنید.",
+            "raw_author_feedback_sha256": "c863a5b310fadb15f267132e2604543f923b29223cebe11a300bc9d97643b4a9",
+            "raw_feedback_preserved_verbatim": true
+          },
+          "feedback_source": {
+            "feedback_source_id": "author-feedback-source:af0384eb436d2cad6e9327101e9514db",
+            "source_type": "DIRECT_AUTHOR_FEEDBACK",
+            "source_scope": "PHASE1_DEMO",
+            "source_mapping_to_phase2_corpus": "NOT_REQUIRED_FOR_AUTHOR_FEEDBACK_AUTHORITY",
+            "optional_corpus_cross_mapping_status": "NOT_STARTED"
+          },
+          "derived_question": {
+            "question_draft_id": "question-draft:55df1eef6849caee8b95a5816fc097a5",
+            "question_text": "برای اینکه بفهمیم از نظر دانش، نگرش و مهارت‌های مالی وضعیت قابل قبولی داریم، چه باید کرد؟",
+            "review_origin": "SECOND_HUMAN_REVIEW_PHASE1_AUTHOR_FEEDBACK",
+            "human_decision": "ACCEPT",
+            "external_knowledge_used": false
+          },
+          "second_human_review": {
+            "status": "COMPLETE",
+            "decision": "ACCEPT_DERIVED_PILOT",
+            "review_origin": "PHASE1_AUTHOR_FEEDBACK",
+            "review_timestamp_utc": "2026-09-09T13:02:12+00:00",
+            "raw_feedback_preserved": true,
+            "phase1_model_answer_used_as_ground_truth": false,
+            "author_review_status": "NOT_STARTED"
+          },
+          "author_final_review": {
+            "status": "NOT_STARTED",
+            "reviewer": "AUTHOR",
+            "decision": null,
+            "notes": null
+          },
+          "promotion": {
+            "status": "PROMOTED_TO_AUTHOR_REVIEW",
+            "currently_in_22_case_author_queue": false,
+            "future_reference_pilot_number": 24,
+            "future_target_total": 28,
+            "promoted_to_author_review": true,
+            "author_review_queue_position": 24,
+            "promotion_timestamp_utc": "2026-09-09T13:08:00+00:00",
+            "source_review_status": "COMPLETE"
+          },
+          "expected_answer_review": {
+            "expected_answer_draft_id": "expected-answer-draft:7cbe1039f15ef7052f34125ccbaf2f33",
+            "expected_answer_text": "مدیریت مالی شخصی به دانش، نگرش و مهارت‌های خاص نیاز دارد. برای اینکه بدانیم وضعیت مالی ما از این جنبه‌ها به اندازه کافی مناسب است، باید پرسشنامه مربوط را تکمیل کنیم.",
+            "human_decision": "ACCEPT",
+            "grounding_source": "DIRECT_AUTHOR_FEEDBACK",
+            "external_knowledge_used": false
+          },
+          "citation_review": {
+            "citation_mapping_id": "citation-mapping:f44a4a1a54957a27e1f38527aa40f4ab",
+            "human_decision": "ACCEPT",
+            "citation_entries": [
+              {
+                "citation_index": 0,
+                "source_type": "DIRECT_AUTHOR_FEEDBACK",
+                "feedback_source_id": "author-feedback-source:af0384eb436d2cad6e9327101e9514db",
+                "raw_author_feedback_sha256": "c863a5b310fadb15f267132e2604543f923b29223cebe11a300bc9d97643b4a9",
+                "authority_class": "PRIMARY_DIRECT_AUTHOR_FEEDBACK"
+              },
+              {
+                "source_type": "WEBSITE_DIRECT_AUTHOR",
+                "document_id": "website:662BDA7F",
+                "source_id": "website:662BDA7F",
+                "title": "سواد مالی خانم‌ها؛ وضعیت چقدر بحرانی است؟",
+                "url": "https://www.fintelligence.ir/Blog/Detail/662BDA7F",
+                "authority_class": "PRIMARY_DIRECT_AUTHOR",
+                "role": "ASSESSMENT_AND_QUESTIONNAIRE_GROUNDING",
+                "coverage": "DIRECT_SUPPORT",
+                "document_text_sha256": "88a43419583cde80474d6f6fb924200694a7647f45498337f4139a8300f68195",
+                "citation_index": 1
+              },
+              {
+                "source_type": "WEBSITE_DIRECT_AUTHOR",
+                "document_id": "website:E2311705",
+                "source_id": "website:E2311705",
+                "title": "آموزش سواد مالی در اروپا",
+                "url": "https://www.fintelligence.ir/Blog/Detail/E2311705",
+                "authority_class": "PRIMARY_DIRECT_AUTHOR",
+                "role": "KNOWLEDGE_ATTITUDE_SKILL_GROUNDING",
+                "coverage": "DIRECT_SUPPORT",
+                "document_text_sha256": "bb651382f9ef1561b4f0fd72bbda42d172a0e5fe324a5ab61a6f88d3e3771b27",
+                "citation_index": 2
+              }
+            ],
+            "grounding_mode": "DIRECT_AUTHOR_FEEDBACK_PLUS_COMBINED_CORPUS_SUPPORT",
+            "source_review_event_id": "second-source-review:a42946446ed94f3ea0d5e7c5ebfe7813"
+          },
+          "golden_content_case": true,
+          "source_review_history": [
+            {
+              "review_event_id": "second-source-review:a42946446ed94f3ea0d5e7c5ebfe7813",
+              "review_version": "phase1_author_feedback_source_review_v1",
+              "review_timestamp_utc": "2026-09-09T13:41:40+00:00",
+              "decision": "ACCEPT",
+              "revision_scope": "NONE",
+              "grounding_mode": "DIRECT_AUTHOR_FEEDBACK_PLUS_COMBINED_CORPUS_SUPPORT",
+              "source_mapping_id": "source-mapping:fbc0c91b3995c180f47115f7760d5f81",
+              "verified_corpus_sources": [
+                {
+                  "document_id": "website:662BDA7F",
+                  "source_id": "website:662BDA7F",
+                  "source_type": "website",
+                  "authority_class": "PRIMARY_DIRECT_AUTHOR",
+                  "title": "سواد مالی خانم‌ها؛ وضعیت چقدر بحرانی است؟",
+                  "url": "https://www.fintelligence.ir/Blog/Detail/662BDA7F",
+                  "role": "ASSESSMENT_AND_QUESTIONNAIRE_GROUNDING",
+                  "coverage": "DIRECT_SUPPORT",
+                  "review_note": "Supports questionnaire-based assessment and interpretation of financial condition.",
+                  "document_text_sha256": "88a43419583cde80474d6f6fb924200694a7647f45498337f4139a8300f68195"
+                },
+                {
+                  "document_id": "website:E2311705",
+                  "source_id": "website:E2311705",
+                  "source_type": "website",
+                  "authority_class": "PRIMARY_DIRECT_AUTHOR",
+                  "title": "آموزش سواد مالی در اروپا",
+                  "url": "https://www.fintelligence.ir/Blog/Detail/E2311705",
+                  "role": "KNOWLEDGE_ATTITUDE_SKILL_GROUNDING",
+                  "coverage": "DIRECT_SUPPORT",
+                  "review_note": "Supports financial literacy as a combination of knowledge, attitudes and abilities/skills.",
+                  "document_text_sha256": "bb651382f9ef1561b4f0fd72bbda42d172a0e5fe324a5ab61a6f88d3e3771b27"
+                }
+              ],
+              "direct_author_feedback_preserved": true,
+              "external_knowledge_used": false,
+              "author_final_review_recorded": false
+            }
+          ],
+          "second_source_review": {
+            "status": "COMPLETE",
+            "review_event_id": "second-source-review:a42946446ed94f3ea0d5e7c5ebfe7813",
+            "review_version": "phase1_author_feedback_source_review_v1",
+            "decision": "ACCEPT",
+            "revision_scope": "NONE",
+            "grounding_mode": "DIRECT_AUTHOR_FEEDBACK_PLUS_COMBINED_CORPUS_SUPPORT",
+            "source_mapping_id": "source-mapping:fbc0c91b3995c180f47115f7760d5f81",
+            "verified_corpus_sources": [
+              {
+                "document_id": "website:662BDA7F",
+                "source_id": "website:662BDA7F",
+                "source_type": "website",
+                "authority_class": "PRIMARY_DIRECT_AUTHOR",
+                "title": "سواد مالی خانم‌ها؛ وضعیت چقدر بحرانی است؟",
+                "url": "https://www.fintelligence.ir/Blog/Detail/662BDA7F",
+                "role": "ASSESSMENT_AND_QUESTIONNAIRE_GROUNDING",
+                "coverage": "DIRECT_SUPPORT",
+                "review_note": "Supports questionnaire-based assessment and interpretation of financial condition.",
+                "document_text_sha256": "88a43419583cde80474d6f6fb924200694a7647f45498337f4139a8300f68195"
+              },
+              {
+                "document_id": "website:E2311705",
+                "source_id": "website:E2311705",
+                "source_type": "website",
+                "authority_class": "PRIMARY_DIRECT_AUTHOR",
+                "title": "آموزش سواد مالی در اروپا",
+                "url": "https://www.fintelligence.ir/Blog/Detail/E2311705",
+                "role": "KNOWLEDGE_ATTITUDE_SKILL_GROUNDING",
+                "coverage": "DIRECT_SUPPORT",
+                "review_note": "Supports financial literacy as a combination of knowledge, attitudes and abilities/skills.",
+                "document_text_sha256": "bb651382f9ef1561b4f0fd72bbda42d172a0e5fe324a5ab61a6f88d3e3771b27"
+              }
+            ],
+            "human_source_decision": "ACCEPT",
+            "review_timestamp_utc": "2026-09-09T13:41:40+00:00",
+            "direct_author_feedback_preserved": true,
+            "author_final_review_status": "NOT_STARTED"
+          }
+        },
+        {
+          "record_schema": "AUTHOR_FEEDBACK_DERIVED_PILOT_V1",
+          "batch_version": "phase1_author_feedback_derived_pilots_v1",
+          "reference_pilot_number": 25,
+          "pilot_case_id": "question-pilot:77d8b06bc6bccdbbfca4faab99051fe0",
+          "feedback_case_number": 3,
+          "origin": "PHASE1_DEMO_AUTHOR_FEEDBACK",
+          "pilot_type": "AUTHOR_FEEDBACK_CONTENT",
+          "authority": {
+            "authority_class": "PRIMARY_DIRECT_AUTHOR_FEEDBACK",
+            "primary_author": "Dr. Komeil Roudi",
+            "phase1_model_answer_authoritative": false,
+            "raw_author_feedback_authoritative": true
+          },
+          "historical_phase1_demo": {
+            "raw_conversation": [
+              {
+                "speaker": "HUMAN",
+                "turn": 1,
+                "text": "نمی دانم پولم کجا می رود ؟ انگار پولم را گم می کنم."
+              },
+              {
+                "speaker": "PHASE1_MODEL",
+                "turn": 1,
+                "text": "پول شما ممکن است به دلیل عدم توجه به جزئیات هزینه‌ها و انجام خریدهایی بدون نظارت، به طور غیر منظمی خرج شود. بهترین راه برای کشف این موضوع، ثبت دقیق هزینه‌هاست تا بدانیم چه چیزی را کجاها خرج کرده‌اید. این کار به شما کمک می‌کند تا بهترین تصمیم‌ها را بگیرید و از هدررفت پول جلوگیری کنید."
+              },
+              {
+                "speaker": "HUMAN",
+                "turn": 2,
+                "text": "این جواب خوبی بود. ولی کوتاه است بیشتر توضیح می دهی."
+              },
+              {
+                "speaker": "PHASE1_MODEL",
+                "turn": 2,
+                "text": "قرض گرفتن یک راه حلی است که ممکن است در موقعیت‌هایی مانند نیاز به پول سریع یا سرمایه گذاری، مفید باشد. اما اگر به طور مداوم و بدون نیت مشخص انجام شود، می‌تواند به یک معضل تبدیل شود. قرض گرفتن بهتر است زمانی باشد که بتوانیم آن را به خوبی بازپرداخت کنیم و از آن برای هزینه‌های ضروری یا سرمایه‌گذاری استفاده کنیم. اما اگر به صورت مداوم و بدون برنامه‌ریزی، انجام شود، می‌تواند به دلیل افزایش بدهی‌ها و مشکلات مالی، به یک معضل تبدیل شود. بهتر است از قرض به‌عنوان یک ابزار کمکی استفاده کنیم، نه یک راه حل دائمی."
+              }
+            ],
+            "raw_author_feedback": "این خیلی حواب بی ربطی بود.",
+            "raw_author_feedback_sha256": "e32a4b04fa11b9f203450b05e464ba82bd44d5beaf311ae15ddfe308d720dfdf",
+            "raw_feedback_preserved_verbatim": true
+          },
+          "feedback_source": {
+            "feedback_source_id": "author-feedback-source:51aea596838149cac0d106db94a1d64f",
+            "source_type": "DIRECT_AUTHOR_FEEDBACK",
+            "source_scope": "PHASE1_DEMO",
+            "source_mapping_to_phase2_corpus": "NOT_REQUIRED_FOR_AUTHOR_FEEDBACK_AUTHORITY",
+            "optional_corpus_cross_mapping_status": "NOT_STARTED"
+          },
+          "derived_question": {
+            "question_draft_id": "question-draft:6195c1e35693eb0fdf6f9c734d5d2c37",
+            "question_text": "وقتی نمی‌دانیم پولمان کجا می‌رود و در پایان ماه نمی‌دانیم آن را صرف چه چیزهایی کرده‌ایم، چه کاری باید انجام دهیم؟",
+            "review_origin": "SECOND_HUMAN_SOURCE_REVIEW",
+            "human_decision": "REVISE",
+            "external_knowledge_used": false
+          },
+          "second_human_review": {
+            "status": "COMPLETE",
+            "decision": "ACCEPT_DERIVED_PILOT",
+            "review_origin": "PHASE1_AUTHOR_FEEDBACK",
+            "review_timestamp_utc": "2026-09-09T13:02:12+00:00",
+            "raw_feedback_preserved": true,
+            "phase1_model_answer_used_as_ground_truth": false,
+            "author_review_status": "NOT_STARTED"
+          },
+          "author_final_review": {
+            "status": "NOT_STARTED",
+            "reviewer": "AUTHOR",
+            "decision": null,
+            "notes": null
+          },
+          "promotion": {
+            "status": "PROMOTED_TO_AUTHOR_REVIEW",
+            "currently_in_22_case_author_queue": false,
+            "future_reference_pilot_number": 25,
+            "future_target_total": 28,
+            "promoted_to_author_review": true,
+            "author_review_queue_position": 25,
+            "promotion_timestamp_utc": "2026-09-09T13:08:00+00:00",
+            "source_review_status": "COMPLETE"
+          },
+          "expected_behavior_review": {
+            "behavior_mapping_id": "behavior-mapping:d25422e17d24e1a1a4a4be410ac14f92",
+            "expected_behavior": "پاسخ باید همان موضوع Turn قبلی، یعنی ثبت و بررسی هزینه‌ها برای فهمیدن اینکه پول کجا می‌رود، را ادامه و بسط دهد. پاسخ نباید بدون ارتباط با Context به موضوع دیگری مانند قرض گرفتن تغییر مسیر دهد.",
+            "human_decision": "ACCEPT",
+            "grounding_source": "DIRECT_AUTHOR_FEEDBACK_PLUS_CONVERSATION_CONTEXT",
+            "external_knowledge_used": false,
+            "status": "SUPERSEDED_BY_SOURCE_GROUNDED_CONTENT_REVISION"
+          },
+          "golden_content_case": true,
+          "regression_role": "MULTI_TURN_CONTEXT_CONTINUITY",
+          "source_review_history": [
+            {
+              "review_event_id": "second-source-review:35626d328b21c1ccc5c12d27969bc364",
+              "review_version": "phase1_author_feedback_source_review_v1",
+              "review_timestamp_utc": "2026-09-09T13:41:40+00:00",
+              "decision": "REVISE",
+              "revision_scope": "QUESTION_ANSWER_AND_PILOT_TYPE",
+              "grounding_mode": "CORPUS_DIRECT_SUPPORT",
+              "source_mapping_id": "source-mapping:dbdb0cdfa1857d86ac7fd0c9a49b6c45",
+              "verified_corpus_sources": [
+                {
+                  "document_id": "website:3E26E509",
+                  "source_id": "website:3E26E509",
+                  "source_type": "website",
+                  "authority_class": "PRIMARY_DIRECT_AUTHOR",
+                  "title": "سواد مالی خانم‌ها؛ پول‌ها کجا می‌روند؟",
+                  "url": "https://www.fintelligence.ir/Blog/Detail/3E26E509",
+                  "role": "PRIMARY_CORPUS_GROUNDING",
+                  "coverage": "DIRECT_EXPLICIT",
+                  "review_note": "Directly supports the problem of not knowing where money went and the value of recording expenses for awareness and better management.",
+                  "document_text_sha256": "93962c20fd7afdb2d7a004646bfc4a4749a373ed58e5cbe187282dfe5d10d060"
+                },
+                {
+                  "document_id": "website:7C71884B",
+                  "source_id": "website:7C71884B",
+                  "source_type": "website",
+                  "authority_class": "PRIMARY_DIRECT_AUTHOR",
+                  "title": "ابزارهای سواد مالی برای بهبود مدیریت هزینه",
+                  "url": "https://www.fintelligence.ir/Blog/Detail/7C71884B",
+                  "role": "CORROBORATING_CORPUS_SOURCE",
+                  "coverage": "SUPPORTING",
+                  "review_note": "Supports expense recording and using that experience for better expense management and budgeting.",
+                  "document_text_sha256": "f04c55c4a2f37dd65874a1fec1e38ee375f46e1614e3ec42eb250c17da25698c"
+                }
+              ],
+              "direct_author_feedback_preserved": true,
+              "external_knowledge_used": false,
+              "author_final_review_recorded": false,
+              "superseded_state": {
+                "previous_pilot_type": "MULTI_TURN_CONTEXT_CONTINUITY",
+                "previous_golden_content_case": false,
+                "previous_question": "این جواب خوبی بود. ولی کوتاه است بیشتر توضیح می‌دهی؟",
+                "previous_expected_behavior": "پاسخ باید همان موضوع Turn قبلی، یعنی ثبت و بررسی هزینه‌ها برای فهمیدن اینکه پول کجا می‌رود، را ادامه و بسط دهد. پاسخ نباید بدون ارتباط با Context به موضوع دیگری مانند قرض گرفتن تغییر مسیر دهد.",
+                "previous_regression_role": "MULTI_TURN_CONTEXT_CONTINUITY",
+                "superseded_reason": "The historical demo turns did not provide reliable connected-chat context. The old continuity interpretation is preserved only as history, while the active Pilot is revised to a source-grounded content case."
+              }
+            }
+          ],
+          "expected_answer_review": {
+            "expected_answer_draft_id": "expected-answer-draft:fb641fbe5fee02093e5001db6f98ec8b",
+            "expected_answer_text": "باید هزینه‌ها را ثبت کنیم تا بدانیم پول را کجا و برای چه چیزهایی خرج کرده‌ایم. آگاهی از هزینه‌ها امکان مدیریت آن‌ها را فراهم می‌کند و ثبت هزینه‌ها می‌تواند به پیشگیری از ولخرجی و مدیریت بهتر مخارج کمک کند.",
+            "human_decision": "REVISE",
+            "grounding_source": "PHASE2_ACCEPTED_DIRECT_AUTHOR_CORPUS",
+            "external_knowledge_used": false
+          },
+          "regression_role_status": "SUPERSEDED",
+          "second_source_review": {
+            "status": "COMPLETE",
+            "review_event_id": "second-source-review:35626d328b21c1ccc5c12d27969bc364",
+            "review_version": "phase1_author_feedback_source_review_v1",
+            "decision": "REVISE",
+            "revision_scope": "QUESTION_ANSWER_AND_PILOT_TYPE",
+            "grounding_mode": "CORPUS_DIRECT_SUPPORT",
+            "source_mapping_id": "source-mapping:dbdb0cdfa1857d86ac7fd0c9a49b6c45",
+            "verified_corpus_sources": [
+              {
+                "document_id": "website:3E26E509",
+                "source_id": "website:3E26E509",
+                "source_type": "website",
+                "authority_class": "PRIMARY_DIRECT_AUTHOR",
+                "title": "سواد مالی خانم‌ها؛ پول‌ها کجا می‌روند؟",
+                "url": "https://www.fintelligence.ir/Blog/Detail/3E26E509",
+                "role": "PRIMARY_CORPUS_GROUNDING",
+                "coverage": "DIRECT_EXPLICIT",
+                "review_note": "Directly supports the problem of not knowing where money went and the value of recording expenses for awareness and better management.",
+                "document_text_sha256": "93962c20fd7afdb2d7a004646bfc4a4749a373ed58e5cbe187282dfe5d10d060"
+              },
+              {
+                "document_id": "website:7C71884B",
+                "source_id": "website:7C71884B",
+                "source_type": "website",
+                "authority_class": "PRIMARY_DIRECT_AUTHOR",
+                "title": "ابزارهای سواد مالی برای بهبود مدیریت هزینه",
+                "url": "https://www.fintelligence.ir/Blog/Detail/7C71884B",
+                "role": "CORROBORATING_CORPUS_SOURCE",
+                "coverage": "SUPPORTING",
+                "review_note": "Supports expense recording and using that experience for better expense management and budgeting.",
+                "document_text_sha256": "f04c55c4a2f37dd65874a1fec1e38ee375f46e1614e3ec42eb250c17da25698c"
+              }
+            ],
+            "human_source_decision": "REVISE",
+            "review_timestamp_utc": "2026-09-09T13:41:40+00:00",
+            "direct_author_feedback_preserved": true,
+            "author_final_review_status": "NOT_STARTED"
+          },
+          "citation_review": {
+            "citation_mapping_id": "citation-mapping:cf38dc73357aaa4d6690378f60565ecc",
+            "human_decision": "ACCEPT",
+            "citation_entries": [
+              {
+                "source_type": "DIRECT_AUTHOR_FEEDBACK",
+                "feedback_source_id": "author-feedback-source:51aea596838149cac0d106db94a1d64f",
+                "raw_author_feedback_sha256": "e32a4b04fa11b9f203450b05e464ba82bd44d5beaf311ae15ddfe308d720dfdf",
+                "authority_class": "PRIMARY_DIRECT_AUTHOR_FEEDBACK",
+                "role": "PRIMARY_AUTHOR_EVIDENCE",
+                "citation_index": 0
+              },
+              {
+                "source_type": "WEBSITE_DIRECT_AUTHOR",
+                "document_id": "website:3E26E509",
+                "source_id": "website:3E26E509",
+                "title": "سواد مالی خانم‌ها؛ پول‌ها کجا می‌روند؟",
+                "url": "https://www.fintelligence.ir/Blog/Detail/3E26E509",
+                "authority_class": "PRIMARY_DIRECT_AUTHOR",
+                "role": "PRIMARY_CORPUS_GROUNDING",
+                "coverage": "DIRECT_EXPLICIT",
+                "document_text_sha256": "93962c20fd7afdb2d7a004646bfc4a4749a373ed58e5cbe187282dfe5d10d060",
+                "citation_index": 1
+              },
+              {
+                "source_type": "WEBSITE_DIRECT_AUTHOR",
+                "document_id": "website:7C71884B",
+                "source_id": "website:7C71884B",
+                "title": "ابزارهای سواد مالی برای بهبود مدیریت هزینه",
+                "url": "https://www.fintelligence.ir/Blog/Detail/7C71884B",
+                "authority_class": "PRIMARY_DIRECT_AUTHOR",
+                "role": "CORROBORATING_CORPUS_SOURCE",
+                "coverage": "SUPPORTING",
+                "document_text_sha256": "f04c55c4a2f37dd65874a1fec1e38ee375f46e1614e3ec42eb250c17da25698c",
+                "citation_index": 2
+              }
+            ],
+            "grounding_mode": "CORPUS_DIRECT_SUPPORT",
+            "source_review_event_id": "second-source-review:35626d328b21c1ccc5c12d27969bc364"
+          }
+        },
+        {
+          "record_schema": "AUTHOR_FEEDBACK_DERIVED_PILOT_V1",
+          "batch_version": "phase1_author_feedback_derived_pilots_v1",
+          "reference_pilot_number": 26,
+          "pilot_case_id": "question-pilot:712a49491835fe706df3353b781f8044",
+          "feedback_case_number": 4,
+          "origin": "PHASE1_DEMO_AUTHOR_FEEDBACK",
+          "pilot_type": "AUTHOR_FEEDBACK_CONTENT",
+          "authority": {
+            "authority_class": "PRIMARY_DIRECT_AUTHOR_FEEDBACK",
+            "primary_author": "Dr. Komeil Roudi",
+            "phase1_model_answer_authoritative": false,
+            "raw_author_feedback_authoritative": true
+          },
+          "historical_phase1_demo": {
+            "raw_conversation": [
+              {
+                "speaker": "HUMAN",
+                "turn": 1,
+                "text": "چند تا راهکار بده که بتونم پس انداز کنم"
+              },
+              {
+                "speaker": "PHASE1_MODEL",
+                "turn": 1,
+                "text": "سه راهکار برای پس‌انداز عبارتند از:\n1. تعیین اهداف مالی مشخص و پس‌اندازی برای رسیدن به آن‌ها.\n2. کاهش هزینه‌های غیر ضروری و جایگزینی آن‌ها با اموری که باعث افزایش ثروت می‌شوند.\n3. سرمایه‌گذاری پس‌اندازها در گزینه‌هایی که حداقل به اندازۀ تورم بازدهی داشته باشند."
+              },
+              {
+                "speaker": "HUMAN",
+                "turn": 2,
+                "text": "هزینه غیرضروری ندارم. همه اش ضروریه . یعنی چی هزینه غیرضروری؟"
+              },
+              {
+                "speaker": "PHASE1_MODEL",
+                "turn": 2,
+                "text": "هزینه غیرضروری به معنای خرج کردن پول برای چیزهایی است که لازم نیستند یا بهبود کیفیت زندگی ما را فراهم نمی‌کنند. به عبارت دیگر، چیزهایی که به طور مداوم یا بدون نیاز به خریداری می‌شوند و ممکن است باعث هدررفت پول شوند. به طور کلی، هزینه‌های غیرضروری، هزینه‌هایی هستند که به طور غیرمتعارف یا بدون نیتی در حساب کشیده می‌شوند."
+              },
+              {
+                "speaker": "HUMAN",
+                "turn": 3,
+                "text": "چند نمونه برام بگو"
+              },
+              {
+                "speaker": "PHASE1_MODEL",
+                "turn": 3,
+                "text": "چند نمونه از گزینه‌های سرمایه‌گذاری عبارتند از:\n- سرمایه‌گذاری در اوراق بهادار\n- سرمایه‌گذاری در املاک و مستغلات\n- سرمایه‌گذاری در صندوق‌های سرمایه\n- سرمایه‌گذاری در بانک‌ها با سود بالا\n- سرمایه‌گذاری در طلا یا سایر فلزات گرانبها."
+              }
+            ],
+            "raw_author_feedback": "آنچه باعث می شود پول هایم هدر روند ، الگوی خرید نامناسب است مانند \n1. خرید با تنوع و حجم زیاد\n2. خرید به خاطر تنش عاطفی \n3. خرید به خاطر هیجان زود گذر \n4. خرید به خاطر پذیرفته شدن در گروه های مرجع \n5. خرید به خاطر پذیرش تبلیغات و بازاریابی \n6. خرید به خاطر یک دوره سختی و احتیاج به پرداختن به خود \n7. خرید به خاطر فداکاری",
+            "raw_author_feedback_sha256": "25802bea8c94318361d26fc0924fd18e93cb69f8f07dfe2ad076c36c77585a80",
+            "raw_feedback_preserved_verbatim": true
+          },
+          "feedback_source": {
+            "feedback_source_id": "author-feedback-source:715b88fd3b05edc3db1127c75a962534",
+            "source_type": "DIRECT_AUTHOR_FEEDBACK",
+            "source_scope": "PHASE1_DEMO",
+            "source_mapping_to_phase2_corpus": "NOT_REQUIRED_FOR_AUTHOR_FEEDBACK_AUTHORITY",
+            "optional_corpus_cross_mapping_status": "NOT_STARTED"
+          },
+          "derived_question": {
+            "question_draft_id": "question-draft:b25bbaa56c0d557917f630b4529e8799",
+            "question_text": "چه الگوهای خریدی می‌توانند باعث هدررفت پول شوند؟",
+            "review_origin": "SECOND_HUMAN_REVIEW_PHASE1_AUTHOR_FEEDBACK",
+            "human_decision": "ACCEPT",
+            "external_knowledge_used": false
+          },
+          "second_human_review": {
+            "status": "COMPLETE",
+            "decision": "ACCEPT_DERIVED_PILOT",
+            "review_origin": "PHASE1_AUTHOR_FEEDBACK",
+            "review_timestamp_utc": "2026-09-09T13:02:12+00:00",
+            "raw_feedback_preserved": true,
+            "phase1_model_answer_used_as_ground_truth": false,
+            "author_review_status": "NOT_STARTED"
+          },
+          "author_final_review": {
+            "status": "NOT_STARTED",
+            "reviewer": "AUTHOR",
+            "decision": null,
+            "notes": null
+          },
+          "promotion": {
+            "status": "PROMOTED_TO_AUTHOR_REVIEW",
+            "currently_in_22_case_author_queue": false,
+            "future_reference_pilot_number": 26,
+            "future_target_total": 28,
+            "promoted_to_author_review": true,
+            "author_review_queue_position": 26,
+            "promotion_timestamp_utc": "2026-09-09T13:08:00+00:00",
+            "source_review_status": "COMPLETE"
+          },
+          "expected_answer_review": {
+            "expected_answer_draft_id": "expected-answer-draft:8422ab8fc539a92620b886f9b76d2a8d",
+            "expected_answer_text": "الگوهای خریدی که می‌توانند باعث هدررفت پول شوند شامل این موارد هستند:\n1. خرید با تنوع و حجم زیاد\n2. خرید به خاطر تنش عاطفی\n3. خرید به خاطر هیجان زودگذر\n4. خرید به خاطر پذیرفته شدن در گروه‌های مرجع\n5. خرید به خاطر پذیرش تبلیغات و بازاریابی\n6. خرید به خاطر یک دوره سختی و نیاز به پرداختن به خود\n7. خرید به خاطر فداکاری",
+            "human_decision": "ACCEPT",
+            "grounding_source": "DIRECT_AUTHOR_FEEDBACK",
+            "external_knowledge_used": false
+          },
+          "citation_review": {
+            "citation_mapping_id": "citation-mapping:4726e60117f586025a7152a8d5ddc356",
+            "human_decision": "ACCEPT",
+            "citation_entries": [
+              {
+                "citation_index": 0,
+                "source_type": "DIRECT_AUTHOR_FEEDBACK",
+                "feedback_source_id": "author-feedback-source:715b88fd3b05edc3db1127c75a962534",
+                "raw_author_feedback_sha256": "25802bea8c94318361d26fc0924fd18e93cb69f8f07dfe2ad076c36c77585a80",
+                "authority_class": "PRIMARY_DIRECT_AUTHOR_FEEDBACK"
+              },
+              {
+                "source_type": "WEBSITE_DIRECT_AUTHOR",
+                "document_id": "website:9673DF51",
+                "source_id": "website:9673DF51",
+                "title": "الگوهای نادرست خرید و راهکارهای پرهیز از آن",
+                "url": "https://www.fintelligence.ir/Blog/Detail/9673DF51",
+                "authority_class": "PRIMARY_DIRECT_AUTHOR",
+                "role": "CORROBORATING_CORPUS_SOURCE",
+                "coverage": "PARTIAL",
+                "document_text_sha256": "34773eab0c594ec5c38eda81ff8cb2122c120461afc95501c531e8b4519d0c8b",
+                "citation_index": 1
+              },
+              {
+                "source_type": "WEBSITE_DIRECT_AUTHOR",
+                "document_id": "website:BC0342B6",
+                "source_id": "website:BC0342B6",
+                "title": "سواد مالی خانم‌ها؛ تصمیم‌های خرید را خودمان می‌گیریم یا عادت‌های‌مان؟",
+                "url": "https://www.fintelligence.ir/Blog/Detail/BC0342B6",
+                "authority_class": "PRIMARY_DIRECT_AUTHOR",
+                "role": "CORROBORATING_CORPUS_SOURCE",
+                "coverage": "PARTIAL",
+                "document_text_sha256": "895b6a6c11137c190d432a766062896be61f95a39e73d37142a3d7c5a1b42b47",
+                "citation_index": 2
+              }
+            ],
+            "grounding_mode": "DIRECT_AUTHOR_FEEDBACK_PRIMARY_WITH_PARTIAL_CORPUS_CORROBORATION",
+            "source_review_event_id": "second-source-review:8fd3a4c97358f5810d3052841339f400"
+          },
+          "golden_content_case": true,
+          "source_review_history": [
+            {
+              "review_event_id": "second-source-review:8fd3a4c97358f5810d3052841339f400",
+              "review_version": "phase1_author_feedback_source_review_v1",
+              "review_timestamp_utc": "2026-09-09T13:41:40+00:00",
+              "decision": "REVISE",
+              "revision_scope": "GROUNDING_ONLY",
+              "grounding_mode": "DIRECT_AUTHOR_FEEDBACK_PRIMARY_WITH_PARTIAL_CORPUS_CORROBORATION",
+              "source_mapping_id": "source-mapping:45280f9b664c5bfbe48d36745a6078ca",
+              "verified_corpus_sources": [
+                {
+                  "document_id": "website:9673DF51",
+                  "source_id": "website:9673DF51",
+                  "source_type": "website",
+                  "authority_class": "PRIMARY_DIRECT_AUTHOR",
+                  "title": "الگوهای نادرست خرید و راهکارهای پرهیز از آن",
+                  "url": "https://www.fintelligence.ir/Blog/Detail/9673DF51",
+                  "role": "CORROBORATING_CORPUS_SOURCE",
+                  "coverage": "PARTIAL",
+                  "review_note": "Supports incorrect purchasing patterns, emotional drivers, and advertising/marketing influence, but does not independently enumerate all seven Author-feedback items.",
+                  "document_text_sha256": "34773eab0c594ec5c38eda81ff8cb2122c120461afc95501c531e8b4519d0c8b"
+                },
+                {
+                  "document_id": "website:BC0342B6",
+                  "source_id": "website:BC0342B6",
+                  "source_type": "website",
+                  "authority_class": "PRIMARY_DIRECT_AUTHOR",
+                  "title": "سواد مالی خانم‌ها؛ تصمیم‌های خرید را خودمان می‌گیریم یا عادت‌های‌مان؟",
+                  "url": "https://www.fintelligence.ir/Blog/Detail/BC0342B6",
+                  "role": "CORROBORATING_CORPUS_SOURCE",
+                  "coverage": "PARTIAL",
+                  "review_note": "Supports emotional/psychological purchasing patterns and broader incorrect buying behavior.",
+                  "document_text_sha256": "895b6a6c11137c190d432a766062896be61f95a39e73d37142a3d7c5a1b42b47"
+                }
+              ],
+              "direct_author_feedback_preserved": true,
+              "external_knowledge_used": false,
+              "author_final_review_recorded": false,
+              "grounding_constraint": "The seven-item expected answer remains primarily grounded in Dr. Roudi's direct historical feedback. Website evidence is corroborating, not an independent full source for all seven items."
+            }
+          ],
+          "second_source_review": {
+            "status": "COMPLETE",
+            "review_event_id": "second-source-review:8fd3a4c97358f5810d3052841339f400",
+            "review_version": "phase1_author_feedback_source_review_v1",
+            "decision": "REVISE",
+            "revision_scope": "GROUNDING_ONLY",
+            "grounding_mode": "DIRECT_AUTHOR_FEEDBACK_PRIMARY_WITH_PARTIAL_CORPUS_CORROBORATION",
+            "source_mapping_id": "source-mapping:45280f9b664c5bfbe48d36745a6078ca",
+            "verified_corpus_sources": [
+              {
+                "document_id": "website:9673DF51",
+                "source_id": "website:9673DF51",
+                "source_type": "website",
+                "authority_class": "PRIMARY_DIRECT_AUTHOR",
+                "title": "الگوهای نادرست خرید و راهکارهای پرهیز از آن",
+                "url": "https://www.fintelligence.ir/Blog/Detail/9673DF51",
+                "role": "CORROBORATING_CORPUS_SOURCE",
+                "coverage": "PARTIAL",
+                "review_note": "Supports incorrect purchasing patterns, emotional drivers, and advertising/marketing influence, but does not independently enumerate all seven Author-feedback items.",
+                "document_text_sha256": "34773eab0c594ec5c38eda81ff8cb2122c120461afc95501c531e8b4519d0c8b"
+              },
+              {
+                "document_id": "website:BC0342B6",
+                "source_id": "website:BC0342B6",
+                "source_type": "website",
+                "authority_class": "PRIMARY_DIRECT_AUTHOR",
+                "title": "سواد مالی خانم‌ها؛ تصمیم‌های خرید را خودمان می‌گیریم یا عادت‌های‌مان؟",
+                "url": "https://www.fintelligence.ir/Blog/Detail/BC0342B6",
+                "role": "CORROBORATING_CORPUS_SOURCE",
+                "coverage": "PARTIAL",
+                "review_note": "Supports emotional/psychological purchasing patterns and broader incorrect buying behavior.",
+                "document_text_sha256": "895b6a6c11137c190d432a766062896be61f95a39e73d37142a3d7c5a1b42b47"
+              }
+            ],
+            "human_source_decision": "REVISE",
+            "review_timestamp_utc": "2026-09-09T13:41:40+00:00",
+            "direct_author_feedback_preserved": true,
+            "author_final_review_status": "NOT_STARTED",
+            "grounding_constraint": "The seven-item expected answer remains primarily grounded in Dr. Roudi's direct historical feedback. Website evidence is corroborating, not an independent full source for all seven items."
+          }
+        },
+        {
+          "record_schema": "AUTHOR_FEEDBACK_DERIVED_PILOT_V1",
+          "batch_version": "phase1_author_feedback_derived_pilots_v1",
+          "reference_pilot_number": 27,
+          "pilot_case_id": "question-pilot:2cabad10670e83af66847a341690d42e",
+          "feedback_case_number": 5,
+          "origin": "PHASE1_DEMO_AUTHOR_FEEDBACK",
+          "pilot_type": "AUTHOR_FEEDBACK_CONTENT",
+          "authority": {
+            "authority_class": "PRIMARY_DIRECT_AUTHOR_FEEDBACK",
+            "primary_author": "Dr. Komeil Roudi",
+            "phase1_model_answer_authoritative": false,
+            "raw_author_feedback_authoritative": true
+          },
+          "historical_phase1_demo": {
+            "raw_conversation": [
+              {
+                "speaker": "HUMAN",
+                "text": "روش های افزایش درآمد را توضیح بده"
+              },
+              {
+                "speaker": "PHASE1_MODEL",
+                "text": "روش‌های افزایش درآمد عبارتند از:\n\n1. **قیمت‌گذاری مناسب محصولات**: افزایش سود با توجه به هزینه‌های تولید و ارزش ارائه شده به مشتری.\n2. **سرمایه‌گذاری درست**: انجام سرمایه‌گذاری‌هایی که حداقل به اندازۀ تورم سودآوری داشته باشند.\n3. **خرید دارایی‌های درآمدزا**: افزایش درآمد از طریق سرمایه‌گذاری در دارایی‌هایی که درآمد داشته باشند، نه فقط برای خرج کردن درآمد.\n4. **تغییر نقشه کسب‌وکار**: اگر درآمد مطلوبی حاصل نشود، باید روش‌های کسب‌وکار را بهبود بخشید."
+              }
+            ],
+            "raw_author_feedback": "ترتیب آن مناسب نیست. \n\n1. فروش وسایلی که واقعا نیازی نداریم.\n2. پیشنهاد پروژه و کار بیشتر به کارفرمایی که الان برایش کار می کنیم. \n3. خرید دارایی درآمد زا و سرمایه گذاری دوباره سود آن \n4. ایجاد درآمد منفعل یعنی درآمدی که وابسته به فعالیت شغلی من نباشد",
+            "raw_author_feedback_sha256": "d381877299a8271d8da35f04462432a5fa323180b165620c1ff83623c883af38",
+            "raw_feedback_preserved_verbatim": true
+          },
+          "feedback_source": {
+            "feedback_source_id": "author-feedback-source:6179a5259090d569e84a8020954d07c8",
+            "source_type": "DIRECT_AUTHOR_FEEDBACK",
+            "source_scope": "PHASE1_DEMO",
+            "source_mapping_to_phase2_corpus": "NOT_REQUIRED_FOR_AUTHOR_FEEDBACK_AUTHORITY",
+            "optional_corpus_cross_mapping_status": "NOT_STARTED"
+          },
+          "derived_question": {
+            "question_draft_id": "question-draft:94da5aa229ae751e3e44dfb3d9834b8b",
+            "question_text": "چه روش‌هایی برای افزایش درآمد پیشنهاد می‌شود؟",
+            "review_origin": "SECOND_HUMAN_REVIEW_PHASE1_AUTHOR_FEEDBACK",
+            "human_decision": "ACCEPT",
+            "external_knowledge_used": false
+          },
+          "second_human_review": {
+            "status": "COMPLETE",
+            "decision": "ACCEPT_DERIVED_PILOT",
+            "review_origin": "PHASE1_AUTHOR_FEEDBACK",
+            "review_timestamp_utc": "2026-09-09T13:02:12+00:00",
+            "raw_feedback_preserved": true,
+            "phase1_model_answer_used_as_ground_truth": false,
+            "author_review_status": "NOT_STARTED"
+          },
+          "author_final_review": {
+            "status": "NOT_STARTED",
+            "reviewer": "AUTHOR",
+            "decision": null,
+            "notes": null
+          },
+          "promotion": {
+            "status": "PROMOTED_TO_AUTHOR_REVIEW",
+            "currently_in_22_case_author_queue": false,
+            "future_reference_pilot_number": 27,
+            "future_target_total": 28,
+            "promoted_to_author_review": true,
+            "author_review_queue_position": 27,
+            "promotion_timestamp_utc": "2026-09-09T13:08:00+00:00",
+            "source_review_status": "COMPLETE"
+          },
+          "expected_answer_review": {
+            "expected_answer_draft_id": "expected-answer-draft:944a3cd4da469843a145fb64c43da54c",
+            "expected_answer_text": "روش‌های پیشنهادی برای افزایش درآمد به این ترتیب‌اند:\n1. فروش وسایلی که واقعاً به آن‌ها نیاز نداریم.\n2. پیشنهاد پروژه یا کار بیشتر به کارفرمای فعلی.\n3. خرید دارایی درآمدزا و سرمایه‌گذاری دوباره سود آن.\n4. ایجاد درآمد منفعل؛ یعنی درآمدی که وابسته به فعالیت شغلی فرد نباشد.",
+            "human_decision": "ACCEPT",
+            "grounding_source": "DIRECT_AUTHOR_FEEDBACK",
+            "external_knowledge_used": false
+          },
+          "citation_review": {
+            "citation_mapping_id": "citation-mapping:7c51e4906ca1b75572b990dc2cc172f6",
+            "human_decision": "ACCEPT",
+            "citation_entries": [
+              {
+                "citation_index": 0,
+                "source_type": "DIRECT_AUTHOR_FEEDBACK",
+                "feedback_source_id": "author-feedback-source:6179a5259090d569e84a8020954d07c8",
+                "raw_author_feedback_sha256": "d381877299a8271d8da35f04462432a5fa323180b165620c1ff83623c883af38",
+                "authority_class": "PRIMARY_DIRECT_AUTHOR_FEEDBACK"
+              },
+              {
+                "source_type": "WEBSITE_DIRECT_AUTHOR",
+                "document_id": "website:3A675BF6",
+                "source_id": "website:3A675BF6",
+                "title": "دختران خوب ثروتمند می‌شوند اگر ...",
+                "url": "https://www.fintelligence.ir/Blog/Detail/3A675BF6",
+                "authority_class": "PRIMARY_DIRECT_AUTHOR",
+                "role": "CORROBORATING_CORPUS_SOURCE",
+                "coverage": "PARTIAL",
+                "document_text_sha256": "245e5e51dbdc08d2ea95435f9c617c3c73153f986f9ffc3859f32941151fc77f",
+                "citation_index": 1
+              },
+              {
+                "source_type": "WEBSITE_DIRECT_AUTHOR",
+                "document_id": "website:C042183F",
+                "source_id": "website:C042183F",
+                "title": "«پول، پول می‌آورد» اما چگونه؟",
+                "url": "https://www.fintelligence.ir/Blog/Detail/C042183F",
+                "authority_class": "PRIMARY_DIRECT_AUTHOR",
+                "role": "CORROBORATING_CORPUS_SOURCE",
+                "coverage": "PARTIAL",
+                "document_text_sha256": "9f6b024989626472f648fab84eebe6935bd3792932cd92a582f0bb0276f533d3",
+                "citation_index": 2
+              }
+            ],
+            "grounding_mode": "DIRECT_AUTHOR_FEEDBACK_PRIMARY_WITH_PARTIAL_CORPUS_CORROBORATION",
+            "source_review_event_id": "second-source-review:5aa2c11f9d066307d08aa5d0cb2b3486"
+          },
+          "golden_content_case": true,
+          "source_review_history": [
+            {
+              "review_event_id": "second-source-review:5aa2c11f9d066307d08aa5d0cb2b3486",
+              "review_version": "phase1_author_feedback_source_review_v1",
+              "review_timestamp_utc": "2026-09-09T13:41:40+00:00",
+              "decision": "REVISE",
+              "revision_scope": "GROUNDING_ONLY",
+              "grounding_mode": "DIRECT_AUTHOR_FEEDBACK_PRIMARY_WITH_PARTIAL_CORPUS_CORROBORATION",
+              "source_mapping_id": "source-mapping:db206894dc1a8d58bcb5e2cd7629ad85",
+              "verified_corpus_sources": [
+                {
+                  "document_id": "website:3A675BF6",
+                  "source_id": "website:3A675BF6",
+                  "source_type": "website",
+                  "authority_class": "PRIMARY_DIRECT_AUTHOR",
+                  "title": "دختران خوب ثروتمند می‌شوند اگر ...",
+                  "url": "https://www.fintelligence.ir/Blog/Detail/3A675BF6",
+                  "role": "CORROBORATING_CORPUS_SOURCE",
+                  "coverage": "PARTIAL",
+                  "review_note": "Supports increasing income, work/income capacity and income-producing assets, but does not independently reproduce the complete four-step Author sequence.",
+                  "document_text_sha256": "245e5e51dbdc08d2ea95435f9c617c3c73153f986f9ffc3859f32941151fc77f"
+                },
+                {
+                  "document_id": "website:C042183F",
+                  "source_id": "website:C042183F",
+                  "source_type": "website",
+                  "authority_class": "PRIMARY_DIRECT_AUTHOR",
+                  "title": "«پول، پول می‌آورد» اما چگونه؟",
+                  "url": "https://www.fintelligence.ir/Blog/Detail/C042183F",
+                  "role": "CORROBORATING_CORPUS_SOURCE",
+                  "coverage": "PARTIAL",
+                  "review_note": "Supports the concept of investing money in productive assets and generating profit.",
+                  "document_text_sha256": "9f6b024989626472f648fab84eebe6935bd3792932cd92a582f0bb0276f533d3"
+                }
+              ],
+              "direct_author_feedback_preserved": true,
+              "external_knowledge_used": false,
+              "author_final_review_recorded": false,
+              "grounding_constraint": "The four methods and their ordering remain primarily grounded in Dr. Roudi's direct historical feedback. Website sources provide only partial corroboration."
+            }
+          ],
+          "second_source_review": {
+            "status": "COMPLETE",
+            "review_event_id": "second-source-review:5aa2c11f9d066307d08aa5d0cb2b3486",
+            "review_version": "phase1_author_feedback_source_review_v1",
+            "decision": "REVISE",
+            "revision_scope": "GROUNDING_ONLY",
+            "grounding_mode": "DIRECT_AUTHOR_FEEDBACK_PRIMARY_WITH_PARTIAL_CORPUS_CORROBORATION",
+            "source_mapping_id": "source-mapping:db206894dc1a8d58bcb5e2cd7629ad85",
+            "verified_corpus_sources": [
+              {
+                "document_id": "website:3A675BF6",
+                "source_id": "website:3A675BF6",
+                "source_type": "website",
+                "authority_class": "PRIMARY_DIRECT_AUTHOR",
+                "title": "دختران خوب ثروتمند می‌شوند اگر ...",
+                "url": "https://www.fintelligence.ir/Blog/Detail/3A675BF6",
+                "role": "CORROBORATING_CORPUS_SOURCE",
+                "coverage": "PARTIAL",
+                "review_note": "Supports increasing income, work/income capacity and income-producing assets, but does not independently reproduce the complete four-step Author sequence.",
+                "document_text_sha256": "245e5e51dbdc08d2ea95435f9c617c3c73153f986f9ffc3859f32941151fc77f"
+              },
+              {
+                "document_id": "website:C042183F",
+                "source_id": "website:C042183F",
+                "source_type": "website",
+                "authority_class": "PRIMARY_DIRECT_AUTHOR",
+                "title": "«پول، پول می‌آورد» اما چگونه؟",
+                "url": "https://www.fintelligence.ir/Blog/Detail/C042183F",
+                "role": "CORROBORATING_CORPUS_SOURCE",
+                "coverage": "PARTIAL",
+                "review_note": "Supports the concept of investing money in productive assets and generating profit.",
+                "document_text_sha256": "9f6b024989626472f648fab84eebe6935bd3792932cd92a582f0bb0276f533d3"
+              }
+            ],
+            "human_source_decision": "REVISE",
+            "review_timestamp_utc": "2026-09-09T13:41:40+00:00",
+            "direct_author_feedback_preserved": true,
+            "author_final_review_status": "NOT_STARTED",
+            "grounding_constraint": "The four methods and their ordering remain primarily grounded in Dr. Roudi's direct historical feedback. Website sources provide only partial corroboration."
+          }
+        },
+        {
+          "record_schema": "AUTHOR_FEEDBACK_DERIVED_PILOT_V1",
+          "batch_version": "phase1_author_feedback_derived_pilots_v1",
+          "reference_pilot_number": 28,
+          "pilot_case_id": "question-pilot:41c1af00f30c2653f0ea814c4c7c6349",
+          "feedback_case_number": 6,
+          "origin": "PHASE1_DEMO_AUTHOR_FEEDBACK",
+          "pilot_type": "AUTHOR_FEEDBACK_CONTENT",
+          "authority": {
+            "authority_class": "PRIMARY_DIRECT_AUTHOR_FEEDBACK",
+            "primary_author": "Dr. Komeil Roudi",
+            "phase1_model_answer_authoritative": false,
+            "raw_author_feedback_authoritative": true
+          },
+          "historical_phase1_demo": {
+            "raw_conversation": [
+              {
+                "speaker": "HUMAN",
+                "text": "من پول در می آورم اما هنوز احساس می کنم فقیر هستم!"
+              },
+              {
+                "speaker": "PHASE1_MODEL",
+                "text": "شما ممکن است به دلیل ارتباط نادرست با پول و ترس از نداشتن پول، احساس فقر کنید. پول تنها ابزاری برای ثابت کردن خود و امنیت نیست، بلکه رابطه‌ای است که با آن سروکار داریم. اگر تصمیم‌های نادرستی را در گذشته گرفته باشید، ممکن است این احساس فقر را ایجاد کرده باشد. بهتر است به جای توجه به مقدار پول، به رابطه‌ای که با پول دارید نیز توجه کنید. همچنین، پول را باید به کار برد تا ارزشش حفظ شود. بهترین راه برای جلوگیری از احساس فقر، توجه به سواد مالی و تصمیم‌گیری‌های صحیح است."
+              }
+            ],
+            "raw_author_feedback": "جواب خوبی است که مساله فقر مساله پول درآوردن و خرج کردن نیست. مساله رابطه با پول است . پول به معنای چیزی است که نداریم و تلاش می کنیم آن چیز را با پول جبران کنیم. در نتیجه مثلا اعتماد به نفس را به پول به دست بیارویم.\nضمن اینکه همه احساس فقر می کنند چون فقر به معنی نرسیدن به چیزی است که می خواهیم و همه چیزهایی می خواهند که ندارند و در نتیجه فقیر هستند.",
+            "raw_author_feedback_sha256": "461f827ee36b106e50f0a383658a2a23c7240e9dc2982367f13032e677c592a1",
+            "raw_feedback_preserved_verbatim": true
+          },
+          "feedback_source": {
+            "feedback_source_id": "author-feedback-source:89c81d7ebdd7967a2d09a43ade9d4971",
+            "source_type": "DIRECT_AUTHOR_FEEDBACK",
+            "source_scope": "PHASE1_DEMO",
+            "source_mapping_to_phase2_corpus": "NOT_REQUIRED_FOR_AUTHOR_FEEDBACK_AUTHORITY",
+            "optional_corpus_cross_mapping_status": "NOT_STARTED"
+          },
+          "derived_question": {
+            "question_draft_id": "question-draft:07fc3ff954eb23eabce2ae6ea174e3e6",
+            "question_text": "چرا ممکن است فردی با وجود درآمد داشتن همچنان احساس فقر کند؟",
+            "review_origin": "SECOND_HUMAN_REVIEW_PHASE1_AUTHOR_FEEDBACK",
+            "human_decision": "ACCEPT",
+            "external_knowledge_used": false
+          },
+          "second_human_review": {
+            "status": "COMPLETE",
+            "decision": "ACCEPT_DERIVED_PILOT",
+            "review_origin": "PHASE1_AUTHOR_FEEDBACK",
+            "review_timestamp_utc": "2026-09-09T13:02:12+00:00",
+            "raw_feedback_preserved": true,
+            "phase1_model_answer_used_as_ground_truth": false,
+            "author_review_status": "NOT_STARTED"
+          },
+          "author_final_review": {
+            "status": "NOT_STARTED",
+            "reviewer": "AUTHOR",
+            "decision": null,
+            "notes": null
+          },
+          "promotion": {
+            "status": "PROMOTED_TO_AUTHOR_REVIEW",
+            "currently_in_22_case_author_queue": false,
+            "future_reference_pilot_number": 28,
+            "future_target_total": 28,
+            "promoted_to_author_review": true,
+            "author_review_queue_position": 28,
+            "promotion_timestamp_utc": "2026-09-09T13:08:00+00:00",
+            "source_review_status": "COMPLETE"
+          },
+          "expected_answer_review": {
+            "expected_answer_draft_id": "expected-answer-draft:82ba1fd196c920ec5ae2afca9f16a596",
+            "expected_answer_text": "احساس فقر فقط به میزان پول درآوردن یا خرج کردن مربوط نیست و می‌تواند به رابطه فرد با پول مربوط باشد. ممکن است فرد تلاش کند با پول چیزی را که احساس می‌کند ندارد جبران کند؛ برای مثال، اعتمادبه‌نفس را از طریق پول به دست آورد. همچنین در این دیدگاه، فقر به معنای نرسیدن به چیزی است که فرد می‌خواهد و چون انسان‌ها همواره چیزهایی می‌خواهند که ندارند، احساس فقر می‌تواند حتی با وجود داشتن درآمد باقی بماند.",
+            "human_decision": "ACCEPT",
+            "grounding_source": "DIRECT_AUTHOR_FEEDBACK",
+            "external_knowledge_used": false
+          },
+          "citation_review": {
+            "citation_mapping_id": "citation-mapping:c024cf98da30ac57737a71b978467de3",
+            "human_decision": "ACCEPT",
+            "citation_entries": [
+              {
+                "citation_index": 0,
+                "source_type": "DIRECT_AUTHOR_FEEDBACK",
+                "feedback_source_id": "author-feedback-source:89c81d7ebdd7967a2d09a43ade9d4971",
+                "raw_author_feedback_sha256": "461f827ee36b106e50f0a383658a2a23c7240e9dc2982367f13032e677c592a1",
+                "authority_class": "PRIMARY_DIRECT_AUTHOR_FEEDBACK"
+              },
+              {
+                "source_type": "WEBSITE_DIRECT_AUTHOR",
+                "document_id": "website:2F8F15FB",
+                "source_id": "website:2F8F15FB",
+                "title": "چگونه کمتر نگران پول باشیم؟",
+                "url": "https://www.fintelligence.ir/Blog/Detail/2F8F15FB",
+                "authority_class": "PRIMARY_DIRECT_AUTHOR",
+                "role": "PRIMARY_CORPUS_CORROBORATION",
+                "coverage": "STRONG_PARTIAL",
+                "document_text_sha256": "bde0fec90ea9a93a05699ef3df06af12d6f93c16449b66f187e347e07bf92a9e",
+                "citation_index": 1
+              }
+            ],
+            "grounding_mode": "DIRECT_AUTHOR_FEEDBACK_PLUS_CORPUS_DIRECT_SUPPORT",
+            "source_review_event_id": "second-source-review:600e5438bdb5e8332ddb49b35bb7b917"
+          },
+          "golden_content_case": true,
+          "source_review_history": [
+            {
+              "review_event_id": "second-source-review:600e5438bdb5e8332ddb49b35bb7b917",
+              "review_version": "phase1_author_feedback_source_review_v1",
+              "review_timestamp_utc": "2026-09-09T13:41:40+00:00",
+              "decision": "ACCEPT",
+              "revision_scope": "NONE",
+              "grounding_mode": "DIRECT_AUTHOR_FEEDBACK_PLUS_CORPUS_DIRECT_SUPPORT",
+              "source_mapping_id": "source-mapping:e6ee476727827646d9ef8f61a4f47b56",
+              "verified_corpus_sources": [
+                {
+                  "document_id": "website:2F8F15FB",
+                  "source_id": "website:2F8F15FB",
+                  "source_type": "website",
+                  "authority_class": "PRIMARY_DIRECT_AUTHOR",
+                  "title": "چگونه کمتر نگران پول باشیم؟",
+                  "url": "https://www.fintelligence.ir/Blog/Detail/2F8F15FB",
+                  "role": "PRIMARY_CORPUS_CORROBORATION",
+                  "coverage": "STRONG_PARTIAL",
+                  "review_note": "Strongly supports the relationship-with-money concept and the idea that money can represent things a person feels are missing, while the broader poverty interpretation remains grounded in direct Author feedback.",
+                  "document_text_sha256": "bde0fec90ea9a93a05699ef3df06af12d6f93c16449b66f187e347e07bf92a9e"
+                }
+              ],
+              "direct_author_feedback_preserved": true,
+              "external_knowledge_used": false,
+              "author_final_review_recorded": false
+            }
+          ],
+          "second_source_review": {
+            "status": "COMPLETE",
+            "review_event_id": "second-source-review:600e5438bdb5e8332ddb49b35bb7b917",
+            "review_version": "phase1_author_feedback_source_review_v1",
+            "decision": "ACCEPT",
+            "revision_scope": "NONE",
+            "grounding_mode": "DIRECT_AUTHOR_FEEDBACK_PLUS_CORPUS_DIRECT_SUPPORT",
+            "source_mapping_id": "source-mapping:e6ee476727827646d9ef8f61a4f47b56",
+            "verified_corpus_sources": [
+              {
+                "document_id": "website:2F8F15FB",
+                "source_id": "website:2F8F15FB",
+                "source_type": "website",
+                "authority_class": "PRIMARY_DIRECT_AUTHOR",
+                "title": "چگونه کمتر نگران پول باشیم؟",
+                "url": "https://www.fintelligence.ir/Blog/Detail/2F8F15FB",
+                "role": "PRIMARY_CORPUS_CORROBORATION",
+                "coverage": "STRONG_PARTIAL",
+                "review_note": "Strongly supports the relationship-with-money concept and the idea that money can represent things a person feels are missing, while the broader poverty interpretation remains grounded in direct Author feedback.",
+                "document_text_sha256": "bde0fec90ea9a93a05699ef3df06af12d6f93c16449b66f187e347e07bf92a9e"
+              }
+            ],
+            "human_source_decision": "ACCEPT",
+            "review_timestamp_utc": "2026-09-09T13:41:40+00:00",
+            "direct_author_feedback_preserved": true,
+            "author_final_review_status": "NOT_STARTED"
+          }
+        }
+      ],
+      "promotion_timestamp_utc": "2026-09-09T13:08:00+00:00",
+      "author_review_queue_count_after_promotion": 28,
+      "source_review_status": "COMPLETE",
+      "source_review_version": "phase1_author_feedback_source_review_v1",
+      "source_review_case_count": 6,
+      "source_review_decisions": {
+        "ACCEPT": 3,
+        "REVISE": 3,
+        "REJECT": 0,
+        "RETARGET": 0
+      },
+      "content_pilot_count_after_source_review": 6,
+      "continuity_regression_pilot_count_after_source_review": 0,
+      "author_final_review_status": "NOT_STARTED"
+    }
   }
 }
