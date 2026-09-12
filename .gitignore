@@ -73,6 +73,12 @@ data/phase2/index/
 data/phase2/database/
 
 # ==========================================
+# Generated Embedding Benchmark Caches
+# ==========================================
+
+artifacts/phase2/embedding_benchmark/
+
+# ==========================================
 # Phase 2 Manifests
 # ==========================================
 #

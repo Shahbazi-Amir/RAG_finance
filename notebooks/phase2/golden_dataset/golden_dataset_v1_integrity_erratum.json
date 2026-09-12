@@ -1,0 +1,13 @@
+{
+  "artifact": "golden_dataset_v1.jsonl",
+  "dataset_version": "golden_dataset_v1",
+  "records": 573,
+  "actual_sha256": "df18bd384261400986e2c3bcdeda0cffa084243fb99f073c51396dbe2d9f2729",
+  "legacy_report_sha256": "25ed3732db5f03d3b771daa7b1051d61f8de7524644c4a055792b39a22493cc4",
+  "legacy_report_path": "golden_dataset_v1_final_report.json",
+  "issue_type": "LEGACY_HARDCODED_SHA256_METADATA",
+  "dataset_matches_git_head": true,
+  "legacy_mismatch_exists_in_git_head": true,
+  "integrity_status": "PASS_WITH_LEGACY_REPORT_ERRATUM",
+  "dataset_content_modified": false
+}
