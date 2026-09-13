@@ -1,5 +1,5 @@
 # ==========================================
-# Python
+# Python and build output
 # ==========================================
 
 **/__pycache__/
@@ -9,47 +9,34 @@
 *.egg-info/
 build/
 dist/
+coverage.xml
+.coverage
+htmlcov/
 
 # ==========================================
-# Virtual Environments
+# Virtual environments and secrets
 # ==========================================
 
 rag_env/
 venv/
 .venv/
-
-# ==========================================
-# Environment Variables
-# ==========================================
-
 .env
+.env.*
+!.env.example
 
 # ==========================================
-# Jupyter
+# Jupyter, IDEs and OS files
 # ==========================================
 
 .ipynb_checkpoints/
-
-# ==========================================
-# IDEs
-# ==========================================
-
 .vscode/
-
-# ==========================================
-# macOS
-# ==========================================
-
+.idea/
 .DS_Store
-
-# ==========================================
-# Logs
-# ==========================================
-
 *.log
+*.tmp
 
 # ==========================================
-# Generated Data - Phase 1
+# Generated data — Phase 1
 # ==========================================
 
 data/processed/
@@ -60,7 +47,7 @@ data/index/
 data/database/
 
 # ==========================================
-# Generated Data - Phase 2
+# Generated data — Phase 2
 # ==========================================
 
 data/phase2/raw/
@@ -72,68 +59,55 @@ data/phase2/vectorstore/
 data/phase2/index/
 data/phase2/database/
 
+# Phase 2 manifests are intentionally version-controlled.
+# Do not ignore data/phase2/manifests/.
+
 # ==========================================
-# Generated Embedding Benchmark Caches
+# Generated benchmark caches — NB13
 # ==========================================
 
 artifacts/phase2/embedding_benchmark/
 
 # ==========================================
-# Phase 2 Manifests
+# Generated experiment artifacts — NB12g
 # ==========================================
-#
-# Manifests are intentionally version-controlled.
-# Do NOT ignore:
-#
-# data/phase2/manifests/
-#
+
+artifacts/phase2/golden_dataset_rebuild/
+artifacts/phase2/golden_dataset_rebuild_clean/
+
+# Do not ignore approved Golden Dataset versions:
+# golden_dataset_v1.jsonl, golden_dataset_v2.jsonl, etc.
+
+notebooks/phase2/golden_dataset/*_experiment.jsonl
+notebooks/phase2/golden_dataset/*_experiment_*.json
+notebooks/phase2/golden_dataset/*_experiment_*.jsonl
+notebooks/phase2/golden_dataset/*_candidate.jsonl
+notebooks/phase2/golden_dataset/*_review_queue.jsonl
+
+# Large transient caches inside otherwise tracked artifact folders
+artifacts/phase2/**/cache/
+artifacts/phase2/**/batches/
+artifacts/phase2/**/*.npz
 
 # ==========================================
-# Generated Reports - Phase 2
-# ==========================================
-#
-# Default policy:
-# Ignore generated / diagnostic Phase 2 reports.
-#
-# Stable acceptance, freeze, and environment
-# baseline reports are version-controlled because
-# they are part of the reproducible Phase 2
-# execution contract.
+# Generated reports — Phase 2
 # ==========================================
 
 reports/phase2/*
-
-# Keep the directory reachable for negation rules
 !reports/phase2/
 
-# ------------------------------------------
-# Formal Acceptance Reports
-# ------------------------------------------
-
+# Formal reproducibility records
 !reports/phase2/*_acceptance_v1.json
-
-# ------------------------------------------
-# Formal Freeze Reports
-# ------------------------------------------
-
 !reports/phase2/*_freeze_v1.json
-
-# ------------------------------------------
-# Reproducible Environment Baseline
-# ------------------------------------------
-
 !reports/phase2/environment_baseline_v1.json
 
 # ==========================================
-# Models
+# Models and tool caches
 # ==========================================
 
 models/
 checkpoints/
-
-# ==========================================
-# Cache
-# ==========================================
-
 .cache/
 .pytest_cache/
+.mypy_cache/
+.ruff_cache/
