@@ -59,7 +59,7 @@ data/phase2/vectorstore/
 data/phase2/index/
 data/phase2/database/
 
-# Phase 2 manifests are intentionally version-controlled.
+# Phase 2 manifests are formal source-controlled records.
 # Do not ignore data/phase2/manifests/.
 
 # ==========================================
@@ -75,19 +75,40 @@ artifacts/phase2/embedding_benchmark/
 artifacts/phase2/golden_dataset_rebuild/
 artifacts/phase2/golden_dataset_rebuild_clean/
 
-# Do not ignore approved Golden Dataset versions:
-# golden_dataset_v1.jsonl, golden_dataset_v2.jsonl, etc.
-
-notebooks/phase2/golden_dataset/*_experiment.jsonl
-notebooks/phase2/golden_dataset/*_experiment_*.json
-notebooks/phase2/golden_dataset/*_experiment_*.jsonl
-notebooks/phase2/golden_dataset/*_candidate.jsonl
-notebooks/phase2/golden_dataset/*_review_queue.jsonl
-
-# Large transient caches inside otherwise tracked artifact folders
+# Large transient caches inside artifact folders
 artifacts/phase2/**/cache/
 artifacts/phase2/**/batches/
 artifacts/phase2/**/*.npz
+
+# ==========================================
+# Generated Golden Dataset experiments — NB12g
+# ==========================================
+
+# API caches and temporary judge output
+notebooks/phase2/golden_dataset/cache/
+notebooks/phase2/golden_dataset/**/cache/
+notebooks/phase2/golden_dataset/**/batches/
+
+# Temporary candidate and experiment datasets
+notebooks/phase2/golden_dataset/*_candidate.jsonl
+notebooks/phase2/golden_dataset/*_review_queue.jsonl
+notebooks/phase2/golden_dataset/*_experiment.jsonl
+notebooks/phase2/golden_dataset/*_experiment_*.json
+notebooks/phase2/golden_dataset/*_experiment_*.jsonl
+
+# Generated integrity, semantic-judge and repair reports
+notebooks/phase2/golden_dataset/*_integrity_audit.json
+notebooks/phase2/golden_dataset/*_semantic_judge.json
+notebooks/phase2/golden_dataset/*_findings_packet.json
+notebooks/phase2/golden_dataset/*_repair_report.json
+notebooks/phase2/golden_dataset/*_adjudication_report.json
+notebooks/phase2/golden_dataset/*_evidence_span_repair.json
+
+# Do not ignore approved Golden Dataset versions.
+# Examples:
+# - golden_dataset_v1.jsonl
+# - golden_dataset_v2.jsonl
+# - golden_dataset_v2_acceptance_v1.json
 
 # ==========================================
 # Generated reports — Phase 2

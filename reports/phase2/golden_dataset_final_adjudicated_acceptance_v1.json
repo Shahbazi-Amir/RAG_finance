@@ -1,0 +1,70 @@
+{
+  "acceptance_version": "golden_dataset_final_adjudicated_acceptance_v1",
+  "created_at_utc": "2026-09-14T10:06:05.715477+00:00",
+  "status": "ACCEPTED_EXPERIMENT_NOT_ACTIVE_DATASET",
+  "active_dataset_created": false,
+  "active_v1_modified": false,
+  "accepted_experiment_path": "/Users/macbookpro/AMIR_DATA/00_WORKS/01_PROJECTS/RAG-projects/RAG_finance/notebooks/phase2/golden_dataset/golden_dataset_quote_grounded_final_adjudicated_experiment.jsonl",
+  "accepted_experiment_sha256": "2b461fc7dfa25e9b65b2b37c709dfc8c6cd65c7b84ef5ec7fae9e3449a6e37ae",
+  "record_count": 46,
+  "covered_seed_count": 28,
+  "covered_seed_ids": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28
+  ],
+  "integrity": {
+    "status": "PASS_WITH_DOCUMENTED_SEED16_FALLBACK",
+    "failure_count": 0,
+    "accepted_exception_count": 3,
+    "accepted_exception_seed_ids": [
+      16
+    ],
+    "audit_path": "/Users/macbookpro/AMIR_DATA/00_WORKS/01_PROJECTS/RAG-projects/RAG_finance/notebooks/phase2/golden_dataset/golden_dataset_quote_grounded_final_adjudicated_experiment_final_integrity_audit.json"
+  },
+  "semantic_judgment": {
+    "status": "PASS",
+    "pass_count": 46,
+    "review_count": 0,
+    "reject_count": 0,
+    "failed_count": 0,
+    "prior_pass_reuse_count": 38,
+    "targeted_rejudge_count": 8,
+    "report_path": "/Users/macbookpro/AMIR_DATA/00_WORKS/01_PROJECTS/RAG-projects/RAG_finance/notebooks/phase2/golden_dataset/golden_dataset_quote_grounded_final_adjudicated_experiment_targeted_final_semantic_judge.json"
+  },
+  "lineage": {
+    "initial_integrity_repaired_record_count": 49,
+    "first_semantic_repair_output_count": 47,
+    "final_adjudicated_output_count": 46,
+    "first_semantic_repair_count": 9,
+    "first_semantic_remove_count": 2,
+    "final_adjudication_repair_count": 8,
+    "final_adjudication_remove_count": 1
+  },
+  "activation_rule": "This is an accepted experimental artifact only. It must not replace an active Golden Dataset version without an explicit activation decision."
+}
