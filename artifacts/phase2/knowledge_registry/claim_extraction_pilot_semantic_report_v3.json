@@ -1,0 +1,57 @@
+{
+  "artifact": {
+    "adjudication": "claim_extraction_pilot_semantic_adjudication_v3.jsonl",
+    "sha256": "6641baedbe6dfaff31d8b03c901b3f823be784a097adb554fcc56c5b5abb6ee9"
+  },
+  "claims_adjudicated": 57,
+  "decision_counts": {
+    "ACCEPT": 42,
+    "REJECT": 12,
+    "REPAIR": 3
+  },
+  "failed_checks": {
+    "atomicity": 3,
+    "entailment": 6,
+    "evidence_completeness": 2,
+    "knowledge_utility": 2,
+    "modality_fidelity": 2,
+    "perspective_fidelity": 4,
+    "quantifier_fidelity": 4,
+    "scope_fidelity": 9,
+    "standalone": 6
+  },
+  "full_registry_extraction_started": false,
+  "full_registry_readiness": "AWAITING_FINAL_PILOT_REVIEW",
+  "issue_counts": {
+    "EVIDENCE_INCOMPLETE": 2,
+    "GENERALIZATION_BEYOND_SOURCE": 5,
+    "IMPERATIVE_OR_FRAGMENT": 4,
+    "LOW_KNOWLEDGE_UTILITY": 2,
+    "MODALITY_STRENGTHENED": 2,
+    "NOT_ATOMIC": 3,
+    "PERSPECTIVE_SHIFT": 4,
+    "QUANTIFIER_SHIFT": 4,
+    "QUESTIONNAIRE_OR_SELF_REPORT_AS_GENERAL_FACT": 2,
+    "SCOPE_EXPANSION": 5,
+    "UNSUPPORTED_OR_OVERSTATED": 1
+  },
+  "report_version": "claim_extraction_pilot_semantic_report_v3",
+  "semantic_model": "Qwen3-30B-A3B",
+  "semantic_prompt_version": "claim_semantic_fidelity_v3",
+  "semantic_v2_decisions": {
+    "ACCEPT": 48,
+    "REJECT": 9
+  },
+  "source_pilot": "claim_extraction_pilot_report_v2.json",
+  "source_raw_claims_sha256": "762c99292c0c7fd6c5dc2c10e46c314be445e7c03112ab5965d8eb957294e58b",
+  "source_statement_modes": {
+    "DEFINITION": 1,
+    "EXAMPLE_OR_HYPOTHETICAL": 3,
+    "FIRST_PERSON_SELF_REPORT": 3,
+    "FRAGMENT_OR_DIALOGUE": 18,
+    "GENERAL_DOMAIN_ASSERTION": 22,
+    "OTHER": 9,
+    "RECOMMENDATION_OR_RULE": 1
+  },
+  "unresolved_batch_failures": 0
+}

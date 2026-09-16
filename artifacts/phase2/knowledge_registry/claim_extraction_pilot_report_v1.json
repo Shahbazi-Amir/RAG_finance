@@ -1,0 +1,76 @@
+{
+  "artifacts": {
+    "evidence_links": "claim_extraction_pilot_evidence_v1.jsonl",
+    "evidence_links_sha256": "8617b7c9eb9890ed5986d00ac6b1d16db077e072f2bb77acb7cb7dafc1a067e5",
+    "raw_claims": "claim_extraction_pilot_raw_v1.jsonl",
+    "raw_claims_sha256": "78cdb68e2c854116f2ae98c968dd6df41ab64c79ef56228d783a38b87e476825"
+  },
+  "configured_model": "Qwen3-30B-A3B",
+  "full_registry_status": "NOT_STARTED",
+  "generation_contract": {
+    "adaptive_retry": true,
+    "max_attempts_per_window": 3,
+    "max_tokens": 2500,
+    "temperature": 0,
+    "timeout_seconds": 180.0,
+    "whitespace_only_source_quote_recovery": true
+  },
+  "pilot_version": "claim_extraction_pilot_v1",
+  "reference_model": "Qwen3-30B-A3B",
+  "report_version": "claim_extraction_pilot_report_v1",
+  "results": {
+    "claims_by_role": {
+      "PRIMARY_CLAIM_DISCOVERY": 48,
+      "SECONDARY_CLAIM_DISCOVERY_WITH_ATTRIBUTION": 11
+    },
+    "claims_by_source_type": {
+      "book": 20,
+      "transcript": 20,
+      "website": 19
+    },
+    "claims_by_type": {
+      "CAUSAL": 5,
+      "CLASSIFICATION": 14,
+      "COMPARISON": 3,
+      "CONDITION_OR_CONSTRAINT": 3,
+      "DEFINITION": 7,
+      "NUMERIC_OR_QUANTITATIVE": 5,
+      "OTHER_ATOMIC": 1,
+      "PROCEDURE_OR_ACTION": 10,
+      "RELATION": 2,
+      "RULE_OR_PRINCIPLE": 9
+    },
+    "duplicate_evidence_ids": 0,
+    "duplicate_raw_claim_ids": 0,
+    "evidence_links": 62,
+    "raw_claims": 59,
+    "structural_grounding_failures": 0,
+    "unresolved_window_failures": 0
+  },
+  "selection_contract": {
+    "book_windows": 5,
+    "total_windows": 15,
+    "transcript_windows": 5,
+    "website_primary_windows": 2,
+    "website_secondary_windows": 3,
+    "website_windows": 5,
+    "window_ids": [
+      "claim-window:05654c4b82b4f8953c547bc4",
+      "claim-window:dc5b67d2ba32ac0ce9b7b63d",
+      "claim-window:7e6c2bc8c60fa34e7a7406b6",
+      "claim-window:d722ce34ada346a4a5cf694d",
+      "claim-window:ab3d0b9602dd11e8da832d14",
+      "claim-window:7137d8558d70d03d10fb9f57",
+      "claim-window:ddf69befc2144eaa5d4e0926",
+      "claim-window:c945842160446f625bdfb997",
+      "claim-window:8b973afb04b3d3cd78e1e973",
+      "claim-window:d4ed83f01063b06b9244c324",
+      "claim-window:f342a3980c46bc880909e13f",
+      "claim-window:519235bfb59df92369c1bd45",
+      "claim-window:42a16050dee3938c544238c4",
+      "claim-window:3df47d69f354ae04a0ae66c3",
+      "claim-window:c35860ab5ac631dc11bb2ac3"
+    ]
+  },
+  "semantic_status": "NOT_YET_RUN"
+}

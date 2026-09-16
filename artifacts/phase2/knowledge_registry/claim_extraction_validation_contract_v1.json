@@ -1,0 +1,65 @@
+{
+  "contract_version": "claim_extraction_validation_contract_v1",
+  "execution_policy": {
+    "batch_resumable": true,
+    "disk_revalidation_required": true,
+    "failed_response_cache_allowed": false,
+    "overwrite_existing_artifacts": false,
+    "validated_cache_required": true
+  },
+  "final_disposition_policy": {
+    "critical_risk_signals": [
+      "FRAGMENT_OR_DISCOURSE_START",
+      "POSSIBLE_FIRST_PERSON_GENERALIZATION",
+      "POSSIBLE_LIST_HEADER",
+      "POSSIBLE_QUESTIONNAIRE_OR_SELF_REPORT",
+      "POSSIBLE_SOURCE_COMMENTARY",
+      "SHORT_NUMERIC_CLAIM",
+      "SOURCE_FIRST_PERSON"
+    ],
+    "semantic_accept_with_critical_risk": "HOLD_CRITICAL_RISK",
+    "semantic_accept_without_critical_risk": "VALIDATED",
+    "semantic_reject": "REJECT_SEMANTIC",
+    "semantic_repair": "HOLD_REPAIR_REQUIRED"
+  },
+  "full_registry_artifacts": {
+    "evidence_links": "claim_evidence_links_v1.jsonl",
+    "raw_claims": "claims_raw_v1.jsonl",
+    "raw_extraction_report": "claim_extraction_full_report_v1.json",
+    "validated_claims": "claims_validated_v1.jsonl",
+    "validation_report": "claim_validation_full_report_v1.json"
+  },
+  "full_registry_extraction_started": false,
+  "raw_extraction": {
+    "adaptive_retry": true,
+    "automatic_claim_repair": false,
+    "exact_evidence_required": true,
+    "max_claims_per_window": 4,
+    "max_tokens": 2500,
+    "prompt_version": "claim_extraction_prompt_v2",
+    "temperature": 0
+  },
+  "registry_preservation_policy": {
+    "held_raw_claims_deleted": false,
+    "raw_claims_preserved": true,
+    "rejected_raw_claims_deleted": false,
+    "validated_claims_are_separate_artifact": true
+  },
+  "runtime_model": "Qwen3-30B-A3B",
+  "semantic_validation": {
+    "automatic_repair_publish_allowed": false,
+    "max_tokens": 4500,
+    "prompt_version": "claim_semantic_fidelity_v3",
+    "registered_evidence_only": true,
+    "surrounding_context_is_evidence": false,
+    "temperature": 0
+  },
+  "source_artifact_hashes": {
+    "pilot_semantic_v3": "6641baedbe6dfaff31d8b03c901b3f823be784a097adb554fcc56c5b5abb6ee9",
+    "pilot_v2_evidence": "3fb4df3a3308e27831662cb8a28cb59a280fc464d678804c3dc5825caa60dae8",
+    "pilot_v2_raw_claims": "762c99292c0c7fd6c5dc2c10e46c314be445e7c03112ab5965d8eb957294e58b",
+    "prompt_window_manifest": "4f68c2dfcb9c57dddb4ba33520cae2d725f649f7e80884d71b11f3d19721781b"
+  },
+  "source_population_contract": "claim_extraction_prompt_window_contract_v1",
+  "status": "FROZEN_FOR_FULL_REGISTRY"
+}

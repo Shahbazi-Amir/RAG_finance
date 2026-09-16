@@ -1,43 +1,98 @@
-# ==========================================
-# Python and build output
-# ==========================================
+# =========================================================
+# Python / build output
+# =========================================================
 
+__pycache__/
 **/__pycache__/
+
 *.py[cod]
+*$py.class
 *.so
+
 *.egg
 *.egg-info/
+.eggs/
+
 build/
 dist/
-coverage.xml
+sdist/
+wheels/
+
 .coverage
+.coverage.*
+coverage.xml
 htmlcov/
 
-# ==========================================
-# Virtual environments and secrets
-# ==========================================
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.cache/
+
+
+# =========================================================
+# Virtual environments / secrets / credentials
+# =========================================================
 
 rag_env/
 venv/
 .venv/
+env/
+ENV/
+
 .env
 .env.*
 !.env.example
 
-# ==========================================
-# Jupyter, IDEs and OS files
-# ==========================================
+*.pem
+*.key
+*.crt
+
+secrets/
+credentials/
+
+
+# =========================================================
+# Jupyter / IDE / OS / temporary files
+# =========================================================
 
 .ipynb_checkpoints/
+**/.ipynb_checkpoints/
+
 .vscode/
 .idea/
+
 .DS_Store
+._*
+Thumbs.db
+desktop.ini
+
 *.log
 *.tmp
+*.temp
+*.bak
+*.swp
+*.swo
 
-# ==========================================
-# Generated data — Phase 1
-# ==========================================
+~$*
+
+
+# =========================================================
+# Local databases / runtime state
+# =========================================================
+
+*.db
+*.db-journal
+*.sqlite
+*.sqlite3
+*.sqlite3-journal
+
+*.pid
+*.lock
+
+
+# =========================================================
+# Phase 1 — generated data
+# =========================================================
 
 data/processed/
 data/chunks/
@@ -46,9 +101,10 @@ data/vectorstore/
 data/index/
 data/database/
 
-# ==========================================
-# Generated data — Phase 2
-# ==========================================
+
+# =========================================================
+# Phase 2 — generated data
+# =========================================================
 
 data/phase2/raw/
 data/phase2/interim/
@@ -59,44 +115,187 @@ data/phase2/vectorstore/
 data/phase2/index/
 data/phase2/database/
 
-# Phase 2 manifests are formal source-controlled records.
-# Do not ignore data/phase2/manifests/.
 
-# ==========================================
-# Generated benchmark caches — NB13
-# ==========================================
+# IMPORTANT:
+# Formal Phase-2 manifests remain source controlled.
+# Do NOT ignore:
+# data/phase2/manifests/
+
+
+# =========================================================
+# Generic generated artifact caches
+# =========================================================
+
+artifacts/**/cache/
+artifacts/**/caches/
+artifacts/**/batches/
+
+artifacts/**/*_cache/
+artifacts/**/*_cache_v*/
+artifacts/**/*_caches/
+artifacts/**/*_batches/
+
+artifacts/**/*.npz
+artifacts/**/*.npy
+artifacts/**/*.pkl
+artifacts/**/*.pickle
+artifacts/**/*.parquet
+artifacts/**/*.arrow
+
+artifacts/**/*.faiss
+artifacts/**/*.index
+
+
+# =========================================================
+# NB13 — generated benchmark caches
+# =========================================================
 
 artifacts/phase2/embedding_benchmark/
 
-# ==========================================
-# Generated experiment artifacts — NB12g
-# ==========================================
+
+# =========================================================
+# NB12g — generated Golden Dataset rebuild experiments
+# =========================================================
 
 artifacts/phase2/golden_dataset_rebuild/
 artifacts/phase2/golden_dataset_rebuild_clean/
 
-# Large transient caches inside artifact folders
-artifacts/phase2/**/cache/
-artifacts/phase2/**/batches/
-artifacts/phase2/**/*.npz
 
-# ==========================================
-# Generated Golden Dataset experiments — NB12g
-# ==========================================
+# =========================================================
+# NB12i — Claim Registry / Knowledge Graph
+# =========================================================
+#
+# Policy:
+# - large / reproducible row-level datasets => ignored
+# - caches => ignored
+# - contracts / reports / acceptance metadata => tracked
+#
 
-# API caches and temporary judge output
+
+# ---------------------------------------------------------
+# Extraction caches
+# ---------------------------------------------------------
+
+artifacts/phase2/knowledge_registry/claim_extraction_pilot_cache_v*/
+artifacts/phase2/knowledge_registry/claim_extraction_full_cache_v*/
+artifacts/phase2/knowledge_registry/claim_extraction_pilot_semantic_cache_v*/
+
+artifacts/phase2/knowledge_registry/*cache*/
+artifacts/phase2/knowledge_registry/**/*cache*/
+
+
+# ---------------------------------------------------------
+# Intermediate population / unit / window manifests
+# Large reproducible row-level files
+# ---------------------------------------------------------
+
+artifacts/phase2/knowledge_registry/claim_discovery_population_index_v*.jsonl
+
+artifacts/phase2/knowledge_registry/claim_extraction_units_v*.jsonl
+artifacts/phase2/knowledge_registry/claim_extraction_prompt_windows_v*.jsonl
+
+
+# ---------------------------------------------------------
+# Pilot row-level artifacts
+# ---------------------------------------------------------
+
+artifacts/phase2/knowledge_registry/claim_extraction_pilot_raw_v*.jsonl
+artifacts/phase2/knowledge_registry/claim_extraction_pilot_evidence_v*.jsonl
+
+artifacts/phase2/knowledge_registry/claim_extraction_pilot_semantic_adjudication_v*.jsonl
+
+artifacts/phase2/knowledge_registry/claim_extraction_pilot_final_disposition_v*.jsonl
+artifacts/phase2/knowledge_registry/claim_extraction_pilot_validated_v*.jsonl
+
+
+# ---------------------------------------------------------
+# Full Claim Registry row-level generated artifacts
+# ---------------------------------------------------------
+
+artifacts/phase2/knowledge_registry/claims_raw_v*.jsonl
+artifacts/phase2/knowledge_registry/claims_validated_v*.jsonl
+artifacts/phase2/knowledge_registry/claims_deduplicated_v*.jsonl
+
+artifacts/phase2/knowledge_registry/claim_evidence_links_v*.jsonl
+artifacts/phase2/knowledge_registry/claim_relations_v*.jsonl
+
+
+# ---------------------------------------------------------
+# Large generated Knowledge Graph payloads
+# ---------------------------------------------------------
+
+artifacts/phase2/knowledge_registry/knowledge_graph_v*.json
+artifacts/phase2/knowledge_registry/knowledge_graph_v*.jsonl
+
+artifacts/phase2/knowledge_registry/*.graphml
+artifacts/phase2/knowledge_registry/*.gexf
+artifacts/phase2/knowledge_registry/*.gpickle
+
+
+# ---------------------------------------------------------
+# Temporary Registry exports
+# ---------------------------------------------------------
+
+artifacts/phase2/knowledge_registry/*_candidate.json
+artifacts/phase2/knowledge_registry/*_candidate.jsonl
+
+artifacts/phase2/knowledge_registry/*_temp.json
+artifacts/phase2/knowledge_registry/*_temp.jsonl
+
+artifacts/phase2/knowledge_registry/*_tmp.json
+artifacts/phase2/knowledge_registry/*_tmp.jsonl
+
+artifacts/phase2/knowledge_registry/*_review_queue.json
+artifacts/phase2/knowledge_registry/*_review_queue.jsonl
+
+
+# IMPORTANT:
+# The following kinds of NB12i artifacts are intentionally NOT ignored:
+#
+# claim_registry_contract_v1.json
+# claim_extraction_unit_contract_v1.json
+# claim_extraction_text_profile_v1.json
+# claim_extraction_prompt_window_contract_v1.json
+# claim_extraction_validation_contract_v1.json
+#
+# claim_extraction_pilot_report_v*.json
+# claim_extraction_pilot_semantic_report_v*.json
+# claim_extraction_pilot_final_report_v*.json
+# claim_extraction_full_report_v*.json
+# claim_validation_full_report_v*.json
+# claim_registry_report_v*.json
+#
+# These are relatively small reproducibility / audit records.
+
+
+# =========================================================
+# Golden Dataset experiments — notebooks/phase2
+# =========================================================
+
+# API / LLM caches
 notebooks/phase2/golden_dataset/cache/
 notebooks/phase2/golden_dataset/**/cache/
+notebooks/phase2/golden_dataset/**/caches/
 notebooks/phase2/golden_dataset/**/batches/
 
-# Temporary candidate and experiment datasets
+notebooks/phase2/golden_dataset/**/*_cache/
+notebooks/phase2/golden_dataset/**/*_cache_v*/
+
+
+# Temporary candidate / experiment datasets
+notebooks/phase2/golden_dataset/*_candidate.json
 notebooks/phase2/golden_dataset/*_candidate.jsonl
+
+notebooks/phase2/golden_dataset/*_review_queue.json
 notebooks/phase2/golden_dataset/*_review_queue.jsonl
+
+notebooks/phase2/golden_dataset/*_experiment.json
 notebooks/phase2/golden_dataset/*_experiment.jsonl
 notebooks/phase2/golden_dataset/*_experiment_*.json
 notebooks/phase2/golden_dataset/*_experiment_*.jsonl
 
-# Generated integrity, semantic-judge and repair reports
+
+# Generated audit / judge / repair reports
 notebooks/phase2/golden_dataset/*_integrity_audit.json
 notebooks/phase2/golden_dataset/*_semantic_judge.json
 notebooks/phase2/golden_dataset/*_findings_packet.json
@@ -104,31 +303,61 @@ notebooks/phase2/golden_dataset/*_repair_report.json
 notebooks/phase2/golden_dataset/*_adjudication_report.json
 notebooks/phase2/golden_dataset/*_evidence_span_repair.json
 
-# Do not ignore approved Golden Dataset versions.
-# Examples:
-# - golden_dataset_v1.jsonl
-# - golden_dataset_v2.jsonl
-# - golden_dataset_v2_acceptance_v1.json
 
-# ==========================================
-# Generated reports — Phase 2
-# ==========================================
+# IMPORTANT:
+# Approved Golden Dataset releases remain tracked.
+#
+# Examples:
+# notebooks/phase2/golden_dataset/golden_dataset_v1.jsonl
+# notebooks/phase2/golden_dataset/golden_dataset_v2.jsonl
+# notebooks/phase2/golden_dataset/golden_dataset_v2_acceptance_v1.json
+
+
+# =========================================================
+# Phase 2 reports
+# =========================================================
 
 reports/phase2/*
 !reports/phase2/
 
-# Formal reproducibility records
+
+# Formal reproducibility records remain tracked
 !reports/phase2/*_acceptance_v1.json
 !reports/phase2/*_freeze_v1.json
 !reports/phase2/environment_baseline_v1.json
 
-# ==========================================
-# Models and tool caches
-# ==========================================
+
+# =========================================================
+# Models / checkpoints
+# =========================================================
 
 models/
 checkpoints/
-.cache/
-.pytest_cache/
-.mypy_cache/
-.ruff_cache/
+
+*.ckpt
+*.safetensors
+
+
+# =========================================================
+# Large ML / vector artifacts
+# =========================================================
+
+*.faiss
+*.ann
+*.hnsw
+*.npy
+*.npz
+
+
+# =========================================================
+# Local exports / scratch
+# =========================================================
+
+tmp/
+temp/
+scratch/
+
+exports/
+local_exports/
+
+downloads/

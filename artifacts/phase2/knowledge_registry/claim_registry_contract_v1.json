@@ -1,0 +1,161 @@
+{
+  "artifact_family": {
+    "claim_relations": "claim_relations_v1.jsonl",
+    "deduplicated_claims": "claims_deduplicated_v1.jsonl",
+    "evidence_links": "claim_evidence_links_v1.jsonl",
+    "knowledge_graph": "knowledge_graph_v1.json",
+    "raw_claims": "claims_raw_v1.jsonl",
+    "registry_report": "claim_registry_report_v1.json",
+    "validated_claims": "claims_validated_v1.jsonl"
+  },
+  "artifact_namespace": "artifacts/phase2/knowledge_registry",
+  "build_policy": {
+    "batch_based": true,
+    "cache_required_for_model_calls": true,
+    "independent_disk_revalidation": true,
+    "no_overwrite": true,
+    "resume_safe": true,
+    "versioned_artifacts": true
+  },
+  "consumer_contract": {
+    "book_production": {
+      "may_consume_full_registry": true,
+      "role": "CLAIM_AND_EVIDENCE_KNOWLEDGE_BASE"
+    },
+    "golden_dataset": {
+      "full_registry_required": false,
+      "role": "REPRESENTATIVE_SELECTION_FROM_ACCEPTED_CLAIMS"
+    },
+    "graphrag": {
+      "role": "FUTURE_GRAPH_ASSISTED_RETRIEVAL",
+      "runtime_dependency_now": false
+    }
+  },
+  "contract_version": "claim_registry_contract_v1",
+  "current_state": {
+    "claim_extraction_started": false,
+    "deduplicated_claims_created": false,
+    "golden_dataset_v2_created": false,
+    "knowledge_graph_created": false,
+    "raw_claims_created": false,
+    "validated_claims_created": false
+  },
+  "dedup_relation_types": [
+    "EXACT_DUPLICATE",
+    "SEMANTIC_DUPLICATE",
+    "SUBSUMES",
+    "PARTIAL_OVERLAP"
+  ],
+  "evidence_link_schema": {
+    "claim_reference_rule": "MUST_REFERENCE_RAW_CLAIM_ID_BEFORE_DEDUP_OR_CLAIM_ID_AFTER_DEDUP",
+    "field_rules": {
+      "attribution_snapshot": "MUST_PRESERVE_SOURCE_ATTRIBUTION",
+      "authority_class": "MUST_MATCH_POPULATION_INDEX",
+      "claim_discovery_role": "MUST_MATCH_POPULATION_INDEX",
+      "document_id": "MUST_EXIST_IN_ACCEPTED_CORPUS",
+      "evidence_quote_exact": "MUST_BE_VERBATIM_SOURCE_SPAN",
+      "locator": "MUST_PRESERVE_REAL_SOURCE_LOCATOR",
+      "source_id": "MUST_MATCH_ACCEPTED_DOCUMENT",
+      "source_type": "MUST_MATCH_ACCEPTED_DOCUMENT"
+    },
+    "required_fields": [
+      "evidence_id",
+      "document_id",
+      "source_id",
+      "source_type",
+      "authority_class",
+      "claim_discovery_role",
+      "evidence_quote_exact",
+      "locator",
+      "attribution_snapshot",
+      "evidence_text_sha256"
+    ]
+  },
+  "identity_policy": {
+    "claim_id": {
+      "assigned_during_raw_extraction": false,
+      "immutable_after_registry_freeze": true,
+      "required_before_registry_freeze": true,
+      "stage": "POST_VALIDATION_AND_DEDUP"
+    },
+    "early_canonicalization_allowed": false,
+    "raw_claim_id": {
+      "purpose": "TRACE_RAW_CLAIM_TO_EXTRACTION_UNIT_AND_EVIDENCE",
+      "required": true,
+      "stable_within_extraction_contract": true,
+      "stage": "EXTRACTION_AND_PRE_DEDUP"
+    }
+  },
+  "knowledge_relation_types": [
+    "RELATED_TO",
+    "SUPPORTS",
+    "CONTRADICTS",
+    "PREREQUISITE_OF",
+    "BROADER_THAN",
+    "NARROWER_THAN"
+  ],
+  "purpose": "CENTRAL_KNOWLEDGE_ASSET_FOR_RAG_GOLDEN_BOOK_AND_GRAPH",
+  "raw_claim_schema": {
+    "field_rules": {
+      "authority_class": "MUST_MATCH_POPULATION_INDEX",
+      "claim_discovery_role": "MUST_MATCH_POPULATION_INDEX",
+      "claim_text_fa": "NONEMPTY_PERSIAN_CLAIM",
+      "claim_type": "CONTROLLED_ENUM_TO_BE_VALIDATED_BEFORE_EXTRACTION",
+      "extraction_unit_id": "MUST_REFERENCE_EXTRACTION_UNIT",
+      "raw_claim_id": "NONEMPTY_STABLE_STRING",
+      "source_document_ids": "NONEMPTY_LIST_OF_ACCEPTED_DOCUMENT_IDS",
+      "topic_id": "MUST_REFERENCE_FROZEN_TAXONOMY_WHEN_PRESENT"
+    },
+    "optional_fields": [
+      "topic_id",
+      "subtopic_id",
+      "notes"
+    ],
+    "required_fields": [
+      "raw_claim_id",
+      "claim_text_fa",
+      "claim_type",
+      "source_document_ids",
+      "authority_class",
+      "claim_discovery_role",
+      "extraction_unit_id",
+      "grounding_status",
+      "atomicity_status",
+      "validation_status"
+    ]
+  },
+  "registry_population_policy": {
+    "context": "CONTEXT_OR_SUPPORT_ONLY",
+    "primary": "INDEPENDENT_CLAIM_DISCOVERY_ALLOWED",
+    "secondary": "CLAIM_DISCOVERY_ALLOWED_WITH_SECONDARY_ATTRIBUTION",
+    "unresolved": "HOLD_UNTIL_ATTRIBUTION_RESOLVED"
+  },
+  "relation_policy": {
+    "automatic_semantic_merge_allowed": false,
+    "automatic_subsumption_merge_allowed": false,
+    "evidence_multiplicity_must_be_preserved": true,
+    "relation_requires_validated_stage": true,
+    "source_identity_must_be_preserved": true
+  },
+  "source_corpus_policy": {
+    "claim_registry_replaces_source_corpus": false,
+    "original_source_remains_final_evidence": true,
+    "retrieval_chunks_remain_separate": true
+  },
+  "source_of_truth": {
+    "accepted_corpus": {
+      "path": "data/phase2/processed/documents_dedup_quality_accepted_v1.jsonl",
+      "records": 19456,
+      "sha256": "9d72c709f81b1218c5aac064052c7ed1da34869f671e6e32762864e0ad70ea40"
+    },
+    "authority_policy_source": "FROZEN_PRIOR_PHASE_ARTIFACTS",
+    "authority_recalculation_allowed": false,
+    "claim_discovery_population": {
+      "context_only_records": 1944,
+      "eligible_records": 15158,
+      "path": "artifacts/phase2/golden_dataset_rebuild_clean/nb12h_author_pilot_audit/claim_discovery_population_index_v1.jsonl",
+      "records": 19456,
+      "unresolved_hold_records": 2354
+    }
+  }
+}

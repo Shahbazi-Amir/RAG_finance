@@ -1,0 +1,108 @@
+{
+  "api_batches": 1545,
+  "api_claims_adjudicated": 6180,
+  "artifact": {
+    "semantic_adjudication": "claim_validation_full_semantic_adjudication_v1.jsonl",
+    "semantic_adjudication_sha256": "2e508f6f02d98a878e97ef3e161d7dcbe2f2b6778fcd5b6df7660937e6996c27"
+  },
+  "automatic_repairs_published": 0,
+  "claims_adjudicated": 6237,
+  "critical_risk_final_disposition": "NOT_STARTED",
+  "decision_counts": {
+    "ACCEPT": 4698,
+    "REJECT": 1183,
+    "REPAIR": 356
+  },
+  "decision_counts_by_claim_discovery_role": {
+    "PRIMARY_CLAIM_DISCOVERY": {
+      "ACCEPT": 3272,
+      "REJECT": 1015,
+      "REPAIR": 285
+    },
+    "SECONDARY_CLAIM_DISCOVERY_WITH_ATTRIBUTION": {
+      "ACCEPT": 1426,
+      "REJECT": 168,
+      "REPAIR": 71
+    }
+  },
+  "decision_counts_by_source_type": {
+    "book": {
+      "ACCEPT": 461,
+      "REJECT": 68,
+      "REPAIR": 35
+    },
+    "transcript": {
+      "ACCEPT": 2581,
+      "REJECT": 926,
+      "REPAIR": 231
+    },
+    "website": {
+      "ACCEPT": 1656,
+      "REJECT": 189,
+      "REPAIR": 90
+    }
+  },
+  "duplicate_raw_claim_ids": 0,
+  "failed_checks": {
+    "atomicity": 50,
+    "claim_type_fit": 238,
+    "domain_relevance": 17,
+    "entailment": 406,
+    "evidence_completeness": 177,
+    "knowledge_utility": 66,
+    "modality_fidelity": 316,
+    "perspective_fidelity": 640,
+    "quantifier_fidelity": 178,
+    "scope_fidelity": 1128,
+    "standalone": 314
+  },
+  "issue_counts": {
+    "CLAIM_TYPE_MISMATCH": 187,
+    "CONTEXT_DEPENDENT": 35,
+    "EVIDENCE_INCOMPLETE": 98,
+    "EXAMPLE_OR_HYPOTHETICAL_AS_GENERAL_FACT": 132,
+    "GENERALIZATION_BEYOND_SOURCE": 274,
+    "IMPERATIVE_OR_FRAGMENT": 41,
+    "LIST_HEADER_INCOMPLETE": 4,
+    "LOW_KNOWLEDGE_UTILITY": 51,
+    "MODALITY_CHANGED": 59,
+    "MODALITY_STRENGTHENED": 252,
+    "NON_DOMAIN_KNOWLEDGE": 14,
+    "NOT_ATOMIC": 61,
+    "NUMERIC_SUBJECT_MISSING": 2,
+    "PERSPECTIVE_SHIFT": 551,
+    "QUANTIFIER_SHIFT": 164,
+    "QUESTIONNAIRE_OR_SELF_REPORT_AS_GENERAL_FACT": 395,
+    "SCOPE_EXPANSION": 613,
+    "SOURCE_METADATA_OR_COMMENTARY": 50,
+    "SUBJECT_OR_REFERENT_UNRESOLVED": 24,
+    "TOO_VAGUE": 12,
+    "UNSUPPORTED_OR_OVERSTATED": 15
+  },
+  "missing_semantic_judgments": 0,
+  "pilot_judgments_reused": 57,
+  "raw_claims": 6237,
+  "report_version": "claim_validation_full_semantic_report_v1",
+  "semantic_model": "Qwen3-30B-A3B",
+  "semantic_prompt_version": "claim_semantic_fidelity_v3",
+  "source_evidence": "claim_evidence_links_v1.jsonl",
+  "source_evidence_sha256": "1c47a493b2128b1fd489752378a3e5d4dc7e53b7379b03674abe37d9a77cc9ba",
+  "source_raw_claims": "claims_raw_v1.jsonl",
+  "source_raw_claims_sha256": "fff018199d96fab3a59729527c56a0c4ba0aa61d9d3a133b3d48645b62362d02",
+  "source_statement_modes": {
+    "DEFINITION": 142,
+    "EXAMPLE_OR_HYPOTHETICAL": 90,
+    "FIRST_PERSON_SELF_REPORT": 543,
+    "FRAGMENT_OR_DIALOGUE": 2487,
+    "GENERAL_DOMAIN_ASSERTION": 1926,
+    "OTHER": 823,
+    "QUESTIONNAIRE_OR_ASSESSMENT_ITEM": 59,
+    "RECOMMENDATION_OR_RULE": 129,
+    "SOURCE_COMMENTARY_OR_METADATA": 38
+  },
+  "unresolved_batch_failures": 0,
+  "validated_registry": "NOT_YET_CREATED",
+  "validation_contract_sha256": "637c172941d3de7ab589a685f8ce46a444346dcf04abf8c100652c1e1c1439a9",
+  "validation_contract_version": "claim_extraction_validation_contract_v1",
+  "validation_version": "claim_validation_full_semantic_v1"
+}

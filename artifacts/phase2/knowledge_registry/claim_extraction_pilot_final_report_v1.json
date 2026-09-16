@@ -1,0 +1,51 @@
+{
+  "artifacts": {
+    "final_disposition": "claim_extraction_pilot_final_disposition_v1.jsonl",
+    "final_disposition_sha256": "2b62c8c2def6dab59d8d6be1e4c5b488c3ad79b3eb39afb42b30513d25c0e82c",
+    "validated_pilot": "claim_extraction_pilot_validated_v1.jsonl",
+    "validated_pilot_sha256": "5a88a281eeadc884785390fb2634dbfe52b3f43a160705bb6784dc55ebaa4cf8"
+  },
+  "automatic_repairs_published": 0,
+  "critical_risk_accepts_held": 5,
+  "evidence_revalidation_failures": 0,
+  "final_dispositions": {
+    "HOLD_CRITICAL_RISK": 5,
+    "HOLD_REPAIR_REQUIRED": 3,
+    "REJECT_SEMANTIC": 12,
+    "VALIDATED": 37
+  },
+  "full_registry_contract": {
+    "contract_sha256": "637c172941d3de7ab589a685f8ce46a444346dcf04abf8c100652c1e1c1439a9",
+    "contract_version": "claim_extraction_validation_contract_v1",
+    "status": "FROZEN_FOR_FULL_REGISTRY"
+  },
+  "full_registry_extraction_started": false,
+  "raw_claims": 57,
+  "report_version": "claim_extraction_pilot_final_report_v1",
+  "semantic_v3_decisions": {
+    "ACCEPT": 42,
+    "REJECT": 12,
+    "REPAIR": 3
+  },
+  "validated_by_claim_discovery_role": {
+    "PRIMARY_CLAIM_DISCOVERY": 25,
+    "SECONDARY_CLAIM_DISCOVERY_WITH_ATTRIBUTION": 12
+  },
+  "validated_by_claim_type": {
+    "CAUSAL": 5,
+    "CLASSIFICATION": 6,
+    "COMPARISON": 2,
+    "CONDITION_OR_CONSTRAINT": 1,
+    "DEFINITION": 7,
+    "NUMERIC_OR_QUANTITATIVE": 2,
+    "PROCEDURE_OR_ACTION": 3,
+    "RELATION": 5,
+    "RULE_OR_PRINCIPLE": 6
+  },
+  "validated_by_source_type": {
+    "book": 14,
+    "transcript": 6,
+    "website": 17
+  },
+  "validated_claims": 37
+}

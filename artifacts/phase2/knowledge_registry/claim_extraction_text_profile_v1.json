@@ -1,0 +1,121 @@
+{
+  "canonical_text_field": "text",
+  "current_state": {
+    "canonical_text_field_resolved": true,
+    "claim_extraction_started": false,
+    "prompt_windowing_defined": false
+  },
+  "eligible_records": 15158,
+  "extraction_units": 2129,
+  "largest_units": [
+    {
+      "document_count": 490,
+      "extraction_unit_id": "claim-unit:book:43ed2c5925b1e19f16247e39",
+      "raw_text_chars": 23446,
+      "source_type": "book"
+    },
+    {
+      "document_count": 438,
+      "extraction_unit_id": "claim-unit:transcript:a1abf82c09e5416be8c23422",
+      "raw_text_chars": 14940,
+      "source_type": "transcript"
+    },
+    {
+      "document_count": 304,
+      "extraction_unit_id": "claim-unit:transcript:d3ebba92cfcbce299ff687b0",
+      "raw_text_chars": 14444,
+      "source_type": "transcript"
+    },
+    {
+      "document_count": 407,
+      "extraction_unit_id": "claim-unit:transcript:2d74e8b3ce82a6438d0f4a3a",
+      "raw_text_chars": 13843,
+      "source_type": "transcript"
+    },
+    {
+      "document_count": 82,
+      "extraction_unit_id": "claim-unit:transcript:c6656a5706536e1a8b046931",
+      "raw_text_chars": 13643,
+      "source_type": "transcript"
+    },
+    {
+      "document_count": 390,
+      "extraction_unit_id": "claim-unit:transcript:1e72a3c4b990a4c7331aa04f",
+      "raw_text_chars": 12652,
+      "source_type": "transcript"
+    },
+    {
+      "document_count": 327,
+      "extraction_unit_id": "claim-unit:transcript:2d0d2a8faa807e2bd7f5c167",
+      "raw_text_chars": 12192,
+      "source_type": "transcript"
+    },
+    {
+      "document_count": 325,
+      "extraction_unit_id": "claim-unit:transcript:e2112002b9980fcecf2d7ba9",
+      "raw_text_chars": 11779,
+      "source_type": "transcript"
+    },
+    {
+      "document_count": 264,
+      "extraction_unit_id": "claim-unit:transcript:b150e062fece4f34a65a46e3",
+      "raw_text_chars": 11762,
+      "source_type": "transcript"
+    },
+    {
+      "document_count": 49,
+      "extraction_unit_id": "claim-unit:transcript:31d456ab3089dafa2ef6cedf",
+      "raw_text_chars": 11584,
+      "source_type": "transcript"
+    }
+  ],
+  "measurement_contract": {
+    "model_context_limit_assumed": false,
+    "prompt_markers_included": false,
+    "prompt_windowing_applied": false,
+    "tokenization_applied": false,
+    "unit_measure": "SUM_OF_RAW_TEXT_CHARACTERS_ACROSS_UNIT_DOCUMENTS"
+  },
+  "profile_version": "claim_extraction_text_profile_v1",
+  "source_contract": "claim_extraction_unit_contract_v1",
+  "source_text_profiles": {
+    "book": {
+      "max_raw_text_chars": 23446,
+      "min_raw_text_chars": 4,
+      "p50_raw_text_chars": 667,
+      "p75_raw_text_chars": 1355,
+      "p90_raw_text_chars": 2596,
+      "p95_raw_text_chars": 3360,
+      "p99_raw_text_chars": 5986,
+      "total_raw_text_chars": 219171,
+      "units": 195
+    },
+    "transcript": {
+      "max_raw_text_chars": 14940,
+      "min_raw_text_chars": 3,
+      "p50_raw_text_chars": 303,
+      "p75_raw_text_chars": 756,
+      "p90_raw_text_chars": 1520,
+      "p95_raw_text_chars": 2997,
+      "p99_raw_text_chars": 10625,
+      "total_raw_text_chars": 1176101,
+      "units": 1405
+    },
+    "website": {
+      "max_raw_text_chars": 9723,
+      "min_raw_text_chars": 224,
+      "p50_raw_text_chars": 1511,
+      "p75_raw_text_chars": 2157,
+      "p90_raw_text_chars": 3059,
+      "p95_raw_text_chars": 3686,
+      "p99_raw_text_chars": 6452,
+      "total_raw_text_chars": 930347,
+      "units": 529
+    }
+  },
+  "unit_counts_by_source_type": {
+    "book": 195,
+    "transcript": 1405,
+    "website": 529
+  }
+}

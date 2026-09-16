@@ -1,0 +1,21 @@
+{
+  "context_only_claim_generation_allowed": false,
+  "contract_version": "claim_extraction_unit_contract_v1",
+  "eligible_population_records": 15158,
+  "exact_duplicate_sharing_applied": false,
+  "manifest": "claim_extraction_units_v1.jsonl",
+  "mixed_authority_unit_allowed": false,
+  "mixed_role_unit_allowed": false,
+  "policies": {
+    "book": "CONTIGUOUS_SAME_SOURCE_SAME_HEADING_SAME_AUTHORITY_SAME_ROLE",
+    "book_unnumbered": "SINGLETON",
+    "transcript": "CONTIGUOUS_SAME_SOURCE_SAME_AUTHORITY_SAME_ROLE_WITH_GAPS_BREAKING_RUN",
+    "website": "ONE_ELIGIBLE_DOCUMENT_PER_REGION"
+  },
+  "prompt_windowing_applied": false,
+  "purpose": "STRUCTURAL_CLAIM_EXTRACTION_REGIONS",
+  "retrieval_chunk_dependency": false,
+  "source_boundary_crossing_allowed": false,
+  "source_contract": "claim_registry_contract_v1",
+  "unresolved_claim_generation_allowed": false
+}

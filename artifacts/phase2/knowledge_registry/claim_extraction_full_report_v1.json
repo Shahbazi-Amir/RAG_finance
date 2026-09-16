@@ -1,0 +1,45 @@
+{
+  "artifacts": {
+    "evidence_links": "claim_evidence_links_v1.jsonl",
+    "evidence_links_sha256": "1c47a493b2128b1fd489752378a3e5d4dc7e53b7379b03674abe37d9a77cc9ba",
+    "raw_claims": "claims_raw_v1.jsonl",
+    "raw_claims_sha256": "fff018199d96fab3a59729527c56a0c4ba0aa61d9d3a133b3d48645b62362d02"
+  },
+  "claims_by_claim_discovery_role": {
+    "PRIMARY_CLAIM_DISCOVERY": 4572,
+    "SECONDARY_CLAIM_DISCOVERY_WITH_ATTRIBUTION": 1665
+  },
+  "claims_by_source_type": {
+    "book": 564,
+    "transcript": 3738,
+    "website": 1935
+  },
+  "claims_by_type": {
+    "CAUSAL": 490,
+    "CLASSIFICATION": 360,
+    "COMPARISON": 251,
+    "CONDITION_OR_CONSTRAINT": 374,
+    "DEFINITION": 1408,
+    "NUMERIC_OR_QUANTITATIVE": 474,
+    "OTHER_ATOMIC": 72,
+    "PROCEDURE_OR_ACTION": 417,
+    "RELATION": 1398,
+    "RULE_OR_PRINCIPLE": 993
+  },
+  "duplicate_evidence_ids": 0,
+  "duplicate_raw_claim_ids": 0,
+  "evidence_links": 6396,
+  "evidence_revalidation_failures": 0,
+  "extraction_version": "claim_extraction_full_v1",
+  "model": "Qwen3-30B-A3B",
+  "prompt_version": "claim_extraction_prompt_v2",
+  "prompt_windows_total": 2287,
+  "raw_claims": 6237,
+  "report_version": "claim_extraction_full_report_v1",
+  "semantic_full_validation": "NOT_STARTED",
+  "validated_cache_bundles": 2287,
+  "validated_registry": "NOT_YET_CREATED",
+  "validation_contract_sha256": "637c172941d3de7ab589a685f8ce46a444346dcf04abf8c100652c1e1c1439a9",
+  "validation_contract_version": "claim_extraction_validation_contract_v1",
+  "zero_claim_windows": 305
+}

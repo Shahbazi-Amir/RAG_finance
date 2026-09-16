@@ -1,0 +1,67 @@
+{
+  "artifact": {
+    "adjudication": "claim_extraction_pilot_semantic_adjudication_v1.jsonl",
+    "adjudication_sha256": "39cf776d1a1c17d8b102605e8d38fa467832a442993f92157ae65df9e12b4441"
+  },
+  "claims_adjudicated": 59,
+  "decision_counts": {
+    "ACCEPT": 46,
+    "REJECT": 6,
+    "REPAIR": 7
+  },
+  "decisions_by_claim_discovery_role": {
+    "PRIMARY_CLAIM_DISCOVERY": {
+      "ACCEPT": 36,
+      "REJECT": 5,
+      "REPAIR": 7
+    },
+    "SECONDARY_CLAIM_DISCOVERY_WITH_ATTRIBUTION": {
+      "ACCEPT": 10,
+      "REJECT": 1
+    }
+  },
+  "decisions_by_source_type": {
+    "book": {
+      "ACCEPT": 17,
+      "REJECT": 1,
+      "REPAIR": 2
+    },
+    "transcript": {
+      "ACCEPT": 12,
+      "REJECT": 4,
+      "REPAIR": 4
+    },
+    "website": {
+      "ACCEPT": 17,
+      "REJECT": 1,
+      "REPAIR": 1
+    }
+  },
+  "failed_checks": {
+    "atomicity": 4,
+    "claim_type_fit": 8,
+    "domain_knowledge": 2,
+    "entailment": 5,
+    "evidence_sufficiency": 3,
+    "standalone": 3
+  },
+  "full_registry_extraction_started": false,
+  "full_registry_readiness": "AWAITING_QUALITY_DECISION",
+  "issue_counts": {
+    "CLAIM_TYPE_MISMATCH": 8,
+    "EVIDENCE_INCOMPLETE": 2,
+    "IMPERATIVE_OR_FRAGMENT": 1,
+    "NOT_ATOMIC": 3,
+    "SOURCE_METADATA_NOT_DOMAIN_KNOWLEDGE": 2,
+    "TOO_VAGUE": 5,
+    "UNSUPPORTED_OR_OVERSTATED": 3
+  },
+  "report_version": "claim_extraction_pilot_semantic_report_v1",
+  "semantic_execution_status": "PASS",
+  "semantic_model": "Qwen3-30B-A3B",
+  "semantic_prompt_version": "claim_semantic_adjudication_v1",
+  "source_pilot_report": "claim_extraction_pilot_report_v1.json",
+  "source_raw_claims": "claim_extraction_pilot_raw_v1.jsonl",
+  "source_raw_claims_sha256": "78cdb68e2c854116f2ae98c968dd6df41ab64c79ef56228d783a38b87e476825",
+  "unresolved_batch_failures": 0
+}

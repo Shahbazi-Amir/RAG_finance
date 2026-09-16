@@ -1,0 +1,33 @@
+{
+  "claim_extraction_started": false,
+  "contract_version": "claim_extraction_prompt_window_contract_v1",
+  "coverage_policy": {
+    "eligible_documents_must_be_covered": true,
+    "full_document_text_must_be_covered": true,
+    "primary_coverage_must_be_gap_free": true,
+    "primary_coverage_must_not_overlap": true
+  },
+  "manifest": "claim_extraction_prompt_windows_v1.jsonl",
+  "model_context_limit_status": "UNRESOLVED",
+  "retrieval_chunk_dependency": false,
+  "runtime_reference_model": "Qwen3-30B-A3B",
+  "segmentation_policy": {
+    "overlap_counts_as_primary_coverage": false,
+    "overlap_policy": "ONE_PREVIOUS_PRIMARY_SEGMENT_WHEN_IT_FITS_WITHIN_WINDOW_BUDGET",
+    "oversized_document_policy": "TEXT_BOUNDARY_THEN_HARD_CHAR_SPLIT",
+    "primary_boundary": "DOCUMENT_BOUNDARY"
+  },
+  "source_contract": "claim_extraction_unit_contract_v1",
+  "source_text_profile": "claim_extraction_text_profile_v1",
+  "window_budget": {
+    "derivation": "MAX_SOURCE_P95_RAW_TEXT_CHARS",
+    "max_raw_text_chars": 3686,
+    "represents_model_context_limit": false,
+    "source_p95_values": {
+      "book": 3360,
+      "transcript": 2997,
+      "website": 3686
+    },
+    "unit": "RAW_TEXT_CHARACTERS"
+  }
+}

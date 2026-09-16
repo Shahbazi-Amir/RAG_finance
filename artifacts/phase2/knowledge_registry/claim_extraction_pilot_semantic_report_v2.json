@@ -1,0 +1,76 @@
+{
+  "artifact": {
+    "adjudication": "claim_extraction_pilot_semantic_adjudication_v2.jsonl",
+    "adjudication_sha256": "426390ec5408dfa5b9b6c274ce7031275008b00e2b0073f4bcd0967b2dc36e4a"
+  },
+  "claims_adjudicated": 57,
+  "comparison_to_v1": {
+    "pilot_v1_raw_claims": 59,
+    "pilot_v1_semantic_decisions": {
+      "ACCEPT": 46,
+      "REJECT": 6,
+      "REPAIR": 7
+    },
+    "pilot_v2_raw_claims": 57
+  },
+  "decision_counts": {
+    "ACCEPT": 48,
+    "REJECT": 9
+  },
+  "decisions_by_claim_discovery_role": {
+    "PRIMARY_CLAIM_DISCOVERY": {
+      "ACCEPT": 36,
+      "REJECT": 9
+    },
+    "SECONDARY_CLAIM_DISCOVERY_WITH_ATTRIBUTION": {
+      "ACCEPT": 12
+    }
+  },
+  "decisions_by_source_type": {
+    "book": {
+      "ACCEPT": 17,
+      "REJECT": 3
+    },
+    "transcript": {
+      "ACCEPT": 11,
+      "REJECT": 6
+    },
+    "website": {
+      "ACCEPT": 20
+    }
+  },
+  "failed_checks": {
+    "atomicity": 6,
+    "entailment": 2,
+    "evidence_completeness": 8,
+    "knowledge_utility": 5,
+    "standalone": 7
+  },
+  "full_registry_extraction_started": false,
+  "full_registry_readiness": "AWAITING_POST_GATE_DECISION",
+  "issue_counts": {
+    "CONTEXT_DEPENDENT": 7,
+    "EVIDENCE_INCOMPLETE": 4,
+    "IMPERATIVE_OR_FRAGMENT": 4,
+    "LIST_HEADER_INCOMPLETE": 1,
+    "LOW_KNOWLEDGE_UTILITY": 4,
+    "NOT_ATOMIC": 2,
+    "NUMERIC_SUBJECT_MISSING": 1,
+    "SUBJECT_OR_REFERENT_UNRESOLVED": 2,
+    "TOO_VAGUE": 1
+  },
+  "report_version": "claim_extraction_pilot_semantic_report_v2",
+  "risk_signal_counts": {
+    "FRAGMENT_OR_DISCOURSE_START": 4,
+    "POSSIBLE_LIST_HEADER": 1,
+    "POSSIBLE_UNRESOLVED_REFERENT": 8,
+    "SHORT_NUMERIC_CLAIM": 1
+  },
+  "semantic_execution_status": "PASS",
+  "semantic_model": "Qwen3-30B-A3B",
+  "semantic_prompt_version": "claim_semantic_adjudication_v2",
+  "source_pilot_report": "claim_extraction_pilot_report_v2.json",
+  "source_raw_claims": "claim_extraction_pilot_raw_v2.jsonl",
+  "source_raw_claims_sha256": "762c99292c0c7fd6c5dc2c10e46c314be445e7c03112ab5965d8eb957294e58b",
+  "unresolved_batch_failures": 0
+}

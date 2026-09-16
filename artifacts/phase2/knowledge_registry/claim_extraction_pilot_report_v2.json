@@ -1,0 +1,60 @@
+{
+  "artifacts": {
+    "evidence_links": "claim_extraction_pilot_evidence_v2.jsonl",
+    "evidence_links_sha256": "3fb4df3a3308e27831662cb8a28cb59a280fc464d678804c3dc5825caa60dae8",
+    "raw_claims": "claim_extraction_pilot_raw_v2.jsonl",
+    "raw_claims_sha256": "762c99292c0c7fd6c5dc2c10e46c314be445e7c03112ab5965d8eb957294e58b"
+  },
+  "controlled_comparison": {
+    "pilot_v1_raw_claim_count": 59,
+    "pilot_v1_semantic_decisions": {
+      "ACCEPT": 46,
+      "REJECT": 6,
+      "REPAIR": 7
+    },
+    "same_windows_as_pilot_v1": true,
+    "window_count": 15
+  },
+  "full_registry_status": "NOT_STARTED",
+  "generation_contract": {
+    "adaptive_retry": true,
+    "exact_evidence_validation": true,
+    "max_attempts": 3,
+    "max_tokens": 2500,
+    "temperature": 0
+  },
+  "model": "Qwen3-30B-A3B",
+  "pilot_version": "claim_extraction_pilot_v2",
+  "prompt_version": "claim_extraction_prompt_v2",
+  "report_version": "claim_extraction_pilot_report_v2",
+  "results": {
+    "claims_by_role": {
+      "PRIMARY_CLAIM_DISCOVERY": 45,
+      "SECONDARY_CLAIM_DISCOVERY_WITH_ATTRIBUTION": 12
+    },
+    "claims_by_source_type": {
+      "book": 20,
+      "transcript": 17,
+      "website": 20
+    },
+    "claims_by_type": {
+      "CAUSAL": 8,
+      "CLASSIFICATION": 8,
+      "COMPARISON": 2,
+      "CONDITION_OR_CONSTRAINT": 5,
+      "DEFINITION": 11,
+      "NUMERIC_OR_QUANTITATIVE": 3,
+      "PROCEDURE_OR_ACTION": 6,
+      "RELATION": 5,
+      "RULE_OR_PRINCIPLE": 9
+    },
+    "duplicate_evidence_ids": 0,
+    "duplicate_raw_claim_ids": 0,
+    "evidence_links": 62,
+    "raw_claims": 57,
+    "structural_grounding_failures": 0,
+    "unresolved_window_failures": 0,
+    "zero_claim_windows": 0
+  },
+  "semantic_status": "NOT_YET_RUN"
+}
