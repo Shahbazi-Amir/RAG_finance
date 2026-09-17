@@ -1,0 +1,28 @@
+{
+  "api_calls": 0,
+  "artifact": {
+    "knowledge_graph": "knowledge_graph_v1.json",
+    "knowledge_graph_sha256": "a408f12bac5470de46d700a3c8082e39899473984651b6ca1eeb377e8d80dd1a"
+  },
+  "automatic_merge_applied": false,
+  "canonical_claims_without_evidence": 0,
+  "claim_evidence_edges": 4125,
+  "claim_nodes": 4006,
+  "claim_relation_edges": 2415,
+  "claim_relation_type_counts": {
+    "PARTIAL_OVERLAP": 1638,
+    "SEMANTIC_DUPLICATE": 233,
+    "SUBSUMES": 544
+  },
+  "evidence_nodes": 4125,
+  "evidence_source_edges": 4125,
+  "exact_duplicate_provenance_relations": 101,
+  "future_knowledge_relations_inferred": false,
+  "generated_knowledge_relation_types": [],
+  "graph_version": "knowledge_graph_v1",
+  "next_stage": "FINAL_CLAIM_REGISTRY_REPORT",
+  "report_version": "knowledge_graph_build_report_v1",
+  "schema_version": "claim_evidence_source_graph_v1",
+  "semantic_self_edges": 0,
+  "source_nodes": 667
+}

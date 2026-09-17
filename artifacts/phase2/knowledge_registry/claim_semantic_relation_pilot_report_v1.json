@@ -1,0 +1,56 @@
+{
+  "api_calls": 12,
+  "artifact": {
+    "pilot": "claim_semantic_relation_pilot_v1.jsonl",
+    "pilot_sha256": "c262e8c4dda0f0d54f269a304332ce693e18fc1782c70cd5dd0bace8c58d577d"
+  },
+  "automatic_merge_applied": false,
+  "claim_ids_assigned": false,
+  "cross_source_pairs": 15,
+  "decision_counts": {
+    "DISTINCT": 5,
+    "PARTIAL_OVERLAP": 21,
+    "SEMANTIC_DUPLICATE": 12,
+    "SUBSUMES": 7
+  },
+  "decisions_by_similarity_band": {
+    "0_70_TO_0_75_MUTUAL": {
+      "DISTINCT": 1,
+      "PARTIAL_OVERLAP": 10,
+      "SUBSUMES": 2
+    },
+    "0_75_TO_0_80": {
+      "DISTINCT": 2,
+      "PARTIAL_OVERLAP": 2,
+      "SEMANTIC_DUPLICATE": 2,
+      "SUBSUMES": 2
+    },
+    "0_80_TO_0_85": {
+      "DISTINCT": 1,
+      "PARTIAL_OVERLAP": 2,
+      "SEMANTIC_DUPLICATE": 3,
+      "SUBSUMES": 2
+    },
+    "0_85_TO_0_90": {
+      "DISTINCT": 1,
+      "PARTIAL_OVERLAP": 6,
+      "SEMANTIC_DUPLICATE": 1
+    },
+    "GE_0_90": {
+      "PARTIAL_OVERLAP": 1,
+      "SEMANTIC_DUPLICATE": 6,
+      "SUBSUMES": 1
+    }
+  },
+  "full_relation_adjudication": "NOT_STARTED",
+  "pilot_batches": 12,
+  "pilot_pairs": 45,
+  "pilot_version": "claim_semantic_relation_pilot_v1",
+  "relation_prompt_version": "claim_semantic_relation_prompt_v1",
+  "report_version": "claim_semantic_relation_pilot_report_v1",
+  "retry_events": 0,
+  "schema_normalizations": {},
+  "semantic_model": "Qwen3-30B-A3B",
+  "source_selected_candidates": "claim_semantic_dedup_candidates_selected_v1.jsonl",
+  "source_selected_candidates_sha256": "52313cc706c954cf5d40377059b008a304a7869c48dc64a75bcd946c9c4253f4"
+}

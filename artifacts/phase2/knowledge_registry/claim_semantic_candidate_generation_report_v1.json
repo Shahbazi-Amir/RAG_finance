@@ -1,0 +1,48 @@
+{
+  "artifacts": {
+    "embedding_matrix": "claim_embedding_matrix_v1.npz",
+    "embedding_matrix_sha256": "eb4167669dca840e3bc3f28927ed0b7ad3b250db0335b02d41ce42b005beab39",
+    "embedding_text_index": "claim_embedding_text_index_v1.jsonl",
+    "embedding_text_index_sha256": "cce84b1411def44d1fa3a3e1b1654ea1a4d9ae404a72c64f441b0cef9d62ecac",
+    "neighbor_candidates": "claim_semantic_neighbor_candidates_v1.jsonl",
+    "neighbor_candidates_sha256": "6a3650d0f6687b16f91027919230fb800be2a9b3247bc465d45fbbb9898e2db7"
+  },
+  "automatic_merge_applied": false,
+  "candidate_generation_version": "claim_semantic_candidate_generation_v1",
+  "claim_ids_assigned": false,
+  "diagnostic_similarity_counts": {
+    ">=0.70": 3173,
+    ">=0.75": 1252,
+    ">=0.80": 492,
+    ">=0.85": 241,
+    ">=0.90": 78,
+    ">=0.95": 21
+  },
+  "embedding_api_calls_this_run": 63,
+  "embedding_batch_size": 64,
+  "embedding_batches": 63,
+  "embedding_dimension": 3072,
+  "embedding_model": "text-embedding-3-large",
+  "embedding_new_caches_this_run": 63,
+  "embedding_retry_events_this_run": 0,
+  "embedding_texts": 4006,
+  "llm_calls": 0,
+  "mutual_top_k_pairs": 48807,
+  "next_stage": "SEMANTIC_CANDIDATE_SELECTION",
+  "report_version": "claim_semantic_candidate_generation_report_v1",
+  "semantic_relation_decisions_made": 0,
+  "similarity_percentiles": {
+    "max": 0.99428892,
+    "p50": 0.51977521,
+    "p75": 0.56363481,
+    "p90": 0.61336374,
+    "p95": 0.65152756,
+    "p97": 0.6796807,
+    "p99": 0.74012049
+  },
+  "source_exact_dedup_report": "claim_dedup_stage1_report_v1.json",
+  "source_validated_claims": "claims_validated_v1.jsonl",
+  "source_validated_claims_sha256": "7911645fe76a244986d2811221d313e48c597885fb2512a66f71bfedea9ba9fb",
+  "top_k": 50,
+  "unique_neighbor_candidate_pairs": 151493
+}

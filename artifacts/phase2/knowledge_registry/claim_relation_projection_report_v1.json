@@ -1,0 +1,31 @@
+{
+  "api_calls": 0,
+  "artifact": {
+    "claim_relations": "claim_relations_v1.jsonl",
+    "claim_relations_sha256": "b505a90036ea9eeec36ddb3e9ebd687f5503c4f8cfccf59f0fb0b684774d9009"
+  },
+  "automatic_merge_applied": false,
+  "canonical_claims": 4006,
+  "canonicalization_provenance_relations": 101,
+  "claim_ids_reassigned": false,
+  "exact_duplicate_self_relations": 101,
+  "graph_edge_eligible_relations": 2415,
+  "next_stage": "KNOWLEDGE_GRAPH_BUILD",
+  "projected_relation_records": 2516,
+  "projection_version": "claim_relation_projection_v1",
+  "relation_type_counts": {
+    "EXACT_DUPLICATE": 101,
+    "PARTIAL_OVERLAP": 1638,
+    "SEMANTIC_DUPLICATE": 233,
+    "SUBSUMES": 544
+  },
+  "report_version": "claim_relation_projection_report_v1",
+  "semantic_self_relations": 0,
+  "source_claim_id_mapping": "claim_id_mapping_v1.jsonl",
+  "source_claim_id_mapping_sha256": "5b5e07134961212984e480e0574722ee2e12cef4aebf21922d7a99a8ab3c9ad2",
+  "source_deduplicated_claims": "claims_deduplicated_v1.jsonl",
+  "source_deduplicated_claims_sha256": "8d1080d6519faa8ca5d4614256dbabf04426170b8f914f606eb3088d1f2c08bb",
+  "source_relation_ledger": "claim_dedup_relations_consolidated_v1.jsonl",
+  "source_relation_ledger_sha256": "b07f1f990ed947faf302aaf79bd2f45639b7f9082c62cfea34bc6f1338741da3",
+  "subsumes_relations_with_explicit_direction": 544
+}

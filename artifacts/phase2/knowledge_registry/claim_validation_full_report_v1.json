@@ -1,0 +1,56 @@
+{
+  "artifacts": {
+    "full_disposition": "claim_validation_full_disposition_v1.jsonl",
+    "full_disposition_sha256": "eb1b8e787e7353127185b2772726e725e37802686d20d085914fc013d5fbe8f6",
+    "validated_claims": "claims_validated_v1.jsonl",
+    "validated_claims_sha256": "7911645fe76a244986d2811221d313e48c597885fb2512a66f71bfedea9ba9fb"
+  },
+  "automatic_repairs_published": 0,
+  "claim_ids_assigned": false,
+  "critical_risk_accepts_held": 659,
+  "deduplication": "NOT_STARTED",
+  "evidence_revalidation_failures": 0,
+  "final_dispositions": {
+    "HOLD_CRITICAL_RISK": 659,
+    "HOLD_REPAIR_REQUIRED": 356,
+    "REJECT_SEMANTIC": 1183,
+    "VALIDATED": 4039
+  },
+  "held_raw_claims_deleted": false,
+  "next_stage": "CLAIM_DEDUPLICATION",
+  "raw_claims": 6237,
+  "rejected_raw_claims_deleted": false,
+  "report_version": "claim_validation_full_report_v1",
+  "semantic_adjudication_sha256": "2e508f6f02d98a878e97ef3e161d7dcbe2f2b6778fcd5b6df7660937e6996c27",
+  "semantic_decisions": {
+    "ACCEPT": 4698,
+    "REJECT": 1183,
+    "REPAIR": 356
+  },
+  "semantic_judgments": 6237,
+  "validated_by_claim_discovery_role": {
+    "PRIMARY_CLAIM_DISCOVERY": 2797,
+    "SECONDARY_CLAIM_DISCOVERY_WITH_ATTRIBUTION": 1242
+  },
+  "validated_by_claim_type": {
+    "CAUSAL": 327,
+    "CLASSIFICATION": 247,
+    "COMPARISON": 163,
+    "CONDITION_OR_CONSTRAINT": 232,
+    "DEFINITION": 960,
+    "NUMERIC_OR_QUANTITATIVE": 214,
+    "OTHER_ATOMIC": 44,
+    "PROCEDURE_OR_ACTION": 252,
+    "RELATION": 966,
+    "RULE_OR_PRINCIPLE": 634
+  },
+  "validated_by_source_type": {
+    "book": 417,
+    "transcript": 2181,
+    "website": 1441
+  },
+  "validated_claims": 4039,
+  "validation_contract_sha256": "637c172941d3de7ab589a685f8ce46a444346dcf04abf8c100652c1e1c1439a9",
+  "validation_contract_version": "claim_extraction_validation_contract_v1",
+  "validation_version": "claim_validation_full_v1"
+}

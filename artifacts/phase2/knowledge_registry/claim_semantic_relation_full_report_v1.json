@@ -1,0 +1,73 @@
+{
+  "artifact": {
+    "full_adjudication": "claim_semantic_relation_full_adjudication_v1.jsonl",
+    "full_adjudication_sha256": "99b21a107974a1ae355bd67e6d87b08763089d48a5522b78619f2fc867095df7"
+  },
+  "automatic_semantic_merge_applied": false,
+  "automatic_subsumption_merge_applied": false,
+  "claim_ids_assigned": false,
+  "completed_cache_files": 782,
+  "cross_source_selected_pairs": 1037,
+  "cross_source_semantic_relation_pairs": 831,
+  "decision_counts": {
+    "DISTINCT": 758,
+    "PARTIAL_OVERLAP": 1638,
+    "SEMANTIC_DUPLICATE": 233,
+    "SUBSUMES": 544
+  },
+  "decisions_by_similarity_band": {
+    "0_70_TO_0_75_MUTUAL": {
+      "DISTINCT": 552,
+      "PARTIAL_OVERLAP": 1047,
+      "SEMANTIC_DUPLICATE": 69,
+      "SUBSUMES": 253
+    },
+    "0_75_TO_0_80": {
+      "DISTINCT": 156,
+      "PARTIAL_OVERLAP": 402,
+      "SEMANTIC_DUPLICATE": 57,
+      "SUBSUMES": 145
+    },
+    "0_80_TO_0_85": {
+      "DISTINCT": 33,
+      "PARTIAL_OVERLAP": 113,
+      "SEMANTIC_DUPLICATE": 39,
+      "SUBSUMES": 66
+    },
+    "0_85_TO_0_90": {
+      "DISTINCT": 15,
+      "PARTIAL_OVERLAP": 64,
+      "SEMANTIC_DUPLICATE": 32,
+      "SUBSUMES": 52
+    },
+    "GE_0_90": {
+      "DISTINCT": 2,
+      "PARTIAL_OVERLAP": 12,
+      "SEMANTIC_DUPLICATE": 36,
+      "SUBSUMES": 28
+    }
+  },
+  "full_api_adjudicated_pairs": 3128,
+  "full_relation_batches": 782,
+  "full_relation_version": "claim_semantic_relation_full_v1",
+  "judgment_origin_counts": {
+    "FULL_ADJUDICATION_CACHE": 3128,
+    "PILOT_REUSED": 45
+  },
+  "next_stage": "DEDUP_RELATION_CONSOLIDATION",
+  "pilot_pairs_reused": 45,
+  "recorded_api_attempts_in_completed_caches": 788,
+  "recorded_retry_events_in_completed_caches": 6,
+  "recorded_schema_normalizations": {
+    "DIRECTION_EMITTED_AS_DECISION": 18
+  },
+  "relation_prompt_version": "claim_semantic_relation_prompt_v1",
+  "report_version": "claim_semantic_relation_full_report_v1",
+  "selected_pairs": 3173,
+  "semantic_model": "Qwen3-30B-A3B",
+  "semantic_relation_pairs": 2415,
+  "source_pilot": "claim_semantic_relation_pilot_v1.jsonl",
+  "source_pilot_sha256": "c262e8c4dda0f0d54f269a304332ce693e18fc1782c70cd5dd0bace8c58d577d",
+  "source_selected_candidates": "claim_semantic_dedup_candidates_selected_v1.jsonl",
+  "source_selected_candidates_sha256": "52313cc706c954cf5d40377059b008a304a7869c48dc64a75bcd946c9c4253f4"
+}

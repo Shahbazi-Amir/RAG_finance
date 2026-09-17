@@ -1,0 +1,87 @@
+{
+  "acceptance_checks": {
+    "all_canonical_claims_have_evidence": true,
+    "all_validated_claims_mapped": true,
+    "automatic_semantic_merge_disabled": true,
+    "automatic_subsumption_merge_disabled": true,
+    "canonical_claim_texts_unique": true,
+    "canonical_claims_present": true,
+    "claim_ids_reproducible": true,
+    "claim_ids_unique": true,
+    "contract_artifact_family_valid": true,
+    "exact_provenance_relation_count_valid": true,
+    "future_knowledge_relations_not_fabricated": true,
+    "graph_edge_relation_count_valid": true,
+    "knowledge_graph_claim_coverage": true,
+    "knowledge_graph_evidence_coverage": true,
+    "knowledge_graph_relation_coverage": true,
+    "original_source_remains_evidence": true,
+    "raw_claims_present": true,
+    "relations_projected": true,
+    "retrieval_chunks_remain_separate": true,
+    "semantic_self_relations_zero": true,
+    "validated_claims_present": true,
+    "validated_evidence_preserved": true
+  },
+  "api_calls_in_final_report_stage": 0,
+  "artifact_sha256": {
+    "claim_id_mapping": "5b5e07134961212984e480e0574722ee2e12cef4aebf21922d7a99a8ab3c9ad2",
+    "claim_relations": "b505a90036ea9eeec36ddb3e9ebd687f5503c4f8cfccf59f0fb0b684774d9009",
+    "contract": "711244aece1c4ce736ec12969a521ccfcc4f983103504ce8d914d174d1478f8a",
+    "deduplicated_claims": "8d1080d6519faa8ca5d4614256dbabf04426170b8f914f606eb3088d1f2c08bb",
+    "evidence_links": "1c47a493b2128b1fd489752378a3e5d4dc7e53b7379b03674abe37d9a77cc9ba",
+    "knowledge_graph": "a408f12bac5470de46d700a3c8082e39899473984651b6ca1eeb377e8d80dd1a",
+    "raw_claims": "fff018199d96fab3a59729527c56a0c4ba0aa61d9d3a133b3d48645b62362d02",
+    "validated_claims": "7911645fe76a244986d2811221d313e48c597885fb2512a66f71bfedea9ba9fb"
+  },
+  "contract": {
+    "artifact_family": {
+      "claim_relations": "claim_relations_v1.jsonl",
+      "deduplicated_claims": "claims_deduplicated_v1.jsonl",
+      "evidence_links": "claim_evidence_links_v1.jsonl",
+      "knowledge_graph": "knowledge_graph_v1.json",
+      "raw_claims": "claims_raw_v1.jsonl",
+      "registry_report": "claim_registry_report_v1.json",
+      "validated_claims": "claims_validated_v1.jsonl"
+    },
+    "artifact_namespace": "artifacts/phase2/knowledge_registry",
+    "contract_sha256": "711244aece1c4ce736ec12969a521ccfcc4f983103504ce8d914d174d1478f8a",
+    "contract_version": "claim_registry_contract_v1"
+  },
+  "counts": {
+    "canonical_claims": 4006,
+    "claim_id_mapping_records": 4039,
+    "claim_relations_total": 2516,
+    "exact_duplicate_provenance_relations": 101,
+    "graph_edge_eligible_claim_relations": 2415,
+    "knowledge_graph_claim_nodes": 4006,
+    "knowledge_graph_claim_relation_edges": 2415,
+    "knowledge_graph_evidence_nodes": 4125,
+    "knowledge_graph_source_nodes": 667,
+    "raw_claims": 6237,
+    "raw_evidence_links": 6396,
+    "validated_claims": 4039,
+    "validated_registry_evidence_occurrences": 4125
+  },
+  "next_stage": "RESTART_KERNEL_RUN_ALL_AND_NOTEBOOK_HEALTH",
+  "policies": {
+    "automatic_semantic_duplicate_merge": false,
+    "automatic_subsumption_merge": false,
+    "evidence_multiplicity_preserved": true,
+    "exact_duplicate_canonicalization": true,
+    "future_knowledge_relations_inferred": false,
+    "original_source_remains_final_evidence": true,
+    "retrieval_chunks_separate_from_registry_truth": true,
+    "source_identity_preserved": true
+  },
+  "qwen_required_after_this_stage": false,
+  "registry_role": "VALIDATED_DEDUPLICATED_EVIDENCE_GROUNDED_CLAIM_REGISTRY",
+  "registry_status": "PASS",
+  "relation_type_counts": {
+    "EXACT_DUPLICATE": 101,
+    "PARTIAL_OVERLAP": 1638,
+    "SEMANTIC_DUPLICATE": 233,
+    "SUBSUMES": 544
+  },
+  "report_version": "claim_registry_report_v1"
+}

@@ -1,0 +1,43 @@
+{
+  "artifact": {
+    "selected_candidates": "claim_semantic_dedup_candidates_selected_v1.jsonl",
+    "selected_candidates_sha256": "52313cc706c954cf5d40377059b008a304a7869c48dc64a75bcd946c9c4253f4"
+  },
+  "automatic_merge_applied": false,
+  "claim_ids_assigned": false,
+  "input_neighbor_pairs": 151493,
+  "llm_calls": 0,
+  "next_stage": "SEMANTIC_RELATION_ADJUDICATION",
+  "report_version": "claim_semantic_candidate_selection_report_v1",
+  "selected_cross_source_pairs": 1037,
+  "selected_mutual_top_k_pairs": 3173,
+  "selected_pairs": 3173,
+  "selected_similarity_stats": {
+    "max": 0.99428892,
+    "min": 0.70000672,
+    "p25": 0.71537912,
+    "p50": 0.73725253,
+    "p75": 0.77418971,
+    "p90": 0.82797796
+  },
+  "selection_channel_counts": {
+    "HIGH_SIMILARITY": 1252,
+    "MUTUAL_TOP_K_RECOVERY": 1921
+  },
+  "selection_policy": {
+    "mutual_recovery_requires_mutual_top_k": true,
+    "mutual_recovery_similarity_threshold": 0.7,
+    "primary_similarity_threshold": 0.75
+  },
+  "selection_version": "claim_semantic_candidate_selection_v1",
+  "semantic_relation_decisions_made": 0,
+  "similarity_band_counts": {
+    "0_70_TO_0_75_MUTUAL": 1921,
+    "0_75_TO_0_80": 760,
+    "0_80_TO_0_85": 251,
+    "0_85_TO_0_90": 163,
+    "GE_0_90": 78
+  },
+  "source_neighbor_candidates": "claim_semantic_neighbor_candidates_v1.jsonl",
+  "source_neighbor_candidates_sha256": "6a3650d0f6687b16f91027919230fb800be2a9b3247bc465d45fbbb9898e2db7"
+}

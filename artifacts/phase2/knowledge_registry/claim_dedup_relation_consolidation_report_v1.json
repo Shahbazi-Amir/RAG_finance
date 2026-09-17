@@ -1,0 +1,39 @@
+{
+  "api_calls": 0,
+  "artifact": {
+    "relation_ledger": "claim_dedup_relations_consolidated_v1.jsonl",
+    "relation_ledger_sha256": "b07f1f990ed947faf302aaf79bd2f45639b7f9082c62cfea34bc6f1338741da3"
+  },
+  "automatic_semantic_merge_applied": false,
+  "automatic_subsumption_merge_applied": false,
+  "claim_ids_assigned": false,
+  "claims_inside_exact_duplicate_groups": 47,
+  "consolidated_relation_counts": {
+    "EXACT_DUPLICATE": 101,
+    "PARTIAL_OVERLAP": 1638,
+    "SEMANTIC_DUPLICATE": 233,
+    "SUBSUMES": 544
+  },
+  "consolidated_relation_records": 2516,
+  "exact_claim_canonicalization_applied": false,
+  "exact_duplicate_groups": 14,
+  "exact_duplicate_pair_relations": 101,
+  "exact_unique_claim_texts": 4006,
+  "ledger_version": "claim_dedup_relation_ledger_v1",
+  "next_stage": "EXACT_CANONICAL_REGISTRY_AND_CLAIM_ID_ASSIGNMENT",
+  "report_version": "claim_dedup_relation_consolidation_report_v1",
+  "semantic_distinct_pairs_excluded": 758,
+  "semantic_pairs_adjudicated": 3173,
+  "semantic_relation_counts": {
+    "PARTIAL_OVERLAP": 1638,
+    "SEMANTIC_DUPLICATE": 233,
+    "SUBSUMES": 544
+  },
+  "source_exact_dedup_report": "claim_dedup_stage1_report_v1.json",
+  "source_exact_dedup_report_sha256": "d779482f44442e076e66872e27aab8d955165cdcc554ecdcd3b48a2d2db7dbb1",
+  "source_full_semantic_relations": "claim_semantic_relation_full_adjudication_v1.jsonl",
+  "source_full_semantic_relations_sha256": "99b21a107974a1ae355bd67e6d87b08763089d48a5522b78619f2fc867095df7",
+  "source_validated_claims": "claims_validated_v1.jsonl",
+  "source_validated_claims_sha256": "7911645fe76a244986d2811221d313e48c597885fb2512a66f71bfedea9ba9fb",
+  "validated_raw_claims": 4039
+}

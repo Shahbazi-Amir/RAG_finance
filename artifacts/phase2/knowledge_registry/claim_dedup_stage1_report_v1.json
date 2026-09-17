@@ -1,0 +1,29 @@
+{
+  "artifacts": {
+    "exact_groups": "claim_dedup_exact_groups_v1.jsonl",
+    "exact_groups_sha256": "7c5a18433cc663b94bee9a7fd1c3da86fe0d139e453b26c251481b1d94185a6a",
+    "exact_relations": "claim_dedup_exact_relations_v1.jsonl",
+    "exact_relations_sha256": "8c6298ca3c89ece35ec135217f764d97a59495b18a0d40ebbdad1e496bccd9e2"
+  },
+  "automatic_merge_applied": false,
+  "canonical_claim_selected": false,
+  "claim_ids_assigned": false,
+  "claims_in_exact_duplicate_groups": 47,
+  "cross_source_exact_groups": 0,
+  "cross_source_exact_pair_relations": 0,
+  "dedup_version": "claim_dedup_exact_v1",
+  "exact_duplicate_groups": 14,
+  "exact_duplicate_pair_relations": 101,
+  "exact_singleton_claims": 3992,
+  "exact_unique_claim_texts": 4006,
+  "model_calls": 0,
+  "next_stage": "SEMANTIC_DEDUP_CANDIDATE_GENERATION",
+  "normalization_applied": false,
+  "report_version": "claim_dedup_stage1_report_v1",
+  "semantic_deduplication": "NOT_STARTED",
+  "semantic_similarity_used": false,
+  "source_validated_claims": "claims_validated_v1.jsonl",
+  "source_validated_claims_sha256": "7911645fe76a244986d2811221d313e48c597885fb2512a66f71bfedea9ba9fb",
+  "theoretical_all_pairs_without_candidate_filter": 8154741,
+  "validated_claims": 4039
+}

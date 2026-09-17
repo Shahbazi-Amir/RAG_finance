@@ -1,0 +1,34 @@
+{
+  "api_calls": 0,
+  "artifacts": {
+    "claim_id_mapping": "claim_id_mapping_v1.jsonl",
+    "claim_id_mapping_sha256": "5b5e07134961212984e480e0574722ee2e12cef4aebf21922d7a99a8ab3c9ad2",
+    "deduplicated_claims": "claims_deduplicated_v1.jsonl",
+    "deduplicated_claims_sha256": "8d1080d6519faa8ca5d4614256dbabf04426170b8f914f606eb3088d1f2c08bb"
+  },
+  "canonical_claims": 4006,
+  "canonical_registry_version": "claim_exact_canonical_registry_v1",
+  "canonical_singletons": 3992,
+  "claim_id_version": "claim_id_sha256_exact_text_v1",
+  "claim_ids_assigned": 4006,
+  "exact_duplicate_canonical_groups": 14,
+  "metadata_multi_value_canonical_claims": {
+    "claim_type": 5
+  },
+  "next_stage": "RELATION_CLAIM_ID_PROJECTION",
+  "raw_claim_mapping_records": 4039,
+  "raw_claims_collapsed_by_exact_dedup": 33,
+  "report_version": "claim_exact_canonicalization_report_v1",
+  "semantic_duplicate_merges": 0,
+  "semantic_merge_applied": false,
+  "source_evidence_links": "claim_evidence_links_v1.jsonl",
+  "source_evidence_links_sha256": "1c47a493b2128b1fd489752378a3e5d4dc7e53b7379b03674abe37d9a77cc9ba",
+  "source_relation_ledger": "claim_dedup_relations_consolidated_v1.jsonl",
+  "source_relation_ledger_sha256": "b07f1f990ed947faf302aaf79bd2f45639b7f9082c62cfea34bc6f1338741da3",
+  "source_validated_claims": "claims_validated_v1.jsonl",
+  "source_validated_claims_sha256": "7911645fe76a244986d2811221d313e48c597885fb2512a66f71bfedea9ba9fb",
+  "subsumption_merge_applied": false,
+  "subsumption_merges": 0,
+  "validated_evidence_occurrences_preserved": 4125,
+  "validated_raw_claims": 4039
+}
