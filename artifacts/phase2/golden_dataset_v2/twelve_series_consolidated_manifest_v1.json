@@ -1,0 +1,386 @@
+{
+  "architectural_decisions": {
+    "author_reviewed_final_freeze_allowed_now": false,
+    "claim_registry_modified": false,
+    "core46_modified": false,
+    "golden_v1_modified": false,
+    "golden_v2_primary_population": "4006_CANONICAL_VALIDATED_CLAIMS",
+    "old_notebook_code_copied_into_nb12j": false,
+    "old_notebooks_rerun_for_consolidation": false
+  },
+  "author_review": {
+    "author_review_marker_count": 29,
+    "author_reviewed_final_freeze_allowed_now": false,
+    "completion_proven": false,
+    "inline_suffix_values_detected": 29,
+    "inline_suffix_values_used_as_feedback_evidence": false,
+    "path": "notebooks/phase2/archive/author_review_28_pilots.md",
+    "reason_inline_values_rejected_as_completion_evidence": "Discovery samples contain HTML/heading markup rather than validated author decisions.",
+    "review_case_marker_count": 0,
+    "sha256": "18ccbbaf0787b37fa4dd1d11d0aa4b8b49e5c37858d1b803a3db8ab035a14bbd",
+    "status": "PENDING_AUTHOR_REVIEW",
+    "stronger_workflow_evidence": "NB12f explicitly contains pending_author_review."
+  },
+  "claim_registry": {
+    "acceptance_checks_passed": 22,
+    "acceptance_checks_total": 22,
+    "artifacts": {
+      "canonical_claims": {
+        "path": "artifacts/phase2/knowledge_registry/claims_deduplicated_v1.jsonl",
+        "sha256": "8d1080d6519faa8ca5d4614256dbabf04426170b8f914f606eb3088d1f2c08bb"
+      },
+      "claim_id_mapping": {
+        "path": "artifacts/phase2/knowledge_registry/claim_id_mapping_v1.jsonl",
+        "sha256": "5b5e07134961212984e480e0574722ee2e12cef4aebf21922d7a99a8ab3c9ad2"
+      },
+      "claim_relations": {
+        "path": "artifacts/phase2/knowledge_registry/claim_relations_v1.jsonl",
+        "sha256": "b505a90036ea9eeec36ddb3e9ebd687f5503c4f8cfccf59f0fb0b684774d9009"
+      },
+      "contract": {
+        "path": "artifacts/phase2/knowledge_registry/claim_registry_contract_v1.json",
+        "sha256": "711244aece1c4ce736ec12969a521ccfcc4f983103504ce8d914d174d1478f8a"
+      },
+      "evidence_links": {
+        "path": "artifacts/phase2/knowledge_registry/claim_evidence_links_v1.jsonl",
+        "sha256": "1c47a493b2128b1fd489752378a3e5d4dc7e53b7379b03674abe37d9a77cc9ba"
+      },
+      "knowledge_graph": {
+        "path": "artifacts/phase2/knowledge_registry/knowledge_graph_v1.json",
+        "sha256": "a408f12bac5470de46d700a3c8082e39899473984651b6ca1eeb377e8d80dd1a"
+      },
+      "registry_report": {
+        "path": "artifacts/phase2/knowledge_registry/claim_registry_report_v1.json",
+        "sha256": "f7951467ca49d1bac1e1c1efee9e93e756f24fbf6db02e500e35a6672b21d645"
+      }
+    },
+    "canonical_claims": 4006,
+    "claim_relations": 2516,
+    "graph_edge_eligible_relations": 2415,
+    "mutable_by_nb12j": false,
+    "producer_notebook": "notebooks/phase2/12i_claim_registry_and_knowledge_graph.ipynb",
+    "role": "PRIMARY_GOLDEN_V2_KNOWLEDGE_SOURCE",
+    "status": "PASS",
+    "validated_evidence_occurrences": 4125
+  },
+  "contract": {
+    "path": "artifacts/phase2/golden_dataset_v2/golden_dataset_v2_registry_driven_contract_v1.json",
+    "sha256": "2cc3bfe682f1b2f4500089a35a82d7d6757193d2d2bf7fca18ea31338e962d8f"
+  },
+  "core46": {
+    "full_registry_replacement": false,
+    "mutable_by_nb12j": false,
+    "path": "notebooks/phase2/golden_dataset/golden_dataset_quote_grounded_final_adjudicated_experiment.jsonl",
+    "records": 46,
+    "role": "QUALITY_AND_REGRESSION_ANCHOR",
+    "sha256": "2b461fc7dfa25e9b65b2b37c709dfc8c6cd65c7b84ef5ec7fae9e3449a6e37ae"
+  },
+  "family": {
+    "current_notebook": {
+      "completed_gates": {
+        "contract": "PASS",
+        "evidence_discovery": "PASS",
+        "preflight": "PASS"
+      },
+      "consolidated_status": "IN_PROGRESS",
+      "current_stage": "TWELVE_SERIES_CONSOLIDATED_MANIFEST",
+      "mutable_by_nb12j": true,
+      "path": "notebooks/phase2/12j_golden_dataset_v2_registry_driven_rebuild.ipynb",
+      "role": "REGISTRY_DRIVEN_GOLDEN_V2_REBUILD_AND_12_SERIES_CONSOLIDATION",
+      "terminality": "ACTIVE_CURRENT_NOTEBOOK"
+    },
+    "historical_count": 10,
+    "historical_notebooks": [
+      {
+        "consolidated_status": "HISTORICAL_CHECKPOINT_PASS_WITH_FULL_GENERATION_BLOCKED",
+        "heading": "Notebook 12 — Golden Dataset",
+        "mutable_by_nb12j": false,
+        "path": "notebooks/phase2/12_golden_dataset.ipynb",
+        "rerun_required_for_consolidation": false,
+        "role": "INITIAL_GOLDEN_PILOT_WORKFLOW",
+        "sha256": "6b15e7edb02b09000de217ce3b3149a89214c36cc740d8edbc610b6db2a34c12",
+        "status_evidence_lines": [
+          "no_queue_advance_beyond_replacement : PASS",
+          "full_572_still_blocked : PASS",
+          "checkpoint_valid : PASS",
+          "no_queue_advance : PASS",
+          "CODE CELL 140 GATE: PASS"
+        ],
+        "status_policy": "EVIDENCE_BASED_CONSERVATIVE",
+        "stored_execution_state": {
+          "code_cells": 141,
+          "executed_code_cells": 141,
+          "last_execution_count": 144,
+          "markdown_cells": 141,
+          "stored_error_outputs": 0,
+          "unexecuted_code_cells": 0
+        },
+        "terminality": "SUPERSEDED_HISTORICAL_CHECKPOINT"
+      },
+      {
+        "consolidated_status": "FINAL_HEALTH_PASS_SIGNAL_WITH_PARTIAL_STORED_EXECUTION_STATE",
+        "heading": "ادامه فشرده Golden Dataset — Pilot QA Workflow",
+        "mutable_by_nb12j": false,
+        "path": "notebooks/phase2/12b_golden_dataset_continuation_compact.ipynb",
+        "rerun_required_for_consolidation": false,
+        "role": "PILOT_WORKFLOW_CONTINUATION_AND_FINAL_HEALTH",
+        "sha256": "24631b877cf43b1e5141947fae7b26160f798ac09a4c5aea39e03370880e8295",
+        "status_evidence_lines": [
+          "=== FINAL STATUS ===",
+          "Full 572 Generation: READY_FOR_NEXT_PHASE_DECISION",
+          "CODE CELL 104 FINAL HEALTH: PASS"
+        ],
+        "status_policy": "EVIDENCE_BASED_CONSERVATIVE",
+        "stored_execution_state": {
+          "code_cells": 104,
+          "executed_code_cells": 9,
+          "last_execution_count": 9,
+          "markdown_cells": 105,
+          "stored_error_outputs": 1,
+          "unexecuted_code_cells": 95
+        },
+        "terminality": "SUPERSEDED_HISTORICAL_HANDOFF"
+      },
+      {
+        "consolidated_status": "NOTEBOOK_HEALTH_PASS",
+        "heading": "بازبینی نهایی مؤلف — پایلوت دیتاست معیار پروژه RAG Finance",
+        "mutable_by_nb12j": false,
+        "path": "notebooks/phase2/12c_human_review_for_author.ipynb",
+        "rerun_required_for_consolidation": false,
+        "role": "AUTHOR_REVIEW_PREPARATION",
+        "sha256": "3d4d3c142279d5a8dc5418d01fa2d4a5a9f4d98a13be6212c8a4186f452b8c40",
+        "status_evidence_lines": [
+          "FINAL HEALTH CHECKS",
+          "NOTEBOOK HEALTH: PASS"
+        ],
+        "status_policy": "EVIDENCE_BASED_CONSERVATIVE",
+        "stored_execution_state": {
+          "code_cells": 6,
+          "executed_code_cells": 6,
+          "last_execution_count": 6,
+          "markdown_cells": 7,
+          "stored_error_outputs": 0,
+          "unexecuted_code_cells": 0
+        },
+        "terminality": "COMPLETED_HISTORICAL_REVIEW_PREPARATION"
+      },
+      {
+        "consolidated_status": "PARTIAL_STORED_EXECUTION_STATE_REQUIRES_HISTORICAL_CAUTION",
+        "heading": "بازبینی مجدد پس از Final Health — بررسی متن اصلی Case 4 از 22",
+        "mutable_by_nb12j": false,
+        "path": "notebooks/phase2/12d_second_human_review.ipynb",
+        "rerun_required_for_consolidation": false,
+        "role": "SECOND_HUMAN_REVIEW_EXTENSION",
+        "sha256": "35a650a51a4bbb037910376cad6a9a1d79ce6ccd75f0e6f0398ad13f7921dfb5",
+        "status_evidence_lines": [
+          "=== FROZEN INPUTS ===",
+          "CODE CELL 118 GATE: PASS"
+        ],
+        "status_policy": "EVIDENCE_BASED_CONSERVATIVE",
+        "stored_execution_state": {
+          "code_cells": 14,
+          "executed_code_cells": 10,
+          "last_execution_count": 13,
+          "markdown_cells": 14,
+          "stored_error_outputs": 1,
+          "unexecuted_code_cells": 4
+        },
+        "terminality": "SUPERSEDED_HISTORICAL_REVIEW_EXTENSION"
+      },
+      {
+        "consolidated_status": "FINAL_EXECUTION_PASS_SIGNAL_WITH_UNEXECUTED_ARCHIVAL_CELLS",
+        "heading": "Golden Dataset Full Generation — Stage 12D",
+        "mutable_by_nb12j": false,
+        "path": "notebooks/phase2/12e_golden_dataset_full_generation.ipynb",
+        "rerun_required_for_consolidation": false,
+        "role": "GOLDEN_V1_FULL_GENERATION",
+        "sha256": "65be5ab19aa1fb7de8209c4bdde71fe44975bcc3d7978927205040ced4802151",
+        "status_evidence_lines": [
+          "Taxonomy keys: ['authority_layers', 'freeze_status', 'frozen_structure', 'independent_audit', 'known_nonblocking_conditions', 'next_required_nb10_stage', 'review_resolution', 'schema_version', 'source_handoff', 'taxonomy_artifact', 'taxonomy_version']",
+          "freeze_status: str | PASS",
+          "freeze_status : FROZEN",
+          "\"freeze_status\": \"PASS\",",
+          "freeze_status\\\": \\\"FROZEN_FOR_EVALUATION\\\",\\n\",",
+          "freeze_status : FROZEN\\n\",",
+          "freeze_status\\\": \\\"FROZEN\\\",\\n\",",
+          "freeze_status\\\\\\\": \\\\\\\"FROZEN_FOR_EVALUATION\\\\\\\",\\\\n\\\",\\n\",",
+          "freeze_status : FROZEN\\\\n\\\",\\n\",",
+          "freeze_status\\\\\\\": \\\\\\\"FROZEN\\\\\\\",\\\\n\\\",\\n\",",
+          "FINAL STATUS: FINAL_EXECUTION_PASS",
+          "CODE CELL 73 GATE: PASS"
+        ],
+        "status_policy": "EVIDENCE_BASED_CONSERVATIVE",
+        "stored_execution_state": {
+          "code_cells": 82,
+          "executed_code_cells": 78,
+          "last_execution_count": 79,
+          "markdown_cells": 72,
+          "stored_error_outputs": 0,
+          "unexecuted_code_cells": 4
+        },
+        "terminality": "COMPLETED_GOLDEN_V1_GENERATION"
+      },
+      {
+        "consolidated_status": "FROZEN_PENDING_AUTHOR_REVIEW",
+        "heading": "Notebook Introduction — Author Feedback Integration",
+        "mutable_by_nb12j": false,
+        "path": "notebooks/phase2/12f_author_feedback_integration.ipynb",
+        "rerun_required_for_consolidation": false,
+        "role": "AUTHOR_FEEDBACK_INTEGRATION",
+        "sha256": "74fa94e1382df48a238bbc2f9b41393d453a1790119c79db133ac21d54fa9afd",
+        "status_evidence_lines": [
+          "\"freeze_status\": \"FROZEN\",",
+          "# Frozen Target Reallocation",
+          "print(\"=== FROZEN TARGET REALLOCATION ===\")",
+          "# Build Frozen Generation Queue",
+          "frozen_generation_queue = []",
+          "frozen_generation_queue.append(",
+          "print(\"=== FROZEN GENERATION QUEUE ===\")",
+          "len(frozen_generation_queue)",
+          "frozen_generation_queue[0]",
+          "# Frozen Expansion Workspace Initialization",
+          "frozen_expansion_workspace = []",
+          "for candidate in frozen_generation_queue:",
+          "frozen_expansion_workspace.append(",
+          "print(\"=== FROZEN EXPANSION WORKSPACE ===\")",
+          "len(frozen_expansion_workspace)",
+          "for x in frozen_expansion_workspace",
+          "assert len(frozen_expansion_workspace) == 573",
+          "frozen_expansion_workspace",
+          "\"reviewer_decision\": \"pending_author_review\",",
+          "\"pending_author_review\"",
+          "\"FROZEN\",",
+          "\"\\nCODE CELL 72 GATE: PASS\""
+        ],
+        "status_policy": "EVIDENCE_BASED_CONSERVATIVE",
+        "stored_execution_state": {
+          "code_cells": 14,
+          "executed_code_cells": 4,
+          "last_execution_count": 8,
+          "markdown_cells": 15,
+          "stored_error_outputs": 1,
+          "unexecuted_code_cells": 10
+        },
+        "terminality": "WAITING_EXTERNAL_AUTHOR_FEEDBACK"
+      },
+      {
+        "consolidated_status": "EXPERIMENT_HANDOFF_PASS",
+        "heading": "NB12g — آزمایش بازسازی کیفیت Golden Dataset",
+        "mutable_by_nb12j": false,
+        "path": "notebooks/phase2/12g_golden_dataset_quality_rebuild_lab.ipynb",
+        "rerun_required_for_consolidation": false,
+        "role": "GOLDEN_QUALITY_REBUILD_LAB",
+        "sha256": "2250add83c79257e81cc512682d177e5faa055c882fd59da40b97c977cd8bb19",
+        "status_evidence_lines": [
+          "MACHINE JUDGMENT: PASS",
+          "V2 CANDIDATE REPORT: PASS",
+          "EXPERIMENT HANDOFF BOUNDARY: PASS"
+        ],
+        "status_policy": "EVIDENCE_BASED_CONSERVATIVE",
+        "stored_execution_state": {
+          "code_cells": 18,
+          "executed_code_cells": 18,
+          "last_execution_count": 18,
+          "markdown_cells": 14,
+          "stored_error_outputs": 0,
+          "unexecuted_code_cells": 0
+        },
+        "terminality": "COMPLETED_EXPERIMENT"
+      },
+      {
+        "consolidated_status": "FINAL_EXPERIMENT_ACCEPTANCE_PASS",
+        "heading": "NB12g — بازسازی تمیز و آزمایشی Golden Dataset",
+        "mutable_by_nb12j": false,
+        "path": "notebooks/phase2/12g_golden_dataset_rebuild_clean.ipynb",
+        "rerun_required_for_consolidation": false,
+        "role": "QUOTE_GROUNDED_CORE46_REBUILD",
+        "sha256": "75313e4df4fcfa4f86d118be3e2be6d4d1d2cab95d5aa50b7d2ebc82ef8c81b2",
+        "status_evidence_lines": [
+          "Semantic PASS: 46",
+          "Status: PASS",
+          "FINAL EXPERIMENT ACCEPTANCE: PASS"
+        ],
+        "status_policy": "EVIDENCE_BASED_CONSERVATIVE",
+        "stored_execution_state": {
+          "code_cells": 40,
+          "executed_code_cells": 40,
+          "last_execution_count": 47,
+          "markdown_cells": 10,
+          "stored_error_outputs": 0,
+          "unexecuted_code_cells": 0
+        },
+        "terminality": "COMPLETED_QUALITY_REGRESSION_EXPERIMENT"
+      },
+      {
+        "consolidated_status": "INTERNAL_AUDIT_PASS_WITH_FORMAL_RELEASE_RIGHTS_BLOCKED",
+        "heading": "NB12h — Audit ریشه‌های Golden Dataset و منطق تعمیم v1",
+        "mutable_by_nb12j": false,
+        "path": "notebooks/phase2/12h_pilot_and_expansion_audit.ipynb",
+        "rerun_required_for_consolidation": false,
+        "role": "PILOT_EXPANSION_AUDIT_AND_REGISTRY_PREPARATION",
+        "sha256": "47e57a94bae7086c4b191c4783d0cae86e587747803cfb22db7d78f613de9cc4",
+        "status_evidence_lines": [
+          "Formal release rights status: BLOCKED_PENDING_RIGHTS",
+          "NB12h GOLDEN / CHUNK INDEPENDENCE AUDIT: PASS",
+          "NB12h CLAIM EXTRACTION STRUCTURE CONTRACT AUDIT: PASS"
+        ],
+        "status_policy": "EVIDENCE_BASED_CONSERVATIVE",
+        "stored_execution_state": {
+          "code_cells": 41,
+          "executed_code_cells": 41,
+          "last_execution_count": 42,
+          "markdown_cells": 43,
+          "stored_error_outputs": 0,
+          "unexecuted_code_cells": 0
+        },
+        "terminality": "COMPLETED_INTERNAL_AUDIT"
+      },
+      {
+        "consolidated_status": "PASS_GOAL_ACHIEVED",
+        "heading": "ساخت Claim Registry و Knowledge Graph مرکزی برای RAG و تولید کتاب",
+        "mutable_by_nb12j": false,
+        "path": "notebooks/phase2/12i_claim_registry_and_knowledge_graph.ipynb",
+        "rerun_required_for_consolidation": false,
+        "role": "CLAIM_REGISTRY_AND_KNOWLEDGE_GRAPH",
+        "sha256": "c2b6a938c5b01e22c5dfe10cf638a8958fc74de890569c0f33dc41ac52c631d9",
+        "status_evidence_lines": [
+          "FINAL NOTEBOOK HEALTH STATUS: PASS",
+          "FINAL NB12i STATUS: PASS",
+          "FINAL NB12i GOAL: GOAL_ACHIEVED",
+          "CODE CELL 31 GATE: PASS"
+        ],
+        "status_policy": "EVIDENCE_BASED_CONSERVATIVE",
+        "stored_execution_state": {
+          "code_cells": 31,
+          "executed_code_cells": 31,
+          "last_execution_count": 31,
+          "markdown_cells": 32,
+          "stored_error_outputs": 0,
+          "unexecuted_code_cells": 0
+        },
+        "terminality": "COMPLETED_ACCEPTED_REGISTRY"
+      }
+    ],
+    "total_including_current": 11
+  },
+  "golden_v1": {
+    "dataset_path": "notebooks/phase2/golden_dataset/golden_dataset_v1.jsonl",
+    "dataset_sha256": "df18bd384261400986e2c3bcdeda0cffa084243fb99f073c51396dbe2d9f2729",
+    "mutable_by_nb12j": false,
+    "records_observed": 573,
+    "report_dataset_version": "golden_dataset_v1",
+    "report_freeze_status": "PASS",
+    "report_path": "notebooks/phase2/golden_dataset/golden_dataset_v1_final_report.json",
+    "report_records": 573,
+    "report_sha256": "ad312830d3de972bad39e962d95ad1e6c5375057174e6def0d8772e22ecd4621",
+    "report_status": "READY_FOR_NEXT_EVALUATION_PHASE",
+    "report_target_size": 573,
+    "role": "HISTORICAL_BASELINE"
+  },
+  "manifest_version": "twelve_series_consolidated_manifest_v1",
+  "next_stage": "REGISTRY_CLAIM_ELIGIBILITY_PROFILE",
+  "source_git": {
+    "branch": "rag-phase2",
+    "head_at_initial_preflight": "3a360c6a9027d0dd012ed2573b2e80470371efc5"
+  }
+}

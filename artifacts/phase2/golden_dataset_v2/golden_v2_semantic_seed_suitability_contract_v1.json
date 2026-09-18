@@ -1,0 +1,86 @@
+{
+  "allowed_reason_codes": {
+    "ATTRIBUTION_REQUIRED": "Secondary knowledge must preserve attribution.",
+    "EVIDENCE_SCOPE_MISMATCH": "Attached evidence does not cleanly support the full intended question scope.",
+    "INSUFFICIENT_STANDALONE_CONTEXT": "Claim depends on context not contained in the claim/evidence packet.",
+    "NOT_BENCHMARK_WORTHY_AS_INDEPENDENT_SEED": "The claim is valid knowledge but is not useful as an independent evaluation target.",
+    "PARTIAL_OVERLAP_DEPENDENCY": "Seed independence is uncertain because of substantial PARTIAL_OVERLAP.",
+    "PASS_EVIDENCE_GROUNDED": "Answer can be grounded in attached evidence.",
+    "PASS_INDEPENDENT": "Knowledge target is sufficiently independent.",
+    "PASS_STANDALONE": "Standalone benchmark question is possible.",
+    "PASS_UNAMBIGUOUS": "Question scope can be made sufficiently unambiguous.",
+    "QUESTION_SCOPE_AMBIGUOUS": "A stable benchmark question cannot yet be framed without ambiguity.",
+    "SUBSUMPTION_DEPENDENCY": "Seed independence is uncertain because of a SUBSUMES relationship.",
+    "TOO_CONTEXT_DEPENDENT": "The claim is valid but too dependent on surrounding context for a robust standalone benchmark item."
+  },
+  "allowed_verdicts": {
+    "ACCEPT_SEED": "The slot can support at least one independent, unambiguous, evidence-grounded benchmark question.",
+    "HOLD_RELATION_REVIEW": "The slot may be useful, but independence from a SUBSUMES or PARTIAL_OVERLAP neighbor is not yet sufficiently established.",
+    "HOLD_REPAIR": "The underlying knowledge is usable, but scope, evidence choice, or question framing requires repair before final seed acceptance.",
+    "REJECT_AS_GOLDEN_SEED": "The Registry Claim remains valid, but this slot is not suitable as an independent Golden benchmark seed."
+  },
+  "contract_version": "golden_v2_semantic_seed_suitability_contract_v1",
+  "current_state": "CONTRACT_FROZEN_PENDING_REVIEW_PACKET_AND_PILOT_DESIGN",
+  "evidence_policy": {
+    "document_id_required": true,
+    "evidence_may_be_fabricated": false,
+    "exact_quote_required": true,
+    "locator_required": true,
+    "representative_evidence_required": true,
+    "secondary_attribution_required": true,
+    "source_id_required": true
+  },
+  "execution_policy": {
+    "destructive_overwrite": false,
+    "full_review_after_pilot_pass": true,
+    "one_frozen_final_judgment_per_seed_slot": true,
+    "pilot_before_full_run": true,
+    "resumable_cache_required": true,
+    "retry_failed_calls_allowed": true
+  },
+  "judge_task": "Determine whether each Provisional Semantic Seed Slot can serve as an independent, unambiguous, evidence-grounded Golden benchmark seed.",
+  "reason_for_additive_contract": "The provisional Seed Pool is already frozen and must not be destructively overwritten. Semantic judgments and the reviewed Seed Pool therefore use new versioned artifacts.",
+  "registry_policy": {
+    "golden_rejection_deletes_registry_claim": false,
+    "golden_rejection_invalidates_registry_claim": false,
+    "registry_artifacts_mutable": false
+  },
+  "relation_context_policy": {
+    "partial_overlap_neighbor_context_in_packet": true,
+    "relation_context_informs_independence_judgment": true,
+    "relation_context_may_auto_reject": false,
+    "semantic_duplicate_component_members_in_packet": true,
+    "subsumes_neighbor_context_in_packet": true
+  },
+  "release_artifacts": {
+    "judgments": "artifacts/phase2/golden_dataset_v2/golden_v2_seed_suitability_judgments_v1.jsonl",
+    "review_report": "artifacts/phase2/golden_dataset_v2/golden_v2_seed_suitability_report_v1.json",
+    "reviewed_seed_pool": "artifacts/phase2/golden_dataset_v2/golden_v2_seed_pool_reviewed_v1.jsonl"
+  },
+  "required_dimensions": {
+    "answerable_from_attached_evidence": "BOOLEAN",
+    "attribution_preservable": "BOOLEAN",
+    "independent_evaluation_target": "BOOLEAN",
+    "question_scope_unambiguous": "BOOLEAN",
+    "requires_external_unprovided_context": "BOOLEAN",
+    "standalone_question_possible": "BOOLEAN"
+  },
+  "review_scope": {
+    "full_population_review_required": true,
+    "pilot_fixed_target": null,
+    "pilot_required_before_full_review": true,
+    "pilot_selection_mode": "DETERMINISTIC_OBSERVED_STRATA_COVERAGE",
+    "population": 3817,
+    "skip_low_risk_slots_without_semantic_judgment": false
+  },
+  "upstream_contract": {
+    "path": "artifacts/phase2/golden_dataset_v2/golden_dataset_v2_registry_driven_contract_v1.json",
+    "sha256": "2cc3bfe682f1b2f4500089a35a82d7d6757193d2d2bf7fca18ea31338e962d8f"
+  },
+  "upstream_provisional_seed_pool": {
+    "path": "artifacts/phase2/golden_dataset_v2/golden_v2_seed_pool_v1.jsonl",
+    "records": 3817,
+    "sha256": "aa2380e1bc5af22217f19420c94393182f3a5b2f3ddf3908d4d672854706c4f1"
+  },
+  "working_cache_namespace": "artifacts/phase2/golden_dataset_v2/work/seed_suitability_judgments_v1"
+}

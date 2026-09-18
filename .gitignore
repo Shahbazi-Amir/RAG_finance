@@ -129,6 +129,7 @@ data/phase2/database/
 artifacts/**/cache/
 artifacts/**/caches/
 artifacts/**/batches/
+artifacts/**/work/
 
 artifacts/**/*_cache/
 artifacts/**/*_cache_v*/
@@ -167,9 +168,9 @@ artifacts/phase2/golden_dataset_rebuild_clean/
 #
 # Policy:
 # - large / reproducible row-level datasets => ignored
-# - caches => ignored
+# - caches / runtime work => ignored
 # - contracts / reports / acceptance metadata => tracked
-#
+# =========================================================
 
 
 # ---------------------------------------------------------
@@ -250,22 +251,68 @@ artifacts/phase2/knowledge_registry/*_review_queue.jsonl
 
 
 # IMPORTANT:
-# The following kinds of NB12i artifacts are intentionally NOT ignored:
+# NB12i contracts / reports / audit metadata are intentionally tracked.
+
+
+# =========================================================
+# NB12j — Golden Dataset v2
+# =========================================================
 #
-# claim_registry_contract_v1.json
-# claim_extraction_unit_contract_v1.json
-# claim_extraction_text_profile_v1.json
-# claim_extraction_prompt_window_contract_v1.json
-# claim_extraction_validation_contract_v1.json
+# IMPORTANT POLICY:
 #
-# claim_extraction_pilot_report_v*.json
-# claim_extraction_pilot_semantic_report_v*.json
-# claim_extraction_pilot_final_report_v*.json
-# claim_extraction_full_report_v*.json
-# claim_validation_full_report_v*.json
-# claim_registry_report_v*.json
+# The Full-3817 Semantic Review creates thousands of
+# per-Seed checkpoints. They are runtime/resume data and
+# MUST NOT be committed to Git.
 #
-# These are relatively small reproducibility / audit records.
+# Small contracts, final reports, acceptance metadata and
+# approved final release artifacts remain trackable.
+# =========================================================
+
+
+# ---------------------------------------------------------
+# Full semantic-review runtime checkpoints
+#
+# Contains thousands of per-Seed JSON checkpoint files.
+# These are local execution/resume state.
+# ---------------------------------------------------------
+
+artifacts/phase2/golden_dataset_v2/work/
+
+
+# ---------------------------------------------------------
+# Any semantic-review cache directories
+# ---------------------------------------------------------
+
+artifacts/phase2/golden_dataset_v2/**/cache/
+artifacts/phase2/golden_dataset_v2/**/caches/
+artifacts/phase2/golden_dataset_v2/**/*_cache/
+artifacts/phase2/golden_dataset_v2/**/*_cache_v*/
+
+
+# ---------------------------------------------------------
+# Temporary / intermediate Golden-v2 material
+# ---------------------------------------------------------
+
+artifacts/phase2/golden_dataset_v2/**/*_candidate.json
+artifacts/phase2/golden_dataset_v2/**/*_candidate.jsonl
+
+artifacts/phase2/golden_dataset_v2/**/*_temp.json
+artifacts/phase2/golden_dataset_v2/**/*_temp.jsonl
+
+artifacts/phase2/golden_dataset_v2/**/*_tmp.json
+artifacts/phase2/golden_dataset_v2/**/*_tmp.jsonl
+
+artifacts/phase2/golden_dataset_v2/**/*_review_queue.json
+artifacts/phase2/golden_dataset_v2/**/*_review_queue.jsonl
+
+
+# IMPORTANT:
+# Do NOT broadly ignore:
+#
+# artifacts/phase2/golden_dataset_v2/
+#
+# because formal contracts, reports, acceptance metadata
+# and approved final Golden-v2 artifacts may need tracking.
 
 
 # =========================================================

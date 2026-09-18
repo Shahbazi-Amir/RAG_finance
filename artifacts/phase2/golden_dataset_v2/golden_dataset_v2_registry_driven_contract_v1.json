@@ -1,0 +1,225 @@
+{
+  "artifact_family": {
+    "candidate_report": "golden_dataset_v2_registry_driven_candidate_report_v1.json",
+    "claim_eligibility_manifest": "golden_v2_claim_eligibility_manifest_v1.jsonl",
+    "contract": "golden_dataset_v2_registry_driven_contract_v1.json",
+    "dataset_candidate": "golden_dataset_v2_registry_driven_candidate_v1.jsonl",
+    "final_acceptance_report": "golden_dataset_v2_final_acceptance_report_v1.json",
+    "seed_pool": "golden_v2_seed_pool_v1.jsonl",
+    "twelve_series_manifest": "twelve_series_consolidated_manifest_v1.json"
+  },
+  "artifact_namespace": "artifacts/phase2/golden_dataset_v2",
+  "author_review_policy": {
+    "assume_feedback_complete": false,
+    "author_reviewed_final_freeze_requires_real_feedback": true,
+    "engineering_candidate_allowed_while_pending": true,
+    "fabricate_author_feedback": false,
+    "status_must_be_discovered": true,
+    "status_source": "author_review_28_pilots.md"
+  },
+  "consolidation_policy": {
+    "consolidation_unit": "NOTEBOOK_AND_ARTIFACT_PROVENANCE",
+    "copy_old_notebook_code_into_12j": false,
+    "modify_old_12_series_notebooks": false,
+    "modify_old_artifacts": false,
+    "preserve_source_hashes": true,
+    "rerun_old_12_series_notebooks": false,
+    "status_must_be_evidence_based": true,
+    "unknown_status_when_not_provable": true
+  },
+  "contract_version": "golden_dataset_v2_registry_driven_contract_v1",
+  "current_state": "CONTRACT_FROZEN_PENDING_12_SERIES_EVIDENCE_DISCOVERY",
+  "final_freeze_policy": {
+    "author_reviewed_label_requires_completed_author_feedback": true,
+    "engineering_acceptance_required": true,
+    "final_notebook_health_required": true,
+    "restart_kernel_run_all_required": true
+  },
+  "golden_generation_policy": {
+    "answer_must_be_grounded": true,
+    "control_question_redundancy": true,
+    "control_seed_redundancy": true,
+    "evidence_first": true,
+    "measure_authority_coverage": true,
+    "measure_claim_type_coverage": true,
+    "measure_registry_coverage": true,
+    "measure_source_coverage": true,
+    "negative_or_challenge_cases_must_not_break_grounding": true,
+    "preserve_claim_id": true,
+    "preserve_evidence_id": true,
+    "preserve_source_lineage": true,
+    "question_must_be_supported_by_claim_and_evidence": true
+  },
+  "golden_seed_policy": {
+    "do_not_invent_fixed_seed_count": true,
+    "paraphrase_counts_as_new_seed": false,
+    "question_variant_counts_as_new_seed": false,
+    "seed_count_target": "TO_BE_DERIVED_FROM_ACTUAL_ELIGIBILITY_AND_COVERAGE",
+    "seed_requires_canonical_claim_id": true,
+    "seed_requires_traceable_source": true,
+    "seed_requires_validated_evidence": true,
+    "seed_unit": "INDEPENDENT_EVIDENCE_GROUNDED_CANONICAL_CLAIM"
+  },
+  "legacy_golden_policy": {
+    "core46_is_full_knowledge_universe": false,
+    "core46_mutable": false,
+    "core46_role": "QUALITY_AND_REGRESSION_ANCHOR",
+    "golden_v1_mutable": false,
+    "golden_v1_role": "HISTORICAL_BASELINE"
+  },
+  "notebook": "notebooks/phase2/12j_golden_dataset_v2_registry_driven_rebuild.ipynb",
+  "pipeline_position": [
+    "SOURCE_CORPUS",
+    "CLAIM_REGISTRY_AND_KNOWLEDGE_GRAPH",
+    "GOLDEN_DATASET_V2",
+    "BENCHMARK"
+  ],
+  "purpose": "Consolidate the validated outputs of the 12-series workflow and build a broad, registry-driven, evidence-grounded Golden Dataset v2 without modifying frozen upstream artifacts.",
+  "registry_consumption_policy": {
+    "automatic_semantic_merge_allowed": false,
+    "automatic_subsumption_merge_allowed": false,
+    "canonical_claim_population": 4006,
+    "claim_id_required": true,
+    "evidence_required": true,
+    "original_source_remains_final_evidence": true,
+    "primary_seed_population_artifact": "claims_deduplicated_v1.jsonl",
+    "raw_claims_are_direct_seed_population": false,
+    "retrieval_chunks_define_golden_truth": false,
+    "source_provenance_required": true
+  },
+  "source_manifests": {
+    "claim_registry": {
+      "canonical_claims": {
+        "path": "artifacts/phase2/knowledge_registry/claims_deduplicated_v1.jsonl",
+        "sha256": "8d1080d6519faa8ca5d4614256dbabf04426170b8f914f606eb3088d1f2c08bb"
+      },
+      "claim_id_mapping": {
+        "path": "artifacts/phase2/knowledge_registry/claim_id_mapping_v1.jsonl",
+        "sha256": "5b5e07134961212984e480e0574722ee2e12cef4aebf21922d7a99a8ab3c9ad2"
+      },
+      "claim_relations": {
+        "path": "artifacts/phase2/knowledge_registry/claim_relations_v1.jsonl",
+        "sha256": "b505a90036ea9eeec36ddb3e9ebd687f5503c4f8cfccf59f0fb0b684774d9009"
+      },
+      "contract": {
+        "path": "artifacts/phase2/knowledge_registry/claim_registry_contract_v1.json",
+        "sha256": "711244aece1c4ce736ec12969a521ccfcc4f983103504ce8d914d174d1478f8a"
+      },
+      "evidence_links": {
+        "path": "artifacts/phase2/knowledge_registry/claim_evidence_links_v1.jsonl",
+        "sha256": "1c47a493b2128b1fd489752378a3e5d4dc7e53b7379b03674abe37d9a77cc9ba"
+      },
+      "knowledge_graph": {
+        "path": "artifacts/phase2/knowledge_registry/knowledge_graph_v1.json",
+        "sha256": "a408f12bac5470de46d700a3c8082e39899473984651b6ca1eeb377e8d80dd1a"
+      },
+      "registry_report": {
+        "path": "artifacts/phase2/knowledge_registry/claim_registry_report_v1.json",
+        "sha256": "f7951467ca49d1bac1e1c1efee9e93e756f24fbf6db02e500e35a6672b21d645"
+      }
+    },
+    "legacy_golden_and_review": {
+      "author_review": {
+        "mutation_policy": "IMMUTABLE",
+        "path": "notebooks/phase2/archive/author_review_28_pilots.md",
+        "review_status": "TO_BE_DISCOVERED_FROM_SOURCE",
+        "role": "AUTHOR_REVIEW_SOURCE",
+        "sha256": "18ccbbaf0787b37fa4dd1d11d0aa4b8b49e5c37858d1b803a3db8ab035a14bbd"
+      },
+      "core46": {
+        "mutation_policy": "IMMUTABLE",
+        "path": "notebooks/phase2/golden_dataset/golden_dataset_quote_grounded_final_adjudicated_experiment.jsonl",
+        "records": 46,
+        "role": "QUALITY_AND_REGRESSION_ANCHOR",
+        "sha256": "2b461fc7dfa25e9b65b2b37c709dfc8c6cd65c7b84ef5ec7fae9e3449a6e37ae"
+      },
+      "golden_v1": {
+        "mutation_policy": "IMMUTABLE",
+        "path": "notebooks/phase2/golden_dataset/golden_dataset_v1.jsonl",
+        "records": 573,
+        "role": "HISTORICAL_BASELINE",
+        "sha256": "df18bd384261400986e2c3bcdeda0cffa084243fb99f073c51396dbe2d9f2729"
+      },
+      "golden_v1_final_report": {
+        "mutation_policy": "IMMUTABLE",
+        "path": "notebooks/phase2/golden_dataset/golden_dataset_v1_final_report.json",
+        "role": "HISTORICAL_BASELINE_REPORT",
+        "sha256": "ad312830d3de972bad39e962d95ad1e6c5375057174e6def0d8772e22ecd4621"
+      }
+    },
+    "twelve_series_notebooks": {
+      "notebooks/phase2/12_golden_dataset.ipynb": {
+        "execution_policy": "DO_NOT_RERUN_FOR_CONSOLIDATION",
+        "mutation_policy": "READ_ONLY",
+        "sha256": "6b15e7edb02b09000de217ce3b3149a89214c36cc740d8edbc610b6db2a34c12"
+      },
+      "notebooks/phase2/12b_golden_dataset_continuation_compact.ipynb": {
+        "execution_policy": "DO_NOT_RERUN_FOR_CONSOLIDATION",
+        "mutation_policy": "READ_ONLY",
+        "sha256": "24631b877cf43b1e5141947fae7b26160f798ac09a4c5aea39e03370880e8295"
+      },
+      "notebooks/phase2/12c_human_review_for_author.ipynb": {
+        "execution_policy": "DO_NOT_RERUN_FOR_CONSOLIDATION",
+        "mutation_policy": "READ_ONLY",
+        "sha256": "3d4d3c142279d5a8dc5418d01fa2d4a5a9f4d98a13be6212c8a4186f452b8c40"
+      },
+      "notebooks/phase2/12d_second_human_review.ipynb": {
+        "execution_policy": "DO_NOT_RERUN_FOR_CONSOLIDATION",
+        "mutation_policy": "READ_ONLY",
+        "sha256": "35a650a51a4bbb037910376cad6a9a1d79ce6ccd75f0e6f0398ad13f7921dfb5"
+      },
+      "notebooks/phase2/12e_golden_dataset_full_generation.ipynb": {
+        "execution_policy": "DO_NOT_RERUN_FOR_CONSOLIDATION",
+        "mutation_policy": "READ_ONLY",
+        "sha256": "65be5ab19aa1fb7de8209c4bdde71fe44975bcc3d7978927205040ced4802151"
+      },
+      "notebooks/phase2/12f_author_feedback_integration.ipynb": {
+        "execution_policy": "DO_NOT_RERUN_FOR_CONSOLIDATION",
+        "mutation_policy": "READ_ONLY",
+        "sha256": "74fa94e1382df48a238bbc2f9b41393d453a1790119c79db133ac21d54fa9afd"
+      },
+      "notebooks/phase2/12g_golden_dataset_quality_rebuild_lab.ipynb": {
+        "execution_policy": "DO_NOT_RERUN_FOR_CONSOLIDATION",
+        "mutation_policy": "READ_ONLY",
+        "sha256": "2250add83c79257e81cc512682d177e5faa055c882fd59da40b97c977cd8bb19"
+      },
+      "notebooks/phase2/12g_golden_dataset_rebuild_clean.ipynb": {
+        "execution_policy": "DO_NOT_RERUN_FOR_CONSOLIDATION",
+        "mutation_policy": "READ_ONLY",
+        "sha256": "75313e4df4fcfa4f86d118be3e2be6d4d1d2cab95d5aa50b7d2ebc82ef8c81b2"
+      },
+      "notebooks/phase2/12h_pilot_and_expansion_audit.ipynb": {
+        "execution_policy": "DO_NOT_RERUN_FOR_CONSOLIDATION",
+        "mutation_policy": "READ_ONLY",
+        "sha256": "47e57a94bae7086c4b191c4783d0cae86e587747803cfb22db7d78f613de9cc4"
+      },
+      "notebooks/phase2/12i_claim_registry_and_knowledge_graph.ipynb": {
+        "execution_policy": "DO_NOT_RERUN_FOR_CONSOLIDATION",
+        "mutation_policy": "READ_ONLY",
+        "sha256": "c2b6a938c5b01e22c5dfe10cf638a8958fc74de890569c0f33dc41ac52c631d9"
+      },
+      "notebooks/phase2/12j_golden_dataset_v2_registry_driven_rebuild.ipynb": {
+        "execution_policy": "DO_NOT_RERUN_FOR_CONSOLIDATION",
+        "mutation_policy": "READ_ONLY",
+        "sha256": "9309e50d839e2ef0462015687d5d4b549e0d574d60fc36b5f7df1d7ebdaf36c1"
+      }
+    }
+  },
+  "source_state": {
+    "canonical_claims": 4006,
+    "claim_relations": 2516,
+    "git_branch": "rag-phase2",
+    "git_head_at_preflight": "3a360c6a9027d0dd012ed2573b2e80470371efc5",
+    "registry_acceptance_checks_passed": 22,
+    "registry_acceptance_checks_total": 22,
+    "registry_status": "PASS",
+    "twelve_series_notebook_count": 11,
+    "validated_evidence_occurrences": 4125
+  },
+  "write_policy": {
+    "destructive_overwrite": false,
+    "git_write_without_explicit_permission": false,
+    "reuse_existing_only_if_byte_identical": true,
+    "versioned_outputs": true
+  }
+}
