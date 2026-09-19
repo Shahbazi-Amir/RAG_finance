@@ -1,0 +1,27 @@
+{
+  "artifact_type": "NB13_EMBEDDING_BENCHMARK_ACCEPTANCE",
+  "golden_dataset_sha256": "b9ca18e710686ddca48a25c637840b716adb306717cafd8ec7c96ce9e182e6f2",
+  "historical_embedding_generation_failure_rate": "NOT_MEASURED_HISTORICALLY",
+  "historical_embedding_generation_latency": "NOT_MEASURED_HISTORICALLY",
+  "metrics": {
+    "mrr": 0.4112586794908517,
+    "ndcg_at_10": 0.3735597782433693,
+    "ndcg_at_5": 0.3435425881236073,
+    "query_count": 3813,
+    "recall_at_10": 0.6113296616837136,
+    "recall_at_5": 0.5229478101232625
+  },
+  "paid_api_used_for_closure": false,
+  "reranking_required_for_nb13_acceptance": false,
+  "revision_binding_status": "RESOLVED_BY_CONTENT_EQUIVALENCE",
+  "schema_version": "1.0",
+  "selected_chunk_count": 3488,
+  "selected_chunk_path": "data/phase2/chunks/nb11_benchmark_v1/baseline_phase1_char_safe_v1.jsonl",
+  "selected_chunk_sha256": "3891c4ecad9332ba753cd605bbccd99da9d063f64934a30ee39e495349cffb50",
+  "selected_chunk_strategy": "baseline_phase1_char_safe",
+  "selected_model_id": "intfloat/multilingual-e5-small",
+  "selected_model_key": "multilingual_e5_small",
+  "selected_revision": "614241f622f53c4eeff9890bdc4f31cfecc418b3",
+  "source_family_analysis": "UNAVAILABLE_FROM_CURRENT_METADATA",
+  "status": "PASS"
+}

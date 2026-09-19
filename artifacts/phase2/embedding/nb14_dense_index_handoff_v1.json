@@ -1,0 +1,43 @@
+{
+  "artifact_type": "NB14_DENSE_INDEX_HANDOFF",
+  "chunk_input": {
+    "path": "data/phase2/chunks/nb11_benchmark_v1/baseline_phase1_char_safe_v1.jsonl",
+    "record_count": 3488,
+    "sha256": "3891c4ecad9332ba753cd605bbccd99da9d063f64934a30ee39e495349cffb50",
+    "strategy": "baseline_phase1_char_safe"
+  },
+  "constraints": {
+    "embedding_config_mutation_allowed": false,
+    "golden_dataset_mutation_allowed": false,
+    "paid_api_required": false,
+    "reranking_required": false
+  },
+  "embedding_config": {
+    "dimension": 384,
+    "model_id": "intfloat/multilingual-e5-small",
+    "normalization": "normalized SentenceTransformer encoding with L2-normalized retrieval vectors",
+    "passage_prefix": "passage:",
+    "query_prefix": "query:",
+    "revision": "614241f622f53c4eeff9890bdc4f31cfecc418b3",
+    "snapshot_content_identity_sha256": "0a487b28bf6bee275240c12ddc31ac3639ed367138e2382c113045eba10d217c"
+  },
+  "embedding_release": {
+    "path": "artifacts/phase2/embedding/embedding_release_v1.json",
+    "sha256": "8c48acc7c266dd153bce038ff6ec679b716e88679ccd865e15c333e4fbd7f429"
+  },
+  "golden_dataset_sha256": "b9ca18e710686ddca48a25c637840b716adb306717cafd8ec7c96ce9e182e6f2",
+  "lineage": {
+    "acceptance_sha256": "0e8fdf4730d7989c58994edab80819ceba712ec192392193d19c315646f916d2",
+    "embedding_adr_sha256": "ea893234f36a136d173b64f473f6eb29c3b38bdb37126f51286fb51dac25b3a8",
+    "embedding_release_sha256": "8c48acc7c266dd153bce038ff6ec679b716e88679ccd865e15c333e4fbd7f429",
+    "revision_resolution_sha256": "2b8c8d652c90d445d7c527936524ec8f65326f688400ed2e341a12efe4ae171d",
+    "roadmap_metrics_sha256": "58bf331dc6196d73919fe670d3cd96d57f0eb6a219bd41173e1e22d09344ae91"
+  },
+  "schema_version": "1.0",
+  "status": "READY_FOR_NB14",
+  "vector_cache": {
+    "inventory_sha256": "a3d29c5eadadca3a55c622a11271b6b0ffd492a1782e80a5704b0bdb3c5ea5f2",
+    "recompute_required": false,
+    "root": "artifacts/phase2/embedding_benchmark/b9ca18e710686ddca48a25c637840b716adb306717cafd8ec7c96ce9e182e6f2/multilingual_e5_small"
+  }
+}
