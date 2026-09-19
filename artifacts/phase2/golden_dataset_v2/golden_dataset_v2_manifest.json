@@ -1,0 +1,26 @@
+{
+  "api_failures": 0,
+  "artifact_type": "golden_dataset_v2_manifest",
+  "dataset_file_sha256": "b9ca18e710686ddca48a25c637840b716adb306717cafd8ec7c96ce9e182e6f2",
+  "dataset_filename": "golden_dataset_v2.jsonl",
+  "dataset_payload_sha256": "539635b4c89e8f4eda41dde8106e04307c063f3fe0f5db402ef0440802233a03",
+  "dataset_version": "golden_dataset_v2_registry_driven_v2",
+  "freeze_status": "FROZEN",
+  "freeze_version": "golden_dataset_v2_final_freeze_v1",
+  "generation_source_distribution": {
+    "FINAL_SINGLE_CANDIDATE_REPAIR": 1,
+    "FULL_GENERATION_V4": 3776,
+    "TARGETED_SEMANTIC_REPAIR": 36
+  },
+  "record_construction_version": "golden_dataset_v2_final_record_construction_v1",
+  "record_count": 3813,
+  "semantic_distribution": {
+    "FAIL": 0,
+    "PASS": 3813
+  },
+  "semantic_failures": 0,
+  "structural_distribution": {
+    "FAIL": 0,
+    "PASS": 3813
+  }
+}

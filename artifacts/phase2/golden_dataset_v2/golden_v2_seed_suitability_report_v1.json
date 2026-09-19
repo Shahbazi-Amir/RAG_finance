@@ -1,0 +1,56 @@
+{
+  "artifacts": {
+    "judgments": {
+      "path": "artifacts/phase2/golden_dataset_v2/golden_v2_seed_suitability_judgments_v1.jsonl",
+      "records": 3817,
+      "sha256": "24362575bc173cad564c321c17e52d31ec063594305c8a97aed2e836831371f7"
+    },
+    "reviewed_seed_pool": {
+      "path": "artifacts/phase2/golden_dataset_v2/golden_v2_seed_pool_reviewed_v1.jsonl",
+      "records": 3813,
+      "sha256": "aa5cce37362e03a777076af8b3488a7d95c0be1b41bef0ea110ae7d675acdd57"
+    }
+  },
+  "immutability": {
+    "provisional_seed_records_modified_in_place": false,
+    "rejected_seed_evidence_expanded_in_place": false,
+    "semantic_review_checkpoints_modified": false
+  },
+  "next_stage": "GOLDEN_V2_REPAIR_CANDIDATE_HANDLING_AND_QUESTION_GENERATION_READINESS",
+  "population": {
+    "accepted_current_seeds": 3813,
+    "population_accounted": 3817,
+    "provisional_seed_slots": 3817,
+    "rejected_current_seeds": 4,
+    "semantic_reviews_valid": 3817,
+    "source_repair_candidates": 4
+  },
+  "reject_adjudication": {
+    "all_rejected_source_knowledge_preserved": true,
+    "frozen_evidence_silently_expanded": false,
+    "policy_version": "golden_v2_reject_content_adjudication_v1",
+    "rejected_current_seed_slot_ids": [
+      "gsv2_slot_180fd2a592d1442a829f39d9",
+      "gsv2_slot_a3d0743900628e5199e72bdc",
+      "gsv2_slot_dda80211d464c74c787be5d1",
+      "gsv2_slot_df894995039d3f3feb356407"
+    ],
+    "source_repair_seed_slot_ids": [
+      "gsv2_slot_180fd2a592d1442a829f39d9",
+      "gsv2_slot_a3d0743900628e5199e72bdc",
+      "gsv2_slot_dda80211d464c74c787be5d1",
+      "gsv2_slot_df894995039d3f3feb356407"
+    ]
+  },
+  "report_version": "golden_v2_seed_suitability_report_v1",
+  "semantic_review": {
+    "policy_version": "golden_v2_full_semantic_review_controller_v1",
+    "prompt_version": "golden_v2_budget_canary_semantic_judge_v1",
+    "verdict_counts": {
+      "ACCEPT_SEED": 3813,
+      "REJECT_AS_GOLDEN_SEED": 4
+    }
+  },
+  "stage": "POST_REVIEW_SEED_ADJUDICATION",
+  "status": "PASS"
+}

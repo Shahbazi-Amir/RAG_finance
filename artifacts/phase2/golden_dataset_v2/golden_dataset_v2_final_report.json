@@ -1,0 +1,26 @@
+{
+  "dataset_path": "artifacts/phase2/golden_dataset_v2/golden_dataset_v2.jsonl",
+  "dataset_version": "golden_dataset_v2_registry_driven_v2",
+  "freeze_status": "FROZEN",
+  "freeze_version": "golden_dataset_v2_final_freeze_v1",
+  "generation": {
+    "final_single_candidate_repair": 1,
+    "full_generation_v4": 3776,
+    "targeted_semantic_repair": 36
+  },
+  "hashes": {
+    "dataset_file_sha256": "b9ca18e710686ddca48a25c637840b716adb306717cafd8ec7c96ce9e182e6f2",
+    "dataset_payload_sha256": "539635b4c89e8f4eda41dde8106e04307c063f3fe0f5db402ef0440802233a03"
+  },
+  "manifest_path": "artifacts/phase2/golden_dataset_v2/golden_dataset_v2_manifest.json",
+  "record_count": 3813,
+  "report_type": "golden_dataset_v2_final_report",
+  "status": "PASS",
+  "validation": {
+    "api_failures": 0,
+    "semantic_fail": 0,
+    "semantic_pass": 3813,
+    "structural_fail": 0,
+    "structural_pass": 3813
+  }
+}
