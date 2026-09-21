@@ -1,0 +1,38 @@
+{
+  "artifact_type": "NB15_SPARSE_INDEX_RELOAD_VALIDATION",
+  "configuration_sha256": "96d66676d20bacd764ec9a163995dd48266c90c2acea1c8a5f77d95d9efb6ecc",
+  "dense_index_mutated": false,
+  "document_validation": {
+    "document_count": 3488,
+    "id_order_parity": "PASS",
+    "length_parity": "PASS"
+  },
+  "embedding_recomputation": false,
+  "file_hash_validation": "PASS",
+  "kernel_state_dependency": false,
+  "logical_index_sha256": "ce09bb4749da03c9dfa1a849de18fc8c490ce6b09eb34a30a96b9fedc478a8eb",
+  "paid_api_calls": 0,
+  "posting_validation": {
+    "document_frequency_parity": "PASS",
+    "posting_array_parity": "PASS",
+    "posting_entry_count": 383637,
+    "vocabulary_size": 27311
+  },
+  "release_id": "rag_finance_phase2_sparse_v1",
+  "reload_validation_status": "PASS",
+  "retrieval_validation": {
+    "maximum_absolute_score_delta": 4.840906775882559e-06,
+    "maximum_metric_absolute_delta": 0.0,
+    "metric_parity": "PASS",
+    "query_count": 1149,
+    "ranking_mismatch_count": 0,
+    "reason_for_score_tolerance": "Reloaded numeric arrays may use a different floating-point dtype while preserving equivalent scores, identical Top-10 rankings and identical evaluation metrics.",
+    "score_atol": 1e-08,
+    "score_comparison_method": "numpy.allclose",
+    "score_mismatch_count": 0,
+    "score_parity": "PASS",
+    "score_rtol": 1e-06,
+    "top_10_ranking_parity": "PASS"
+  },
+  "schema_version": "1.0"
+}

@@ -1,0 +1,364 @@
+{
+  "artifact_type": "NB15_INDEPENDENT_SPARSE_TEST_EVALUATION",
+  "configuration": {
+    "analyzer_id": "fa_join_zwnj_stopwords_v1",
+    "bm25": {
+      "b": 0.3,
+      "implementation": "local_robertson_bm25_v1",
+      "k1": 1.2
+    },
+    "configuration_id": "fa_join_zwnj_stopwords_v1__k1_1.20__b_0.30",
+    "configuration_sha256": "96d66676d20bacd764ec9a163995dd48266c90c2acea1c8a5f77d95d9efb6ecc",
+    "mutated_after_freeze": false
+  },
+  "development_comparison": {
+    "development_metrics": {
+      "hit_at_10": 0.743993993993994,
+      "hit_at_5": 0.6786786786786787,
+      "ndcg_at_10": 0.50936500655395,
+      "ndcg_at_5": 0.4855041074074556,
+      "precision_at_10": 0.1001876876876877,
+      "precision_at_5": 0.17432432432432432,
+      "recall_at_10": 0.5796647838314506,
+      "recall_at_5": 0.5128710555793888,
+      "reciprocal_rank": 0.5861315247868337
+    },
+    "role": "REPORT_ONLY_NO_RETUNING",
+    "test_minus_development": {
+      "hit_at_10": -0.0364221924274144,
+      "hit_at_5": -0.02680748633751251,
+      "ndcg_at_10": -0.019159779595781246,
+      "ndcg_at_5": -0.016705811876370158,
+      "precision_at_10": -0.005670716408314333,
+      "precision_at_5": -0.007570625455742941,
+      "recall_at_10": -0.026087138674170895,
+      "recall_at_5": -0.019304185837584364,
+      "reciprocal_rank": -0.029366497917368117
+    }
+  },
+  "evaluation_scope": {
+    "configuration_tuning_on_test": false,
+    "corpus_document_count": 3488,
+    "query_count": 1149,
+    "split": "TEST",
+    "test_accessed_after_freeze": true
+  },
+  "exact_term_slices": {
+    "latin": {
+      "metrics": {
+        "hit_at_10": 1.0,
+        "hit_at_5": 1.0,
+        "ndcg_at_10": 0.6628931267520183,
+        "ndcg_at_5": 0.6579511552957991,
+        "precision_at_10": 0.17142857142857143,
+        "precision_at_5": 0.3142857142857142,
+        "recall_at_10": 0.7035714285714285,
+        "recall_at_5": 0.6749999999999999,
+        "reciprocal_rank": 0.8571428571428571
+      },
+      "query_count": 7
+    },
+    "numeric": {
+      "metrics": {
+        "hit_at_10": 0.95,
+        "hit_at_5": 0.85,
+        "ndcg_at_10": 0.7167052524024559,
+        "ndcg_at_5": 0.6793060756677244,
+        "precision_at_10": 0.135,
+        "precision_at_5": 0.22999999999999998,
+        "recall_at_10": 0.7816666666666666,
+        "recall_at_5": 0.6966666666666665,
+        "reciprocal_rank": 0.7671428571428571
+      },
+      "query_count": 20
+    },
+    "oov": {
+      "metrics": {
+        "hit_at_10": 0.71875,
+        "hit_at_5": 0.6875,
+        "ndcg_at_10": 0.5040451238186263,
+        "ndcg_at_5": 0.4867905681228797,
+        "precision_at_10": 0.08906249999999999,
+        "precision_at_5": 0.159375,
+        "recall_at_10": 0.578125,
+        "recall_at_5": 0.5364583333333333,
+        "reciprocal_rank": 0.5622581845238095
+      },
+      "query_count": 64
+    },
+    "zwnj": {
+      "metrics": {
+        "hit_at_10": 0.7298050139275766,
+        "hit_at_5": 0.6796657381615598,
+        "ndcg_at_10": 0.5045781198729888,
+        "ndcg_at_5": 0.48511247404466734,
+        "precision_at_10": 0.09763231197771587,
+        "precision_at_5": 0.1743732590529248,
+        "recall_at_10": 0.5605335588274306,
+        "recall_at_5": 0.5054334129194853,
+        "reciprocal_rank": 0.583762214263607
+      },
+      "query_count": 718
+    }
+  },
+  "failure_taxonomy": {
+    "counts": {
+      "LEXICAL_OVERLAP_RANK_BELOW_10": 317,
+      "NO_QUERY_GOLD_LEXICAL_OVERLAP": 19,
+      "SUCCESS": 813
+    },
+    "examples": {
+      "LEXICAL_OVERLAP_RANK_BELOW_10": [
+        {
+          "candidate_id": "golden_v2_candidate_5b7d6db3729c4a7c491d2e0a",
+          "question": "تصمیم درست شامل چه چیزی می‌شود؟",
+          "relevant_chunk_count": 1,
+          "retrieved_chunk_count": 10,
+          "source_types": [
+            "transcript"
+          ]
+        },
+        {
+          "candidate_id": "golden_v2_candidate_1eee8351a1558b1847fdee48",
+          "question": "آموزش مدرسه بر چه چیزی تمرکز بیشتری دارد و نیازهای زندگی بر چه چیزی هستند؟",
+          "relevant_chunk_count": 2,
+          "retrieved_chunk_count": 10,
+          "source_types": [
+            "website"
+          ]
+        },
+        {
+          "candidate_id": "golden_v2_candidate_7ae288b9a4af05c3e1841644",
+          "question": "سواد مالی از چه چیزی شروع می‌شود و دو جنبه اصلی آن چیست؟",
+          "relevant_chunk_count": 2,
+          "retrieved_chunk_count": 10,
+          "source_types": [
+            "transcript"
+          ]
+        },
+        {
+          "candidate_id": "golden_v2_candidate_5a2f4942e5ce8e27b1b85611",
+          "question": "ترکیب (3) و (4) به عنوان چه چیزی طبقه‌بندی می‌شود؟",
+          "relevant_chunk_count": 1,
+          "retrieved_chunk_count": 10,
+          "source_types": [
+            "book"
+          ]
+        },
+        {
+          "candidate_id": "golden_v2_candidate_9a0b9051bd4fe83fbfcd4c91",
+          "question": "چه راه حلی برای هزینه‌هایی که پول آنها وجود ندارد است؟",
+          "relevant_chunk_count": 2,
+          "retrieved_chunk_count": 10,
+          "source_types": [
+            "transcript"
+          ]
+        },
+        {
+          "candidate_id": "golden_v2_candidate_fffeddf82f9f238ce77d4f77",
+          "question": "چه کاری باید انجام شود؟",
+          "relevant_chunk_count": 2,
+          "retrieved_chunk_count": 10,
+          "source_types": [
+            "transcript"
+          ]
+        },
+        {
+          "candidate_id": "golden_v2_candidate_c85aec9fcf9baa238b1f69d5",
+          "question": "پول زمانی ارزشمند می‌شود که چه شرطی برقرار باشد؟",
+          "relevant_chunk_count": 2,
+          "retrieved_chunk_count": 10,
+          "source_types": [
+            "transcript"
+          ]
+        },
+        {
+          "candidate_id": "golden_v2_candidate_f03eec4fd545c44b2bf64059",
+          "question": "شیوه‌های مدیریت ریسک چه چیزی را شامل می‌شود؟",
+          "relevant_chunk_count": 1,
+          "retrieved_chunk_count": 10,
+          "source_types": [
+            "transcript"
+          ]
+        },
+        {
+          "candidate_id": "golden_v2_candidate_bb961e8fa116d840b61d9809",
+          "question": "نیاز چیست؟",
+          "relevant_chunk_count": 2,
+          "retrieved_chunk_count": 10,
+          "source_types": [
+            "website"
+          ]
+        },
+        {
+          "candidate_id": "golden_v2_candidate_36f35a7ac0a91660f3bf7ebf",
+          "question": "برنامه چهلستون چند گفتگوی گوناگون دارد؟",
+          "relevant_chunk_count": 1,
+          "retrieved_chunk_count": 10,
+          "source_types": [
+            "website"
+          ]
+        }
+      ],
+      "NO_QUERY_GOLD_LEXICAL_OVERLAP": [
+        {
+          "candidate_id": "golden_v2_candidate_e071cb3cda1d3b80619fdb84",
+          "question": "رابطه بین هزینه‌ها و درآمد چیست؟",
+          "relevant_chunk_count": 1,
+          "retrieved_chunk_count": 10,
+          "source_types": [
+            "transcript"
+          ]
+        },
+        {
+          "candidate_id": "golden_v2_candidate_892191175e05cb36b2bbcdae",
+          "question": "اصل 'پرداخت به خود' به عنوان چه راهکاری ارائه می‌شود؟",
+          "relevant_chunk_count": 1,
+          "retrieved_chunk_count": 10,
+          "source_types": [
+            "transcript"
+          ]
+        },
+        {
+          "candidate_id": "golden_v2_candidate_2fc73d4d8083a14fb73ad467",
+          "question": "چه کاری را پیشنهاد می‌شود؟",
+          "relevant_chunk_count": 1,
+          "retrieved_chunk_count": 10,
+          "source_types": [
+            "book"
+          ]
+        },
+        {
+          "candidate_id": "golden_v2_candidate_32ed311abaedab08b3e3ebff",
+          "question": "خودفرمایی چیست؟",
+          "relevant_chunk_count": 1,
+          "retrieved_chunk_count": 10,
+          "source_types": [
+            "transcript"
+          ]
+        },
+        {
+          "candidate_id": "golden_v2_candidate_7412acf66c9a59bf1cdb0440",
+          "question": "مهارت فوتبالی چه اجزایی را شامل می‌شود؟",
+          "relevant_chunk_count": 2,
+          "retrieved_chunk_count": 10,
+          "source_types": [
+            "transcript"
+          ]
+        },
+        {
+          "candidate_id": "golden_v2_candidate_ef52c9e6f52ac7dbb31c5a6e",
+          "question": "چه چیزی به عنوان ابزاری برای افزایش ثروت توصیه می‌شود؟",
+          "relevant_chunk_count": 2,
+          "retrieved_chunk_count": 10,
+          "source_types": [
+            "website"
+          ]
+        },
+        {
+          "candidate_id": "golden_v2_candidate_acf4f79da55c8b0f496cc517",
+          "question": "بدهی چیست؟",
+          "relevant_chunk_count": 2,
+          "retrieved_chunk_count": 10,
+          "source_types": [
+            "transcript"
+          ]
+        },
+        {
+          "candidate_id": "golden_v2_candidate_f10254712d71d90661b70a24",
+          "question": "محاسبه مربوط به چه زمانی است؟",
+          "relevant_chunk_count": 1,
+          "retrieved_chunk_count": 10,
+          "source_types": [
+            "transcript"
+          ]
+        },
+        {
+          "candidate_id": "golden_v2_candidate_6ab231d9e43f0b6ce519dadd",
+          "question": "افلاطون چیست؟",
+          "relevant_chunk_count": 2,
+          "retrieved_chunk_count": 10,
+          "source_types": [
+            "website"
+          ]
+        },
+        {
+          "candidate_id": "golden_v2_candidate_bf40939b20adbf407a64b12f",
+          "question": "مسکن چه کالایی طبقه‌بندی می‌شود؟",
+          "relevant_chunk_count": 2,
+          "retrieved_chunk_count": 10,
+          "source_types": [
+            "transcript"
+          ]
+        }
+      ]
+    }
+  },
+  "files_created": 0,
+  "independent_test_status": "PASS",
+  "latency_ms": {
+    "maximum": 3.303334000520408,
+    "median_p50": 0.39248200118890963,
+    "minimum": 0.1027630023600068,
+    "p95": 0.7580063989735203,
+    "scope": "LOCAL_INDEPENDENT_TEST_NOT_PRODUCTION_SLO"
+  },
+  "metrics": {
+    "hit_at_10": 0.7075718015665796,
+    "hit_at_5": 0.6518711923411662,
+    "ndcg_at_10": 0.49020522695816876,
+    "ndcg_at_5": 0.46879829553108543,
+    "precision_at_10": 0.09451697127937336,
+    "precision_at_5": 0.16675369886858138,
+    "recall_at_10": 0.5535776451572797,
+    "recall_at_5": 0.49356686974180447,
+    "reciprocal_rank": 0.5567650268694656
+  },
+  "paid_api_calls": 0,
+  "repository_mutated": false,
+  "schema_version": "1.0",
+  "source_type_metrics": {
+    "book": {
+      "metrics": {
+        "hit_at_10": 0.7033898305084746,
+        "hit_at_5": 0.652542372881356,
+        "ndcg_at_10": 0.5573391183504649,
+        "ndcg_at_5": 0.5365929361298433,
+        "precision_at_10": 0.07881355932203389,
+        "precision_at_5": 0.14237288135593218,
+        "recall_at_10": 0.6822033898305084,
+        "recall_at_5": 0.6228813559322034,
+        "reciprocal_rank": 0.5273843153080441
+      },
+      "query_count": 118
+    },
+    "transcript": {
+      "metrics": {
+        "hit_at_10": 0.626984126984127,
+        "hit_at_5": 0.5555555555555556,
+        "ndcg_at_10": 0.41502393622650446,
+        "ndcg_at_5": 0.3883337388998766,
+        "precision_at_10": 0.0788888888888889,
+        "precision_at_5": 0.1349206349206349,
+        "recall_at_10": 0.5028439153439153,
+        "recall_at_5": 0.43003968253968244,
+        "reciprocal_rank": 0.4477091206853111
+      },
+      "query_count": 630
+    },
+    "website": {
+      "metrics": {
+        "hit_at_10": 0.8354114713216958,
+        "hit_at_5": 0.8029925187032418,
+        "ndcg_at_10": 0.5885653615632997,
+        "ndcg_at_5": 0.5752643880173899,
+        "precision_at_10": 0.12369077306733169,
+        "precision_at_5": 0.2239401496259352,
+        "recall_at_10": 0.5954340339627122,
+        "recall_at_5": 0.5553200332502078,
+        "reciprocal_rank": 0.7367454379923208
+      },
+      "query_count": 401
+    }
+  }
+}

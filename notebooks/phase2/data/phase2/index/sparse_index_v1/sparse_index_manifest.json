@@ -1,0 +1,98 @@
+{
+  "artifact_type": "NB15_SPARSE_INDEX_MANIFEST",
+  "canonical_inputs": {
+    "chunk_count": 3488,
+    "chunk_path": "data/phase2/chunks/nb11_benchmark_v1/baseline_phase1_char_safe_v1.jsonl",
+    "chunk_sha256": "3891c4ecad9332ba753cd605bbccd99da9d063f64934a30ee39e495349cffb50",
+    "gold_mapping_sha256": "42216f67665cfc50697789dffe4eb550839ee22bcbfc0489accc407519dad4d1",
+    "golden_dataset_file_sha256": "b9ca18e710686ddca48a25c637840b716adb306717cafd8ec7c96ce9e182e6f2",
+    "golden_dataset_path": "artifacts/phase2/golden_dataset_v2/golden_dataset_v2.jsonl",
+    "golden_dataset_payload_sha256": "539635b4c89e8f4eda41dde8106e04307c063f3fe0f5db402ef0440802233a03",
+    "split_sha256": "68df1196f683b6ab9a9df08c015f001b0caca056331eb80d0048aec783736d8f"
+  },
+  "configuration": {
+    "analyzer_id": "fa_join_zwnj_stopwords_v1",
+    "b": 0.3,
+    "bm25_implementation": "local_robertson_bm25_v1",
+    "configuration_id": "fa_join_zwnj_stopwords_v1__k1_1.20__b_0.30",
+    "configuration_sha256": "96d66676d20bacd764ec9a163995dd48266c90c2acea1c8a5f77d95d9efb6ecc",
+    "k1": 1.2,
+    "mutation_allowed": false
+  },
+  "dense_compatibility": {
+    "dense_logical_index_sha256": "2fc5e50ebbd1e1e66d59c703eb48f1367b2d3deadfed62efb9d5a5e6959f7ef4",
+    "dense_mutated": false,
+    "dense_point_count": 3488,
+    "dense_release_path": "artifacts/phase2/dense_index/dense_index_release_v1.json",
+    "dense_release_sha256": "706c020caa2bda77c767fda8cd1b57498818afdbdbbbdd2a72f898b55ca6ca50"
+  },
+  "embedding_recomputation": false,
+  "files": {
+    "configuration": {
+      "path": "data/phase2/index/sparse_index_v1/sparse_configuration_v1.json",
+      "sha256": "f0b6becdb096493ccfe491c04acec649216238f1e13a6124427994c23c9fd670"
+    },
+    "documents": {
+      "path": "data/phase2/index/sparse_index_v1/sparse_documents_v1.jsonl",
+      "sha256": "104c1fb0aade4456bfd6ec7ce4466e3c09f95d916c079bf1a91f4767d1250d9f"
+    },
+    "inventory": {
+      "path": "data/phase2/index/sparse_index_v1/sparse_index_inventory_v1.json",
+      "sha256": "6e2f5f7e055d56c9234f3f9cb6f7d6bcfee618e85485cdd13bcdc9f3ce0fd810"
+    },
+    "postings": {
+      "path": "data/phase2/index/sparse_index_v1/sparse_postings_v1.jsonl",
+      "sha256": "d2b1ceed5a62f9f0048ede8fa73ccde5299b4d85b4f3f164aefaa82d939257d0"
+    },
+    "reload_validation": {
+      "path": "data/phase2/index/sparse_index_v1/sparse_reload_validation_v1.json",
+      "sha256": "9b11c57eee6d77dbbe490bd9bb6ceddc6258a5e095be9e8857b8421bb1eb44fa"
+    },
+    "test_evaluation": {
+      "path": "reports/phase2/sparse_test_evaluation_v1.json",
+      "sha256": "f7952cda670112fb270884f9c300b03b8b69c86ced201bc92e87431f55084bb6"
+    }
+  },
+  "index_statistics": {
+    "average_document_length": 152.54730224609375,
+    "document_count": 3488,
+    "posting_entry_count": 383637,
+    "total_token_count": 532085,
+    "vocabulary_size": 27311
+  },
+  "known_limitations": {
+    "lexical_overlap_rank_below_10_count": 317,
+    "next_stage_mitigation": "NB16_DENSE_SPARSE_HYBRID_RETRIEVAL",
+    "no_lexical_overlap_query_count": 19,
+    "transcript_ndcg_at_10": 0.41502393622650446,
+    "weakest_source_type": "transcript"
+  },
+  "logical_index_sha256": "ce09bb4749da03c9dfa1a849de18fc8c490ce6b09eb34a30a96b9fedc478a8eb",
+  "manifest_status": "PASS_COMPLETE_FROZEN",
+  "paid_api_calls": 0,
+  "release_id": "rag_finance_phase2_sparse_v1",
+  "schema_version": "1.0",
+  "test_metrics": {
+    "hit_at_10": 0.7075718015665796,
+    "hit_at_5": 0.6518711923411662,
+    "ndcg_at_10": 0.49020522695816876,
+    "ndcg_at_5": 0.46879829553108543,
+    "precision_at_10": 0.09451697127937336,
+    "precision_at_5": 0.16675369886858138,
+    "recall_at_10": 0.5535776451572797,
+    "recall_at_5": 0.49356686974180447,
+    "reciprocal_rank": 0.5567650268694656
+  },
+  "validation": {
+    "configuration_frozen_before_test": true,
+    "document_parity": "PASS",
+    "file_hash_validation": "PASS",
+    "metric_parity": "PASS",
+    "posting_parity": "PASS",
+    "reload_validation": "PASS",
+    "score_parity": "PASS",
+    "test_query_count": 1149,
+    "test_tuning_performed": false,
+    "top_10_ranking_parity": "PASS"
+  }
+}

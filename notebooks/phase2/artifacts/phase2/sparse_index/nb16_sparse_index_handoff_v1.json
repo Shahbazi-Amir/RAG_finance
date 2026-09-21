@@ -1,0 +1,52 @@
+{
+  "artifact_type": "NB16_SPARSE_INDEX_HANDOFF",
+  "configuration_sha256": "96d66676d20bacd764ec9a163995dd48266c90c2acea1c8a5f77d95d9efb6ecc",
+  "consumer_notebook": "16_hybrid_retrieval.ipynb",
+  "consumer_rules": {
+    "dense_mutation_allowed": false,
+    "preserve_document_ids": true,
+    "retune_sparse_on_hybrid_test": false,
+    "sparse_mutation_allowed": false,
+    "validate_all_hashes_before_use": true
+  },
+  "dense_pairing_contract": {
+    "dense_logical_index_sha256": "2fc5e50ebbd1e1e66d59c703eb48f1367b2d3deadfed62efb9d5a5e6959f7ef4",
+    "dense_release_path": "artifacts/phase2/dense_index/dense_index_release_v1.json",
+    "dense_release_sha256": "706c020caa2bda77c767fda8cd1b57498818afdbdbbbdd2a72f898b55ca6ca50",
+    "shared_document_count": 3488
+  },
+  "handoff_status": "READY_FOR_NB16",
+  "known_limitations": {
+    "lexical_overlap_rank_below_10_count": 317,
+    "next_stage_mitigation": "NB16_DENSE_SPARSE_HYBRID_RETRIEVAL",
+    "no_lexical_overlap_query_count": 19,
+    "transcript_ndcg_at_10": 0.41502393622650446,
+    "weakest_source_type": "transcript"
+  },
+  "loader_contract": {
+    "analyzer_id": "fa_join_zwnj_stopwords_v1",
+    "b": 0.3,
+    "bm25_implementation": "local_robertson_bm25_v1",
+    "configuration_file_sha256": "f0b6becdb096493ccfe491c04acec649216238f1e13a6124427994c23c9fd670",
+    "configuration_path": "data/phase2/index/sparse_index_v1/sparse_configuration_v1.json",
+    "documents_path": "data/phase2/index/sparse_index_v1/sparse_documents_v1.jsonl",
+    "documents_sha256": "104c1fb0aade4456bfd6ec7ce4466e3c09f95d916c079bf1a91f4767d1250d9f",
+    "k1": 1.2,
+    "postings_path": "data/phase2/index/sparse_index_v1/sparse_postings_v1.jsonl",
+    "postings_sha256": "d2b1ceed5a62f9f0048ede8fa73ccde5299b4d85b4f3f164aefaa82d939257d0",
+    "top_k": 10
+  },
+  "logical_index_sha256": "ce09bb4749da03c9dfa1a849de18fc8c490ce6b09eb34a30a96b9fedc478a8eb",
+  "manifest": {
+    "path": "data/phase2/index/sparse_index_v1/sparse_index_manifest.json",
+    "sha256": "ce8192a64e555b00c2708ecde3885da870bb2e6725640c6fd194f885300e8fac"
+  },
+  "release_id": "rag_finance_phase2_sparse_v1",
+  "schema_version": "1.0",
+  "source_notebook": "15_sparse_index.ipynb",
+  "sparse_release": {
+    "path": "artifacts/phase2/sparse_index/sparse_index_release_v1.json",
+    "sha256": "879f52850a71629f02437c1ab1173e3f9e6c55ec5441ad4649784be63935c51b",
+    "status": "FROZEN_FOR_HYBRID_RETRIEVAL"
+  }
+}

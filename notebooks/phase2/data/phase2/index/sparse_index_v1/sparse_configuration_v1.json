@@ -1,0 +1,147 @@
+{
+  "analyzer": {
+    "analyzer_id": "fa_join_zwnj_stopwords_v1",
+    "arabic_to_persian_character_mapping": true,
+    "definition": {
+      "analyzer_id": "fa_join_zwnj_stopwords_v1",
+      "lowercase_latin": true,
+      "normalize_arabic_letters": true,
+      "normalize_digits": true,
+      "remove_diacritics": true,
+      "remove_stopwords": true,
+      "stopword_version": "PERSIAN_STOPWORDS_V1",
+      "unicode_form": "NFC",
+      "zwnj_policy": "join"
+    },
+    "digit_policy": "PERSIAN_AND_ARABIC_TO_ASCII",
+    "stopword_count": 28,
+    "stopword_policy": "FIXED_LIST_V1",
+    "stopwords": [
+      "آن",
+      "آیا",
+      "از",
+      "است",
+      "اما",
+      "اگر",
+      "این",
+      "با",
+      "باشد",
+      "بر",
+      "برای",
+      "به",
+      "بود",
+      "تا",
+      "در",
+      "را",
+      "شده",
+      "شود",
+      "می",
+      "هست",
+      "و",
+      "چرا",
+      "چه",
+      "چگونه",
+      "کدام",
+      "که",
+      "یا",
+      "یک"
+    ],
+    "unicode_normalization": "NFC",
+    "zwnj_policy": "JOIN"
+  },
+  "artifact_paths": {
+    "documents": "data/phase2/index/sparse_index_v1/sparse_documents_v1.jsonl",
+    "postings": "data/phase2/index/sparse_index_v1/sparse_postings_v1.jsonl",
+    "test_evaluation": "reports/phase2/sparse_test_evaluation_v1.json"
+  },
+  "artifact_type": "NB15_SPARSE_CONFIGURATION_FREEZE",
+  "bm25": {
+    "b": 0.3,
+    "deterministic_tie_break": "DOCUMENT_INDEX_ASCENDING",
+    "implementation": "local_robertson_bm25_v1",
+    "k1": 1.2,
+    "positive_scores_only": true,
+    "top_k": 10
+  },
+  "canonical_inputs": {
+    "chunk_count": 3488,
+    "chunk_path": "data/phase2/chunks/nb11_benchmark_v1/baseline_phase1_char_safe_v1.jsonl",
+    "chunk_sha256": "3891c4ecad9332ba753cd605bbccd99da9d063f64934a30ee39e495349cffb50",
+    "gold_mapping_sha256": "42216f67665cfc50697789dffe4eb550839ee22bcbfc0489accc407519dad4d1",
+    "golden_dataset_file_sha256": "b9ca18e710686ddca48a25c637840b716adb306717cafd8ec7c96ce9e182e6f2",
+    "golden_dataset_path": "artifacts/phase2/golden_dataset_v2/golden_dataset_v2.jsonl",
+    "golden_dataset_payload_sha256": "539635b4c89e8f4eda41dde8106e04307c063f3fe0f5db402ef0440802233a03",
+    "golden_query_count": 3813,
+    "split_sha256": "68df1196f683b6ab9a9df08c015f001b0caca056331eb80d0048aec783736d8f"
+  },
+  "challenger_evaluation": {
+    "challenger_analyzer_id": "fa_join_zwnj_high_df_stopwords_v1",
+    "challenger_configuration_id": "fa_join_zwnj_high_df_stopwords_v1__k1_1.20__b_0.30",
+    "challenger_ndcg_at_10": 0.5059347607563416,
+    "decision": "REJECT_CHALLENGER",
+    "ndcg_at_10_confidence_interval_95": {
+      "lower": -0.00513151432167087,
+      "upper": -0.0018270967938484714
+    },
+    "ndcg_at_10_delta": -0.003430245797608418,
+    "promotion_gates_passed": false,
+    "selected_ndcg_at_10": 0.50936500655395
+  },
+  "configuration_sha256": "96d66676d20bacd764ec9a163995dd48266c90c2acea1c8a5f77d95d9efb6ecc",
+  "configuration_status": "FROZEN_BEFORE_TEST_ACCESS",
+  "development_selection": {
+    "configuration_id": "fa_join_zwnj_stopwords_v1__k1_1.20__b_0.30",
+    "metrics": {
+      "hit_at_10": 0.743993993993994,
+      "hit_at_5": 0.6786786786786787,
+      "ndcg_at_10": 0.50936500655395,
+      "ndcg_at_5": 0.4855041074074556,
+      "precision_at_10": 0.1001876876876877,
+      "precision_at_5": 0.17432432432432432,
+      "recall_at_10": 0.5796647838314506,
+      "recall_at_5": 0.5128710555793888,
+      "reciprocal_rank": 0.5861315247868337
+    },
+    "primary_metric": "ndcg_at_10",
+    "tie_break_order": [
+      "reciprocal_rank",
+      "hit_at_10",
+      "recall_at_10",
+      "median_latency_ms",
+      "configuration_id"
+    ]
+  },
+  "files_created": 0,
+  "freeze_rules": {
+    "analyzer_mutation_after_test": false,
+    "bm25_parameter_mutation_after_test": false,
+    "stopword_mutation_after_test": false,
+    "test_result_may_change_configuration": false,
+    "test_result_role": "INDEPENDENT_FINAL_EVALUATION_ONLY"
+  },
+  "index_statistics": {
+    "average_document_length": 152.54730224609375,
+    "document_count": 3488,
+    "posting_entry_count": 383637,
+    "total_token_count": 532085,
+    "vocabulary_size": 27311
+  },
+  "paid_api_calls": 0,
+  "release_id": "rag_finance_phase2_sparse_v1",
+  "repository_mutated": false,
+  "schema_version": "1.0",
+  "selection_scope": {
+    "corpus": "ALL_CANONICAL_CHUNKS",
+    "development_query_count": 2664,
+    "selection_queries": "DEVELOPMENT_ONLY",
+    "test_access_policy": "LOCKED_DURING_SELECTION",
+    "test_queries_accessed": false
+  },
+  "serialization": {
+    "documents_format": "CANONICAL_JSONL_UTF8",
+    "pickle_used": false,
+    "posting_document_order": "DOCUMENT_INDEX_ASCENDING",
+    "postings_format": "CANONICAL_JSONL_UTF8",
+    "token_order": "UNICODE_CODEPOINT_ASCENDING"
+  }
+}

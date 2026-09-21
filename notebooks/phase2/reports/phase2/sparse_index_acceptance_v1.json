@@ -1,0 +1,46 @@
+{
+  "acceptance_status": "PASS_COMPLETE_FROZEN",
+  "artifact_type": "NB15_SPARSE_INDEX_ACCEPTANCE",
+  "configuration_sha256": "96d66676d20bacd764ec9a163995dd48266c90c2acea1c8a5f77d95d9efb6ecc",
+  "deliverables": {
+    "artifact_reload_validation": "PASS",
+    "bm25_sparse_index": "PASS",
+    "document_frequency_control": "PASS",
+    "error_analysis": "PASS",
+    "independent_sparse_benchmark": "PASS",
+    "names_and_exact_terms": "PASS",
+    "nb16_handoff": "PASS",
+    "persian_analyzer": "PASS",
+    "sparse_configuration_freeze": "PASS",
+    "tokenization_digit_zwnj_policy": "PASS"
+  },
+  "embedding_recomputation": false,
+  "logical_index_sha256": "ce09bb4749da03c9dfa1a849de18fc8c490ce6b09eb34a30a96b9fedc478a8eb",
+  "manifest": {
+    "path": "data/phase2/index/sparse_index_v1/sparse_index_manifest.json",
+    "sha256": "ce8192a64e555b00c2708ecde3885da870bb2e6725640c6fd194f885300e8fac"
+  },
+  "nb16_handoff": {
+    "path": "artifacts/phase2/sparse_index/nb16_sparse_index_handoff_v1.json",
+    "sha256": "e4070684ba1662de35e2fbdf2737560aee1b7c67a694e6dab3bd98be2f578439"
+  },
+  "objective": "Build, benchmark, validate, freeze and handoff a Persian BM25 sparse index.",
+  "paid_api_calls": 0,
+  "release": {
+    "path": "artifacts/phase2/sparse_index/sparse_index_release_v1.json",
+    "sha256": "879f52850a71629f02437c1ab1173e3f9e6c55ec5441ad4649784be63935c51b"
+  },
+  "release_id": "rag_finance_phase2_sparse_v1",
+  "schema_version": "1.0",
+  "test_metrics": {
+    "hit_at_10": 0.7075718015665796,
+    "hit_at_5": 0.6518711923411662,
+    "ndcg_at_10": 0.49020522695816876,
+    "ndcg_at_5": 0.46879829553108543,
+    "precision_at_10": 0.09451697127937336,
+    "precision_at_5": 0.16675369886858138,
+    "recall_at_10": 0.5535776451572797,
+    "recall_at_5": 0.49356686974180447,
+    "reciprocal_rank": 0.5567650268694656
+  }
+}
