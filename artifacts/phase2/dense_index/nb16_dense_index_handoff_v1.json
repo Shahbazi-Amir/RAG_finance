@@ -1,0 +1,25 @@
+{
+  "artifact_type": "NB16_DENSE_INDEX_HANDOFF",
+  "schema_version": "1.1",
+  "status": "READY_FOR_NB16",
+  "dense_index_release": {
+    "path": "artifacts/phase2/dense_index/dense_index_release_v1.json",
+    "sha256": "706c020caa2bda77c767fda8cd1b57498818afdbdbbbdd2a72f898b55ca6ca50"
+  },
+  "index_release_id": "dense_index_v1",
+  "collection_name": "rag_finance_phase2_dense_v1",
+  "storage_path": "data/phase2/index/dense_index_v1/qdrant",
+  "point_count": 3488,
+  "logical_index_sha256": "2fc5e50ebbd1e1e66d59c703eb48f1367b2d3deadfed62efb9d5a5e6959f7ef4",
+  "dimension": 384,
+  "distance": "COSINE",
+  "golden_dataset_sha256": "b9ca18e710686ddca48a25c637840b716adb306717cafd8ec7c96ce9e182e6f2",
+  "chunk_sha256": "3891c4ecad9332ba753cd605bbccd99da9d063f64934a30ee39e495349cffb50",
+  "embedding_release_sha256": "8c48acc7c266dd153bce038ff6ec679b716e88679ccd865e15c333e4fbd7f429",
+  "lifecycle_validation_status": "PASS",
+  "constraints": {
+    "do_not_recompute_embeddings": true,
+    "do_not_mutate_dense_index": true,
+    "reranking_required": false
+  }
+}

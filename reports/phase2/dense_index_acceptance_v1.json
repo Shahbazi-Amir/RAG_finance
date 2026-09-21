@@ -1,0 +1,91 @@
+{
+  "artifact_type": "NB14_DENSE_INDEX_ACCEPTANCE",
+  "schema_version": "1.1",
+  "notebook": "notebooks/phase2/14_dense_index.ipynb",
+  "objective": {
+    "modular_nb14_scope_achieved": true,
+    "p2_09_index_lifecycle_achieved": true,
+    "objective_status": "PASS"
+  },
+  "execution_health": {
+    "syntax_errors": [],
+    "error_outputs_excluding_active_final_cell": [],
+    "unexecuted_code_cells_excluding_active_final_cell": [],
+    "code_numbers": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17
+    ],
+    "forbidden_api_cells": [],
+    "api_enabled_true_cells": [],
+    "status": "PASS"
+  },
+  "modular_nb14_deliverables": {
+    "checks": {
+      "canonical_inputs_loaded": true,
+      "versioned_collection_created": true,
+      "distance_and_dimension_valid": true,
+      "payload_schema_created": true,
+      "batch_upsert_resume_complete": true,
+      "point_count_and_id_parity_pass": true,
+      "payload_vector_integrity_pass": true,
+      "snapshot_restore_test_pass": true,
+      "index_manifest_created": true,
+      "dense_index_gate_pass": true
+    },
+    "failed": [],
+    "status": "PASS"
+  },
+  "p2_09_operational_deliverables": {
+    "checks": {
+      "full_rebuild_pass": true,
+      "add_pass": true,
+      "update_pass": true,
+      "delete_pass": true,
+      "reindex_pass": true,
+      "idempotency_pass": true,
+      "temporary_collection_removed": true,
+      "canonical_collection_unchanged": true,
+      "lifecycle_gate_pass": true
+    },
+    "failed": [],
+    "status": "PASS"
+  },
+  "release": {
+    "path": "artifacts/phase2/dense_index/dense_index_release_v1.json",
+    "sha256": "706c020caa2bda77c767fda8cd1b57498818afdbdbbbdd2a72f898b55ca6ca50",
+    "status": "FROZEN_FOR_DOWNSTREAM_RETRIEVAL"
+  },
+  "nb16_handoff": {
+    "path": "artifacts/phase2/dense_index/nb16_dense_index_handoff_v1.json",
+    "sha256": "da7f812a79a21b1876c74668a548badb0f271b2d18ac2f1b2cf9663f789f301f",
+    "status": "READY_FOR_NB16"
+  },
+  "lifecycle_evidence": {
+    "path": "data/phase2/index/dense_index_v1/index_lifecycle_evidence.json",
+    "sha256": "bcea3bda1ee7ad86c9c6ca40ab674aa9bc23394a668dce86a99e5b03a1a3d2ef"
+  },
+  "point_count": 3488,
+  "logical_index_sha256": "2fc5e50ebbd1e1e66d59c703eb48f1367b2d3deadfed62efb9d5a5e6959f7ef4",
+  "paid_api_calls": 0,
+  "embedding_recomputation": false,
+  "next_execution_notebook": "15_sparse_index.ipynb",
+  "dense_index_consumer_notebook": "16_hybrid_retrieval.ipynb",
+  "release_status": "FROZEN_FOR_DOWNSTREAM_RETRIEVAL",
+  "final_status": "PASS_COMPLETE_FROZEN",
+  "status": "PASS"
+}

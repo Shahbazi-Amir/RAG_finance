@@ -1,0 +1,86 @@
+{
+  "artifact_type": "DENSE_INDEX_RELEASE",
+  "schema_version": "1.1",
+  "release_version": "dense_index_v1",
+  "status": "FROZEN_FOR_DOWNSTREAM_RETRIEVAL",
+  "final_status": "PASS_COMPLETE_FROZEN",
+  "backend": {
+    "type": "qdrant_local",
+    "qdrant_client_version": "1.18.0",
+    "storage_path": "data/phase2/index/dense_index_v1/qdrant",
+    "collection_name": "rag_finance_phase2_dense_v1"
+  },
+  "vector": {
+    "dimension": 384,
+    "distance": "COSINE",
+    "dtype": "float32",
+    "normalization": "normalized SentenceTransformer encoding with L2-normalized retrieval vectors"
+  },
+  "point_count": 3488,
+  "logical_index_sha256": "2fc5e50ebbd1e1e66d59c703eb48f1367b2d3deadfed62efb9d5a5e6959f7ef4",
+  "storage_inventory_sha256": "c0ff83e70501f4a8bc92fb1cfdf48636d68bce75a3abc4ceb55454c361cd3c6c",
+  "manifest": {
+    "path": "data/phase2/index/dense_index_v1/dense_index_manifest.json",
+    "sha256": "739539f7abdfd0df435389e103658e28244b078f425f33878458034058bfae47"
+  },
+  "snapshot": {
+    "path": "data/phase2/index/dense_index_v1/snapshots/dense_index_v1_qdrant_snapshot.tar.gz",
+    "sha256": "1b07eb4e2c8f02c30235e179456e01c026316ae985f1346fe96f4ae764e587a9",
+    "restore_status": "PASS"
+  },
+  "lifecycle_validation": {
+    "path": "data/phase2/index/dense_index_v1/index_lifecycle_evidence.json",
+    "sha256": "bcea3bda1ee7ad86c9c6ca40ab674aa9bc23394a668dce86a99e5b03a1a3d2ef",
+    "rebuild": "PASS",
+    "add": "PASS",
+    "update": "PASS",
+    "delete": "PASS",
+    "reindex": "PASS",
+    "idempotency": "PASS"
+  },
+  "inputs": {
+    "golden_dataset_sha256": "b9ca18e710686ddca48a25c637840b716adb306717cafd8ec7c96ce9e182e6f2",
+    "chunk_path": "data/phase2/chunks/nb11_benchmark_v1/baseline_phase1_char_safe_v1.jsonl",
+    "chunk_sha256": "3891c4ecad9332ba753cd605bbccd99da9d063f64934a30ee39e495349cffb50",
+    "chunk_count": 3488,
+    "embedding_release_path": "artifacts/phase2/embedding/embedding_release_v1.json",
+    "embedding_release_sha256": "8c48acc7c266dd153bce038ff6ec679b716e88679ccd865e15c333e4fbd7f429",
+    "handoff_path": "artifacts/phase2/embedding/nb14_dense_index_handoff_v1.json",
+    "handoff_sha256": "77eb9f34e36f174cf748fd99caa1d507b5dc8e4abcb51f62b452c35d46688efc",
+    "cache_root": "artifacts/phase2/embedding_benchmark/b9ca18e710686ddca48a25c637840b716adb306717cafd8ec7c96ce9e182e6f2/multilingual_e5_small",
+    "cache_inventory_sha256": "a3d29c5eadadca3a55c622a11271b6b0ffd492a1782e80a5704b0bdb3c5ea5f2"
+  },
+  "embedding": {
+    "model_id": "intfloat/multilingual-e5-small",
+    "revision": "614241f622f53c4eeff9890bdc4f31cfecc418b3",
+    "dimension": 384,
+    "query_prefix": "query:",
+    "passage_prefix": "passage:",
+    "normalization": "normalized SentenceTransformer encoding with L2-normalized retrieval vectors",
+    "snapshot_content_identity_sha256": "0a487b28bf6bee275240c12ddc31ac3639ed367138e2382c113045eba10d217c"
+  },
+  "point_identity": {
+    "source_field": "chunk_id",
+    "algorithm": "UUIDv5",
+    "namespace": "4dd47989-97bb-5e13-bc0f-fae8fa884248"
+  },
+  "payload_schema": {
+    "chunk_id": "keyword",
+    "source_id": "keyword",
+    "source_type": "keyword",
+    "strategy_id": "keyword",
+    "strategy_version": "keyword",
+    "role": "keyword",
+    "chunk_index": "integer",
+    "dense_index_release_id": "keyword",
+    "embedding_revision": "keyword"
+  },
+  "constraints": {
+    "paid_api_required": false,
+    "embedding_recomputation_required": false,
+    "dense_index_mutation_allowed": false,
+    "sparse_index_included": false,
+    "hybrid_retrieval_included": false,
+    "reranking_included": false
+  }
+}
