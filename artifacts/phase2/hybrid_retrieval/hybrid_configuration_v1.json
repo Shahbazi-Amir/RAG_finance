@@ -1,0 +1,185 @@
+{
+  "artifact_type": "NB16_HYBRID_CONFIGURATION",
+  "canonical_inputs": {
+    "chunk_sha256": "3891c4ecad9332ba753cd605bbccd99da9d063f64934a30ee39e495349cffb50",
+    "dense_logical_index_sha256": "2fc5e50ebbd1e1e66d59c703eb48f1367b2d3deadfed62efb9d5a5e6959f7ef4",
+    "dense_release_sha256": "706c020caa2bda77c767fda8cd1b57498818afdbdbbbdd2a72f898b55ca6ca50",
+    "development_query_embedding_metadata_sha256": "bc97f189d5cadb801f5aaaad9a86715509ad2a91a18dc4840b0918c0c8f2568e",
+    "development_query_embedding_sha256": "ca2641a2b8a484433a85ae0682b9b600c02e0c7e4e670af4e07eeb61099e4bb5",
+    "gold_mapping_sha256": "42216f67665cfc50697789dffe4eb550839ee22bcbfc0489accc407519dad4d1",
+    "golden_dataset_sha256": "b9ca18e710686ddca48a25c637840b716adb306717cafd8ec7c96ce9e182e6f2",
+    "sparse_configuration_sha256": "96d66676d20bacd764ec9a163995dd48266c90c2acea1c8a5f77d95d9efb6ecc",
+    "sparse_logical_index_sha256": "ce09bb4749da03c9dfa1a849de18fc8c490ce6b09eb34a30a96b9fedc478a8eb",
+    "sparse_release_sha256": "879f52850a71629f02437c1ab1173e3f9e6c55ec5441ad4649784be63935c51b",
+    "split_sha256": "68df1196f683b6ab9a9df08c015f001b0caca056331eb80d0048aec783736d8f"
+  },
+  "configuration_sha256": "1f618f4870622a6d31e831b54a35d76c96687d6683ab195af171b36214abcbf7",
+  "configuration_status": "FROZEN_BEFORE_TEST_ACCESS",
+  "dense": {
+    "collection_name": "rag_finance_phase2_dense_v1",
+    "corpus_embedding_recomputation": false,
+    "dimension": 384,
+    "distance": "COSINE",
+    "model_id": "intfloat/multilingual-e5-small",
+    "model_revision": "614241f622f53c4eeff9890bdc4f31cfecc418b3",
+    "mutation_allowed": false,
+    "query_prefix": "query:"
+  },
+  "development_selection": {
+    "bootstrap": {
+      "weighted_vs_best_rrf": {
+        "bootstrap_sample_count": 2000,
+        "confidence_interval_95": {
+          "lower": 0.01946797694070311,
+          "upper": 0.028785555111316787
+        },
+        "metric": "ndcg_at_10",
+        "observed_delta": 0.024048944427113417,
+        "probability_delta_above_zero": 1.0,
+        "query_count": 2664,
+        "seed": 16013,
+        "status": "PASS"
+      },
+      "weighted_vs_sparse": {
+        "bootstrap_sample_count": 2000,
+        "confidence_interval_95": {
+          "lower": 0.0227114016838452,
+          "upper": 0.035007033123031855
+        },
+        "metric": "ndcg_at_10",
+        "observed_delta": 0.028807771353753283,
+        "probability_delta_above_zero": 1.0,
+        "query_count": 2664,
+        "seed": 16013,
+        "status": "PASS"
+      }
+    },
+    "delta_vs_best_rrf": {
+      "hit_at_10": 0.0030030030030029353,
+      "hit_at_5": 0.006756756756756688,
+      "ndcg_at_10": 0.024048944427113472,
+      "ndcg_at_5": 0.025521337248297638,
+      "precision_at_10": 0.0001876876876876904,
+      "precision_at_5": 0.002177177177177192,
+      "recall_at_10": 0.0016605891605891987,
+      "recall_at_5": 0.004576302492969253,
+      "reciprocal_rank": 0.04116177418300815
+    },
+    "delta_vs_dense": {
+      "hit_at_10": 0.17567567567567566,
+      "hit_at_5": 0.19031531531531531,
+      "ndcg_at_10": 0.1642157274485505,
+      "ndcg_at_5": 0.16721944584268422,
+      "precision_at_10": 0.02492492492492493,
+      "precision_at_5": 0.051201201201201224,
+      "recall_at_10": 0.14769546332046335,
+      "recall_at_5": 0.1551547082797083,
+      "reciprocal_rank": 0.19718561432246612
+    },
+    "delta_vs_sparse": {
+      "hit_at_10": 0.04166666666666663,
+      "hit_at_5": 0.033033033033032955,
+      "ndcg_at_10": 0.028807771353753342,
+      "ndcg_at_5": 0.026055451450182787,
+      "precision_at_10": 0.00743243243243244,
+      "precision_at_5": 0.012087087087087112,
+      "recall_at_10": 0.04157773845273838,
+      "recall_at_5": 0.034031650698317484,
+      "reciprocal_rank": 0.02254698434628999
+    },
+    "metrics": {
+      "hit_at_10": 0.7856606606606606,
+      "hit_at_5": 0.7117117117117117,
+      "ndcg_at_10": 0.5381727779077033,
+      "ndcg_at_5": 0.5115595588576384,
+      "precision_at_10": 0.10762012012012014,
+      "precision_at_5": 0.18641141141141143,
+      "recall_at_10": 0.621242522284189,
+      "recall_at_5": 0.5469027062777063,
+      "reciprocal_rank": 0.6083461459951199
+    },
+    "primary_metric": "ndcg_at_10"
+  },
+  "freeze_rules": {
+    "candidate_depth_mutation_after_test": false,
+    "fusion_mutation_after_test": false,
+    "metadata_contract_mutation_after_test": false,
+    "normalization_mutation_after_test": false,
+    "test_result_may_change_configuration": false,
+    "test_result_role": "INDEPENDENT_FINAL_EVALUATION_ONLY",
+    "weight_mutation_after_test": false
+  },
+  "hybrid": {
+    "candidate_depth": 100,
+    "dense_weight": 0.4,
+    "deterministic_tie_break": "CHUNK_ID_ASCENDING",
+    "fusion_method": "WEIGHTED_SCORE_FUSION",
+    "normalization_method": "minmax",
+    "positive_sparse_scores_only": true,
+    "sparse_weight": 0.6,
+    "top_k": 10
+  },
+  "metadata_filters": {
+    "author_attribution": [
+      "author_attribution_modes",
+      "content_origins"
+    ],
+    "personal_author_identity": "NOT_PRESENT_AND_NOT_INFERRED",
+    "rights": [
+      "rights_statuses",
+      "rights_bases",
+      "rights_holders",
+      "allowed_uses",
+      "rights_evidence_ids",
+      "inferred_release_permission"
+    ],
+    "source": [
+      "source_id",
+      "source_type"
+    ],
+    "speaker": [
+      "speaker_identities",
+      "speaker_statuses",
+      "speaker_primary_signals"
+    ]
+  },
+  "paid_api_calls": 0,
+  "release_id": "rag_finance_phase2_hybrid_v1",
+  "schema_version": "1.0",
+  "selection_scope": {
+    "corpus": "ALL_CANONICAL_CHUNKS",
+    "development_query_count": 2664,
+    "selection_queries": "DEVELOPMENT_ONLY",
+    "test_access_policy": "LOCKED_DURING_CONFIGURATION_SELECTION",
+    "test_queries_accessed": false
+  },
+  "source_diversity": {
+    "baseline_mean_unique_sources_at_10": 7.828453453453453,
+    "default_policy": "NO_HARD_CAP",
+    "optional_policy": {
+      "activation": "EXPLICIT_CONSUMER_REQUEST_ONLY",
+      "development_metrics": {
+        "hit_at_10": 0.7841591591591591,
+        "hit_at_5": 0.7117117117117117,
+        "ndcg_at_10": 0.5345005965154928,
+        "ndcg_at_5": 0.5098570052974908,
+        "precision_at_10": 0.10495495495495497,
+        "precision_at_5": 0.18438438438438437,
+        "recall_at_10": 0.6142042339959007,
+        "recall_at_5": 0.5444247819247819,
+        "reciprocal_rank": 0.6019638686305353
+      },
+      "maximum_chunks_per_source": 3,
+      "ndcg_at_10_delta": -0.003672181392210594,
+      "policy_id": "maximum_3_chunks_per_source_v1"
+    },
+    "reason": "Unrestricted weighted retrieval has high natural source diversity and higher retrieval quality."
+  },
+  "sparse": {
+    "analyzer_id": "fa_join_zwnj_stopwords_v1",
+    "b": 0.3,
+    "implementation": "local_robertson_bm25_v1",
+    "k1": 1.2,
+    "mutation_allowed": false
+  }
+}

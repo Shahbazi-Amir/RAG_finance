@@ -1,0 +1,99 @@
+{
+  "artifact_type": "NB16_HYBRID_RETRIEVAL_MANIFEST",
+  "artifacts": {
+    "adr": {
+      "path": "reports/phase2/hybrid_retrieval_adr_v1.json",
+      "sha256": "daea54cb618ab5cfc25934b785cf7e960650e92e8a6440fabda3b496265f8418"
+    },
+    "candidates": {
+      "path": "data/phase2/retrieval/hybrid_retrieval_v1/hybrid_candidates_v1.jsonl",
+      "record_count": 3813,
+      "sha256": "f54277680f3d20681b1585915f54bb4485ecb1fcccb15c27df0061ff0725d19a"
+    },
+    "configuration": {
+      "path": "artifacts/phase2/hybrid_retrieval/hybrid_configuration_v1.json",
+      "sha256": "e7dc28836b0e6b2f72cf19aa61507af41a76df4980b056f39af015ed91ba26d5"
+    },
+    "development_query_embeddings": {
+      "path": "artifacts/phase2/hybrid_retrieval/query_embedding_cache_v1/development_query_embeddings.npy",
+      "sha256": "ca2641a2b8a484433a85ae0682b9b600c02e0c7e4e670af4e07eeb61099e4bb5"
+    },
+    "evidence": {
+      "path": "data/phase2/retrieval/hybrid_retrieval_v1/hybrid_retrieval_evidence_v1.json",
+      "sha256": "1ec23c3f678a30326d1a25350fecaf9188024ea8a6c1f1f5a01ee4d85219feca"
+    },
+    "reload_validation": {
+      "path": "data/phase2/retrieval/hybrid_retrieval_v1/hybrid_reload_validation_v1.json",
+      "sha256": "1d85c12d0fed3b6b217741bb92690f8a1fd6238efe33e9d5f8312676631ee9ba"
+    },
+    "test_evaluation": {
+      "path": "reports/phase2/hybrid_retrieval_test_evaluation_v1.json",
+      "sha256": "395901af5c6706d9fc88f555926a5e279cfd920e16508ca4203ca8235e8e97f5"
+    },
+    "test_query_embeddings": {
+      "path": "artifacts/phase2/hybrid_retrieval/query_embedding_cache_v1/test_query_embeddings.npy",
+      "sha256": "0ea9c85d944e4ccc396ba1ebb8cea4ef21de47e7e7764ffa5aab38f7344269fc"
+    }
+  },
+  "configuration_sha256": "1f618f4870622a6d31e831b54a35d76c96687d6683ab195af171b36214abcbf7",
+  "constraints": {
+    "configuration_mutation_allowed": false,
+    "corpus_embedding_recomputation_required": false,
+    "dense_index_mutation_allowed": false,
+    "sparse_index_mutation_allowed": false,
+    "test_result_may_change_configuration": false
+  },
+  "inputs": {
+    "chunk": {
+      "path": "data/phase2/chunks/nb11_benchmark_v1/baseline_phase1_char_safe_v1.jsonl",
+      "record_count": 3488,
+      "sha256": "3891c4ecad9332ba753cd605bbccd99da9d063f64934a30ee39e495349cffb50"
+    },
+    "dense_release": {
+      "path": "artifacts/phase2/dense_index/dense_index_release_v1.json",
+      "sha256": "706c020caa2bda77c767fda8cd1b57498818afdbdbbbdd2a72f898b55ca6ca50"
+    },
+    "golden_dataset": {
+      "path": "artifacts/phase2/golden_dataset_v2/golden_dataset_v2.jsonl",
+      "record_count": 3813,
+      "sha256": "b9ca18e710686ddca48a25c637840b716adb306717cafd8ec7c96ce9e182e6f2"
+    },
+    "sparse_release": {
+      "path": "artifacts/phase2/sparse_index/sparse_index_release_v1.json",
+      "sha256": "879f52850a71629f02437c1ab1173e3f9e6c55ec5441ad4649784be63935c51b"
+    }
+  },
+  "logical_retrieval_sha256": "f54277680f3d20681b1585915f54bb4485ecb1fcccb15c27df0061ff0725d19a",
+  "manifest_status": "PASS_COMPLETE_FROZEN",
+  "metric_scope": {
+    "reciprocal_rank_handoff_scope": "PERSISTED_TOP_100",
+    "reciprocal_rank_selection_scope": "FULL_POSITIVE_FUSED_RANKING",
+    "top_k_metrics": "EXACTLY_REPRODUCIBLE_FROM_PERSISTED_TOP_100"
+  },
+  "metrics": {
+    "development": {
+      "hit_at_10": 0.7856606606606606,
+      "hit_at_5": 0.7117117117117117,
+      "ndcg_at_10": 0.5381727779077033,
+      "ndcg_at_5": 0.5115595588576384,
+      "precision_at_10": 0.10762012012012014,
+      "precision_at_5": 0.18641141141141143,
+      "recall_at_10": 0.621242522284189,
+      "recall_at_5": 0.5469027062777063,
+      "reciprocal_rank": 0.6083461459951199
+    },
+    "test": {
+      "hit_at_10": 0.7554395126196692,
+      "hit_at_5": 0.6962576153176675,
+      "ndcg_at_10": 0.5216652301206817,
+      "ndcg_at_5": 0.4983407459398288,
+      "precision_at_10": 0.10208877284595298,
+      "precision_at_5": 0.1805047867711053,
+      "recall_at_10": 0.5998580546230676,
+      "recall_at_5": 0.5336607401881552,
+      "reciprocal_rank": 0.5900985040571087
+    }
+  },
+  "release_id": "rag_finance_phase2_hybrid_v1",
+  "schema_version": "1.0"
+}

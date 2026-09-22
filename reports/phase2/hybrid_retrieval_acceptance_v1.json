@@ -1,0 +1,58 @@
+{
+  "acceptance_status": "PASS_COMPLETE_FROZEN",
+  "artifact_type": "NB16_HYBRID_RETRIEVAL_ACCEPTANCE",
+  "configuration_sha256": "1f618f4870622a6d31e831b54a35d76c96687d6683ab195af171b36214abcbf7",
+  "corpus_embeddings_recomputed": false,
+  "dense_index_mutated": false,
+  "gates": {
+    "ablation": "PASS",
+    "adr_and_configuration_freeze": "PASS",
+    "artifact_materialization": "PASS",
+    "candidate_depth": "PASS",
+    "canonical_inputs": "PASS",
+    "dense_baseline": "PASS",
+    "independent_test": "PASS",
+    "metadata_filtering": "PASS",
+    "reload_validation": "PASS",
+    "rrf_fusion": "PASS",
+    "slice_metrics": "PASS",
+    "source_diversity": "PASS",
+    "sparse_baseline": "PASS",
+    "sparse_nb15_parity": "PASS",
+    "weighted_fusion": "PASS"
+  },
+  "known_limitations": [
+    "Personal author identity is not present in the canonical corpus.",
+    "Author filtering is supported through direct_author versus editorial_supervision.",
+    "Rights holder, allowed uses and rights evidence IDs are currently unpopulated.",
+    "No test result may be used to revise this frozen configuration."
+  ],
+  "logical_retrieval_sha256": "f54277680f3d20681b1585915f54bb4485ecb1fcccb15c27df0061ff0725d19a",
+  "manifest_sha256": "362b9cbfd33e2f8e307ffc6cc7dcffc48d2cc308fe74f9bb0ba896d1e080032c",
+  "metric_scope": {
+    "reciprocal_rank_handoff_scope": "PERSISTED_TOP_100",
+    "reciprocal_rank_selection_scope": "FULL_POSITIVE_FUSED_RANKING",
+    "top_k_metrics": "EXACTLY_REPRODUCIBLE_FROM_PERSISTED_TOP_100"
+  },
+  "nb17_handoff_sha256": "88e8c325f54f89c4aeed94787bc36048f9cc1d6c963e781f7254b6c8c04f7113",
+  "paid_api_calls": 0,
+  "release_id": "rag_finance_phase2_hybrid_v1",
+  "release_sha256": "8953c5d4d20a0f0cb2cf9fb35d86c421c06cf02b193aa2b19acba46640d0216e",
+  "reload_validation": {
+    "path": "data/phase2/retrieval/hybrid_retrieval_v1/hybrid_reload_validation_v1.json",
+    "sha256": "1d85c12d0fed3b6b217741bb92690f8a1fd6238efe33e9d5f8312676631ee9ba"
+  },
+  "schema_version": "1.0",
+  "sparse_index_mutated": false,
+  "test_metrics": {
+    "hit_at_10": 0.7554395126196692,
+    "hit_at_5": 0.6962576153176675,
+    "ndcg_at_10": 0.5216652301206817,
+    "ndcg_at_5": 0.4983407459398288,
+    "precision_at_10": 0.10208877284595298,
+    "precision_at_5": 0.1805047867711053,
+    "recall_at_10": 0.5998580546230676,
+    "recall_at_5": 0.5336607401881552,
+    "reciprocal_rank": 0.5900985040571087
+  }
+}

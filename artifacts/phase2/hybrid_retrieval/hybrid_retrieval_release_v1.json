@@ -1,0 +1,61 @@
+{
+  "artifact_type": "NB16_HYBRID_RETRIEVAL_RELEASE",
+  "candidates": {
+    "candidate_depth": 100,
+    "logical_sha256": "f54277680f3d20681b1585915f54bb4485ecb1fcccb15c27df0061ff0725d19a",
+    "path": "data/phase2/retrieval/hybrid_retrieval_v1/hybrid_candidates_v1.jsonl",
+    "record_count": 3813,
+    "sha256": "f54277680f3d20681b1585915f54bb4485ecb1fcccb15c27df0061ff0725d19a"
+  },
+  "configuration": {
+    "path": "artifacts/phase2/hybrid_retrieval/hybrid_configuration_v1.json",
+    "payload_sha256": "1f618f4870622a6d31e831b54a35d76c96687d6683ab195af171b36214abcbf7",
+    "sha256": "e7dc28836b0e6b2f72cf19aa61507af41a76df4980b056f39af015ed91ba26d5"
+  },
+  "final_status": "PASS_COMPLETE_FROZEN",
+  "fusion": {
+    "candidate_depth": 100,
+    "dense_weight": 0.4,
+    "deterministic_tie_break": "CHUNK_ID_ASCENDING",
+    "fusion_method": "WEIGHTED_SCORE_FUSION",
+    "normalization_method": "minmax",
+    "positive_sparse_scores_only": true,
+    "sparse_weight": 0.6,
+    "top_k": 10
+  },
+  "manifest": {
+    "path": "data/phase2/retrieval/hybrid_retrieval_v1/hybrid_retrieval_manifest.json",
+    "sha256": "362b9cbfd33e2f8e307ffc6cc7dcffc48d2cc308fe74f9bb0ba896d1e080032c"
+  },
+  "metadata_filter_status": "PASS",
+  "metric_scope": {
+    "reciprocal_rank_handoff_scope": "PERSISTED_TOP_100",
+    "reciprocal_rank_selection_scope": "FULL_POSITIVE_FUSED_RANKING",
+    "top_k_metrics": "EXACTLY_REPRODUCIBLE_FROM_PERSISTED_TOP_100"
+  },
+  "release_id": "rag_finance_phase2_hybrid_v1",
+  "reload_validation": {
+    "path": "data/phase2/retrieval/hybrid_retrieval_v1/hybrid_reload_validation_v1.json",
+    "sha256": "1d85c12d0fed3b6b217741bb92690f8a1fd6238efe33e9d5f8312676631ee9ba",
+    "status": "PASS"
+  },
+  "schema_version": "1.0",
+  "source_diversity_default": "NO_HARD_CAP",
+  "status": "FROZEN_FOR_RERANKING",
+  "test_evaluation": {
+    "metrics": {
+      "hit_at_10": 0.7554395126196692,
+      "hit_at_5": 0.6962576153176675,
+      "ndcg_at_10": 0.5216652301206817,
+      "ndcg_at_5": 0.4983407459398288,
+      "precision_at_10": 0.10208877284595298,
+      "precision_at_5": 0.1805047867711053,
+      "recall_at_10": 0.5998580546230676,
+      "recall_at_5": 0.5336607401881552,
+      "reciprocal_rank": 0.5900985040571087
+    },
+    "path": "reports/phase2/hybrid_retrieval_test_evaluation_v1.json",
+    "query_count": 1149,
+    "sha256": "395901af5c6706d9fc88f555926a5e279cfd920e16508ca4203ca8235e8e97f5"
+  }
+}
