@@ -1,0 +1,33 @@
+{
+  "artifact_type": "NB18_RERANKER_HANDOFF",
+  "candidate_artifact": {
+    "candidate_depth": 50,
+    "consumer_top_k": 10,
+    "path": "data/phase2/retrieval/reranker_v1/reranked_candidates_v1.jsonl",
+    "record_count": 3813,
+    "sha256": "d00285bbf3865fbd51041db1612b9fdc17e9778273ea6d136978906a07268b7a"
+  },
+  "configuration_sha256": "8924c47c96bc52080ac0306daf272185a0c7c8eeb07d15a963058530badfa738",
+  "constraints": {
+    "do_not_change_reranker_configuration": true,
+    "do_not_recompute_reranker_scores": true,
+    "preserve_candidate_order": true
+  },
+  "manifest": {
+    "path": "data/phase2/retrieval/reranker_v1/reranker_manifest.json",
+    "sha256": "230a720eab3fac9ef9f4fea8ab03152660f045fbda8926e22abcb37f809e6be5"
+  },
+  "release": {
+    "path": "artifacts/phase2/reranking/reranker_release_v1.json",
+    "sha256": "8f9006a2cbc425aaa68459928af1c15ab31e88e881d8fbd76a5b312dd601a9b4"
+  },
+  "release_id": "rag_finance_phase2_reranker_v1",
+  "reload_validation": {
+    "path": "data/phase2/retrieval/reranker_v1/reranker_reload_validation_v1.json",
+    "sha256": "d575550c0d0a3feadfa27025c4f5b359eed5ddac4f91c1e720e303e49c188e4a"
+  },
+  "schema_version": "1.0",
+  "source_notebook": "17_reranking.ipynb",
+  "status": "READY_FOR_NB18",
+  "target_notebook": "18_context_builder.ipynb"
+}

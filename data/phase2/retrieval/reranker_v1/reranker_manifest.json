@@ -1,0 +1,36 @@
+{
+  "artifact_type": "NB17_RERANKER_MANIFEST",
+  "configuration_changed_after_test": false,
+  "configuration_sha256": "8924c47c96bc52080ac0306daf272185a0c7c8eeb07d15a963058530badfa738",
+  "evidence": {
+    "path": "data/phase2/retrieval/reranker_v1/reranker_evidence_v1.json",
+    "sha256": "7d1b9947b48d1f8deb338ecc5860b961f4ce4b60980c58d4f3bd7080f1e7650f"
+  },
+  "input": {
+    "candidate_record_count": 3813,
+    "input_candidate_depth": 100,
+    "nb16_hybrid_candidate_path": "data/phase2/retrieval/hybrid_retrieval_v1/hybrid_candidates_v1.jsonl",
+    "nb16_hybrid_candidate_sha256": "f54277680f3d20681b1585915f54bb4485ecb1fcccb15c27df0061ff0725d19a"
+  },
+  "manifest_status": "PASS_COMPLETE_FROZEN",
+  "output": {
+    "candidate_depth": 50,
+    "development_record_count": 2664,
+    "final_top_k": 10,
+    "path": "data/phase2/retrieval/reranker_v1/reranked_candidates_v1.jsonl",
+    "record_count": 3813,
+    "sha256": "d00285bbf3865fbd51041db1612b9fdc17e9778273ea6d136978906a07268b7a",
+    "test_record_count": 1149
+  },
+  "release_id": "rag_finance_phase2_reranker_v1",
+  "reload_validation": {
+    "path": "data/phase2/retrieval/reranker_v1/reranker_reload_validation_v1.json",
+    "sha256": "d575550c0d0a3feadfa27025c4f5b359eed5ddac4f91c1e720e303e49c188e4a",
+    "status": "PASS"
+  },
+  "schema_version": "1.0",
+  "test_evaluation": {
+    "path": "reports/phase2/reranker_test_evaluation_v1.json",
+    "sha256": "852705019f6b91ec39393dbd2e550aae47c7868b4991b360e9c5e152c6f0817a"
+  }
+}

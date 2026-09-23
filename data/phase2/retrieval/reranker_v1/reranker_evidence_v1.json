@@ -1,0 +1,126 @@
+{
+  "adr": {
+    "file_sha256": "a86099fefcbfe15d322e81609a33a5693e7df380b99047d456220e21eef14db2",
+    "path": "reports/phase2/reranker_adr_v1.json",
+    "payload_sha256": "52d6089ea97047fceaa836e2b5234f40372f15fe80a481315f39d9725dffb581"
+  },
+  "artifact_type": "NB17_RERANKER_EVIDENCE",
+  "configuration": {
+    "file_sha256": "dd2290188c4e99be1dada40b167b1041c69f7f077ebe6dea1fddcb58b4834a86",
+    "path": "artifacts/phase2/reranking/reranker_configuration_v1.json",
+    "payload_sha256": "8924c47c96bc52080ac0306daf272185a0c7c8eeb07d15a963058530badfa738"
+  },
+  "configuration_changed_after_test": false,
+  "development": {
+    "baseline_metrics": {
+      "hit_at_10": 0.7856606606606606,
+      "hit_at_5": 0.7117117117117117,
+      "ndcg_at_10": 0.5381727779077033,
+      "ndcg_at_5": 0.5115595588576384,
+      "precision_at_10": 0.10762012012012014,
+      "precision_at_5": 0.18641141141141143,
+      "recall_at_10": 0.621242522284189,
+      "recall_at_5": 0.5469027062777063,
+      "reciprocal_rank": 0.6082169141249909
+    },
+    "bootstrap": {
+      "confidence_interval_95": {
+        "lower": 0.051490917807556505,
+        "upper": 0.07022573580323598
+      },
+      "mean_delta": 0.06066145216398341,
+      "probability_delta_positive": 1.0,
+      "sample_count": 5000,
+      "seed": 17015
+    },
+    "candidate_depth": 50,
+    "delta": {
+      "hit_at_10": 0.06418918918918926,
+      "hit_at_5": 0.07995495495495497,
+      "ndcg_at_10": 0.06066145216398333,
+      "ndcg_at_5": 0.061716956418720326,
+      "precision_at_10": 0.007394894894894866,
+      "precision_at_5": 0.01516516516516514,
+      "recall_at_10": 0.046431848515181895,
+      "recall_at_5": 0.05088451546784878,
+      "reciprocal_rank": 0.08310980676989921
+    },
+    "failure_taxonomy": {
+      "OTHER_TOP_10_ORDERING_REGRESSION": 104,
+      "RERANKER_DEMOTED_BEST_RELEVANT_CHUNK": 222,
+      "RERANKER_REDUCED_TOP_10_RECALL": 110,
+      "RERANKER_REMOVED_ALL_RELEVANT_FROM_TOP_10": 48
+    },
+    "query_count": 2664,
+    "reranker_metrics": {
+      "hit_at_10": 0.8498498498498499,
+      "hit_at_5": 0.7916666666666666,
+      "ndcg_at_10": 0.5988342300716867,
+      "ndcg_at_5": 0.5732765152763587,
+      "precision_at_10": 0.115015015015015,
+      "precision_at_5": 0.20157657657657657,
+      "recall_at_10": 0.6676743707993709,
+      "recall_at_5": 0.5977872217455551,
+      "reciprocal_rank": 0.6913267208948901
+    },
+    "score_sha256": "f81976fffdc04c7b65e89e7b22d0c717d3d8ed3dc80cc1907687368f0b721760"
+  },
+  "evidence_status": "PASS",
+  "model": {
+    "model_id": "cross-encoder/mmarco-mMiniLMv2-L12-H384-v1",
+    "onnx_model_sha256": "6c2513767fb63d008a4377bef7a7a3555433d9436342bb53e35a3a72ffc52d4b",
+    "revision": "1427fd652930e4ba29e8149678df786c240d8825"
+  },
+  "paid_api_calls": 0,
+  "release_id": "rag_finance_phase2_reranker_v1",
+  "schema_version": "1.0",
+  "test": {
+    "baseline_metrics": {
+      "hit_at_10": 0.7554395126196692,
+      "hit_at_5": 0.6962576153176675,
+      "ndcg_at_10": 0.5216652301206817,
+      "ndcg_at_5": 0.4983407459398288,
+      "precision_at_10": 0.10208877284595298,
+      "precision_at_5": 0.1805047867711053,
+      "recall_at_10": 0.5998580546230676,
+      "recall_at_5": 0.5336607401881552,
+      "reciprocal_rank": 0.5899166127502804
+    },
+    "bootstrap": {
+      "confidence_interval_95": {
+        "lower": 0.03725929460138941,
+        "upper": 0.06652794432846834
+      },
+      "mean_delta": 0.05187097644949378,
+      "probability_delta_positive": 1.0,
+      "sample_count": 5000,
+      "seed": 17019
+    },
+    "candidate_depth": 50,
+    "delta": {
+      "hit_at_10": 0.047867711053089734,
+      "hit_at_5": 0.053089643167972156,
+      "ndcg_at_10": 0.05187097644949368,
+      "ndcg_at_5": 0.051273311314454895,
+      "precision_at_10": 0.006005221932114904,
+      "precision_at_5": 0.008703220191470878,
+      "recall_at_10": 0.03445957147001544,
+      "recall_at_5": 0.036512080898503885,
+      "reciprocal_rank": 0.07032157316021714
+    },
+    "quality_observation": "POSITIVE_GENERALIZATION",
+    "query_count": 1149,
+    "reranker_metrics": {
+      "hit_at_10": 0.803307223672759,
+      "hit_at_5": 0.7493472584856397,
+      "ndcg_at_10": 0.5735362065701753,
+      "ndcg_at_5": 0.5496140572542837,
+      "precision_at_10": 0.10809399477806789,
+      "precision_at_5": 0.18920800696257617,
+      "recall_at_10": 0.6343176260930831,
+      "recall_at_5": 0.5701728210866591,
+      "reciprocal_rank": 0.6602381859104975
+    },
+    "score_sha256": "06c5f7d46863e91bf3da6a51159ed66ee0e69f6675b90c468d4901d03306eb0a"
+  }
+}

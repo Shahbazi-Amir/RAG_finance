@@ -1,0 +1,22 @@
+{
+  "artifact_type": "NB17_RERANKER_ACCEPTANCE",
+  "gates": {
+    "bootstrap_gate": "PASS",
+    "canonical_input_gate": "PASS",
+    "configuration_freeze_gate": "PASS",
+    "configuration_immutability_gate": "PASS",
+    "development_gate": "PASS",
+    "failure_analysis_gate": "PASS",
+    "independent_test_gate": "PASS",
+    "pilot_gate": "PASS",
+    "reload_validation_gate": "PASS",
+    "source_slice_gate": "PASS"
+  },
+  "release_id": "rag_finance_phase2_reranker_v1",
+  "reload_validation": {
+    "path": "data/phase2/retrieval/reranker_v1/reranker_reload_validation_v1.json",
+    "sha256": "d575550c0d0a3feadfa27025c4f5b359eed5ddac4f91c1e720e303e49c188e4a"
+  },
+  "schema_version": "1.0",
+  "status": "PASS_COMPLETE_FROZEN"
+}
