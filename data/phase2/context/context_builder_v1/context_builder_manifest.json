@@ -1,0 +1,64 @@
+{
+  "artifact_type": "context_builder_manifest",
+  "configuration_sha256": "f600583bba6646022c3eaf455e204a38a6c6f5bd3fe8aae8621be8d5d35a5835",
+  "final_status": "PASS_COMPLETE_RELOAD_VALIDATED_FROZEN",
+  "input_paths": {
+    "adr": "reports/phase2/context_builder_adr_v1.json",
+    "candidates": "data/phase2/retrieval/reranker_v1/reranked_candidates_v1.jsonl",
+    "chunks": "data/phase2/chunks/nb11_benchmark_v1/baseline_phase1_char_safe_v1.jsonl",
+    "configuration": "artifacts/phase2/context_builder/context_builder_configuration_v1.json",
+    "documents": "data/phase2/processed/documents_dedup_quality_accepted_v1.jsonl",
+    "reranker_manifest": "data/phase2/retrieval/reranker_v1/reranker_manifest.json",
+    "reranker_reload_validation": "data/phase2/retrieval/reranker_v1/reranker_reload_validation_v1.json"
+  },
+  "input_sha256": {
+    "adr": "27e2a914ae618f1b46c6cfff65da40982f037fbc5536f9e74985cdf3598e547b",
+    "candidates": "d00285bbf3865fbd51041db1612b9fdc17e9778273ea6d136978906a07268b7a",
+    "chunks": "3891c4ecad9332ba753cd605bbccd99da9d063f64934a30ee39e495349cffb50",
+    "configuration": "f600583bba6646022c3eaf455e204a38a6c6f5bd3fe8aae8621be8d5d35a5835",
+    "documents": "9d72c709f81b1218c5aac064052c7ed1da34869f671e6e32762864e0ad70ea40",
+    "reranker_manifest": "230a720eab3fac9ef9f4fea8ab03152660f045fbda8926e22abcb37f809e6be5",
+    "reranker_reload_validation": "d575550c0d0a3feadfa27025c4f5b359eed5ddac4f91c1e720e303e49c188e4a"
+  },
+  "limitations": {
+    "parent_expansion_status": "NOT_APPLICABLE_NO_CANONICAL_PARENT_LINKS",
+    "prompt_injection_scan": "LITERAL_PATTERN_SCAN_ONLY",
+    "semantic_conflict_status": "NOT_ASSESSED_NO_CANONICAL_CONFLICT_MAPPING",
+    "tokenizer_revision_status": "CONTENT_FINGERPRINT_ONLY",
+    "topic_diversity_status": "NOT_APPLICABLE_DUE_TO_UPSTREAM_METADATA_LIMITATION"
+  },
+  "outputs": {
+    "context_packets": {
+      "path": "data/phase2/context/context_builder_v1/context_packets_v1.jsonl",
+      "sha256": "7789bdb8907d0de803b32a274c996cf04bc68be8414bbadce5ef6989d2dc7edc"
+    },
+    "evidence_registry": {
+      "path": "data/phase2/context/context_builder_v1/context_evidence_registry_v1.jsonl",
+      "sha256": "730aad40c0dac5c94d702f0a22aa3a891045f458a445abd087f34303bebe9fe2"
+    },
+    "evidence_report": {
+      "path": "reports/phase2/context_builder_evidence_v1.json",
+      "sha256": "ffbe60831aeb9ce3782dd03c6f3c745d467f831e144bf01bf3a6b4b6b5ca07eb"
+    },
+    "reload_validation": {
+      "path": "data/phase2/context/context_builder_v1/context_builder_reload_validation_v1.json",
+      "sha256": "0253fd8d4da7da7f2c17524c44e75b1fdd529be1b764e1d0773d9eb1594f8bcd"
+    }
+  },
+  "record_counts": {
+    "candidate_count": 3813,
+    "development_candidate_count": 2664,
+    "evidence_reference_count": 38096,
+    "evidence_registry_count": 3355,
+    "test_candidate_count": 1149
+  },
+  "release_id": "rag_finance_phase2_context_builder_v1",
+  "reload_validation_status": "PASS",
+  "schema_version": "1.0.0",
+  "test_access_status": {
+    "development_only_policy_selection": true,
+    "test_candidates_packed": true,
+    "test_labels_or_metrics_read": false,
+    "test_queries_used_for_retuning": false
+  }
+}
