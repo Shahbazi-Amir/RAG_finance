@@ -114,6 +114,7 @@ data/phase2/embeddings/
 data/phase2/vectorstore/
 data/phase2/index/
 data/phase2/database/
+/data/phase2/chatgpt_recovery_20261003/
 
 
 # IMPORTANT:
