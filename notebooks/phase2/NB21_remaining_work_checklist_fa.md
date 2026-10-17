@@ -5,9 +5,9 @@
 **پروژه:** <span dir="ltr">RAG_finance</span> — فاز دوم  
 **نوت‌بوک رسمی:** <span dir="ltr">notebooks/phase2/21_evaluation_and_ablation.ipynb</span>  
 **شاخه:** <span dir="ltr">rag-phase2</span>  
-**نسخهٔ برنامه:** ۱ — ۱۷ اکتبر ۲۰۲۶ / ۲۵ مهر ۱۴۰۵  
+**نسخهٔ برنامه:** ۱ — به‌روزرسانی وضعیت اجرا در ۱۷ اکتبر ۲۰۲۶ / ۲۵ مهر ۱۴۰۵  
 **HEAD بررسی‌شدهٔ GitHub:** <span dir="ltr">973c719d9de89fe8eba0c59b1ec85a0aa875da2c</span>  
-**وضعیت این فایل:** برنامهٔ اجرایی پیش از بررسی ورودی‌های محلی؛ نه گزارش اجرای NB21.  
+**وضعیت این فایل:** برنامهٔ اجرایی همراه با ثبت ۸ اقدام تأییدشده براساس خروجی‌های محلی گزارش‌شده در همین گفت‌وگو؛ اقدام فعال ۱۴ از ۴۹.  
 **مسیر پیشنهادی قرارگیری در مخزن:** <span dir="ltr">notebooks/phase2/NB21_remaining_work_checklist_fa.md</span>
 
 ترتیب ستون‌ها از راست به چپ: **اولویت ← کار نقشه ← چک‌لیست ← تعداد موارد و API**.
@@ -19,14 +19,14 @@
 - این برنامه **۱۴ بسته و ۴۹ اقدام اجرایی** دارد. این تقسیم‌بندی پیشنهادی اجرای الزامات نقشه است؛ تعداد سل، تعداد آزمایش یا تخمین ساعت نیست.
 - درصد پیشرفت فعلاً تعیین نمی‌شود. تعداد تیک‌ها، درصد کیفیت محصول یا درصد پذیرش علمی نیست.
 - «صفر API» در بررسی محلی، به معنی صفر بودن هزینهٔ احتمالی کل NB21 نیست. تعداد درخواست تازه فقط پس از بررسی Cache و تعیین شکاف روشن می‌شود.
-- هیچ اقدام اجرایی NB21 در این نسخه انجام‌شده فرض نشده است؛ تهیهٔ این برنامه با اجرای آن متفاوت است.
+- فقط اقدام‌های ۴، ۵، ۶، ۷، ۸، ۹، ۱۱ و ۱۳ با شاهد ثبت‌شده در بخش ۱۱ تیک خورده‌اند؛ سایر اقدام‌ها انجام‌شده فرض نمی‌شوند.
 
 | اولویت و شمارهٔ کار | کار نقشه | کل چک‌لیست کار | تعداد موارد و نیاز به <span dir="ltr">API</span> |
 | ---: | ---: | ---: | ---: |
-| **دستهٔ اول — ۱** | **تثبیت دامنه و نقطهٔ شروع** | **۴ اقدام**<br><br>☐ **۱.** ثبت مأموریت NB21 و مرز آن با NB20، NB22 و NB23؛ نگاشت الزامات نقشه به این چک‌لیست.<br>☐ **۲.** بررسی فقط‌خواندنی Branch، HEAD، staged/unstaged و تعارض‌های Git محلی و مقایسه با Remote.<br>☐ **۳.** یافتن NB21 احتمالی با نام درست یا نام قدیمی؛ تعیین فایل مرجع بدون ساخت نسخهٔ موازی یا overwrite.<br>☐ **۴.** بررسی وجود، تعریف هش، محتوای C455 و ارجاعات لازم؛ ثبت وابستگی‌های باز upstream. | **تعداد:** یک مسیر رسمی NB21؛ تحویل C455 و منابع موردنیازش.<br><br>**API:** صفر درخواست مدل؛ فقط بررسی محلی و Git.<br><br>**پایان:** نقطهٔ شروع و محدودیت‌های واقعی معلوم باشند؛ فایل مفقود یا هش ناسازگار صریح گزارش شود. |
-| **دستهٔ اول — ۲** | **موجودی شواهد و جلوگیری از دوباره‌کاری** | **۴ اقدام**<br><br>☐ **۵.** ساخت موجودی Canonical از Dataset، Split، Gold mapping، Chunk، Index، Retrieval، Context، پاسخ و Policy؛ با مسیر، نسخه، نوع هش و وضعیت.<br>☐ **۶.** یافتن Benchmark، Ablation، ADR، پاسخ، داوری و Cache قبلی و تعیین قابلیت استفادهٔ مجدد هرکدام.<br>☐ **۷.** ثبت منشأ و دامنهٔ هر خانوادهٔ خروجی؛ تفکیک Qwen، ChatGPT recovery، قواعد محلی و داوری ذخیره‌شده.<br>☐ **۸.** ساخت Gap matrix: موجود و قابل مصرف / نیازمند تطبیق / مفقود / فاقد اعتبار معنایی؛ تعیین مسئول رفع هر شکاف. | **تعداد:** جمعیت گزارش‌شده ۳۸۱۳؛ Development برابر ۲۶۶۴ و Test برابر ۱۱۴۹؛ تعداد فایل‌ها از Discovery واقعی.<br><br>**API:** صفر برای موجودی؛ هیچ بازتولید پاسخ یا Embedding در این بسته مجاز نیست.<br><br>**پایان:** برای هر الزام نقشه مشخص باشد چه شاهدی داریم و چه چیزی واقعاً کم است. |
-| **دستهٔ دوم — ۳** | **قرارداد ارزیابی و معیار پذیرش** | **۴ اقدام**<br><br>☐ **۹.** تعریف دقیق Metricها، مخرج، واحد تحلیل، k، روش میانگین‌گیری، Missing/Abstention و عدم قطعیت.<br>☐ **۱۰.** تعریف Sliceهای Website/Book/Transcript/Topic/Question type/Authority type با Metadata معتبر و شمارش پوشش.<br>☐ **۱۱.** ثبت سابقهٔ دسترسی Test، قواعد Development-only، طرح مقایسهٔ زوجی و طرح شش Ablation؛ بدون تغییر قراردادهای فریز‌شدهٔ قبلی.<br>☐ **۱۲.** تعیین و ثبت آستانه‌های مصوب، شرط Regression، بودجهٔ زمان/هزینه، Cache key و Blueprint؛ فریز پیش از هر ارزیابی تازهٔ Test. | **تعداد:** تمام خانواده‌های Metric رسمی و ۶ Ablation؛ تعداد Slice واقعی پس از اقدام ۱۰.<br><br>**API:** صفر برای طراحی.<br><br>**پایان:** هیچ Metric بی‌تعریف یا Gate سلیقه‌ای باقی نماند؛ آستانهٔ نامشخص صریح باز بماند و به PASS تبدیل نشود. |
-| **دستهٔ دوم — ۴** | **اعتبار روش سنجش معنایی** | **۳ اقدام**<br><br>☐ **۱۳.** بررسی Rubric، پاسخ/شاهد مرجع و استقلال داوری برای Groundedness، completeness، citation و attribution.<br>☐ **۱۴.** مصرف آزمون‌های معتبر قبلی و آزمودن فقط شکاف واقعی روش سنجش روی Development؛ شامل شاهد اشتباه، ادعای معکوس، نقل‌قول ساختگی و پاسخ ناقص.<br>☐ **۱۵.** ثبت روش پذیرفته‌شده، موارد نیازمند بازبین مستقل و نمونه/جمعیت تحت پوشش؛ تصمیم صریح دربارهٔ امکان سنجش کامل. | **تعداد:** از قرارداد ارزیابی تعیین می‌شود؛ چهار پروندهٔ آفلاین NB20 جای مرجع کل جمعیت را نمی‌گیرد.<br><br>**API:** پیش‌فرض صفر؛ داوری تازه فقط برای نیاز مشخص، با تعداد و مجوز روشن.<br><br>**پایان:** روش سنجش برای دامنهٔ ادعا معتبر باشد؛ توافق دو مدل یا سلامت JSON جانشین اعتبار معنایی نشود. |
+| **دستهٔ اول — ۱** | **تثبیت دامنه و نقطهٔ شروع** | **۴ اقدام**<br><br>☐ **۱.** ثبت مأموریت NB21 و مرز آن با NB20، NB22 و NB23؛ نگاشت الزامات نقشه به این چک‌لیست.<br>☐ **۲.** بررسی فقط‌خواندنی Branch، HEAD، staged/unstaged و تعارض‌های Git محلی و مقایسه با Remote.<br>☐ **۳.** یافتن NB21 احتمالی با نام درست یا نام قدیمی؛ تعیین فایل مرجع بدون ساخت نسخهٔ موازی یا overwrite.<br>✅ **۴.** بررسی وجود، تعریف هش، محتوای C455 و ارجاعات لازم؛ ثبت وابستگی‌های باز upstream. | **تعداد:** یک مسیر رسمی NB21؛ تحویل C455 و منابع موردنیازش.<br><br>**API:** صفر درخواست مدل؛ فقط بررسی محلی و Git.<br><br>**پایان:** نقطهٔ شروع و محدودیت‌های واقعی معلوم باشند؛ فایل مفقود یا هش ناسازگار صریح گزارش شود. |
+| **دستهٔ اول — ۲** | **موجودی شواهد و جلوگیری از دوباره‌کاری** | **۴ اقدام**<br><br>✅ **۵.** ساخت موجودی Canonical از Dataset، Split، Gold mapping، Chunk، Index، Retrieval، Context، پاسخ و Policy؛ با مسیر، نسخه، نوع هش و وضعیت.<br>✅ **۶.** یافتن Benchmark، Ablation، ADR، پاسخ، داوری و Cache قبلی و تعیین قابلیت استفادهٔ مجدد هرکدام.<br>✅ **۷.** ثبت منشأ و دامنهٔ هر خانوادهٔ خروجی؛ تفکیک Qwen، ChatGPT recovery، قواعد محلی و داوری ذخیره‌شده.<br>✅ **۸.** ساخت Gap matrix: موجود و قابل مصرف / نیازمند تطبیق / مفقود / فاقد اعتبار معنایی؛ تعیین مسئول رفع هر شکاف. | **تعداد:** جمعیت گزارش‌شده ۳۸۱۳؛ Development برابر ۲۶۶۴ و Test برابر ۱۱۴۹؛ تعداد فایل‌ها از Discovery واقعی.<br><br>**API:** صفر برای موجودی؛ هیچ بازتولید پاسخ یا Embedding در این بسته مجاز نیست.<br><br>**پایان:** برای هر الزام نقشه مشخص باشد چه شاهدی داریم و چه چیزی واقعاً کم است. |
+| **دستهٔ دوم — ۳** | **قرارداد ارزیابی و معیار پذیرش** | **۴ اقدام**<br><br>✅ **۹.** تعریف دقیق Metricها، مخرج، واحد تحلیل، k، روش میانگین‌گیری، Missing/Abstention و عدم قطعیت.<br>☐ **۱۰.** تعریف Sliceهای Website/Book/Transcript/Topic/Question type/Authority type با Metadata معتبر و شمارش پوشش.<br>✅ **۱۱.** ثبت سابقهٔ دسترسی Test، قواعد Development-only، طرح مقایسهٔ زوجی و طرح شش Ablation؛ بدون تغییر قراردادهای فریز‌شدهٔ قبلی.<br>☐ **۱۲.** تعیین و ثبت آستانه‌های مصوب، شرط Regression، بودجهٔ زمان/هزینه، Cache key و Blueprint؛ فریز پیش از هر ارزیابی تازهٔ Test. | **تعداد:** تمام خانواده‌های Metric رسمی و ۶ Ablation؛ تعداد Slice واقعی پس از اقدام ۱۰.<br><br>**API:** صفر برای طراحی.<br><br>**پایان:** هیچ Metric بی‌تعریف یا Gate سلیقه‌ای باقی نماند؛ آستانهٔ نامشخص صریح باز بماند و به PASS تبدیل نشود. |
+| **دستهٔ دوم — ۴** | **اعتبار روش سنجش معنایی** | **۳ اقدام**<br><br>✅ **۱۳.** بررسی Rubric، پاسخ/شاهد مرجع و استقلال داوری برای Groundedness، completeness، citation و attribution.<br>☐ **۱۴.** مصرف آزمون‌های معتبر قبلی و آزمودن فقط شکاف واقعی روش سنجش روی Development؛ شامل شاهد اشتباه، ادعای معکوس، نقل‌قول ساختگی و پاسخ ناقص.<br>☐ **۱۵.** ثبت روش پذیرفته‌شده، موارد نیازمند بازبین مستقل و نمونه/جمعیت تحت پوشش؛ تصمیم صریح دربارهٔ امکان سنجش کامل. | **تعداد:** از قرارداد ارزیابی تعیین می‌شود؛ چهار پروندهٔ آفلاین NB20 جای مرجع کل جمعیت را نمی‌گیرد.<br><br>**API:** پیش‌فرض صفر؛ داوری تازه فقط برای نیاز مشخص، با تعداد و مجوز روشن.<br><br>**پایان:** روش سنجش برای دامنهٔ ادعا معتبر باشد؛ توافق دو مدل یا سلامت JSON جانشین اعتبار معنایی نشود. |
 | **دستهٔ سوم — ۵** | **موتور ارزیابی مستقل و قابل ادامه** | **۳ اقدام**<br><br>☐ **۱۶.** ساخت/تطبیق Reader و Join براساس Schema واقعی، candidate_id و تعریف هش هر ورودی؛ اجرای کد داخل Evidence ممنوع.<br>☐ **۱۷.** Smoke و Pilot کوچک Development برای Metric، اتصال شناسه، denominator، Missing، Resume و Cache؛ اصلاح همان مرحله در صورت FAIL.<br>☐ **۱۸.** تثبیت Runner با نتایج ردیفی، اجرای فقط موارد ناقص، نوشتن Atomic و Reload مستقل. | **تعداد:** اندازهٔ Pilot براساس تنوع Schema و Failure تعیین شود؛ Pilot جای Benchmark کامل نیست.<br><br>**API:** Cache-only؛ Runner بدون مجوز به سرویس پولی وصل نشود.<br><br>**پایان:** اجرای مجدد خروجی معتبر را تکرار نکند و نتیجه به Kernel قبلی وابسته نباشد. |
 | **دستهٔ سوم — ۶** | **Benchmark بازیابی** | **۳ اقدام**<br><br>☐ **۱۹.** تطبیق نتایج Dense، Sparse، Hybrid و Reranker موجود روی ورودی و تعریف Metric همسان.<br>☐ **۲۰.** محاسبه/بازتولید Recall@k، MRR و nDCG روی Development و Sliceهای معتبر؛ جداسازی rank depth و Gold mapping.<br>☐ **۲۱.** ثبت اختلاف‌ها، پوشش ورودی، شکست‌های بازیابی و حدود مقایسه؛ رفع اختلافِ محاسباتی پیش از ادامه. | **تعداد:** Development گزارش‌شده ۲۶۶۴؛ Test قبلی فقط با برچسب تاریخی نگهداری شود، نه برای تنظیم تازه.<br><br>**API:** صفر در بازخوانی نتایج؛ محاسبهٔ محلی تازه فقط برای Missing معتبر.<br><br>**پایان:** جدول قابل ردیابی با مخرج و قرارداد واحد؛ اعداد مراحل مختلف کورکورانه کنار هم قرار نگیرند. |
 | **دستهٔ سوم — ۷** | **کیفیت پاسخ، استناد و انتساب** | **۴ اقدام**<br><br>☐ **۲۲.** سنجش Groundedness پاسخ و Claimها با روش معتبر اقدام ۱۵.<br>☐ **۲۳.** سنجش Completeness پاسخ در برابر مطالب لازمِ مرجع؛ جداسازی آن از حضور شاهد در Context.<br>☐ **۲۴.** سنجش Citation correctness، Claim coverage و locator validity؛ تفکیک اتصال ساختاری از پشتیبانی معنایی.<br>☐ **۲۵.** سنجش Attribution correctness برای نویسندهٔ مستقیم، نویسندهٔ واقعی مقالهٔ سردبیری، نقش سردبیر و گویندهٔ واقعی. | **تعداد:** پاسخ/Claim/Citation واقعیِ موجود در دامنهٔ معتبر؛ مخرج هر Metric جدا ثبت شود.<br><br>**API:** صفر برای مصرف داوری معتبر؛ نیاز داوری تازه تابع Gap matrix است.<br><br>**پایان:** نتیجهٔ Development با پوشش معلوم؛ نمونه‌گیری به‌جای کل جمعیت معرفی نشود و مسیر recovery اجرای Qwen نام نگیرد. |
@@ -210,12 +210,164 @@ next_action:
 
 در اختلاف نام و ترتیب، برنامهٔ تفصیلی و اصلاح صریح فایل تحویل ملاک‌اند؛ بخش ۲۶ Execution Protocol پیوست هنوز ترتیب قدیمی `21 Regression Suite / 22 Performance & Cost / 23 Release Candidate` را دارد. این قسمت برای نام‌گذاری و دامنهٔ ادامه استفاده نمی‌شود. قواعد عملی معتبر پروتکل، مانند Cache-first و Pilot و عدم تضعیف Validation، حفظ می‌شوند. اختلاف آستانه یا قرارداد، جداگانه و با تصمیم مستند حل می‌شود.
 
-## ۱۰. قدم بعد
+## ۱۰. وضعیت فعلی و قدم بعد
 
-شروع از **اقدام ۱** و آماده‌سازی چهار بخش اولیهٔ NB21 طبق v6؛ نخستین اجرای واقعی، Preflight محلی مربوط به اقدامات ۲ تا ۴ است. این مرحله API نمی‌زند، پاسخ تولید نمی‌کند، Artifact قبلی را تغییر نمی‌دهد و پذیرش upstream اعلام نمی‌کند.
+**ادامهٔ فعال: اقدام ۱۴ از ۴۹ — اعتبارسنجی روش سنجش معنایی.**
 
-**وضعیت فعلی:** `NB21_PLANNED_PENDING_LOCAL_INPUT_PREFLIGHT`  
-**درخواست مدل پولی در تهیهٔ این فایل:** صفر  
-**تغییر مخزن، Commit و Push در تهیهٔ این فایل:** انجام نشده است.
+- **۸ اقدام تیک‌خورده:** ۴، ۵، ۶، ۷، ۸، ۹، ۱۱ و ۱۳؛ این شمارش درصد کیفیت یا پذیرش محصول نیست.
+- **اقدام‌های ۱ تا ۳:** خروجی اولیهٔ Preflight گزارش شده، اما رکورد مستقلِ پایان هر اقدام در شواهد فعلی ثبت نشده است؛ فعلاً بدون تیک باقی می‌مانند. این وضعیت مجوز تکرار همهٔ Discoveryها از ابتدا نیست.
+- **اقدام ۱۰ باز است:** نوع منبع و سطح مرجعیت برای ۲۶۶۴ پرسش کامل‌اند؛ Topic و Question type نگاشت معتبر منتخب ندارند و جزئیات Authority برای همهٔ جمعیت کامل نیست. شاهد: C026.
+- **اقدام ۱۲ باز است:** آستانه‌های اولیه هنوز مصوب و فریز نشده‌اند؛ اختلاف پوشش استناد ۹۰٪/۹۵٪، Regression، پوشش، بودجهٔ زمان و سایر شروط فریز بازند. شاهد: C034.
+- **اقدام ۱۴ در حال انجام است:** رد ارزیاب قبلی C379 حفظ شده؛ پیاده‌سازی جدیدِ جداسازی ورودی، اتصال متن، Schema و سازگاری خروجی آزمون فنی دارد، ولی اعتبار معنایی آن اثبات نشده است.
+- **آخرین خروجی واقعاً دریافت‌شده: C055** با وضعیت `NB21_BOUNDED_DIAGNOSTIC_PILOT_RELOAD_PASS`. پایلوت دیده‌شده و تشخیصی شامل ۱۲ پرونده، ۲۳ استخراج یکتا و حداکثر ۱۲ مقایسهٔ مشروط است؛ سقف ۳۵ درخواست inference بدون retry، نه تعداد درخواست انجام‌شده و نه سقف قطعی کل job شامل Probeهای احتمالی.
+- **C056 ارائه شده ولی خروجی اجرای آن هنوز دریافت نشده است.** ادامه پس از دریافت خروجی همان سل است؛ اجرای موفقش حدس زده نمی‌شود.
+- Provider/Model، سازگاری Schema سرویس، تعرفه، برآورد کل هزینه و سایر شروط Dispatch هنوز نهایی نشده‌اند؛ `dispatch_allowed=false`.
+- تعداد فراخوانی مدل پولی گزارش‌شده در اجرای NB21 تا C055: **صفر**؛ داوری معنایی تازه در این مسیر: **صفر**.
+
+سیاست هزینهٔ اعلام‌شدهٔ کاربر در همین گفت‌وگو برای کل job شامل retry و درخواست‌های در حال اجرا: کمتر از ۱۰۰٬۰۰۰ تومان بدون اجازهٔ جدا؛ از ۱۰۰٬۰۰۰ تا ۵۰۰٬۰۰۰ تومان اطلاع پیش از اجرا؛ بیش از ۵۰۰٬۰۰۰ تومان اجازهٔ صریح پیش از اجرا. تقسیم job برای عبور از مرز مجوز مجاز نیست؛ تعرفه و برآورد هزینه پیش از ارسال باید معلوم باشند.
+
+**HEAD ریموت واقعاً بررسی‌شده پیش از این ویرایش:** `a9c8de6f1f0b1ff9affb7a263a3dd0cb626e9b19` در ۱۷ اکتبر ۲۰۲۶. HEAD قدیمی ابتدای فایل و لینک‌های پین‌شده، سابقهٔ تهیهٔ برنامه‌اند و HEAD زنده تلقی نمی‌شوند.
+
+## ۱۱. شواهد تیک‌ها و محدودهٔ تأیید
+
+این به‌روزرسانی به درخواست صریح کاربر برای تغییر همین فایل و ثبت در شاخهٔ `rag-phase2` انجام می‌شود. مبنای رکوردهای زیر **خروجی‌های اجرای محلی ارائه‌شده توسط کاربر در همین گفت‌وگو** است؛ این ویرایش، اجرای دوبارهٔ نوت‌بوک یا تأیید مستقل فایل‌های روی دستگاه کاربر نیست. مسیرهای Artifact، مسیرهای گزارش‌شدهٔ پروژه‌اند؛ با تیک‌زدن، ادعای حضور همهٔ آن‌ها در GitHub ایجاد نمی‌شود.
+
+برای C013، C016 و C018 خروجی گزارش شده ولی فایل شاهد مستقل نوشته نشده است؛ C019 صرفاً ارجاع جمع‌بندی بررسی ورودی‌هاست. هش درج‌شده در این موارد، هش C019 است و هش خروجی چاپی سل‌ها محسوب نمی‌شود.
+
+### اقدام ۴ — PASS
+
+```text
+action_number: 4
+status: PASS
+scope: FINAL_STORED_POSTHOC_AUDIT_ARTIFACTS
+notebook_cell_id: C003–C005
+evidence_path: artifacts/phase2/answerability_safety_confidence/work/outputs/nb20c_scoped_audit_handoff_C455_v1/C455.handoff.9b08c7991964ea8cc99ba2cc9e47e9bed7104d8c3231b75fe77277ef86475ae1.json
+evidence_hash_and_definition: SHA256_FILE_BYTES=9b08c7991964ea8cc99ba2cc9e47e9bed7104d8c3231b75fe77277ef86475ae1; گزارش‌شده در خروجی اجرای محلی
+population_and_denominator: ۱۱۴۹ پرونده؛ ۹ فایل مستقیم؛ بازپخش ذخیره‌شده با ۸ ورودی تأییدشده
+acceptance_criterion: هش فایل‌ها و سازگاری Gate، Replay، جمعیت و محدودیت‌های تحویل تأیید شوند.
+observed_result: NB21_ACTION_04_SCOPED_HANDOFF_PREFLIGHT_PASS؛ failed_checks خالی؛ action_4_eligible_for_checkmark=true.
+remaining_limitations: بازاجرای تاریخی و کل نوت‌بوک انجام نشده؛ پذیرش محصول زنده یا داوری مستقل نتیجه نمی‌شود.
+new_paid_api_calls: 0
+next_action: 5; ادامهٔ فعال فعلی 14
+```
+
+### اقدام ۵ — PASS
+
+```text
+action_number: 5
+status: PASS
+scope: INPUT_INVENTORY_AND_DECLARED_FILE_BINDINGS
+notebook_cell_id: C006–C013
+evidence_path: artifacts/phase2/evaluation_and_ablation/work/outputs/C019.input_review.8669fd3abd9b60d992f8af51556d5faf4cf550a079494b649f97ed7926d1939e.json
+evidence_hash_and_definition: SHA256_FILE_BYTES=8669fd3abd9b60d992f8af51556d5faf4cf550a079494b649f97ed7926d1939e; گزارش‌شده در خروجی اجرای محلی
+population_and_denominator: ۳۸۱۳ کل؛ ۲۶۶۴ Development؛ ۱۱۴۹ Test؛ هش منطقی Split/Gold از هش bytes فایل جدا ثبت شد.
+acceptance_criterion: نقش‌ها و مسیرهای لازم موجود و اتصال فایل‌ها روشن باشد؛ مانع موجودی باز نماند.
+observed_result: NB21_INPUT_INVENTORY_READY_FOR_REUSE_ASSESSMENT؛ blockers خالی؛ مسیر acceptance در work/reports حل شد.
+remaining_limitations: C013 فایل مستقل ننوشته؛ C019 ارجاع جمع‌بندی بررسی ورودی‌هاست. قراردادهای منطقی Split/Gold در NB21 هنوز بازتولید نشده‌اند؛ اعتبارسنجی Schema مصرف‌کننده تکمیل نیست.
+new_paid_api_calls: 0
+next_action: 6; ادامهٔ فعال فعلی 14
+```
+
+### اقدام ۶ — PASS
+
+```text
+action_number: 6
+status: PASS
+scope: REUSE_SOURCE_IDENTITIES_AND_EXPLICIT_CONSUMPTION_CONDITIONS
+notebook_cell_id: C014–C017؛ نسخهٔ اصلاح‌شدهٔ C016
+evidence_path: artifacts/phase2/evaluation_and_ablation/work/outputs/C019.input_review.8669fd3abd9b60d992f8af51556d5faf4cf550a079494b649f97ed7926d1939e.json
+evidence_hash_and_definition: SHA256_FILE_BYTES=8669fd3abd9b60d992f8af51556d5faf4cf550a079494b649f97ed7926d1939e; گزارش‌شده در خروجی اجرای محلی
+population_and_denominator: گزارش Embedding با هش تأییدشده؛ ۹۰ فایل NPZ؛ قراردادهای Hybrid، Reranker، Context و Review.
+acceptance_criterion: هویت شواهد و حدود مصرف هر خانواده مشخص باشد؛ تفاوت نام نقش با اختلاف داده اشتباه نشود.
+observed_result: گزارش بزرگ با هش صحیح و بدون بارگذاری کامل JSON بررسی شد؛ چهار اتصال هم‌مسیر ADR/Manifest هم‌هش‌اند؛ بررسی اصلاح‌شدهٔ قابلیت بازاستفاده پاس شد.
+remaining_limitations: فایل مستقل C016 نوشته نشد؛ C019 جمع‌بندی را ثبت می‌کند. محتوای آرایه‌های Cache و سازگاری عددی Metric برای مصرف هنوز باید بررسی شوند؛ بازاستفادهٔ مشروط به معنی پذیرش معنایی نیست.
+new_paid_api_calls: 0
+next_action: 7; ادامهٔ فعال فعلی 14
+```
+
+### اقدام ۷ — PASS
+
+```text
+action_number: 7
+status: PASS
+scope: PROVENANCE_AND_LIMITATION_REGISTRATION
+notebook_cell_id: C018
+evidence_path: artifacts/phase2/evaluation_and_ablation/work/outputs/C019.input_review.8669fd3abd9b60d992f8af51556d5faf4cf550a079494b649f97ed7926d1939e.json
+evidence_hash_and_definition: SHA256_FILE_BYTES=8669fd3abd9b60d992f8af51556d5faf4cf550a079494b649f97ed7926d1939e; گزارش‌شده در خروجی اجرای محلی
+population_and_denominator: خانواده‌های Embedding، Reranker، Context، Development، Test recovery، Policy و ممیزی ذخیره‌شده.
+acceptance_criterion: منشأ و محدودیت‌ها صریح ثبت شوند؛ مدل اجراشده از نام یا تنظیم پیش‌فرض حدس زده نشود.
+observed_result: NB21_OUTPUT_PROVENANCE_REGISTERED؛ failed_checks خالی؛ action_7_eligible_for_checkmark=true.
+remaining_limitations: C018 فایل مستقل ننوشته؛ ارجاع جمع‌بندی C019 است. منشأ دقیق مدل تولید Development در کنترل‌های بررسی‌شده مشخص نبود؛ Recovery اجرای Qwen و داوری مستقل نیست.
+new_paid_api_calls: 0
+next_action: 8; ادامهٔ فعال فعلی 14
+```
+
+### اقدام ۸ — PASS
+
+```text
+action_number: 8
+status: PASS
+scope: GAP_MATRIX_AND_RESPONSIBILITY_MAPPING
+notebook_cell_id: C019
+evidence_path: artifacts/phase2/evaluation_and_ablation/work/outputs/C019.input_review.8669fd3abd9b60d992f8af51556d5faf4cf550a079494b649f97ed7926d1939e.json
+evidence_hash_and_definition: SHA256_FILE_BYTES=8669fd3abd9b60d992f8af51556d5faf4cf550a079494b649f97ed7926d1939e; گزارش‌شده در خروجی اجرای محلی
+population_and_denominator: ۱۹ ردیف الزام/شکاف با اقدام مسئول؛ شامل Metricها، شش Ablation و تحویل‌ها.
+acceptance_criterion: برای الزامات مشخص باشد چه شاهدی موجود است، چه تطبیقی لازم است و اقدام مسئول کدام است.
+observed_result: NB21_GAP_MATRIX_CHECKPOINT_RELOAD_PASS؛ reload_validation=PASS؛ action_8_eligible_for_checkmark=true.
+remaining_limitations: ماتریس شکاف، اجرای ارزیابی یا فریز تنظیمات نیست؛ نیاز API هنوز از شکاف‌های واقعی تعیین می‌شود.
+new_paid_api_calls: 0
+next_action: 9; ادامهٔ فعال فعلی 14
+```
+
+### اقدام ۹ — PASS
+
+```text
+action_number: 9
+status: PASS
+scope: EXPLICIT_METRIC_DEFINITIONS_AND_MISSING_DATA_RULES
+notebook_cell_id: C020
+evidence_path: artifacts/phase2/evaluation_and_ablation/work/outputs/C020.metric_definitions.4ff5630b473e5c49a45ac1e9e58c991db4caf16d47c7260cad66842b9abeaae6.json
+evidence_hash_and_definition: SHA256_FILE_BYTES=4ff5630b473e5c49a45ac1e9e58c991db4caf16d47c7260cad66842b9abeaae6; گزارش‌شده در خروجی اجرای محلی
+population_and_denominator: ۱۶ Metric؛ واحد تحلیل، مخرج، تجمیع، k و Missing جدا تعریف شدند.
+acceptance_criterion: تعریف Metric و قواعد صفر مخرج و دادهٔ نامعین صریح باشد؛ آستانهٔ نامصوب به PASS تبدیل نشود.
+observed_result: NB21_METRIC_DEFINITION_DRAFT_RELOAD_PASS؛ reload_validation=PASS؛ action_9_eligible_for_checkmark=true.
+remaining_limitations: قرارداد نهایی ارزیابی و آستانه‌ها فریز نشده‌اند؛ روش سنجش معنایی و Runner هنوز نیازمند اعتبارسنجی‌اند.
+new_paid_api_calls: 0
+next_action: 10; ادامهٔ فعال فعلی 14
+```
+
+### اقدام ۱۱ — PASS
+
+```text
+action_number: 11
+status: PASS
+scope: RECORDED_TEST_EXPOSURE_DEVELOPMENT_RULES_PAIRED_COMPARISON_AND_SIX_ABLATION_PLANS
+notebook_cell_id: C027–C032؛ گروه‌بندی مرجع C030
+evidence_path: artifacts/phase2/evaluation_and_ablation/work/outputs/C032.comparison_and_ablation_plan.f387c618ceb487c24ec931e9526acf1d40108509b1f40a50343d415836e2c3ed.json
+evidence_hash_and_definition: SHA256_FILE_BYTES=f387c618ceb487c24ec931e9526acf1d40108509b1f40a50343d415836e2c3ed; گزارش‌شده در خروجی اجرای محلی
+population_and_denominator: ۲۶۶۴ پرسش Development در ۲۶۲۰ گروه؛ ۶ طرح Ablation؛ Test تاریخی ۱۱۴۹.
+acceptance_criterion: سابقهٔ Test، Development-only، مقایسهٔ زوجی و شش طرح با وابستگی‌های صریح ثبت شوند.
+observed_result: NB21_COMPARISON_PLAN_RELOAD_PASS؛ تمام checks پاس؛ action_11_eligible_for_checkmark=true.
+remaining_limitations: اجرای Ablation یا فریز نهایی انجام نشده؛ دفتر کامل مواجههٔ تاریخی Test تأیید نشده است. C030 اتصال هش عضویت C029 را اصلاح کرده و مبنای گروه‌بندی است.
+new_paid_api_calls: 0
+next_action: 12; ادامهٔ فعال فعلی 14
+```
+
+### اقدام ۱۳ — PASS
+
+```text
+action_number: 13
+status: PASS
+scope: REVIEW_OF_RUBRIC_REFERENCE_AVAILABILITY_AND_RECORDED_INDEPENDENCE
+notebook_cell_id: C035–C041؛ Rubric هم‌راستا C040
+evidence_path: artifacts/phase2/evaluation_and_ablation/work/outputs/C041.reference_review_checkpoint.89e33877111d1204111f8a0b383c44ef0755b57537cc9ec24ba4bc66ca0303ba.json
+evidence_hash_and_definition: SHA256_FILE_BYTES=89e33877111d1204111f8a0b383c44ef0755b57537cc9ec24ba4bc66ca0303ba; گزارش‌شده در خروجی اجرای محلی
+population_and_denominator: ۲۶۶۴ مرجع Development دارای سؤال، پاسخ، شناسه/نقل‌قول/locator شاهد و سند؛ بررسی فرادادهٔ ۱۱۴۹ Support و ۲ Review محدود.
+acceptance_criterion: Rubric، وجود مرجع و وضعیت استقلال بررسی شوند؛ داشتن مرجع با صحت معنایی یکی نشود.
+observed_result: NB21_REFERENCE_REVIEW_CHECKPOINT_RELOAD_PASS؛ action_13_eligible_for_checkmark=true؛ تعریف‌ها با C020 هم‌راستا شدند.
+remaining_limitations: هیچ مرجع مستقل یا روش سنجش معنایی پذیرفته نشده؛ در زمان C041 مختصات سند بررسی نشده بود. کنترل بعدی C051 فقط چهار نقل‌قول پایلوت را با محل یکتا یافت؛ تعمیم به ۲۶۶۴ مجاز نیست.
+new_paid_api_calls: 0
+next_action: 14; ادامهٔ فعال فعلی 14
+```
 
 </div>
