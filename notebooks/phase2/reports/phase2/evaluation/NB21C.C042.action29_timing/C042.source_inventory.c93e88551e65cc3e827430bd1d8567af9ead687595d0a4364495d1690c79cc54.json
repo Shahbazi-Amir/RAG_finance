@@ -1,0 +1,14 @@
+{
+  "reports/phase2/sparse_index_acceptance_v1.json": {
+    "bytes": 1840,
+    "file_bytes_sha256": "327f78ab21e9d80c6fdf96ab2acf2ce0b3feebe9cac4d2896deeb09c782305fd",
+    "pinned_hash_verified": false,
+    "reason": "DISCOVERED_REPORT"
+  },
+  "reports/phase2/sparse_test_evaluation_v1.json": {
+    "bytes": 12341,
+    "file_bytes_sha256": "f7952cda670112fb270884f9c300b03b8b69c86ced201bc92e87431f55084bb6",
+    "pinned_hash_verified": false,
+    "reason": "DISCOVERED_REPORT"
+  }
+}

@@ -1,0 +1,14 @@
+[
+  {
+    "interpretation": "PRESERVED_NOT_AUTOMATICALLY_POOLED",
+    "json_location": "$.latency_ms",
+    "record": {
+      "maximum": 3.303334000520408,
+      "median_p50": 0.39248200118890963,
+      "minimum": 0.1027630023600068,
+      "p95": 0.7580063989735203,
+      "scope": "LOCAL_INDEPENDENT_TEST_NOT_PRODUCTION_SLO"
+    },
+    "source": "reports/phase2/sparse_test_evaluation_v1.json"
+  }
+]

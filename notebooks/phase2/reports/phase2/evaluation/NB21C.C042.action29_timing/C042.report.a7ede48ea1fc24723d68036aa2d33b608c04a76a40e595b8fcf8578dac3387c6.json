@@ -1,0 +1,75 @@
+{
+  "checklist_modified": false,
+  "completion": {
+    "action": 29,
+    "action29_automatic_checkmark": false,
+    "full_stage_and_end_to_end_latency_measurement_established": false,
+    "offline_inventory_and_gap_reporting_complete": true,
+    "reason_fa": "پایان گردآوری از کامل‌بودن اندازه‌گیری تمام مراحل جداست؛ گروه‌های قابل‌سنجش و محدودیت‌ها در همین گزارش مشخص شده‌اند."
+  },
+  "conflicting_identified_observations": 0,
+  "duplicate_identified_observations": 0,
+  "existing_timing_inventory_files": [],
+  "explicit_historical_missing_measurement_count": 0,
+  "files_read": 2,
+  "git_commands_executed": false,
+  "limitations": [
+    "زمان بستهٔ داوری، زمان پاسخ‌دهی محصول نیست.",
+    "زمان بازخوانی آفلاین، زمان تولید اصلی نیست.",
+    "مشخصات محیط پایه بدون اتصال صریح به هر اجرا به آن اجرا نسبت داده نشد.",
+    "وضعیت نامعلوم Cache، سخت‌افزار یا warm/cold حدس زده نشد.",
+    "بازنمایی‌های فاقد شناسهٔ اجرا برای محاسبهٔ صدک‌ها تجمیع نشدند.",
+    "گزارش‌های متنی حفظ شدند؛ اعداد داخل نثر خودکار به نمونهٔ زمان تبدیل نشدند.",
+    "نبود داده به معنی صفر زمان یا الزام API جدید نیست.",
+    "اندازه‌گیری مسیر زنده و نمایندگی آماری از این موجودی به‌تنهایی نتیجه نمی‌شود."
+  ],
+  "models_executed": false,
+  "new_api_calls": 0,
+  "new_api_cost_toman": 0,
+  "new_semantic_judgments": 0,
+  "observations_excluded_from_automatic_pooling": {},
+  "outputs": {
+    "conflicts": {
+      "file_bytes_sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+      "path": "reports/phase2/evaluation/NB21C.C042.action29_timing/C042.conflicts.37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570.json"
+    },
+    "duplicates": {
+      "file_bytes_sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+      "path": "reports/phase2/evaluation/NB21C.C042.action29_timing/C042.duplicates.37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570.json"
+    },
+    "historical_missing": {
+      "file_bytes_sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+      "path": "reports/phase2/evaluation/NB21C.C042.action29_timing/C042.historical_missing.37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570.json"
+    },
+    "markdown": {
+      "file_bytes_sha256": "9141fa1dc0bb9150e5c044f400f8e933b6648de750f9f4bdfb90ca0f5ab103c9",
+      "path": "reports/phase2/evaluation/NB21C.C042.action29_timing/C042.summary_fa.9141fa1dc0bb9150e5c044f400f8e933b6648de750f9f4bdfb90ca0f5ab103c9.md"
+    },
+    "observations": {
+      "file_bytes_sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+      "path": "reports/phase2/evaluation/NB21C.C042.action29_timing/C042.observations.37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570.json"
+    },
+    "preserved_aggregates": {
+      "file_bytes_sha256": "dd66bacf5e827a0625f08b61d657d46ecdb7e67efe8d7acbe7423deab565378a",
+      "path": "reports/phase2/evaluation/NB21C.C042.action29_timing/C042.preserved_aggregates.dd66bacf5e827a0625f08b61d657d46ecdb7e67efe8d7acbe7423deab565378a.json"
+    },
+    "read_issues": {
+      "file_bytes_sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+      "path": "reports/phase2/evaluation/NB21C.C042.action29_timing/C042.read_issues.37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570.json"
+    },
+    "source_inventory": {
+      "file_bytes_sha256": "c93e88551e65cc3e827430bd1d8567af9ead687595d0a4364495d1690c79cc54",
+      "path": "reports/phase2/evaluation/NB21C.C042.action29_timing/C042.source_inventory.c93e88551e65cc3e827430bd1d8567af9ead687595d0a4364495d1690c79cc54.json"
+    }
+  },
+  "previous_files_modified": false,
+  "qualified_group_count": 0,
+  "qualified_group_statistics": [],
+  "read_issue_count": 0,
+  "reload_validation": "PASS",
+  "report_folder_matches": [],
+  "schema_version": "NB21C_C042_ACTION29_TIMING_INVENTORY_V1",
+  "status": "ACTION29_OFFLINE_TIMING_INVENTORY_COMPLETE_WITH_EXPLICIT_LIMITS",
+  "timing_kind_counts": {},
+  "timing_observation_count": 0
+}
