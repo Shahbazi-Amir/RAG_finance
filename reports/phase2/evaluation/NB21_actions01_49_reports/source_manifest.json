@@ -1,0 +1,88 @@
+{
+  "commit": "5f3d3f8c3c9bc84d63799a01efbd02e9467c8d0c",
+  "repository_sources": [
+    {
+      "repository_path": "reports/phase2/evaluation/NB21_action10_completion.md",
+      "commit": "5f3d3f8c3c9bc84d63799a01efbd02e9467c8d0c",
+      "git_blob": "5d1df16b989f47eeec39ee101fe31cf673122c0a",
+      "sha256": "31cba39326d10f07effa5e260750161b8ed77c6b16068620168f30937353afef",
+      "local_copy": "original_repository_reports/NB21_action10_completion.md",
+      "status": "READ_AND_GIT_BLOB_VERIFIED"
+    },
+    {
+      "repository_path": "reports/phase2/evaluation/NB21_action12_completion.md",
+      "commit": "5f3d3f8c3c9bc84d63799a01efbd02e9467c8d0c",
+      "git_blob": "b729407c22d5ea3dc6ee75886fd229c0564d9ea6",
+      "sha256": "9d67d822b0fbabbb0490197349f288d3b67c8d9e2ed1edc919b86a81e7f268c4",
+      "local_copy": "original_repository_reports/NB21_action12_completion.md",
+      "status": "READ_AND_GIT_BLOB_VERIFIED"
+    },
+    {
+      "repository_path": "reports/phase2/evaluation/NB21_action12_remaining_contract.md",
+      "commit": "5f3d3f8c3c9bc84d63799a01efbd02e9467c8d0c",
+      "git_blob": "cd0c64d821ccf79d25fa6b1912d4ce4f69faf7ad",
+      "sha256": "ccef2d2b97f0c5245f85bedd2e9f79acc2b7ad9a76b026e02519bf4403df6f74",
+      "local_copy": "original_repository_reports/NB21_action12_remaining_contract.md",
+      "status": "READ_AND_GIT_BLOB_VERIFIED"
+    },
+    {
+      "repository_path": "reports/phase2/evaluation/NB21_action26_final_summary.json",
+      "commit": "5f3d3f8c3c9bc84d63799a01efbd02e9467c8d0c",
+      "git_blob": "5b6e01de716e7613a5f306519e4e68b831506b06",
+      "sha256": "a7bbfb3bb732b0d46477a2246b54402d93d30f5307fed511eab5ba64318b3c63",
+      "local_copy": "original_repository_reports/NB21_action26_final_summary.json",
+      "status": "READ_AND_GIT_BLOB_VERIFIED"
+    },
+    {
+      "repository_path": "reports/phase2/evaluation/NB21_action26_final_summary.md",
+      "commit": "5f3d3f8c3c9bc84d63799a01efbd02e9467c8d0c",
+      "git_blob": "8e51b415a3d61cdb919decd5a796e45032b9862f",
+      "sha256": "f67801e32fa9f3199a98d776d8a790130e3720c4a9d445a00a06afed2ec2afec",
+      "local_copy": "original_repository_reports/NB21_action26_final_summary.md",
+      "status": "READ_AND_GIT_BLOB_VERIFIED"
+    },
+    {
+      "repository_path": "reports/phase2/evaluation/NB21_action27_existing_safety_review.json",
+      "commit": "5f3d3f8c3c9bc84d63799a01efbd02e9467c8d0c",
+      "git_blob": "e7755036473129a0663d89de028a6387b4b7c3db",
+      "sha256": "d388fd4dd8746307bfccc1511f27b4cc347150fe09536776db1801bad6097575",
+      "local_copy": "original_repository_reports/NB21_action27_existing_safety_review.json",
+      "status": "READ_AND_GIT_BLOB_VERIFIED"
+    },
+    {
+      "repository_path": "reports/phase2/evaluation/NB21_action27_existing_safety_review.md",
+      "commit": "5f3d3f8c3c9bc84d63799a01efbd02e9467c8d0c",
+      "git_blob": "ff8e111293627a27353f762f654efbee063cf0d5",
+      "sha256": "7e98e72c25ca7dc9fd969a8e19e64cfe25b34949e003233fa5a5c517e3f22636",
+      "local_copy": "original_repository_reports/NB21_action27_existing_safety_review.md",
+      "status": "READ_AND_GIT_BLOB_VERIFIED"
+    },
+    {
+      "repository_path": "reports/phase2/evaluation/NB21_actions10_12_evidence_review.md",
+      "commit": "5f3d3f8c3c9bc84d63799a01efbd02e9467c8d0c",
+      "git_blob": "c125ccf2dfa738d2fb49478b20e5d95333b3f377",
+      "sha256": "8547a75cf6059eadeae05a40365643b4789ed813172cbcd5d02b51b5abe013cd",
+      "local_copy": "original_repository_reports/NB21_actions10_12_evidence_review.md",
+      "status": "READ_AND_GIT_BLOB_VERIFIED"
+    },
+    {
+      "repository_path": "reports/phase2/evaluation/NB21_actions22_25_scoped_closure.md",
+      "commit": "5f3d3f8c3c9bc84d63799a01efbd02e9467c8d0c",
+      "git_blob": "9d0eb0d8cd62bdd6b00c7ce5939192eeed9b320b",
+      "sha256": "c2d7384b22a527628c733374b45207e201db1c6fd1062f61a88748ee566e218d",
+      "local_copy": "original_repository_reports/NB21_actions22_25_scoped_closure.md",
+      "status": "READ_AND_GIT_BLOB_VERIFIED"
+    },
+    {
+      "repository_path": "notebooks/phase2/checklist/NB21_remaining_work_checklist_fa.md",
+      "commit": "5f3d3f8c3c9bc84d63799a01efbd02e9467c8d0c",
+      "git_blob": "bb89cf24c4d920719980991e55d893d9de8c54c5",
+      "sha256": "ed5ff0345fdcf5071fe50922856f0c38f2d3ba09966250fcb2a6bf55a598363c",
+      "local_copy": "original_repository_reports/NB21_remaining_work_checklist_fa.md",
+      "status": "READ_AND_GIT_BLOB_VERIFIED"
+    }
+  ],
+  "readable_export_source_sha256": "1a0a006922ca8698af77b29f959a5c0eb3edb76881c8f2627a9b258da9352a94",
+  "original_nb21_blob": "4405d634de02e8e95df717a4f727bade2ea730e7",
+  "original_local_artifact_bytes_reloaded": false
+}

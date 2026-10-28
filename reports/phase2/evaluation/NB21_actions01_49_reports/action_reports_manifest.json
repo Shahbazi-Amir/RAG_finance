@@ -1,0 +1,4032 @@
+{
+  "schema_version": "NB21.actions01_26.report_bundle.v1",
+  "repository_commit": "5f3d3f8c3c9bc84d63799a01efbd02e9467c8d0c",
+  "action_count": 26,
+  "current_next_action": 27,
+  "reports": [
+    {
+      "action": 1,
+      "title": "مأموریت و مرز NB21",
+      "file": "NB21_action01_report_fa.md",
+      "status": "CHECKLIST_COMPLETED_IN_RECORDED_SCOPE",
+      "existing_repository_report": null,
+      "proposed_repository_path": "reports/phase2/evaluation/NB21_actions01_26_reports/NB21_action01_report_fa.md",
+      "evidence": [
+        {
+          "notebook": "notebooks/phase2/21_evaluation_and_ablation.ipynb",
+          "cell_id": "C057",
+          "physical_cell_1based": 114,
+          "reported_output": {
+            "status": "NB21_ACTIONS_01_03_READONLY_VERIFICATION_PASS",
+            "checklist_actions": [
+              1,
+              2,
+              3
+            ],
+            "checklist_action_total": 49,
+            "mission": {
+              "NB21": "Evaluation, six ablations, error analysis, Phase-1 comparison and regression reporting.",
+              "NB20_boundary": "Consume scoped upstream evidence; do not infer full semantic, confidence, live-safety or Phase-2 acceptance.",
+              "NB22_boundary": "Final release and reproducibility.",
+              "NB23_boundary": "Phase-3 handoff.",
+              "requirements_mapping": "notebooks/phase2/NB21_remaining_work_checklist_fa.md"
+            },
+            "scope_checks": {
+              "official_nb21_named_in_roadmap": true,
+              "nb22_boundary_named_in_roadmap": true,
+              "nb23_boundary_named_in_roadmap": true,
+              "exactly_49_unique_numbered_actions": true
+            },
+            "document_bindings": {
+              "roadmap": {
+                "path": "data/Road_Maps/RAG_finance_phase2_modular_notebooks_execution_plan.md",
+                "file_bytes_sha256": "31b91c072cccde2fb0e0a37fe10a67ec545ede325385b743b978a60cc4869e9e"
+              },
+              "checklist": {
+                "path": "notebooks/phase2/NB21_remaining_work_checklist_fa.md",
+                "file_bytes_sha256": "1682b58813960d386c11ec6ab2f85f573e30c9f211480e73d9c22ebf1d41855c"
+              }
+            },
+            "git_checks": {
+              "local_git_reads_succeeded": true,
+              "project_root_matches_git_root": true,
+              "branch_is_rag_phase2": true,
+              "no_unmerged_paths": true,
+              "live_remote_head_resolved": true,
+              "local_head_matches_live_remote": true
+            },
+            "git_snapshot": {
+              "repository_root": "/Users/macbookpro/AMIR_DATA/00_WORKS/01_PROJECTS/RAG-projects/RAG_finance",
+              "branch": "rag-phase2",
+              "head": "b039d8741159f083855d9d566cb1503f1c4f3181",
+              "status": "",
+              "staged_paths": "",
+              "unstaged_paths": "",
+              "unmerged_paths": ""
+            },
+            "live_remote": {
+              "checked_successfully": true,
+              "head": "b039d8741159f083855d9d566cb1503f1c4f3181",
+              "returncode": 0,
+              "error_type": null
+            },
+            "notebook": {
+              "path": "notebooks/phase2/21_evaluation_and_ablation.ipynb",
+              "exists": true,
+              "legacy_exists": false,
+              "candidate_paths": [
+                "notebooks/phase2/21_evaluation_and_ablation.ipynb"
+              ],
+              "bytes": 2334833,
+              "file_bytes_sha256": "39852ceede6cc729fbd0289c6ea5da804b1c08e72b7e3fa653694caf27e74715",
+              "saved_cell_count": 179,
+              "saved_code_cell_count": 90
+            },
+            "notebook_checks": {
+              "official_notebook_exists": true,
+              "legacy_name_absent": true,
+              "single_nb21_candidate": true,
+              "saved_notebook_format_valid": true
+            },
+            "actions_eligible_for_checkmark": {
+              "1": true,
+              "2": true,
+              "3": true
+            },
+            "local_worktree_required_to_be_clean": false,
+            "saved_notebook_snapshot_proves_runtime_health": false,
+            "checklist_file_updated": false,
+            "files_written": 0,
+            "model_api_calls": 0,
+            "new_api_cost_toman": 0
+          },
+          "original_artifact_bytes_independently_reloaded": false
+        }
+      ],
+      "new_model_api_calls": 0
+    },
+    {
+      "action": 2,
+      "title": "نسخه و وضعیت Git",
+      "file": "NB21_action02_report_fa.md",
+      "status": "CHECKLIST_COMPLETED_IN_RECORDED_SCOPE",
+      "existing_repository_report": null,
+      "proposed_repository_path": "reports/phase2/evaluation/NB21_actions01_26_reports/NB21_action02_report_fa.md",
+      "evidence": [
+        {
+          "notebook": "notebooks/phase2/21_evaluation_and_ablation.ipynb",
+          "cell_id": "C057",
+          "physical_cell_1based": 114,
+          "reported_output": {
+            "status": "NB21_ACTIONS_01_03_READONLY_VERIFICATION_PASS",
+            "checklist_actions": [
+              1,
+              2,
+              3
+            ],
+            "checklist_action_total": 49,
+            "mission": {
+              "NB21": "Evaluation, six ablations, error analysis, Phase-1 comparison and regression reporting.",
+              "NB20_boundary": "Consume scoped upstream evidence; do not infer full semantic, confidence, live-safety or Phase-2 acceptance.",
+              "NB22_boundary": "Final release and reproducibility.",
+              "NB23_boundary": "Phase-3 handoff.",
+              "requirements_mapping": "notebooks/phase2/NB21_remaining_work_checklist_fa.md"
+            },
+            "scope_checks": {
+              "official_nb21_named_in_roadmap": true,
+              "nb22_boundary_named_in_roadmap": true,
+              "nb23_boundary_named_in_roadmap": true,
+              "exactly_49_unique_numbered_actions": true
+            },
+            "document_bindings": {
+              "roadmap": {
+                "path": "data/Road_Maps/RAG_finance_phase2_modular_notebooks_execution_plan.md",
+                "file_bytes_sha256": "31b91c072cccde2fb0e0a37fe10a67ec545ede325385b743b978a60cc4869e9e"
+              },
+              "checklist": {
+                "path": "notebooks/phase2/NB21_remaining_work_checklist_fa.md",
+                "file_bytes_sha256": "1682b58813960d386c11ec6ab2f85f573e30c9f211480e73d9c22ebf1d41855c"
+              }
+            },
+            "git_checks": {
+              "local_git_reads_succeeded": true,
+              "project_root_matches_git_root": true,
+              "branch_is_rag_phase2": true,
+              "no_unmerged_paths": true,
+              "live_remote_head_resolved": true,
+              "local_head_matches_live_remote": true
+            },
+            "git_snapshot": {
+              "repository_root": "/Users/macbookpro/AMIR_DATA/00_WORKS/01_PROJECTS/RAG-projects/RAG_finance",
+              "branch": "rag-phase2",
+              "head": "b039d8741159f083855d9d566cb1503f1c4f3181",
+              "status": "",
+              "staged_paths": "",
+              "unstaged_paths": "",
+              "unmerged_paths": ""
+            },
+            "live_remote": {
+              "checked_successfully": true,
+              "head": "b039d8741159f083855d9d566cb1503f1c4f3181",
+              "returncode": 0,
+              "error_type": null
+            },
+            "notebook": {
+              "path": "notebooks/phase2/21_evaluation_and_ablation.ipynb",
+              "exists": true,
+              "legacy_exists": false,
+              "candidate_paths": [
+                "notebooks/phase2/21_evaluation_and_ablation.ipynb"
+              ],
+              "bytes": 2334833,
+              "file_bytes_sha256": "39852ceede6cc729fbd0289c6ea5da804b1c08e72b7e3fa653694caf27e74715",
+              "saved_cell_count": 179,
+              "saved_code_cell_count": 90
+            },
+            "notebook_checks": {
+              "official_notebook_exists": true,
+              "legacy_name_absent": true,
+              "single_nb21_candidate": true,
+              "saved_notebook_format_valid": true
+            },
+            "actions_eligible_for_checkmark": {
+              "1": true,
+              "2": true,
+              "3": true
+            },
+            "local_worktree_required_to_be_clean": false,
+            "saved_notebook_snapshot_proves_runtime_health": false,
+            "checklist_file_updated": false,
+            "files_written": 0,
+            "model_api_calls": 0,
+            "new_api_cost_toman": 0
+          },
+          "original_artifact_bytes_independently_reloaded": false
+        }
+      ],
+      "new_model_api_calls": 0
+    },
+    {
+      "action": 3,
+      "title": "فایل رسمی و ادامه‌های NB21",
+      "file": "NB21_action03_report_fa.md",
+      "status": "CHECKLIST_COMPLETED_IN_RECORDED_SCOPE",
+      "existing_repository_report": null,
+      "proposed_repository_path": "reports/phase2/evaluation/NB21_actions01_26_reports/NB21_action03_report_fa.md",
+      "evidence": [
+        {
+          "notebook": "notebooks/phase2/21_evaluation_and_ablation.ipynb",
+          "cell_id": "C057",
+          "physical_cell_1based": 114,
+          "reported_output": {
+            "status": "NB21_ACTIONS_01_03_READONLY_VERIFICATION_PASS",
+            "checklist_actions": [
+              1,
+              2,
+              3
+            ],
+            "checklist_action_total": 49,
+            "mission": {
+              "NB21": "Evaluation, six ablations, error analysis, Phase-1 comparison and regression reporting.",
+              "NB20_boundary": "Consume scoped upstream evidence; do not infer full semantic, confidence, live-safety or Phase-2 acceptance.",
+              "NB22_boundary": "Final release and reproducibility.",
+              "NB23_boundary": "Phase-3 handoff.",
+              "requirements_mapping": "notebooks/phase2/NB21_remaining_work_checklist_fa.md"
+            },
+            "scope_checks": {
+              "official_nb21_named_in_roadmap": true,
+              "nb22_boundary_named_in_roadmap": true,
+              "nb23_boundary_named_in_roadmap": true,
+              "exactly_49_unique_numbered_actions": true
+            },
+            "document_bindings": {
+              "roadmap": {
+                "path": "data/Road_Maps/RAG_finance_phase2_modular_notebooks_execution_plan.md",
+                "file_bytes_sha256": "31b91c072cccde2fb0e0a37fe10a67ec545ede325385b743b978a60cc4869e9e"
+              },
+              "checklist": {
+                "path": "notebooks/phase2/NB21_remaining_work_checklist_fa.md",
+                "file_bytes_sha256": "1682b58813960d386c11ec6ab2f85f573e30c9f211480e73d9c22ebf1d41855c"
+              }
+            },
+            "git_checks": {
+              "local_git_reads_succeeded": true,
+              "project_root_matches_git_root": true,
+              "branch_is_rag_phase2": true,
+              "no_unmerged_paths": true,
+              "live_remote_head_resolved": true,
+              "local_head_matches_live_remote": true
+            },
+            "git_snapshot": {
+              "repository_root": "/Users/macbookpro/AMIR_DATA/00_WORKS/01_PROJECTS/RAG-projects/RAG_finance",
+              "branch": "rag-phase2",
+              "head": "b039d8741159f083855d9d566cb1503f1c4f3181",
+              "status": "",
+              "staged_paths": "",
+              "unstaged_paths": "",
+              "unmerged_paths": ""
+            },
+            "live_remote": {
+              "checked_successfully": true,
+              "head": "b039d8741159f083855d9d566cb1503f1c4f3181",
+              "returncode": 0,
+              "error_type": null
+            },
+            "notebook": {
+              "path": "notebooks/phase2/21_evaluation_and_ablation.ipynb",
+              "exists": true,
+              "legacy_exists": false,
+              "candidate_paths": [
+                "notebooks/phase2/21_evaluation_and_ablation.ipynb"
+              ],
+              "bytes": 2334833,
+              "file_bytes_sha256": "39852ceede6cc729fbd0289c6ea5da804b1c08e72b7e3fa653694caf27e74715",
+              "saved_cell_count": 179,
+              "saved_code_cell_count": 90
+            },
+            "notebook_checks": {
+              "official_notebook_exists": true,
+              "legacy_name_absent": true,
+              "single_nb21_candidate": true,
+              "saved_notebook_format_valid": true
+            },
+            "actions_eligible_for_checkmark": {
+              "1": true,
+              "2": true,
+              "3": true
+            },
+            "local_worktree_required_to_be_clean": false,
+            "saved_notebook_snapshot_proves_runtime_health": false,
+            "checklist_file_updated": false,
+            "files_written": 0,
+            "model_api_calls": 0,
+            "new_api_cost_toman": 0
+          },
+          "original_artifact_bytes_independently_reloaded": false
+        }
+      ],
+      "new_model_api_calls": 0
+    },
+    {
+      "action": 4,
+      "title": "مصرف تحویل C455",
+      "file": "NB21_action04_report_fa.md",
+      "status": "CHECKLIST_COMPLETED_IN_RECORDED_SCOPE",
+      "existing_repository_report": null,
+      "proposed_repository_path": "reports/phase2/evaluation/NB21_actions01_26_reports/NB21_action04_report_fa.md",
+      "evidence": [
+        {
+          "notebook": "notebooks/phase2/21_evaluation_and_ablation.ipynb",
+          "cell_id": "C005",
+          "physical_cell_1based": 10,
+          "reported_output": {
+            "status": "NB21_ACTION_04_SCOPED_HANDOFF_PREFLIGHT_PASS",
+            "checklist_action": 4,
+            "checklist_action_total": 49,
+            "checks": {
+              "nine_direct_files_verified": true,
+              "gate_status": true,
+              "gate_conditions": true,
+              "gate_population_matches_handoff": true,
+              "gate_labels_match_handoff": true,
+              "handoff_scoped_completion": true,
+              "unique_saved_replay_result": true,
+              "replay_population": true,
+              "replay_labels": true,
+              "per_case_replay": true,
+              "binding_report_consistency": true,
+              "isolated_mode_recorded": true,
+              "prior_globals_not_used": true,
+              "replay_scope": true,
+              "saved_replay_input_bindings": true,
+              "preserved_all_original_source_checks_rerun": true,
+              "preserved_entire_notebook_run_all_performed": true,
+              "preserved_semantic_judgments_independently_validated": true,
+              "preserved_formal_live_product_safety_accepted": true
+            },
+            "failed_checks": [],
+            "saved_replay_result": {
+              "location": [
+                "replay"
+              ],
+              "status": "ISOLATED_FINAL_AUDIT_ARTIFACT_REPLAY_PASS",
+              "query_count": 1149,
+              "effective_label_counts": {
+                "CRITICAL": 0,
+                "NONCRITICAL": 1149,
+                "NOT_ASSESSED": 0,
+                "UNDETERMINED": 0
+              },
+              "verified_input_count": 8
+            },
+            "replay_payload_type": "dict",
+            "replay_payload_keys": [
+              "all_original_source_checks_rerun",
+              "effective_label_counts",
+              "entire_notebook_run_all_performed",
+              "formal_live_product_safety_accepted",
+              "isolated_python_mode",
+              "paid_api_calls",
+              "per_case_label_replay_pass",
+              "prior_notebook_globals_used",
+              "python_version",
+              "query_count",
+              "recorded_binding_report_consistency_pass",
+              "replay_scope",
+              "semantic_judgments_independently_validated",
+              "status",
+              "verified_input_hashes"
+            ],
+            "action_4_eligible_for_checkmark": true,
+            "checklist_file_updated": false,
+            "acceptance_scope": "FINAL_STORED_POSTHOC_AUDIT_ARTIFACTS",
+            "open_upstream_dependencies": {
+              "formal_live_product_safety_accepted": false,
+              "semantic_judgments_independently_validated": false,
+              "live_deployment_authorized": false,
+              "full_phase2_roadmap_completed": false,
+              "entire_notebook_run_all_performed": false,
+              "all_original_source_checks_rerun": false
+            },
+            "historical_audit_rerun": false,
+            "runner_source_executed": false,
+            "files_written": 0,
+            "paid_api_calls": 0
+          },
+          "original_artifact_bytes_independently_reloaded": false
+        }
+      ],
+      "new_model_api_calls": 0
+    },
+    {
+      "action": 5,
+      "title": "موجودی ورودی‌های کانونی",
+      "file": "NB21_action05_report_fa.md",
+      "status": "CHECKLIST_COMPLETED_IN_RECORDED_SCOPE",
+      "existing_repository_report": null,
+      "proposed_repository_path": "reports/phase2/evaluation/NB21_actions01_26_reports/NB21_action05_report_fa.md",
+      "evidence": [
+        {
+          "notebook": "notebooks/phase2/21_evaluation_and_ablation.ipynb",
+          "cell_id": "C019",
+          "physical_cell_1based": 38,
+          "reported_output": {
+            "status": "NB21_GAP_MATRIX_CHECKPOINT_RELOAD_PASS",
+            "checklist_action": 8,
+            "checklist_action_total": 49,
+            "artifact": {
+              "path": "artifacts/phase2/evaluation_and_ablation/work/outputs/C019.input_review.8669fd3abd9b60d992f8af51556d5faf4cf550a079494b649f97ed7926d1939e.json",
+              "file_bytes_sha256": "8669fd3abd9b60d992f8af51556d5faf4cf550a079494b649f97ed7926d1939e",
+              "bytes": 35096,
+              "action": "REUSED_IDENTICAL"
+            },
+            "gap_matrix": [
+              {
+                "existing_evidence": [
+                  "NB13",
+                  "NB16",
+                  "NB17",
+                  "persisted retrieval outputs"
+                ],
+                "new_api_requirement": "NOT_DETERMINED_REUSE_FIRST",
+                "remaining_work": "Align Split, Gold mapping, rank depth and metric definitions.",
+                "requirement": "Retrieval Recall / MRR / nDCG",
+                "responsible_checklist_actions": [
+                  9,
+                  19,
+                  20,
+                  21
+                ],
+                "status": "EXISTING_RESULTS_REQUIRE_CONTRACT_ALIGNMENT"
+              },
+              {
+                "existing_evidence": [
+                  "development outputs",
+                  "test recovery",
+                  "existing reviews"
+                ],
+                "new_api_requirement": "NOT_DETERMINED_REUSE_FIRST",
+                "remaining_work": "Establish valid measurement and coverage; preserve nonindependence.",
+                "requirement": "Groundedness / completeness",
+                "responsible_checklist_actions": [
+                  13,
+                  14,
+                  15,
+                  22,
+                  23
+                ],
+                "status": "REFERENCE_VALIDITY_AND_COVERAGE_REQUIRE_ASSESSMENT"
+              },
+              {
+                "existing_evidence": [
+                  "claim gates",
+                  "citation sidecars",
+                  "context evidence registry"
+                ],
+                "new_api_requirement": "NOT_DETERMINED_REUSE_FIRST",
+                "remaining_work": "Separate locator integrity, semantic support and attribution.",
+                "requirement": "Citation correctness / coverage / attribution",
+                "responsible_checklist_actions": [
+                  13,
+                  14,
+                  15,
+                  24,
+                  25
+                ],
+                "status": "STRUCTURAL_ASSETS_PRESENT_SEMANTIC_ACCEPTANCE_OPEN"
+              },
+              {
+                "existing_evidence": [
+                  "policy records",
+                  "recovery routing",
+                  "existing review summaries"
+                ],
+                "new_api_requirement": "NOT_DETERMINED_REUSE_FIRST",
+                "remaining_work": "Assess existing reference eligibility before scoring or new judging.",
+                "requirement": "No-answer precision / recall / F1",
+                "responsible_checklist_actions": [
+                  8,
+                  13,
+                  15,
+                  26
+                ],
+                "status": "VALID_REFERENCE_LABELS_NOT_ESTABLISHED_BY_INSPECTED_CONTROLS"
+              },
+              {
+                "existing_evidence": [
+                  "policy routing",
+                  "C455 stored scoped audit"
+                ],
+                "new_api_requirement": "NOT_DETERMINED_REUSE_FIRST",
+                "remaining_work": "Define denominator, severity, output origin and valid reference.",
+                "requirement": "Safety violation rate",
+                "responsible_checklist_actions": [
+                  13,
+                  15,
+                  27
+                ],
+                "status": "SCOPED_AUDIT_AVAILABLE_LIVE_ACCEPTANCE_NOT_ESTABLISHED"
+              },
+              {
+                "existing_evidence": [
+                  "C455 preserved roadmap limits",
+                  "NB20 checklist scope notes"
+                ],
+                "new_api_requirement": "NOT_DETERMINED_REUSE_FIRST",
+                "remaining_work": "Consume existing calibration evidence within its actual target.",
+                "requirement": "Confidence and calibration boundaries",
+                "responsible_checklist_actions": [
+                  28
+                ],
+                "status": "UPSTREAM_SCOPE_LIMITATIONS_RECORDED"
+              },
+              {
+                "existing_evidence": [
+                  "historical reports",
+                  "saved execution artifacts"
+                ],
+                "new_api_requirement": "NOT_DETERMINED_REUSE_FIRST",
+                "remaining_work": "Separate historical generation, cache reads and fresh execution.",
+                "requirement": "Latency / tokens / cost / failure",
+                "responsible_checklist_actions": [
+                  29,
+                  30,
+                  31
+                ],
+                "status": "MEASUREMENT_COMPATIBILITY_AND_COVERAGE_NOT_YET_ASSESSED"
+              },
+              {
+                "existing_evidence": [
+                  "existing metadata contracts",
+                  "Context metadata limitations"
+                ],
+                "new_api_requirement": "NOT_DETERMINED_REUSE_FIRST",
+                "remaining_work": "Use actual mappings; report unavailable categories explicitly.",
+                "requirement": "Source / Topic / Question type / Authority slices",
+                "responsible_checklist_actions": [
+                  10
+                ],
+                "status": "CANONICAL_SLICE_MAPPING_REQUIRES_REVIEW"
+              },
+              {
+                "existing_evidence": [
+                  "versioned normalization acceptance"
+                ],
+                "new_api_requirement": "NOT_DETERMINED_REUSE_FIRST",
+                "remaining_work": "Find same-contract comparisons and define affected layers.",
+                "requirement": "Ablation: Persian normalization",
+                "responsible_checklist_actions": [
+                  11,
+                  12,
+                  32
+                ],
+                "status": "EXISTING_EVIDENCE_REQUIRES_ABLATION_CONTRACT_REVIEW"
+              },
+              {
+                "existing_evidence": [
+                  "NB11 evaluation candidates",
+                  "current character baseline"
+                ],
+                "new_api_requirement": "NOT_DETERMINED_REUSE_FIRST",
+                "remaining_work": "Locate retrieval experiments and compatible Gold mappings.",
+                "requirement": "Ablation: character versus structure-aware chunking",
+                "responsible_checklist_actions": [
+                  11,
+                  12,
+                  33
+                ],
+                "status": "EXISTING_EVIDENCE_REQUIRES_ABLATION_CONTRACT_REVIEW"
+              },
+              {
+                "existing_evidence": [
+                  "NB16 evidence and ADR"
+                ],
+                "new_api_requirement": "NOT_DETERMINED_REUSE_FIRST",
+                "remaining_work": "Align existing comparisons with the NB21 evaluation contract.",
+                "requirement": "Ablation: Dense-only versus Hybrid",
+                "responsible_checklist_actions": [
+                  11,
+                  12,
+                  34
+                ],
+                "status": "EXISTING_EVIDENCE_REQUIRES_ABLATION_CONTRACT_REVIEW"
+              },
+              {
+                "existing_evidence": [
+                  "NB17 evidence and frozen candidate outputs"
+                ],
+                "new_api_requirement": "NOT_DETERMINED_REUSE_FIRST",
+                "remaining_work": "Align candidate depth, ordering and metric definitions.",
+                "requirement": "Ablation: without Reranker",
+                "responsible_checklist_actions": [
+                  11,
+                  12,
+                  35
+                ],
+                "status": "EXISTING_EVIDENCE_REQUIRES_ABLATION_CONTRACT_REVIEW"
+              },
+              {
+                "existing_evidence": [
+                  "NB16 evidence",
+                  "NB18 configuration and ADR"
+                ],
+                "new_api_requirement": "NOT_DETERMINED_REUSE_FIRST",
+                "remaining_work": "Identify the active Context policy and actual changed outputs.",
+                "requirement": "Ablation: without source diversity",
+                "responsible_checklist_actions": [
+                  11,
+                  12,
+                  36
+                ],
+                "status": "EXISTING_EVIDENCE_REQUIRES_ABLATION_CONTRACT_REVIEW"
+              },
+              {
+                "existing_evidence": [
+                  "NB19 claim gates and citation artifacts"
+                ],
+                "new_api_requirement": "NOT_DETERMINED_REUSE_FIRST",
+                "remaining_work": "Identify the implemented verifier and valid comparison scope.",
+                "requirement": "Ablation: without citation verifier",
+                "responsible_checklist_actions": [
+                  11,
+                  12,
+                  37
+                ],
+                "status": "EXISTING_EVIDENCE_REQUIRES_ABLATION_CONTRACT_REVIEW"
+              },
+              {
+                "existing_evidence": [
+                  "NB19 development manifest/release/acceptance v4"
+                ],
+                "new_api_requirement": "NOT_DETERMINED_REUSE_FIRST",
+                "remaining_work": "Inspect original run metadata before model-specific claims.",
+                "requirement": "Development generation model provenance",
+                "responsible_checklist_actions": [
+                  7,
+                  8,
+                  16
+                ],
+                "status": "EXECUTED_MODEL_NOT_SPECIFIED_IN_INSPECTED_CONTROLS"
+              },
+              {
+                "existing_evidence": [
+                  "historical phase-1 evaluation identified in repository inspection"
+                ],
+                "new_api_requirement": "NOT_DETERMINED_REUSE_FIRST",
+                "remaining_work": "Locate local baseline and establish comparable questions and metrics.",
+                "requirement": "Phase-1 comparison",
+                "responsible_checklist_actions": [
+                  43
+                ],
+                "status": "COMPARABLE_SCOPE_NOT_YET_ESTABLISHED"
+              },
+              {
+                "existing_evidence": [
+                  "1149 saved Test records",
+                  "historical Test exposure declarations"
+                ],
+                "new_api_requirement": "NOT_DETERMINED_REUSE_FIRST",
+                "remaining_work": "Record prior exposure and freeze plan before fresh Test evaluation.",
+                "requirement": "Final Test evaluation",
+                "responsible_checklist_actions": [
+                  11,
+                  12,
+                  38,
+                  39,
+                  40
+                ],
+                "status": "NEW_EVALUATION_CONTRACT_NOT_FROZEN"
+              },
+              {
+                "existing_evidence": [
+                  "roadmap targets",
+                  "documented target differences"
+                ],
+                "new_api_requirement": "NOT_DETERMINED_REUSE_FIRST",
+                "remaining_work": "Resolve approved thresholds and upstream dependencies explicitly.",
+                "requirement": "Regression and acceptance thresholds",
+                "responsible_checklist_actions": [
+                  12,
+                  45
+                ],
+                "status": "CURRENT_ACCEPTANCE_CONTRACT_REQUIRES_RESOLUTION"
+              },
+              {
+                "existing_evidence": [
+                  "verified inputs",
+                  "reuse sources",
+                  "provenance registration"
+                ],
+                "new_api_requirement": "NOT_DETERMINED_REUSE_FIRST",
+                "remaining_work": "Produce reports, reload validation and scoped handoff after evaluation.",
+                "requirement": "Benchmark reports / handoff / reproducibility",
+                "responsible_checklist_actions": [
+                  41,
+                  42,
+                  44,
+                  46,
+                  47,
+                  48,
+                  49
+                ],
+                "status": "NB21_DELIVERABLES_PENDING"
+              }
+            ],
+            "action_8_eligible_for_checkmark": true,
+            "checklist_file_updated": false,
+            "evaluation_configuration_frozen": false,
+            "upstream_product_acceptance_changed": false,
+            "reload_validation": "PASS",
+            "new_artifact_files_written": 0,
+            "existing_artifacts_overwritten": false,
+            "semantic_judgments_performed": 0,
+            "paid_api_calls": 0,
+            "new_api_cost_toman": 0
+          },
+          "original_artifact_bytes_independently_reloaded": false
+        }
+      ],
+      "new_model_api_calls": 0
+    },
+    {
+      "action": 6,
+      "title": "منابع بازاستفاده و Cache",
+      "file": "NB21_action06_report_fa.md",
+      "status": "CHECKLIST_COMPLETED_IN_RECORDED_SCOPE",
+      "existing_repository_report": null,
+      "proposed_repository_path": "reports/phase2/evaluation/NB21_actions01_26_reports/NB21_action06_report_fa.md",
+      "evidence": [
+        {
+          "notebook": "notebooks/phase2/21_evaluation_and_ablation.ipynb",
+          "cell_id": "C019",
+          "physical_cell_1based": 38,
+          "reported_output": {
+            "status": "NB21_GAP_MATRIX_CHECKPOINT_RELOAD_PASS",
+            "checklist_action": 8,
+            "checklist_action_total": 49,
+            "artifact": {
+              "path": "artifacts/phase2/evaluation_and_ablation/work/outputs/C019.input_review.8669fd3abd9b60d992f8af51556d5faf4cf550a079494b649f97ed7926d1939e.json",
+              "file_bytes_sha256": "8669fd3abd9b60d992f8af51556d5faf4cf550a079494b649f97ed7926d1939e",
+              "bytes": 35096,
+              "action": "REUSED_IDENTICAL"
+            },
+            "gap_matrix": [
+              {
+                "existing_evidence": [
+                  "NB13",
+                  "NB16",
+                  "NB17",
+                  "persisted retrieval outputs"
+                ],
+                "new_api_requirement": "NOT_DETERMINED_REUSE_FIRST",
+                "remaining_work": "Align Split, Gold mapping, rank depth and metric definitions.",
+                "requirement": "Retrieval Recall / MRR / nDCG",
+                "responsible_checklist_actions": [
+                  9,
+                  19,
+                  20,
+                  21
+                ],
+                "status": "EXISTING_RESULTS_REQUIRE_CONTRACT_ALIGNMENT"
+              },
+              {
+                "existing_evidence": [
+                  "development outputs",
+                  "test recovery",
+                  "existing reviews"
+                ],
+                "new_api_requirement": "NOT_DETERMINED_REUSE_FIRST",
+                "remaining_work": "Establish valid measurement and coverage; preserve nonindependence.",
+                "requirement": "Groundedness / completeness",
+                "responsible_checklist_actions": [
+                  13,
+                  14,
+                  15,
+                  22,
+                  23
+                ],
+                "status": "REFERENCE_VALIDITY_AND_COVERAGE_REQUIRE_ASSESSMENT"
+              },
+              {
+                "existing_evidence": [
+                  "claim gates",
+                  "citation sidecars",
+                  "context evidence registry"
+                ],
+                "new_api_requirement": "NOT_DETERMINED_REUSE_FIRST",
+                "remaining_work": "Separate locator integrity, semantic support and attribution.",
+                "requirement": "Citation correctness / coverage / attribution",
+                "responsible_checklist_actions": [
+                  13,
+                  14,
+                  15,
+                  24,
+                  25
+                ],
+                "status": "STRUCTURAL_ASSETS_PRESENT_SEMANTIC_ACCEPTANCE_OPEN"
+              },
+              {
+                "existing_evidence": [
+                  "policy records",
+                  "recovery routing",
+                  "existing review summaries"
+                ],
+                "new_api_requirement": "NOT_DETERMINED_REUSE_FIRST",
+                "remaining_work": "Assess existing reference eligibility before scoring or new judging.",
+                "requirement": "No-answer precision / recall / F1",
+                "responsible_checklist_actions": [
+                  8,
+                  13,
+                  15,
+                  26
+                ],
+                "status": "VALID_REFERENCE_LABELS_NOT_ESTABLISHED_BY_INSPECTED_CONTROLS"
+              },
+              {
+                "existing_evidence": [
+                  "policy routing",
+                  "C455 stored scoped audit"
+                ],
+                "new_api_requirement": "NOT_DETERMINED_REUSE_FIRST",
+                "remaining_work": "Define denominator, severity, output origin and valid reference.",
+                "requirement": "Safety violation rate",
+                "responsible_checklist_actions": [
+                  13,
+                  15,
+                  27
+                ],
+                "status": "SCOPED_AUDIT_AVAILABLE_LIVE_ACCEPTANCE_NOT_ESTABLISHED"
+              },
+              {
+                "existing_evidence": [
+                  "C455 preserved roadmap limits",
+                  "NB20 checklist scope notes"
+                ],
+                "new_api_requirement": "NOT_DETERMINED_REUSE_FIRST",
+                "remaining_work": "Consume existing calibration evidence within its actual target.",
+                "requirement": "Confidence and calibration boundaries",
+                "responsible_checklist_actions": [
+                  28
+                ],
+                "status": "UPSTREAM_SCOPE_LIMITATIONS_RECORDED"
+              },
+              {
+                "existing_evidence": [
+                  "historical reports",
+                  "saved execution artifacts"
+                ],
+                "new_api_requirement": "NOT_DETERMINED_REUSE_FIRST",
+                "remaining_work": "Separate historical generation, cache reads and fresh execution.",
+                "requirement": "Latency / tokens / cost / failure",
+                "responsible_checklist_actions": [
+                  29,
+                  30,
+                  31
+                ],
+                "status": "MEASUREMENT_COMPATIBILITY_AND_COVERAGE_NOT_YET_ASSESSED"
+              },
+              {
+                "existing_evidence": [
+                  "existing metadata contracts",
+                  "Context metadata limitations"
+                ],
+                "new_api_requirement": "NOT_DETERMINED_REUSE_FIRST",
+                "remaining_work": "Use actual mappings; report unavailable categories explicitly.",
+                "requirement": "Source / Topic / Question type / Authority slices",
+                "responsible_checklist_actions": [
+                  10
+                ],
+                "status": "CANONICAL_SLICE_MAPPING_REQUIRES_REVIEW"
+              },
+              {
+                "existing_evidence": [
+                  "versioned normalization acceptance"
+                ],
+                "new_api_requirement": "NOT_DETERMINED_REUSE_FIRST",
+                "remaining_work": "Find same-contract comparisons and define affected layers.",
+                "requirement": "Ablation: Persian normalization",
+                "responsible_checklist_actions": [
+                  11,
+                  12,
+                  32
+                ],
+                "status": "EXISTING_EVIDENCE_REQUIRES_ABLATION_CONTRACT_REVIEW"
+              },
+              {
+                "existing_evidence": [
+                  "NB11 evaluation candidates",
+                  "current character baseline"
+                ],
+                "new_api_requirement": "NOT_DETERMINED_REUSE_FIRST",
+                "remaining_work": "Locate retrieval experiments and compatible Gold mappings.",
+                "requirement": "Ablation: character versus structure-aware chunking",
+                "responsible_checklist_actions": [
+                  11,
+                  12,
+                  33
+                ],
+                "status": "EXISTING_EVIDENCE_REQUIRES_ABLATION_CONTRACT_REVIEW"
+              },
+              {
+                "existing_evidence": [
+                  "NB16 evidence and ADR"
+                ],
+                "new_api_requirement": "NOT_DETERMINED_REUSE_FIRST",
+                "remaining_work": "Align existing comparisons with the NB21 evaluation contract.",
+                "requirement": "Ablation: Dense-only versus Hybrid",
+                "responsible_checklist_actions": [
+                  11,
+                  12,
+                  34
+                ],
+                "status": "EXISTING_EVIDENCE_REQUIRES_ABLATION_CONTRACT_REVIEW"
+              },
+              {
+                "existing_evidence": [
+                  "NB17 evidence and frozen candidate outputs"
+                ],
+                "new_api_requirement": "NOT_DETERMINED_REUSE_FIRST",
+                "remaining_work": "Align candidate depth, ordering and metric definitions.",
+                "requirement": "Ablation: without Reranker",
+                "responsible_checklist_actions": [
+                  11,
+                  12,
+                  35
+                ],
+                "status": "EXISTING_EVIDENCE_REQUIRES_ABLATION_CONTRACT_REVIEW"
+              },
+              {
+                "existing_evidence": [
+                  "NB16 evidence",
+                  "NB18 configuration and ADR"
+                ],
+                "new_api_requirement": "NOT_DETERMINED_REUSE_FIRST",
+                "remaining_work": "Identify the active Context policy and actual changed outputs.",
+                "requirement": "Ablation: without source diversity",
+                "responsible_checklist_actions": [
+                  11,
+                  12,
+                  36
+                ],
+                "status": "EXISTING_EVIDENCE_REQUIRES_ABLATION_CONTRACT_REVIEW"
+              },
+              {
+                "existing_evidence": [
+                  "NB19 claim gates and citation artifacts"
+                ],
+                "new_api_requirement": "NOT_DETERMINED_REUSE_FIRST",
+                "remaining_work": "Identify the implemented verifier and valid comparison scope.",
+                "requirement": "Ablation: without citation verifier",
+                "responsible_checklist_actions": [
+                  11,
+                  12,
+                  37
+                ],
+                "status": "EXISTING_EVIDENCE_REQUIRES_ABLATION_CONTRACT_REVIEW"
+              },
+              {
+                "existing_evidence": [
+                  "NB19 development manifest/release/acceptance v4"
+                ],
+                "new_api_requirement": "NOT_DETERMINED_REUSE_FIRST",
+                "remaining_work": "Inspect original run metadata before model-specific claims.",
+                "requirement": "Development generation model provenance",
+                "responsible_checklist_actions": [
+                  7,
+                  8,
+                  16
+                ],
+                "status": "EXECUTED_MODEL_NOT_SPECIFIED_IN_INSPECTED_CONTROLS"
+              },
+              {
+                "existing_evidence": [
+                  "historical phase-1 evaluation identified in repository inspection"
+                ],
+                "new_api_requirement": "NOT_DETERMINED_REUSE_FIRST",
+                "remaining_work": "Locate local baseline and establish comparable questions and metrics.",
+                "requirement": "Phase-1 comparison",
+                "responsible_checklist_actions": [
+                  43
+                ],
+                "status": "COMPARABLE_SCOPE_NOT_YET_ESTABLISHED"
+              },
+              {
+                "existing_evidence": [
+                  "1149 saved Test records",
+                  "historical Test exposure declarations"
+                ],
+                "new_api_requirement": "NOT_DETERMINED_REUSE_FIRST",
+                "remaining_work": "Record prior exposure and freeze plan before fresh Test evaluation.",
+                "requirement": "Final Test evaluation",
+                "responsible_checklist_actions": [
+                  11,
+                  12,
+                  38,
+                  39,
+                  40
+                ],
+                "status": "NEW_EVALUATION_CONTRACT_NOT_FROZEN"
+              },
+              {
+                "existing_evidence": [
+                  "roadmap targets",
+                  "documented target differences"
+                ],
+                "new_api_requirement": "NOT_DETERMINED_REUSE_FIRST",
+                "remaining_work": "Resolve approved thresholds and upstream dependencies explicitly.",
+                "requirement": "Regression and acceptance thresholds",
+                "responsible_checklist_actions": [
+                  12,
+                  45
+                ],
+                "status": "CURRENT_ACCEPTANCE_CONTRACT_REQUIRES_RESOLUTION"
+              },
+              {
+                "existing_evidence": [
+                  "verified inputs",
+                  "reuse sources",
+                  "provenance registration"
+                ],
+                "new_api_requirement": "NOT_DETERMINED_REUSE_FIRST",
+                "remaining_work": "Produce reports, reload validation and scoped handoff after evaluation.",
+                "requirement": "Benchmark reports / handoff / reproducibility",
+                "responsible_checklist_actions": [
+                  41,
+                  42,
+                  44,
+                  46,
+                  47,
+                  48,
+                  49
+                ],
+                "status": "NB21_DELIVERABLES_PENDING"
+              }
+            ],
+            "action_8_eligible_for_checkmark": true,
+            "checklist_file_updated": false,
+            "evaluation_configuration_frozen": false,
+            "upstream_product_acceptance_changed": false,
+            "reload_validation": "PASS",
+            "new_artifact_files_written": 0,
+            "existing_artifacts_overwritten": false,
+            "semantic_judgments_performed": 0,
+            "paid_api_calls": 0,
+            "new_api_cost_toman": 0
+          },
+          "original_artifact_bytes_independently_reloaded": false
+        }
+      ],
+      "new_model_api_calls": 0
+    },
+    {
+      "action": 7,
+      "title": "منشأ و محدودیت خروجی‌ها",
+      "file": "NB21_action07_report_fa.md",
+      "status": "CHECKLIST_COMPLETED_IN_RECORDED_SCOPE",
+      "existing_repository_report": null,
+      "proposed_repository_path": "reports/phase2/evaluation/NB21_actions01_26_reports/NB21_action07_report_fa.md",
+      "evidence": [
+        {
+          "notebook": "notebooks/phase2/21_evaluation_and_ablation.ipynb",
+          "cell_id": "C019",
+          "physical_cell_1based": 38,
+          "reported_output": {
+            "status": "NB21_GAP_MATRIX_CHECKPOINT_RELOAD_PASS",
+            "checklist_action": 8,
+            "checklist_action_total": 49,
+            "artifact": {
+              "path": "artifacts/phase2/evaluation_and_ablation/work/outputs/C019.input_review.8669fd3abd9b60d992f8af51556d5faf4cf550a079494b649f97ed7926d1939e.json",
+              "file_bytes_sha256": "8669fd3abd9b60d992f8af51556d5faf4cf550a079494b649f97ed7926d1939e",
+              "bytes": 35096,
+              "action": "REUSED_IDENTICAL"
+            },
+            "gap_matrix": [
+              {
+                "existing_evidence": [
+                  "NB13",
+                  "NB16",
+                  "NB17",
+                  "persisted retrieval outputs"
+                ],
+                "new_api_requirement": "NOT_DETERMINED_REUSE_FIRST",
+                "remaining_work": "Align Split, Gold mapping, rank depth and metric definitions.",
+                "requirement": "Retrieval Recall / MRR / nDCG",
+                "responsible_checklist_actions": [
+                  9,
+                  19,
+                  20,
+                  21
+                ],
+                "status": "EXISTING_RESULTS_REQUIRE_CONTRACT_ALIGNMENT"
+              },
+              {
+                "existing_evidence": [
+                  "development outputs",
+                  "test recovery",
+                  "existing reviews"
+                ],
+                "new_api_requirement": "NOT_DETERMINED_REUSE_FIRST",
+                "remaining_work": "Establish valid measurement and coverage; preserve nonindependence.",
+                "requirement": "Groundedness / completeness",
+                "responsible_checklist_actions": [
+                  13,
+                  14,
+                  15,
+                  22,
+                  23
+                ],
+                "status": "REFERENCE_VALIDITY_AND_COVERAGE_REQUIRE_ASSESSMENT"
+              },
+              {
+                "existing_evidence": [
+                  "claim gates",
+                  "citation sidecars",
+                  "context evidence registry"
+                ],
+                "new_api_requirement": "NOT_DETERMINED_REUSE_FIRST",
+                "remaining_work": "Separate locator integrity, semantic support and attribution.",
+                "requirement": "Citation correctness / coverage / attribution",
+                "responsible_checklist_actions": [
+                  13,
+                  14,
+                  15,
+                  24,
+                  25
+                ],
+                "status": "STRUCTURAL_ASSETS_PRESENT_SEMANTIC_ACCEPTANCE_OPEN"
+              },
+              {
+                "existing_evidence": [
+                  "policy records",
+                  "recovery routing",
+                  "existing review summaries"
+                ],
+                "new_api_requirement": "NOT_DETERMINED_REUSE_FIRST",
+                "remaining_work": "Assess existing reference eligibility before scoring or new judging.",
+                "requirement": "No-answer precision / recall / F1",
+                "responsible_checklist_actions": [
+                  8,
+                  13,
+                  15,
+                  26
+                ],
+                "status": "VALID_REFERENCE_LABELS_NOT_ESTABLISHED_BY_INSPECTED_CONTROLS"
+              },
+              {
+                "existing_evidence": [
+                  "policy routing",
+                  "C455 stored scoped audit"
+                ],
+                "new_api_requirement": "NOT_DETERMINED_REUSE_FIRST",
+                "remaining_work": "Define denominator, severity, output origin and valid reference.",
+                "requirement": "Safety violation rate",
+                "responsible_checklist_actions": [
+                  13,
+                  15,
+                  27
+                ],
+                "status": "SCOPED_AUDIT_AVAILABLE_LIVE_ACCEPTANCE_NOT_ESTABLISHED"
+              },
+              {
+                "existing_evidence": [
+                  "C455 preserved roadmap limits",
+                  "NB20 checklist scope notes"
+                ],
+                "new_api_requirement": "NOT_DETERMINED_REUSE_FIRST",
+                "remaining_work": "Consume existing calibration evidence within its actual target.",
+                "requirement": "Confidence and calibration boundaries",
+                "responsible_checklist_actions": [
+                  28
+                ],
+                "status": "UPSTREAM_SCOPE_LIMITATIONS_RECORDED"
+              },
+              {
+                "existing_evidence": [
+                  "historical reports",
+                  "saved execution artifacts"
+                ],
+                "new_api_requirement": "NOT_DETERMINED_REUSE_FIRST",
+                "remaining_work": "Separate historical generation, cache reads and fresh execution.",
+                "requirement": "Latency / tokens / cost / failure",
+                "responsible_checklist_actions": [
+                  29,
+                  30,
+                  31
+                ],
+                "status": "MEASUREMENT_COMPATIBILITY_AND_COVERAGE_NOT_YET_ASSESSED"
+              },
+              {
+                "existing_evidence": [
+                  "existing metadata contracts",
+                  "Context metadata limitations"
+                ],
+                "new_api_requirement": "NOT_DETERMINED_REUSE_FIRST",
+                "remaining_work": "Use actual mappings; report unavailable categories explicitly.",
+                "requirement": "Source / Topic / Question type / Authority slices",
+                "responsible_checklist_actions": [
+                  10
+                ],
+                "status": "CANONICAL_SLICE_MAPPING_REQUIRES_REVIEW"
+              },
+              {
+                "existing_evidence": [
+                  "versioned normalization acceptance"
+                ],
+                "new_api_requirement": "NOT_DETERMINED_REUSE_FIRST",
+                "remaining_work": "Find same-contract comparisons and define affected layers.",
+                "requirement": "Ablation: Persian normalization",
+                "responsible_checklist_actions": [
+                  11,
+                  12,
+                  32
+                ],
+                "status": "EXISTING_EVIDENCE_REQUIRES_ABLATION_CONTRACT_REVIEW"
+              },
+              {
+                "existing_evidence": [
+                  "NB11 evaluation candidates",
+                  "current character baseline"
+                ],
+                "new_api_requirement": "NOT_DETERMINED_REUSE_FIRST",
+                "remaining_work": "Locate retrieval experiments and compatible Gold mappings.",
+                "requirement": "Ablation: character versus structure-aware chunking",
+                "responsible_checklist_actions": [
+                  11,
+                  12,
+                  33
+                ],
+                "status": "EXISTING_EVIDENCE_REQUIRES_ABLATION_CONTRACT_REVIEW"
+              },
+              {
+                "existing_evidence": [
+                  "NB16 evidence and ADR"
+                ],
+                "new_api_requirement": "NOT_DETERMINED_REUSE_FIRST",
+                "remaining_work": "Align existing comparisons with the NB21 evaluation contract.",
+                "requirement": "Ablation: Dense-only versus Hybrid",
+                "responsible_checklist_actions": [
+                  11,
+                  12,
+                  34
+                ],
+                "status": "EXISTING_EVIDENCE_REQUIRES_ABLATION_CONTRACT_REVIEW"
+              },
+              {
+                "existing_evidence": [
+                  "NB17 evidence and frozen candidate outputs"
+                ],
+                "new_api_requirement": "NOT_DETERMINED_REUSE_FIRST",
+                "remaining_work": "Align candidate depth, ordering and metric definitions.",
+                "requirement": "Ablation: without Reranker",
+                "responsible_checklist_actions": [
+                  11,
+                  12,
+                  35
+                ],
+                "status": "EXISTING_EVIDENCE_REQUIRES_ABLATION_CONTRACT_REVIEW"
+              },
+              {
+                "existing_evidence": [
+                  "NB16 evidence",
+                  "NB18 configuration and ADR"
+                ],
+                "new_api_requirement": "NOT_DETERMINED_REUSE_FIRST",
+                "remaining_work": "Identify the active Context policy and actual changed outputs.",
+                "requirement": "Ablation: without source diversity",
+                "responsible_checklist_actions": [
+                  11,
+                  12,
+                  36
+                ],
+                "status": "EXISTING_EVIDENCE_REQUIRES_ABLATION_CONTRACT_REVIEW"
+              },
+              {
+                "existing_evidence": [
+                  "NB19 claim gates and citation artifacts"
+                ],
+                "new_api_requirement": "NOT_DETERMINED_REUSE_FIRST",
+                "remaining_work": "Identify the implemented verifier and valid comparison scope.",
+                "requirement": "Ablation: without citation verifier",
+                "responsible_checklist_actions": [
+                  11,
+                  12,
+                  37
+                ],
+                "status": "EXISTING_EVIDENCE_REQUIRES_ABLATION_CONTRACT_REVIEW"
+              },
+              {
+                "existing_evidence": [
+                  "NB19 development manifest/release/acceptance v4"
+                ],
+                "new_api_requirement": "NOT_DETERMINED_REUSE_FIRST",
+                "remaining_work": "Inspect original run metadata before model-specific claims.",
+                "requirement": "Development generation model provenance",
+                "responsible_checklist_actions": [
+                  7,
+                  8,
+                  16
+                ],
+                "status": "EXECUTED_MODEL_NOT_SPECIFIED_IN_INSPECTED_CONTROLS"
+              },
+              {
+                "existing_evidence": [
+                  "historical phase-1 evaluation identified in repository inspection"
+                ],
+                "new_api_requirement": "NOT_DETERMINED_REUSE_FIRST",
+                "remaining_work": "Locate local baseline and establish comparable questions and metrics.",
+                "requirement": "Phase-1 comparison",
+                "responsible_checklist_actions": [
+                  43
+                ],
+                "status": "COMPARABLE_SCOPE_NOT_YET_ESTABLISHED"
+              },
+              {
+                "existing_evidence": [
+                  "1149 saved Test records",
+                  "historical Test exposure declarations"
+                ],
+                "new_api_requirement": "NOT_DETERMINED_REUSE_FIRST",
+                "remaining_work": "Record prior exposure and freeze plan before fresh Test evaluation.",
+                "requirement": "Final Test evaluation",
+                "responsible_checklist_actions": [
+                  11,
+                  12,
+                  38,
+                  39,
+                  40
+                ],
+                "status": "NEW_EVALUATION_CONTRACT_NOT_FROZEN"
+              },
+              {
+                "existing_evidence": [
+                  "roadmap targets",
+                  "documented target differences"
+                ],
+                "new_api_requirement": "NOT_DETERMINED_REUSE_FIRST",
+                "remaining_work": "Resolve approved thresholds and upstream dependencies explicitly.",
+                "requirement": "Regression and acceptance thresholds",
+                "responsible_checklist_actions": [
+                  12,
+                  45
+                ],
+                "status": "CURRENT_ACCEPTANCE_CONTRACT_REQUIRES_RESOLUTION"
+              },
+              {
+                "existing_evidence": [
+                  "verified inputs",
+                  "reuse sources",
+                  "provenance registration"
+                ],
+                "new_api_requirement": "NOT_DETERMINED_REUSE_FIRST",
+                "remaining_work": "Produce reports, reload validation and scoped handoff after evaluation.",
+                "requirement": "Benchmark reports / handoff / reproducibility",
+                "responsible_checklist_actions": [
+                  41,
+                  42,
+                  44,
+                  46,
+                  47,
+                  48,
+                  49
+                ],
+                "status": "NB21_DELIVERABLES_PENDING"
+              }
+            ],
+            "action_8_eligible_for_checkmark": true,
+            "checklist_file_updated": false,
+            "evaluation_configuration_frozen": false,
+            "upstream_product_acceptance_changed": false,
+            "reload_validation": "PASS",
+            "new_artifact_files_written": 0,
+            "existing_artifacts_overwritten": false,
+            "semantic_judgments_performed": 0,
+            "paid_api_calls": 0,
+            "new_api_cost_toman": 0
+          },
+          "original_artifact_bytes_independently_reloaded": false
+        }
+      ],
+      "new_model_api_calls": 0
+    },
+    {
+      "action": 8,
+      "title": "ماتریس شکاف و مسئولیت",
+      "file": "NB21_action08_report_fa.md",
+      "status": "CHECKLIST_COMPLETED_IN_RECORDED_SCOPE",
+      "existing_repository_report": null,
+      "proposed_repository_path": "reports/phase2/evaluation/NB21_actions01_26_reports/NB21_action08_report_fa.md",
+      "evidence": [
+        {
+          "notebook": "notebooks/phase2/21_evaluation_and_ablation.ipynb",
+          "cell_id": "C019",
+          "physical_cell_1based": 38,
+          "reported_output": {
+            "status": "NB21_GAP_MATRIX_CHECKPOINT_RELOAD_PASS",
+            "checklist_action": 8,
+            "checklist_action_total": 49,
+            "artifact": {
+              "path": "artifacts/phase2/evaluation_and_ablation/work/outputs/C019.input_review.8669fd3abd9b60d992f8af51556d5faf4cf550a079494b649f97ed7926d1939e.json",
+              "file_bytes_sha256": "8669fd3abd9b60d992f8af51556d5faf4cf550a079494b649f97ed7926d1939e",
+              "bytes": 35096,
+              "action": "REUSED_IDENTICAL"
+            },
+            "gap_matrix": [
+              {
+                "existing_evidence": [
+                  "NB13",
+                  "NB16",
+                  "NB17",
+                  "persisted retrieval outputs"
+                ],
+                "new_api_requirement": "NOT_DETERMINED_REUSE_FIRST",
+                "remaining_work": "Align Split, Gold mapping, rank depth and metric definitions.",
+                "requirement": "Retrieval Recall / MRR / nDCG",
+                "responsible_checklist_actions": [
+                  9,
+                  19,
+                  20,
+                  21
+                ],
+                "status": "EXISTING_RESULTS_REQUIRE_CONTRACT_ALIGNMENT"
+              },
+              {
+                "existing_evidence": [
+                  "development outputs",
+                  "test recovery",
+                  "existing reviews"
+                ],
+                "new_api_requirement": "NOT_DETERMINED_REUSE_FIRST",
+                "remaining_work": "Establish valid measurement and coverage; preserve nonindependence.",
+                "requirement": "Groundedness / completeness",
+                "responsible_checklist_actions": [
+                  13,
+                  14,
+                  15,
+                  22,
+                  23
+                ],
+                "status": "REFERENCE_VALIDITY_AND_COVERAGE_REQUIRE_ASSESSMENT"
+              },
+              {
+                "existing_evidence": [
+                  "claim gates",
+                  "citation sidecars",
+                  "context evidence registry"
+                ],
+                "new_api_requirement": "NOT_DETERMINED_REUSE_FIRST",
+                "remaining_work": "Separate locator integrity, semantic support and attribution.",
+                "requirement": "Citation correctness / coverage / attribution",
+                "responsible_checklist_actions": [
+                  13,
+                  14,
+                  15,
+                  24,
+                  25
+                ],
+                "status": "STRUCTURAL_ASSETS_PRESENT_SEMANTIC_ACCEPTANCE_OPEN"
+              },
+              {
+                "existing_evidence": [
+                  "policy records",
+                  "recovery routing",
+                  "existing review summaries"
+                ],
+                "new_api_requirement": "NOT_DETERMINED_REUSE_FIRST",
+                "remaining_work": "Assess existing reference eligibility before scoring or new judging.",
+                "requirement": "No-answer precision / recall / F1",
+                "responsible_checklist_actions": [
+                  8,
+                  13,
+                  15,
+                  26
+                ],
+                "status": "VALID_REFERENCE_LABELS_NOT_ESTABLISHED_BY_INSPECTED_CONTROLS"
+              },
+              {
+                "existing_evidence": [
+                  "policy routing",
+                  "C455 stored scoped audit"
+                ],
+                "new_api_requirement": "NOT_DETERMINED_REUSE_FIRST",
+                "remaining_work": "Define denominator, severity, output origin and valid reference.",
+                "requirement": "Safety violation rate",
+                "responsible_checklist_actions": [
+                  13,
+                  15,
+                  27
+                ],
+                "status": "SCOPED_AUDIT_AVAILABLE_LIVE_ACCEPTANCE_NOT_ESTABLISHED"
+              },
+              {
+                "existing_evidence": [
+                  "C455 preserved roadmap limits",
+                  "NB20 checklist scope notes"
+                ],
+                "new_api_requirement": "NOT_DETERMINED_REUSE_FIRST",
+                "remaining_work": "Consume existing calibration evidence within its actual target.",
+                "requirement": "Confidence and calibration boundaries",
+                "responsible_checklist_actions": [
+                  28
+                ],
+                "status": "UPSTREAM_SCOPE_LIMITATIONS_RECORDED"
+              },
+              {
+                "existing_evidence": [
+                  "historical reports",
+                  "saved execution artifacts"
+                ],
+                "new_api_requirement": "NOT_DETERMINED_REUSE_FIRST",
+                "remaining_work": "Separate historical generation, cache reads and fresh execution.",
+                "requirement": "Latency / tokens / cost / failure",
+                "responsible_checklist_actions": [
+                  29,
+                  30,
+                  31
+                ],
+                "status": "MEASUREMENT_COMPATIBILITY_AND_COVERAGE_NOT_YET_ASSESSED"
+              },
+              {
+                "existing_evidence": [
+                  "existing metadata contracts",
+                  "Context metadata limitations"
+                ],
+                "new_api_requirement": "NOT_DETERMINED_REUSE_FIRST",
+                "remaining_work": "Use actual mappings; report unavailable categories explicitly.",
+                "requirement": "Source / Topic / Question type / Authority slices",
+                "responsible_checklist_actions": [
+                  10
+                ],
+                "status": "CANONICAL_SLICE_MAPPING_REQUIRES_REVIEW"
+              },
+              {
+                "existing_evidence": [
+                  "versioned normalization acceptance"
+                ],
+                "new_api_requirement": "NOT_DETERMINED_REUSE_FIRST",
+                "remaining_work": "Find same-contract comparisons and define affected layers.",
+                "requirement": "Ablation: Persian normalization",
+                "responsible_checklist_actions": [
+                  11,
+                  12,
+                  32
+                ],
+                "status": "EXISTING_EVIDENCE_REQUIRES_ABLATION_CONTRACT_REVIEW"
+              },
+              {
+                "existing_evidence": [
+                  "NB11 evaluation candidates",
+                  "current character baseline"
+                ],
+                "new_api_requirement": "NOT_DETERMINED_REUSE_FIRST",
+                "remaining_work": "Locate retrieval experiments and compatible Gold mappings.",
+                "requirement": "Ablation: character versus structure-aware chunking",
+                "responsible_checklist_actions": [
+                  11,
+                  12,
+                  33
+                ],
+                "status": "EXISTING_EVIDENCE_REQUIRES_ABLATION_CONTRACT_REVIEW"
+              },
+              {
+                "existing_evidence": [
+                  "NB16 evidence and ADR"
+                ],
+                "new_api_requirement": "NOT_DETERMINED_REUSE_FIRST",
+                "remaining_work": "Align existing comparisons with the NB21 evaluation contract.",
+                "requirement": "Ablation: Dense-only versus Hybrid",
+                "responsible_checklist_actions": [
+                  11,
+                  12,
+                  34
+                ],
+                "status": "EXISTING_EVIDENCE_REQUIRES_ABLATION_CONTRACT_REVIEW"
+              },
+              {
+                "existing_evidence": [
+                  "NB17 evidence and frozen candidate outputs"
+                ],
+                "new_api_requirement": "NOT_DETERMINED_REUSE_FIRST",
+                "remaining_work": "Align candidate depth, ordering and metric definitions.",
+                "requirement": "Ablation: without Reranker",
+                "responsible_checklist_actions": [
+                  11,
+                  12,
+                  35
+                ],
+                "status": "EXISTING_EVIDENCE_REQUIRES_ABLATION_CONTRACT_REVIEW"
+              },
+              {
+                "existing_evidence": [
+                  "NB16 evidence",
+                  "NB18 configuration and ADR"
+                ],
+                "new_api_requirement": "NOT_DETERMINED_REUSE_FIRST",
+                "remaining_work": "Identify the active Context policy and actual changed outputs.",
+                "requirement": "Ablation: without source diversity",
+                "responsible_checklist_actions": [
+                  11,
+                  12,
+                  36
+                ],
+                "status": "EXISTING_EVIDENCE_REQUIRES_ABLATION_CONTRACT_REVIEW"
+              },
+              {
+                "existing_evidence": [
+                  "NB19 claim gates and citation artifacts"
+                ],
+                "new_api_requirement": "NOT_DETERMINED_REUSE_FIRST",
+                "remaining_work": "Identify the implemented verifier and valid comparison scope.",
+                "requirement": "Ablation: without citation verifier",
+                "responsible_checklist_actions": [
+                  11,
+                  12,
+                  37
+                ],
+                "status": "EXISTING_EVIDENCE_REQUIRES_ABLATION_CONTRACT_REVIEW"
+              },
+              {
+                "existing_evidence": [
+                  "NB19 development manifest/release/acceptance v4"
+                ],
+                "new_api_requirement": "NOT_DETERMINED_REUSE_FIRST",
+                "remaining_work": "Inspect original run metadata before model-specific claims.",
+                "requirement": "Development generation model provenance",
+                "responsible_checklist_actions": [
+                  7,
+                  8,
+                  16
+                ],
+                "status": "EXECUTED_MODEL_NOT_SPECIFIED_IN_INSPECTED_CONTROLS"
+              },
+              {
+                "existing_evidence": [
+                  "historical phase-1 evaluation identified in repository inspection"
+                ],
+                "new_api_requirement": "NOT_DETERMINED_REUSE_FIRST",
+                "remaining_work": "Locate local baseline and establish comparable questions and metrics.",
+                "requirement": "Phase-1 comparison",
+                "responsible_checklist_actions": [
+                  43
+                ],
+                "status": "COMPARABLE_SCOPE_NOT_YET_ESTABLISHED"
+              },
+              {
+                "existing_evidence": [
+                  "1149 saved Test records",
+                  "historical Test exposure declarations"
+                ],
+                "new_api_requirement": "NOT_DETERMINED_REUSE_FIRST",
+                "remaining_work": "Record prior exposure and freeze plan before fresh Test evaluation.",
+                "requirement": "Final Test evaluation",
+                "responsible_checklist_actions": [
+                  11,
+                  12,
+                  38,
+                  39,
+                  40
+                ],
+                "status": "NEW_EVALUATION_CONTRACT_NOT_FROZEN"
+              },
+              {
+                "existing_evidence": [
+                  "roadmap targets",
+                  "documented target differences"
+                ],
+                "new_api_requirement": "NOT_DETERMINED_REUSE_FIRST",
+                "remaining_work": "Resolve approved thresholds and upstream dependencies explicitly.",
+                "requirement": "Regression and acceptance thresholds",
+                "responsible_checklist_actions": [
+                  12,
+                  45
+                ],
+                "status": "CURRENT_ACCEPTANCE_CONTRACT_REQUIRES_RESOLUTION"
+              },
+              {
+                "existing_evidence": [
+                  "verified inputs",
+                  "reuse sources",
+                  "provenance registration"
+                ],
+                "new_api_requirement": "NOT_DETERMINED_REUSE_FIRST",
+                "remaining_work": "Produce reports, reload validation and scoped handoff after evaluation.",
+                "requirement": "Benchmark reports / handoff / reproducibility",
+                "responsible_checklist_actions": [
+                  41,
+                  42,
+                  44,
+                  46,
+                  47,
+                  48,
+                  49
+                ],
+                "status": "NB21_DELIVERABLES_PENDING"
+              }
+            ],
+            "action_8_eligible_for_checkmark": true,
+            "checklist_file_updated": false,
+            "evaluation_configuration_frozen": false,
+            "upstream_product_acceptance_changed": false,
+            "reload_validation": "PASS",
+            "new_artifact_files_written": 0,
+            "existing_artifacts_overwritten": false,
+            "semantic_judgments_performed": 0,
+            "paid_api_calls": 0,
+            "new_api_cost_toman": 0
+          },
+          "original_artifact_bytes_independently_reloaded": false
+        }
+      ],
+      "new_model_api_calls": 0
+    },
+    {
+      "action": 9,
+      "title": "تعریف معیارها و مخرج‌ها",
+      "file": "NB21_action09_report_fa.md",
+      "status": "CHECKLIST_COMPLETED_IN_RECORDED_SCOPE",
+      "existing_repository_report": null,
+      "proposed_repository_path": "reports/phase2/evaluation/NB21_actions01_26_reports/NB21_action09_report_fa.md",
+      "evidence": [
+        {
+          "notebook": "notebooks/phase2/21_evaluation_and_ablation.ipynb",
+          "cell_id": "C020",
+          "physical_cell_1based": 40,
+          "reported_output": {
+            "status": "NB21_METRIC_DEFINITION_DRAFT_RELOAD_PASS",
+            "checklist_action": 9,
+            "checklist_action_total": 49,
+            "artifact": {
+              "path": "artifacts/phase2/evaluation_and_ablation/work/outputs/C020.metric_definitions.4ff5630b473e5c49a45ac1e9e58c991db4caf16d47c7260cad66842b9abeaae6.json",
+              "file_bytes_sha256": "4ff5630b473e5c49a45ac1e9e58c991db4caf16d47c7260cad66842b9abeaae6",
+              "bytes": 8216,
+              "action": "REUSED_IDENTICAL",
+              "reload_validation": "PASS"
+            },
+            "metric_names": [
+              "recall_at_k",
+              "hit_at_k",
+              "reciprocal_rank",
+              "ndcg_at_k_binary",
+              "groundedness",
+              "answer_completeness",
+              "citation_correctness",
+              "claim_citation_coverage",
+              "citation_locator_accuracy",
+              "attribution_correctness",
+              "no_answer_precision_recall_f1",
+              "safety_violation_rate",
+              "latency",
+              "token_usage",
+              "cost",
+              "failure_rate"
+            ],
+            "action_9_eligible_for_checkmark": true,
+            "acceptance_scope": "EXPLICIT_METRIC_DEFINITIONS_AND_MISSING_DATA_RULES",
+            "evaluation_contract_frozen": false,
+            "acceptance_thresholds_set": false,
+            "pending_dependencies": {
+              "population_action_mapping_and_test_exposure": 11,
+              "qualified_semantic_measurement": [
+                13,
+                14,
+                15
+              ],
+              "runner_and_pilot_validation": [
+                16,
+                17,
+                18
+              ],
+              "slice_contract": 10,
+              "thresholds_and_final_freeze": 12
+            },
+            "checklist_file_updated": false,
+            "semantic_judgments_performed": 0,
+            "new_artifact_files_written": 0,
+            "paid_api_calls": 0,
+            "new_api_cost_toman": 0
+          },
+          "original_artifact_bytes_independently_reloaded": false
+        }
+      ],
+      "new_model_api_calls": 0
+    },
+    {
+      "action": 10,
+      "title": "Sliceهای Development",
+      "file": "NB21_action10_report_fa.md",
+      "status": "USER_ACCEPTED_COMPLETION_OF_MODEL_ASSISTED_DIAGNOSTIC_SLICES",
+      "existing_repository_report": "reports/phase2/evaluation/NB21_action10_completion.md",
+      "proposed_repository_path": "reports/phase2/evaluation/NB21_actions01_26_reports/NB21_action10_report_fa.md",
+      "evidence": [
+        {
+          "report_source": "reports/phase2/evaluation/NB21_action10_completion.md",
+          "source_git_blob": "5d1df16b989f47eeec39ee101fe31cf673122c0a",
+          "original_artifact_bytes_independently_reloaded": false
+        }
+      ],
+      "new_model_api_calls": 0
+    },
+    {
+      "action": 11,
+      "title": "Test exposure و طرح مقایسه",
+      "file": "NB21_action11_report_fa.md",
+      "status": "CHECKLIST_COMPLETED_IN_RECORDED_SCOPE",
+      "existing_repository_report": null,
+      "proposed_repository_path": "reports/phase2/evaluation/NB21_actions01_26_reports/NB21_action11_report_fa.md",
+      "evidence": [
+        {
+          "notebook": "notebooks/phase2/21_evaluation_and_ablation.ipynb",
+          "cell_id": "C032",
+          "physical_cell_1based": 64,
+          "reported_output": {
+            "status": "NB21_COMPARISON_PLAN_RELOAD_PASS",
+            "checklist_action": 11,
+            "checklist_action_total": 49,
+            "artifact": {
+              "path": "artifacts/phase2/evaluation_and_ablation/work/outputs/C032.comparison_and_ablation_plan.9ca95a9af817242f80b4fac7a81e06d81c28624f90caf062b7d2c86364fee2b0.json",
+              "file_bytes_sha256": "9ca95a9af817242f80b4fac7a81e06d81c28624f90caf062b7d2c86364fee2b0",
+              "bytes": 11866,
+              "action": "REUSED_IDENTICAL",
+              "reload_validation": "PASS"
+            },
+            "checks": {
+              "six_planned_ablations": true,
+              "six_control_bindings": true,
+              "development_only_selection": true,
+              "no_pristine_test_claim": true,
+              "prior_exposure_recorded": true,
+              "no_test_threshold_retuning": true,
+              "paired_query_identity": true,
+              "verified_group_population": true,
+              "corrected_membership_binding": true,
+              "grouped_paired_resampling_planned": true,
+              "technical_control_checks_pass": true
+            },
+            "acceptance_scope": "RECORDED_TEST_EXPOSURE_DEVELOPMENT_RULES_PAIRED_COMPARISON_AND_SIX_ABLATION_PLANS",
+            "ablation_count": 6,
+            "development_query_count": 2664,
+            "question_group_count": 2620,
+            "action_11_eligible_for_checkmark": true,
+            "action_10_completed": false,
+            "downstream_dependencies": [
+              {
+                "requirement": "Complete or explicitly resolve slice gaps",
+                "responsible_actions": [
+                  10
+                ],
+                "status": "OPEN"
+              },
+              {
+                "requirement": "Thresholds, coverage gates, budget, cache contract, and evaluation blueprint",
+                "responsible_actions": [
+                  12
+                ],
+                "status": "OPEN"
+              },
+              {
+                "requirement": "Qualified semantic measurement",
+                "responsible_actions": [
+                  13,
+                  14,
+                  15
+                ],
+                "status": "OPEN"
+              },
+              {
+                "requirement": "Input joins, consumer validation, pilot, runner",
+                "responsible_actions": [
+                  16,
+                  17,
+                  18
+                ],
+                "status": "OPEN"
+              },
+              {
+                "requirement": "Per-ablation execution bindings and comparisons",
+                "responsible_actions": [
+                  32,
+                  33,
+                  34,
+                  35,
+                  36,
+                  37
+                ],
+                "status": "OPEN"
+              },
+              {
+                "requirement": "Final Test freeze before fresh evaluation",
+                "responsible_actions": [
+                  38,
+                  39,
+                  40
+                ],
+                "status": "OPEN"
+              }
+            ],
+            "checklist_file_updated": false,
+            "evaluation_contract_frozen": false,
+            "experiments_executed": 0,
+            "semantic_judgments_performed": 0,
+            "new_artifact_files_written": 0,
+            "paid_api_calls": 0,
+            "new_api_cost_toman": 0
+          },
+          "original_artifact_bytes_independently_reloaded": false
+        }
+      ],
+      "new_model_api_calls": 0
+    },
+    {
+      "action": 12,
+      "title": "قرارداد اجرایی و Freeze",
+      "file": "NB21_action12_report_fa.md",
+      "status": "PROSPECTIVE_ENGINEERING_EVALUATION_CONTRACT",
+      "existing_repository_report": "reports/phase2/evaluation/NB21_action12_completion.md",
+      "proposed_repository_path": "reports/phase2/evaluation/NB21_actions01_26_reports/NB21_action12_report_fa.md",
+      "evidence": [
+        {
+          "report_source": "reports/phase2/evaluation/NB21_action12_completion.md",
+          "source_git_blob": "b729407c22d5ea3dc6ee75886fd229c0564d9ea6",
+          "original_artifact_bytes_independently_reloaded": false
+        }
+      ],
+      "new_model_api_calls": 0
+    },
+    {
+      "action": 13,
+      "title": "Rubric و موجودی مرجع",
+      "file": "NB21_action13_report_fa.md",
+      "status": "CHECKLIST_COMPLETED_IN_RECORDED_SCOPE",
+      "existing_repository_report": null,
+      "proposed_repository_path": "reports/phase2/evaluation/NB21_actions01_26_reports/NB21_action13_report_fa.md",
+      "evidence": [
+        {
+          "notebook": "notebooks/phase2/21_evaluation_and_ablation.ipynb",
+          "cell_id": "C041",
+          "physical_cell_1based": 82,
+          "reported_output": {
+            "schema_version": "nb21_reference_review_checkpoint_C041_v1",
+            "status": "NB21_REFERENCE_REVIEW_CHECKPOINT_RELOAD_PASS",
+            "checklist_action": 13,
+            "checklist_action_total": 49,
+            "acceptance_scope": "REVIEW_OF_RUBRIC_REFERENCE_AVAILABILITY_AND_RECORDED_INDEPENDENCE",
+            "input_bindings": {
+              "aligned_rubric": {
+                "path": "artifacts/phase2/evaluation_and_ablation/work/outputs/C040.metric_aligned_assessment_rubric.7351ce0a46e80064a08045350d3f9fe9da2c173c2f443c59b3648b3012c7c9f6.json",
+                "file_bytes_sha256": "7351ce0a46e80064a08045350d3f9fe9da2c173c2f443c59b3648b3012c7c9f6"
+              },
+              "existing_review_census": {
+                "path": "artifacts/phase2/evaluation_and_ablation/work/outputs/C037.review_metadata_census.e3abffce4ae6684c10d575026be0991a4f01acdbad44979b4c2eaa464c0d96af.json",
+                "file_bytes_sha256": "e3abffce4ae6684c10d575026be0991a4f01acdbad44979b4c2eaa464c0d96af"
+              },
+              "golden": {
+                "path": "artifacts/phase2/golden_dataset_v2/golden_dataset_v2.jsonl",
+                "file_bytes_sha256": "b9ca18e710686ddca48a25c637840b716adb306717cafd8ec7c96ce9e182e6f2"
+              }
+            },
+            "development_query_count": 2664,
+            "reference_field_coverage": {
+              "document_ids_missing_or_empty": 0,
+              "document_ids_present": 2664,
+              "evidence_ids_missing_or_empty": 0,
+              "evidence_ids_present": 2664,
+              "evidence_locators_missing_or_empty": 0,
+              "evidence_locators_present": 2664,
+              "evidence_quotes_missing_or_empty": 0,
+              "evidence_quotes_present": 2664,
+              "expected_answer_missing_or_empty": 0,
+              "expected_answer_present": 2664,
+              "nondevelopment_id_filter_only": 1149,
+              "question_missing_or_empty": 0,
+              "question_present": 2664
+            },
+            "findings": [
+              {
+                "area": "Groundedness and citation support",
+                "finding": "Existing recovery support is explicitly nonindependent; retain as historical/descriptive evidence, not an automatically qualified independent reference."
+              },
+              {
+                "area": "Completeness",
+                "finding": "Reference-answer presence is counted below. Qualified required-information units and their adequacy remain unvalidated; presence alone does not establish coverage."
+              },
+              {
+                "area": "Attribution",
+                "finding": "Canonical metadata coverage was recorded in C026. Authority tiers and raw speaker labels do not by themselves validate every emitted attribution assertion."
+              },
+              {
+                "area": "User review",
+                "finding": "The inspected file contains two limited-scope records with independence_verified=false and verified_ground_truth=false; other reviews are not declared absent."
+              }
+            ],
+            "reference_field_presence_proves_semantic_validity": false,
+            "reference_coordinates_validated": false,
+            "independent_reference_accepted": false,
+            "semantic_measurement_method_accepted": false,
+            "complete_population_scoring_authorized": false,
+            "next_dependencies": {
+              "reuse_valid_method_tests_and_pilot_real_gaps": 14,
+              "accepted_method_and_coverage_decision": 15,
+              "input_join_and_coordinate_validation": 16
+            },
+            "action_13_eligible_for_checkmark": true,
+            "blanket_semantic_rereview_required": false,
+            "historical_c455_acceptance_changed": false,
+            "semantic_judgments_performed": 0,
+            "paid_api_calls": 0,
+            "new_api_cost_toman": 0,
+            "artifact": {
+              "path": "artifacts/phase2/evaluation_and_ablation/work/outputs/C041.reference_review_checkpoint.89e33877111d1204111f8a0b383c44ef0755b57537cc9ec24ba4bc66ca0303ba.json",
+              "file_bytes_sha256": "89e33877111d1204111f8a0b383c44ef0755b57537cc9ec24ba4bc66ca0303ba",
+              "bytes": 812753,
+              "action": "REUSED_IDENTICAL",
+              "reload_validation": "PASS"
+            },
+            "checklist_file_updated": false,
+            "quality_metrics_computed": false,
+            "new_artifact_files_written": 0
+          },
+          "original_artifact_bytes_independently_reloaded": false
+        }
+      ],
+      "new_model_api_calls": 0
+    },
+    {
+      "action": 14,
+      "title": "آزمون تشخیصی روش",
+      "file": "NB21_action14_report_fa.md",
+      "status": "CHECKLIST_COMPLETED_IN_RECORDED_SCOPE",
+      "existing_repository_report": null,
+      "proposed_repository_path": "reports/phase2/evaluation/NB21_actions01_26_reports/NB21_action14_report_fa.md",
+      "evidence": [
+        {
+          "notebook": "notebooks/phase2/21_evaluation_and_ablation.ipynb",
+          "cell_id": "C299",
+          "physical_cell_1based": 600,
+          "reported_output": {
+            "schema_version": "nb21_action14_frozen_batch_review_C299_v1",
+            "status": "NB21_REVIEW_FROZEN_READY_SUBSET_AVAILABLE_PLANNED_SCOPE_BLOCKED",
+            "checklist_action": 14,
+            "checklist_action_total": 49,
+            "review_origin": "ASSISTANT_SOURCE_ONLY_REVIEW_IN_THIS_CHAT",
+            "independent_expert_or_population_gold": false,
+            "coverage_source_counts": {
+              "book": 3,
+              "transcript": 1,
+              "website": 4
+            },
+            "planned_scenario_count": 120,
+            "ready_scenario_count": 104,
+            "held_scenario_count": 16,
+            "ready_support_request_count": 66,
+            "ready_coverage_request_count": 16,
+            "maximum_semantic_requests_before_cache": 82,
+            "literal_pair_count": 22,
+            "literal_individual_check_count": 44,
+            "expectations_frozen_before_evaluator_dispatch": true,
+            "full_original_suite_can_pass_with_current_holds": false,
+            "network_requests": 0,
+            "paid_api_calls": 0,
+            "golden_dataset_modified": false,
+            "checklist_file_updated": false,
+            "action_14_eligible_for_checkmark": false,
+            "population_method_accepted": false,
+            "held_base_cases": {
+              "A14-B10": "AMBIGUOUS_TAX_QUESTION_AND_REFERENCE_REFERENT: متن بین مالیات و واجبات مالی تفکیک می‌کند؛ مرجع پیشنهادی پاسخ قابل اتکایی به سؤال موجود نیست.",
+              "A14-B11": "TAUTOLOGICAL_QUESTION: سؤال نام الگو را در خود دارد و همان نام را می‌پرسد؛ برای این بسته آزمون معناداری فراهم نمی‌کند."
+            },
+            "artifact": {
+              "path": "artifacts/phase2/evaluation_and_ablation/work/outputs/nb21_action14_batch_v1/C299.frozen_batch_review.ace247f2e0a0d32c9bbae14c5a772bea64ef8fabdbaeb1b5f8a1e9fefc5afbf7.json",
+              "file_bytes_sha256": "ace247f2e0a0d32c9bbae14c5a772bea64ef8fabdbaeb1b5f8a1e9fefc5afbf7",
+              "bytes": 117763,
+              "action": "CREATED",
+              "reload_validation": "PASS"
+            }
+          },
+          "original_artifact_bytes_independently_reloaded": false
+        },
+        {
+          "notebook": "notebooks/phase2/21_evaluation_and_ablation.ipynb",
+          "cell_id": "C301",
+          "physical_cell_1based": 604,
+          "reported_output": {
+            "schema_version": "nb21_diagnostic_round_closure_C301_v1",
+            "status": "NB21_ACTION14_DIAGNOSTIC_TEST_ROUND_COMPLETE",
+            "checklist_action": 14,
+            "checklist_action_total": 49,
+            "input_bindings": {
+              "execution": {
+                "path": "artifacts/phase2/evaluation_and_ablation/work/outputs/nb21_batch_execution_C300_v1/dca30461fdee984528a1a81d200cf96c981cfa51660cad51ccd1881f61cdc467/C300.batch_execution.141d313c25b2e48de670600e82496debde94040ee86bbc00c518b366c439fc27.json",
+                "file_bytes_sha256": "141d313c25b2e48de670600e82496debde94040ee86bbc00c518b366c439fc27"
+              },
+              "frozen_review": {
+                "file_bytes_sha256": "ace247f2e0a0d32c9bbae14c5a772bea64ef8fabdbaeb1b5f8a1e9fefc5afbf7",
+                "path": "artifacts/phase2/evaluation_and_ablation/work/outputs/nb21_action14_batch_v1/C299.frozen_batch_review.ace247f2e0a0d32c9bbae14c5a772bea64ef8fabdbaeb1b5f8a1e9fefc5afbf7.json"
+              }
+            },
+            "completion_scope": "EXECUTION_OF_SOURCE_BOUND_FIXED_ASSERTION_AND_FIXED_REQUIREMENT_DIAGNOSTICS",
+            "ready_scenario_count": 104,
+            "matching_frozen_expectation_count": 104,
+            "family_counts": {
+              "COMPLETE_COVERAGE": 8,
+              "LITERAL_QUOTE_PAIR": 22,
+              "PARTIAL_COVERAGE": 8,
+              "POSITIVE_SUPPORT": 22,
+              "REVERSED_ASSERTION": 22,
+              "WRONG_EVIDENCE": 22
+            },
+            "saved_semantic_responses_bound": 82,
+            "held_scenario_count": 16,
+            "held_scenarios_reclassified_as_pass": false,
+            "original_120_scenario_plan_fully_passed": false,
+            "diagnostic_references_origin": "ASSISTANT_SOURCE_ONLY_REVIEW_BEFORE_EVALUATOR_DISPATCH",
+            "independent_expert_or_population_gold": false,
+            "historical_tariff_estimate_for_C300_toman": 8032.271519999999,
+            "actual_invoice_cost_verified": false,
+            "remaining_method_scope_decisions": [
+              "Official metric applicability and population coverage.",
+              "Qualification of free assertion extraction and reference necessity.",
+              "Semantic citation and attribution coverage.",
+              "Independent reviewer requirements."
+            ],
+            "action_14_test_execution_complete": true,
+            "action_14_eligible_for_checkmark": true,
+            "action_15_eligible_for_checkmark": false,
+            "population_method_accepted": false,
+            "population_accuracy_estimated": false,
+            "next_checklist_action": 15,
+            "network_requests": 0,
+            "paid_api_calls": 0,
+            "previous_outputs_modified": false,
+            "golden_dataset_modified": false,
+            "checklist_file_updated": false,
+            "artifact": {
+              "path": "artifacts/phase2/evaluation_and_ablation/work/outputs/C301.diagnostic_round_closure.2142c9ec320745ed3720b5313c3fc48d4b544b60c7c42f3fe174a82ba9718e56.json",
+              "file_bytes_sha256": "2142c9ec320745ed3720b5313c3fc48d4b544b60c7c42f3fe174a82ba9718e56",
+              "bytes": 6828,
+              "action": "CREATED",
+              "reload_validation": "PASS"
+            }
+          },
+          "original_artifact_bytes_independently_reloaded": false
+        }
+      ],
+      "new_model_api_calls": 0
+    },
+    {
+      "action": 15,
+      "title": "تصمیم دامنهٔ اعتبار روش",
+      "file": "NB21_action15_report_fa.md",
+      "status": "CHECKLIST_COMPLETED_IN_RECORDED_SCOPE",
+      "existing_repository_report": null,
+      "proposed_repository_path": "reports/phase2/evaluation/NB21_actions01_26_reports/NB21_action15_report_fa.md",
+      "evidence": [
+        {
+          "notebook": "notebooks/phase2/21_evaluation_and_ablation.ipynb",
+          "cell_id": "C302",
+          "physical_cell_1based": 606,
+          "reported_output": {
+            "schema_version": "nb21_method_scope_decision_C302_v1",
+            "status": "NB21_ACTION15_SCOPE_DECISION_COMPLETE_OFFICIAL_SEMANTIC_EVALUATION_NOT_READY",
+            "checklist_action": 15,
+            "checklist_action_total": 49,
+            "complete_official_semantic_evaluation_possible_with_current_qualified_resources": false,
+            "decision_reason": "A qualified end-to-end method covering all required semantic metrics and population references has not been established.",
+            "qualified_population_semantic_method": null,
+            "population_method_accepted": false,
+            "official_numeric_semantic_scoring_authorized": false,
+            "reader_and_join_engine_development_may_proceed": true,
+            "action_15_decision_recording_complete": true,
+            "action_15_eligible_for_checkmark": true,
+            "next_checklist_action": 16,
+            "next_action_scope": "Build/adapt Reader and Join to actual schemas, candidate_id and each input's hash definition; never execute evidence.",
+            "next_engine_work_package": [
+              {
+                "action": 16,
+                "scope": "SCHEMA_BOUND_READER_AND_JOIN"
+              },
+              {
+                "action": 17,
+                "scope": "CACHE_ONLY_SMOKE_AND_PILOT",
+                "depends_on": 16
+              },
+              {
+                "action": 18,
+                "scope": "RESUMABLE_ATOMIC_ROW_RESULT_RUNNER",
+                "depends_on": 17
+              }
+            ],
+            "network_requests": 0,
+            "paid_api_calls": 0,
+            "new_tests_executed": 0,
+            "checklist_file_updated": false,
+            "artifact": {
+              "path": "artifacts/phase2/evaluation_and_ablation/work/outputs/C302.method_scope_decision.69be4aa803f9cb852d493e11a2748dc24eb4e14cf8afcc673af97f5cdffdaf91.json",
+              "file_bytes_sha256": "69be4aa803f9cb852d493e11a2748dc24eb4e14cf8afcc673af97f5cdffdaf91",
+              "bytes": 6698,
+              "action": "CREATED",
+              "reload_validation": "PASS"
+            }
+          },
+          "original_artifact_bytes_independently_reloaded": false
+        }
+      ],
+      "new_model_api_calls": 0
+    },
+    {
+      "action": 16,
+      "title": "Reader و Join",
+      "file": "NB21_action16_report_fa.md",
+      "status": "CHECKLIST_COMPLETED_IN_RECORDED_SCOPE",
+      "existing_repository_report": null,
+      "proposed_repository_path": "reports/phase2/evaluation/NB21_actions01_26_reports/NB21_action16_report_fa.md",
+      "evidence": [
+        {
+          "notebook": "notebooks/phase2/21_evaluation_and_ablation.ipynb",
+          "cell_id": "C303",
+          "physical_cell_1based": 608,
+          "reported_output": {
+            "schema_version": "nb21_engine_package_C303_v1",
+            "status": "NB21_BOUND_INPUT_ENGINE_PACKAGE_TECHNICAL_PASS",
+            "checklist_actions": [
+              16,
+              17,
+              18
+            ],
+            "checklist_action_total": 49,
+            "completion_scope": "TECHNICAL_READ_JOIN_AND_CACHE_HANDLING_OF_BOUND_DEVELOPMENT_INPUTS_WITH_EXPLICIT_MISSING_AND_BLOCKED_STATES",
+            "checks": {
+              "all_phases_same_engine_identity": true,
+              "pilot_covers_observed_strata": true,
+              "full_development_join": true,
+              "resume_accounts_for_every_row": true,
+              "replay_writes_zero_rows": true,
+              "replay_reuses_every_row": true,
+              "replay_row_index_identical": true,
+              "answer_partition_preserved": true,
+              "all_smoke_checks_pass": true,
+              "all_phases_kernel_independent": true,
+              "no_network_or_paid_calls": true
+            },
+            "development_query_count": 2664,
+            "answer_available_count": 2618,
+            "answer_missing_count": 46,
+            "citation_count": 10532,
+            "retrieval_arm_count": 5,
+            "pilot_query_count": 12,
+            "phase_artifacts": {
+              "pilot": {
+                "path": "artifacts/phase2/evaluation_and_ablation/work/outputs/nb21_engine_rows_C303_v1/ff878700247047117b087bf118ab06dad6e1c30ce69da92dfec693c411d6694e/phase_report.7fabf87261b51d99478066382e3a33af905b7b897bccd53afb6ee306d998788e.json",
+                "file_bytes_sha256": "7fabf87261b51d99478066382e3a33af905b7b897bccd53afb6ee306d998788e"
+              },
+              "resume": {
+                "path": "artifacts/phase2/evaluation_and_ablation/work/outputs/nb21_engine_rows_C303_v1/ff878700247047117b087bf118ab06dad6e1c30ce69da92dfec693c411d6694e/phase_report.081641bb469570beb0e2c86f2ea8087b0bc945202be2cf17bbc54e646b39fa21.json",
+                "file_bytes_sha256": "081641bb469570beb0e2c86f2ea8087b0bc945202be2cf17bbc54e646b39fa21"
+              },
+              "replay": {
+                "path": "artifacts/phase2/evaluation_and_ablation/work/outputs/nb21_engine_rows_C303_v1/ff878700247047117b087bf118ab06dad6e1c30ce69da92dfec693c411d6694e/phase_report.41bb0254e35b4ff02fdf5066d9d67f10ea8739e9ee128c101c294badd57bc8aa.json",
+                "file_bytes_sha256": "41bb0254e35b4ff02fdf5066d9d67f10ea8739e9ee128c101c294badd57bc8aa"
+              }
+            },
+            "row_index_binding": {
+              "path": "artifacts/phase2/evaluation_and_ablation/work/outputs/nb21_engine_rows_C303_v1/ff878700247047117b087bf118ab06dad6e1c30ce69da92dfec693c411d6694e/row_index.74794942c8043ae2cfa6daedcca5aba4a0c3e865dcd7bae5e4fdf3f95d562a03.json",
+              "file_bytes_sha256": "74794942c8043ae2cfa6daedcca5aba4a0c3e865dcd7bae5e4fdf3f95d562a03"
+            },
+            "implementation_binding": {
+              "path": "artifacts/phase2/evaluation_and_ablation/work/outputs/nb21_cache_only_engine_C303_v1/C303.engine.6949b823367f64e8a2ca24e541d0f08a097b3bf0da87bb0e29ee4aec8678ee09.py",
+              "file_bytes_sha256": "6949b823367f64e8a2ca24e541d0f08a097b3bf0da87bb0e29ee4aec8678ee09"
+            },
+            "manifest_binding": {
+              "path": "artifacts/phase2/evaluation_and_ablation/work/outputs/nb21_cache_only_engine_C303_v1/C303.manifest.b2d8f6adcee80a25cf17d4c0f9e5cf47d1681b66d3ea2775bc4ab99bb07182f5.json",
+              "file_bytes_sha256": "b2d8f6adcee80a25cf17d4c0f9e5cf47d1681b66d3ea2775bc4ab99bb07182f5"
+            },
+            "remaining_upstream_gaps": [
+              "46 frozen-core queries lack selected bound answer text.",
+              "No Development Policy/Confidence run is selected.",
+              "Official population semantic metrics remain unqualified.",
+              "Claim/citation identity joins do not establish alignment to the selected answer text or semantic correctness."
+            ],
+            "actions_eligible_for_checkmark": {
+              "16": true,
+              "17": true,
+              "18": true
+            },
+            "official_semantic_evaluation_complete": false,
+            "population_method_accepted": false,
+            "new_retrieval_or_per_query_metric_execution": false,
+            "network_requests": 0,
+            "paid_api_calls": 0,
+            "evidence_code_executed": false,
+            "golden_dataset_modified": false,
+            "checklist_file_updated": false,
+            "fresh_test_evaluation_performed": false,
+            "artifact": {
+              "path": "artifacts/phase2/evaluation_and_ablation/work/outputs/C303.engine_package.63a75c45bc05c46a418d475110d80f039a1b818c9c901840b779855babac828d.json",
+              "file_bytes_sha256": "63a75c45bc05c46a418d475110d80f039a1b818c9c901840b779855babac828d",
+              "bytes": 3449,
+              "reload_validation": "PASS"
+            }
+          },
+          "original_artifact_bytes_independently_reloaded": false
+        }
+      ],
+      "new_model_api_calls": 0
+    },
+    {
+      "action": 17,
+      "title": "Smoke و Pilot",
+      "file": "NB21_action17_report_fa.md",
+      "status": "CHECKLIST_COMPLETED_IN_RECORDED_SCOPE",
+      "existing_repository_report": null,
+      "proposed_repository_path": "reports/phase2/evaluation/NB21_actions01_26_reports/NB21_action17_report_fa.md",
+      "evidence": [
+        {
+          "notebook": "notebooks/phase2/21_evaluation_and_ablation.ipynb",
+          "cell_id": "C303",
+          "physical_cell_1based": 608,
+          "reported_output": {
+            "schema_version": "nb21_engine_package_C303_v1",
+            "status": "NB21_BOUND_INPUT_ENGINE_PACKAGE_TECHNICAL_PASS",
+            "checklist_actions": [
+              16,
+              17,
+              18
+            ],
+            "checklist_action_total": 49,
+            "completion_scope": "TECHNICAL_READ_JOIN_AND_CACHE_HANDLING_OF_BOUND_DEVELOPMENT_INPUTS_WITH_EXPLICIT_MISSING_AND_BLOCKED_STATES",
+            "checks": {
+              "all_phases_same_engine_identity": true,
+              "pilot_covers_observed_strata": true,
+              "full_development_join": true,
+              "resume_accounts_for_every_row": true,
+              "replay_writes_zero_rows": true,
+              "replay_reuses_every_row": true,
+              "replay_row_index_identical": true,
+              "answer_partition_preserved": true,
+              "all_smoke_checks_pass": true,
+              "all_phases_kernel_independent": true,
+              "no_network_or_paid_calls": true
+            },
+            "development_query_count": 2664,
+            "answer_available_count": 2618,
+            "answer_missing_count": 46,
+            "citation_count": 10532,
+            "retrieval_arm_count": 5,
+            "pilot_query_count": 12,
+            "phase_artifacts": {
+              "pilot": {
+                "path": "artifacts/phase2/evaluation_and_ablation/work/outputs/nb21_engine_rows_C303_v1/ff878700247047117b087bf118ab06dad6e1c30ce69da92dfec693c411d6694e/phase_report.7fabf87261b51d99478066382e3a33af905b7b897bccd53afb6ee306d998788e.json",
+                "file_bytes_sha256": "7fabf87261b51d99478066382e3a33af905b7b897bccd53afb6ee306d998788e"
+              },
+              "resume": {
+                "path": "artifacts/phase2/evaluation_and_ablation/work/outputs/nb21_engine_rows_C303_v1/ff878700247047117b087bf118ab06dad6e1c30ce69da92dfec693c411d6694e/phase_report.081641bb469570beb0e2c86f2ea8087b0bc945202be2cf17bbc54e646b39fa21.json",
+                "file_bytes_sha256": "081641bb469570beb0e2c86f2ea8087b0bc945202be2cf17bbc54e646b39fa21"
+              },
+              "replay": {
+                "path": "artifacts/phase2/evaluation_and_ablation/work/outputs/nb21_engine_rows_C303_v1/ff878700247047117b087bf118ab06dad6e1c30ce69da92dfec693c411d6694e/phase_report.41bb0254e35b4ff02fdf5066d9d67f10ea8739e9ee128c101c294badd57bc8aa.json",
+                "file_bytes_sha256": "41bb0254e35b4ff02fdf5066d9d67f10ea8739e9ee128c101c294badd57bc8aa"
+              }
+            },
+            "row_index_binding": {
+              "path": "artifacts/phase2/evaluation_and_ablation/work/outputs/nb21_engine_rows_C303_v1/ff878700247047117b087bf118ab06dad6e1c30ce69da92dfec693c411d6694e/row_index.74794942c8043ae2cfa6daedcca5aba4a0c3e865dcd7bae5e4fdf3f95d562a03.json",
+              "file_bytes_sha256": "74794942c8043ae2cfa6daedcca5aba4a0c3e865dcd7bae5e4fdf3f95d562a03"
+            },
+            "implementation_binding": {
+              "path": "artifacts/phase2/evaluation_and_ablation/work/outputs/nb21_cache_only_engine_C303_v1/C303.engine.6949b823367f64e8a2ca24e541d0f08a097b3bf0da87bb0e29ee4aec8678ee09.py",
+              "file_bytes_sha256": "6949b823367f64e8a2ca24e541d0f08a097b3bf0da87bb0e29ee4aec8678ee09"
+            },
+            "manifest_binding": {
+              "path": "artifacts/phase2/evaluation_and_ablation/work/outputs/nb21_cache_only_engine_C303_v1/C303.manifest.b2d8f6adcee80a25cf17d4c0f9e5cf47d1681b66d3ea2775bc4ab99bb07182f5.json",
+              "file_bytes_sha256": "b2d8f6adcee80a25cf17d4c0f9e5cf47d1681b66d3ea2775bc4ab99bb07182f5"
+            },
+            "remaining_upstream_gaps": [
+              "46 frozen-core queries lack selected bound answer text.",
+              "No Development Policy/Confidence run is selected.",
+              "Official population semantic metrics remain unqualified.",
+              "Claim/citation identity joins do not establish alignment to the selected answer text or semantic correctness."
+            ],
+            "actions_eligible_for_checkmark": {
+              "16": true,
+              "17": true,
+              "18": true
+            },
+            "official_semantic_evaluation_complete": false,
+            "population_method_accepted": false,
+            "new_retrieval_or_per_query_metric_execution": false,
+            "network_requests": 0,
+            "paid_api_calls": 0,
+            "evidence_code_executed": false,
+            "golden_dataset_modified": false,
+            "checklist_file_updated": false,
+            "fresh_test_evaluation_performed": false,
+            "artifact": {
+              "path": "artifacts/phase2/evaluation_and_ablation/work/outputs/C303.engine_package.63a75c45bc05c46a418d475110d80f039a1b818c9c901840b779855babac828d.json",
+              "file_bytes_sha256": "63a75c45bc05c46a418d475110d80f039a1b818c9c901840b779855babac828d",
+              "bytes": 3449,
+              "reload_validation": "PASS"
+            }
+          },
+          "original_artifact_bytes_independently_reloaded": false
+        }
+      ],
+      "new_model_api_calls": 0
+    },
+    {
+      "action": 18,
+      "title": "Runner قابل‌ادامه",
+      "file": "NB21_action18_report_fa.md",
+      "status": "CHECKLIST_COMPLETED_IN_RECORDED_SCOPE",
+      "existing_repository_report": null,
+      "proposed_repository_path": "reports/phase2/evaluation/NB21_actions01_26_reports/NB21_action18_report_fa.md",
+      "evidence": [
+        {
+          "notebook": "notebooks/phase2/21_evaluation_and_ablation.ipynb",
+          "cell_id": "C303",
+          "physical_cell_1based": 608,
+          "reported_output": {
+            "schema_version": "nb21_engine_package_C303_v1",
+            "status": "NB21_BOUND_INPUT_ENGINE_PACKAGE_TECHNICAL_PASS",
+            "checklist_actions": [
+              16,
+              17,
+              18
+            ],
+            "checklist_action_total": 49,
+            "completion_scope": "TECHNICAL_READ_JOIN_AND_CACHE_HANDLING_OF_BOUND_DEVELOPMENT_INPUTS_WITH_EXPLICIT_MISSING_AND_BLOCKED_STATES",
+            "checks": {
+              "all_phases_same_engine_identity": true,
+              "pilot_covers_observed_strata": true,
+              "full_development_join": true,
+              "resume_accounts_for_every_row": true,
+              "replay_writes_zero_rows": true,
+              "replay_reuses_every_row": true,
+              "replay_row_index_identical": true,
+              "answer_partition_preserved": true,
+              "all_smoke_checks_pass": true,
+              "all_phases_kernel_independent": true,
+              "no_network_or_paid_calls": true
+            },
+            "development_query_count": 2664,
+            "answer_available_count": 2618,
+            "answer_missing_count": 46,
+            "citation_count": 10532,
+            "retrieval_arm_count": 5,
+            "pilot_query_count": 12,
+            "phase_artifacts": {
+              "pilot": {
+                "path": "artifacts/phase2/evaluation_and_ablation/work/outputs/nb21_engine_rows_C303_v1/ff878700247047117b087bf118ab06dad6e1c30ce69da92dfec693c411d6694e/phase_report.7fabf87261b51d99478066382e3a33af905b7b897bccd53afb6ee306d998788e.json",
+                "file_bytes_sha256": "7fabf87261b51d99478066382e3a33af905b7b897bccd53afb6ee306d998788e"
+              },
+              "resume": {
+                "path": "artifacts/phase2/evaluation_and_ablation/work/outputs/nb21_engine_rows_C303_v1/ff878700247047117b087bf118ab06dad6e1c30ce69da92dfec693c411d6694e/phase_report.081641bb469570beb0e2c86f2ea8087b0bc945202be2cf17bbc54e646b39fa21.json",
+                "file_bytes_sha256": "081641bb469570beb0e2c86f2ea8087b0bc945202be2cf17bbc54e646b39fa21"
+              },
+              "replay": {
+                "path": "artifacts/phase2/evaluation_and_ablation/work/outputs/nb21_engine_rows_C303_v1/ff878700247047117b087bf118ab06dad6e1c30ce69da92dfec693c411d6694e/phase_report.41bb0254e35b4ff02fdf5066d9d67f10ea8739e9ee128c101c294badd57bc8aa.json",
+                "file_bytes_sha256": "41bb0254e35b4ff02fdf5066d9d67f10ea8739e9ee128c101c294badd57bc8aa"
+              }
+            },
+            "row_index_binding": {
+              "path": "artifacts/phase2/evaluation_and_ablation/work/outputs/nb21_engine_rows_C303_v1/ff878700247047117b087bf118ab06dad6e1c30ce69da92dfec693c411d6694e/row_index.74794942c8043ae2cfa6daedcca5aba4a0c3e865dcd7bae5e4fdf3f95d562a03.json",
+              "file_bytes_sha256": "74794942c8043ae2cfa6daedcca5aba4a0c3e865dcd7bae5e4fdf3f95d562a03"
+            },
+            "implementation_binding": {
+              "path": "artifacts/phase2/evaluation_and_ablation/work/outputs/nb21_cache_only_engine_C303_v1/C303.engine.6949b823367f64e8a2ca24e541d0f08a097b3bf0da87bb0e29ee4aec8678ee09.py",
+              "file_bytes_sha256": "6949b823367f64e8a2ca24e541d0f08a097b3bf0da87bb0e29ee4aec8678ee09"
+            },
+            "manifest_binding": {
+              "path": "artifacts/phase2/evaluation_and_ablation/work/outputs/nb21_cache_only_engine_C303_v1/C303.manifest.b2d8f6adcee80a25cf17d4c0f9e5cf47d1681b66d3ea2775bc4ab99bb07182f5.json",
+              "file_bytes_sha256": "b2d8f6adcee80a25cf17d4c0f9e5cf47d1681b66d3ea2775bc4ab99bb07182f5"
+            },
+            "remaining_upstream_gaps": [
+              "46 frozen-core queries lack selected bound answer text.",
+              "No Development Policy/Confidence run is selected.",
+              "Official population semantic metrics remain unqualified.",
+              "Claim/citation identity joins do not establish alignment to the selected answer text or semantic correctness."
+            ],
+            "actions_eligible_for_checkmark": {
+              "16": true,
+              "17": true,
+              "18": true
+            },
+            "official_semantic_evaluation_complete": false,
+            "population_method_accepted": false,
+            "new_retrieval_or_per_query_metric_execution": false,
+            "network_requests": 0,
+            "paid_api_calls": 0,
+            "evidence_code_executed": false,
+            "golden_dataset_modified": false,
+            "checklist_file_updated": false,
+            "fresh_test_evaluation_performed": false,
+            "artifact": {
+              "path": "artifacts/phase2/evaluation_and_ablation/work/outputs/C303.engine_package.63a75c45bc05c46a418d475110d80f039a1b818c9c901840b779855babac828d.json",
+              "file_bytes_sha256": "63a75c45bc05c46a418d475110d80f039a1b818c9c901840b779855babac828d",
+              "bytes": 3449,
+              "reload_validation": "PASS"
+            }
+          },
+          "original_artifact_bytes_independently_reloaded": false
+        }
+      ],
+      "new_model_api_calls": 0
+    },
+    {
+      "action": 19,
+      "title": "تطبیق بازوهای Retrieval",
+      "file": "NB21_action19_report_fa.md",
+      "status": "CHECKLIST_COMPLETED_IN_RECORDED_SCOPE",
+      "existing_repository_report": null,
+      "proposed_repository_path": "reports/phase2/evaluation/NB21_actions01_26_reports/NB21_action19_report_fa.md",
+      "evidence": [
+        {
+          "notebook": "notebooks/phase2/21_evaluation_and_ablation.ipynb",
+          "cell_id": "C192",
+          "physical_cell_1based": 383,
+          "reported_output": {
+            "schema_version": "nb21_retrieval_comparison_C192_v1",
+            "status": "NB21_FIVE_ARM_DEVELOPMENT_TABLE_READY",
+            "checklist_actions": [
+              19,
+              20,
+              21
+            ],
+            "checklist_action_total": 49,
+            "input_bindings": {
+              "dense_local_cosine_100": {
+                "path": "artifacts/phase2/evaluation_and_ablation/work/outputs/nb21_cached_dense_v1/cce675c281a5094d80bd617c7cc934f5fbf4bd447837ab65d594ef35032780b0/development_rankings.2f0acbf9bc6c2a2c2b4364c225ee311a4e697a0da1b26c1a23e60cdbe55667a1.json",
+                "file_bytes_sha256": "2f0acbf9bc6c2a2c2b4364c225ee311a4e697a0da1b26c1a23e60cdbe55667a1"
+              },
+              "sparse_frozen_100": {
+                "path": "artifacts/phase2/evaluation_and_ablation/work/outputs/nb21_frozen_sparse_v1/aa638442bb1577b6dfee1fddc8917296f861ac8386f21bce05163a37016d0acd/development_rankings.2ef9cac3f743ce8536931d5ebac1fbb5aea0b9b7f9bc375c530f79a754274884.json",
+                "file_bytes_sha256": "2ef9cac3f743ce8536931d5ebac1fbb5aea0b9b7f9bc375c530f79a754274884"
+              },
+              "hybrid_depth_100": {
+                "path": "artifacts/phase2/evaluation_and_ablation/work/outputs/nb21_local_retrieval_metrics_v1/ba7be2442f0e5257237c0572cdcb6926a21b6afbfa234b09fdf79f5ced54211c/hybrid_depth_100.b9d58ff625075bbe3bb54a7fd2491e5353bb12c36ffea24433fe4e61ccc23e3f.json",
+                "file_bytes_sha256": "b9d58ff625075bbe3bb54a7fd2491e5353bb12c36ffea24433fe4e61ccc23e3f"
+              },
+              "hybrid_original_pool_50": {
+                "path": "artifacts/phase2/evaluation_and_ablation/work/outputs/nb21_local_retrieval_metrics_v1/ba7be2442f0e5257237c0572cdcb6926a21b6afbfa234b09fdf79f5ced54211c/hybrid_original_pool_50.ea282e6d8d1514934fde614503b162cc645fdba2cf3ecb6ef2e3f404347d3156.json",
+                "file_bytes_sha256": "ea282e6d8d1514934fde614503b162cc645fdba2cf3ecb6ef2e3f404347d3156"
+              },
+              "reranked_same_pool_50": {
+                "path": "artifacts/phase2/evaluation_and_ablation/work/outputs/nb21_local_retrieval_metrics_v1/ba7be2442f0e5257237c0572cdcb6926a21b6afbfa234b09fdf79f5ced54211c/reranked_same_pool_50.15eec9299c9ca1428d3f11b022d678087e50b4a8eb733586524f63d522ca4c65.json",
+                "file_bytes_sha256": "15eec9299c9ca1428d3f11b022d678087e50b4a8eb733586524f63d522ca4c65"
+              }
+            },
+            "gold_mapping_binding": {
+              "path": "artifacts/phase2/evaluation_and_ablation/work/outputs/C165.development_locator_gold_mapping.9349af309791a2f14d4d094562162d78727b7ab16b217615462050a84af6d124.json",
+              "file_bytes_sha256": "9349af309791a2f14d4d094562162d78727b7ab16b217615462050a84af6d124"
+            },
+            "schema_adapters": {
+              "dense_local_cosine_100": "NESTED_METRICS",
+              "sparse_frozen_100": "NESTED_METRICS",
+              "hybrid_depth_100": "DIRECT_ROW_METRICS",
+              "hybrid_original_pool_50": "DIRECT_ROW_METRICS",
+              "reranked_same_pool_50": "DIRECT_ROW_METRICS"
+            },
+            "development_query_count": 2664,
+            "all_arm_query_id_sets_match": true,
+            "aggregation": "MACRO_PER_QUERY_WITH_AVAILABILITY_COUNTS",
+            "summaries": {
+              "dense_local_cosine_100": {
+                "hit_at_k:k=5": {
+                  "macro_mean": 0.521021021021021,
+                  "eligible_query_count": 2664,
+                  "unavailable_query_count": 0
+                },
+                "recall_at_k:k=5": {
+                  "macro_mean": 0.39137262262262257,
+                  "eligible_query_count": 2664,
+                  "unavailable_query_count": 0
+                },
+                "ndcg_at_k_binary:k=5": {
+                  "macro_mean": 0.3441948979972235,
+                  "eligible_query_count": 2664,
+                  "unavailable_query_count": 0
+                },
+                "hit_at_k:k=10": {
+                  "macro_mean": 0.609984984984985,
+                  "eligible_query_count": 2664,
+                  "unavailable_query_count": 0
+                },
+                "recall_at_k:k=10": {
+                  "macro_mean": 0.4735470589637256,
+                  "eligible_query_count": 2664,
+                  "unavailable_query_count": 0
+                },
+                "ndcg_at_k_binary:k=10": {
+                  "macro_mean": 0.3739455468479943,
+                  "eligible_query_count": 2664,
+                  "unavailable_query_count": 0
+                },
+                "rr_at_10": {
+                  "macro_mean": 0.40066152461985793,
+                  "eligible_query_count": 2664,
+                  "unavailable_query_count": 0
+                },
+                "rr_at_50": {
+                  "macro_mean": 0.41037127769468706,
+                  "eligible_query_count": 2664,
+                  "unavailable_query_count": 0
+                },
+                "rr_at_100": {
+                  "macro_mean": 0.41114801916014126,
+                  "eligible_query_count": 2664,
+                  "unavailable_query_count": 0
+                }
+              },
+              "sparse_frozen_100": {
+                "hit_at_k:k=5": {
+                  "macro_mean": 0.6786786786786787,
+                  "eligible_query_count": 2664,
+                  "unavailable_query_count": 0
+                },
+                "recall_at_k:k=5": {
+                  "macro_mean": 0.5128710555793888,
+                  "eligible_query_count": 2664,
+                  "unavailable_query_count": 0
+                },
+                "ndcg_at_k_binary:k=5": {
+                  "macro_mean": 0.4855041074074556,
+                  "eligible_query_count": 2664,
+                  "unavailable_query_count": 0
+                },
+                "hit_at_k:k=10": {
+                  "macro_mean": 0.743993993993994,
+                  "eligible_query_count": 2664,
+                  "unavailable_query_count": 0
+                },
+                "recall_at_k:k=10": {
+                  "macro_mean": 0.5796647838314506,
+                  "eligible_query_count": 2664,
+                  "unavailable_query_count": 0
+                },
+                "ndcg_at_k_binary:k=10": {
+                  "macro_mean": 0.50936500655395,
+                  "eligible_query_count": 2664,
+                  "unavailable_query_count": 0
+                },
+                "rr_at_10": {
+                  "macro_mean": 0.5790209852709853,
+                  "eligible_query_count": 2664,
+                  "unavailable_query_count": 0
+                },
+                "rr_at_50": {
+                  "macro_mean": 0.5852859413787405,
+                  "eligible_query_count": 2664,
+                  "unavailable_query_count": 0
+                },
+                "rr_at_100": {
+                  "macro_mean": 0.58579916164883,
+                  "eligible_query_count": 2664,
+                  "unavailable_query_count": 0
+                }
+              },
+              "hybrid_depth_100": {
+                "hit_at_k:k=5": {
+                  "macro_mean": 0.7117117117117117,
+                  "eligible_query_count": 2664,
+                  "unavailable_query_count": 0
+                },
+                "recall_at_k:k=5": {
+                  "macro_mean": 0.5469027062777063,
+                  "eligible_query_count": 2664,
+                  "unavailable_query_count": 0
+                },
+                "ndcg_at_k_binary:k=5": {
+                  "macro_mean": 0.5115595588576384,
+                  "eligible_query_count": 2664,
+                  "unavailable_query_count": 0
+                },
+                "hit_at_k:k=10": {
+                  "macro_mean": 0.7856606606606606,
+                  "eligible_query_count": 2664,
+                  "unavailable_query_count": 0
+                },
+                "recall_at_k:k=10": {
+                  "macro_mean": 0.621242522284189,
+                  "eligible_query_count": 2664,
+                  "unavailable_query_count": 0
+                },
+                "ndcg_at_k_binary:k=10": {
+                  "macro_mean": 0.5381727779077033,
+                  "eligible_query_count": 2664,
+                  "unavailable_query_count": 0
+                },
+                "rr_at_10": {
+                  "macro_mean": 0.6021682396682396,
+                  "eligible_query_count": 2664,
+                  "unavailable_query_count": 0
+                },
+                "rr_at_50": {
+                  "macro_mean": 0.6077657488576085,
+                  "eligible_query_count": 2664,
+                  "unavailable_query_count": 0
+                },
+                "rr_at_100": {
+                  "macro_mean": 0.6082169141249909,
+                  "eligible_query_count": 2664,
+                  "unavailable_query_count": 0
+                }
+              },
+              "hybrid_original_pool_50": {
+                "hit_at_k:k=5": {
+                  "macro_mean": 0.7117117117117117,
+                  "eligible_query_count": 2664,
+                  "unavailable_query_count": 0
+                },
+                "recall_at_k:k=5": {
+                  "macro_mean": 0.5469027062777063,
+                  "eligible_query_count": 2664,
+                  "unavailable_query_count": 0
+                },
+                "ndcg_at_k_binary:k=5": {
+                  "macro_mean": 0.5115595588576384,
+                  "eligible_query_count": 2664,
+                  "unavailable_query_count": 0
+                },
+                "hit_at_k:k=10": {
+                  "macro_mean": 0.7856606606606606,
+                  "eligible_query_count": 2664,
+                  "unavailable_query_count": 0
+                },
+                "recall_at_k:k=10": {
+                  "macro_mean": 0.621242522284189,
+                  "eligible_query_count": 2664,
+                  "unavailable_query_count": 0
+                },
+                "ndcg_at_k_binary:k=10": {
+                  "macro_mean": 0.5381727779077033,
+                  "eligible_query_count": 2664,
+                  "unavailable_query_count": 0
+                },
+                "rr_at_10": {
+                  "macro_mean": 0.6021682396682396,
+                  "eligible_query_count": 2664,
+                  "unavailable_query_count": 0
+                },
+                "rr_at_50": {
+                  "macro_mean": 0.6077657488576085,
+                  "eligible_query_count": 2664,
+                  "unavailable_query_count": 0
+                },
+                "rr_at_100": {
+                  "macro_mean": null,
+                  "eligible_query_count": 0,
+                  "unavailable_query_count": 2664
+                }
+              },
+              "reranked_same_pool_50": {
+                "hit_at_k:k=5": {
+                  "macro_mean": 0.7916666666666666,
+                  "eligible_query_count": 2664,
+                  "unavailable_query_count": 0
+                },
+                "recall_at_k:k=5": {
+                  "macro_mean": 0.5977872217455551,
+                  "eligible_query_count": 2664,
+                  "unavailable_query_count": 0
+                },
+                "ndcg_at_k_binary:k=5": {
+                  "macro_mean": 0.5732765152763587,
+                  "eligible_query_count": 2664,
+                  "unavailable_query_count": 0
+                },
+                "hit_at_k:k=10": {
+                  "macro_mean": 0.8498498498498499,
+                  "eligible_query_count": 2664,
+                  "unavailable_query_count": 0
+                },
+                "recall_at_k:k=10": {
+                  "macro_mean": 0.6676743707993709,
+                  "eligible_query_count": 2664,
+                  "unavailable_query_count": 0
+                },
+                "ndcg_at_k_binary:k=10": {
+                  "macro_mean": 0.5988342300716867,
+                  "eligible_query_count": 2664,
+                  "unavailable_query_count": 0
+                },
+                "rr_at_10": {
+                  "macro_mean": 0.6887016480766481,
+                  "eligible_query_count": 2664,
+                  "unavailable_query_count": 0
+                },
+                "rr_at_50": {
+                  "macro_mean": 0.6913267208948901,
+                  "eligible_query_count": 2664,
+                  "unavailable_query_count": 0
+                },
+                "rr_at_100": {
+                  "macro_mean": null,
+                  "eligible_query_count": 0,
+                  "unavailable_query_count": 2664
+                }
+              }
+            },
+            "no_gold_hit_query_counts": {
+              "dense_local_cosine_100": {
+                "no_gold_hit_at_5": 1276,
+                "no_gold_hit_at_10": 1039
+              },
+              "sparse_frozen_100": {
+                "no_gold_hit_at_5": 856,
+                "no_gold_hit_at_10": 682
+              },
+              "hybrid_depth_100": {
+                "no_gold_hit_at_5": 768,
+                "no_gold_hit_at_10": 571
+              },
+              "hybrid_original_pool_50": {
+                "no_gold_hit_at_5": 768,
+                "no_gold_hit_at_10": 571
+              },
+              "reranked_same_pool_50": {
+                "no_gold_hit_at_5": 555,
+                "no_gold_hit_at_10": 400
+              }
+            },
+            "same_pool_paired_comparison": {
+              "baseline": "hybrid_original_pool_50",
+              "comparison": "reranked_same_pool_50",
+              "candidate_pool_size": 50,
+              "metrics": {
+                "hit_at_k:k=5": {
+                  "mean_reranker_minus_hybrid": 0.07995495495495496,
+                  "paired_query_count": 2664,
+                  "unavailable_pair_count": 0
+                },
+                "recall_at_k:k=5": {
+                  "mean_reranker_minus_hybrid": 0.0508845154678488,
+                  "paired_query_count": 2664,
+                  "unavailable_pair_count": 0
+                },
+                "ndcg_at_k_binary:k=5": {
+                  "mean_reranker_minus_hybrid": 0.0617169564187203,
+                  "paired_query_count": 2664,
+                  "unavailable_pair_count": 0
+                },
+                "hit_at_k:k=10": {
+                  "mean_reranker_minus_hybrid": 0.06418918918918919,
+                  "paired_query_count": 2664,
+                  "unavailable_pair_count": 0
+                },
+                "recall_at_k:k=10": {
+                  "mean_reranker_minus_hybrid": 0.046431848515181846,
+                  "paired_query_count": 2664,
+                  "unavailable_pair_count": 0
+                },
+                "ndcg_at_k_binary:k=10": {
+                  "mean_reranker_minus_hybrid": 0.06066145216398341,
+                  "paired_query_count": 2664,
+                  "unavailable_pair_count": 0
+                },
+                "rr_at_10": {
+                  "mean_reranker_minus_hybrid": 0.08653340840840841,
+                  "paired_query_count": 2664,
+                  "unavailable_pair_count": 0
+                },
+                "rr_at_50": {
+                  "mean_reranker_minus_hybrid": 0.08356097203728165,
+                  "paired_query_count": 2664,
+                  "unavailable_pair_count": 0
+                },
+                "rr_at_100": {
+                  "mean_reranker_minus_hybrid": null,
+                  "paired_query_count": 0,
+                  "unavailable_pair_count": 2664
+                }
+              },
+              "uncertainty_estimated": false,
+              "statistical_significance_assessed": false
+            },
+            "relevance_target": "CHUNK_CONTAINS_MEMBER_WITH_IDENTICAL_SOURCE_LOCATOR",
+            "dense_variant": "LOCAL_EXACT_COSINE_CHUNK_ID_TIE_BREAK",
+            "historical_qdrant_parity_established": false,
+            "cross_engine_deltas_are_strict_ablation_effects": false,
+            "slice_benchmark_completed": false,
+            "semantic_quality_established": false,
+            "regression_acceptance_assessed": false,
+            "action_19_eligible_for_checkmark": false,
+            "action_20_eligible_for_checkmark": false,
+            "action_21_eligible_for_checkmark": false,
+            "checklist_file_updated": false,
+            "new_retrieval_executed": false,
+            "new_test_queries_evaluated": false,
+            "network_requests": 0,
+            "paid_api_calls": 0,
+            "new_api_cost_toman": 0,
+            "artifact": {
+              "path": "artifacts/phase2/evaluation_and_ablation/work/outputs/C192.development_retrieval_comparison.7f8c85de9f91b8a552a49739c7f68891d4517a0d4404b1c2372d1b6dbc08d00c.json",
+              "file_bytes_sha256": "7f8c85de9f91b8a552a49739c7f68891d4517a0d4404b1c2372d1b6dbc08d00c",
+              "bytes": 9808,
+              "action": "CREATED",
+              "reload_validation": "PASS"
+            }
+          },
+          "original_artifact_bytes_independently_reloaded": false
+        },
+        {
+          "notebook": "notebooks/phase2/21_evaluation_and_ablation.ipynb",
+          "cell_id": "C304",
+          "physical_cell_1based": 610,
+          "reported_output": {
+            "schema_version": "nb21_retrieval_package_C304_v1",
+            "status": "NB21_RETRIEVAL_TABLES_ALIGNED_REQUIRED_SLICE_MAPPING_OPEN",
+            "checklist_actions": [
+              19,
+              20,
+              21
+            ],
+            "checklist_action_total": 49,
+            "development_query_count": 2664,
+            "retrieval_arm_count": 5,
+            "all_cached_metric_tables_match_C303": true,
+            "open_slice_gaps": [
+              {
+                "family": "topic",
+                "reason": "No validated query-to-topic mapping selected from inspected sources; frozen taxonomy alone is insufficient.",
+                "status": "NOT_ASSESSED_NO_CANONICAL_MAPPING",
+                "unassigned_development_query_count": 2664
+              },
+              {
+                "family": "question_type",
+                "reason": "No validated fixed question-type mapping selected; raw question_intent is not adopted as that mapping.",
+                "status": "NOT_ASSESSED_NO_CANONICAL_MAPPING",
+                "unassigned_development_query_count": 2664
+              }
+            ],
+            "slice_contract_structure": {
+              "schema_version": "nb21_slice_contract_draft_C026_v1",
+              "top_level_fields": [
+                "action_10_eligible_for_checkmark",
+                "checklist_action",
+                "checklist_action_total",
+                "coverage",
+                "evaluation_contract_frozen",
+                "input_file_hashes",
+                "membership_policy",
+                "new_api_cost_toman",
+                "open_gaps",
+                "paid_api_calls",
+                "population_query_count",
+                "query_slice_rows",
+                "schema_version",
+                "semantic_judgments_performed",
+                "split",
+                "status",
+                "upstream_product_acceptance_changed"
+              ]
+            },
+            "failure_arithmetic_checks": {
+              "transition_denominator": true,
+              "baseline_miss_count": true,
+              "reranker_miss_count": true,
+              "net_hit_gain": true,
+              "miss_partition_denominator": true,
+              "same_pool_identity": true,
+              "hit_delta_matches_count_delta": true
+            },
+            "hit_at_10_transitions": {
+              "HIT_GAINED": 219,
+              "HIT_LOST": 48,
+              "HIT_RETAINED": 2045,
+              "MISS_RETAINED": 352
+            },
+            "reranker_miss_categories": {
+              "GOLD_IN_POOL_50_BUT_OUTSIDE_RERANKED_TOP_10": 127,
+              "GOLD_OUTSIDE_POOL_50_BUT_IN_HYBRID_TOP_100": 86,
+              "NO_GOLD_IN_HYBRID_TOP_100": 187
+            },
+            "net_hit_gain_count": 171,
+            "actions_eligible_for_checkmark": {
+              "19": true,
+              "20": false,
+              "21": true
+            },
+            "next_checklist_action": 20,
+            "next_required_work": "RESOLVE_REQUIRED_TOPIC_AND_QUESTION_TYPE_MAPPING_GAPS",
+            "metrics_recomputed": false,
+            "new_retrieval_executed": false,
+            "network_requests": 0,
+            "paid_api_calls": 0,
+            "checklist_file_updated": false,
+            "artifact": {
+              "path": "artifacts/phase2/evaluation_and_ablation/work/outputs/C304.retrieval_package.bf078b985c16666005f4932aee1fc1a1140028342c404ab9c865651e18615d66.json",
+              "file_bytes_sha256": "bf078b985c16666005f4932aee1fc1a1140028342c404ab9c865651e18615d66",
+              "bytes": 12032,
+              "action": "CREATED",
+              "reload_validation": "PASS"
+            }
+          },
+          "original_artifact_bytes_independently_reloaded": false
+        }
+      ],
+      "new_model_api_calls": 0
+    },
+    {
+      "action": 20,
+      "title": "Metricهای بازیابی و Sliceهای معتبر",
+      "file": "NB21_action20_report_fa.md",
+      "status": "CHECKLIST_COMPLETED_IN_RECORDED_SCOPE",
+      "existing_repository_report": null,
+      "proposed_repository_path": "reports/phase2/evaluation/NB21_actions01_26_reports/NB21_action20_report_fa.md",
+      "evidence": [
+        {
+          "notebook": "notebooks/phase2/21_evaluation_and_ablation.ipynb",
+          "cell_id": "C194",
+          "physical_cell_1based": 387,
+          "reported_output": {
+            "status": "NB21_EXISTING_RETRIEVAL_SLICE_RESULTS_READY",
+            "development_query_count": 2664,
+            "all_slice_coverage_checks_pass": true,
+            "source_type_summary": {
+              "dense_local_cosine_100": {
+                "book": {
+                  "query_count": 277,
+                  "recall_at_10": 0.6155234657039711,
+                  "ndcg_at_10": 0.4993943358113277,
+                  "mrr_at_10": 0.48259412068076324
+                },
+                "transcript": {
+                  "query_count": 1459,
+                  "recall_at_10": 0.3867831848297921,
+                  "ndcg_at_10": 0.2662635110608386,
+                  "mrr_at_10": 0.2679944950335629
+                },
+                "website": {
+                  "query_count": 928,
+                  "recall_at_10": 0.5675783388067871,
+                  "ndcg_at_10": 0.5057976758034003,
+                  "mrr_at_10": 0.5847842261904762
+                }
+              },
+              "hybrid_depth_100": {
+                "book": {
+                  "query_count": 277,
+                  "recall_at_10": 0.7888086642599278,
+                  "ndcg_at_10": 0.6684420848811021,
+                  "mrr_at_10": 0.6487808721563234
+                },
+                "transcript": {
+                  "query_count": 1459,
+                  "recall_at_10": 0.550045693397304,
+                  "ndcg_at_10": 0.4362504998777923,
+                  "mrr_at_10": 0.46742006375316864
+                },
+                "website": {
+                  "query_count": 928,
+                  "recall_at_10": 0.6831610050629447,
+                  "ndcg_at_10": 0.6595305425779713,
+                  "mrr_at_10": 0.8001056205528189
+                }
+              },
+              "hybrid_original_pool_50": {
+                "book": {
+                  "query_count": 277,
+                  "recall_at_10": 0.7888086642599278,
+                  "ndcg_at_10": 0.6684420848811021,
+                  "mrr_at_10": 0.6487808721563234
+                },
+                "transcript": {
+                  "query_count": 1459,
+                  "recall_at_10": 0.550045693397304,
+                  "ndcg_at_10": 0.4362504998777923,
+                  "mrr_at_10": 0.46742006375316864
+                },
+                "website": {
+                  "query_count": 928,
+                  "recall_at_10": 0.6831610050629447,
+                  "ndcg_at_10": 0.6595305425779713,
+                  "mrr_at_10": 0.8001056205528189
+                }
+              },
+              "reranked_same_pool_50": {
+                "book": {
+                  "query_count": 277,
+                  "recall_at_10": 0.8375451263537906,
+                  "ndcg_at_10": 0.7216321346409874,
+                  "mrr_at_10": 0.7072660592516188
+                },
+                "transcript": {
+                  "query_count": 1459,
+                  "recall_at_10": 0.6174091843728581,
+                  "ndcg_at_10": 0.520264149550968,
+                  "mrr_at_10": 0.5802335258983649
+                },
+                "website": {
+                  "query_count": 928,
+                  "recall_at_10": 0.6959962541050903,
+                  "ndcg_at_10": 0.6857078592893938,
+                  "mrr_at_10": 0.8536937260536398
+                }
+              },
+              "sparse_frozen_100": {
+                "book": {
+                  "query_count": 277,
+                  "recall_at_10": 0.740072202166065,
+                  "ndcg_at_10": 0.6309808625583065,
+                  "mrr_at_10": 0.616477565755544
+                },
+                "transcript": {
+                  "query_count": 1459,
+                  "recall_at_10": 0.5083790267306374,
+                  "ndcg_at_10": 0.41044822548946613,
+                  "mrr_at_10": 0.4430875137352176
+                },
+                "website": {
+                  "query_count": 928,
+                  "recall_at_10": 0.6438598966885605,
+                  "ndcg_at_10": 0.6285805145926086,
+                  "mrr_at_10": 0.7815548884783798
+                }
+              }
+            },
+            "open_slice_gaps": [
+              {
+                "family": "topic",
+                "reason": "No validated query-to-topic mapping selected from inspected sources; frozen taxonomy alone is insufficient.",
+                "status": "NOT_ASSESSED_NO_CANONICAL_MAPPING",
+                "unassigned_development_query_count": 2664
+              },
+              {
+                "family": "question_type",
+                "reason": "No validated fixed question-type mapping selected; raw question_intent is not adopted as that mapping.",
+                "status": "NOT_ASSESSED_NO_CANONICAL_MAPPING",
+                "unassigned_development_query_count": 2664
+              }
+            ],
+            "checklist_file_updated": false,
+            "network_requests": 0,
+            "paid_api_calls": 0,
+            "new_api_cost_toman": 0,
+            "artifact": {
+              "path": "artifacts/phase2/evaluation_and_ablation/work/outputs/C194.development_retrieval_slices.e1acb44554ab252591265bdaf2a047b55cb2c3e144b6cd955580a2fca5897924.json",
+              "file_bytes_sha256": "e1acb44554ab252591265bdaf2a047b55cb2c3e144b6cd955580a2fca5897924",
+              "bytes": 61749,
+              "action": "CREATED",
+              "reload_validation": "PASS"
+            }
+          },
+          "original_artifact_bytes_independently_reloaded": false
+        },
+        {
+          "notebook": "notebooks/phase2/21_evaluation_and_ablation.ipynb",
+          "cell_id": "C304",
+          "physical_cell_1based": 610,
+          "reported_output": {
+            "schema_version": "nb21_retrieval_package_C304_v1",
+            "status": "NB21_RETRIEVAL_TABLES_ALIGNED_REQUIRED_SLICE_MAPPING_OPEN",
+            "checklist_actions": [
+              19,
+              20,
+              21
+            ],
+            "checklist_action_total": 49,
+            "development_query_count": 2664,
+            "retrieval_arm_count": 5,
+            "all_cached_metric_tables_match_C303": true,
+            "open_slice_gaps": [
+              {
+                "family": "topic",
+                "reason": "No validated query-to-topic mapping selected from inspected sources; frozen taxonomy alone is insufficient.",
+                "status": "NOT_ASSESSED_NO_CANONICAL_MAPPING",
+                "unassigned_development_query_count": 2664
+              },
+              {
+                "family": "question_type",
+                "reason": "No validated fixed question-type mapping selected; raw question_intent is not adopted as that mapping.",
+                "status": "NOT_ASSESSED_NO_CANONICAL_MAPPING",
+                "unassigned_development_query_count": 2664
+              }
+            ],
+            "slice_contract_structure": {
+              "schema_version": "nb21_slice_contract_draft_C026_v1",
+              "top_level_fields": [
+                "action_10_eligible_for_checkmark",
+                "checklist_action",
+                "checklist_action_total",
+                "coverage",
+                "evaluation_contract_frozen",
+                "input_file_hashes",
+                "membership_policy",
+                "new_api_cost_toman",
+                "open_gaps",
+                "paid_api_calls",
+                "population_query_count",
+                "query_slice_rows",
+                "schema_version",
+                "semantic_judgments_performed",
+                "split",
+                "status",
+                "upstream_product_acceptance_changed"
+              ]
+            },
+            "failure_arithmetic_checks": {
+              "transition_denominator": true,
+              "baseline_miss_count": true,
+              "reranker_miss_count": true,
+              "net_hit_gain": true,
+              "miss_partition_denominator": true,
+              "same_pool_identity": true,
+              "hit_delta_matches_count_delta": true
+            },
+            "hit_at_10_transitions": {
+              "HIT_GAINED": 219,
+              "HIT_LOST": 48,
+              "HIT_RETAINED": 2045,
+              "MISS_RETAINED": 352
+            },
+            "reranker_miss_categories": {
+              "GOLD_IN_POOL_50_BUT_OUTSIDE_RERANKED_TOP_10": 127,
+              "GOLD_OUTSIDE_POOL_50_BUT_IN_HYBRID_TOP_100": 86,
+              "NO_GOLD_IN_HYBRID_TOP_100": 187
+            },
+            "net_hit_gain_count": 171,
+            "actions_eligible_for_checkmark": {
+              "19": true,
+              "20": false,
+              "21": true
+            },
+            "next_checklist_action": 20,
+            "next_required_work": "RESOLVE_REQUIRED_TOPIC_AND_QUESTION_TYPE_MAPPING_GAPS",
+            "metrics_recomputed": false,
+            "new_retrieval_executed": false,
+            "network_requests": 0,
+            "paid_api_calls": 0,
+            "checklist_file_updated": false,
+            "artifact": {
+              "path": "artifacts/phase2/evaluation_and_ablation/work/outputs/C304.retrieval_package.bf078b985c16666005f4932aee1fc1a1140028342c404ab9c865651e18615d66.json",
+              "file_bytes_sha256": "bf078b985c16666005f4932aee1fc1a1140028342c404ab9c865651e18615d66",
+              "bytes": 12032,
+              "action": "CREATED",
+              "reload_validation": "PASS"
+            }
+          },
+          "original_artifact_bytes_independently_reloaded": false
+        }
+      ],
+      "new_model_api_calls": 0
+    },
+    {
+      "action": 21,
+      "title": "اختلاف و شکست بازیابی",
+      "file": "NB21_action21_report_fa.md",
+      "status": "CHECKLIST_COMPLETED_IN_RECORDED_SCOPE",
+      "existing_repository_report": null,
+      "proposed_repository_path": "reports/phase2/evaluation/NB21_actions01_26_reports/NB21_action21_report_fa.md",
+      "evidence": [
+        {
+          "notebook": "notebooks/phase2/21_evaluation_and_ablation.ipynb",
+          "cell_id": "C195",
+          "physical_cell_1based": 389,
+          "reported_output": {
+            "status": "NB21_DEVELOPMENT_PAIRED_GROUP_INTERVALS_READY",
+            "development_query_count": 2664,
+            "question_group_count": 2620,
+            "bootstrap_replicates": 10000,
+            "undefined_replicate_count": 0,
+            "point_estimates_match_C192": true,
+            "intervals": {
+              "hit_at_k:k=5": {
+                "mean_reranker_minus_hybrid": 0.07995495495495496,
+                "percentile_95_lower": 0.06578885559445401,
+                "percentile_95_upper": 0.09411378559936263,
+                "degenerate_interval": false,
+                "paired_query_count": 2664,
+                "unavailable_pair_count": 0
+              },
+              "recall_at_k:k=5": {
+                "mean_reranker_minus_hybrid": 0.05088451546784879,
+                "percentile_95_lower": 0.03907969270303363,
+                "percentile_95_upper": 0.06292344350351732,
+                "degenerate_interval": false,
+                "paired_query_count": 2664,
+                "unavailable_pair_count": 0
+              },
+              "ndcg_at_k_binary:k=5": {
+                "mean_reranker_minus_hybrid": 0.061716956418720416,
+                "percentile_95_lower": 0.05111052469561152,
+                "percentile_95_upper": 0.0724787771235065,
+                "degenerate_interval": false,
+                "paired_query_count": 2664,
+                "unavailable_pair_count": 0
+              },
+              "hit_at_k:k=10": {
+                "mean_reranker_minus_hybrid": 0.06418918918918919,
+                "percentile_95_lower": 0.052393069052406496,
+                "percentile_95_upper": 0.07600198962804958,
+                "degenerate_interval": false,
+                "paired_query_count": 2664,
+                "unavailable_pair_count": 0
+              },
+              "recall_at_k:k=10": {
+                "mean_reranker_minus_hybrid": 0.04643184851518183,
+                "percentile_95_lower": 0.03623709532360841,
+                "percentile_95_upper": 0.05669975437590614,
+                "degenerate_interval": false,
+                "paired_query_count": 2664,
+                "unavailable_pair_count": 0
+              },
+              "ndcg_at_k_binary:k=10": {
+                "mean_reranker_minus_hybrid": 0.060661452163983456,
+                "percentile_95_lower": 0.051185199401089974,
+                "percentile_95_upper": 0.06996134755664722,
+                "degenerate_interval": false,
+                "paired_query_count": 2664,
+                "unavailable_pair_count": 0
+              },
+              "rr_at_10": {
+                "mean_reranker_minus_hybrid": 0.08653340840840848,
+                "percentile_95_lower": 0.07352691905311241,
+                "percentile_95_upper": 0.09931223529122515,
+                "degenerate_interval": false,
+                "paired_query_count": 2664,
+                "unavailable_pair_count": 0
+              },
+              "rr_at_50": {
+                "mean_reranker_minus_hybrid": 0.08356097203728176,
+                "percentile_95_lower": 0.07081787300914556,
+                "percentile_95_upper": 0.0961181511117413,
+                "degenerate_interval": false,
+                "paired_query_count": 2664,
+                "unavailable_pair_count": 0
+              }
+            },
+            "regression_acceptance_assessed": false,
+            "checklist_file_updated": false,
+            "network_requests": 0,
+            "paid_api_calls": 0,
+            "new_api_cost_toman": 0,
+            "artifact": {
+              "path": "artifacts/phase2/evaluation_and_ablation/work/outputs/C195.development_paired_group_bootstrap.658cb1edda0daa825a9d050ef9a2026a50a2f52095febe2b3131c1959e1ab939.json",
+              "file_bytes_sha256": "658cb1edda0daa825a9d050ef9a2026a50a2f52095febe2b3131c1959e1ab939",
+              "bytes": 5635,
+              "action": "CREATED",
+              "reload_validation": "PASS"
+            }
+          },
+          "original_artifact_bytes_independently_reloaded": false
+        },
+        {
+          "notebook": "notebooks/phase2/21_evaluation_and_ablation.ipynb",
+          "cell_id": "C196",
+          "physical_cell_1based": 391,
+          "reported_output": {
+            "schema_version": "nb21_retrieval_failure_partition_C196_v1",
+            "status": "NB21_RETRIEVAL_FAILURE_PARTITION_READY",
+            "checklist_action": 21,
+            "checklist_action_total": 49,
+            "input_bindings": {
+              "joined_rankings": {
+                "path": "artifacts/phase2/evaluation_and_ablation/work/outputs/C166.joined_development_retrieval_inputs.71ffa7d27eb47dac2b54d60963198d95cc31cb21b9b0c5ee7c11c666d8b7bfd5.json",
+                "file_bytes_sha256": "71ffa7d27eb47dac2b54d60963198d95cc31cb21b9b0c5ee7c11c666d8b7bfd5"
+              },
+              "comparison": {
+                "path": "artifacts/phase2/evaluation_and_ablation/work/outputs/C192.development_retrieval_comparison.7f8c85de9f91b8a552a49739c7f68891d4517a0d4404b1c2372d1b6dbc08d00c.json",
+                "file_bytes_sha256": "7f8c85de9f91b8a552a49739c7f68891d4517a0d4404b1c2372d1b6dbc08d00c"
+              }
+            },
+            "joined_row_field": "retrieval_inputs",
+            "development_query_count": 2664,
+            "same_pool_identity_verified": true,
+            "transition_counts": {
+              "HIT_RETAINED": 2045,
+              "HIT_GAINED": 219,
+              "HIT_LOST": 48,
+              "MISS_RETAINED": 352
+            },
+            "baseline_top_10_miss_count": 571,
+            "reranker_top_10_miss_count": 400,
+            "net_hit_gain_count": 171,
+            "reranker_miss_category_counts": {
+              "GOLD_IN_POOL_50_BUT_OUTSIDE_RERANKED_TOP_10": 127,
+              "GOLD_OUTSIDE_POOL_50_BUT_IN_HYBRID_TOP_100": 86,
+              "NO_GOLD_IN_HYBRID_TOP_100": 187
+            },
+            "reranker_miss_category_denominator": 400,
+            "counts_match_C192": true,
+            "relevance_target": "CHUNK_CONTAINS_MEMBER_WITH_IDENTICAL_SOURCE_LOCATOR",
+            "categories_establish_semantic_failure_causes": false,
+            "regression_acceptance_assessed": false,
+            "action_21_eligible_for_checkmark": false,
+            "checklist_file_updated": false,
+            "new_retrieval_executed": false,
+            "new_test_queries_evaluated": false,
+            "network_requests": 0,
+            "paid_api_calls": 0,
+            "new_api_cost_toman": 0,
+            "artifact": {
+              "path": "artifacts/phase2/evaluation_and_ablation/work/outputs/C196.development_retrieval_failure_partition.a063ce76b477de4527df84cfd4fc5c9a8ce266487fd4417a7712cfe60b8039c8.json",
+              "file_bytes_sha256": "a063ce76b477de4527df84cfd4fc5c9a8ce266487fd4417a7712cfe60b8039c8",
+              "bytes": 715916,
+              "action": "CREATED",
+              "reload_validation": "PASS"
+            }
+          },
+          "original_artifact_bytes_independently_reloaded": false
+        },
+        {
+          "notebook": "notebooks/phase2/21_evaluation_and_ablation.ipynb",
+          "cell_id": "C304",
+          "physical_cell_1based": 610,
+          "reported_output": {
+            "schema_version": "nb21_retrieval_package_C304_v1",
+            "status": "NB21_RETRIEVAL_TABLES_ALIGNED_REQUIRED_SLICE_MAPPING_OPEN",
+            "checklist_actions": [
+              19,
+              20,
+              21
+            ],
+            "checklist_action_total": 49,
+            "development_query_count": 2664,
+            "retrieval_arm_count": 5,
+            "all_cached_metric_tables_match_C303": true,
+            "open_slice_gaps": [
+              {
+                "family": "topic",
+                "reason": "No validated query-to-topic mapping selected from inspected sources; frozen taxonomy alone is insufficient.",
+                "status": "NOT_ASSESSED_NO_CANONICAL_MAPPING",
+                "unassigned_development_query_count": 2664
+              },
+              {
+                "family": "question_type",
+                "reason": "No validated fixed question-type mapping selected; raw question_intent is not adopted as that mapping.",
+                "status": "NOT_ASSESSED_NO_CANONICAL_MAPPING",
+                "unassigned_development_query_count": 2664
+              }
+            ],
+            "slice_contract_structure": {
+              "schema_version": "nb21_slice_contract_draft_C026_v1",
+              "top_level_fields": [
+                "action_10_eligible_for_checkmark",
+                "checklist_action",
+                "checklist_action_total",
+                "coverage",
+                "evaluation_contract_frozen",
+                "input_file_hashes",
+                "membership_policy",
+                "new_api_cost_toman",
+                "open_gaps",
+                "paid_api_calls",
+                "population_query_count",
+                "query_slice_rows",
+                "schema_version",
+                "semantic_judgments_performed",
+                "split",
+                "status",
+                "upstream_product_acceptance_changed"
+              ]
+            },
+            "failure_arithmetic_checks": {
+              "transition_denominator": true,
+              "baseline_miss_count": true,
+              "reranker_miss_count": true,
+              "net_hit_gain": true,
+              "miss_partition_denominator": true,
+              "same_pool_identity": true,
+              "hit_delta_matches_count_delta": true
+            },
+            "hit_at_10_transitions": {
+              "HIT_GAINED": 219,
+              "HIT_LOST": 48,
+              "HIT_RETAINED": 2045,
+              "MISS_RETAINED": 352
+            },
+            "reranker_miss_categories": {
+              "GOLD_IN_POOL_50_BUT_OUTSIDE_RERANKED_TOP_10": 127,
+              "GOLD_OUTSIDE_POOL_50_BUT_IN_HYBRID_TOP_100": 86,
+              "NO_GOLD_IN_HYBRID_TOP_100": 187
+            },
+            "net_hit_gain_count": 171,
+            "actions_eligible_for_checkmark": {
+              "19": true,
+              "20": false,
+              "21": true
+            },
+            "next_checklist_action": 20,
+            "next_required_work": "RESOLVE_REQUIRED_TOPIC_AND_QUESTION_TYPE_MAPPING_GAPS",
+            "metrics_recomputed": false,
+            "new_retrieval_executed": false,
+            "network_requests": 0,
+            "paid_api_calls": 0,
+            "checklist_file_updated": false,
+            "artifact": {
+              "path": "artifacts/phase2/evaluation_and_ablation/work/outputs/C304.retrieval_package.bf078b985c16666005f4932aee1fc1a1140028342c404ab9c865651e18615d66.json",
+              "file_bytes_sha256": "bf078b985c16666005f4932aee1fc1a1140028342c404ab9c865651e18615d66",
+              "bytes": 12032,
+              "action": "CREATED",
+              "reload_validation": "PASS"
+            }
+          },
+          "original_artifact_bytes_independently_reloaded": false
+        }
+      ],
+      "new_model_api_calls": 0
+    },
+    {
+      "action": 22,
+      "title": "Groundedness پاسخ",
+      "file": "NB21_action22_report_fa.md",
+      "status": "USER_ACCEPTED_SCOPED_COMPLETION",
+      "existing_repository_report": "reports/phase2/evaluation/NB21_actions22_25_scoped_closure.md",
+      "proposed_repository_path": "reports/phase2/evaluation/NB21_actions01_26_reports/NB21_action22_report_fa.md",
+      "evidence": [
+        {
+          "report_source": "reports/phase2/evaluation/NB21_actions22_25_scoped_closure.md",
+          "cell_id": "C111",
+          "notebook_cell_1based": 240,
+          "report": {
+            "status": "SCOPED_REVIEWED_GROUNDING_LEDGER_MERGED",
+            "answer_case_count": 23,
+            "claim_count": 125,
+            "effective_verdict_counts": {
+              "SUPPORTED": 103,
+              "NOT_SUPPORTED": 20,
+              "NOT_ASSESSED": 1,
+              "CONTRADICTED": 1
+            },
+            "overlaid_claim_count": 30,
+            "reused_C107_decision_count": 95,
+            "reviewed_citation_support_conflict_count": 0,
+            "remaining_not_assessed_claim_ids": [
+              "golden_v2_candidate_4b3dbd833a57bbc16b7bc6e6:A001"
+            ],
+            "not_assessed_scored_as_zero": false,
+            "B05_effective_verdict": "CONTRADICTED",
+            "formal_groundedness_score": null,
+            "population_extrapolation": false,
+            "new_api_calls": 0,
+            "actions_22_to_25_complete": false,
+            "artifact": {
+              "path": "artifacts/phase2/evaluation_and_ablation/work/outputs/NB21B.C111.merged_reviewed_grounding.581f6ccb33fda2b5ceffdd5046b80969922e722995abf1497c49a0af23193e0b.json",
+              "file_bytes_sha256": "581f6ccb33fda2b5ceffdd5046b80969922e722995abf1497c49a0af23193e0b",
+              "reload_validation": "PASS"
+            }
+          },
+          "original_artifact_bytes_independently_reloaded": false
+        },
+        {
+          "report_source": "reports/phase2/evaluation/NB21_actions22_25_scoped_closure.md",
+          "cell_id": "C122",
+          "notebook_cell_1based": 262,
+          "report": {
+            "status": "BOUND_VERIFIER_AND_SUPPORT_MATERIALS_CONNECTED",
+            "development_queries": 2664,
+            "case_status_counts": {
+              "PREVIOUSLY_UNRESOLVED_CHAIN_PRESERVED": 58,
+              "NO_SELECTED_ANSWER_NOT_SCORED": 46,
+              "CURRENT_ANSWER_AND_STORED_VERIFIER_CHAIN_LINKED": 2560
+            },
+            "C120_53_case_status_counts": {
+              "CURRENT_ANSWER_AND_STORED_VERIFIER_CHAIN_LINKED": 50,
+              "PREVIOUSLY_UNRESOLVED_CHAIN_PRESERVED": 3
+            },
+            "linked_checkpoint_claim_count": 6605,
+            "linked_checkpoint_citation_count": 12178,
+            "answers_with_linked_raw_support": 2549,
+            "chain_recheck_error_count": 0,
+            "chain_recheck_error_examples": [],
+            "historical_model_verdicts_preserved": true,
+            "semantic_acceptance_changed": false,
+            "broad_project_rescan": false,
+            "new_api_calls": 0,
+            "actions_22_to_25_complete": false,
+            "artifact": {
+              "path": "artifacts/phase2/evaluation_and_ablation/work/outputs/NB21B.C122.bound_verifier_reuse.c8758caf3c9ba94b6ee971a39505ab0269a56ff6c7e02b4cd07a6e6a0c502258.json",
+              "file_bytes_sha256": "c8758caf3c9ba94b6ee971a39505ab0269a56ff6c7e02b4cd07a6e6a0c502258",
+              "reload_validation": "PASS"
+            }
+          },
+          "original_artifact_bytes_independently_reloaded": false
+        },
+        {
+          "report_source": "reports/phase2/evaluation/NB21_actions22_25_scoped_closure.md",
+          "cell_id": "C123",
+          "notebook_cell_1based": 264,
+          "report": {
+            "status": "STORED_MODEL_DECISIONS_CONSUMED_WITH_ALIGNMENT_LIMITS",
+            "development_queries": 2664,
+            "answer_status_counts": {
+              "PREVIOUSLY_UNRESOLVED_CHAIN_PRESERVED": 58,
+              "NO_SELECTED_ANSWER_NOT_SCORED": 46,
+              "STORED_MODEL_DECISIONS_CONSUMED_WITH_SCOPE": 2560
+            },
+            "consumed_checkpoint_claim_count": 6605,
+            "stored_model_verdict_counts": {
+              "SUPPORTED": 6172,
+              "PARTIALLY_SUPPORTED": 255,
+              "UNSUPPORTED": 103,
+              "UNCERTAIN": 75
+            },
+            "claim_route_counts": {
+              "STORED_MODEL_DECISION_BOTH_BINDINGS_PENDING": 141,
+              "STORED_MODEL_DECISION_CONTEXT_BINDING_PENDING": 22,
+              "MODEL_ESTIMATE_LITERAL_UNIT_CONTEXT_BOUND": 1044,
+              "STORED_MODEL_DECISION_ANSWER_ALIGNMENT_PENDING": 5398
+            },
+            "literal_context_bound_model_verdict_counts": {
+              "SUPPORTED": 965,
+              "PARTIALLY_SUPPORTED": 42,
+              "UNCERTAIN": 14,
+              "UNSUPPORTED": 23
+            },
+            "answers_with_literal_context_bound_units": 819,
+            "declared_citation_pair_counts": {
+              "EVIDENCE_SELECTED_BY_STORED_SUPPORT": 10746,
+              "EVIDENCE_NOT_SELECTED_BY_STORED_SUPPORT": 1432
+            },
+            "raw_derived_status_difference_count": 34,
+            "raw_support_not_parsed_case_count": 11,
+            "reviewed_decisions_overwritten": false,
+            "new_api_calls": 0,
+            "broad_project_rescan": false,
+            "actions_22_to_25_complete": false,
+            "artifact": {
+              "path": "artifacts/phase2/evaluation_and_ablation/work/outputs/NB21B.C123.consumed_model_decisions.901511ebff2f8c7c3472639705a749c0740646f8444369d522862a03a578177a.json",
+              "file_bytes_sha256": "901511ebff2f8c7c3472639705a749c0740646f8444369d522862a03a578177a",
+              "reload_validation": "PASS"
+            }
+          },
+          "original_artifact_bytes_independently_reloaded": false
+        }
+      ],
+      "new_model_api_calls": 0
+    },
+    {
+      "action": 23,
+      "title": "Completeness پاسخ",
+      "file": "NB21_action23_report_fa.md",
+      "status": "USER_ACCEPTED_SCOPED_COMPLETION",
+      "existing_repository_report": "reports/phase2/evaluation/NB21_actions22_25_scoped_closure.md",
+      "proposed_repository_path": "reports/phase2/evaluation/NB21_actions01_26_reports/NB21_action23_report_fa.md",
+      "evidence": [
+        {
+          "report_source": "reports/phase2/evaluation/NB21_actions22_25_scoped_closure.md",
+          "cell_id": "C228",
+          "notebook_cell_1based": 472,
+          "report": {
+            "status": "C228_REVISED_POLICY_REVIEW_ACCOUNTED_NOT_GOLD",
+            "population_cases": 2117,
+            "previous_MODEL_FULL_preserved_not_rechecked": 1073,
+            "remaining_cases": 1044,
+            "revised_review_counts": {
+              "INPUT_OR_EVIDENCE_HELD": 17,
+              "ANSWER_GAP": 93,
+              "HTTP_OR_OUTPUT_HELD": 595,
+              "ACCEPTABLE": 322,
+              "QUESTION_AMBIGUOUS": 14,
+              "EVIDENCE_INSUFFICIENT": 2,
+              "REVIEW_REQUIRED": 1
+            },
+            "accounting_total": 2117,
+            "recorded_attempts": 1027,
+            "elapsed_minutes": 13.4,
+            "run_known_cost": "127,661 تومان",
+            "run_unknown_or_inflight_reserve": "0 تومان",
+            "overall_known_cost": "714,140 تومان",
+            "overall_unknown_reserve": "11,667 تومان",
+            "cost_is_verified_invoice": false,
+            "automatic_retries": 0,
+            "old_files_modified": false,
+            "automatic_relabeling_of_old_results": false,
+            "independent_population_accuracy_established": false,
+            "question_ambiguity_not_counted_as_answer_failure": true,
+            "grounding_action22_not_closed_by_this_review": true,
+            "action23_closed": false,
+            "interrupted": false,
+            "stop_reasons": [],
+            "artifact_path": "artifacts/phase2/evaluation_and_ablation/work/outputs/NB21B.C228.semantic_sufficiency_remaining1044/93b8738ed74a8408b09e1ee0798e4e29de984ac396ac00945963f06656d51056/report.05481414b6a9d67044a2395392094243695ea665fe9302e28c5bc7202ba878fc.json",
+            "artifact_sha256": "05481414b6a9d67044a2395392094243695ea665fe9302e28c5bc7202ba878fc",
+            "reload_validation": "PASS"
+          },
+          "original_artifact_bytes_independently_reloaded": false
+        },
+        {
+          "report_source": "reports/phase2/evaluation/NB21_actions22_25_scoped_closure.md",
+          "cell_id": "C230",
+          "notebook_cell_1based": 476,
+          "report": {
+            "status": "C230_OFFLINE_RECOVERY_ACCOUNTED_MODEL_RESULTS_NOT_GOLD",
+            "parent_C228_sha256": "05481414b6a9d67044a2395392094243695ea665fe9302e28c5bc7202ba878fc",
+            "population_cases": 2117,
+            "held_outputs_examined": 595,
+            "recovery_counts": {
+              "REMAINS_HELD": 595
+            },
+            "raw_text_shapes": {
+              "OTHER_TEXT_PREFIX": 588,
+              "STARTS_WITH_OBJECT": 5,
+              "STARTS_WITH_ARRAY": 1
+            },
+            "recovered_model_verdicts": {},
+            "remaining_error_counts_nonexclusive": {
+              "NO_COMPLETE_JSON_OBJECT_NO_REPAIR": 588,
+              "FIELDS": 5,
+              "VERDICT": 5,
+              "TEXT:reason_fa": 5,
+              "TEXT:essential_meaning_fa": 5,
+              "TEXT:missing_meaning_fa": 5,
+              "TEXT:reference_issue_fa": 5,
+              "REASON_REQUIRED": 5,
+              "GROUNDING_FLAG": 5,
+              "IDS_NOT_LIST:source_span_ids": 5,
+              "IDS_NOT_LIST:answer_span_ids": 5,
+              "COMPLETE_JSON_CONTRACT_NOT_VALID": 5,
+              "INCOMPLETE_OR_NONSTOP_NO_REPAIR": 1,
+              "MULTIPLE_DISTINCT_JSON_OBJECTS_REVIEW_REQUIRED": 1
+            },
+            "population_partition": {
+              "PREVIOUS_MODEL_FULL_NOT_RECHECKED": 1073,
+              "INPUT_OR_EVIDENCE_HELD": 17,
+              "ACCEPTABLE": 322,
+              "C228_OUTPUT_STILL_HELD": 595,
+              "ANSWER_GAP": 93,
+              "QUESTION_AMBIGUOUS": 14,
+              "EVIDENCE_INSUFFICIENT": 2,
+              "REVIEW_REQUIRED": 1
+            },
+            "positive_model_results_under_mixed_policies": 1395,
+            "positive_model_result_percent": 65.9,
+            "positive_result_percent_is_not_accuracy": true,
+            "recovered_results_are_model_judgments_not_human_gold": true,
+            "semantic_quality_improvement_proven": false,
+            "recovery_records_path": "artifacts/phase2/evaluation_and_ablation/work/outputs/NB21B.C230.offline_judge_output_recovery/05481414b6a9d67044a2395392094243695ea665fe9302e28c5bc7202ba878fc/C230_recovery_records.json",
+            "recovery_records_sha256": "897d4a7d8c0260f1f0cfba31ea38f4716ec93ca635263e5401d728cc1698cb10",
+            "new_api_calls": 0,
+            "new_cost": "0 تومان",
+            "overall_known_cost_as_reported_by_C228": "714,140 تومان",
+            "overall_unknown_reserve_as_reported_by_C228": "11,667 تومان",
+            "old_files_modified": false,
+            "json_content_repaired": false,
+            "missing_content_invented": false,
+            "old_labels_overwritten": false,
+            "action23_closed": false,
+            "artifact_path": "artifacts/phase2/evaluation_and_ablation/work/outputs/NB21B.C230.offline_judge_output_recovery/05481414b6a9d67044a2395392094243695ea665fe9302e28c5bc7202ba878fc/report.264259ac134341058684f59ccee427881d722235372402fe2dc2eca0f3976c14.json",
+            "artifact_sha256": "264259ac134341058684f59ccee427881d722235372402fe2dc2eca0f3976c14",
+            "reload_validation": "PASS"
+          },
+          "original_artifact_bytes_independently_reloaded": false
+        }
+      ],
+      "new_model_api_calls": 0
+    },
+    {
+      "action": 24,
+      "title": "Citation و پوشش ادعا",
+      "file": "NB21_action24_report_fa.md",
+      "status": "USER_ACCEPTED_SCOPED_COMPLETION",
+      "existing_repository_report": "reports/phase2/evaluation/NB21_actions22_25_scoped_closure.md",
+      "proposed_repository_path": "reports/phase2/evaluation/NB21_actions01_26_reports/NB21_action24_report_fa.md",
+      "evidence": [
+        {
+          "report_source": "reports/phase2/evaluation/NB21_actions22_25_scoped_closure.md",
+          "cell_id": "C106",
+          "notebook_cell_1based": 228,
+          "report": {
+            "status": "DIRECT_CITATION_AND_SCOPED_GROUNDING_REVIEW_IMPORTED",
+            "B05_effective_verdict_preserved": "CONTRADICTED",
+            "actions_22_to_25_complete": false,
+            "answer_case_count": 23,
+            "claims_with_reviewed_entailed_declared_citation": 84,
+            "current_claim_count": 125,
+            "current_mapping_disposition_counts": {
+              "CONNECTION_ABSENCE_PROVEN_IN_CHECKED_DECLARED_CLAIM_INVENTORY": 3,
+              "CONNECTION_PROVEN_IN_STORED_CHECKPOINT_SCOPE": 108,
+              "INDETERMINATE": 14
+            },
+            "direct_grounding_support_decisions_added": 10,
+            "exact_prior_review_reuse_pair_count": 5,
+            "formal_citation_correctness_score": null,
+            "initial_31_mapping_disposition_counts": {
+              "CONNECTION_ABSENCE_PROVEN_IN_CHECKED_DECLARED_CLAIM_INVENTORY": 3,
+              "CONNECTION_PROVEN_IN_STORED_CHECKPOINT_SCOPE": 19,
+              "INDETERMINATE": 9
+            },
+            "new_alignment_claim_count": 19,
+            "new_api_calls": 0,
+            "original_proposed_pair_review_count": 144,
+            "prior_model_mapped_claims_not_accepted_for_full_scope": 5,
+            "reviewed_pair_count_including_new_alignments": 179,
+            "reviewed_pair_relation_counts": {
+              "CONTRADICTS": 1,
+              "ENTAILS": 136,
+              "INSUFFICIENT": 42
+            },
+            "review_origin": "DIRECT_PROJECT_ASSISTANT_REVIEW",
+            "independent_human_gold": false,
+            "historical_verdict_files_modified": false,
+            "population_extrapolation": false,
+            "artifact": {
+              "path": "artifacts/phase2/evaluation_and_ablation/work/outputs/NB21B.C106.direct_citation_review.944d79569ec75d1c46922854982cf5057985a6b9a4db259e3e5bbb13fb2c6501.json",
+              "file_bytes_sha256": "944d79569ec75d1c46922854982cf5057985a6b9a4db259e3e5bbb13fb2c6501",
+              "reload_validation": "PASS"
+            }
+          },
+          "original_artifact_bytes_independently_reloaded": false
+        },
+        {
+          "report_source": "reports/phase2/evaluation/NB21_actions22_25_scoped_closure.md",
+          "cell_id": "C112",
+          "notebook_cell_1based": 242,
+          "report": {
+            "status": "SCOPED_CITATION_REQUIREDNESS_AND_COVERAGE_REVIEWED",
+            "answer_case_count": 23,
+            "inventory_unit_count": 125,
+            "required_citation_unit_count": 124,
+            "non_separate_framing_unit_count": 1,
+            "required_citation_coverage_counts": {
+              "STORED_CONNECTION_WITH_SUFFICIENT_REVIEWED_EVIDENCE": 84,
+              "CONNECTION_INDETERMINATE": 13,
+              "STORED_CONNECTION_WITHOUT_SUFFICIENT_REVIEWED_EVIDENCE": 24,
+              "CONNECTION_ABSENT_IN_CHECKED_DECLARED_INVENTORY": 3
+            },
+            "formal_citation_correctness_score": null,
+            "formal_citation_completeness_score": null,
+            "population_extrapolation": false,
+            "new_api_calls": 0,
+            "actions_22_to_25_complete": false,
+            "artifact": {
+              "path": "artifacts/phase2/evaluation_and_ablation/work/outputs/NB21B.C112.scoped_citation_coverage.63b4501f57d2f7c4944be46955dc44aca74632502d1741129ab7b4f19b0d366c.json",
+              "file_bytes_sha256": "63b4501f57d2f7c4944be46955dc44aca74632502d1741129ab7b4f19b0d366c",
+              "reload_validation": "PASS"
+            }
+          },
+          "original_artifact_bytes_independently_reloaded": false
+        },
+        {
+          "report_source": "reports/phase2/evaluation/NB21_actions22_25_scoped_closure.md",
+          "cell_id": "C122",
+          "notebook_cell_1based": 262,
+          "report": {
+            "status": "BOUND_VERIFIER_AND_SUPPORT_MATERIALS_CONNECTED",
+            "development_queries": 2664,
+            "case_status_counts": {
+              "PREVIOUSLY_UNRESOLVED_CHAIN_PRESERVED": 58,
+              "NO_SELECTED_ANSWER_NOT_SCORED": 46,
+              "CURRENT_ANSWER_AND_STORED_VERIFIER_CHAIN_LINKED": 2560
+            },
+            "C120_53_case_status_counts": {
+              "CURRENT_ANSWER_AND_STORED_VERIFIER_CHAIN_LINKED": 50,
+              "PREVIOUSLY_UNRESOLVED_CHAIN_PRESERVED": 3
+            },
+            "linked_checkpoint_claim_count": 6605,
+            "linked_checkpoint_citation_count": 12178,
+            "answers_with_linked_raw_support": 2549,
+            "chain_recheck_error_count": 0,
+            "chain_recheck_error_examples": [],
+            "historical_model_verdicts_preserved": true,
+            "semantic_acceptance_changed": false,
+            "broad_project_rescan": false,
+            "new_api_calls": 0,
+            "actions_22_to_25_complete": false,
+            "artifact": {
+              "path": "artifacts/phase2/evaluation_and_ablation/work/outputs/NB21B.C122.bound_verifier_reuse.c8758caf3c9ba94b6ee971a39505ab0269a56ff6c7e02b4cd07a6e6a0c502258.json",
+              "file_bytes_sha256": "c8758caf3c9ba94b6ee971a39505ab0269a56ff6c7e02b4cd07a6e6a0c502258",
+              "reload_validation": "PASS"
+            }
+          },
+          "original_artifact_bytes_independently_reloaded": false
+        }
+      ],
+      "new_model_api_calls": 0
+    },
+    {
+      "action": 25,
+      "title": "Attribution و نقش‌ها",
+      "file": "NB21_action25_report_fa.md",
+      "status": "USER_ACCEPTED_SCOPED_COMPLETION",
+      "existing_repository_report": "reports/phase2/evaluation/NB21_actions22_25_scoped_closure.md",
+      "proposed_repository_path": "reports/phase2/evaluation/NB21_actions01_26_reports/NB21_action25_report_fa.md",
+      "evidence": [
+        {
+          "report_source": "reports/phase2/evaluation/NB21_actions22_25_scoped_closure.md",
+          "cell_id": "C105",
+          "notebook_cell_1based": 226,
+          "report": {
+            "status": "ANSWER_LEVEL_OPERATIONAL_ATTRIBUTION_RESULTS_SAVED",
+            "development_queries": 2664,
+            "answer_disposition_counts": {
+              "STRUCTURED_DISPLAY_LAYER_UNRESOLVED": 58,
+              "NO_SELECTED_ANSWER_NOT_SCORED": 46,
+              "OPERATIONAL_ROLE_REPRODUCTION_CHECKS_AVAILABLE": 2560
+            },
+            "role_field_occurrence_count": 80079,
+            "role_field_status_counts": {
+              "SOURCE_LABEL_PRESERVED_PERSON_IDENTITY_NOT_ESTABLISHED": 11817,
+              "CANONICAL_SPEAKER_NAME_EXACT_MATCH": 40573,
+              "SOURCE_SPEAKER_UNCERTAINTY_PRESERVED": 7659,
+              "OPERATIONAL_ROLE_FIELD_EXACT_MATCH": 20030
+            },
+            "role_status_by_source_type": {
+              "book": {
+                "OPERATIONAL_ROLE_FIELD_EXACT_MATCH": 11558
+              },
+              "transcript": {
+                "SOURCE_LABEL_PRESERVED_PERSON_IDENTITY_NOT_ESTABLISHED": 11817,
+                "CANONICAL_SPEAKER_NAME_EXACT_MATCH": 40573,
+                "SOURCE_SPEAKER_UNCERTAINTY_PRESERVED": 7659
+              },
+              "website": {
+                "OPERATIONAL_ROLE_FIELD_EXACT_MATCH": 8472
+              }
+            },
+            "formal_attribution_correctness_score": null,
+            "new_api_calls": 0,
+            "raw_source_checks_repeated": false,
+            "actions_22_to_25_complete": false,
+            "artifact": {
+              "path": "artifacts/phase2/evaluation_and_ablation/work/outputs/NB21B.C105.operational_attribution_results.97c2c9c18525ea9b198592e21171a3b5d02dc66308ced12d2d77b1d97ad6934e.json",
+              "file_bytes_sha256": "97c2c9c18525ea9b198592e21171a3b5d02dc66308ced12d2d77b1d97ad6934e",
+              "reload_validation": "PASS"
+            }
+          },
+          "original_artifact_bytes_independently_reloaded": false
+        },
+        {
+          "report_source": "reports/phase2/evaluation/NB21_actions22_25_scoped_closure.md",
+          "cell_id": "C108",
+          "notebook_cell_1based": 232,
+          "report": {
+            "status": "REQUIRED_STRUCTURED_ATTRIBUTION_PRESENCE_CHECKS_SAVED",
+            "development_queries": 2664,
+            "structured_citation_count": 12178,
+            "member_occurrence_count": 76134,
+            "member_status_counts": {
+              "SOURCE_LABEL_PRESENT_IDENTITY_UNESTABLISHED": 11817,
+              "CANONICAL_SPEAKER_VALUE_PRESENT": 40573,
+              "SPEAKER_STATUS_PRESENT_IDENTITY_UNRESOLVED": 7659,
+              "REQUIRED_ROLE_VALUES_PRESENT": 16085
+            },
+            "citation_member_structure_issue_counts": {},
+            "answer_disposition_counts": {
+              "STRUCTURED_DISPLAY_LAYER_UNRESOLVED": 58,
+              "NO_SELECTED_ANSWER_NOT_SCORED": 46,
+              "REQUIRED_DISPLAY_PRESENCE_CHECKS_AVAILABLE": 2560
+            },
+            "formal_attribution_correctness_score": null,
+            "new_api_calls": 0,
+            "raw_source_checks_repeated": false,
+            "actions_22_to_25_complete": false,
+            "artifact": {
+              "path": "artifacts/phase2/evaluation_and_ablation/work/outputs/NB21B.C108.required_attribution_display.37bc6c0cb1fd4aa97de4f0d520632e04f15c98e94559a2eeaf12674988ae30cd.json",
+              "file_bytes_sha256": "37bc6c0cb1fd4aa97de4f0d520632e04f15c98e94559a2eeaf12674988ae30cd",
+              "reload_validation": "PASS"
+            }
+          },
+          "original_artifact_bytes_independently_reloaded": false
+        },
+        {
+          "report_source": "reports/phase2/evaluation/NB21_actions22_25_scoped_closure.md",
+          "cell_id": "C233",
+          "notebook_cell_1based": 482,
+          "report": {
+            "status": "C233_ACTION25_OFFLINE_AUDIT_ACCOUNTED",
+            "action": 25,
+            "population_cases": 2117,
+            "case_states": {
+              "INPUT_OR_EVIDENCE_HELD": 17,
+              "ATTRIBUTION_CANDIDATES_REQUIRE_ROLE_VERIFICATION": 47,
+              "NO_ATTRIBUTION_CUE_DETECTED_NOT_A_SEMANTIC_PASS": 2053
+            },
+            "input_error_counts": {
+              "[Errno 2] No such file or directory: 'artifacts/phase2/evaluation_and_ablation/work/outputs/NB21B.C206.population_three_passes/fb68235184e7c7107d626cc5ea967262509977d739430741c3acb7971621abf2/cases/golden_v2_candidate_058eebd08a5d4cc1bacd95aa/input.json'": 1,
+              "[Errno 2] No such file or directory: 'artifacts/phase2/evaluation_and_ablation/work/outputs/NB21B.C206.population_three_passes/fb68235184e7c7107d626cc5ea967262509977d739430741c3acb7971621abf2/cases/golden_v2_candidate_06a2225ff7a4b410c1c6dda5/input.json'": 1,
+              "[Errno 2] No such file or directory: 'artifacts/phase2/evaluation_and_ablation/work/outputs/NB21B.C206.population_three_passes/fb68235184e7c7107d626cc5ea967262509977d739430741c3acb7971621abf2/cases/golden_v2_candidate_120452115973764bb3ee511e/input.json'": 1,
+              "[Errno 2] No such file or directory: 'artifacts/phase2/evaluation_and_ablation/work/outputs/NB21B.C206.population_three_passes/fb68235184e7c7107d626cc5ea967262509977d739430741c3acb7971621abf2/cases/golden_v2_candidate_2368cf0eac9bd1b2936daa2f/input.json'": 1,
+              "[Errno 2] No such file or directory: 'artifacts/phase2/evaluation_and_ablation/work/outputs/NB21B.C206.population_three_passes/fb68235184e7c7107d626cc5ea967262509977d739430741c3acb7971621abf2/cases/golden_v2_candidate_5604a5f800bb5f8ceb4fe2a7/input.json'": 1,
+              "[Errno 2] No such file or directory: 'artifacts/phase2/evaluation_and_ablation/work/outputs/NB21B.C206.population_three_passes/fb68235184e7c7107d626cc5ea967262509977d739430741c3acb7971621abf2/cases/golden_v2_candidate_56e42e3dfbdf2216e07151eb/input.json'": 1,
+              "[Errno 2] No such file or directory: 'artifacts/phase2/evaluation_and_ablation/work/outputs/NB21B.C206.population_three_passes/fb68235184e7c7107d626cc5ea967262509977d739430741c3acb7971621abf2/cases/golden_v2_candidate_6015394a513d9f3c57f87639/input.json'": 1,
+              "[Errno 2] No such file or directory: 'artifacts/phase2/evaluation_and_ablation/work/outputs/NB21B.C206.population_three_passes/fb68235184e7c7107d626cc5ea967262509977d739430741c3acb7971621abf2/cases/golden_v2_candidate_7d7120273acc70fe4d0ebb63/input.json'": 1,
+              "[Errno 2] No such file or directory: 'artifacts/phase2/evaluation_and_ablation/work/outputs/NB21B.C206.population_three_passes/fb68235184e7c7107d626cc5ea967262509977d739430741c3acb7971621abf2/cases/golden_v2_candidate_92bfcefe7a81a564423221e3/input.json'": 1,
+              "[Errno 2] No such file or directory: 'artifacts/phase2/evaluation_and_ablation/work/outputs/NB21B.C206.population_three_passes/fb68235184e7c7107d626cc5ea967262509977d739430741c3acb7971621abf2/cases/golden_v2_candidate_9536f6c35f2cea0bd008360f/input.json'": 1,
+              "[Errno 2] No such file or directory: 'artifacts/phase2/evaluation_and_ablation/work/outputs/NB21B.C206.population_three_passes/fb68235184e7c7107d626cc5ea967262509977d739430741c3acb7971621abf2/cases/golden_v2_candidate_a201c77b9345ceeb6c27dc20/input.json'": 1,
+              "[Errno 2] No such file or directory: 'artifacts/phase2/evaluation_and_ablation/work/outputs/NB21B.C206.population_three_passes/fb68235184e7c7107d626cc5ea967262509977d739430741c3acb7971621abf2/cases/golden_v2_candidate_a8016c689eb93dec5cdd52d0/input.json'": 1,
+              "[Errno 2] No such file or directory: 'artifacts/phase2/evaluation_and_ablation/work/outputs/NB21B.C206.population_three_passes/fb68235184e7c7107d626cc5ea967262509977d739430741c3acb7971621abf2/cases/golden_v2_candidate_b6433cb9d46ef3e140e84172/input.json'": 1,
+              "[Errno 2] No such file or directory: 'artifacts/phase2/evaluation_and_ablation/work/outputs/NB21B.C206.population_three_passes/fb68235184e7c7107d626cc5ea967262509977d739430741c3acb7971621abf2/cases/golden_v2_candidate_ca73b8c3239c8a64ab9b30ae/input.json'": 1,
+              "[Errno 2] No such file or directory: 'artifacts/phase2/evaluation_and_ablation/work/outputs/NB21B.C206.population_three_passes/fb68235184e7c7107d626cc5ea967262509977d739430741c3acb7971621abf2/cases/golden_v2_candidate_dae163bb9c064df98bc6c818/input.json'": 1,
+              "[Errno 2] No such file or directory: 'artifacts/phase2/evaluation_and_ablation/work/outputs/NB21B.C206.population_three_passes/fb68235184e7c7107d626cc5ea967262509977d739430741c3acb7971621abf2/cases/golden_v2_candidate_e352137e9b8a7b1d19163907/input.json'": 1,
+              "[Errno 2] No such file or directory: 'artifacts/phase2/evaluation_and_ablation/work/outputs/NB21B.C206.population_three_passes/fb68235184e7c7107d626cc5ea967262509977d739430741c3acb7971621abf2/cases/golden_v2_candidate_e55ff4e72277971020197b0a/input.json'": 1
+            },
+            "answer_unit_literal_evidence_counts": {},
+            "explicit_locator_counts": {},
+            "attribution_candidate_units": 52,
+            "semantic_metric": null,
+            "semantic_acceptance_established": false,
+            "execution_accounting_complete": true,
+            "action_closed": false,
+            "closure_status": "OFFLINE_CHECKS_COMPLETE_SEMANTIC_ACCEPTANCE_OPEN",
+            "new_api_calls": 0,
+            "new_cost": "0 تومان",
+            "old_files_modified": false,
+            "old_results_relabelled": false,
+            "details_path": "artifacts/phase2/evaluation_and_ablation/work/outputs/NB21B.C233.action25_offline_audit/3c35294b251d7767641fe389598fa00f01f4954fa0dbd1032b601a09747fd2d1/C233_case_results.json",
+            "details_sha256": "c4877d5f3ab3237bbd0e2264fc7cb3331552eaaabb828d6d8ec5f859a5417e44",
+            "remaining_verification_queue_path": "artifacts/phase2/evaluation_and_ablation/work/outputs/NB21B.C233.action25_offline_audit/3c35294b251d7767641fe389598fa00f01f4954fa0dbd1032b601a09747fd2d1/C233_remaining_verification_queue.json",
+            "remaining_verification_queue_is_not_automatic_API_dispatch": true,
+            "engine_sha256": "e87d6d8ee5efc8063076b89f0b1489697af664dad4a6645187e62038bed44ff3",
+            "artifact_path": "artifacts/phase2/evaluation_and_ablation/work/outputs/NB21B.C233.action25_offline_audit/3c35294b251d7767641fe389598fa00f01f4954fa0dbd1032b601a09747fd2d1/report.e69a8537735e4eb678394f209ef8f3934f4b0fe00a4261af70c40230392dc535.json",
+            "artifact_sha256": "e69a8537735e4eb678394f209ef8f3934f4b0fe00a4261af70c40230392dc535",
+            "reload_validation": "PASS"
+          },
+          "original_artifact_bytes_independently_reloaded": false
+        }
+      ],
+      "new_model_api_calls": 0
+    },
+    {
+      "action": 26,
+      "title": "No-answer و تصمیم پاسخ‌دهی",
+      "file": "NB21_action26_report_fa.md",
+      "status": "HISTORICAL_TEST_MODEL_REFERENCE_DECISION_EVALUATION",
+      "existing_repository_report": "reports/phase2/evaluation/NB21_action26_final_summary.md",
+      "proposed_repository_path": "reports/phase2/evaluation/NB21_actions01_26_reports/NB21_action26_report_fa.md",
+      "evidence": [
+        {
+          "report_source": "reports/phase2/evaluation/NB21_action26_final_summary.md",
+          "source_git_blob": "8e51b415a3d61cdb919decd5a796e45032b9862f",
+          "original_artifact_bytes_independently_reloaded": false
+        }
+      ],
+      "new_model_api_calls": 0
+    }
+  ]
+}

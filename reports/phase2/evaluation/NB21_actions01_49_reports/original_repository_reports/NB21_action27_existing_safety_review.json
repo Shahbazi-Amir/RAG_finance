@@ -1,0 +1,142 @@
+{
+  "schema_version": "NB21_ACTION27_EXISTING_SAFETY_EVIDENCE_REVIEW_V1",
+  "status": "EXISTING_EVIDENCE_REPORT_COMPLETE_FULL_SAFETY_METRIC_EXPLICITLY_UNESTABLISHED",
+  "reviewed_branch": "rag-phase2",
+  "reviewed_commit": "1d6956eeb317cef63d55ce47951fb0d5dd8887b6",
+  "source_manifest_path": "notebooks/data_load_read/NB21C_C029_safety_review_5334edc919c9c4f4/manifest.json",
+  "source_manifest_sha256": "2600c4d57a2ffe67ca1f9e0e1e87a259184defd999ba09511d665f40d6504ee5",
+  "manifest_and_all_97_parts_hash_verified": true,
+  "target_records_accounted": 1104,
+  "target_record_ids_unique": 1104,
+  "preserved_response_review_count": 45,
+  "total_population_accounted": 1149,
+  "previous_text_extraction_counts": {
+    "safety_related_text": 1057,
+    "other_review_text": 47
+  },
+  "actual_new_semantic_safety_adjudications": 0,
+  "full_1104_new_semantic_adjudication_performed": false,
+  "review_type": "SOURCE_INTEGRITY_PROVENANCE_AND_REUSE_SCOPE_REVIEW",
+  "reuse_conclusion": "Existing criticality narratives are supporting evidence, not automatically final response-Safety verdicts. No additional qualified full response-Safety result is established by this export.",
+  "existing_criticality_audit": {
+    "cases": 1149,
+    "NONCRITICAL": 1149,
+    "CRITICAL": 0,
+    "source": "NB20C C439/C455 stored posthoc audit",
+    "critical_fraction_within_that_audit": 0,
+    "whole_response_safety_violation_rate": false,
+    "source_verified_in_preceding_notebook_review": true,
+    "C029_is_not_a_new_criticality_audit": true
+  },
+  "response_safety_review": {
+    "cases": 45,
+    "no_specific_risk_identified": 37,
+    "risk_identified": 0,
+    "undetermined": 8,
+    "cohorts": {
+      "C203_RETAINED_GROUP1": {
+        "n": 5,
+        "labels": {
+          "NO_SPECIFIC_RISK_IDENTIFIED": 3,
+          "UNDETERMINED": 2
+        },
+        "by_request": {
+          "EDUCATION_OR_SOURCE_EXPLANATION": {
+            "NO_SPECIFIC_RISK_IDENTIFIED": 3
+          },
+          "UNCERTAIN": {
+            "UNDETERMINED": 2
+          }
+        },
+        "severityRecorded": 0
+      },
+      "C206_RESPONSE_ONLY": {
+        "n": 40,
+        "labels": {
+          "UNDETERMINED": 6,
+          "NO_SPECIFIC_RISK_IDENTIFIED": 34
+        },
+        "by_request": {
+          "NON_SUBSTANTIVE": {
+            "UNDETERMINED": 4,
+            "NO_SPECIFIC_RISK_IDENTIFIED": 9
+          },
+          "GENERAL_GUIDANCE": {
+            "NO_SPECIFIC_RISK_IDENTIFIED": 12
+          },
+          "EDUCATION_OR_SOURCE_EXPLANATION": {
+            "NO_SPECIFIC_RISK_IDENTIFIED": 13,
+            "UNDETERMINED": 1
+          },
+          "UNCERTAIN": {
+            "UNDETERMINED": 1
+          }
+        },
+        "severityRecorded": 0
+      }
+    },
+    "assessed_request_kind_counts": {
+      "EDUCATION_OR_SOURCE_EXPLANATION": 17,
+      "UNCERTAIN": 3,
+      "NON_SUBSTANTIVE": 13,
+      "GENERAL_GUIDANCE": 12
+    },
+    "severity_field_recorded_in_decisions": 0,
+    "recorded_generator_origin": "HISTORICAL_SAVED_RECOVERY_RESPONSE_NOT_LIVE_QWEN",
+    "historical_automated_reviewer_is_independent_gold": false,
+    "pooled_45_accuracy_or_population_rate_computed": false,
+    "evaluable_proposal_rates": [
+      {
+        "cohort": "C203_RETAINED_GROUP1",
+        "view": "QUESTION_ORIGINAL_EVIDENCE_AND_SAVED_RESPONSE",
+        "total": 5,
+        "determinate": 3,
+        "risk_identified": 0,
+        "undetermined": 2,
+        "risk_proposal_fraction_among_determinate": 0,
+        "unknown_outcome_bounds": [
+          0,
+          0.4
+        ]
+      },
+      {
+        "cohort": "C206_RESPONSE_ONLY",
+        "view": "SAVED_RESPONSE_TEXT_ONLY",
+        "total": 40,
+        "determinate": 34,
+        "risk_identified": 0,
+        "undetermined": 6,
+        "risk_proposal_fraction_among_determinate": 0,
+        "unknown_outcome_bounds": [
+          0,
+          0.15
+        ]
+      }
+    ],
+    "proposal_rates_are_not_official_Safety_violation_rates": true
+  },
+  "blockers_for_full_metric": [
+    "No additional full response-Safety verdict with qualified policy/rubric scope was established for the 1104 records.",
+    "The 45 direct review proposals use two different views; 8 remain undetermined.",
+    "A severity classification is not recorded in the 45 direct review decisions.",
+    "Stored internal outputs and routing tests do not establish live-generator Safety."
+  ],
+  "full_population_safety_violation_rate": null,
+  "live_generator_safety_violation_rate": null,
+  "product_quality_gate_pass": null,
+  "checklist_end_condition": "Valid metric OR explicit blocker; universal re-adjudication is not an automatic checklist requirement.",
+  "historical_evidence_accounting_and_limitations_report_complete": true,
+  "action27_checklist_modified": false,
+  "automatic_API_needed_count": null,
+  "API_dispatch_required_for_this_report": false,
+  "next_if_full_population_Safety_metric_is_requested": "Use an explicit response-Safety rubric and the original question/response context; reuse matching prior conclusions only where scope permits. Determine residual work before dispatch.",
+  "new_api_calls": 0,
+  "original_sources_modified": false,
+  "notes": [
+    "All 97 parts were parsed and hash-verified. Provenance/scope review is not a fresh semantic judgment of all 1104 answers.",
+    "The 1057 lexical hits are not 1057 passed Safety judgments. The other 47 are not 47 unsafe answers.",
+    "Existing text is useful. Missing a qualified verdict does not mean sources are missing.",
+    "C239's eight narrow followups overlap the original 45 and do not add eight new cases.",
+    "The historical criticality zero and direct Safety proposal zeros have different denominators and must remain separate."
+  ]
+}
