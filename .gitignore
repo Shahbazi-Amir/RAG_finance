@@ -1,10 +1,23 @@
 # =========================================================
-# Python / build output
+# RAG_finance — .gitignore v2
+#
+# Track:
+#   source code, notebooks, documentation, dependency locks,
+#   formal manifests, approved Golden datasets, summary reports.
+#
+# Ignore:
+#   local environments, secrets, model weights, generated data,
+#   runtime caches, pair scores, large experimental payloads.
+#
+# Ignore rules do not remove files already tracked by Git.
+# =========================================================
+
+
+# =========================================================
+# Python / build / testing
 # =========================================================
 
 __pycache__/
-**/__pycache__/
-
 *.py[cod]
 *$py.class
 *.so
@@ -26,11 +39,16 @@ htmlcov/
 .pytest_cache/
 .mypy_cache/
 .ruff_cache/
+.pyre/
+.pytype/
+.tox/
+.nox/
+.hypothesis/
 .cache/
 
 
 # =========================================================
-# Virtual environments / secrets / credentials
+# Virtual environments
 # =========================================================
 
 rag_env/
@@ -38,352 +56,331 @@ venv/
 .venv/
 env/
 ENV/
+.conda/
+
+
+# =========================================================
+# Secrets / credentials
+# =========================================================
 
 .env
 .env.*
 !.env.example
+!.env.sample
+!.env.template
+!.env.*.example
+!.env.*.sample
+!.env.*.template
+
+.envrc
+.netrc
+.pypirc
 
 *.pem
 *.key
-*.crt
+*.p12
+*.pfx
 
 secrets/
 credentials/
 
+# Do not broadly ignore *.lock:
+# dependency lockfiles must remain trackable.
+
 
 # =========================================================
-# Jupyter / IDE / OS / temporary files
+# Jupyter / IDE / operating system
 # =========================================================
 
 .ipynb_checkpoints/
-**/.ipynb_checkpoints/
+.jupyter/
 
 .vscode/
 .idea/
 
 .DS_Store
+.AppleDouble/
+.LSOverride
 ._*
 Thumbs.db
 desktop.ini
+
+*.swp
+*.swo
+*~
+~$*
+
+# Keep .ipynb notebooks trackable.
+
+
+# =========================================================
+# Logs / temporary files / runtime locks
+# =========================================================
 
 *.log
 *.tmp
 *.temp
 *.bak
-*.swp
-*.swo
+*.orig
+*.rej
+*.pid
+*.pid.lock
 
-~$*
+*.incomplete
+*.part
+*.partial
+
+# Hugging Face download locks, not dependency locks
+**/.locks/
 
 
 # =========================================================
-# Local databases / runtime state
+# Local databases / journals
 # =========================================================
 
 *.db
 *.db-journal
+*.db-wal
+*.db-shm
+
 *.sqlite
+*.sqlite-journal
+*.sqlite-wal
+*.sqlite-shm
+
 *.sqlite3
 *.sqlite3-journal
-
-*.pid
-*.lock
+*.sqlite3-wal
+*.sqlite3-shm
 
 
 # =========================================================
 # Phase 1 — generated data
 # =========================================================
 
-data/processed/
-data/chunks/
-data/embeddings/
-data/vectorstore/
-data/index/
-data/database/
+/data/processed/
+/data/chunks/
+/data/embeddings/
+/data/vectorstore/
+/data/index/
+/data/database/
 
 
 # =========================================================
 # Phase 2 — generated data
 # =========================================================
 
-data/phase2/raw/
-data/phase2/interim/
-data/phase2/processed/
-data/phase2/chunks/
-data/phase2/embeddings/
-data/phase2/vectorstore/
-data/phase2/index/
-data/phase2/database/
+/data/phase2/raw/
+/data/phase2/interim/
+/data/phase2/processed/
+/data/phase2/chunks/
+/data/phase2/embeddings/
+/data/phase2/vectorstore/
+/data/phase2/index/
+/data/phase2/database/
+/data/phase2/retrieval/
 /data/phase2/chatgpt_recovery_20261003/
 
-
-# IMPORTANT:
-# Formal Phase-2 manifests remain source controlled.
-# Do NOT ignore:
-# data/phase2/manifests/
+# Intentionally trackable:
+# /data/phase2/manifests/
 
 
 # =========================================================
-# Generic generated artifact caches
+# Generated artifact caches / runtime work
 # =========================================================
 
-artifacts/**/cache/
-artifacts/**/caches/
-artifacts/**/batches/
-artifacts/**/work/
+/artifacts/**/cache/
+/artifacts/**/caches/
+/artifacts/**/batches/
+/artifacts/**/work/
 
-artifacts/**/*_cache/
-artifacts/**/*_cache_v*/
-artifacts/**/*_caches/
-artifacts/**/*_batches/
+/artifacts/**/*_cache/
+/artifacts/**/*_cache_v*/
+/artifacts/**/*_caches/
+/artifacts/**/*_batches/
 
-artifacts/**/*.npz
-artifacts/**/*.npy
-artifacts/**/*.pkl
-artifacts/**/*.pickle
-artifacts/**/*.parquet
-artifacts/**/*.arrow
+# Explicit NB22 caches; preserve locally for resuming runs.
+/artifacts/phase2/quality_improvement/NB22E.pair_cache_v1/
+/artifacts/phase2/quality_improvement/NB22E.bge_top20_cache_v1/
 
-artifacts/**/*.faiss
-artifacts/**/*.index
-
-
-# =========================================================
-# NB13 — generated benchmark caches
-# =========================================================
-
-artifacts/phase2/embedding_benchmark/
+# Generated binary / columnar payloads
+/artifacts/**/*.pkl
+/artifacts/**/*.pickle
+/artifacts/**/*.parquet
+/artifacts/**/*.arrow
+/artifacts/**/*.index
 
 
 # =========================================================
-# NB12g — generated Golden Dataset rebuild experiments
+# NB13 — embedding benchmark
 # =========================================================
 
-artifacts/phase2/golden_dataset_rebuild/
-artifacts/phase2/golden_dataset_rebuild_clean/
+/artifacts/phase2/embedding_benchmark/
+
+
+# =========================================================
+# Golden rebuild experiments
+# =========================================================
+
+/artifacts/phase2/golden_dataset_rebuild/
+/artifacts/phase2/golden_dataset_rebuild_clean/
 
 
 # =========================================================
 # NB12i — Claim Registry / Knowledge Graph
 # =========================================================
+
+/artifacts/phase2/knowledge_registry/*cache*/
+/artifacts/phase2/knowledge_registry/**/*cache*/
+
+/artifacts/phase2/knowledge_registry/claim_discovery_population_index_v*.jsonl
+/artifacts/phase2/knowledge_registry/claim_extraction_units_v*.jsonl
+/artifacts/phase2/knowledge_registry/claim_extraction_prompt_windows_v*.jsonl
+
+/artifacts/phase2/knowledge_registry/claim_extraction_pilot_raw_v*.jsonl
+/artifacts/phase2/knowledge_registry/claim_extraction_pilot_evidence_v*.jsonl
+/artifacts/phase2/knowledge_registry/claim_extraction_pilot_semantic_adjudication_v*.jsonl
+/artifacts/phase2/knowledge_registry/claim_extraction_pilot_final_disposition_v*.jsonl
+/artifacts/phase2/knowledge_registry/claim_extraction_pilot_validated_v*.jsonl
+
+/artifacts/phase2/knowledge_registry/claims_raw_v*.jsonl
+/artifacts/phase2/knowledge_registry/claims_validated_v*.jsonl
+/artifacts/phase2/knowledge_registry/claims_deduplicated_v*.jsonl
+/artifacts/phase2/knowledge_registry/claim_evidence_links_v*.jsonl
+/artifacts/phase2/knowledge_registry/claim_relations_v*.jsonl
+
+/artifacts/phase2/knowledge_registry/knowledge_graph_v*.json
+/artifacts/phase2/knowledge_registry/knowledge_graph_v*.jsonl
+/artifacts/phase2/knowledge_registry/*.graphml
+/artifacts/phase2/knowledge_registry/*.gexf
+/artifacts/phase2/knowledge_registry/*.gpickle
+
+/artifacts/phase2/knowledge_registry/*_candidate.json
+/artifacts/phase2/knowledge_registry/*_candidate.jsonl
+/artifacts/phase2/knowledge_registry/*_temp.json
+/artifacts/phase2/knowledge_registry/*_temp.jsonl
+/artifacts/phase2/knowledge_registry/*_tmp.json
+/artifacts/phase2/knowledge_registry/*_tmp.jsonl
+/artifacts/phase2/knowledge_registry/*_review_queue.json
+/artifacts/phase2/knowledge_registry/*_review_queue.jsonl
+
+# Registry contracts / acceptance metadata remain trackable.
+
+
+# =========================================================
+# NB12j — Golden Dataset v2 runtime state
+# =========================================================
+
+/artifacts/phase2/golden_dataset_v2/work/
+/artifacts/phase2/golden_dataset_v2/**/cache/
+/artifacts/phase2/golden_dataset_v2/**/caches/
+/artifacts/phase2/golden_dataset_v2/**/*_cache/
+/artifacts/phase2/golden_dataset_v2/**/*_cache_v*/
+
+/artifacts/phase2/golden_dataset_v2/**/*_candidate.json
+/artifacts/phase2/golden_dataset_v2/**/*_candidate.jsonl
+/artifacts/phase2/golden_dataset_v2/**/*_temp.json
+/artifacts/phase2/golden_dataset_v2/**/*_temp.jsonl
+/artifacts/phase2/golden_dataset_v2/**/*_tmp.json
+/artifacts/phase2/golden_dataset_v2/**/*_tmp.jsonl
+/artifacts/phase2/golden_dataset_v2/**/*_review_queue.json
+/artifacts/phase2/golden_dataset_v2/**/*_review_queue.jsonl
+
+# Do not ignore the entire golden_dataset_v2 directory.
+# Final datasets / contracts / acceptance records remain trackable.
+
+
+# =========================================================
+# Golden experiments inside notebooks
+# =========================================================
+
+/notebooks/phase2/golden_dataset/**/cache/
+/notebooks/phase2/golden_dataset/**/caches/
+/notebooks/phase2/golden_dataset/**/batches/
+/notebooks/phase2/golden_dataset/**/*_cache/
+/notebooks/phase2/golden_dataset/**/*_cache_v*/
+
+/notebooks/phase2/golden_dataset/*_candidate.json
+/notebooks/phase2/golden_dataset/*_candidate.jsonl
+/notebooks/phase2/golden_dataset/*_review_queue.json
+/notebooks/phase2/golden_dataset/*_review_queue.jsonl
+/notebooks/phase2/golden_dataset/*_experiment.json
+/notebooks/phase2/golden_dataset/*_experiment.jsonl
+/notebooks/phase2/golden_dataset/*_experiment_*.json
+/notebooks/phase2/golden_dataset/*_experiment_*.jsonl
+
+/notebooks/phase2/golden_dataset/*_integrity_audit.json
+/notebooks/phase2/golden_dataset/*_semantic_judge.json
+/notebooks/phase2/golden_dataset/*_findings_packet.json
+/notebooks/phase2/golden_dataset/*_repair_report.json
+/notebooks/phase2/golden_dataset/*_adjudication_report.json
+/notebooks/phase2/golden_dataset/*_evidence_span_repair.json
+
+# Approved Golden releases remain trackable.
+
+
+# =========================================================
+# Phase 2 reports — preserve previous default policy
+# =========================================================
+
+/reports/phase2/*
+
+!/reports/phase2/*_acceptance_v1.json
+!/reports/phase2/*_freeze_v1.json
+!/reports/phase2/environment_baseline_v1.json
+
+
+# =========================================================
+# NB22 quality experiments — summaries only
 #
-# Policy:
-# - large / reproducible row-level datasets => ignored
-# - caches / runtime work => ignored
-# - contracts / reports / acceptance metadata => tracked
+# Reopen parent directories, then allow named summary reports.
+# Per-query orders, case packs, diagnostics and other large
+# experiment payloads remain local.
 # =========================================================
 
+!/reports/phase2/quality_improvement/
+/reports/phase2/quality_improvement/*
 
-# ---------------------------------------------------------
-# Extraction caches
-# ---------------------------------------------------------
+!/reports/phase2/quality_improvement/NB22E.lab.v*/
+/reports/phase2/quality_improvement/NB22E.lab.v*/*
 
-artifacts/phase2/knowledge_registry/claim_extraction_pilot_cache_v*/
-artifacts/phase2/knowledge_registry/claim_extraction_full_cache_v*/
-artifacts/phase2/knowledge_registry/claim_extraction_pilot_semantic_cache_v*/
-
-artifacts/phase2/knowledge_registry/*cache*/
-artifacts/phase2/knowledge_registry/**/*cache*/
-
-
-# ---------------------------------------------------------
-# Intermediate population / unit / window manifests
-# Large reproducible row-level files
-# ---------------------------------------------------------
-
-artifacts/phase2/knowledge_registry/claim_discovery_population_index_v*.jsonl
-
-artifacts/phase2/knowledge_registry/claim_extraction_units_v*.jsonl
-artifacts/phase2/knowledge_registry/claim_extraction_prompt_windows_v*.jsonl
-
-
-# ---------------------------------------------------------
-# Pilot row-level artifacts
-# ---------------------------------------------------------
-
-artifacts/phase2/knowledge_registry/claim_extraction_pilot_raw_v*.jsonl
-artifacts/phase2/knowledge_registry/claim_extraction_pilot_evidence_v*.jsonl
-
-artifacts/phase2/knowledge_registry/claim_extraction_pilot_semantic_adjudication_v*.jsonl
-
-artifacts/phase2/knowledge_registry/claim_extraction_pilot_final_disposition_v*.jsonl
-artifacts/phase2/knowledge_registry/claim_extraction_pilot_validated_v*.jsonl
-
-
-# ---------------------------------------------------------
-# Full Claim Registry row-level generated artifacts
-# ---------------------------------------------------------
-
-artifacts/phase2/knowledge_registry/claims_raw_v*.jsonl
-artifacts/phase2/knowledge_registry/claims_validated_v*.jsonl
-artifacts/phase2/knowledge_registry/claims_deduplicated_v*.jsonl
-
-artifacts/phase2/knowledge_registry/claim_evidence_links_v*.jsonl
-artifacts/phase2/knowledge_registry/claim_relations_v*.jsonl
-
-
-# ---------------------------------------------------------
-# Large generated Knowledge Graph payloads
-# ---------------------------------------------------------
-
-artifacts/phase2/knowledge_registry/knowledge_graph_v*.json
-artifacts/phase2/knowledge_registry/knowledge_graph_v*.jsonl
-
-artifacts/phase2/knowledge_registry/*.graphml
-artifacts/phase2/knowledge_registry/*.gexf
-artifacts/phase2/knowledge_registry/*.gpickle
-
-
-# ---------------------------------------------------------
-# Temporary Registry exports
-# ---------------------------------------------------------
-
-artifacts/phase2/knowledge_registry/*_candidate.json
-artifacts/phase2/knowledge_registry/*_candidate.jsonl
-
-artifacts/phase2/knowledge_registry/*_temp.json
-artifacts/phase2/knowledge_registry/*_temp.jsonl
-
-artifacts/phase2/knowledge_registry/*_tmp.json
-artifacts/phase2/knowledge_registry/*_tmp.jsonl
-
-artifacts/phase2/knowledge_registry/*_review_queue.json
-artifacts/phase2/knowledge_registry/*_review_queue.jsonl
-
-
-# IMPORTANT:
-# NB12i contracts / reports / audit metadata are intentionally tracked.
+!/reports/phase2/quality_improvement/NB22E.lab.v*/README.md
+!/reports/phase2/quality_improvement/NB22E.lab.v*/C010.expand60_report.*.json
+!/reports/phase2/quality_improvement/NB22E.lab.v*/C011.offline_report.*.json
+!/reports/phase2/quality_improvement/NB22E.lab.v*/C012.token_window_report.*.json
+!/reports/phase2/quality_improvement/NB22E.lab.v*/C013.contrast_report.*.json
+!/reports/phase2/quality_improvement/NB22E.lab.v*/C014.local_model_inventory.*.json
+!/reports/phase2/quality_improvement/NB22E.lab.v*/C015.pinned_model_asset.*.json
+!/reports/phase2/quality_improvement/NB22E.lab.v*/C016.bge_cpu_pilot.*.json
+!/reports/phase2/quality_improvement/NB22E.lab.v*/C017.bge_top20_report.*.json
+!/reports/phase2/quality_improvement/NB22E.lab.v*/C018.depth_ceiling_report.*.json
+!/reports/phase2/quality_improvement/NB22E.lab.v*/C019.bge_top40_report.*.json
 
 
 # =========================================================
-# NB12j — Golden Dataset v2
-# =========================================================
-#
-# IMPORTANT POLICY:
-#
-# The Full-3817 Semantic Review creates thousands of
-# per-Seed checkpoints. They are runtime/resume data and
-# MUST NOT be committed to Git.
-#
-# Small contracts, final reports, acceptance metadata and
-# approved final release artifacts remain trackable.
+# Models / downloaded weights / checkpoints
 # =========================================================
 
+/models/
+/checkpoints/
 
-# ---------------------------------------------------------
-# Full semantic-review runtime checkpoints
-#
-# Contains thousands of per-Seed JSON checkpoint files.
-# These are local execution/resume state.
-# ---------------------------------------------------------
-
-artifacts/phase2/golden_dataset_v2/work/
-
-
-# ---------------------------------------------------------
-# Any semantic-review cache directories
-# ---------------------------------------------------------
-
-artifacts/phase2/golden_dataset_v2/**/cache/
-artifacts/phase2/golden_dataset_v2/**/caches/
-artifacts/phase2/golden_dataset_v2/**/*_cache/
-artifacts/phase2/golden_dataset_v2/**/*_cache_v*/
-
-
-# ---------------------------------------------------------
-# Temporary / intermediate Golden-v2 material
-# ---------------------------------------------------------
-
-artifacts/phase2/golden_dataset_v2/**/*_candidate.json
-artifacts/phase2/golden_dataset_v2/**/*_candidate.jsonl
-
-artifacts/phase2/golden_dataset_v2/**/*_temp.json
-artifacts/phase2/golden_dataset_v2/**/*_temp.jsonl
-
-artifacts/phase2/golden_dataset_v2/**/*_tmp.json
-artifacts/phase2/golden_dataset_v2/**/*_tmp.jsonl
-
-artifacts/phase2/golden_dataset_v2/**/*_review_queue.json
-artifacts/phase2/golden_dataset_v2/**/*_review_queue.jsonl
-
-
-# IMPORTANT:
-# Do NOT broadly ignore:
-#
-# artifacts/phase2/golden_dataset_v2/
-#
-# because formal contracts, reports, acceptance metadata
-# and approved final Golden-v2 artifacts may need tracking.
-
-
-# =========================================================
-# Golden Dataset experiments — notebooks/phase2
-# =========================================================
-
-# API / LLM caches
-notebooks/phase2/golden_dataset/cache/
-notebooks/phase2/golden_dataset/**/cache/
-notebooks/phase2/golden_dataset/**/caches/
-notebooks/phase2/golden_dataset/**/batches/
-
-notebooks/phase2/golden_dataset/**/*_cache/
-notebooks/phase2/golden_dataset/**/*_cache_v*/
-
-
-# Temporary candidate / experiment datasets
-notebooks/phase2/golden_dataset/*_candidate.json
-notebooks/phase2/golden_dataset/*_candidate.jsonl
-
-notebooks/phase2/golden_dataset/*_review_queue.json
-notebooks/phase2/golden_dataset/*_review_queue.jsonl
-
-notebooks/phase2/golden_dataset/*_experiment.json
-notebooks/phase2/golden_dataset/*_experiment.jsonl
-notebooks/phase2/golden_dataset/*_experiment_*.json
-notebooks/phase2/golden_dataset/*_experiment_*.jsonl
-
-
-# Generated audit / judge / repair reports
-notebooks/phase2/golden_dataset/*_integrity_audit.json
-notebooks/phase2/golden_dataset/*_semantic_judge.json
-notebooks/phase2/golden_dataset/*_findings_packet.json
-notebooks/phase2/golden_dataset/*_repair_report.json
-notebooks/phase2/golden_dataset/*_adjudication_report.json
-notebooks/phase2/golden_dataset/*_evidence_span_repair.json
-
-
-# IMPORTANT:
-# Approved Golden Dataset releases remain tracked.
-#
-# Examples:
-# notebooks/phase2/golden_dataset/golden_dataset_v1.jsonl
-# notebooks/phase2/golden_dataset/golden_dataset_v2.jsonl
-# notebooks/phase2/golden_dataset/golden_dataset_v2_acceptance_v1.json
-
-
-# =========================================================
-# Phase 2 reports
-# =========================================================
-
-reports/phase2/*
-!reports/phase2/
-
-
-# Formal reproducibility records remain tracked
-!reports/phase2/*_acceptance_v1.json
-!reports/phase2/*_freeze_v1.json
-!reports/phase2/environment_baseline_v1.json
-
-
-# =========================================================
-# Models / checkpoints
-# =========================================================
-
-models/
-checkpoints/
+.huggingface/
+/.hf_home/
+/hf_cache/
 
 *.ckpt
 *.safetensors
+*.onnx
+*.onnx_data
+*.pt
+*.pth
+*.gguf
+*.ggml
+
+# Hugging Face PyTorch weight filenames
+pytorch_model*.bin
+
+# Do not broadly ignore *.json or *.bin.
 
 
 # =========================================================
@@ -401,11 +398,64 @@ checkpoints/
 # Local exports / scratch
 # =========================================================
 
-tmp/
-temp/
-scratch/
+/tmp/
+/temp/
+/scratch/
+/exports/
+/local_exports/
+/downloads/
 
-exports/
-local_exports/
+# =========================================================
+# v3 — Local checkpoints / experimental artifacts
+# =========================================================
 
-downloads/
+/artifacts/phase2/checkpoints/
+/artifacts/phase2/quality_improvement/
+/notebooks/phase2/backup_versions/
+
+# =========================================================
+# Preserve formal evaluation documents and JSON reports.
+# Large non-document payloads remain ignored by default.
+# =========================================================
+
+!/reports/phase2/evaluation/
+/reports/phase2/evaluation/**/*
+!/reports/phase2/evaluation/**/
+!/reports/phase2/evaluation/**/*.md
+!/reports/phase2/evaluation/**/*.json
+
+# =========================================================
+# Preserve retrieval manifests / evidence / validation.
+# Generated candidate JSONL files remain ignored.
+# =========================================================
+
+!/data/phase2/retrieval/
+/data/phase2/retrieval/*
+!/data/phase2/retrieval/hybrid_retrieval_v1/
+!/data/phase2/retrieval/reranker_v1/
+
+/data/phase2/retrieval/hybrid_retrieval_v1/*
+/data/phase2/retrieval/reranker_v1/*
+
+!/data/phase2/retrieval/hybrid_retrieval_v1/*.json
+!/data/phase2/retrieval/reranker_v1/*.json
+
+# Keep OS metadata ignored, including in reopened directories.
+.DS_Store
+._*
+
+
+# =========================================================
+# v4 — Narrow NB21 evaluation JSON exceptions
+# Overrides the earlier broad JSON allow rule.
+# =========================================================
+
+/reports/phase2/evaluation/**/*.json
+
+# Documentation-package metadata
+!/reports/phase2/evaluation/NB21_actions01_49_reports/action_reports_manifest.json
+!/reports/phase2/evaluation/NB21_actions01_49_reports/package_file_hashes.json
+!/reports/phase2/evaluation/NB21_actions01_49_reports/source_manifest.json
+
+# Final consolidated NB21 summary
+!/reports/phase2/evaluation/NB21C.C085.action49_final_summary/*summary*.json
