@@ -1,0 +1,43 @@
+{
+  "status": "OFFLINE_CACHE_AUDIT_COMPLETE",
+  "requests": 1149,
+  "bindings_verified": 1149,
+  "counts": {
+    "VALID": 843,
+    "HELD": 247,
+    "NOT_SENT": 58,
+    "HTTP_FAILURE": 1
+  },
+  "recovered": 405,
+  "remaining_reasons": {
+    "REQUIREMENT_ANSWER_QUOTE": 4,
+    "GAP_REVIEW_TOP_LEVEL_SCHEMA": 107,
+    "REQUIREMENT_SCHEMA": 40,
+    "MODEL_OUTPUT_INCOMPLETE": 56,
+    "LINK_QUOTE_WRONG_EVIDENCE": 14,
+    "REQUIREMENT_EXACT_COVERAGE": 5,
+    "FACTUAL_WITNESS_NOT_FOUND": 1,
+    "FACTUAL_WITNESS_SCHEMA": 9,
+    "ATTRIBUTION_ANSWER_WITNESS": 1,
+    "LINK_SUPPORT_ENUM": 4,
+    "LINK_REVIEW_SCHEMA": 1,
+    "ADDITIONAL_FACTUAL_SCHEMA": 3,
+    "ATTRIBUTION_SOURCE_WITNESS": 1,
+    "GAP_REVIEW_RESPONSE_IDENTITY": 1
+  },
+  "schema_shapes": {
+    "(['schema_version'], [])": 463,
+    "(['schema_version'], ['reason_fa'])": 64,
+    "([], ['reason_fa'])": 42,
+    "(['schema_version'], ['attribution_assertions'])": 1
+  },
+  "schema_versions": {
+    "NB22B_GAP_REVIEW_OUTPUT_V1": 528,
+    "None": 42
+  },
+  "new_api_calls": 0,
+  "raw_cache_modified": false,
+  "semantic_verdicts_changed": false,
+  "tested_patch_sha256": "b3e3530fc436f3b35b64697b7f07e4cc87dc094a7d9759abc7636ffea725a4f1",
+  "missing_reason_or_attribution_not_synthesized": true
+}
